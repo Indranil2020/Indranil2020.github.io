@@ -1,120 +1,919 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dr. Indranil Mal - Computational Materials Scientist specializing in DFT and Ferroelectric Materials">
+    <meta name="keywords" content="Indranil Mal, Computational Physics, DFT, Ferroelectric Materials, Materials Science, Quantum Computing">
+    <meta name="author" content="Dr. Indranil Mal">
+    <title>Dr. Indranil Mal - Computational Materials Scientist</title>
 
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<style>
-.fab {
-  padding: 20px;
-  font-size: 30px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-}
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
 
-.fab:hover {
-    opacity: 0.7;
-}
+        /* Navigation */
+        nav {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-.fa-solid{
-  padding: 20px;
-  font-size: 30px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-}
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            flex-wrap: wrap;
+        }
 
-.fa-solid:hover {
-    opacity: 0.8;
-}
+        nav ul li {
+            margin: 0 1rem;
+        }
 
+        nav ul li a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
 
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
+        nav ul li a:hover {
+            color: #3498db;
+        }
 
-.fa-envelope {
-  background: #dd4b39;
-  color: white;
-}
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
 
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
 
-.fa-google {
-  background: #dd4b39;
-  color: white;
-}
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.95;
+        }
 
-.fa-github {
-  background: #171515;
-  color: white;
-}
+        header .subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
 
-.fa-researchgate {
-  background: #0cb;
-  color: white;
-}
-.fa-phone {
-  background: #10ad;
-  color: white;
-}
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
 
-</style>
+        /* Section */
+        section {
+            background-color: white;
+            margin: 2rem 0;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #3498db;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            text-align: justify;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .project-highlight {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            margin-top: 1rem;
+        }
+
+        .project-highlight h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-highlight p {
+            color: #555;
+            margin: 0.5rem 0;
+        }
+
+        /* Research Interests */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .research-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            transition: transform 0.3s;
+        }
+
+        .research-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .research-card h3 {
+            color: #2c3e50;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .research-card h3 i {
+            color: #3498db;
+        }
+
+        .research-card p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        /* Education & Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #3498db;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #3498db;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #3498db;
+        }
+
+        .timeline-item h3 {
+            color: #2c3e50;
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-item .date {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item p {
+            color: #555;
+            margin-bottom: 0.3rem;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-top: 3px solid #3498db;
+        }
+
+        .skill-category h3 {
+            color: #2c3e50;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-category h3 i {
+            color: #3498db;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #2c3e50;
+            border: 1px solid #e1e8ed;
+        }
+
+        /* GitHub Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .project-card {
+            background: white;
+            border: 2px solid #e1e8ed;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: #3498db;
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.15);
+        }
+
+        .project-card h3 {
+            color: #2c3e50;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .project-card h3 i {
+            color: #171515;
+        }
+
+        .project-card .project-lang {
+            display: inline-block;
+            font-size: 0.8rem;
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-card p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-card a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .project-card a:hover {
+            color: #2980b9;
+        }
+
+        /* Tools Section */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .tool-card {
+            background: #fff;
+            border: 2px solid #e1e8ed;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .tool-card h3 {
+            color: #2c3e50;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tool-card h3 i {
+            color: #3498db;
+        }
+
+        .tool-card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .tool-card a {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .tool-card a:hover {
+            background: #2980b9;
+        }
+
+        /* Publications Section */
+        .publications-content {
+            text-align: center;
+        }
+
+        .publications-content p {
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .pub-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .pub-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: #3498db;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .pub-link:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .pub-link.scholar {
+            background: #4285f4;
+        }
+
+        .pub-link.researchgate {
+            background: #0cb;
+        }
+
+        .pub-link.orcid {
+            background: #a6ce39;
+        }
+
+        .pub-link.wos {
+            background: #5b6670;
+        }
+
+        /* Memberships */
+        .memberships {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .membership-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            min-width: 150px;
+        }
+
+        .membership-badge i {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .membership-badge span {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: #3498db;
+            width: 40px;
+            text-align: center;
+        }
+
+        .contact-item a {
+            color: #2c3e50;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: #3498db;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: #3498db;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+        }
+
+        .social-link.github {
+            background: #171515;
+        }
+
+        .social-link.researchgate {
+            background: #0cb;
+        }
+
+        .social-link.orcid {
+            background: #a6ce39;
+        }
+
+        .social-link.linkedin {
+            background: #007bb5;
+        }
+
+        .social-link.scholar {
+            background: #4285f4;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            .timeline {
+                padding-left: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <article id="post-369" class="single single-post group post-369 page type-page status-publish hentry">
-					
-        <div class="post-header">
-              
-         <h1 class="post-title">Contact</h1>						
-        </div><!-- .post-header -->
-        
-               
-        <div class="post-inner">
-      
-         <!-- <div class="post-content entry-content"> -->
-          <div class="img-container">
-            <p> <img src="{% static '/images/iiserbhopal.jpeg' %}" alt="IISER Bhopal"; /> </p>
-          </div>
-          
-      <h4 class="moz-signature">Prof. Varadharajan Srinivasan &#8211; <a href="http://helios.iiserb.ac.in/" target="_blank" rel="noopener noreferrer"></a></h4>
-      <p><strong>Office address</strong></p>
-      <p>225, Ab Initio Theory Group (AITG) <br class="manualbr" /> Department of Chemistry (2nd floor)<br /></p>
-      <p class="moz-signature"><strong>Correspondence and delivery address</strong></p>
-      <p>Academic Block 2, Indian Institute of Science Education and Research (IISER) <br class="manualbr" /><br />
-      Bhopal 462066 &#8211; India</p>
-      <p class="moz-signature">T. +91 755 269 1315</p>
-      <p class="moz-signature">WWW: <a href="http://helios.iiserb.ac.in">vardha.iiserb.ac.in</a><br />
-      E-mail:<a href="mailto:vardha@iiserb.ac.in"> vardha@iiserb.ac.in</a><br />
-      
-<p> Reach to Us </p>
-		
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d916.1943438220875!2d77.27523292914958!3d23.28753763089963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c61a463480471%3A0xc1fec837c21da19c!2sDepartment%20of%20Chemistry!5e0!3m2!1sen!2sin!4v1653455016264!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    
-<!-- Add font awesome icons -->
+    <!-- Header -->
+    <header>
+        <h1>Dr. Indranil Mal</h1>
+        <p>Computational Materials Scientist</p>
+        <p class="subtitle">P4F Fellow | Institute of Physics, Czech Academy of Sciences (FZU)</p>
+        <p class="subtitle">Prague, Czech Republic</p>
+    </header>
 
+    <div class="container">
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I am a P4F Fellow at the Institute of Physics, Czech Academy of Sciences (FZU), working in the Department of Condensed Matter Theory. My research focuses on computational materials science with expertise in Density Functional Theory (DFT), Time-Dependent DFT, and ferroelectric materials.
+                    </p>
+                    <p>
+                        I completed my Ph.D. in Electronics and Communication Engineering from PDPM IIITDM Jabalpur (2022), where I investigated the theoretical aspects of optoelectronic properties of III-V alloys and quantum confined structures for infrared applications. My research combines first-principles calculations with advanced computational methods to explore novel materials for quantum electronics and neuromorphic computing.
+                    </p>
+                </div>
+                <div class="project-highlight">
+                    <h3><i class="fas fa-flask"></i> Current Research Project</h3>
+                    <p><strong>Title:</strong> Molecular Optoelectronics on Ferroelectric Substrates</p>
+                    <p><strong>Duration:</strong> January 2025 - January 2027</p>
+                    <p><strong>Supervisor:</strong> Ing. Prokop Hapala, Ph.D.</p>
+                    <p><strong>Focus:</strong> Exploring hybrid organic-inorganic devices that harness ferroelectric perovskites and molecular switches to advance quantum electronics and neuromorphic computing applications.</p>
+                </div>
+            </div>
+        </section>
 
-<p> <<a href="https://twitter.com/Vardha_AITG" class="fab fa-twitter"></a>
-<a href="mailto:vardha@iiserb.ac.in"class="fa-solid fa-envelope"></a>
-<a href="https://www.linkedin.com/in/varadharajan-srinivasan-581b264/" class="fab fa-linkedin"></a>
-<a href="https://chm.iiserb.ac.in/faculty_profile.php?id=Mjc=&lname=dmFyZGhh" class="fab fa-google"></a>
-<a href="https://github.com/LITESOPH/litesoph" class="fab fa-github"></a>
-<a href="https://www.researchgate.net/profile/Varadharajan-Srinivasan-4" class='fab fa-researchgate'></a>
-<a href="call:+91 755269 1315 " class='fa-solid fa-phone'></a>></p>
-      
+        <!-- Research Interests -->
+        <section id="research">
+            <h2>Research Interests</h2>
+            <div class="research-grid">
+                <div class="research-card">
+                    <h3><i class="fas fa-atom"></i> Density Functional Theory</h3>
+                    <p>First-principles calculations using DFT and TD-DFT for materials characterization and property prediction.</p>
+                </div>
+                <div class="research-card">
+                    <h3><i class="fas fa-bolt"></i> Ferroelectric Materials</h3>
+                    <p>Study of ferroelectric perovskites, their substrates, and applications in molecular optoelectronics and shape memory alloys.</p>
+                </div>
+                <div class="research-card">
+                    <h3><i class="fas fa-microchip"></i> Quantum Structures</h3>
+                    <p>Theoretical investigation of quantum confined structures, quantum-dot cellular automata (QCA), and quantum computing devices.</p>
+                </div>
+                <div class="research-card">
+                    <h3><i class="fas fa-lightbulb"></i> Optoelectronics</h3>
+                    <p>Research on optoelectronic properties of III-V alloys, infrared photodetector design, and hybrid organic-inorganic devices.</p>
+                </div>
+                <div class="research-card">
+                    <h3><i class="fas fa-sun"></i> Solar Energy</h3>
+                    <p>Excited-state dynamics toolkit combining ab initio and quantum system techniques for solar energy applications.</p>
+                </div>
+                <div class="research-card">
+                    <h3><i class="fas fa-brain"></i> Neuromorphic Computing</h3>
+                    <p>Development of materials and devices for neuromorphic computing using ferroelectric materials and molecular switches.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>P4F Fellow</h3>
+                    <p class="date">January 2025 - Present</p>
+                    <p><strong>Institute of Physics, Czech Academy of Sciences (FZU), Prague</strong></p>
+                    <p>Department of Condensed Matter Theory</p>
+                    <p>Working on molecular optoelectronics on ferroelectric substrates, exploring hybrid organic-inorganic devices for quantum electronics.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Postdoctoral Researcher</h3>
+                    <p class="date">2023 - 2024</p>
+                    <p><strong>Indian Institute of Technology (IIT) Delhi</strong></p>
+                    <p>Studied ferroelectric materials for shape memory alloys using effective Hamiltonian approaches and computational modeling.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Postdoctoral Researcher</h3>
+                    <p class="date">2022 - 2023</p>
+                    <p><strong>Indian Institute of Science Education and Research (IISER) Bhopal</strong></p>
+                    <p>Developed excited-state dynamics toolkit combining ab initio and quantum system techniques for solar energy applications.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education">
+            <h2>Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Ph.D. in Electronics and Communication Engineering</h3>
+                    <p class="date">2018 - 2022</p>
+                    <p><strong>PDPM Indian Institute of Information Technology, Design and Manufacturing (IIITDM) Jabalpur</strong></p>
+                    <p>Thesis: Theoretical Investigation of Optoelectronic Properties of III-V Alloys and Quantum Confined Structures for Infrared Applications</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>M.Tech in Mobile Communication and Computing</h3>
+                    <p class="date">2015 - 2017</p>
+                    <p><strong>National Institute of Technology (NIT) Arunachal Pradesh</strong></p>
+                </div>
+                <div class="timeline-item">
+                    <h3>M.Sc. in Electronics</h3>
+                    <p class="date">2012 - 2014</p>
+                    <p><strong>West Bengal State University</strong></p>
+                </div>
+                <div class="timeline-item">
+                    <h3>B.Sc. in Physics</h3>
+                    <p class="date">2009 - 2012</p>
+                    <p><strong>West Bengal State University</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section id="skills">
+            <h2>Technical Skills & Competencies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Computational Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">VASP</span>
+                        <span class="skill-tag">ABINIT</span>
+                        <span class="skill-tag">GPAW</span>
+                        <span class="skill-tag">OCTOPUS</span>
+                        <span class="skill-tag">Quantum Espresso</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">MATLAB</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-atom"></i> Computational Methods</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">DFT</span>
+                        <span class="skill-tag">TD-DFT</span>
+                        <span class="skill-tag">k.p Perturbation Theory</span>
+                        <span class="skill-tag">Effective Hamiltonian</span>
+                        <span class="skill-tag">GridFF</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Memberships -->
+        <section id="memberships">
+            <h2>Professional Memberships</h2>
+            <div class="memberships">
+                <div class="membership-badge">
+                    <i class="fas fa-flask"></i>
+                    <span>Materials Research Society</span>
+                </div>
+                <div class="membership-badge">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>OPTICA</span>
+                </div>
+                <div class="membership-badge">
+                    <i class="fas fa-microchip"></i>
+                    <span>IEEE</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub Projects -->
+        <section id="projects">
+            <h2>GitHub Projects & Contributions</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3><i class="fab fa-github"></i> LITESOPH</h3>
+                    <span class="project-lang">Python</span>
+                    <p>Layer Integrated Toolkit and Engine for Simulations of Photoexcited Holes - A comprehensive toolkit for computational spectroscopy.</p>
+                    <a href="https://github.com/LITESOPH/litesoph" target="_blank" rel="noopener noreferrer">View Repository <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="project-card">
+                    <h3><i class="fab fa-github"></i> DFT_visual</h3>
+                    <span class="project-lang">Python</span>
+                    <p>Density Functional Theory visualization tools for analyzing and visualizing computational chemistry results.</p>
+                    <a href="https://github.com/Indranil2020/DFT_visual" target="_blank" rel="noopener noreferrer">View Repository <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="project-card">
+                    <h3><i class="fab fa-github"></i> VASP Tutorial</h3>
+                    <span class="project-lang">Python</span>
+                    <p>Educational resources and tutorials for Vienna Ab initio Simulation Package (VASP) computational methods.</p>
+                    <a href="https://github.com/Indranil2020/vasp_tutorial" target="_blank" rel="noopener noreferrer">View Repository <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="project-card">
+                    <h3><i class="fab fa-github"></i> Personal Website</h3>
+                    <span class="project-lang">HTML/CSS</span>
+                    <p>This personal website and portfolio showcasing research, publications, and interactive tools.</p>
+                    <a href="https://github.com/Indranil2020/Indranil2020.github.io" target="_blank" rel="noopener noreferrer">View Repository <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools & Apps Section -->
+        <section id="tools">
+            <h2>Interactive Tools & Applications</h2>
+            <p style="color: #666; margin-bottom: 1.5rem;">Interactive computational tools and applications for research and analysis.</p>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3><i class="fas fa-chart-line"></i> Data Analysis Tool</h3>
+                    <p>Interactive Streamlit application for analyzing computational results and visualizing materials properties from DFT calculations.</p>
+                    <a href="#" onclick="alert('Add your Streamlit app URL here'); return false;">Launch App</a>
+                </div>
+                <div class="tool-card">
+                    <h3><i class="fas fa-cube"></i> Structure Viewer</h3>
+                    <p>Visualize and analyze crystal structures, molecular configurations, and quantum systems in 3D with interactive controls.</p>
+                    <a href="#" onclick="alert('Add your Streamlit app URL here'); return false;">Launch App</a>
+                </div>
+                <div class="tool-card">
+                    <h3><i class="fas fa-wave-square"></i> Band Structure Calculator</h3>
+                    <p>Calculate and visualize electronic band structures of materials using computational methods and k.p theory.</p>
+                    <a href="#" onclick="alert('Add your Streamlit app URL here'); return false;">Launch App</a>
+                </div>
+            </div>
+            <p style="margin-top: 2rem; color: #666; font-style: italic;">
+                <i class="fas fa-info-circle"></i> More tools coming soon! These applications are built using Streamlit and Python for interactive scientific computing.
+            </p>
+        </section>
+
+        <!-- Publications -->
+        <section id="publications">
+            <h2>Publications & Research Profiles</h2>
+            <div class="publications-content">
+                <p>Explore my research contributions, publications, and academic profiles:</p>
+                <div class="pub-links">
+                    <a href="https://scholar.google.com/citations?user=vDMppM8AAAAJ&hl=en" class="pub-link scholar" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-graduation-cap"></i> Google Scholar
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Indranil-Mal" class="pub-link researchgate" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-researchgate"></i> ResearchGate
+                    </a>
+                    <a href="https://orcid.org/0000-0002-4729-1648" class="pub-link orcid" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-orcid"></i> ORCID
+                    </a>
+                    <a href="https://www.webofscience.com/wos/author/record/AAR-3345-2020" class="pub-link wos" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-book"></i> Web of Science
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>Email</strong><br>
+                        <a href="mailto:mal@fzu.cz">mal@fzu.cz</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-building"></i>
+                    <div>
+                        <strong>Institution</strong><br>
+                        <a href="https://www.fzu.cz" target="_blank" rel="noopener noreferrer">Institute of Physics, CAS</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <strong>Department</strong><br>
+                        Condensed Matter Theory
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Location</strong><br>
+                        Prague, Czech Republic
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links">
+                <a href="https://github.com/Indranil2020" class="social-link github" target="_blank" rel="noopener noreferrer" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/indranil-mal-40736655/" class="social-link linkedin" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.researchgate.net/profile/Indranil-Mal" class="social-link researchgate" target="_blank" rel="noopener noreferrer" title="ResearchGate">
+                    <i class="fab fa-researchgate"></i>
+                </a>
+                <a href="https://orcid.org/0000-0002-4729-1648" class="social-link orcid" target="_blank" rel="noopener noreferrer" title="ORCID">
+                    <i class="fab fa-orcid"></i>
+                </a>
+                <a href="https://scholar.google.com/citations?user=vDMppM8AAAAJ&hl=en" class="social-link scholar" target="_blank" rel="noopener noreferrer" title="Google Scholar">
+                    <i class="fas fa-graduation-cap"></i>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Dr. Indranil Mal. All rights reserved.</p>
+        <p>Computational Materials Scientist | P4F Fellow at Institute of Physics, Czech Academy of Sciences</p>
+        <p>Last updated: November 2025</p>
+    </footer>
 </body>
-</html> 
+</html>
