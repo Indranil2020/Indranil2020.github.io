@@ -25,292 +25,285 @@
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 2rem;
+            background: #f5f5f5;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
+        /* Navigation Bar */
+        nav {
             background: white;
-            border-radius: 12px;
-            padding: 3rem;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #3498db;
+        }
+
+        .nav-menu a i {
+            margin-right: 0.5rem;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .tool-header {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
         }
 
         h1 {
             color: #2c3e50;
             font-size: 2.5rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        h1 i {
-            color: #667eea;
+            margin-bottom: 0.5rem;
         }
 
         .subtitle {
             color: #666;
             font-size: 1.1rem;
             margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid #e1e8ed;
         }
 
-        .status-badge {
-            display: inline-block;
-            background: #28a745;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-weight: 600;
-            margin-bottom: 2rem;
-        }
-
-        .status-badge.live {
-            background: #28a745;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
-        }
-
-        .status-badge i {
-            margin-right: 0.5rem;
-        }
-
-        h2 {
-            color: #2c3e50;
-            font-size: 1.8rem;
-            margin: 2rem 0 1rem;
-        }
-
-        p {
-            color: #555;
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-
-        .feature-list {
-            list-style: none;
-            padding: 0;
-            margin: 1.5rem 0;
-        }
-
-        .feature-list li {
-            padding: 0.5rem 0;
-            padding-left: 2rem;
-            position: relative;
-        }
-
-        .feature-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #28a745;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .info-box {
-            background: #f8f9fa;
-            border-left: 4px solid #3498db;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 4px;
-        }
-
-        .info-box h3 {
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-        }
-
-        .btn-group {
+        .action-buttons {
             display: flex;
             gap: 1rem;
-            margin: 2rem 0;
             flex-wrap: wrap;
+            margin-top: 2rem;
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 1rem 2rem;
-            border-radius: 8px;
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s;
         }
 
-        .btn-primary {
-            background: #28a745;
+        .btn-launch {
+            background: #3498db;
             color: white;
         }
 
-        .btn-primary:hover {
-            background: #218838;
+        .btn-launch:hover {
+            background: #2980b9;
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
         }
 
         .btn-secondary {
             background: #6c757d;
             color: white;
-            cursor: not-allowed;
-            opacity: 0.6;
         }
 
-        .btn-github {
-            background: #171515;
-            color: white;
+        .btn-secondary:hover {
+            background: #545b62;
         }
 
-        .btn-github:hover {
-            background: #2d2d2d;
-            transform: translateY(-2px);
-        }
-
-        .btn-home {
-            background: #3498db;
-            color: white;
-        }
-
-        .btn-home:hover {
-            background: #2980b9;
-            transform: translateY(-2px);
-        }
-
-        .deployment-steps {
-            background: #fff3cd;
-            border: 2px solid #ffc107;
+        .content-section {
+            background: white;
+            padding: 2rem;
             border-radius: 8px;
-            padding: 1.5rem;
-            margin: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
         }
 
-        .deployment-steps h3 {
-            color: #856404;
+        h2 {
+            color: #2c3e50;
+            font-size: 1.5rem;
             margin-bottom: 1rem;
+            border-bottom: 2px solid #e1e8ed;
+            padding-bottom: 0.5rem;
         }
 
-        .deployment-steps ol {
-            margin-left: 1.5rem;
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
         }
 
-        .deployment-steps li {
-            margin-bottom: 0.5rem;
-            color: #856404;
+        .feature-item {
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 3px solid #3498db;
         }
 
-        code {
-            background: #f4f4f4;
-            padding: 0.2rem 0.5rem;
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
-            color: #e83e8c;
+        .feature-item i {
+            color: #3498db;
+            margin-right: 0.5rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: #e9ecef;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #495057;
         }
 
         footer {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 2px solid #e1e8ed;
             text-align: center;
+            padding: 2rem;
             color: #666;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Indranil Mal</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="../index.html#research"><i class="fas fa-flask"></i>Research</a></li>
+                <li><a href="../index.html#publications"><i class="fas fa-book"></i>Publications</a></li>
+                <li><a href="https://github.com/Indranil2020" target="_blank"><i class="fab fa-github"></i>GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
     <div class="container">
-        <h1><i class="fas fa-atom"></i> Basis Set Visualizer</h1>
-        <p class="subtitle">Interactive visualization and exploration of atomic basis sets from the Basis Set Exchange (BSE)</p>
+        <!-- Header -->
+        <div class="tool-header">
+            <h1><i class="fas fa-atom"></i> Basis Set Visualizer</h1>
+            <p class="subtitle">Interactive visualization tool for atomic basis sets from the Basis Set Exchange (BSE)</p>
 
-        <div class="status-badge live">
-            <i class="fas fa-check-circle"></i> Live & Accessible Worldwide
+            <div class="action-buttons">
+                <a href="https://basis-set-visualizer.streamlit.app/" class="btn btn-launch" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Launch Tool
+                </a>
+                <a href="https://github.com/Indranil2020/DFT_visual" class="btn btn-secondary" target="_blank">
+                    <i class="fab fa-github"></i> Source Code
+                </a>
+            </div>
         </div>
 
-        <h2>About This Tool</h2>
-        <p>
-            The Basis Set Visualizer is an interactive Streamlit application that allows researchers and students
-            to explore and visualize atomic basis sets used in Density Functional Theory (DFT) calculations.
-            Access basis sets from the comprehensive Basis Set Exchange database with real-time 3D visualization.
-        </p>
-
-        <h2>Features</h2>
-        <ul class="feature-list">
-            <li>Browse and search the Basis Set Exchange (BSE) database</li>
-            <li>Interactive 3D visualization of basis functions</li>
-            <li>Real-time parameter adjustments and exploration</li>
-            <li>Export basis set data for use in DFT calculations</li>
-            <li>Support for various elements and basis set families</li>
-            <li>Educational tool for understanding basis set construction</li>
-            <li>Compare different basis sets side-by-side</li>
-            <li>Free and open-source</li>
-        </ul>
-
-        <div class="info-box">
-            <h3><i class="fas fa-graduation-cap"></i> Perfect for:</h3>
+        <!-- About -->
+        <div class="content-section">
+            <h2>About</h2>
             <p>
-                Students learning quantum chemistry, researchers selecting basis sets for calculations,
-                educators teaching computational chemistry, and anyone interested in understanding the
-                mathematical foundations of DFT calculations.
+                This tool provides interactive visualization of atomic basis sets used in Density Functional Theory (DFT) calculations.
+                Browse the Basis Set Exchange database, visualize 3D orbitals, and export data for your quantum chemistry calculations.
             </p>
         </div>
 
-        <h2>Access the Tool</h2>
-        <div class="btn-group">
-            <a href="https://basis-set-visualizer.streamlit.app/" class="btn btn-primary" target="_blank">
-                <i class="fas fa-rocket"></i> Launch Application
-            </a>
-            <a href="https://github.com/Indranil2020/DFT_visual" target="_blank" class="btn btn-github">
-                <i class="fab fa-github"></i> View Source Code
-            </a>
-            <a href="../index.html" class="btn btn-home">
-                <i class="fas fa-home"></i> Back to Homepage
-            </a>
+        <!-- Features -->
+        <div class="content-section">
+            <h2>Features</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <i class="fas fa-database"></i> Browse 500+ basis sets from BSE
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-cube"></i> 3D orbital visualization
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-sliders-h"></i> Interactive parameter controls
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-download"></i> Export to multiple formats
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-columns"></i> Side-by-side comparison
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-table"></i> Periodic table interface
+                </div>
+            </div>
         </div>
 
-        <div class="deployment-steps">
-            <h3><i class="fas fa-info-circle"></i> How to Use</h3>
-            <p>Getting started with the Basis Set Visualizer:</p>
-            <ol>
-                <li>Click <strong>"Launch Application"</strong> above to open the interactive tool</li>
+        <!-- Usage -->
+        <div class="content-section">
+            <h2>How to Use</h2>
+            <ol style="line-height: 2;">
+                <li>Click "Launch Tool" to open the application</li>
                 <li>Select an element from the periodic table</li>
-                <li>Choose a basis set from the dropdown (e.g., "6-31G", "cc-pVDZ", "def2-TZVP")</li>
-                <li>Explore the 3D visualization of atomic orbitals</li>
-                <li>Use the comparison mode to compare different basis sets</li>
-                <li>Export basis set data for your DFT calculations</li>
+                <li>Choose a basis set (e.g., 6-31G, cc-pVDZ, def2-TZVP)</li>
+                <li>Visualize orbitals and explore parameters</li>
+                <li>Export data for your calculations</li>
             </ol>
-            <p style="margin-top: 1rem;"><strong>Note:</strong> The app is free to use and requires no login or registration. Works on desktop and mobile devices.</p>
         </div>
 
-        <h2>Technical Details</h2>
-        <p><strong>Technology Stack:</strong></p>
-        <ul class="feature-list">
-            <li>Python with Streamlit framework</li>
-            <li>Basis Set Exchange (BSE) Python library</li>
-            <li>Plotly for 3D visualization</li>
-            <li>NumPy and SciPy for numerical computations</li>
-            <li>Pandas for data handling</li>
-        </ul>
-
-        <p style="margin-top: 2rem;">
-            <strong>Repository:</strong> <a href="https://github.com/Indranil2020/DFT_visual" target="_blank">github.com/Indranil2020/DFT_visual</a>
-        </p>
-
-        <footer>
-            <p>&copy; 2025 Indranil Mal | Institute of Physics, Czech Academy of Sciences</p>
-            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
-                <a href="../index.html" style="color: #3498db; text-decoration: none;">Home</a> |
-                <a href="https://github.com/Indranil2020" target="_blank" style="color: #3498db; text-decoration: none;">GitHub</a> |
-                <a href="mailto:mal@fzu.cz" style="color: #3498db; text-decoration: none;">Contact</a>
-            </p>
-        </footer>
+        <!-- Technical Details -->
+        <div class="content-section">
+            <h2>Technical Stack</h2>
+            <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Streamlit</span>
+                <span class="tech-tag">Basis Set Exchange</span>
+                <span class="tech-tag">Plotly</span>
+                <span class="tech-tag">NumPy</span>
+                <span class="tech-tag">SciPy</span>
+            </div>
+        </div>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Indranil Mal | Institute of Physics, Czech Academy of Sciences</p>
+        <p style="margin-top: 0.5rem;">
+            <a href="../index.html">Home</a> |
+            <a href="https://github.com/Indranil2020" target="_blank">GitHub</a> |
+            <a href="mailto:mal@fzu.cz">Contact</a>
+        </p>
+    </footer>
 </body>
 </html>
