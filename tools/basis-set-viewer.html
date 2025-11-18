@@ -62,12 +62,22 @@
 
         .status-badge {
             display: inline-block;
-            background: #ffc107;
-            color: #000;
+            background: #28a745;
+            color: white;
             padding: 0.5rem 1rem;
             border-radius: 20px;
             font-weight: 600;
             margin-bottom: 2rem;
+        }
+
+        .status-badge.live {
+            background: #28a745;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
         }
 
         .status-badge i {
@@ -220,8 +230,8 @@
         <h1><i class="fas fa-atom"></i> Basis Set Visualizer</h1>
         <p class="subtitle">Interactive visualization and exploration of atomic basis sets from the Basis Set Exchange (BSE)</p>
 
-        <div class="status-badge">
-            <i class="fas fa-tools"></i> Deployment in Progress
+        <div class="status-badge live">
+            <i class="fas fa-check-circle"></i> Live & Accessible Worldwide
         </div>
 
         <h2>About This Tool</h2>
@@ -254,8 +264,8 @@
 
         <h2>Access the Tool</h2>
         <div class="btn-group">
-            <a href="#" class="btn btn-secondary" onclick="alert('Streamlit deployment in progress! Will be available soon.'); return false;">
-                <i class="fas fa-rocket"></i> Launch Application (Coming Soon)
+            <a href="https://basis-set-visualizer.streamlit.app/" class="btn btn-primary" target="_blank">
+                <i class="fas fa-rocket"></i> Launch Application
             </a>
             <a href="https://github.com/Indranil2020/DFT_visual" target="_blank" class="btn btn-github">
                 <i class="fab fa-github"></i> View Source Code
@@ -266,20 +276,17 @@
         </div>
 
         <div class="deployment-steps">
-            <h3><i class="fas fa-info-circle"></i> Deployment Instructions</h3>
-            <p>To deploy this Streamlit app, follow these steps:</p>
+            <h3><i class="fas fa-info-circle"></i> How to Use</h3>
+            <p>Getting started with the Basis Set Visualizer:</p>
             <ol>
-                <li>Deploy to <strong>Streamlit Community Cloud</strong> (free hosting):
-                    <ul>
-                        <li>Go to <a href="https://streamlit.io/cloud" target="_blank">streamlit.io/cloud</a></li>
-                        <li>Connect your GitHub repository</li>
-                        <li>Select the DFT_visual repository</li>
-                        <li>Deploy and get a public URL</li>
-                    </ul>
-                </li>
-                <li>Or deploy to <strong>Render</strong>, <strong>Heroku</strong>, or <strong>Railway</strong></li>
-                <li>Update the link in this page to point to your deployed app</li>
+                <li>Click <strong>"Launch Application"</strong> above to open the interactive tool</li>
+                <li>Select an element from the periodic table</li>
+                <li>Choose a basis set from the dropdown (e.g., "6-31G", "cc-pVDZ", "def2-TZVP")</li>
+                <li>Explore the 3D visualization of atomic orbitals</li>
+                <li>Use the comparison mode to compare different basis sets</li>
+                <li>Export basis set data for your DFT calculations</li>
             </ol>
+            <p style="margin-top: 1rem;"><strong>Note:</strong> The app is free to use and requires no login or registration. Works on desktop and mobile devices.</p>
         </div>
 
         <h2>Technical Details</h2>
