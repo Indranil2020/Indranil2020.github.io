@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive Basis Set Visualizer - Explore atomic basis sets from BSE for DFT calculations">
+    <meta name="keywords" content="Basis Set, DFT, Visualization, BSE, Quantum Chemistry, Computational Chemistry">
+    <meta name="author" content="Indranil Mal">
+    <title>Basis Set Visualizer | Indranil Mal</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        h1 i {
+            color: #667eea;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #e1e8ed;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: #ffc107;
+            color: #000;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .status-badge i {
+            margin-right: 0.5rem;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .feature-list li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .info-box {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .info-box h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .btn-github {
+            background: #171515;
+            color: white;
+        }
+
+        .btn-github:hover {
+            background: #2d2d2d;
+            transform: translateY(-2px);
+        }
+
+        .btn-home {
+            background: #3498db;
+            color: white;
+        }
+
+        .btn-home:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .deployment-steps {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .deployment-steps h3 {
+            color: #856404;
+            margin-bottom: 1rem;
+        }
+
+        .deployment-steps ol {
+            margin-left: 1.5rem;
+        }
+
+        .deployment-steps li {
+            margin-bottom: 0.5rem;
+            color: #856404;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #e83e8c;
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #e1e8ed;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-atom"></i> Basis Set Visualizer</h1>
+        <p class="subtitle">Interactive visualization and exploration of atomic basis sets from the Basis Set Exchange (BSE)</p>
+
+        <div class="status-badge">
+            <i class="fas fa-tools"></i> Deployment in Progress
+        </div>
+
+        <h2>About This Tool</h2>
+        <p>
+            The Basis Set Visualizer is an interactive Streamlit application that allows researchers and students
+            to explore and visualize atomic basis sets used in Density Functional Theory (DFT) calculations.
+            Access basis sets from the comprehensive Basis Set Exchange database with real-time 3D visualization.
+        </p>
+
+        <h2>Features</h2>
+        <ul class="feature-list">
+            <li>Browse and search the Basis Set Exchange (BSE) database</li>
+            <li>Interactive 3D visualization of basis functions</li>
+            <li>Real-time parameter adjustments and exploration</li>
+            <li>Export basis set data for use in DFT calculations</li>
+            <li>Support for various elements and basis set families</li>
+            <li>Educational tool for understanding basis set construction</li>
+            <li>Compare different basis sets side-by-side</li>
+            <li>Free and open-source</li>
+        </ul>
+
+        <div class="info-box">
+            <h3><i class="fas fa-graduation-cap"></i> Perfect for:</h3>
+            <p>
+                Students learning quantum chemistry, researchers selecting basis sets for calculations,
+                educators teaching computational chemistry, and anyone interested in understanding the
+                mathematical foundations of DFT calculations.
+            </p>
+        </div>
+
+        <h2>Access the Tool</h2>
+        <div class="btn-group">
+            <a href="#" class="btn btn-secondary" onclick="alert('Streamlit deployment in progress! Will be available soon.'); return false;">
+                <i class="fas fa-rocket"></i> Launch Application (Coming Soon)
+            </a>
+            <a href="https://github.com/Indranil2020/DFT_visual" target="_blank" class="btn btn-github">
+                <i class="fab fa-github"></i> View Source Code
+            </a>
+            <a href="../index.html" class="btn btn-home">
+                <i class="fas fa-home"></i> Back to Homepage
+            </a>
+        </div>
+
+        <div class="deployment-steps">
+            <h3><i class="fas fa-info-circle"></i> Deployment Instructions</h3>
+            <p>To deploy this Streamlit app, follow these steps:</p>
+            <ol>
+                <li>Deploy to <strong>Streamlit Community Cloud</strong> (free hosting):
+                    <ul>
+                        <li>Go to <a href="https://streamlit.io/cloud" target="_blank">streamlit.io/cloud</a></li>
+                        <li>Connect your GitHub repository</li>
+                        <li>Select the DFT_visual repository</li>
+                        <li>Deploy and get a public URL</li>
+                    </ul>
+                </li>
+                <li>Or deploy to <strong>Render</strong>, <strong>Heroku</strong>, or <strong>Railway</strong></li>
+                <li>Update the link in this page to point to your deployed app</li>
+            </ol>
+        </div>
+
+        <h2>Technical Details</h2>
+        <p><strong>Technology Stack:</strong></p>
+        <ul class="feature-list">
+            <li>Python with Streamlit framework</li>
+            <li>Basis Set Exchange (BSE) Python library</li>
+            <li>Plotly for 3D visualization</li>
+            <li>NumPy and SciPy for numerical computations</li>
+            <li>Pandas for data handling</li>
+        </ul>
+
+        <p style="margin-top: 2rem;">
+            <strong>Repository:</strong> <a href="https://github.com/Indranil2020/DFT_visual" target="_blank">github.com/Indranil2020/DFT_visual</a>
+        </p>
+
+        <footer>
+            <p>&copy; 2025 Indranil Mal | Institute of Physics, Czech Academy of Sciences</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                <a href="../index.html" style="color: #3498db; text-decoration: none;">Home</a> |
+                <a href="https://github.com/Indranil2020" target="_blank" style="color: #3498db; text-decoration: none;">GitHub</a> |
+                <a href="mailto:mal@fzu.cz" style="color: #3498db; text-decoration: none;">Contact</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
