@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://indranil2020.github.io/sitemap.xml
