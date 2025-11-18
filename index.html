@@ -48,7 +48,7 @@
         }
 
         nav ul li {
-            margin: 0 1rem;
+            margin: 0 0.8rem;
         }
 
         nav ul li a {
@@ -56,19 +56,35 @@
             color: #2c3e50;
             font-weight: 500;
             transition: color 0.3s;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         nav ul li a:hover {
             color: #3498db;
         }
 
-        /* Header */
+        /* Hero Section */
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 4rem 2rem;
+            padding: 3rem 2rem;
             text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            margin: 0 auto 1.5rem;
+            display: block;
+            object-fit: cover;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
 
         header h1 {
@@ -77,15 +93,23 @@
             font-weight: 700;
         }
 
-        header p {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
+        header .title {
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
             opacity: 0.95;
+            font-weight: 500;
         }
 
         header .subtitle {
-            font-size: 1rem;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
             opacity: 0.9;
+            font-weight: 400;
+        }
+
+        header .institution {
+            font-size: 1rem;
+            opacity: 0.85;
             font-weight: 300;
         }
 
@@ -114,35 +138,44 @@
         }
 
         /* About Section */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
         .about-text p {
             margin-bottom: 1rem;
-            text-align: justify;
             color: #555;
             line-height: 1.8;
+            font-size: 1.05rem;
         }
 
+        /* Current Research Project Highlight */
         .project-highlight {
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 1.5rem;
+            padding: 2rem;
             border-radius: 8px;
             border-left: 4px solid #667eea;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
         }
 
         .project-highlight h3 {
             color: #2c3e50;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .project-highlight h3 i {
+            color: #667eea;
         }
 
         .project-highlight p {
             color: #555;
             margin: 0.5rem 0;
+            line-height: 1.7;
+        }
+
+        .project-highlight p strong {
+            color: #2c3e50;
+            font-weight: 600;
         }
 
         /* Research Interests */
@@ -183,7 +216,189 @@
             font-size: 0.95rem;
         }
 
-        /* Education & Experience Timeline */
+        /* GitHub Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .project-card {
+            background: white;
+            border: 2px solid #e1e8ed;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: #3498db;
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.15);
+        }
+
+        .project-card h3 {
+            color: #2c3e50;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .project-card h3 i {
+            color: #171515;
+        }
+
+        .project-card .project-lang {
+            display: inline-block;
+            font-size: 0.8rem;
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-card p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-card a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .project-card a:hover {
+            color: #2980b9;
+        }
+
+        /* Publications Section */
+        .publications-content {
+            text-align: center;
+        }
+
+        .publications-content > p {
+            color: #555;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .pub-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .pub-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: #3498db;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .pub-link:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .pub-link.scholar {
+            background: #4285f4;
+        }
+
+        .pub-link.researchgate {
+            background: #0cb;
+        }
+
+        .pub-link.orcid {
+            background: #a6ce39;
+        }
+
+        .pub-link.wos {
+            background: #5b6670;
+        }
+
+        /* Previous Research Projects */
+        .research-projects-list {
+            margin-top: 1.5rem;
+        }
+
+        .research-project-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #764ba2;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .research-project-item:hover {
+            transform: translateX(5px);
+        }
+
+        .research-project-item h3 {
+            color: #2c3e50;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .research-project-item .date {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+            display: block;
+        }
+
+        .research-project-item p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* Conferences Section */
+        .conferences-list {
+            margin-top: 1.5rem;
+        }
+
+        .conference-item {
+            background: #f8f9fa;
+            padding: 1.2rem 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .conference-item i {
+            color: #3498db;
+            font-size: 1.5rem;
+            margin-top: 0.2rem;
+        }
+
+        .conference-item .conference-content h3 {
+            color: #2c3e50;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .conference-item .conference-content p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        /* Timeline */
         .timeline {
             position: relative;
             padding-left: 2rem;
@@ -279,65 +494,6 @@
             border: 1px solid #e1e8ed;
         }
 
-        /* GitHub Projects */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .project-card {
-            background: white;
-            border: 2px solid #e1e8ed;
-            border-radius: 8px;
-            padding: 1.5rem;
-            transition: all 0.3s;
-        }
-
-        .project-card:hover {
-            border-color: #3498db;
-            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.15);
-        }
-
-        .project-card h3 {
-            color: #2c3e50;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .project-card h3 i {
-            color: #171515;
-        }
-
-        .project-card .project-lang {
-            display: inline-block;
-            font-size: 0.8rem;
-            color: #3498db;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-card p {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .project-card a {
-            color: #3498db;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-
-        .project-card a:hover {
-            color: #2980b9;
-        }
-
         /* Tools Section */
         .tools-grid {
             display: grid;
@@ -391,55 +547,17 @@
             background: #2980b9;
         }
 
-        /* Publications Section */
-        .publications-content {
-            text-align: center;
+        .tool-source {
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: #888;
         }
 
-        .publications-content p {
-            color: #555;
-            margin-bottom: 1.5rem;
-        }
-
-        .pub-links {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .pub-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            background: #3498db;
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
+        .tool-source a {
+            color: #3498db;
             text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .pub-link:hover {
-            background: #2980b9;
-            transform: translateY(-2px);
-        }
-
-        .pub-link.scholar {
-            background: #4285f4;
-        }
-
-        .pub-link.researchgate {
-            background: #0cb;
-        }
-
-        .pub-link.orcid {
-            background: #a6ce39;
-        }
-
-        .pub-link.wos {
-            background: #5b6670;
+            background: none;
+            padding: 0;
         }
 
         /* Memberships */
@@ -571,6 +689,19 @@
                 font-size: 2rem;
             }
 
+            header .title {
+                font-size: 1.1rem;
+            }
+
+            header .subtitle {
+                font-size: 1rem;
+            }
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+
             nav ul li {
                 margin: 0.5rem 0.5rem;
             }
@@ -581,6 +712,10 @@
 
             section {
                 padding: 1.5rem;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
             }
 
             .timeline {
@@ -595,43 +730,41 @@
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#research">Research</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#tools">Tools</a></li>
+            <li><a href="#current-project">Current Project</a></li>
+            <li><a href="#projects">GitHub Projects</a></li>
             <li><a href="#publications">Publications</a></li>
+            <li><a href="#previous-research">Previous Research</a></li>
+            <li><a href="#conferences">Conferences</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#memberships">Memberships</a></li>
+            <li><a href="#tools">Tools</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Header -->
+    <!-- Hero Section -->
     <header>
-        <h1>Indranil Mal</h1>
-        <p>Computational Materials Scientist</p>
-        <p class="subtitle">P4F Fellow | Institute of Physics, Czech Academy of Sciences (FZU)</p>
-        <p class="subtitle">Prague, Czech Republic</p>
+        <div class="hero-content">
+            <img src="assets/profile.jpg" alt="Indranil Mal" class="profile-image">
+            <h1>Indranil Mal</h1>
+            <p class="title">Marie Sklodowska-Curie COFUND Fellow (P4F)</p>
+            <p class="subtitle">Computational Materials Scientist</p>
+            <p class="institution">Institute of Physics, Czech Academy of Sciences</p>
+        </div>
     </header>
 
     <div class="container">
         <!-- About Section -->
         <section id="about">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I am a P4F Fellow at the Institute of Physics, Czech Academy of Sciences (FZU), working in the Department of Condensed Matter Theory. My research focuses on computational materials science with expertise in Density Functional Theory (DFT), Time-Dependent DFT, and ferroelectric materials.
-                    </p>
-                    <p>
-                        I completed my Ph.D. in Electronics and Communication Engineering from PDPM IIITDM Jabalpur (2022), where I investigated the theoretical aspects of optoelectronic properties of III-V alloys and quantum confined structures for infrared applications. My research combines first-principles calculations with advanced computational methods to explore novel materials for quantum electronics and neuromorphic computing.
-                    </p>
-                </div>
-                <div class="project-highlight">
-                    <h3><i class="fas fa-flask"></i> Current Research Project</h3>
-                    <p><strong>Title:</strong> Molecular Optoelectronics on Ferroelectric Substrates</p>
-                    <p><strong>Duration:</strong> January 2025 - January 2027</p>
-                    <p><strong>Supervisor:</strong> Ing. Prokop Hapala, Ph.D.</p>
-                    <p><strong>Focus:</strong> Exploring hybrid organic-inorganic devices that harness ferroelectric perovskites and molecular switches to advance quantum electronics and neuromorphic computing applications.</p>
-                </div>
+            <h2>About</h2>
+            <div class="about-text">
+                <p>
+                    I am a Marie Sklodowska-Curie COFUND Fellow at the Institute of Physics, Czech Academy of Sciences (FZU), working in the Department of Condensed Matter Theory. My research focuses on computational materials science with expertise in Density Functional Theory (DFT), Time-Dependent DFT, and ferroelectric materials.
+                </p>
+                <p>
+                    I completed my Ph.D. in Electronics and Communication Engineering from PDPM IIITDM Jabalpur (2022), where I investigated the theoretical aspects of optoelectronic properties of III-V alloys and quantum confined structures for infrared applications. My research combines first-principles calculations with advanced computational methods to explore novel materials for quantum electronics and neuromorphic computing.
+                </p>
             </div>
         </section>
 
@@ -668,76 +801,128 @@
                     <p>Development of computational toolkit for molecular quantum electronics and neuromorphic computing simulation using ferroelectric materials.</p>
                 </div>
                 <div class="research-card">
-                    <h3><i class="fas fa-atom-alt"></i> Transmon Qubit</h3>
+                    <h3><i class="fas fa-atom"></i> Transmon Qubit</h3>
                     <p>Theoretical investigation of superconducting qubits for quantum computing applications.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Professional Experience -->
-        <section id="experience">
-            <h2>Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>Postdoctoral Fellow (P4F MSCA COFUND)</h3>
-                    <p class="date">January 2025 - Present</p>
-                    <p><strong>Institute of Physics, Czech Academy of Sciences (FZU), Prague</strong></p>
-                    <p>Department of Condensed Matter Theory</p>
-                    <p><strong>Project:</strong> Molecular Optoelectronics on Ferroelectric Substrates</p>
-                    <p><strong>Supervisor:</strong> Ing. Prokop Hapala, Ph.D.</p>
-                    <p>Developing computational toolkit for molecular quantum electronics and neuromorphic computing simulation. Exploring hybrid organic-inorganic devices that harness ferroelectric perovskites and molecular switches.</p>
+        <!-- Current Research Project -->
+        <section id="current-project">
+            <h2>Current Research Project</h2>
+            <div class="project-highlight">
+                <h3><i class="fas fa-flask"></i> Molecular Optoelectronics on Ferroelectric Substrates</h3>
+                <p><strong>Duration:</strong> January 2025 - January 2027</p>
+                <p><strong>Position:</strong> Marie Sklodowska-Curie COFUND Fellow (P4F)</p>
+                <p><strong>Supervisor:</strong> Ing. Prokop Hapala, Ph.D.</p>
+                <p><strong>Institution:</strong> Institute of Physics, Czech Academy of Sciences, Prague</p>
+                <p><strong>Focus:</strong> Exploring hybrid organic-inorganic devices that harness ferroelectric perovskites and molecular switches to advance quantum electronics and neuromorphic computing applications. Developing computational toolkit for molecular quantum electronics simulation.</p>
+            </div>
+        </section>
+
+        <!-- GitHub Projects -->
+        <section id="projects">
+            <h2>GitHub Projects & Contributions</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3><i class="fab fa-github"></i> FireCore</h3>
+                    <span class="project-lang">Python / C++</span>
+                    <p>Advanced computational toolkit for molecular dynamics and electronic structure calculations. Collaborative project focusing on efficient atomistic simulations and force-field methods.</p>
+                    <a href="https://github.com/ProkopHapala/FireCore" target="_blank" rel="noopener noreferrer">View Repository <i class="fas fa-external-link-alt"></i></a>
                 </div>
-                <div class="timeline-item">
-                    <h3>Postdoctoral Research Associate</h3>
-                    <p class="date">November 2022 - January 2025</p>
-                    <p><strong>Indian Institute of Technology (IIT) Delhi</strong></p>
-                    <p><strong>Project:</strong> Development of Shape Memory Oxide thin-films for Aerospace applications</p>
-                    <p><strong>Supervisors:</strong> Prof. Brajesh Kumar Mani and Prof. Ratnamala Chatterjee</p>
-                    <p>Theoretical and experimental development of doped PZTS and BNT perovskite for shape memory applications. Understanding phase-switching behavior, defect formation, and shape recovery process using effective Hamiltonian approaches.</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>Postdoctoral Research Associate</h3>
-                    <p class="date">February 2022 - November 2022</p>
-                    <p><strong>Indian Institute of Science Education and Research (IISER) Bhopal</strong></p>
-                    <p><strong>Project:</strong> Excited State Dynamics Toolkit</p>
-                    <p><strong>Supervisor:</strong> Dr. Varadharajan Srinivasan</p>
-                    <p>Developed comprehensive toolkit for computer simulations of photo-induced phenomena combining TDDFT and open quantum system approaches. Target applications include solar energy conversion (photovoltaics, water-splitting catalysts), optoelectronic materials, and photochemistry.</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>Senior Research Fellow (SRF)</h3>
-                    <p class="date">November 2021 - February 2022</p>
-                    <p><strong>PDPM IIITDM Jabalpur</strong></p>
-                    <p><strong>Project:</strong> Analytical Modelling and Simulation of III-V nanostructure-based Hybrid Solar Cells</p>
-                    <p><strong>Supervisor:</strong> Dr. Dip Prakash Samajdar</p>
-                    <p>Design and simulation of nanostructures (nano-rod, nano-cone, and truncated-pyramidal) based solar cells using COMSOL Multiphysics.</p>
+                <div class="project-card">
+                    <h3><i class="fab fa-github"></i> LITESOPH</h3>
+                    <span class="project-lang">Python</span>
+                    <p>Layer Integrated Toolkit and Engine for Simulations of Photoexcited Holes - Comprehensive toolkit for computational spectroscopy and excited-state dynamics using TDDFT.</p>
+                    <a href="https://github.com/LITESOPH/litesoph" target="_blank" rel="noopener noreferrer">View Repository <i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
         </section>
 
-        <!-- Education -->
-        <section id="education">
-            <h2>Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>Ph.D. in Electronics and Communication Engineering</h3>
-                    <p class="date">2018 - 2022</p>
-                    <p><strong>PDPM Indian Institute of Information Technology, Design and Manufacturing (IIITDM) Jabalpur</strong></p>
-                    <p>Thesis: Theoretical Investigation of Optoelectronic Properties of III-V Alloys and Quantum Confined Structures for Infrared Applications</p>
+        <!-- Publications -->
+        <section id="publications">
+            <h2>Publications & Research Profiles</h2>
+            <div class="publications-content">
+                <p>Explore my research contributions, publications, and academic profiles:</p>
+                <div class="pub-links">
+                    <a href="https://scholar.google.com/citations?user=vDMppM8AAAAJ&hl=en" class="pub-link scholar" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-graduation-cap"></i> Google Scholar
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Indranil-Mal" class="pub-link researchgate" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-researchgate"></i> ResearchGate
+                    </a>
+                    <a href="https://orcid.org/0000-0002-4729-1648" class="pub-link orcid" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-orcid"></i> ORCID
+                    </a>
+                    <a href="https://www.webofscience.com/wos/author/record/AAR-3345-2020" class="pub-link wos" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-book"></i> Web of Science
+                    </a>
                 </div>
-                <div class="timeline-item">
-                    <h3>M.Tech in Mobile Communication and Computing</h3>
-                    <p class="date">2015 - 2017</p>
-                    <p><strong>National Institute of Technology (NIT) Arunachal Pradesh</strong></p>
+            </div>
+        </section>
+
+        <!-- Previous Research Projects -->
+        <section id="previous-research">
+            <h2>Previous Research Projects</h2>
+            <div class="research-projects-list">
+                <div class="research-project-item">
+                    <h3>Shape Memory Oxide Thin-films for Aerospace Applications</h3>
+                    <span class="date">November 2022 - January 2025</span>
+                    <p><strong>Institution:</strong> Indian Institute of Technology (IIT) Delhi</p>
+                    <p><strong>Focus:</strong> Theoretical and experimental development of doped PZTS (Lead Zirconate Titanate Stannate) and BNT (Bismuth Sodium Titanate) perovskite materials for shape memory applications in aerospace. Understanding phase-switching behavior, defect formation, and shape recovery processes using effective Hamiltonian approaches and first-principles calculations.</p>
                 </div>
-                <div class="timeline-item">
-                    <h3>M.Sc. in Electronics</h3>
-                    <p class="date">2011 - 2013</p>
-                    <p><strong>West Bengal State University</strong></p>
+                <div class="research-project-item">
+                    <h3>Excited State Dynamics Toolkit</h3>
+                    <span class="date">February 2022 - November 2022</span>
+                    <p><strong>Institution:</strong> Indian Institute of Science Education and Research (IISER) Bhopal</p>
+                    <p><strong>Focus:</strong> Development of comprehensive toolkit for computer simulations of photo-induced phenomena combining Time-Dependent Density Functional Theory (TDDFT) and open quantum systems approaches. Target applications include solar energy conversion (photovoltaics, water-splitting catalysts), optoelectronic materials, and photochemistry.</p>
                 </div>
-                <div class="timeline-item">
-                    <h3>B.Sc. in Physics</h3>
-                    <p class="date">2008 - 2011</p>
-                    <p><strong>West Bengal State University</strong></p>
+                <div class="research-project-item">
+                    <h3>Optoelectronic Properties of III-V Alloys and Quantum Confined Structures</h3>
+                    <span class="date">2018 - 2022</span>
+                    <p><strong>Institution:</strong> PDPM IIITDM Jabalpur (Ph.D. Research)</p>
+                    <p><strong>Focus:</strong> Theoretical investigation of optoelectronic properties of III-V semiconductor alloys and quantum confined structures for infrared applications. Used multi-band k.p perturbation theory and DFT to study band structure, optical properties, and device performance of InAs, InSb, and Bismuth-based alloys for long-wavelength infrared photodetectors.</p>
+                </div>
+                <div class="research-project-item">
+                    <h3>III-V Nanostructure-based Hybrid Solar Cells using COMSOL</h3>
+                    <span class="date">November 2021 - February 2022</span>
+                    <p><strong>Institution:</strong> PDPM IIITDM Jabalpur (Senior Research Fellow)</p>
+                    <p><strong>Focus:</strong> Design and simulation of III-V nanostructures (nano-rod, nano-cone, and truncated-pyramidal geometries) based hybrid solar cells using COMSOL Multiphysics. Analytical modeling and optimization of device performance for enhanced light absorption and charge collection efficiency.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conferences & Invited Talks -->
+        <section id="conferences">
+            <h2>Conferences & Invited Talks</h2>
+            <div class="conferences-list">
+                <div class="conference-item">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <div class="conference-content">
+                        <h3>IWPSD 2021 - International Workshop on Physics of Semiconductor Devices</h3>
+                        <p>Presented 2 talks on optoelectronic properties of III-V semiconductors and quantum confined structures</p>
+                    </div>
+                </div>
+                <div class="conference-item">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <div class="conference-content">
+                        <h3>EMC 2021 - 63rd Electronic Materials Conference</h3>
+                        <p>Presented research on infrared photodetectors and III-V alloy systems</p>
+                    </div>
+                </div>
+                <div class="conference-item">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <div class="conference-content">
+                        <h3>IWPSD 2019 - International Workshop on Physics of Semiconductor Devices</h3>
+                        <p>Presented theoretical investigation of semiconductor nanostructures</p>
+                    </div>
+                </div>
+                <div class="conference-item">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <div class="conference-content">
+                        <h3>IEEE EDKCON 2018, Kolkata</h3>
+                        <p>Presented 2 papers on electronics and device modeling</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -791,6 +976,34 @@
             </div>
         </section>
 
+        <!-- Education -->
+        <section id="education">
+            <h2>Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Ph.D. in Electronics and Communication Engineering</h3>
+                    <p class="date">2018 - 2022</p>
+                    <p><strong>PDPM Indian Institute of Information Technology, Design and Manufacturing (IIITDM) Jabalpur</strong></p>
+                    <p>Thesis: Theoretical Investigation of Optoelectronic Properties of III-V Alloys and Quantum Confined Structures for Infrared Applications</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>M.Tech in Mobile Communication and Computing</h3>
+                    <p class="date">2015 - 2017</p>
+                    <p><strong>National Institute of Technology (NIT) Arunachal Pradesh</strong></p>
+                </div>
+                <div class="timeline-item">
+                    <h3>M.Sc. in Electronics</h3>
+                    <p class="date">2011 - 2013</p>
+                    <p><strong>West Bengal State University</strong></p>
+                </div>
+                <div class="timeline-item">
+                    <h3>B.Sc. in Physics</h3>
+                    <p class="date">2008 - 2011</p>
+                    <p><strong>West Bengal State University</strong></p>
+                </div>
+            </div>
+        </section>
+
         <!-- Professional Memberships -->
         <section id="memberships">
             <h2>Professional Memberships</h2>
@@ -810,25 +1023,6 @@
             </div>
         </section>
 
-        <!-- GitHub Projects -->
-        <section id="projects">
-            <h2>GitHub Projects & Contributions</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3><i class="fab fa-github"></i> FireCore</h3>
-                    <span class="project-lang">Python / C++</span>
-                    <p>Advanced computational toolkit for molecular dynamics and electronic structure calculations. Collaborative project focusing on efficient atomistic simulations and force-field methods.</p>
-                    <a href="https://github.com/ProkopHapala/FireCore" target="_blank" rel="noopener noreferrer">View Repository <i class="fas fa-external-link-alt"></i></a>
-                </div>
-                <div class="project-card">
-                    <h3><i class="fab fa-github"></i> LITESOPH</h3>
-                    <span class="project-lang">Python</span>
-                    <p>Layer Integrated Toolkit and Engine for Simulations of Photoexcited Holes - Comprehensive toolkit for computational spectroscopy and excited-state dynamics using TDDFT.</p>
-                    <a href="https://github.com/LITESOPH/litesoph" target="_blank" rel="noopener noreferrer">View Repository <i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-        </section>
-
         <!-- Tools & Apps Section -->
         <section id="tools">
             <h2>Interactive Tools & Applications</h2>
@@ -838,8 +1032,8 @@
                     <h3><i class="fas fa-atom"></i> Basis Set Visualizer</h3>
                     <p>Interactive visualization of atomic basis sets from the Basis Set Exchange (BSE). Explore and analyze basis functions for DFT calculations with real-time 3D visualization and parameter adjustments.</p>
                     <a href="./tools/basis-set-viewer.html" style="background: #28a745;">Launch Tool <i class="fas fa-external-link-alt"></i></a>
-                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #888;">
-                        <i class="fab fa-github"></i> Source: <a href="https://github.com/Indranil2020/DFT_visual" target="_blank" style="color: #3498db; text-decoration: none;">DFT_visual</a>
+                    <p class="tool-source">
+                        <i class="fab fa-github"></i> Source: <a href="https://github.com/Indranil2020/DFT_visual" target="_blank">DFT_visual</a>
                     </p>
                 </div>
                 <div class="tool-card">
@@ -856,28 +1050,6 @@
             <p style="margin-top: 2rem; color: #666; font-style: italic;">
                 <i class="fas fa-info-circle"></i> These applications are built using Streamlit and Python, providing free access to computational tools for the global research community. New tools are added regularly!
             </p>
-        </section>
-
-        <!-- Publications -->
-        <section id="publications">
-            <h2>Publications & Research Profiles</h2>
-            <div class="publications-content">
-                <p>Explore my research contributions, publications, and academic profiles:</p>
-                <div class="pub-links">
-                    <a href="https://scholar.google.com/citations?user=vDMppM8AAAAJ&hl=en" class="pub-link scholar" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-graduation-cap"></i> Google Scholar
-                    </a>
-                    <a href="https://www.researchgate.net/profile/Indranil-Mal" class="pub-link researchgate" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-researchgate"></i> ResearchGate
-                    </a>
-                    <a href="https://orcid.org/0000-0002-4729-1648" class="pub-link orcid" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-orcid"></i> ORCID
-                    </a>
-                    <a href="https://www.webofscience.com/wos/author/record/AAR-3345-2020" class="pub-link wos" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-book"></i> Web of Science
-                    </a>
-                </div>
-            </div>
         </section>
 
         <!-- Contact -->
@@ -938,7 +1110,7 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Indranil Mal. All rights reserved.</p>
-        <p>Computational Materials Scientist | P4F Fellow at Institute of Physics, Czech Academy of Sciences</p>
+        <p>Computational Materials Scientist | Marie Sklodowska-Curie COFUND Fellow at Institute of Physics, Czech Academy of Sciences</p>
         <p>Last updated: November 2025</p>
     </footer>
 </body>
