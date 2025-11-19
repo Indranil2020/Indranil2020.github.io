@@ -28,9 +28,9 @@ jobs:
         run: |
           python scripts/sync_scholar.py
 
-      - name: Generate publications HTML
+      - name: Update citation counts intelligently
         run: |
-          python scripts/generate_publications_html.py
+          python scripts/update_citations.py
 
       - name: Extract and update collaborators
         run: |
@@ -40,5 +40,5 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/publications.json data/collaborators.json publications_auto.html
+          git add data/publications.json data/collaborators.json publications.html
           git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update publications and collaborators from Google Scholar [$(date +'%Y-%m-%d')]" && git push)
