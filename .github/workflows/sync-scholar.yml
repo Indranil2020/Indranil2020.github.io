@@ -28,9 +28,9 @@ jobs:
         run: |
           python scripts/sync_scholar.py
 
-      - name: Update citation counts intelligently
+      - name: Smart merge publications (keep old + add new + update citations)
         run: |
-          python scripts/update_citations.py
+          python scripts/smart_merge_publications.py
 
       - name: Extract and update collaborators
         run: |
