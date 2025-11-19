@@ -1,4 +1,4 @@
-# Dr. Indranil Mal - Professional Website
+# Indranil Mal - Professional Website
 
 Personal website and portfolio for Dr. Indranil Mal, Computational Materials Scientist at the Institute of Physics, Czech Academy of Sciences.
 
