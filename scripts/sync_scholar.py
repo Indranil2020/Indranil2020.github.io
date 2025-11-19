@@ -136,6 +136,20 @@ def main():
         print("No publications fetched or scholarly not available")
         print("To enable Google Scholar sync, install: pip install scholarly")
 
+        # Create empty publications.json if it doesn't exist
+        if not os.path.exists('data/publications.json'):
+            print("Creating empty publications.json as fallback...")
+            os.makedirs('data', exist_ok=True)
+            fallback_data = {
+                'last_updated': datetime.now().isoformat(),
+                'scholar_id': syncer.scholar_id,
+                'total_publications': 0,
+                'publications': []
+            }
+            with open('data/publications.json', 'w', encoding='utf-8') as f:
+                json.dump(fallback_data, f, indent=2, ensure_ascii=False)
+            print("Created empty publications.json file")
+
 
 if __name__ == "__main__":
     main()
