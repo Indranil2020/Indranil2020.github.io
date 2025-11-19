@@ -192,17 +192,57 @@
         }
 
         footer {
+            background: #2c3e50;
+            color: white;
             text-align: center;
             padding: 2rem;
-            color: #666;
-            font-size: 0.9rem;
-            background: white;
             margin-top: 3rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
         }
 
         footer a {
             color: #3498db;
             text-decoration: none;
+        }
+
+        .footer-stats {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+
+        .footer-stat-item {
+            text-align: center;
+        }
+
+        .footer-stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #3498db;
+            display: block;
+        }
+
+        .footer-stat-label {
+            font-size: 0.9rem;
+            color: #ecf0f1;
+            margin-top: 0.3rem;
+        }
+
+        .visitor-counter {
+            margin: 1.5rem 0;
+        }
+
+        .visitor-counter a {
+            display: inline-block;
         }
 
         @media (max-width: 768px) {
@@ -270,6 +310,32 @@
     </div>
 
     <footer>
+        <!-- Statistics Section -->
+        <div class="footer-stats">
+            <div class="footer-stat-item">
+                <span class="footer-stat-number">35</span>
+                <span class="footer-stat-label"><i class="fas fa-book"></i> Publications</span>
+            </div>
+            <div class="footer-stat-item">
+                <span class="footer-stat-number">3</span>
+                <span class="footer-stat-label"><i class="fas fa-tools"></i> Interactive Tools</span>
+            </div>
+            <div class="footer-stat-item">
+                <span class="footer-stat-number">37</span>
+                <span class="footer-stat-label"><i class="fas fa-users"></i> Collaborators</span>
+            </div>
+        </div>
+
+        <!-- Visitor Counter with Country Flags -->
+        <div class="visitor-counter">
+            <p style="margin-bottom: 0.5rem; color: #ecf0f1; font-size: 0.9rem;">
+                <i class="fas fa-globe"></i> Visitors from around the world
+            </p>
+            <a href="https://info.flagcounter.com/ysU3" target="_blank">
+                <img src="https://s11.flagcounter.com/count2/ysU3/bg_2C3E50/txt_FFFFFF/border_3498DB/columns_8/maxflags_16/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0">
+            </a>
+        </div>
+
         <p>&copy; 2025 Indranil Mal | Institute of Physics, Czech Academy of Sciences</p>
         <p><a href="index.html">Back to Homepage</a></p>
     </footer>
