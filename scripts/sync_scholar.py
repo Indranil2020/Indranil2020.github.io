@@ -134,11 +134,11 @@ def main():
         print(f"Average citations per paper: {total_citations / len(publications):.1f}")
     else:
         print("No publications fetched or scholarly not available")
-        print("To enable Google Scholar sync, install: pip install scholarly")
-
-        # Create empty publications.json if it doesn't exist
+        print("Skipping JSON update to prevent data loss.")
+        
+        # Only create empty file if it really doesn't exist
         if not os.path.exists('data/publications.json'):
-            print("Creating empty publications.json as fallback...")
+            print("Creating empty publications.json as fallback (first run)...")
             os.makedirs('data', exist_ok=True)
             fallback_data = {
                 'last_updated': datetime.now().isoformat(),

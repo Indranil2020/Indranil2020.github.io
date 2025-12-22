@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Tools and Resources by Indranil Mal - Computational Utilities and Academic Information">
+    <meta name="keywords" content="Computational Tools, Basis Set Viewer, Academic Resources, Fellowships India">
+    <meta name="author" content="Indranil Mal">
+    <title>Tools & Resources | Indranil Mal</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        crossorigin="anonymous" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 0.8rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #3498db;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Section */
+        section {
+            background-color: white;
+            margin: 2rem 0;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #3498db;
+        }
+
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .tool-card {
+            background: #fff;
+            border: 2px solid #e1e8ed;
+            border-radius: 8px;
+            padding: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            border-color: #3498db;
+        }
+
+        .tool-card h3 {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .tool-card h3 i {
+            color: #3498db;
+        }
+
+        .tool-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+
+        .tag-update {
+            background: #e7f3fe;
+            color: #3498db;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: auto;
+        }
+
+        /* Updates List */
+        .updates-list {
+            list-style: none;
+        }
+
+        .update-item {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 1rem 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+
+        .update-date {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 0.3rem;
+        }
+
+        .update-content {
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#research">Research</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="collaborators.html">Collaborators</a></li>
+            <li><a href="tools.html" class="active">Tools</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Tools & Resources</h1>
+        <p>Computational Utilities, Academic Resources, and Latest Updates</p>
+    </header>
+
+    <div class="container">
+        <!-- Tools Section -->
+        <section id="tools">
+            <h2><i class="fas fa-hammer"></i> Developed Tools</h2>
+            <div class="card-grid">
+                <!-- Basis Set Viewer -->
+                <div class="tool-card">
+                    <h3><i class="fas fa-layer-group"></i> Basis Set Viewer</h3>
+                    <p>
+                        An interactive tool to visualize and compare Gaussian basis sets.
+                        Useful for computational chemists and physicists working with DFT codes.
+                        Supports various element selections and format exports.
+                    </p>
+                    <a href="tools/basis-set-viewer.html" class="btn">Launch Tool <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Placeholder for future tool -->
+                <div class="tool-card" style="opacity: 0.7; background: #fcfcfc;">
+                    <h3><i class="fas fa-flask"></i> More Coming Soon</h3>
+                    <p>
+                        New computational utilities for materials science are currently under development.
+                        Stay tuned for updates!
+                    </p>
+                    <span class="btn" style="background: #ccc; cursor: default;">In Development</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources">
+            <h2><i class="fas fa-book-reader"></i> Academic Resources</h2>
+            <div class="card-grid">
+                <!-- Fellowship Landscape -->
+                <div class="tool-card" style="border-left-color: #2ecc71;">
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <h3 style="margin-bottom: 0; color: #2c3e50;"><i class="fas fa-graduation-cap"
+                                style="color: #2ecc71;"></i> Fellowships in India</h3>
+                        <span class="tag-update">UPDATED 2025</span>
+                    </div>
+                    <p>
+                        A comprehensive guide to the academic fellowship and salary landscape in India for 2025-26.
+                        Covers PhD, Postdoc, and Faculty positions with detailed salary breakdowns and comparisons.
+                    </p>
+                    <a href="resources/fellowships.html" class="btn" style="background: #2ecc71;">View Guide <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Updates / Vacancies Section -->
+        <section id="updates">
+            <h2><i class="fas fa-bell"></i> Updates </h2>
+            <div class="updates-list">
+                <div class="update-item">
+                    <div class="update-date"><i class="far fa-calendar-alt"></i> December 2025</div>
+                    <div class="update-content">
+                        Currently looking for motivated Undergrad or Grad students for internship projects
+                        in Computational Materials Science tool developments. <a href="index.html#contact" style="color: #3498db;">Contact
+                            me</a> for details.
+                    </div>
+                </div>
+                <div class="update-item">
+                    <div class="update-date"><i class="far fa-calendar-alt"></i> November 2025</div>
+                    <div class="update-content">
+                        Updated the "Fellowships in India" guide with the latest DST/SERB revision norms.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal.</p>
+    </footer>
+</body>
+
+</html>

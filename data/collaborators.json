@@ -1,6 +1,6 @@
 {
-  "total_collaborators": 37,
-  "total_institutions": 7,
+  "total_collaborators": 10,
+  "total_institutions": 6,
   "collaborators": [
     {
       "name": "Dr. Dip Prakash Samajdar",
@@ -9,34 +9,7 @@
       "lat": 23.1815,
       "lon": 79.9864,
       "role": "Ph.D. Supervisor & Primary Collaborator",
-      "papers": 30
-    },
-    {
-      "name": "Neelesh Jain",
-      "institution": "PDPM IIITDM Jabalpur",
-      "location": "Jabalpur, India",
-      "lat": 23.1815,
-      "lon": 79.9864,
-      "role": "Research Collaborator",
-      "papers": 5
-    },
-    {
-      "name": "Sadhna Singh",
-      "institution": "PDPM IIITDM Jabalpur",
-      "location": "Jabalpur, India",
-      "lat": 23.1815,
-      "lon": 79.9864,
-      "role": "Research Collaborator",
-      "papers": 5
-    },
-    {
-      "name": "Dr. Tarek Hidouri",
-      "institution": "University of Monastir",
-      "location": "Monastir, Tunisia",
-      "lat": 35.7772,
-      "lon": 10.8261,
-      "role": "International Collaborator",
-      "papers": 4
+      "papers": 1
     },
     {
       "name": "Dr. T. D. Das",
@@ -45,16 +18,16 @@
       "lat": 27.1328,
       "lon": 93.6199,
       "role": "M.Tech Supervisor",
-      "papers": 4
+      "papers": 1
     },
     {
-      "name": "F. Saidi",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 3
+      "name": "Neelesh Jain",
+      "institution": "PDPM IIITDM Jabalpur",
+      "location": "Jabalpur, India",
+      "lat": 23.1815,
+      "lon": 79.9864,
+      "role": "Research Collaborator",
+      "papers": 0
     },
     {
       "name": "Prof. Subhananda Chakrabarti",
@@ -63,97 +36,16 @@
       "lat": 19.1334,
       "lon": 72.9133,
       "role": "Research Collaborator",
-      "papers": 3
+      "papers": 0
     },
     {
-      "name": "Vikas Tiwari",
-      "institution": "PDPM IIITDM Jabalpur",
-      "location": "Jabalpur, India",
-      "lat": 23.1815,
-      "lon": 79.9864,
-      "role": "Research Collaborator",
-      "papers": 2
-    },
-    {
-      "name": "S. Nasr",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 2
-    },
-    {
-      "name": "D. P. Panda",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 2
-    },
-    {
-      "name": "B. Tongbram",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 2
-    },
-    {
-      "name": "Debamita Roy",
-      "institution": "PDPM IIITDM Jabalpur",
-      "location": "Jabalpur, India",
-      "lat": 23.1815,
-      "lon": 79.9864,
-      "role": "Research Collaborator",
-      "papers": 2
-    },
-    {
-      "name": "Dr. A. John Peter",
-      "institution": "Madras Christian College",
-      "location": "Chennai, India",
-      "lat": 13.0338,
-      "lon": 80.2497,
-      "role": "Research Collaborator",
-      "papers": 2
-    },
-    {
-      "name": "A. Hazra",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 2
-    },
-    {
-      "name": "M. Zeeshan",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 1
-    },
-    {
-      "name": "S. Kumawat",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 1
-    },
-    {
-      "name": "C. K. Vishwakarma",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 1
+      "name": "Dr. Tarek Hidouri",
+      "institution": "University of Monastir",
+      "location": "Monastir, Tunisia",
+      "lat": 35.7772,
+      "lon": 10.8261,
+      "role": "International Collaborator",
+      "papers": 0
     },
     {
       "name": "Prof. Brajesh Kumar Mani",
@@ -162,178 +54,43 @@
       "lat": 28.545,
       "lon": 77.192,
       "role": "Postdoc Supervisor",
-      "papers": 1
+      "papers": 0
     },
     {
-      "name": "N. Bagga",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 1
+      "name": "Dr. A. John Peter",
+      "institution": "Madras Christian College",
+      "location": "Chennai, India",
+      "lat": 13.0338,
+      "lon": 80.2497,
+      "role": "Research Collaborator",
+      "papers": 0
     },
     {
-      "name": "R. K. Mahato",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 1
+      "name": "Sadhna Singh",
+      "institution": "PDPM IIITDM Jabalpur",
+      "location": "Jabalpur, India",
+      "lat": 23.1815,
+      "lon": 79.9864,
+      "role": "Research Collaborator",
+      "papers": 0
     },
     {
-      "name": "S. K. Agnihotri",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 1
+      "name": "Debamita Roy",
+      "institution": "PDPM IIITDM Jabalpur",
+      "location": "Jabalpur, India",
+      "lat": 23.1815,
+      "lon": 79.9864,
+      "role": "Research Collaborator",
+      "papers": 0
     },
     {
-      "name": "R. Hamila",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 1
-    },
-    {
-      "name": "H. Maaref",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 1
-    },
-    {
-      "name": "M. Biswas",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 1
-    },
-    {
-      "name": "J. Jayarubi",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 1
-    },
-    {
-      "name": "S. Das",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 1
-    },
-    {
-      "name": "A. S. Sharma",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 1
-    },
-    {
-      "name": "C. Rajan",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 1
-    },
-    {
-      "name": "A. Basu",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 1
-    },
-    {
-      "name": "A. Saha",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 1
-    },
-    {
-      "name": "J. Das",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 1
-    },
-    {
-      "name": "S. Roy",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 1
-    },
-    {
-      "name": "S. Mitra",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 1
-    },
-    {
-      "name": "S. K. Sarkar",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 1
-    },
-    {
-      "name": "K. Dutta",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 1
-    },
-    {
-      "name": "A. K. Tenwar",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 1
-    },
-    {
-      "name": "S. Saurabh",
-      "institution": "Unknown",
-      "location": "Unknown",
-      "lat": 0,
-      "lon": 0,
-      "role": "Collaborator",
-      "papers": 1
+      "name": "Vikas Tiwari",
+      "institution": "PDPM IIITDM Jabalpur",
+      "location": "Jabalpur, India",
+      "lat": 23.1815,
+      "lon": 79.9864,
+      "role": "Research Collaborator",
+      "papers": 0
     }
   ]
 }

@@ -9,46 +9,18 @@ from collections import Counter
 from typing import Dict, List
 
 # Your publications and co-authors (extracted from CV)
-PUBLICATIONS_DATA = {
-    "journals": [
-        {"authors": ["N. Jain", "I. Mal", "S. Singh", "D. P. Samajdar"]},
-        {"authors": ["M. Zeeshan", "I. Mal", "S. Kumawat", "C. K. Vishwakarma", "B. K. Mani"]},
-        {"authors": ["N. Jain", "I. Mal", "T. Hidouri", "D. P. Samajdar"]},
-        {"authors": ["I. Mal", "D. P. Samajdar"]},
-        {"authors": ["N. Jain", "I. Mal", "D. P. Samajdar", "N. Bagga"]},
-        {"authors": ["I. Mal", "D. P. Samajdar"]},
-        {"authors": ["I. Mal", "R. K. Mahato", "V. Tiwari", "D. P. Samajdar"]},
-        {"authors": ["V. Tiwari", "I. Mal", "S. K. Agnihotri", "D. P. Samajdar"]},
-        {"authors": ["I. Mal", "D. P. Samajdar"]},
-        {"authors": ["T. Hidouri", "S. Nasr", "I. Mal", "D. P. Samajdar", "F. Saidi", "R. Hamila", "H. Maaref"]},
-        {"authors": ["I. Mal", "D. P. Panda", "B. Tongbram", "S. Chakrabarti", "D. P. Samajdar"]},
-        {"authors": ["T. Hidouri", "M. Biswas", "I. Mal", "S. Nasr", "S. Chakrabarti", "D. P. Samajdar", "F. Saidi"]},
-        {"authors": ["D. Roy", "I. Mal", "D. P. Samajdar"]},
-        {"authors": ["I. Mal", "D. P. Samajdar"]},
-        {"authors": ["T. Hidouri", "I. Mal", "D. P. Samajdar", "F. Saidi", "T. D. Das"]},
-        {"authors": ["I. Mal", "J. Jayarubi", "S. Das", "A. S. Sharma", "A. J. Peter", "D. P. Samajdar"]},
-        {"authors": ["I. Mal", "D. P. Panda", "B. Tongbram", "D. P. Samajdar", "S. Chakrabarti"]},
-        {"authors": ["A. Hazra", "I. Mal", "D. P. Samajdar", "T. D. Das"]},
-        {"authors": ["I. Mal", "D. P. Samajdar", "A. J. Peter"]},
-        {"authors": ["I. Mal", "D. P. Samajdar", "T. D. Das"]},
-    ],
-    "book_chapters": [
-        {"authors": ["I. Mal", "N. Jain", "D. P. Samajdar"]},
-        {"authors": ["N. Jain", "I. Mal", "D. P. Samajdar"]},
-        {"authors": ["C. Rajan", "D. P. Samajdar", "I. Mal"]},
-        {"authors": ["I. Mal", "D. P. Samajdar"]},
-        {"authors": ["I. Mal", "A. Hazra", "D. P. Samajdar", "T. D. Das"]},
-        {"authors": ["A. Basu", "A. Saha", "J. Das", "S. Roy", "S. Mitra", "I. Mal", "S. K. Sarkar"]},
-    ],
-    "conferences": [
-        {"authors": ["I. Mal", "S. Singh", "D. P. Samajdar"]},
-        {"authors": ["S. Singh", "I. Mal", "D. P. Samajdar", "K. Dutta"]},
-        {"authors": ["A. K. Tenwar", "S. Singh", "I. Mal", "D. P. Samajdar"]},
-        {"authors": ["S. Saurabh", "S. Singh", "I. Mal", "D. P. Samajdar"]},
-        {"authors": ["I. Mal", "D. P. Samajdar"]},
-        {"authors": ["D. Roy", "I. Mal", "D. P. Samajdar"]},
-    ]
-}
+from smart_merge_publications import extract_publications_from_html
+
+# Dynamic extraction from publications.html
+def get_publications_data():
+    try:
+        # returns publications, nav_html, profile_links_html, footer_html
+        pubs, _, _, _ = extract_publications_from_html('publications.html')
+        print(f"Extracted {len(pubs)} publications for collaborator analysis")
+        return pubs
+    except Exception as e:
+        print(f"Error extracting publications: {e}")
+        return []
 
 # Collaborator details based on research history and institutions
 COLLABORATOR_INFO = {
@@ -140,29 +112,91 @@ def extract_collaborators():
     author_counts = Counter()
 
     # Count papers for each author
-    for category in PUBLICATIONS_DATA.values():
-        for pub in category:
-            for author in pub["authors"]:
-                if author != "I. Mal":  # Exclude self
-                    author_counts[author] += 1
+    # Name normalization map
+    NAME_MAP = {
+        "Dip Prakash Samajdar": "D. P. Samajdar",
+        "DP Samajdar": "D. P. Samajdar",
+        "Dr. Dip Prakash Samajdar": "D. P. Samajdar",
+        "Sadhna Singh": "S. Singh",
+        "S. Singh": "S. Singh",
+        "TD Das": "T. D. Das",
+        "T. D. Das": "T. D. Das",
+        "N. Jain": "N. Jain",
+        "Neelesh Jain": "N. Jain",
+        "Subhananda Chakrabarti": "S. Chakrabarti",
+        "Prof. Subhananda Chakrabarti": "S. Chakrabarti",
+        "Dr. Tarek Hidouri": "T. Hidouri",
+        "T. Hidouri": "T. Hidouri",
+        "Hidouri Tarek": "T. Hidouri",
+        "Mohd Zeeshan": "Mohd Zeeshan", # Not in COLLABORATOR_INFO? Add if causing issues? No, only known ones.
+        "B. K. Mani": "B. K. Mani",
+        "Prof. Brajesh Kumar Mani": "B. K. Mani",
+        "Debamita Roy": "D. Roy",
+        "D. Roy": "D. Roy"
+    }
+
+    # Count papers for each author
+    pubs = get_publications_data()
+    for pub in pubs:
+        # Authors format in HTML is "Name Name and Name Name" or "Name Name, Name Name"
+        # We need to robustly split them.
+        author_str = pub.get('authors', '')
+        # Remove HTML Highlighting
+        author_str = author_str.replace('<span class="me">', '').replace('</span>', '')
+        
+        # Split by ' and ' or ', '
+        if ' and ' in author_str:
+            authors = author_str.split(' and ')
+        else:
+            authors = author_str.split(', ')
+            
+        for author in authors:
+            author = author.strip()
+            if not author: continue
+            
+            # Normalize Name (e.g. "I. Mal" vs "Indranil Mal")
+            if "Mal" in author and ("I." in author or "Indranil" in author): 
+                continue # Exclude self
+            
+            # Apply name mapping
+            author = NAME_MAP.get(author, author)
+                
+            author_counts[author] += 1
 
     # Update paper counts
     collaborators = []
-    for author, count in author_counts.most_common():
-        if author in COLLABORATOR_INFO:
-            collab = COLLABORATOR_INFO[author].copy()
-            collab["papers"] = count
-            collaborators.append(collab)
-        else:
-            # Unknown collaborator
-            collaborators.append({
-                "name": author,
-                "institution": "Unknown",
-                "location": "Unknown",
-                "lat": 0, "lon": 0,
-                "role": "Collaborator",
-                "papers": count
-            })
+    # Update paper counts strictly for KNOWN collaborators
+    collaborators = []
+    
+    # Reset counts in COLLABORATOR_INFO first to avoid accumulation if script logic changes
+    for key in COLLABORATOR_INFO:
+        COLLABORATOR_INFO[key]['papers'] = 0
+
+    # Map normalized names to standard keys
+    # We need to find which key corresponds to the count
+    
+    # Ideally, we iterate through our known collaborators and check counts
+    # But author_counts has various names.
+    
+    # Let's iterate author_counts and match to COLLABORATOR_INFO
+    for author_name, count in author_counts.items():
+        # Check if this author is a known key
+        if author_name in COLLABORATOR_INFO:
+            COLLABORATOR_INFO[author_name]['papers'] += count
+    
+    # Now build the list from COLLABORATOR_INFO, excluding 0 papers if desired?
+    # User said "change the count nothing else", implying we keep everyone even with 0?
+    # Or maybe keep everyone who was there.
+    
+    for key, info in COLLABORATOR_INFO.items():
+        # Only add valid collaborators
+        # If papers > 0 or if we want to show them regardless?
+        # Let's show them if they have valid paper count usually.
+        # But for "strict" check, let's include them.
+        
+        # Make a copy to return
+        c = info.copy()
+        collaborators.append(c)
 
     return sorted(collaborators, key=lambda x: x["papers"], reverse=True)
 

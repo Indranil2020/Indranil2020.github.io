@@ -43,4 +43,4 @@ This website showcases my research work, publications, projects, and professiona
 
 ## License
 
-© 2025  Indranil Mal. All rights reserved.
+© 2025 Indranil Mal.
