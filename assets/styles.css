@@ -1,0 +1,28 @@
+/* Text styling and sub-label colors */
+
+/* Sub-labels and content in blue color (same as Duration/Position/Supervisor dates color) */
+.sub-label {
+    color: #3498db;
+    font-weight: 600;
+}
+
+.sub-label-content {
+    color: #3498db;
+}
+
+/* Make Focus labels and content blue as well */
+p strong:contains("Focus") {
+    color: #3498db;
+    font-weight: 600;
+}
+
+/* Make all paragraphs justified except header paragraphs */
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Keep header paragraphs centered, not justified */
+header p {
+    text-align: center;
+}

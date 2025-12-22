@@ -4,109 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>  Indranil Mal - Computational Materials Scientist | Marie Sklodowska-Curie Fellow</title>
-    <meta name="title" content="  Indranil Mal - Computational Materials Scientist | Marie Sklodowska-Curie Fellow">
-    <meta name="description" content="  Indranil Mal is a Marie Sklodowska-Curie COFUND Fellow at Institute of Physics, Czech Academy of Sciences, Prague, specializing in DFT, TDDFT, ferroelectric materials, quantum computing, and III-V semiconductors research.">
-    <meta name="keywords" content="Indranil Mal, computational materials science, DFT, density functional theory, TDDFT, time-dependent DFT, ferroelectric materials, quantum computing, III-V semiconductors, Marie Curie Fellow, Prague, Czech Academy of Sciences, FZU, neuromorphic computing, optoelectronics, VASP, quantum wells">
-    <meta name="author" content="  Indranil Mal">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="canonical" href="https://indranil2020.github.io/">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://indranil2020.github.io/">
-    <meta property="og:site_name" content="  Indranil Mal - Research">
-    <meta property="og:title" content="  Indranil Mal - Computational Materials Scientist">
-    <meta property="og:description" content="Marie Sklodowska-Curie COFUND Fellow specializing in DFT, TDDFT, and ferroelectric materials research at Institute of Physics, Czech Academy of Sciences">
-    <meta property="og:image" content="https://indranil2020.github.io/assets/profile.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://indranil2020.github.io/">
-    <meta property="twitter:title" content="  Indranil Mal - Computational Materials Scientist">
-    <meta property="twitter:description" content="Marie Sklodowska-Curie COFUND Fellow specializing in DFT, TDDFT, and ferroelectric materials research">
-    <meta property="twitter:image" content="https://indranil2020.github.io/assets/profile.jpg">
-    
-    <!-- Structured Data - Person Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Indranil Mal",
-      "alternateName": "  Indranil Mal",
-      "url": "https://indranil2020.github.io",
-      "image": "https://indranil2020.github.io/assets/profile.jpg",
-      "jobTitle": "Marie Sklodowska-Curie COFUND Fellow",
-      "description": "Computational Materials Scientist specializing in DFT, TDDFT, ferroelectric materials, and quantum computing",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Institute of Physics, Czech Academy of Sciences",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Prague",
-          "addressCountry": "Czech Republic"
-        }
-      },
-      "alumniOf": [
-        {
-          "@type": "Organization",
-          "name": "PDPM Indian Institute of Information Technology, Design and Manufacturing Jabalpur"
-        },
-        {
-          "@type": "Organization",
-          "name": "Indian Institute of Technology Delhi"
-        },
-        {
-          "@type": "Organization",
-          "name": "National Institute of Technology Arunachal Pradesh"
-        }
-      ],
-      "knowsAbout": [
-        "Computational Materials Science",
-        "Density Functional Theory",
-        "Time-Dependent DFT",
-        "Ferroelectric Materials",
-        "Quantum Computing",
-        "III-V Semiconductors",
-        "Neuromorphic Computing",
-        "Optoelectronics",
-        "Infrared Photodetectors"
-      ],
-      "sameAs": [
-        "https://scholar.google.com/citations?user=vDMppM8AAAAJ&hl=en",
-        "https://www.researchgate.net/profile/Indranil-Mal",
-        "https://orcid.org/0000-0002-4729-1648",
-        "https://github.com/Indranil2020",
-        "https://www.linkedin.com/in/indranil-mal-40736655/",
-        "https://www.webofscience.com/wos/author/record/AAR-3345-2020"
-      ],
-      "email": "mal@fzu.cz"
-    }
-    </script>
-    
-    <!-- Structured Data - Research Organization -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ResearchProject",
-      "name": "Molecular Optoelectronics on Ferroelectric Substrates",
-      "description": "Exploring hybrid organic-inorganic devices that harness ferroelectric perovskites and molecular switches to advance quantum electronics and neuromorphic computing applications",
-      "startDate": "2025-01",
-      "endDate": "2027-01",
-      "performer": {
-        "@type": "Person",
-        "name": "Indranil Mal"
-      },
-      "funder": {
-        "@type": "Organization",
-        "name": "Marie Sklodowska-Curie Actions COFUND"
-      }
-    }
-    </script>
+    <meta name="description"
+        content="Indranil Mal - Computational Materials Scientist specializing in DFT and Ferroelectric Materials">
+    <meta name="keywords"
+        content="Indranil Mal, Computational Physics, DFT, Ferroelectric Materials, Materials Science, Quantum Computing, TDDFT, III-V Semiconductors">
+    <meta name="author" content="Indranil Mal">
+    <title>Indranil Mal - Computational Materials Scientist</title>
 
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -117,8 +20,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="/assets/styles.css">
 
     <style>
         * {
@@ -791,6 +692,35 @@
             margin-bottom: 0.5rem;
         }
 
+        .footer-stats {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+
+        .footer-stat-item {
+            text-align: center;
+        }
+
+        .footer-stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #3498db;
+            display: block;
+        }
+
+        .footer-stat-label {
+            font-size: 0.9rem;
+            color: #ecf0f1;
+            margin-top: 0.3rem;
+        }
+
         .visitor-counter {
             margin: 1.5rem 0;
         }
@@ -857,30 +787,31 @@
     <!-- Hero Section -->
     <header>
         <div class="hero-content">
-            <img src="assets/profile.jpg" alt="  Indranil Mal - Computational Materials Scientist" class="profile-image">
-            <h1>  Indranil Mal</h1>
+            <img src="assets/profile.jpg" alt="Indranil Mal" class="profile-image">
+            <h1>Indranil Mal</h1>
             <p class="title">Marie Sklodowska-Curie COFUND Fellow (P4F)</p>
             <p class="subtitle">Computational Materials Scientist</p>
-            <p class="institution">Institute of Physics, Czech Academy of Sciences, Prague</p>
+            <p class="institution">Institute of Physics, Czech Academy of Sciences</p>
         </div>
     </header>
 
     <div class="container">
         <!-- About Section -->
         <section id="about">
-            <h2>About </h2>
+            <h2>About</h2>
             <div class="about-text">
                 <p>
                     I am a Marie Sklodowska-Curie COFUND Fellow at the Institute of Physics, Czech Academy of Sciences
-                    (FZU) in Prague, working in the Department of Condensed Matter Theory. My research focuses on computational
-                    materials science with expertise in Density Functional Theory (DFT), Time-Dependent DFT (TDDFT), and
-                    ferroelectric materials for quantum electronics and neuromorphic computing applications.
+                    (FZU), working in the Department of Condensed Matter Theory. My research focuses on computational
+                    materials science with expertise in Density Functional Theory (DFT), Time-Dependent DFT, and
+                    ferroelectric materials.
                 </p>
                 <p>
                     I completed my Ph.D. in Electronics and Communication Engineering from PDPM IIITDM Jabalpur (2022),
-                    where I investigated the theoretical aspects of optoelectronic properties of III-V semiconductor alloys and
+                    where I investigated the theoretical aspects of optoelectronic properties of III-V alloys and
                     quantum confined structures for infrared applications. My research combines first-principles
-                    calculations with advanced computational methods including VASP, ABINIT, GPAW, and multi-band k.p perturbation theory to explore novel materials for next-generation optoelectronic devices.
+                    calculations with advanced computational methods to explore novel materials for quantum electronics
+                    and neuromorphic computing.
                 </p>
             </div>
         </section>
@@ -892,41 +823,41 @@
                 <div class="research-card">
                     <h3><i class="fas fa-atom"></i> Density Functional Theory (DFT)</h3>
                     <p>First-principles calculations using DFT for studying III-V semiconductors, structural,
-                        thermodynamic, and optoelectronic property predictions using VASP, ABINIT, and Quantum Espresso.</p>
+                        thermodynamic, and optoelectronic property predictions.</p>
                 </div>
                 <div class="research-card">
                     <h3><i class="fas fa-wave-square"></i> Time Dependent DFT (TDDFT)</h3>
                     <p>Ab initio techniques for excited-state dynamics, photo-induced phenomena, and optical property
-                        calculations of materials using OCTOPUS and GPAW.</p>
+                        calculations of materials.</p>
                 </div>
                 <div class="research-card">
                     <h3><i class="fas fa-calculator"></i> k.p Hamiltonian Modeling</h3>
                     <p>Mathematical modeling of optoelectronic properties of III-V semiconductors using multi-band k.p
-                        perturbation theory for quantum wells and heterostructures.</p>
+                        perturbation theory.</p>
                 </div>
                 <div class="research-card">
                     <h3><i class="fas fa-microchip"></i> III-V Nanostructures</h3>
                     <p>Growth, characterization, and theoretical investigation of III-V quantum wells, quantum dots, and
-                        nanostructures for optoelectronic devices and infrared photodetectors.</p>
+                        nanostructures for optoelectronic devices.</p>
                 </div>
                 <div class="research-card">
                     <h3><i class="fas fa-lightbulb"></i> Infrared Photodetectors</h3>
                     <p>Design and simulation of long-wavelength infrared (LWIR) photodetectors using InAs, InSb, and
-                        Bismuth-based alloys for aerospace and defense applications.</p>
+                        Bismuth-based alloys.</p>
                 </div>
                 <div class="research-card">
                     <h3><i class="fas fa-bolt"></i> Ferroelectric Materials</h3>
                     <p>Study of ferroelectric perovskites (PZTS, BNT) for shape memory applications and molecular
-                        optoelectronics substrates using DFT and effective Hamiltonian approaches.</p>
+                        optoelectronics substrates.</p>
                 </div>
                 <div class="research-card">
                     <h3><i class="fas fa-brain"></i> Neuromorphic Computing</h3>
                     <p>Development of computational toolkit for molecular quantum electronics and neuromorphic computing
-                        simulation using ferroelectric materials and hybrid organic-inorganic devices.</p>
+                        simulation using ferroelectric materials.</p>
                 </div>
                 <div class="research-card">
                     <h3><i class="fas fa-atom"></i> Transmon Qubit</h3>
-                    <p>Theoretical investigation of superconducting qubits for quantum computing applications using DFT and quantum transport methods.</p>
+                    <p>Theoretical investigation of superconducting qubits for quantum computing applications.</p>
                 </div>
             </div>
         </section>
@@ -936,102 +867,25 @@
             <h2>Current Research Project</h2>
             <div class="project-highlight">
                 <h3><i class="fas fa-flask"></i> Molecular Optoelectronics on Ferroelectric Substrates</h3>
-                    <p><strong class="sub-label">Duration:</strong> <span class="sub-label-content">January 2025 - January 2027</span></p>
-                    <p><strong class="sub-label">Position:</strong> <span class="sub-label-content">Marie Sklodowska-Curie COFUND Fellow (P4F)</span></p>
-                    <p><strong class="sub-label">Supervisor:</strong> <span class="sub-label-content">Ing. Prokop Hapala, Ph.D.</span></p>
-                    <p><strong class="sub-label">Institution:</strong> <span class="sub-label-content">Institute of Physics, Czech Academy of Sciences, Prague</span></p>
+                <p><strong>Duration:</strong> January 2025 - January 2027</p>
+                <p><strong>Position:</strong> Marie Sklodowska-Curie COFUND Fellow (P4F)</p>
+                <p><strong>Supervisor:</strong> Ing. Prokop Hapala, Ph.D.</p>
+                <p><strong>Institution:</strong> Institute of Physics, Czech Academy of Sciences, Prague</p>
                 <p><strong>Focus:</strong> Exploring hybrid organic-inorganic devices that harness ferroelectric
                     perovskites and molecular switches to advance quantum electronics and neuromorphic computing
-                    applications. Developing computational toolkit for molecular quantum electronics simulation using DFT, TDDFT, and GridFF methods.</p>
-            </div>
-        </section>
-        <!-- Previous Research Projects -->
-        <section id="previous-research">
-            <h2>Previous Research Projects</h2>
-            <div class="research-projects-list">
-                <div class="research-project-item">
-                    <h3>Effective Hamiltonian Approach for Atomistic Study of Ferroelectric Materials</h3>
-                    <span class="date">January 2024 - January 2025</span>
-                    <p><strong class="sub-label">Institution:</strong> <span class="sub-label-content">Indian Institute of Technology (IIT) Delhi</span></p>
-                    <p><strong class="sub-label">Supervisor:</strong> <span class="sub-label-content">Dr. Brajesh Kumar Mani</span></p>
-                    <p><strong>Focus:</strong> This research focuses on the theoretical development of first-principles–based effective Hamiltonian framework 
-                        to investigate ferroelectric materials at finite temperatures. Molecular dynamics and Monte Carlo simulations, backed by 
-                        Density Functional Theory (DFT) calculations, are used to capture essential physical behavior, including phase switching, 
-                        mode transitions, transition temperatures, and shape-recovery mechanisms.</p>
-                </div>
-                <div class="research-project-item">
-                    <h3>Shape Memory Oxide Thin-films for Aerospace Applications</h3>
-                    <span class="date">November 2022 - January 2024</span>
-                    <p><strong class="sub-label">Institution:</strong> <span class="sub-label-content">Indian Institute of Technology (IIT) Delhi</span></p>
-                    <p><strong class="sub-label">Supervisor:</strong> <span class="sub-label-content">Dr. Brajesh Kumar Mani, and Prof. Ratnamala Chatterjee</span></p>
-                    <p><strong>Focus:</strong> Theoretical and experimental development of doped PZTS (Lead Zirconate
-                        Titanate Stannate) and BNT (Bismuth Sodium Titanate) perovskite materials for shape memory
-                        applications in aerospace. Understanding phase-switching behavior, defect formation, and shape
-                        recovery processes using effective Hamiltonian approaches and first-principles DFT calculations.</p>
-                </div>
-                <div class="research-project-item">
-                    <h3>Excited State Dynamics Toolkit Development</h3>
-                    <span class="date">February 2022 - November 2022</span>
-                    <p><strong class="sub-label">Institution:</strong> <span class="sub-label-content">Indian Institute of Science Education and Research (IISER) Bhopal</span></p>
-                    <p><strong class="sub-label">Supervisor:</strong> <span class="sub-label-content">Dr. Varadharajan Srinivasan</span></p>
-                    <p><strong>Focus:</strong> Development of comprehensive toolkit (LITESOPH) for computer simulations of
-                        photo-induced phenomena combining Time-Dependent Density Functional Theory (TDDFT) and open
-                        quantum systems approaches. Target applications include solar energy conversion (photovoltaics,
-                        water-splitting catalysts), optoelectronic materials, and photochemistry research.</p>
-                </div>
-                <div class="research-project-item">
-                    <h3>Optoelectronic Properties of III-V Alloys and Quantum Confined Structures</h3>
-                    <span class="date">2018 - 2022</span>
-                    <p><strong class="sub-label">Institution:</strong> <span class="sub-label-content">PDPM IIITDM Jabalpur (Ph.D. Research)</span></p>
-                    <p><strong class="sub-label">Supervisor:</strong> <span class="sub-label-content">Dr. Dip Prakash Samajdar</span></p>
-                    <p><strong>Focus:</strong> Theoretical investigation of optoelectronic properties of III-V
-                        semiconductor alloys and quantum confined structures for infrared photodetector applications. Used multi-band
-                        k.p perturbation theory and DFT to study band structure, optical properties, and device
-                        performance of InAs, InSb, and Bismuth-based alloys for long-wavelength infrared (LWIR) detection systems.</p>
-                    </p>
-                </div>
-                <div class="research-project-item">
-                    <h3>III-V Nanostructure-based Hybrid Solar Cells using COMSOL</h3>
-                    <span class="date">November 2021 - February 2022</span>
-                    <p><strong class="sub-label">Institution:</strong> <span class="sub-label-content">PDPM IIITDM Jabalpur (Senior Research Fellow)</span></p>
-                    <p><strong class="sub-label">Supervisor:</strong> <span class="sub-label-content">Dr. Dip Prakash Samajdar</span></p>
-                    <p><strong>Focus:</strong> Design and simulation of III-V nanostructures (nano-rod, nano-cone, and
-                        truncated-pyramidal geometries) based hybrid solar cells using COMSOL Multiphysics. Analytical
-                        modeling and optimization of device performance for enhanced light absorption and charge
-                        collection efficiency in photovoltaic applications.</p>
-                </div>
-                <div class="research-project-item">
-                    <h3>Studies on III-V Dilute Nitride, Bismuth and Antimonide Alloys</h3>
-                    <span class="date">2016 - 2017</span>
-                    <p><strong class="sub-label">Institution:</strong> <span class="sub-label-content">National Institute of Technology (NIT) Arunachal Pradesh (M.Tech Research)</span></p>
-                    <p><strong class="sub-label">Supervisor:</strong> <span class="sub-label-content">Dr.  T. D. Das</span></p>
-                    <p><strong>Focus:</strong> Theoretical investigation of III-V dilute nitride, bismuth and antimonide
-                        alloys using multi-band k.p Hamiltonian. Research focused on understanding the electronic band
-                        structure and optoelectronic properties of these advanced semiconductor materials for
-                        next-generation optoelectronic devices and infrared applications.</p>
-                </div>
-                <div class="research-project-item">
-                    <h3>Strain-Balanced Ge-Sn Multiple Quantum Well LASER</h3>
-                    <span class="date">2012 - 2013</span>
-                    <p><strong class="sub-label">Institution:</strong> <span class="sub-label-content">University of Calcutta (M.Sc Research)</span></p>
-                    <p><strong class="sub-label">Supervisor:</strong> <span class="sub-label-content">Dr. Bratati Mukhuopadhyay</span></p>
-                    <p><strong>Focus:</strong> Theoretical investigation of strain-balanced
-                        Ge<sub>z</sub>Sn<sub>1-z</sub>–Si<sub>x</sub>Ge<sub>y</sub>Sn<sub>1-x-y</sub> multiple quantum
-                        well laser structures. Studied the optical and electronic properties of these materials for
-                        silicon-compatible laser applications in the Department of Radio Physics and Electronics.</p>
-                </div>
+                    applications. Developing computational toolkit for molecular quantum electronics simulation.</p>
             </div>
         </section>
 
         <!-- GitHub Projects -->
         <section id="projects">
-            <h2>GitHub Projects & Open Source Contributions</h2>
+            <h2>GitHub Projects & Contributions</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <h3><i class="fab fa-github"></i> FireCore</h3>
                     <span class="project-lang">Python / C++</span>
                     <p>Advanced computational toolkit for molecular dynamics and electronic structure calculations.
-                        Collaborative project focusing on efficient atomistic simulations and force-field methods including GridFF.</p>
+                        Collaborative project focusing on efficient atomistic simulations and force-field methods.</p>
                     <a href="https://github.com/ProkopHapala/FireCore" target="_blank" rel="noopener noreferrer">View
                         Repository <i class="fas fa-external-link-alt"></i></a>
                 </div>
@@ -1050,7 +904,7 @@
                     <h3><i class="fab fa-github"></i> LITESOPH</h3>
                     <span class="project-lang">Python</span>
                     <p>Layer Integrated Toolkit and Engine for Simulations of Photoexcited Holes — comprehensive
-                        toolkit for computational spectroscopy and excited-state dynamics using TDDFT with OCTOPUS and GPAW.</p>
+                        toolkit for computational spectroscopy and excited-state dynamics using TDDFT.</p>
                     <a href="https://github.com/LITESOPH/litesoph" target="_blank" rel="noopener noreferrer">View
                         Repository <i class="fas fa-external-link-alt"></i></a>
                 </div>
@@ -1061,8 +915,8 @@
         <section id="publications">
             <h2>Publications & Research Profiles</h2>
             <div class="publications-content">
-                <p style="margin-bottom: 1.5rem; font-size: 1.1rem;"><strong>35+ peer-reviewed publications</strong>
-                    including 20 journal articles in computational materials science, 7 book chapters on III-V semiconductors and optoelectronics, and 8 conference papers on DFT and quantum confined structures.</p>
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem;"><strong>35 peer-reviewed publications</strong>
+                    including 20 journal articles, 7 book chapters, and 8 conference papers.</p>
 
                 <div style="text-align: center; margin-bottom: 2rem;">
                     <a href="publications.html"
@@ -1071,7 +925,7 @@
                     </a>
                 </div>
 
-                <p>Academic profiles and citation metrics:</p>
+                <p>Academic profiles:</p>
                 <div class="pub-links">
                     <a href="https://scholar.google.com/citations?user=vDMppM8AAAAJ&hl=en" class="pub-link scholar"
                         target="_blank" rel="noopener noreferrer">
@@ -1093,7 +947,71 @@
             </div>
         </section>
 
-
+        <!-- Previous Research Projects -->
+        <section id="previous-research">
+            <h2>Previous Research Projects</h2>
+            <div class="research-projects-list">
+                <div class="research-project-item">
+                    <h3>Shape Memory Oxide Thin-films for Aerospace Applications</h3>
+                    <span class="date">November 2022 - January 2025</span>
+                    <p><strong>Institution:</strong> Indian Institute of Technology (IIT) Delhi</p>
+                    <p><strong>Focus:</strong> Theoretical and experimental development of doped PZTS (Lead Zirconate
+                        Titanate Stannate) and BNT (Bismuth Sodium Titanate) perovskite materials for shape memory
+                        applications in aerospace. Understanding phase-switching behavior, defect formation, and shape
+                        recovery processes using effective Hamiltonian approaches and first-principles calculations.</p>
+                </div>
+                <div class="research-project-item">
+                    <h3>Excited State Dynamics Toolkit</h3>
+                    <span class="date">February 2022 - November 2022</span>
+                    <p><strong>Institution:</strong> Indian Institute of Science Education and Research (IISER) Bhopal
+                    </p>
+                    <p><strong>Focus:</strong> Development of comprehensive toolkit for computer simulations of
+                        photo-induced phenomena combining Time-Dependent Density Functional Theory (TDDFT) and open
+                        quantum systems approaches. Target applications include solar energy conversion (photovoltaics,
+                        water-splitting catalysts), optoelectronic materials, and photochemistry.</p>
+                </div>
+                <div class="research-project-item">
+                    <h3>Optoelectronic Properties of III-V Alloys and Quantum Confined Structures</h3>
+                    <span class="date">2018 - 2022</span>
+                    <p><strong>Institution:</strong> PDPM IIITDM Jabalpur (Ph.D. Research)</p>
+                    <p><strong>Focus:</strong> Theoretical investigation of optoelectronic properties of III-V
+                        semiconductor alloys and quantum confined structures for infrared applications. Used multi-band
+                        k.p perturbation theory and DFT to study band structure, optical properties, and device
+                        performance of InAs, InSb, and Bismuth-based alloys for long-wavelength infrared photodetectors.
+                    </p>
+                </div>
+                <div class="research-project-item">
+                    <h3>III-V Nanostructure-based Hybrid Solar Cells using COMSOL</h3>
+                    <span class="date">November 2021 - February 2022</span>
+                    <p><strong>Institution:</strong> PDPM IIITDM Jabalpur (Senior Research Fellow)</p>
+                    <p><strong>Focus:</strong> Design and simulation of III-V nanostructures (nano-rod, nano-cone, and
+                        truncated-pyramidal geometries) based hybrid solar cells using COMSOL Multiphysics. Analytical
+                        modeling and optimization of device performance for enhanced light absorption and charge
+                        collection efficiency.</p>
+                </div>
+                <div class="research-project-item">
+                    <h3>Studies on III-V Dilute Nitride, Bismuth and Antimonide Alloys</h3>
+                    <span class="date">2016 - 2017</span>
+                    <p><strong>Institution:</strong> National Institute of Technology (NIT) Arunachal Pradesh (M.Tech
+                        Research)</p>
+                    <p><strong>Supervisor:</strong> Dr. T. D. Das</p>
+                    <p><strong>Focus:</strong> Theoretical investigation of III-V dilute nitride, bismuth and antimonide
+                        alloys using multi-band k.p Hamiltonian. Research focused on understanding the electronic band
+                        structure and optoelectronic properties of these advanced semiconductor materials for
+                        next-generation optoelectronic devices.</p>
+                </div>
+                <div class="research-project-item">
+                    <h3>Strain-Balanced Ge-Sn Multiple Quantum Well LASER</h3>
+                    <span class="date">2012 - 2013</span>
+                    <p><strong>Institution:</strong> University of Calcutta (M.Sc Research)</p>
+                    <p><strong>Supervisor:</strong> Dr. Bratati Mukhuopadhyay</p>
+                    <p><strong>Focus:</strong> Theoretical investigation of strain-balanced
+                        Ge<sub>z</sub>Sn<sub>1-z</sub>–Si<sub>x</sub>Ge<sub>y</sub>Sn<sub>1-x-y</sub> multiple quantum
+                        well laser structures. Studied the optical and electronic properties of these materials for
+                        silicon-compatible laser applications in the Department of Radio Physics and Electronics.</p>
+                </div>
+            </div>
+        </section>
 
         <!-- Conferences & Invited Talks -->
         <section id="conferences">
@@ -1104,28 +1022,28 @@
                     <div class="conference-content">
                         <h3>IWPSD 2021 - International Workshop on Physics of Semiconductor Devices</h3>
                         <p>Presented 2 talks on optoelectronic properties of III-V semiconductors and quantum confined
-                            structures using DFT and k.p methods</p>
+                            structures</p>
                     </div>
                 </div>
                 <div class="conference-item">
                     <i class="fas fa-chalkboard-teacher"></i>
                     <div class="conference-content">
                         <h3>EMC 2021 - 63rd Electronic Materials Conference</h3>
-                        <p>Presented research on infrared photodetectors and III-V alloy systems for optoelectronic applications</p>
+                        <p>Presented research on infrared photodetectors and III-V alloy systems</p>
                     </div>
                 </div>
                 <div class="conference-item">
                     <i class="fas fa-chalkboard-teacher"></i>
                     <div class="conference-content">
                         <h3>IWPSD 2019 - International Workshop on Physics of Semiconductor Devices</h3>
-                        <p>Presented theoretical investigation of semiconductor nanostructures using computational methods</p>
+                        <p>Presented theoretical investigation of semiconductor nanostructures</p>
                     </div>
                 </div>
                 <div class="conference-item">
                     <i class="fas fa-chalkboard-teacher"></i>
                     <div class="conference-content">
                         <h3>IEEE EDKCON 2018, Kolkata</h3>
-                        <p>Presented 2 papers on electronics device modeling and simulation</p>
+                        <p>Presented 2 papers on electronics and device modeling</p>
                     </div>
                 </div>
             </div>
@@ -1133,7 +1051,7 @@
 
         <!-- Technical Skills -->
         <section id="skills">
-            <h2>Technical Skills & Computational Expertise</h2>
+            <h2>Technical Skills & Competencies</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3><i class="fas fa-laptop-code"></i> DFT & Electronic Structure Tools</h3>
@@ -1148,7 +1066,7 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-cube"></i> Simulation & Modeling Software</h3>
+                    <h3><i class="fas fa-cube"></i> Simulation & Modeling</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">COMSOL Multiphysics</span>
                         <span class="skill-tag">Lumerical</span>
@@ -1157,18 +1075,17 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming & Scripting Languages</h3>
+                    <h3><i class="fas fa-code"></i> Programming & Scripting</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">C</span>
-                        <span class="skill-tag">C++</span>
                         <span class="skill-tag">Bash</span>
                         <span class="skill-tag">Linux</span>
                         <span class="skill-tag">HTML/CSS</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-atom"></i> Computational Methods & Theories</h3>
+                    <h3><i class="fas fa-atom"></i> Computational Methods</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">DFT</span>
                         <span class="skill-tag">TD-DFT</span>
@@ -1183,7 +1100,7 @@
 
         <!-- Education -->
         <section id="education">
-            <h2>Education & Academic Training</h2>
+            <h2>Education</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <h3>Ph.D. in Electronics and Communication Engineering</h3>
@@ -1191,19 +1108,17 @@
                     <p><strong>PDPM Indian Institute of Information Technology, Design and Manufacturing (IIITDM)
                             Jabalpur</strong></p>
                     <p>Thesis: Theoretical Investigation of Optoelectronic Properties of III-V Alloys and Quantum
-                        Confined Structures for Infrared Applications using DFT and k.p methods</p>
+                        Confined Structures for Infrared Applications</p>
                 </div>
                 <div class="timeline-item">
                     <h3>M.Tech in Mobile Communication and Computing</h3>
                     <p class="date">2015 - 2017</p>
                     <p><strong>National Institute of Technology (NIT) Arunachal Pradesh</strong></p>
-                    <p>Focus: III-V dilute nitride and bismuth alloys for semiconductor devices</p>
                 </div>
                 <div class="timeline-item">
                     <h3>M.Sc. in Electronics</h3>
                     <p class="date">2011 - 2013</p>
                     <p><strong>West Bengal State University</strong></p>
-                    <p>Research: Strain-balanced Ge-Sn quantum well lasers</p>
                 </div>
                 <div class="timeline-item">
                     <h3>B.Sc. in Physics</h3>
@@ -1215,16 +1130,16 @@
 
         <!-- Tools & Apps Section -->
         <section id="tools">
-            <h2>Interactive Computational Tools & Research Applications</h2>
-            <p style="color: #666; margin-bottom: 1.5rem;">Open-source computational tools and applications for materials science research
-                and DFT calculations. These browser-based applications enable researchers worldwide to perform calculations
-                without installing complex software.</p>
+            <h2>Interactive Tools & Applications</h2>
+            <p style="color: #666; margin-bottom: 1.5rem;">Interactive computational tools and applications for research
+                and analysis. These Streamlit-powered applications enable researchers worldwide to perform calculations
+                directly from their browser.</p>
             <div class="tools-grid">
                 <div class="tool-card">
                     <h3><i class="fas fa-atom"></i> Basis Set Visualizer</h3>
                     <p>Interactive visualization of atomic basis sets from the Basis Set Exchange (BSE). Explore and
-                        analyze Gaussian basis functions for DFT calculations with real-time 3D visualization and parameter
-                        adjustments for quantum chemistry research.</p>
+                        analyze basis functions for DFT calculations with real-time 3D visualization and parameter
+                        adjustments.</p>
                     <a href="./tools/basis-set-viewer.html" style="background: #28a745;">Launch Tool <i
                             class="fas fa-external-link-alt"></i></a>
                     <p class="tool-source">
@@ -1235,27 +1150,27 @@
                 <div class="tool-card">
                     <h3><i class="fas fa-wave-square"></i> k.p Band Structure Calculator</h3>
                     <p>Calculate and visualize electronic band structures of III-V semiconductors using multi-band k.p
-                        perturbation theory. Interactive parameter tuning for quantum wells and heterostructures in optoelectronic devices.</p>
+                        perturbation theory. Interactive parameter tuning for quantum wells and heterostructures.</p>
                     <a href="#" onclick="alert('Coming Soon! Currently under development.'); return false;"
                         style="background: #6c757d; cursor: not-allowed;">Coming Soon</a>
                 </div>
                 <div class="tool-card">
                     <h3><i class="fas fa-lightbulb"></i> Optoelectronic Property Calculator</h3>
                     <p>Compute optoelectronic properties of semiconductor materials and quantum structures. Includes
-                        absorption spectra, gain calculations, and infrared photodetector device performance predictions.</p>
+                        absorption spectra, gain calculations, and device performance predictions.</p>
                     <a href="#" onclick="alert('Coming Soon! Planned for future release.'); return false;"
                         style="background: #6c757d; cursor: not-allowed;">Coming Soon</a>
                 </div>
             </div>
             <p style="margin-top: 2rem; color: #666; font-style: italic;">
-                <i class="fas fa-info-circle"></i> These applications are built using Python, Streamlit and modern web technologies, providing
-                free access to computational materials science tools for the global research community. New DFT and TDDFT tools are added regularly!
+                <i class="fas fa-info-circle"></i> These applications are built using Streamlit and Python, providing
+                free access to computational tools for the global research community. New tools are added regularly!
             </p>
         </section>
 
         <!-- Professional Memberships -->
         <section id="memberships">
-            <h2>Professional Memberships & Affiliations</h2>
+            <h2>Professional Memberships</h2>
             <div class="memberships">
                 <div class="membership-badge">
                     <i class="fas fa-flask"></i>
@@ -1274,7 +1189,7 @@
 
         <!-- Contact -->
         <section id="contact">
-            <h2>Contact Information</h2>
+            <h2>Contact</h2>
             <div class="contact-grid">
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
@@ -1288,7 +1203,7 @@
                     <div>
                         <strong>Institution</strong><br>
                         <a href="https://www.fzu.cz" target="_blank" rel="noopener noreferrer">Institute of Physics,
-                            Czech Academy of Sciences</a>
+                            CAS</a>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -1310,23 +1225,23 @@
             <!-- Social Links -->
             <div class="social-links">
                 <a href="https://github.com/Indranil2020" class="social-link github" target="_blank"
-                    rel="noopener noreferrer" title="GitHub Profile">
+                    rel="noopener noreferrer" title="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/indranil-mal-40736655/" class="social-link linkedin"
-                    target="_blank" rel="noopener noreferrer" title="LinkedIn Profile">
+                    target="_blank" rel="noopener noreferrer" title="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
                 <a href="https://www.researchgate.net/profile/Indranil-Mal" class="social-link researchgate"
-                    target="_blank" rel="noopener noreferrer" title="ResearchGate Profile">
+                    target="_blank" rel="noopener noreferrer" title="ResearchGate">
                     <i class="fab fa-researchgate"></i>
                 </a>
                 <a href="https://orcid.org/0000-0002-4729-1648" class="social-link orcid" target="_blank"
-                    rel="noopener noreferrer" title="ORCID Profile">
+                    rel="noopener noreferrer" title="ORCID">
                     <i class="fab fa-orcid"></i>
                 </a>
                 <a href="https://scholar.google.com/citations?user=vDMppM8AAAAJ&hl=en" class="social-link scholar"
-                    target="_blank" rel="noopener noreferrer" title="Google Scholar Profile">
+                    target="_blank" rel="noopener noreferrer" title="Google Scholar">
                     <i class="fas fa-graduation-cap"></i>
                 </a>
             </div>
@@ -1346,13 +1261,11 @@
             </a>
         </div>
 
-        <p>&copy; 2025  Indranil Mal </p>
-        <p>Computational Materials Scientist | Marie Sklodowska-Curie COFUND Fellow | Institute of Physics, Czech
-            Academy of Sciences, Prague</p>
-        <p>Specializing in DFT, TDDFT, Ferroelectric Materials, Quantum Computing, and III-V Semiconductors</p>
-        <p>Last updated: December 2025</p>
+        <p>&copy; 2025 Indranil Mal.</p>
+        <p>Computational Materials Scientist | Marie Sklodowska-Curie COFUND Fellow at Institute of Physics, Czech
+            Academy of Sciences</p>
+        <p>Last updated: November 2025</p>
     </footer>
-    </body>
+</body>
 
-</html>    </footer>
-    </body>
+</html>
