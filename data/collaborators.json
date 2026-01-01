@@ -9,7 +9,7 @@
       "lat": 23.1815,
       "lon": 79.9864,
       "role": "Ph.D. Supervisor & Primary Collaborator",
-      "papers": 1
+      "papers": 18
     },
     {
       "name": "Dr. T. D. Das",
@@ -18,6 +18,24 @@
       "lat": 27.1328,
       "lon": 93.6199,
       "role": "M.Tech Supervisor",
+      "papers": 6
+    },
+    {
+      "name": "Dr. A. John Peter",
+      "institution": "Madras Christian College",
+      "location": "Chennai, India",
+      "lat": 13.0338,
+      "lon": 80.2497,
+      "role": "Research Collaborator",
+      "papers": 2
+    },
+    {
+      "name": "Debamita Roy",
+      "institution": "PDPM IIITDM Jabalpur",
+      "location": "Jabalpur, India",
+      "lat": 23.1815,
+      "lon": 79.9864,
+      "role": "Research Collaborator",
       "papers": 1
     },
     {
@@ -57,25 +75,7 @@
       "papers": 0
     },
     {
-      "name": "Dr. A. John Peter",
-      "institution": "Madras Christian College",
-      "location": "Chennai, India",
-      "lat": 13.0338,
-      "lon": 80.2497,
-      "role": "Research Collaborator",
-      "papers": 0
-    },
-    {
       "name": "Sadhna Singh",
-      "institution": "PDPM IIITDM Jabalpur",
-      "location": "Jabalpur, India",
-      "lat": 23.1815,
-      "lon": 79.9864,
-      "role": "Research Collaborator",
-      "papers": 0
-    },
-    {
-      "name": "Debamita Roy",
       "institution": "PDPM IIITDM Jabalpur",
       "location": "Jabalpur, India",
       "lat": 23.1815,
