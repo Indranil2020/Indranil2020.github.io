@@ -1,0 +1,352 @@
+# RAW TOOL EXTRACTION FROM ALL 7 SOURCES
+# Zero-hallucination protocol: Extract every mentioned tool name
+# Date: 2026-01-01
+
+## EXTRACTION METHODOLOGY
+- Extract tool names as written in source
+- Preserve variants (e.g., "Quantum ESPRESSO" vs "PWscf")
+- Mark UNCERTAIN flags from sources
+- Record appearance count across lists
+- Note conflicting information
+
+---
+
+# SOURCE 1: claude.md (280+ tools extracted)
+See extraction_claude.txt for full list
+
+# SOURCE 2: g_list.md
+
+## Ground-State DFT
+Quantum ESPRESSO, VASP, ABINIT, CPMD, CP2K, PWscf, Qbox, JDFTx
+SIESTA, FHI-aims, OpenMX, ONETEP, CONQUEST, BigDFT, GPAW, NESSIE, DFT-FE, PARSEC
+WIEN2k, Elk, Fleur, exciting, Questaal, RSPt, SPR-KKR, AkaiKKR, JuKKR
+CRYSTAL, ADF, deMon2k, NWChem, Gaussian, PySCF, Psi4, Molpro, Turbomole, DMol³
+DFTB+, xtb, MOPAC
+
+## TDDFT & Excited States
+Octopus, SALMON, PyTDDFT
+Yambo Code, BerkeleyGW, West, Abinit-GW, VASP-GW, Spex, Fiesta, SAX
+
+## DMFT & Many-Body
+TRIQS, w2dynamics, ComDMFT, EDMFTF, iQIST, Pomerol, ALPS
+
+## QMC
+QMCPACK, CASINO, TurboRVB, CHAMP, AFQMC, NECI, HANDE-QMC, ALF
+
+## Tensor Networks
+ITensor, TeNPy, Block
+
+## Quantum Chemistry
+ORCA, Gaussian, Molpro, Q-Chem, NWChem, PSI4, CFOUR, TURBOMOLE
+PySCF, BAGEL, OpenMolcas, MRCC, DIRAC
+
+## Tight-Binding & Wannier
+Wannier90, WannierTools, PythTB, TBmodels, Chinook
+
+## Phonons
+Phonopy, Phono3py, ShengBTE, ALAMODE, TDEP, EPW, Perturbo, almaBTE, OpenBTE
+
+## Molecular Dynamics
+LAMMPS, GROMACS, DL_POLY, i-PI, N2P2, DeepMD-kit, Plumed
+
+## Structure Prediction
+USPEX, CALYPSO, AIRSS, GASP, XtalOpt
+
+## Post-Processing
+VESTA, OVITO, XCrysDen, Vaspkit, Sumo, Lobster, BoltzTraP2, PyProcar, FermiSurfer, Critic2, Z2Pack
+
+## Frameworks
+ASE, Pymatgen, AiiDA, FireWorks, Atomate, Atomate2, CustOdiaN, Jarvis-Tools, Signac
+
+## Niche Tools
+Vampire, Mumax3, Nanodcal, Transiesta, Smeagol, MIKA, McPhase
+
+TOTAL g_list.md: ~150 unique tools
+
+# SOURCE 3: gr_list.md
+
+## Ground-State DFT (with links)
+ABINIT, BigDFT, CASTEP, CP2K, CRYSTAL, elk, exciting, FHI-aims, FLEUR, GPAW, JDFTx
+ONETEP, OpenMX, Quantum ESPRESSO, SIESTA, VASP, WIEN2k
+Additional: ABACUS, CONQUEST, DMol3, FPLO, PARSEC, Qbox, RMG
+
+## TDDFT
+Octopus, SALMON
+GPAW RT-TDDFT, Quantum ESPRESSO turboTDDFT
+
+## GW/BSE
+BerkeleyGW, Yambo, WEST
+exciting GW, SPEX, Fiesta
+
+## DMFT
+TRIQS, DCore, ComDMFT
+w2dynamics, iQIST, EDMFTF, Questaal
+
+## QMC
+QMCPACK, CASINO, TurboRVB, ALF, CHAMP
+
+## Quantum Chemistry
+ORCA, PSI4, PySCF, Molpro, OpenMolcas, BAGEL
+Gaussian, Q-Chem, NWChem, CFOUR, MRCC
+
+## Wannier & TB
+Wannier90, WannierTools, pythTB, TBmodels, RESPACK, TightBinding++
+
+## Phonons
+Phonopy, phono3py, EPW, ShengBTE, almaBTE, ALAMODE, TDEP
+
+## Dynamics
+CPMD, i-PI
+
+## Structure Prediction
+USPEX, CALYPSO, AIRSS, XtalOpt, GASP
+
+## Post-Processing
+vaspkit, pyprocar, sumo, Lobster, BoltzTraP/BoltzTraP2, fermisurfer
+
+## Frameworks
+ASE, pymatgen, AiiDA, atomate2, FireWorks, custodian
+
+## Niche
+ir2tb, QuantNBody, pyGWBSE, epiq, Simphony
+
+TOTAL gr_list.md: ~120 unique tools
+
+# SOURCE 4: k_list.md (LARGE, tabular format)
+
+## Ground-State DFT
+VASP, Quantum ESPRESSO, ABINIT, CASTEP, PARATEC, JDFTx, SPARC, Qbox, PROFESS, MADNESS
+SIESTA, ORCA, CP2K, FHI-aims, ADF, deMon2k, NWChem, Gaussian, PySCF, Psi4, Molpro, Turbomole
+Crystal, DMol³, ONETEP, CONQUEST, BigDFT, DFTB+, xTB, MOPAC
+WIEN2k, Elk, Fleur, exciting, Questaal, RSPt, SPEX
+
+## TDDFT
+Octopus, GPAW, QE-turbo_davidson, CP2K, ORCA, Psi4, PySCF, NWChem, Turbomole, BDF
+SALMON, NWChem-RT-TDDFT, QE-turbo_lanczos, TDAP
+
+## GW/BSE
+Yambo, BerkeleyGW, Abinit-GW, exciting-GW, SPEX, West, VASP-GW, FHI-aims-GW, PySCF-GW, Molpro-GW, GPAW-GW, DP-4
+
+## DMFT
+TRIQS, EDMFTF, w2dynamics, DCore, iQIST, ComDMFT, Rutgers DMFT, DMFTwDFT, GTM, NRGLjubljana, Kondo*UNCERTAIN
+
+## QMC
+QMCPACK, CASINO, ALF, QUEST, TurboRVB, HANDE, NECI, PyQMC, qmclib*UNCERTAIN, ZTC*UNCERTAIN
+
+## Quantum Chemistry CC
+ORCA, CFOUR, MRCC, PSI4, NWChem, Molpro, PySCF, Q-Chem, eT, CC4S*UNCERTAIN, ACES III*UNCERTAIN
+
+## Multireference
+OpenMolcas, BAGEL, PySCF, Molpro, ORCA, Columbus, COLUMBUS*UNCERTAIN, Molcas*UNCERTAIN
+
+## Wannier & TB
+Wannier90, WannierTools, PyWannier90, WOPT, VASP2Wannier90, DFTTools(TRIQS), ir2tb, PySCF-pbc*UNCERTAIN
+PythTB, TBmodels, Kwant, Pybinding, QuantumLattice*UNCERTAIN, Tight-binding Studio*UNCERTAIN
+
+## Model Hamiltonians
+ITensor, TeNPy, ALPS*UNCERTAIN, DMRG++*UNCERTAIN
+
+## Phonons
+Phonopy, phonons(QE), ATAT, FROPHO, phon(VASP), hiPhive, ASE-phonons*UNCERTAIN
+phono3py, ALAMODE, TDEP, ShengBTE, almaBTE, PhonTS*UNCERTAIN, kALDo
+
+## Electron-Phonon
+EPW, Quantum ESPRESSO-eph, Abinit-eph, VASP-eph*UNCERTAIN, GPAW-eph*UNCERTAIN, PERTURBO
+
+## Dynamics
+CP2K, Quantum ESPRESSO, VASP, Abinit, FHI-aims, ASE-MD*UNCERTAIN
+CPMD, CP2K, Quantum ESPRESSO, VASP*UNCERTAIN
+i-PI, CP2K, Quantum ESPRESSO, VASP*UNCERTAIN, PLUMED
+
+## Structure Prediction
+USPEX, XtalOpt, GASP, CALYPSO, PyXtal, ASE-GA*UNCERTAIN
+AIRSS, MUSE*UNCERTAIN, PyMaterial-Search*UNCERTAIN
+ASE-BasinHopping, GMIN, PyMetadynamics*UNCERTAIN
+MaterialsProject-ML, PyXtal-ML, Oganov-ML*UNCERTAIN
+
+## Post-Processing
+vaspkit, sumo, pyprocar, Lobster, FermiSurfer, BoltzTraP, BoltzTraP2, AMSET
+WannierTools, Z2Pack, irvsp, SeeK-path, ir2tb*UNCERTAIN, PyProcar-Unfold*UNCERTAIN
+feff, xspectra, OCEAN, exciting-XS, FDMNES, CRYSOL, XSpectraTools*UNCERTAIN
+Bader, DDEC*UNCERTAIN, Hirshfeld*UNCERTAIN, VESTA, OVITO, XCrySDen, Jmol
+
+## Frameworks
+ASE, pymatgen, Atomic Simulation Recipes(ASR), pymatgen-analysis, matminer, MAST, spglib, seekpath
+AiiDA, FireWorks, Jobflow, Atomate2, MyQueue, Custodian, Dask, Parsl, Pyiron
+
+## Databases
+Materials Project, AFLOW, OQMD, NOMAD, Materials Cloud, C2DB, 2DMatPedia, NCD*UNCERTAIN
+AiiDA(provenance), NOMAD(repository), OSF, Zenodo, DataVerse*UNCERTAIN
+
+## Niche
+ir2tb, Z2Pack, WannierBerri, PERTURBO, PyProcar*ENHANCED, sumo, BoltzTraP2
+COMSUITE, EDRIXS, XSpectraTools, QMCPACK-addons, AFLOW-SYM, PyXtal, m3gnet
+
+TOTAL k_list.md: ~200+ unique tools (many marked UNCERTAIN)
+
+# SOURCE 5: m_list.md (concise)
+
+## Ground-State DFT
+ABINIT, ADF, BigDFT, CASTEP, CP2K, CPMD, Crystal, DFTB+, ELK, Exciting, FHI-aims, Fleur
+GPAW, JDFTx, NWChem, ONETEP, OpenMX, PWscf(Quantum ESPRESSO), PWDFT, Qbox, SIESTA, SPARC, VASP, WIEN2k
+
+## TDDFT
+Octopus, NWChem(RT-TDDFT), Quantum ESPRESSO(TDDFT), GPAW(TDDFT), SALMON, PySCF, PWDFT, turboTDDFT
+
+## GW/BSE
+BerkeleyGW, Exciting(GW), Fleur(GW), Yambo, Abinit-GW, Spex
+
+## DMFT
+ComDMFT, EDMFTF, TRIQS, w2dynamics, DCore, iQIST, Rutgers DMFT codes, DMFTwDFT, Fleur(DMFT-QSGW), opendf, Questaal
+
+## QMC
+ALF, CASINO, QMCPACK, TurboRVB, QUEST, QWalk, ph-AFQMC
+
+## Quantum Chemistry
+ACES, CFOUR, DALTON, GAMESS(US), Molpro, MRCC, NWChem, ORCA, PSI4, Q-Chem, PySCF, ExaChem, GAMESS(US duplicate)
+BAGEL, MOLCAS, Molpro, ORCA, PSI4, Quantum Package, CheMPS2, SlowQuant
+
+## Tight-Binding
+DFTB+, OpenMX, Wannier90, WannierTools, pythtb, TBmodels, TRIQS-DFTTools, Tight Binding Studio, TBPLaS, TopoTB
+
+## Phonons
+ALAMODE, Phonopy, phono3py, ShengBTE, almaBTE, EPW, TDEP, PHON, epiq, Phonon
+
+## Dynamics
+CP2K, CPMD, i-PI, LAMMPS, NWChem, Quantum ESPRESSO, OpenMD, IMD
+
+## Structure Prediction
+AIRSS, CALYPSO, GASP, USPEX, XtalOpt, PXRDGen, OpenCSP
+
+## Post-Processing
+vaspkit, BoltzTraP, Lobster, sumo, pyprocar, fermisurfer, VESTA, XCrySDen
+
+## Frameworks
+ASE, AiiDA, FireWorks, pymatgen, atomate2, custodian
+
+## Niche
+PyLada, BandUp, Critic2
+
+TOTAL m_list.md: ~120 unique tools
+
+# SOURCE 6: q_list.md
+
+## Ground-State DFT
+ABINIT, CASTEP, Quantum ESPRESSO, VASP, CPMD, PARSEC, Qbox, OpenAtom, RMG
+SIESTA, FHI-aims, CP2K, CRYSTAL, OpenMX, CONQUEST, ADF, DMol3, ONETEP, PLATO
+WIEN2k, FLEUR, ELK, exciting
+
+## TDDFT
+Octopus, NWChem, TURBOMOLE, Q-Chem, Psi, GPAW, SALMON
+
+## GW
+Yambo, BerkeleyGW, FLEUR, WIEN2k, VASP
+
+## DMFT
+TRIQS, w2dynamics, DCore, iQIST
+
+## QMC
+CASINO, QMCPACK, TurboRVB, QWALK
+
+## Quantum Chemistry
+ORCA, CFOUR, MRCC, PSI, MOLPRO, NWChem, PySCF, Q-Chem, eT, ACES
+OpenMolcas, COLUMBUS, GAMESS(US/UK), MOLPRO, BAGEL, DALTON
+
+## Wannier
+Wannier90, WannierTools, PythTB, TBmodels, Z2Pack, WannierBerri
+
+## Phonons
+Phonopy, Phono3py, ALAMODE, ShengBTE, almaBTE, EPW, BoltzTraP, BoltzTraP2
+
+## Dynamics
+CP2K, LAMMPS, CPMD, GROMACS, AMBER, CHARMM, NAMD, i-PI
+
+## Structure Prediction
+USPEX, CALYPSO, AIRSS, XtalOpt, GASP
+
+## Post-Processing
+vaspkit, Lobster, sumo, pyprocar, fermisurfer, ezSpectra, Libwfa
+
+## Niche
+DP-Code, FPLO, KKR, LMTO, SIESTA-Transiesta, Chern-Number, Berry-Phase
+
+## Frameworks
+ASE, pymatgen, AiiDA, FireWorks, atomate, custodian
+Materials Project, AFLOW, OQMD, NOMAD
+
+TOTAL q_list.md: ~140 unique tools
+
+# SOURCE 7: z_list.md (LARGE, detailed with sources)
+
+## Ground-State DFT
+Quantum ESPRESSO, VASP, ABINIT, CASTEP, CPMD, CP2K, PWscf, Qbox, PARSEC, JDFTx
+SIESTA, FHI-aims, OpenMX, ONETEP, CONQUEST, BigDFT, GPAW, DFTB+
+WIEN2k, FLEUR, Elk, exciting, Questaal, SPR-KKR, JuKKR
+NESSIE, DFT-FE
+xtb, MOPAC, AMS/DFTB
+
+## TDDFT
+Octopus, GPAW TDDFT, NWChem RT-TDDFT, SALMON, CP2K RT-TDDFT, Yambo TDDFT, exciting TDDFT
+
+## GW/BSE
+Yambo, BerkeleyGW, ABINIT GW/BSE, exciting GW, VASP GW, Spex, FHI-aims GW
+
+## DMFT
+TRIQS, TRIQS/cthyb, DCore, TRIQS/dft_tools, w2dynamics, iQIST, EDMFTF/eDMFT, ComDMFT, ComCTQMC, ComRISB
+ABINIT(DMFT), Wien2k(DMFT), Questaal(DMFT)
+ALF
+
+## QMC
+QMCPACK, CASINO, TurboRVB, ALF
+
+## Quantum Chemistry
+ORCA, PSI4, PySCF, CFOUR, MRCC, Molpro, Dalton, DIRAC
+OpenMolcas, BAGEL, COLUMBUS, PySCF MR
+
+## Wannier & TB
+Wannier90, WannierTools, PythTB, TBmodels, TRIQS/dft_tools, BoltzWann
+
+## Phonons
+Phonopy, ABINIT phonons(DFPT), Quantum ESPRESSO PHonon
+Phono3py, ALAMODE, TDEP, ShengBTE, almaBTE, THERMACOND/ALATDYN, SSCHA
+EPW, ABINIT e-ph
+
+## Dynamics
+CPMD, CP2K MD, VASP MD, Quantum ESPRESSO MD, i-PI, ABINIT PIMD
+
+## Structure Prediction
+USPEX, XtalOpt, CALYPSO, AIRSS, GASP
+
+## Post-Processing
+PyProcar, FermiSurfer, WannierTools, Z2Pack, Sumo
+BoltzTraP, BoltzWann
+LOBSTER, LobsterPy
+Vaspkit
+
+## Frameworks
+ASE, pymatgen, FireWorks, custodian, atomate, atomate2
+AiiDA, AiiDA plugin registry
+Materials Project, Materials Cloud
+libAtoms/Quippy, MDI/MolSSI drivers
+
+## Niche
+DFT-F, NESSIE, DMFTwDFT, ALF, w2dynamics
+
+TOTAL z_list.md: ~150 unique tools
+
+---
+
+# AGGREGATE STATISTICS (preliminary)
+
+Total unique tool mentions across all 7 sources: ~400-500 (estimate before deduplication)
+Tools appearing in 5+ sources: ~80-100 (HIGH CONFIDENCE)
+Tools appearing in 3-4 sources: ~100-150 (CONFIRMED)
+Tools appearing in 1-2 sources: ~200-250 (LOW CONFIDENCE / NICHE)
+Tools marked UNCERTAIN in sources: ~20-30
+
+# NEXT STEPS
+1. Normalize tool names (handle variants)
+2. Cross-reference appearance count
+3. Resolve conflicts
+4. Attach official resources
+5. Verify authenticity of low-confidence tools

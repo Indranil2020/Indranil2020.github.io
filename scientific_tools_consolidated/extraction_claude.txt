@@ -1,0 +1,425 @@
+SOURCE: claude.md
+EXTRACTION DATE: 2026-01-01
+
+=== CATEGORY 1: GROUND-STATE DFT ===
+
+## Plane-Wave Pseudopotential / PAW
+VASP | Vienna Ab initio Simulation Package
+Quantum ESPRESSO | Open-source plane-wave pseudopotential suite
+ABINIT | Plane-wave, pseudopotentials and PAW
+CASTEP | Plane-wave, PAW and ultrasoft pseudopotentials
+PWSCF | Core module of Quantum ESPRESSO
+GPAW | Grid-based Projector Augmented Wave
+CP2K | Hybrid Gaussian/plane-wave method
+NWChem | Plane-wave and Gaussian basis
+PARATEC | Plane-wave parallel code
+PARSEC | Real-space pseudopotential code
+RMGDFT | Real-space multigrid DFT
+PWPAW | Original PAW plane-wave implementation
+TBPW | Tight-binding plane-wave code
+ABACUS | Plane-wave and atomic orbital basis
+
+## All-Electron / Full-Potential (LAPW)
+WIEN2k | Full-potential LAPW
+Elk | Full-potential LAPW, open-source
+exciting | Full-potential LAPW with GW-BSE
+Fleur | Full-potential LAPW, magnetic systems
+
+## All-Electron (LMTO)
+RSPt | Relativistic Spin-Polarized test code
+Questaal | Suite including LMTO, GW, QSGW
+LMTO-ASA | Atomic Sphere Approximation
+
+## All-Electron (KKR)
+SPR-KKR | Spin-polarized relativistic KKR
+JuKKR | Jülich KKR code
+KKRnano | Massively parallel KKR
+
+## Localized Basis (Gaussian)
+Gaussian | Proprietary quantum chemistry (09, 16)
+ORCA | Free for academics, quantum chemistry
+PSI4 | Open-source quantum chemistry
+PySCF | Python-based Simulations of Chemistry Framework
+CP2K | Also supports Gaussian basis
+FHI-aims | All-electron, numeric atomic orbitals
+TURBOMOLE | Gaussian basis, quantum chemistry
+Molpro | Quantum chemistry, Gaussian basis
+CFOUR | Coupled-Cluster techniques
+NWChem | Also supports Gaussian basis
+GAMESS | Quantum chemistry, Gaussian basis (US and UK)
+Dalton | Quantum chemistry suite
+DIRAC | Relativistic quantum chemistry
+ADF | Amsterdam Density Functional, Slater-type orbitals
+CRYSTAL | Gaussian basis for periodic systems
+Q-Chem | Quantum chemistry package
+
+## Localized Basis (Numerical Atomic Orbitals)
+SIESTA | Numerical atomic orbitals, linear scaling
+OpenMX | Numerical atomic orbitals
+CONQUEST | Linear-scaling DFT, numerical orbitals
+ONETEP | Order-N Electronic Total Energy Package
+BigDFT | Wavelet basis, linear scaling
+
+## Tight-Binding DFT
+DFTB+ | Density Functional Tight Binding
+xTB | extended Tight-Binding, GFN-xTB methods
+HOTBIT | Tight-binding code
+
+=== CATEGORY 2: TIME-DEPENDENT & EXCITED-STATE ===
+
+## Linear-Response TDDFT
+Octopus | Real-space TDDFT
+GPAW | TDDFT module
+NWChem | TDDFT capabilities
+Quantum ESPRESSO | Turbo-TDDFT module
+ORCA | TDDFT for molecules
+Gaussian | TDDFT implementation
+ADF | TDDFT capabilities
+CP2K | TDDFT module
+FHI-aims | TDDFT implementation
+
+## Real-Time TDDFT
+Octopus | Specialized for real-time propagation
+SALMON | Scalable Ab-initio Light-Matter simulator
+GPAW | Real-time TDDFT module
+NWChem | RT-TDDFT capabilities
+Qbox | Real-time TDDFT
+
+## GW Implementations
+BerkeleyGW | Massively parallel GW and GW-BSE
+Yambo | GW and BSE, open-source
+ABINIT | Built-in GW capabilities
+Quantum ESPRESSO | GW through WEST code integration
+VASP | G₀W₀, GW implementation
+exciting | GW and BSE implementation
+SternheimerGW | GW via linear response
+FHI-aims | GW implementation
+TURBOMOLE | GW module
+WEST | Without Empty STates
+Spex | Spectral Excitations
+Fiesta | GW and BSE with Gaussian basis
+molgw | GW for molecules and clusters
+GreenX | GW library (under development)
+
+## BSE (Bethe-Salpeter Equation)
+BerkeleyGW | Full BSE implementation
+Yambo | BSE with excitonic effects
+exciting | BSE capabilities
+VASP | BSE implementation
+OCEAN | Obtaining Core Excitations
+NBSE | NIST BSE solver
+Spex | BSE implementation
+
+=== CATEGORY 3: STRONGLY CORRELATED & MANY-BODY ===
+
+## DMFT Frameworks & Libraries
+TRIQS | Toolbox for Research on Interacting Quantum Systems
+TRIQS/DFTTools | DFT+DMFT interface
+solid_dmft | TRIQS-based DFT+DMFT workflows
+ALPS | Algorithms and Libraries for Physics Simulations
+ALPSCore | Core libraries from ALPS
+w2dynamics | CT-QMC DMFT solver
+DCore | Integrated DMFT software
+iQIST | Interacting Quantum Impurity Solver Toolkit
+AMULET | DFT+DMFT package
+DMFTwDFT | DMFT interface to DFT codes
+ComDMFT | Massively parallel DFT+DMFT
+
+## DFT+DMFT Implementations
+EDMFTF | Embedded DMFT Functional, Wien2k integrated
+VASP+DMFT | DMFT integration with VASP
+RSPt | LQSGW+DMFT capabilities
+Questaal | GW+EDMFT implementation
+ABINIT | DMFT module
+
+## Impurity Solvers
+CT-HYB | Continuous-Time Hybridization expansion
+CT-QMC | Continuous-Time Quantum Monte Carlo
+CT-INT | Continuous-Time Interaction expansion
+CT-SEG | Continuous-Time Segment
+HΦ | Hubbard Phi, Exact diagonalization
+EDIpack | Exact diagonalization impurity solver
+FTPS | Fork Tensor Product State
+Pomerol | Exact diagonalization with Green's functions
+ALPS/CT-HYB | CT-HYB in ALPS
+
+## Continuum QMC (VMC, DMC, AFQMC)
+QMCPACK | VMC, DMC, AFQMC
+CASINO | VMC and DMC
+TurboRVB | VMC and LRDMC
+PyQMC | Python-based QMC within PySCF
+CHAMP | VMC and DMC
+QMcBeaver | GPU-accelerated QMC (historical)
+QWalk | QMC for molecules and solids
+
+## Lattice/Model QMC
+ALF | Algorithms for Lattice Fermions
+QUEST | Lattice QMC
+TRIQS/CT-QMC solvers | For impurity problems
+DCA++ | Dynamical cluster approximation
+
+=== CATEGORY 4: WAVEFUNCTION-BASED QUANTUM CHEMISTRY ===
+
+## Coupled-Cluster
+ORCA | DLPNO-CC, high efficiency
+CFOUR | High-accuracy CC
+MRCC | Multireference CC
+PSI4 | Open-source CC
+Molpro | CC and MRCI
+NWChem | CC capabilities
+PySCF | CC implementations
+Dalton | CC methods
+DIRAC | Relativistic CC
+GAMESS | CC implementations
+
+## Configuration Interaction & Multireference
+OpenMolcas | CASSCF, NEVPT2, multireference
+BAGEL | Multireference methods
+PySCF | CI and CASSCF
+Molpro | MRCI and multireference
+ORCA | Multireference methods
+Columbus | CI and MCSCF
+Q-Chem | Multireference methods
+
+=== CATEGORY 5: TIGHT-BINDING & DOWNFOLDING ===
+
+## Wannier Function Methods
+Wannier90 | Maximally localized Wannier functions
+WannierBerri | Berry phase properties
+WannierTools | Topological materials analysis
+Z2Pack | Topological invariants calculation
+pythtb | Python Tight-Binding
+TBmodels | Tight-binding model manipulation
+PythTB | Tight-binding framework
+TRIQS/DFTTools | Wannier downfolding for DMFT
+TopoTB | Electronic structure and topology
+AiiDA-wannier90 | High-throughput Wannierization
+
+## Model Hamiltonian Solvers
+Kwant | Quantum transport in tight-binding
+Pybinding | Tight-binding simulations
+TBSTUDIO | Tight-binding model builder
+HubbardFermiMatsubara | Hubbard model solvers
+Pomerol | Model Hamiltonian exact diagonalization
+exactdiag | Exact diagonalization tools
+
+## Downfolding & Embedding
+TRIQS/DFTTools | MLWF interface for DFT+DMFT
+Wannier90 | Interface to multiple DFT codes
+FermiSurfer | Fermi surface viewer
+
+=== CATEGORY 6: PHONONS & ELECTRON-PHONON ===
+
+## Harmonic Phonons
+Phonopy | Harmonic phonons, de facto standard
+PHON | Phonon calculations
+PHONON | Legacy phonon code
+YPHON | Phonon calculations
+Quantum ESPRESSO | PHonon package (DFPT)
+ABINIT | DFPT implementation
+Elk | Phonon capabilities
+VASP | DFPT at Γ-point
+
+## Anharmonic Phonons & Thermal Transport
+phono3py | Anharmonic phonons and thermal conductivity
+ShengBTE | Boltzmann transport for phonons
+ALAMODE | Anharmonic Lattice Model
+almaBTE | BTE solver for thermal transport
+PhonTS | Phonon transport simulations
+TDEP | Temperature Dependent Effective Potential
+kALDo | Anharmonic lattice dynamics
+GPU_PBTE | GPU-accelerated phonon BTE
+Phoebe | Combined electron and phonon BTE
+SCAILD | Self-consistent anharmonic lattice dynamics
+QSCAILD | Quantum SCAILD
+SSCHA | Stochastic Self-Consistent Harmonic Approximation
+ALM | Anharmonic force constant extraction
+hiPhive | Force constant library
+thirdorder.py | Script for third-order force constants
+
+## Electron-Phonon Coupling
+EPW | Electron-Phonon coupling using Wannier
+PERTURBO | Electron-phonon and carrier dynamics
+BoltzWann | Boltzmann transport with Wannier
+Phoebe | Unified electron-phonon framework
+DMDW/RTDW | Debye-Waller factors
+
+=== CATEGORY 7: MOLECULAR & AB INITIO DYNAMICS ===
+
+CP2K | BOMD and CPMD specialist
+VASP | AIMD capabilities
+Quantum ESPRESSO | BOMD/CPMD
+ABINIT | Molecular dynamics
+SIESTA | MD capabilities
+FHI-aims | AIMD
+i-PI | Interface for Path Integral simulations
+LAMMPS | Classical MD with ab initio interfaces
+CP2K | PIMD capabilities
+NEB | Nudged Elastic Band
+String methods | Various implementations
+Metadynamics | CP2K, PLUMED plugin
+PLUMED | Enhanced sampling plugin
+
+=== CATEGORY 8: STRUCTURE PREDICTION ===
+
+## Evolutionary Algorithms
+USPEX | Universal Structure Predictor
+XtalOpt | Open-source evolutionary algorithm
+CALYPSO | Crystal structure AnaLYsis by PSO
+GASP | Genetic Algorithm for Structure and Phase
+MAISE | Evolutionary algorithm
+EVO | Evolutionary structure prediction
+
+## Random Sampling
+AIRSS | Ab Initio Random Structure Searching
+FLAME | Minima hopping method
+Basin hopping | Various implementations
+
+## Machine Learning
+HTOCSP | High-Throughput Organic CSP
+Neural network potentials | For accelerated searches
+
+=== CATEGORY 9: POST-PROCESSING & VISUALIZATION ===
+
+## Band Structure & DOS
+vaspkit | VASP post-processing
+sumo | Band structure and DOS plotting
+pyprocar | Electronic structure analysis
+PyARPES | ARPES data analysis
+BandUP | Band unfolding
+fold2Bloch | Band unfolding utility
+
+## Transport Properties
+BoltzTraP | Boltzmann transport properties
+BoltzTraP2 | Second generation
+BoltzWann | Transport from Wannier
+AMSET | Ab initio carrier transport
+Phoebe | Combined electron-phonon transport
+
+## Chemical Bonding
+Lobster | Chemical bonding analysis
+COHP | Crystal Orbital Hamilton Population
+Bader | Bader charge analysis
+DDEC | Density-derived charges
+Critic2 | Topological analysis
+
+## Optical & Spectroscopic
+Yambo | Optical absorption, EELS
+exciting | Optical properties
+DP | Dielectric properties
+FEFF | X-ray absorption
+OCEAN | X-ray spectra
+
+## Magnetic Properties
+Magnon codes | Various implementations
+Spirit | Atomistic spin dynamics
+VAMPIRE | Atomistic spin dynamics
+TB2J | Magnetic exchange parameters
+
+## Visualization
+VESTA | 3D visualization
+XCrySDen | Crystalline structures
+VMD | Visual Molecular Dynamics
+Avogadro | Molecular editor
+FermiSurfer | Fermi surface visualization
+STMng | Visualization tool
+JMol | Java-based molecular viewer
+PyMOL | Molecular visualization
+
+=== CATEGORY 10: FRAMEWORKS & WORKFLOWS ===
+
+## Python-Based Core Libraries
+ASE | Atomic Simulation Environment
+pymatgen | Python Materials Genomics
+MatPy | Materials science in Python
+atomate | High-level workflow library
+atomate2 | Second-generation workflow
+custodian | Error handling
+
+## Workflow Engines
+AiiDA | Automated Interactive Infrastructure
+FireWorks | Workflow definition and execution
+jobflow | Workflow programming layer
+jobflow-remote | Remote workflow execution
+Luigi | Workflow management
+Parsl | Parallel scripting library
+
+## AiiDA Plugins
+AiiDA-VASP | VASP plugin
+AiiDA-QuantumESPRESSO | QE plugin
+AiiDA-wannier90 | Wannier90 plugin
+AiiDA-yambo | Yambo plugin
+aiida-fleur | Fleur plugin
+
+## Database Frameworks
+pymatgen-db | MongoDB interface
+Materials Project | API and tools
+AFLOW | Automatic FLOW
+OQMD | Open Quantum Materials Database
+qmpy | Python package for OQMD
+NOMAD | Novel Materials Discovery
+Materials Cloud | Computational materials infrastructure
+JARVIS | Joint Automated Repository
+
+## Specialized HT Tools
+MPWorks | Materials Project workflow
+emmet | Materials Project database builder
+maggma | MongoDB aggregation
+Matbench | Benchmark suite
+CatApp | Catalysis database
+CatMAP | Catalysis microkinetic
+GASpy | High-throughput surface calculations
+
+=== CATEGORY 11: NICHE & RESEARCH-GRADE ===
+
+OpenMX | Open source Material eXplorer
+RMG | Real Space Multigrid
+CONQUEST | Linear-scaling DFT
+ONETEP | Order-N electronic structure
+KITE | Quantum transport in disorder
+Paoflow | TB DFT post-processing
+MagneticTB | Magnetic tight-binding models
+MagneticKP | k·p models for magnetic systems
+SALMON | Real-time TDDFT
+FLAPW | Full-potential code
+FlapwMBPT | FLAPW with MBPT
+cmpy | Condensed matter physics tools
+exactdiag | Exact diagonalization
+HubbardFermiMatsubara | Hubbard model specific
+Stoner | Python data analysis
+
+## Machine Learning Potentials
+MLIP | ML potential tools
+n2p2 | Neural network potential
+SIMPLE-NN | Neural network potential
+AMP | Atomistic Machine-learning Package
+SchNetPack | Deep learning
+MACE | ML interatomic potentials
+NequIP | E(3)-equivariant neural networks
+Allegro | Fast equivariant neural network
+
+## API & Interface Tools
+API_Phonons | Interface for phonon packages
+gpaw-tools | User interaction for GPAW
+PyProcar | DFT post-processing
+ASE-GUI | Graphical interface for ASE
+Phonopy-API | Phonopy Python API
+
+## Specialized Analysis
+dbaAutomator | Double-Bader analysis
+yambopy | Yambo scripting interface
+AutoBZ.jl | Brillouin zone integration (Julia)
+Pheasy | Phonon analysis
+effectivemass | Effective mass calculator
+BerryPI | Berry phase calculations
+IrRep | Irreducible representations
+
+## Specialized Solvers
+EDIpack | Exact diagonalization impurity solver
+Dual fermions codes | Various implementations
+NORG | Natural Orbitals Renormalization Group
+AFLOW-ML | Machine learning within AFLOW
+Materials Studio | Commercial suite
+Medea | Commercial materials modeling
+
+TOTAL EXTRACTED FROM CLAUDE.MD: 280+ unique tool names
