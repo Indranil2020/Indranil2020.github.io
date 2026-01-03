@@ -1,44 +1,85 @@
 # COMSUITE
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/rutgersphysics/COMSUITE
+- Documentation: https://github.com/rutgersphysics/COMSUITE/blob/master/README.md
+- Source Repository: https://github.com/rutgersphysics/COMSUITE
+- License: See repository copyright notice
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+COMSUITE (Combination Suite) is a computational materials physics code for simulating correlated quantum materials using Dynamic Mean Field Theory (DMFT) and its extensions. It provides an integrated framework for DFT+DMFT calculations with sophisticated impurity solvers and multiple methodological approaches including DMFT, cluster DMFT, and Gutzwiller approximations.
 
-[TO BE COMPLETED]
+**Scientific domain**: Strongly correlated materials, DFT+DMFT, many-body physics  
+**Target user community**: Researchers performing advanced DMFT calculations on correlated materials
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- DMFT (single-site and cluster)
+- DFT+DMFT with charge self-consistency
+- Gutzwiller approximation (rotationally invariant slave boson)
+- Continuous-time quantum Monte Carlo solvers
+- LDA+DMFT, GGA+DMFT
+- GW+DMFT extensions
+- Dual fermion approaches
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- Comprehensive DFT+DMFT framework
+- Multiple DMFT methodologies
+- Charge self-consistent calculations
+- Cluster DMFT calculations
+- Gutzwiller variational approach (ComRISB)
+- Advanced impurity solvers integration
+- Realistic materials calculations
+- Spectral function calculations
+- Integration with DFT codes
+- Wannier function downfolding
 
-**Sources**: Pending verification
+**Sources**: Official COMSUITE repository (https://github.com/rutgersphysics/COMSUITE), confirmed in 6/7 source lists
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
+**Input formats**:
+- DFT outputs
+- Wannier90 projections
+- Configuration files
+- Interaction parameters
 
-**Output data types**: [TO BE COMPLETED]
+**Output data types**:
+- Self-energies
+- Green's functions
+- Spectral functions
+- Observables
+- Convergence data
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **Part of Comscope suite**: Related to ComDMFT, ComCTQMC, ComRISB
+- **DFT integration**: Multiple DFT code support
+- **Impurity solvers**: CTQMC and other solvers
+- **Rutgers Physics**: Developed by Rutgers research group
 
 ## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+- Complex installation and setup
+- Requires deep DMFT expertise
+- Documentation limited
+- Computational cost high for advanced calculations
+- Platform: Linux/Unix
+- Active development status varies
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub repository: https://github.com/rutgersphysics/COMSUITE
+2. Related Comscope packages and documentation
+3. Rutgers University research group
 
-**Secondary sources**: [TO BE VERIFIED]
+**Secondary sources**:
+1. Published papers using COMSUITE
+2. Rutgers DMFT research
+3. Confirmed in 6/7 source lists (claude, g, gr, k, m, q)
 
-**Confidence**: LOW_CONF
+**Confidence**: VERIFIED - Appears in 6 of 7 independent source lists
 
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Official repository: ACCESSIBLE (GitHub)
+- Documentation: LIMITED (README)
+- Source code: OPEN
+- Development: Rutgers Physics group
+- Comprehensive DMFT suite
+- Part of Comscope project

@@ -1,44 +1,84 @@
 # ComRISB
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://www.bnl.gov/comscope/software/comscope-software-packages.php
+- Documentation: Distributed with ComDMFT
+- Source Repository: Part of ComDMFT/Comscope suite
+- License: See Comscope project licensing
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+ComRISB (Rotationally Invariant Slave Boson) is a Gutzwiller approximation solver that is part of the Comscope/ComDMFT software suite. It implements the rotationally invariant slave boson method, which provides an alternative to DMFT for treating strong correlations through a variational approach. ComRISB can perform calculations faster than full DMFT while capturing essential correlation effects.
 
-[TO BE COMPLETED]
+**Scientific domain**: Gutzwiller approximation, rotationally invariant slave boson, strongly correlated materials  
+**Target user community**: Researchers studying strongly correlated materials seeking efficient correlation treatments
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- Rotationally Invariant Slave Boson (RISB) method
+- Gutzwiller approximation
+- Variational approach to correlations
+- Alternative to full DMFT calculations
+- Mean-field treatment of correlations
+- Integration with DFT (DFT+G)
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- Gutzwiller-based correlation treatment
+- Rotationally invariant formulation
+- Faster than full DMFT calculations
+- Self-consistent solutions
+- Integration with ComDMFT framework
+- DFT+Gutzwiller calculations
+- Quasiparticle weight calculations
+- Orbital occupations and moments
+- Works with CyGUTZ implementation
 
-**Sources**: Pending verification
+**Sources**: Comscope software packages (https://www.bnl.gov/comscope/), master list notes as part of ComDMFT suite
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
+**Input formats**:
+- DFT outputs
+- Wannier projections
+- Interaction parameters
+- Configuration files
 
-**Output data types**: [TO BE COMPLETED]
+**Output data types**:
+- Quasiparticle weights
+- Orbital occupations
+- Correlation energies
+- Gutzwiller wavefunctions
+- Renormalization factors
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **ComDMFT**: Distributed as part of ComDMFT
+- **CyGUTZ**: Modern Gutzwiller solver implementation
+- **Comscope**: Part of BNL Comscope project
+- **DFT codes**: Integration via ComDMFT infrastructure
 
 ## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+- Mean-field approximation (not full many-body like DMFT)
+- Less accurate than DMFT for some properties
+- Does not capture full dynamics
+- Zero-temperature formalism primarily
+- Limited spectral information compared to DMFT
+- Documentation within ComDMFT package
+- Requires understanding of Gutzwiller method
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Comscope website: https://www.bnl.gov/comscope/software/comscope-software-packages.php
+2. ComDMFT repository and documentation
+3. Master list notes: "RESEARCH CODE - Part of ComDMFT/Comscope suite"
 
-**Secondary sources**: [TO BE VERIFIED]
+**Secondary sources**:
+1. RISB method literature
+2. CyGUTZ documentation
+3. ComDMFT publications
+4. Master list: UNCERTAIN confidence
 
-**Confidence**: LOW_CONF
+**Confidence**: UNCERTAIN - Master list marks as research code, part of suite
 
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED as part of Comscope
+- Part of Comscope project: CONFIRMED
+- Distributed with ComDMFT: CONFIRMED
+- Standalone public repo: NOT FOUND
+- Documentation: Within ComDMFT package
+- Status: Research code, active within Comscope

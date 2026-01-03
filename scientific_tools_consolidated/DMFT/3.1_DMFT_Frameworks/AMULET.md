@@ -1,44 +1,63 @@
 # AMULET
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: Research code - limited public information
+- Documentation: Contact developers for access
+- Source Repository: Not publicly available (research code)
+- License: Academic/research use
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+AMULET is a DFT+DMFT code developed for studying strongly correlated materials. It represents a research implementation combining density functional theory with dynamical mean field theory. Information about AMULET is limited in public domains, indicating it is primarily a research tool developed and used within specific research groups.
 
-[TO BE COMPLETED]
+**Scientific domain**: DFT+DMFT, strongly correlated materials  
+**Target user community**: Researchers with access to the code through collaborations
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- DFT+DMFT framework
+- Dynamical mean field theory
+- Electronic structure calculations
+- Correlation effects in solids
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- DFT+DMFT calculations (specific capabilities uncertain)
+- Strongly correlated materials simulations
+- Electronic structure with correlation effects
 
-**Sources**: Pending verification
+**Note**: Limited public documentation available. Capabilities inferred from references in master list.
+
+**Sources**: Listed in master list as UNCERTAIN confidence, limited verifiable information
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
+**Input formats**: Not publicly documented
 
-**Output data types**: [TO BE COMPLETED]
+**Output data types**: Not publicly documented
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- Integration details not publicly available
+- Research code with limited public information
 
 ## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+- **CRITICAL**: Very limited public information
+- Not openly available
+- Documentation not publicly accessible
+- Likely requires collaboration with developers
+- Research code status
+- Uncertainty about active development
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Master list reference (UNCERTAIN confidence level)
+2. Limited public information
 
-**Secondary sources**: [TO BE VERIFIED]
+**Secondary sources**:
+1. May exist in research group internal documentation
+2. Not confirmed in multiple independent sources
 
-**Confidence**: LOW_CONF
+**Confidence**: UNCERTAIN - Master list marks as "UNCERTAIN" confidence
 
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ⚠️ LIMITED INFORMATION
+- Official homepage: NOT FOUND
+- Documentation: NOT PUBLICLY AVAILABLE
+- Source code: NOT PUBLICLY ACCESSIBLE
+- Status: Research code with limited public presence
+- Recommendation: Contact research groups for information

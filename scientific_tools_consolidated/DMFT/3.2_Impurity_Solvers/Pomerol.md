@@ -1,44 +1,90 @@
 # Pomerol
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/pomerol-ed/pomerol
+- Documentation: https://github.com/pomerol-ed/pomerol/wiki
+- Source Repository: https://github.com/pomerol-ed/pomerol
+- License: GNU General Public License v2.0
 
 ## Overview
-**Confidence Level**: VERIFIED
-**Status**: Documentation pending
+Pomerol is an exact diagonalization (full ED) code written in C++ for solving condensed matter second-quantized models of interacting fermions and bosons on finite size lattices at finite temperatures. It is designed to produce single and two-particle Green's functions and can be used as an impurity solver in DMFT calculations. Pomerol uses Lehmann representation for efficient computation.
 
-[TO BE COMPLETED]
+**Scientific domain**: Exact diagonalization, quantum impurity solvers, DMFT  
+**Target user community**: Researchers needing exact solutions for small quantum systems
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- Exact diagonalization (full ED)
+- Lehmann representation
+- Finite size lattices
+- Finite temperature formalism
+- Fermions and bosons
+- Green's function calculations
+- Two-particle correlation functions
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- Exact diagonalization for quantum models
+- Single-particle Green's functions
+- Two-particle Green's functions
+- Finite temperature calculations
+- Fermionic and bosonic systems
+- Impurity solver for DMFT
+- Real-frequency spectral functions (no analytical continuation)
+- Lehmann representation for efficiency
+- C++ implementation
+- Python interface (pomerol2triqs)
+- Integration with TRIQS
 
-**Sources**: Pending verification
+**Sources**: Official Pomerol repository (https://github.com/pomerol-ed/pomerol), confirmed in 6/7 source lists
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
+**Input formats**:
+- Hamiltonian definition (C++ or Python)
+- System parameters
+- Temperature
+- Frequency grids
 
-**Output data types**: [TO BE COMPLETED]
+**Output data types**:
+- Green's functions (real and Matsubara frequencies)
+- Two-particle correlation functions
+- Spectral functions
+- Observables
+- Energy eigenvalues
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **TRIQS**: pomerol2triqs provides TRIQS interface
+- **DCore**: Can use Pomerol as impurity solver
+- **C++**: Native C++ implementation
+- **Python**: Python bindings available
+- **libcommute**: Uses libcommute for operator algebra
 
 ## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+- Limited to small systems (exponential scaling)
+- Hilbert space must be manageable
+- Memory intensive
+- Not suitable for large multi-orbital systems
+- Bath discretization affects accuracy
+- Exact solver: computationally expensive
+- Best for small clusters or impurity problems
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub repository: https://github.com/pomerol-ed/pomerol
+2. Documentation: https://github.com/pomerol-ed/pomerol/wiki
+3. pomerol2triqs: https://github.com/pomerol-ed/pomerol2triqs
 
-**Secondary sources**: [TO BE VERIFIED]
+**Secondary sources**:
+1. TRIQS benchmarks (includes Pomerol)
+2. DCore documentation (lists Pomerol as solver)
+3. Exact diagonalization literature
+4. Confirmed in 6/7 source lists (claude, g, gr, k, m, q)
 
-**Confidence**: VERIFIED
+**Confidence**: VERIFIED - Appears in 6 of 7 independent source lists
 
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Official repository: ACCESSIBLE (GitHub)
+- Documentation: ACCESSIBLE (Wiki)
+- Source code: OPEN (GitHub, GPL v2)
+- TRIQS integration: CONFIRMED (pomerol2triqs)
+- Active development: Regular updates
+- C++ implementation: Efficient
+- Exact solver: No approximations

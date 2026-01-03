@@ -1,44 +1,67 @@
 # Kondo
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: Not applicable - refers to methods/solvers, not standalone software
+- Documentation: Various implementations in other codes
+- Source Repository: Multiple implementations exist
+- License: Varies by implementation
 
 ## Overview
-**Confidence Level**: UNCERTAIN
-**Status**: Documentation pending
+"Kondo" in the DMFT context refers to Kondo problem solvers or Kondo physics implementations rather than a specific standalone software package named "Kondo." The Kondo problem is a fundamental quantum impurity problem, and various codes implement Kondo problem solvers (e.g., NRG, exact diagonalization, QMC methods). The master list entry likely refers to Kondo problem solver implementations in research codes.
 
-[TO BE COMPLETED]
+**Scientific domain**: Kondo physics, quantum impurity problems, DMFT  
+**Target user community**: Researchers studying Kondo effect and heavy fermion systems
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- Kondo problem (physics, not software)
+- Quantum impurity models
+- Kondo exchange interactions
+- Heavy fermion physics
+- Implemented via: NRG, ED, QMC, NCA methods
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+**Note**: "Kondo" is a METHOD/PROBLEM, not specific software
 
-**Sources**: Pending verification
+- Kondo problem solvers exist in various codes:
+  - NRGLjubljana (NRG for Kondo models)
+  - Exact diagonalization codes
+  - QMC impurity solvers
+  - NCA/OCA solvers
+  
+- Kondo physics can be studied using multiple software packages
+
+**Sources**: Master list notes: "METHOD - Kondo problem solvers are ubiquitous; specific code name likely refers to a research implementation"
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+**Not applicable**: Depends on specific implementation in various codes
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **NRGLjubljana**: Dedicated Kondo problem solver
+- **DMFT impurity solvers**: Can handle Kondo physics
+- **Research implementations**: Various groups have Kondo solvers
 
 ## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+- **CRITICAL**: Not a specific standalone software
+- "Kondo" refers to physics/methods, not a code
+- Multiple implementations exist across different packages
+- No single "Kondo software" to install
+- Users should specify which Kondo solver implementation they need
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Master list: "METHOD - Kondo problem solvers are ubiquitous"
+2. Kondo problem is physics concept, not software
+3. Multiple codes implement Kondo solvers
 
-**Secondary sources**: [TO BE VERIFIED]
+**Secondary sources**:
+1. NRGLjubljana for NRG-based Kondo solutions
+2. Various QMC codes handle Kondo models
+3. Kondo physics literature
 
-**Confidence**: UNCERTAIN
+**Confidence**: UNCERTAIN - Master list explicitly marks as "METHOD"
 
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ⚠️ METHOD, NOT SOFTWARE
+- Status: Physics method/problem, not standalone code
+- Multiple implementations: CONFIRMED
+- Specific "Kondo" software: DOES NOT EXIST
+- Recommendation: Use NRGLjubljana or other impurity solvers for Kondo problems

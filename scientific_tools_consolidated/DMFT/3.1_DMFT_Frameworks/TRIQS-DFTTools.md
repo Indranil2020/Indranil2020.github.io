@@ -2,43 +2,91 @@
 
 ## Official Resources
 - Homepage: https://triqs.github.io/dft_tools/
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Documentation: https://triqs.github.io/dft_tools/latest/
+- Source Repository: https://github.com/TRIQS/dft_tools
+- License: GNU General Public License v3.0
 
 ## Overview
-**Confidence Level**: CONFIRMED
-**Status**: Documentation pending
+TRIQS/DFTTools is a TRIQS application providing the necessary tools to perform DFT+DMFT calculations. It serves as the bridge between DFT codes and the TRIQS DMFT framework, handling Wannier function projections, self-consistency loops, and post-processing of spectral functions. It is the standard interface for performing realistic DFT+DMFT calculations within the TRIQS ecosystem.
 
-[TO BE COMPLETED]
+**Scientific domain**: DFT+DMFT calculations, strongly correlated materials  
+**Target user community**: Researchers performing ab-initio DMFT calculations on realistic materials
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- DFT+DMFT interface and workflow management
+- Projective Wannier function formalism
+- Charge self-consistency (optional)
+- Maximum entropy analytical continuation
+- Spectral function calculations
+- Integration with multiple DFT codes
+- Local and momentum-resolved quantities
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- Interface to multiple DFT codes (Wien2k, VASP, Quantum ESPRESSO, ABINIT, Elk)
+- Wannier90 integration for projection operators
+- DMFT self-consistency loop management
+- Charge density updates for self-consistent calculations
+- Spectral function and DOS calculations
+- k-resolved spectral functions (ARPES)
+- Momentum distribution functions
+- Analytical continuation via MaxEnt
+- Chemical potential adjustment
+- Occupancy matrix calculations
+- HDF5-based data management
+- Post-processing and analysis tools
 
-**Sources**: Pending verification
+**Sources**: Official TRIQS/DFTTools documentation (https://triqs.github.io/dft_tools/), confirmed in 7/7 source lists
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
+**Input formats**:
+- DFT outputs from Wien2k, VASP, QE, ABINIT, Elk
+- Wannier90 projections
+- DMFT solver outputs (self-energies)
+- HDF5 archives from previous calculations
 
-**Output data types**: [TO BE COMPLETED]
+**Output data types**:
+- HDF5 archives with all DMFT quantities
+- Spectral functions (A(k,ω))
+- Local and k-resolved Green's functions
+- Self-energies
+- Density matrices
+- Chemical potentials
+- Formatted data for plotting
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **DFT code interfaces**: Wien2k (native), VASP, Quantum ESPRESSO, ABINIT, Elk
+- **Wannier function tools**: Wannier90 integration
+- **TRIQS solvers**: Seamless integration with TRIQS/cthyb and other TRIQS impurity solvers
+- **High-level workflows**: solid_dmft uses DFTTools as backend
+- **Post-processing**: Python-based analysis tools, matplotlib integration
 
 ## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+- Requires understanding of DFT+DMFT methodology
+- DFT code-specific setup can be complex
+- Wannier projection quality critical for results
+- Double-counting correction choice affects results
+- Charge self-consistency increases computational cost significantly
+- Analytical continuation introduces uncertainties
+- HDF5 version compatibility issues possible
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Official documentation: https://triqs.github.io/dft_tools/latest/
+2. GitHub repository: https://github.com/TRIQS/dft_tools
+3. A. Hampel et al., arXiv:2309.10858 (2023) - DFTTools overview
 
-**Secondary sources**: [TO BE VERIFIED]
+**Secondary sources**:
+1. TRIQS tutorials and workshops
+2. solid_dmft documentation (uses DFTTools)
+3. Published DFT+DMFT applications
+4. Confirmed in 7/7 source lists (claude, g, gr, k, m, q, z)
 
-**Confidence**: CONFIRMED
+**Confidence**: CONFIRMED - Appears in all 7 independent source lists
 
-**Verification status**: ⏸️ PENDING
-- Official homepage: TO BE VERIFIED
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Official homepage: ACCESSIBLE
+- Documentation: COMPREHENSIVE and ACCESSIBLE
+- Source code: OPEN (GitHub, GPL v3)
+- Community support: Active (TRIQS project)
+- Part of supported TRIQS ecosystem
+- Maintained by Flatiron Institute

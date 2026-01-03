@@ -1,44 +1,81 @@
 # CT-HYB
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: Multiple implementations (TRIQS/cthyb, ALPS/CT-HYB, etc.)
+- Documentation: See specific implementations
+- Source Repository: Various (TRIQS, ALPS, w2dynamics, etc.)
+- License: Varies by implementation
 
 ## Overview
-**Confidence Level**: VERIFIED
-**Status**: Documentation pending
+CT-HYB (Continuous-Time Hybridization Expansion) is an algorithm for solving quantum impurity problems, not a single specific software. It is the most widely used continuous-time quantum Monte Carlo (CTQMC) method in DMFT applications. Multiple implementations exist in different software packages including TRIQS/cthyb, ALPS, w2dynamics, iQIST, and others.
 
-[TO BE COMPLETED]
+**Scientific domain**: Quantum impurity solvers, DMFT, CTQMC algorithms  
+**Target user community**: Researchers performing DMFT calculations
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- Continuous-time quantum Monte Carlo (CTQMC)
+- Hybridization expansion algorithm
+- Stochastic sampling in imaginary time
+- Multi-orbital Anderson impurity model
+- Partition function expansion
+- Segment picture or matrix formulation
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+**Note**: CT-HYB is an ALGORITHM implemented in multiple codes:
 
-**Sources**: Pending verification
+**Primary implementations**:
+- **TRIQS/cthyb**: Most widely used, GPL-licensed
+- **ALPS/CT-HYB**: Part of ALPS project
+- **w2dynamics**: Includes CT-HYB solver
+- **iQIST**: Multiple CT-HYB variants
+- **ComCTQMC**: GPU-accelerated version
+
+**General capabilities**:
+- Multi-orbital impurity problems
+- General interactions
+- Temperature-dependent calculations
+- Green's functions and self-energies
+- Statistical sampling
+
+**Sources**: Master list notes: "VERIFIED - TRIQS implementation", algorithm widely implemented
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
+**Depends on implementation**: Each code has its own interface
 
-**Output data types**: [TO BE COMPLETED]
+**Common inputs**: Hybridization functions, interaction parameters
+**Common outputs**: Green's functions, self-energies, occupations
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **TRIQS/cthyb**: Standard in TRIQS ecosystem
+- **ALPS**: Part of ALPS solvers
+- **w2dynamics**: Integrated CT-HYB
+- **DCore**: Can use various CT-HYB implementations
+- **Multiple frameworks**: Most DMFT codes support CT-HYB
 
 ## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+- CTQMC computational cost
+- Sign problem in some regimes
+- Statistical errors
+- Scales with inverse temperature
+- Implementation-specific limitations
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. E. Gull et al., Rev. Mod. Phys. 83, 349 (2011) - CT-HYB review
+2. P. Werner and A. J. Millis, Phys. Rev. B 74, 155107 (2006) - Original algorithm
+3. TRIQS/cthyb: https://triqs.github.io/cthyb/
+4. Master list: "VERIFIED - TRIQS implementation"
 
-**Secondary sources**: [TO BE VERIFIED]
+**Secondary sources**:
+1. Multiple implementations in major DMFT codes
+2. Standard algorithm in DMFT community
+3. Hundreds of papers using CT-HYB
 
-**Confidence**: VERIFIED
+**Confidence**: VERIFIED - Algorithm with multiple implementations
 
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: VERIFIED as ALGORITHM
+- Status: Algorithm/method, not single software
+- Multiple implementations: CONFIRMED
+- Most common: TRIQS/cthyb
+- Widely used in DMFT: CONFIRMED
+- Users should specify which implementation

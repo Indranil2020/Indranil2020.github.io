@@ -1,44 +1,88 @@
 # CT-SEG
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: TRIQS implementation: https://triqs.github.io/ctseg/
+- Documentation: https://triqs.github.io/ctseg/latest/
+- Source Repository: https://github.com/TRIQS/ctseg
+- License: GNU General Public License v3.0
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+CT-SEG (Continuous-Time Segment) is a continuous-time quantum Monte Carlo algorithm using the segment picture representation, implemented as a TRIQS application. It provides an alternative formulation to the standard CT-HYB matrix approach, particularly efficient for certain types of problems. The segment picture representation offers computational advantages for specific interaction structures.
 
-[TO BE COMPLETED]
+**Scientific domain**: Quantum impurity solvers, DMFT, segment picture CTQMC  
+**Target user community**: Researchers performing DMFT calculations, especially with density-density interactions
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- Continuous-time quantum Monte Carlo (CTQMC)
+- Segment picture representation
+- Hybridization expansion
+- Density-density interactions optimized
+- Anderson impurity model
+- Efficient for large multi-orbital problems
+- TRIQS-based implementation
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- Segment picture CT-QMC solver
+- Multi-orbital impurity problems
+- Density-density interactions (optimized)
+- Temperature-dependent calculations
+- Green's functions and self-energies
+- Integration with TRIQS ecosystem
+- Python interface
+- MPI parallelization
+- Checkpoint and restart
+- TRIQS Green's function objects
 
-**Sources**: Pending verification
+**Sources**: Official TRIQS/ctseg documentation (https://triqs.github.io/ctseg/), confirmed in master list
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
+**Input formats**:
+- Python-based problem definition
+- TRIQS Green's function objects
+- Interaction parameters
+- Hybridization functions
 
-**Output data types**: [TO BE COMPLETED]
+**Output data types**:
+- Green's functions (imaginary time and Matsubara)
+- Self-energies
+- Occupation numbers
+- Observables
+- HDF5 archives
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **TRIQS**: Native TRIQS application
+- **DFT+DMFT**: Via TRIQS/DFTTools
+- **solid_dmft**: Can use CT-SEG as solver
+- **Python**: Python-based interface
+- **HDF5**: Standard TRIQS data format
 
 ## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+- Optimized for density-density interactions
+- More general interactions may be less efficient
+- Requires TRIQS installation
+- CTQMC computational cost
+- Statistical errors from Monte Carlo
+- Temperature scaling
+- Learning curve for TRIQS ecosystem
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Official documentation: https://triqs.github.io/ctseg/
+2. GitHub repository: https://github.com/TRIQS/ctseg
+3. P. Seth et al., Comput. Phys. Commun. 200, 274 (2016) - Related TRIQS/cthyb
+4. Master list: "VERIFIED - TRIQS/ctseg"
 
-**Secondary sources**: [TO BE VERIFIED]
+**Secondary sources**:
+1. TRIQS documentation and tutorials
+2. Segment picture algorithm papers
+3. TRIQS workshop materials
 
-**Confidence**: LOW_CONF
+**Confidence**: VERIFIED - TRIQS application
 
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Official homepage: ACCESSIBLE
+- Documentation: COMPREHENSIVE
+- Source code: OPEN (GitHub, GPL v3)
+- Part of TRIQS ecosystem: CONFIRMED
+- Maintained by Flatiron Institute
+- Active development

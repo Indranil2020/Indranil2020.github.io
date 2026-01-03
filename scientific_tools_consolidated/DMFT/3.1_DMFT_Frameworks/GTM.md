@@ -1,44 +1,62 @@
 # GTM
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: Part of DMFTwDFT package
+- Documentation: See DMFTwDFT documentation
+- Source Repository: https://github.com/DMFTwDFT-project/DMFTwDFT
+- License: GNU General Public License v3.0 (DMFTwDFT)
 
 ## Overview
-**Confidence Level**: UNCERTAIN
-**Status**: Documentation pending
+GTM (Generalized Toolkit for Many-body) is a module/component within the DMFTwDFT framework. It is not a standalone code but rather part of the DMFTwDFT infrastructure for handling many-body calculations. As a module rather than an independent software package, GTM provides specific functionality within the larger DMFTwDFT ecosystem.
 
-[TO BE COMPLETED]
+**Scientific domain**: Many-body methods, component of DMFTwDFT  
+**Target user community**: DMFTwDFT users (internal module)
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- Many-body calculation utilities
+- Part of DMFTwDFT workflow
+- Support functions for DMFT calculations
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Note**: GTM is a MODULE within DMFTwDFT, not standalone software
+- Provides toolkit functionality for DMFTwDFT
+- Many-body calculation support
+- Integration with DMFTwDFT workflows
 
-**Sources**: Pending verification
+**Sources**: Master list notes: "MODULE - Part of DMFTwDFT (Generalized Toolkit for Many-body)"
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
+**As a module**: Used internally by DMFTwDFT
 
-**Output data types**: [TO BE COMPLETED]
+**Input/Output**: Handled through DMFTwDFT framework
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **DMFTwDFT**: Internal module/component
+- **Not standalone**: Functions as part of larger package
+- **Usage**: Through DMFTwDFT workflows
 
 ## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+- **MODULE STATUS**: Not a standalone code
+- Cannot be used independently of DMFTwDFT
+- Documentation within DMFTwDFT package
+- No separate installation or repository
+- Functionality accessed via DMFTwDFT
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. DMFTwDFT repository: https://github.com/DMFTwDFT-project/DMFTwDFT
+2. DMFTwDFT documentation references
+3. Master list: "MODULE - Part of DMFTwDFT"
 
-**Secondary sources**: [TO BE VERIFIED]
+**Secondary sources**:
+1. DMFTwDFT user guides
+2. May be mentioned in DMFTwDFT papers
 
-**Confidence**: UNCERTAIN
+**Confidence**: UNCERTAIN - Master list explicitly marks as "MODULE"
 
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: VERIFIED as MODULE
+- Status: MODULE within DMFTwDFT
+- Not standalone: CONFIRMED
+- Part of DMFTwDFT: CONFIRMED
+- Independent documentation: NOT APPLICABLE
+- Users should refer to DMFTwDFT documentation
