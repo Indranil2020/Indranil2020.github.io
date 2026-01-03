@@ -1,86 +1,91 @@
 # TBPLaS (Tight-Binding Package for Large-scale Simulation)
 
 ## Official Resources
-- Homepage: https://github.com/quantum-tb/TBPLaS
-- Documentation: GitHub repository and documentation
-- Source Repository: https://github.com/quantum-tb/TBPLaS
-- License: Check repository
+- Homepage: https://www.tbplas.net/
+- Documentation: https://www.tbplas.net/
+- Source Repository: https://github.com/deepmodeling/tbplas
+- License: BSD 3-Clause License
 
 ## Overview
-TBPLaS is a Python package designed for large-scale tight-binding simulations with focus on performance and scalability. The code provides efficient algorithms for electronic structure calculations in tight-binding frameworks, enabling simulations of systems with millions of orbitals. TBPLaS emphasizes HPC capabilities and production-scale calculations.
+TBPLaS is a Python package designed for large-scale tight-binding simulations with a focus on performance and scalability. Developed by the DeepModeling community (associated with DeepMD-kit), TBPLaS provides efficient algorithms for electronic structure calculations in tight-binding frameworks, enabling simulations of systems with millions of orbitals. It implements exact diagonalization, tight-binding propagation method (TBPM), and Green's function methods.
 
-**Scientific domain**: Tight-binding, large-scale simulation, HPC  
+**Scientific domain**: Tight-binding, large-scale simulation, HPC, Quantum Transport
 **Target user community**: Large-scale TB calculations, HPC users, production simulations
 
 ## Theoretical Methods
 - Tight-binding Hamiltonian
-- Large-scale eigensolvers
+- Exact Diagonalization (ED)
+- Tight-Binding Propagation Method (TBPM)
+- Kernel Polynomial Method (KPM)
+- Green's function methods
 - Sparse matrix techniques
-- Band structure calculations
-- Density of states
-- Parallel algorithms
+- Band structure & DOS
+- Optical conductivity
+- Quasi-eigenstates
 
 ## Capabilities (CRITICAL)
 **Category**: Large-scale Python TB package
-- Large-scale TB simulations
-- Millions of orbitals capable
-- Efficient eigensolvers
-- Sparse matrix methods
-- HPC parallelization
-- Band structure calculations
-- DOS calculations
-- Production quality
-- Python implementation
+- **Scale**: Capable of simulating millions of atoms
+- **Methods**: ED, TBPM, KPM, Green's Functions
+- **Properties**:
+  - Band structure
+  - Density of States (DOS)
+  - Local DOS (LDOS)
+  - Optical conductivity
+  - AC/DC conductivity (Kubo formula)
+  - Hall conductivity
+  - Polarization
+- **Performance**:
+  - Linear scaling with system size (TBPM)
+  - Cython/Fortran extensions
+  - MPI/OpenMP parallelization
+- **Interface**:
+  - Object-oriented Python API
+  - Integration with ASE (Atomic Simulation Environment)
 
-**Sources**: GitHub repository
+**Sources**: Official website, GitHub, arXiv:2209.00806
 
 ## Key Strengths
 
-### Large-Scale:
-- Million+ orbital systems
-- HPC capabilities
-- Scalable algorithms
-- Production simulations
-- Efficient computation
+### Large-Scale Simulation:
+- Handles systems up to tens of millions of orbitals
+- Linear scaling algorithms (TBPM)
+- Ideal for disordered systems, quasicrystals, and Moiré superlattices
 
-### Performance:
-- Optimized algorithms
-- Sparse matrix techniques
-- Parallel execution
-- Memory efficiency
-- Production focus
+### Comprehensive Physics:
+- Goes beyond simple bands
+- Transport properties (conductivity, Hall effect)
+- Optical properties
+- Spectral functions
 
-### Python Interface:
-- High-level API
-- NumPy/SciPy integration
-- Modern Python
-- Research and production
+### Performance Optimization:
+- Critical parts in Cython/Fortran
+- Efficient sparse matrix operations
+- Optimized for HPC environments
 
 ## Status
 - **Type**: Large-scale TB package
-- **Development**: Check GitHub
+- **Development**: Active (DeepModeling)
 - **Community**: HPC TB users
-- **Scope**: Production-scale simulations
+- **Platform**: Linux, macOS, Windows
+- **Integration**: Part of DeepModeling ecosystem (DeepMD-kit, etc.)
 
 ## Application Areas
-- Large-scale nanostructures
-- Realistic device sizes
-- Disorder averaging
-- Statistical ensembles
-- HPC production calculations
-
-## Related Tools
-- **Pybinding**: Also large-scale Python TB
-- **Kwant**: Transport focus
-- **TBSTUDIO**: GUI alternative
+- 2D Materials (Graphene, TMDs)
+- Twisted Bilayer Systems (Moiré Physics)
+- Disordered Systems (Anderson Localization)
+- Quasicrystals
+- Quantum Transport in Nanodevices
 
 ## Verification & Sources
 **Primary sources**:
-1. GitHub: https://github.com/quantum-tb/TBPLaS
+1. Homepage: https://www.tbplas.net/
+2. GitHub: https://github.com/deepmodeling/tbplas
+3. Publication: Li, Y., et al. "TBPLaS: a Tight-Binding Package for Large-scale Simulation." arXiv:2209.00806 (2022).
 
-**Confidence**: VERIFIED - Large-scale TB package
+**Confidence**: VERIFIED - Active Research Tool
 
-**Verification status**: ✅ VERIFIED
+**Verification status**: ✅ CONFIRMED
+- Website: ACTIVE
 - GitHub: ACCESSIBLE
-- **Category**: Large-scale Python TB package
-- **Note**: Tight-Binding Package for Large-scale Simulation. Python-based HPC-capable tool for million-orbital tight-binding calculations. Emphasizes scalability, performance, and production-scale simulations. Similar scope to Pybinding with large-scale focus. Suitable for realistic device modeling and HPC production calculations.
+- **Note**: Repository moved to `deepmodeling` organization. Confirmed as a high-performance tool for large-scale TB simulations.

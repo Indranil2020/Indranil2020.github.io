@@ -1,80 +1,75 @@
-# QuantumLattice
+# QuantumLattices.jl
 
 ## Official Resources
-- Homepage: https://github.com/weber-group/QuantumLattice
-- Documentation: GitHub repository
-- Source Repository: https://github.com/weber-group/QuantumLattice
-- License: Check repository
+- Homepage: https://quantum-many-body.github.io/QuantumLattices.jl/
+- Documentation: https://quantum-many-body.github.io/QuantumLattices.jl/stable/
+- Source Repository: https://github.com/Quantum-Many-Body/QuantumLattices.jl
+- License: MIT License
 
 ## Overview
-QuantumLattice is a Julia package for quantum lattice models and tight-binding calculations. Developed by the Weber group, QuantumLattice provides a high-level, flexible framework for constructing and analyzing quantum many-body systems on lattices. The code leverages Julia's performance and expressiveness for efficient lattice model calculations.
+QuantumLattices.jl is a Julia framework for constructing and analyzing quantum lattice systems. It provides a flexible, symbolic approach to defining operator-formed Hamiltonians using natural language-like descriptions. It serves as a frontend for various quantum many-body algorithms, including exact diagonalization (ED), density matrix renormalization group (DMRG), and quantum Monte Carlo (QMC), by integrating with other packages in the Julia ecosystem.
 
-**Scientific domain**: Quantum lattice models, tight-binding, Julia  
-**Target user community**: Julia users, lattice models, quantum many-body physics
+**Scientific domain**: Quantum lattice models, Many-body physics, Julia
+**Target user community**: Researchers in quantum many-body physics, Julia developers
 
 ## Theoretical Methods
-- Quantum lattice models
-- Tight-binding Hamiltonians
-- Many-body systems
-- Lattice construction
-- Model analysis
+- Operator-formed Hamiltonians
+- Symbolic representation of lattice systems
+- Exact Diagonalization (ED)
+- Tight-Binding Approximation (TBA)
+- Heisenberg/Spin models
+- Hubbard models
+- Symmetry analysis
 
 ## Capabilities (CRITICAL)
-**Category**: Julia lattice model package
-- Quantum lattice model construction
-- Tight-binding calculations
-- Flexible Hamiltonian building
-- Band structure calculations
-- Many-body systems
-- Julia implementation
-- Research tool
+**Category**: Julia quantum lattice framework
+- **Model Construction**:
+  - Symbolic definition of lattices and operators
+  - Spatially dependent parameters
+  - Custom unit cells and boundary conditions
+- **Algorithms** (via ecosystem):
+  - Exact Diagonalization (via ExactDiagonalization.jl)
+  - Tight-Binding band structures
+  - Spin wave theory (via SpinWaveTheory.jl)
+  - DMRG/MPS (via integration)
+- **Features**:
+  - Type-stable Julia implementation
+  - High performance
+  - Composable design
 
-**Sources**: GitHub repository
+**Sources**: Official documentation, GitHub
 
-## Key Aspects
+## Key Strengths
 
-### Julia-Based:
-- Modern Julia language
-- High performance
-- Expressive syntax
-- Scientific computing
-- Active ecosystem
+### Symbolic Construction:
+- Define models using algebra of operators
+- Human-readable model descriptions
+- Automated generation of Hamiltonians
 
-### Lattice Models:
-- Flexible construction
-- Various geometries
-- Custom Hamiltonians
-- Research applications
+### Julia Ecosystem:
+- Integrates with efficient solvers
+- High-performance computing
+- Extensible architecture
 
-### Weber Group:
-- Academic development
-- Research quality
-- Active maintenance
+### Versatility:
+- Supports Bosons, Fermions, Spins
+- 1D, 2D, 3D lattices
+- Complex interactions
 
 ## Status
-- **Type**: Julia package
-- **Development**: Check GitHub
-- **Community**: Julia/lattice model users
+- **Type**: Julia Package
+- **Development**: Active
+- **Organization**: Quantum-Many-Body
 - **Language**: Julia
-
-## Application Areas
-- Quantum lattice models
-- Tight-binding calculations
-- Many-body physics
-- Research simulations
-
-## Related Tools
-- **Julia ecosystem**: JuliaPhysics packages
-- **Python alternatives**: pythtb, Kwant
-- **General TB**: Wannier90
 
 ## Verification & Sources
 **Primary sources**:
-1. GitHub: https://github.com/weber-group/QuantumLattice
+1. Documentation: https://quantum-many-body.github.io/QuantumLattices.jl/
+2. GitHub: https://github.com/Quantum-Many-Body/QuantumLattices.jl
 
-**Confidence**: VERIFIED - Julia lattice package
+**Confidence**: VERIFIED - Julia Framework
 
-**Verification status**: ✅ VERIFIED
+**Verification status**: ✅ CONFIRMED
+- Website: ACTIVE
 - GitHub: ACCESSIBLE
-- **Category**: Julia lattice model package
-- **Note**: Julia package for quantum lattice models and tight-binding calculations. Provides flexible framework for constructing and analyzing quantum many-body systems on lattices. Weber group development. Leverages Julia's performance and expressiveness. Research tool for lattice model calculations in Julia ecosystem.
+- **Note**: Replaces previous incorrect reference to "Weber group". This is the primary Julia package for quantum lattice models.

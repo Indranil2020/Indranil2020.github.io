@@ -1,86 +1,69 @@
 # QuantNBody
 
 ## Official Resources
-- Homepage: https://github.com/QuantNBody/QuantNBody
+- Homepage: https://quantnbody.github.io/QuantNBody/
 - Documentation: https://quantnbody.github.io/QuantNBody/
-- Source Repository: https://github.com/QuantNBody/QuantNBody
+- Source Repository: https://github.com/SYalouz/QuantNBody
 - License: GNU General Public License v3.0
 
 ## Overview
-QuantNBody is a Python package for many-body quantum chemistry and physics calculations with emphasis on configuration interaction and coupled cluster methods. While not strictly a tight-binding code, QuantNBody provides tools for quantum many-body calculations that can interface with or complement tight-binding approaches. The package focuses on fermionic many-body systems and quantum correlations.
+QuantNBody is a Python package for quantum chemistry and physics, designed to facilitate the manipulation of many-body operators and wave functions. Developed by Saad Yalouz and collaborators, it provides a flexible framework for implementing and testing quantum many-body methods, such as Configuration Interaction (CI) and Coupled Cluster theory, in a second quantization formalism.
 
-**Scientific domain**: Many-body quantum physics, configuration interaction, quantum chemistry  
-**Target user community**: Quantum many-body physics, quantum chemistry, method developers
+**Scientific domain**: Many-body quantum physics, Quantum Chemistry, Electronic Structure
+**Target user community**: Quantum chemists, physicists, method developers, educators
 
 ## Theoretical Methods
-- Configuration interaction (CI)
-- Coupled cluster methods
-- Many-body perturbation theory
-- Fermionic systems
-- Quantum correlations
-- Second quantization
+- Second quantization formalism
+- Configuration Interaction (FCI, CASCI, RASCI)
+- Many-body basis states (Slater determinants)
+- Fermionic operators (creation/annihilation)
+- Matrix representation of Hamiltonians
+- 1-body and 2-body integrals
+- Spin-adaptation
 
 ## Capabilities (CRITICAL)
 **Category**: Python many-body quantum package
-- Configuration interaction
-- Coupled cluster
-- Many-body calculations
-- Fermionic systems
-- Quantum chemistry methods
-- Python implementation
-- Research tool
+- **Operator Manipulation**: Build and manipulate many-body operators
+- **Basis Management**: Handle fermionic basis states and vector spaces
+- **Matrix Generation**: Auto-generate Hamiltonian matrices in many-body basis
+- **Method Implementation**: Framework for building CI/CC/embedding methods
+- **Psi4 Integration**: Interfaces with Psi4 for integrals
+- **Educational Tool**: Transparent implementation for learning many-body physics
+- **Pythonic**: Built on NumPy/SciPy for ease of use
 
-**Sources**: GitHub repository, documentation
+**Sources**: Official website, GitHub, JOSS Publication (DOI: 10.21105/joss.04759)
 
-## Key Aspects
-
-### Many-Body Focus:
-- CI methods
-- Coupled cluster
-- Correlation calculations
-- Fermionic systems
-- Quantum chemistry
-
-### Python Package:
-- NumPy/SciPy
-- Modern Python
-- Accessible interface
-- Research tool
+## Key Strengths
 
 ### Method Development:
-- Advanced methods
-- Research applications
-- Algorithm development
-- Quantum correlations
+- Ideal for prototyping new quantum many-body algorithms
+- Access to raw matrix representations
+- Flexible operator algebra
+
+### Educational Value:
+- Clear Python implementation of second quantization
+- Tutorial-style documentation
+- Helps understand the "black box" of quantum chemistry codes
+
+### Interoperability:
+- Works with standard quantum chemistry integrals (e.g., from Psi4)
+- Pure Python for easy integration
 
 ## Status
-- **Type**: Python many-body package
-- **Development**: Check GitHub
-- **Community**: Quantum chemistry/physics
-- **Scope**: Many-body methods
-
-## Application Areas
-- Many-body quantum physics
-- Quantum chemistry
-- Configuration interaction
-- Correlation calculations
-- Method development
-
-## Related Tools
-- **NECI/HANDE**: FCIQMC
-- **PySCF**: Quantum chemistry
-- **Tight-binding**: Different focus
+- **Type**: Python Package
+- **Development**: Active
+- **Maintainer**: Saad Yalouz
+- **Version**: v1.x
 
 ## Verification & Sources
 **Primary sources**:
 1. Homepage: https://quantnbody.github.io/QuantNBody/
-2. GitHub: https://github.com/QuantNBody/QuantNBody
+2. GitHub: https://github.com/SYalouz/QuantNBody
+3. Publication: Yalouz S., et al., "QuantNBody: a Python package for quantum chemistry and physics...", J. Open Source Softw. 7(80), 4759 (2022).
 
 **Confidence**: VERIFIED - Many-body quantum package
 
-**Verification status**: ✅ VERIFIED
+**Verification status**: ✅ CONFIRMED
 - Website: ACTIVE
 - GitHub: ACCESSIBLE
-- License: GPL v3 (open-source)
-- **Category**: Many-body quantum package
-- **Note**: Python package for many-body quantum calculations (CI, coupled cluster). Not strictly tight-binding code but relevant for quantum many-body physics. Focuses on fermionic systems and quantum correlations. Research tool for configuration interaction and many-body methods. Listed in TB category but primary focus is quantum chemistry many-body methods.
+- **Note**: Confirmed active research tool for quantum many-body method development.

@@ -1,86 +1,74 @@
 # TBSTUDIO (Tight-Binding Studio)
 
 ## Official Resources
-- Homepage: https://sourceforge.net/projects/tbstudio/
-- Documentation: SourceForge project page
-- Source Repository: https://sourceforge.net/projects/tbstudio/
-- License: Check SourceForge
+- Homepage: https://tight-binding.com/
+- Documentation: https://tight-binding.com/
+- Source Repository: https://github.com/mohammadnakhaee/tbstudio
+- License: Academic/Commercial (Check Website)
 
 ## Overview
-TBSTUDIO is a graphical user interface (GUI) tool for tight-binding calculations and visualization. The software provides an interactive environment for constructing tight-binding models, calculating band structures, and analyzing electronic properties. TBSTUDIO emphasizes visual model building and educational applications, making tight-binding accessible through a point-and-click interface.
+TBSTUDIO is a comprehensive software package for calculating tight-binding Hamiltonians from first-principles data. Developed by Mohammad Nakhaee and collaborators, it provides a graphical user interface (GUI) to generate tight-binding models using the Slater-Koster method. It can fit band structures from DFT codes (like VASP, Quantum ESPRESSO) and export the resulting Hamiltonians to various formats including Pybinding, Green's function codes, and raw matrices.
 
-**Scientific domain**: Tight-binding, GUI tool, education  
-**Target user community**: Students, educators, visual learners, rapid model building
+**Scientific domain**: Tight-binding model generation, Slater-Koster fitting, DFT post-processing
+**Target user community**: Materials scientists, students, researchers needing TB models from DFT
 
 ## Theoretical Methods
-- Tight-binding Hamiltonian
-- Band structure calculations
-- Visual model construction
-- Parameter exploration
-- Interactive analysis
+- Slater-Koster parameterization
+- Orthogonal and non-orthogonal basis sets
+- Spin-orbit coupling (SOC) inclusion
+- Band structure fitting (Levenberg-Marquardt algorithm)
+- First-principles mapping
+- Hamiltonian generation
 
 ## Capabilities (CRITICAL)
-**Category**: GUI tight-binding tool
-- Graphical model construction
-- Interactive TB building
-- Band structure visualization
-- Parameter adjustment
-- Real-time calculations
-- Educational focus
-- Visual analysis
-- Point-and-click interface
+**Category**: GUI tight-binding generation tool
+- Automated fitting of DFT bands
+- Slater-Koster table generation
+- Code generation (Python, Matlab, C++, Fortran, Mathematica)
+- Pybinding export compatibility
+- Orthogonal/Non-orthogonal models
+- Spin-orbit coupling support
+- 3D visualization of structure and orbitals
+- Interactive band structure comparison
+- User-friendly GUI
 
-**Sources**: SourceForge project
+**Sources**: Official website, GitHub, arXiv:1910.02917
 
-## Key Aspects
+## Key Strengths
 
-### GUI Interface:
-- Visual model building
-- Point-and-click construction
-- Interactive parameters
-- Real-time updates
-- User-friendly
+### Automated Fitting:
+- Fits DFT band structures
+- Optimizes Slater-Koster parameters
+- Visual feedback on fit quality
+- Handles complex multi-orbital systems
 
-### Educational:
-- Teaching tool
-- Learning tight-binding
-- Visual understanding
-- Student projects
-- Accessible physics
+### Code Generation:
+- Exports to multiple languages
+- Generates Python scripts
+- Pybinding compatible output
+- Ready-to-use Hamiltonian matrices
 
-### Rapid Prototyping:
-- Quick model testing
-- Parameter exploration
-- Visual feedback
-- Concept validation
+### User-Friendly GUI:
+- Visual workflow
+- Drag-and-drop functionality
+- Real-time plotting
+- Accessible to non-programmers
 
 ## Status
-- **Type**: GUI application
-- **Platform**: SourceForge
-- **Development**: Check project status
-- **Community**: Educational users
-
-## Limitations & Constraints
-- **GUI-based**: Not scriptable
-- **Scope**: Limited vs programmatic tools
-- **Availability**: SourceForge platform
-- **Documentation**: Project-dependent
-- **Research**: Better for education than production
-
-## Modern Alternatives
-For programmatic TB calculations:
-- **pythtb**: Python pedagogical
-- **Kwant**: Python transport
-- **Pybinding**: Python performance
-- **TBmodels**: Python symmetry
+- **Type**: GUI Application
+- **Development**: Active
+- **Platform**: Cross-platform (Windows, Linux, macOS)
+- **Version**: v2.x (Active development)
 
 ## Verification & Sources
 **Primary sources**:
-1. SourceForge: https://sourceforge.net/projects/tbstudio/
+1. Homepage: https://tight-binding.com/
+2. GitHub: https://github.com/mohammadnakhaee/tbstudio
+3. Publication: arXiv:1910.02917
 
-**Confidence**: VERIFIED - GUI TB tool
+**Confidence**: VERIFIED - Active Project
 
-**Verification status**: ✅ VERIFIED
-- SourceForge: ACCESSIBLE
-- **Category**: GUI tight-binding tool
-- **Note**: Graphical interface for tight-binding calculations and visualization. Educational focus. For production research, programmatic tools (pythtb, Kwant, Pybinding) recommended. Useful for teaching, learning, and rapid visual model exploration.
+**Verification status**: ✅ CONFIRMED
+- Website: ACTIVE (tight-binding.com)
+- GitHub: ACTIVE
+- **Note**: Replaces older SourceForge references. Tool has evolved into a comprehensive suite for TB model generation.

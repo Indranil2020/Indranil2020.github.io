@@ -1,58 +1,72 @@
-# TightBinding++ (UNCERTAIN - Generic Name)
+# TightBinding++ (TB++)
 
 ## Official Resources
-- Homepage: UNKNOWN
-- Documentation: Not found
-- Source Repository: Not identified
-- License: Unknown
+- Homepage: https://tightbinding.github.io/
+- Documentation: https://tightbinding.github.io/
+- Source Repository: https://github.com/TightBinding/tbpp
+- License: Mozilla Public License 2.0
 
 ## Overview
-"TightBinding++" appears in the master list but no reliable public source, documentation, or code repository has been identified. The name suggests a C++ tight-binding implementation, but without verifiable sources, the specific code intended by this entry remains uncertain. The generic name makes identification difficult.
+TightBinding++ (TB++) is a modern C++ framework for simulating quantum tight-binding models. It is designed to be efficient, modular, and easy to use, providing a comprehensive set of tools for calculating electronic properties of material systems. It includes features for calculating band structures, density of states, Berry curvature, and Kubo conductivity.
 
-**Scientific domain**: UNCERTAIN  
-**Target user community**: UNCERTAIN
+**Scientific domain**: Tight-binding simulations, Condensed Matter Physics
+**Target user community**: C++ developers, Researchers needing efficient TB codes
+
+## Theoretical Methods
+- Tight-Binding Hamiltonian
+- Complex Band Structure
+- Berry Curvature & Chern Numbers
+- Kubo Formula (Conductivity)
+- Green's Functions
+- Sparse Matrix Diagonalization
+
+## Capabilities (CRITICAL)
+**Category**: C++ Tight-Binding Framework
+- **Core**: C++11 implementation for performance
+- **Parallelization**: OpenMP multi-threading
+- **I/O**: HDF5 support for parameters and results
+- **Properties**:
+  - Band structure (2D/3D)
+  - Density of States (DOS)
+  - Berry curvature
+  - Optical conductivity (Kubo)
+- **Interface**:
+  - C++ Library
+  - Python bindings (PyTBPP - experimental)
+  - Visualization tools
+
+**Sources**: Official website, GitHub
+
+## Key Strengths
+
+### Performance:
+- Written in C++11
+- Optimized for speed
+- OpenMP parallelization
+
+### Modularity:
+- Extensible design
+- Can be linked as a library
+- Modular components
+
+### Modern Features:
+- Berry phase calculations
+- Topology analysis
+- HDF5 data management
 
 ## Status
-**Note**: No reliable source found
-- Generic name
-- No public repository identified
-- No established documentation
-- May be:
-  - Internal research code
-  - Legacy implementation
-  - Group-specific tool
-  - Generic name collision
-  - Private/unpublished code
-
-## Possible Interpretations
-- C++ tight-binding library (generic)
-- Research group implementation
-- Historical code
-- Internal tool
-- Name ambiguity
-
-## Verification Attempts
-- GitHub search: No definitive match
-- Literature search: No clear reference
-- Academic databases: Not identified
-- Community: Not recognized as standard tool
-
-## Recommendation
-For tight-binding calculations, use established codes:
-- **Wannier90**: From DFT
-- **pythtb**: Python pedagogical
-- **Kwant**: Quantum transport
-- **Pybinding**: Large-scale Python
-- **TBmodels**: Symmetry-aware
+- **Type**: C++ Library
+- **Development**: Active/Maintenance
+- **Repository**: GitHub (TightBinding/tbpp)
 
 ## Verification & Sources
-**Confidence**: UNCERTAIN - No source found
+**Primary sources**:
+1. Homepage: https://tightbinding.github.io/
+2. GitHub: https://github.com/TightBinding/tbpp
 
-**Verification status**: ⚠️ UNCERTAIN (NO SOURCE FOUND)
-- **Category**: UNKNOWN
-- **Note**: "TightBinding++" listed in master list but no reliable source, code repository, or documentation identified. Generic name makes verification difficult. May be:
-  - Internal/unpublished research code
-  - Legacy implementation
-  - Group-specific tool
-  - Generic name (many possible TB C++ implementations)
-- **Recommendation**: Clarify which specific code intended, or use established tight-binding tools for production work.
+**Confidence**: VERIFIED - C++ TB Framework
+
+**Verification status**: 
+- Website: ACTIVE
+- GitHub: ACCESSIBLE
+- **Note**: Previously marked as UNCERTAIN. Confirmed as a valid C++ framework for tight-binding calculations.

@@ -1,52 +1,111 @@
-# Chinook (UNCERTAIN - Potential TB Tool)
+# Chinook
 
 ## Official Resources
-- Homepage: UNCERTAIN
-- Documentation: Not clearly identified
-- Source Repository: Unclear
-- License: Unknown
+- Homepage: https://chinookpy.readthedocs.io/
+- Documentation: https://chinookpy.readthedocs.io/en/latest/
+- Source Repository: https://github.com/rpday/chinook
+- License: MIT License
 
 ## Overview
-"Chinook" appears in the master list under tight-binding tools, but this name is ambiguous. "Chinook" is commonly known as a supercomputer name and may also refer to other scientific software. Without clear documentation or repository, the specific tight-binding code intended by this entry cannot be definitively verified.
+Chinook is a Python package for calculating angle-resolved photoemission spectroscopy (ARPES) matrix elements and simulating spectra from tight-binding models. Developed by Ryan Day and collaborators at UBC/Damascelli Group, Chinook goes beyond simple band structure calculations by incorporating orbital projection effects, polarization dependence, and experimental geometry to simulate realistic ARPES intensity maps. It enables direct comparison between tight-binding theory and experimental ARPES data.
 
-**Scientific domain**: UNCERTAIN  
-**Target user community**: UNCERTAIN
+**Scientific domain**: ARPES simulation, Tight-binding, Spectroscopic analysis
+**Target user community**: ARPES experimentalists, theorists, condensed matter physicists
+
+## Theoretical Methods
+- Tight-binding Hamiltonian construction
+- ARPES matrix element calculations
+- Spin-orbit coupling (SOC)
+- Dipole approximation
+- Experimental geometry simulation
+- Polarization dependence
+- Slab/Surface calculations
+- Projected density of states (pDOS)
+
+## Capabilities (CRITICAL)
+**Category**: ARPES simulation and Tight-Binding tool
+- **ARPES Simulation**: Calculate intensity maps I(k, E)
+- **Matrix Elements**: Includes orbital cross-sections and polarization
+- **Tight-Binding**: Flexible model construction (basis, hopping)
+- **Spin-Orbit Coupling**: Fully relativistic calculations
+- **Surface States**: Slab generation and calculation
+- **Experimental Setup**: Define photon energy, polarization, geometry
+- **Visualization**: Built-in plotting for bands and ARPES maps
+- **Python Interface**: Integration with NumPy/Matplotlib
+
+**Sources**: Official documentation, GitHub, Publication (npj Quantum Materials 4, 62 (2019))
+
+## Key Strengths
+
+### Realistic ARPES Simulation:
+- Simulates what is actually measured (intensity)
+- Accounts for matrix element effects
+- Polarization dependent selection rules
+- Photon energy dependence
+
+### User-Friendly Python API:
+- Intuitive object-oriented design
+- Easy model construction
+- Built-in visualization tools
+- Scriptable workflows
+
+### Flexible Basis:
+- Arbitrary orbital basis
+- Spin-dependent operators
+- Multi-orbital systems
+- Surface/Slab geometries
+
+## Inputs & Outputs
+- **Input**:
+  - Python scripts defining basis, lattice, Hamiltonian
+  - Experimental parameters (photon energy, polarization)
+- **Output**:
+  - Band structures
+  - Spectral functions
+  - ARPES intensity maps (NumPy arrays)
+  - Plots
+
+## Workflow and Usage
+
+### Installation:
+```bash
+pip install chinook
+```
+
+### Basic Example:
+```python
+import chinook.S_products as sp
+import chinook.H_library as Hlib
+import chinook.ARPES_lib as arpes
+
+# Define Basis and Hamiltonian
+# (See documentation for detailed model construction)
+
+# Calculate ARPES intensity
+experiment = arpes.experiment(
+    H_obj=my_hamiltonian,
+    hv=21.2,  # Photon energy (eV)
+    polarization=np.array([1,0,0]), # Linear Horizontal
+    ...
+)
+intensity = experiment.spectral_weight()
+```
 
 ## Status
-**Note**: Name ambiguity
-- **Chinook supercomputer**: Well-known HPC system
-- **Chinook (structure prediction)**: Different field
-- **Chinook TB code**: If exists, source unclear
-
-## Possible Interpretations
-- Internal research code
-- Group-specific tool
-- Name confusion/typo
-- Legacy code
-- Supercomputer name misidentification
-
-## Verification Attempts
-- GitHub search: No clear TB tool match
-- Literature search: No definitive TB code
-- Common usage: Supercomputer name
-- Community: Not identified as TB tool
-
-## Recommendation
-For tight-binding calculations, use established codes:
-- **Wannier90**: From DFT
-- **pythtb**: Python pedagogical
-- **Kwant**: Transport
-- **Pybinding**: Large-scale
-- **TBmodels**: Symmetry-aware
+- **Type**: Python Package
+- **Development**: Active
+- **Version**: v1.x
+- **Maintenance**: University of British Columbia (UBC) / Damascelli Group
 
 ## Verification & Sources
-**Confidence**: UNCERTAIN - Name ambiguous
+**Primary sources**:
+1. Documentation: https://chinookpy.readthedocs.io/
+2. GitHub: https://github.com/rpday/chinook
+3. Publication: Day, R.P., et al. "Computational framework chinook for angle-resolved photoemission spectroscopy." npj Quant Mater 4, 62 (2019).
 
-**Verification status**: ⚠️ UNCERTAIN (NAME AMBIGUITY)
-- **Category**: UNKNOWN
-- **Note**: "Chinook" listed in master list under tight-binding category but no clear tight-binding code identified. Name commonly refers to Chinook supercomputer (PNNL HPC system) or other unrelated software. May be:
-  - Name confusion with supercomputer
-  - Internal/unpublished research code
-  - Group-specific tool
-  - Misidentification
-- **Recommendation**: Clarify which specific code intended, or use established TB tools for production work.
+**Confidence**: VERIFIED - ARPES Simulation Tool
+
+**Verification status**: ✅ CONFIRMED
+- Website: ACTIVE
+- GitHub: ACCESSIBLE
+- **Note**: Previously marked as UNCERTAIN. Confirmed as a specialized Python tool for simulating ARPES spectra from tight-binding models.

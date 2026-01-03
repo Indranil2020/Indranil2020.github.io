@@ -1,9 +1,9 @@
 # PAOFLOW (Projections of Atomic Orbitals FLOW)
 
 ## Official Resources
-- Homepage: https://www.paoflow.org/
-- Documentation: https://www.paoflow.org/
-- Source Repository: https://github.com/marcobn/Paoflow
+- Homepage: http://www.paoflow.org/
+- Documentation: http://www.paoflow.org/
+- Source Repository: https://github.com/marcobn/PAOFLOW
 - License: GNU General Public License v3.0
 
 ## Overview
@@ -105,8 +105,8 @@ PAOFLOW is a Python-based post-processing tool for electronic structure calculat
 pip install paoflow
 
 # From source
-git clone https://github.com/marcobn/Paoflow.git
-cd Paoflow
+git clone https://github.com/marcobn/PAOFLOW.git
+cd PAOFLOW
 python setup.py install
 ```
 
@@ -297,8 +297,8 @@ PAOFLOW provides comprehensive electronic structure property calculations from D
 
 ## Verification & Sources
 **Primary sources**:
-1. Homepage: https://www.paoflow.org/
-2. GitHub: https://github.com/marcobn/Paoflow (alternate: jehub/Paoflow)
+1. Homepage: http://www.paoflow.org/
+2. GitHub: https://github.com/marcobn/PAOFLOW
 3. Publications: Comp. Phys. Comm. 235, 415 (2019)
 
 **Secondary sources**:
