@@ -117,7 +117,7 @@
 - Confidence: VERIFIED
 - Resources: http://www.dl.ac.uk/TCSC/Software/PLATO/ (or CPC Library)
 
-**022. NESIIE**
+**022. NESSIE**
 - Confidence: VERIFIED
 - Resources: https://sourceforge.net/projects/nessie-code/
 

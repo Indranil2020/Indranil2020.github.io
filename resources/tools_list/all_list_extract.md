@@ -2838,7 +2838,9 @@ Here are the numbered lists of unique codes extracted from each file, followed b
     *   **Description:** A flexible parallel computing library for analytics. In materials science, it is used by frameworks like Atomate2 to parallelize workflows and manage distributed data structures across HPC clusters.
 
 150. **dbaAutomator**
-    *   **Official Source:** [github.com/jdeslippe/dbaAutomator](https://github.com/jdeslippe/dbaAutomator)
+    *   **Official Source:** [https://github.com/xingyu-alfred-liu/dbaAutomator
+https://berkeleygw.org/2020/01/29/dbaautomator-now-available-for-berkeleygw/
+https://iopscience.iop.org/article/10.1088/1361-648X/ab699e)
     *   **Developer:** Jack Deslippe (BerkeleyGW).
     *   **Description:** A script for automating Double-Bader Analysis. It analyzes the electron-hole distribution in excitons calculated by BerkeleyGW to characterize charge transfer.
 
