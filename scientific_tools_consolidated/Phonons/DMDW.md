@@ -1,38 +1,21 @@
 # DMDW
 
 ## Official Resources
-- Homepage: UNKNOWN
-- Documentation: UNKNOWN
-- Source Repository: UNKNOWN
-- License: UNKNOWN
+- **Homepage**: UNKNOWN
+- **Status**: UNCERTAIN / UNVERIFIED
 
 ## Overview
-DMDW appears in the master list with UNCERTAIN confidence. The tool name and resources are unclear, possibly representing a typo, abbreviation for an internal research code, or a tool with limited public documentation. Without verifiable resources, comprehensive documentation cannot be provided.
+DMDW appears in the master list but no definitive software package with this name was found in the context of phonon transport codes during verification. It is possible this refers to "Diffusive Molecular Dynamics" (method) or is an internal code/typo.
 
 **Confidence Level**: UNCERTAIN
 
 ## Note
-If DMDW refers to a specific phonon or molecular dynamics code, please provide:
-- Full name or expansion of acronym
-- Institution or research group
-- Publications or documentation
-- Repository or download location
-
-**Possible interpretations**:
-- Diffusive Molecular Dynamics (speculative)
-- Internal or proprietary research code
-- Typo or abbreviation
+If DMDW refers to a specific phonon or molecular dynamics code, it may be a private research code or a misspelling.
 
 ## Recommendation
-For phonon and thermal transport calculations, users should consider well-documented alternatives:
-- **phonopy/phono3py**: Standard phonon calculations
-- **LAMMPS**: Molecular dynamics with thermal transport
-- **ALAMODE**: Anharmonic lattice dynamics
-- **ShengBTE**: Boltzmann transport
+For diffusive thermal transport or molecular dynamics, consider:
+- **LAMMPS**: For molecular dynamics thermal transport.
+- **ShengBTE/phono3py**: For BTE-based transport.
 
 ## Verification & Sources
-**Status**: ⚠️ UNCERTAIN - Insufficient information
-
-**Verification status**: ❌ UNVERIFIED
-- Resources: UNKNOWN
-- Recommendation: Use established alternatives unless specific information available
+**Status**: ⚠️ UNCERTAIN - Insufficient information found in public domain.

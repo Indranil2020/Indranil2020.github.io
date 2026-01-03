@@ -1,29 +1,43 @@
 # Pheasy
 
 ## Official Resources
-- Homepage: UNKNOWN - Master list URL returns 404
-- Documentation: NOT FOUND
-- Source Repository: NOT FOUND (https://github.com/GroupePhysiqueTheorique/Pheasy returns 404)
-- License: UNKNOWN
+- **Repository**: [PyPI - pheasy](https://pypi.org/project/pheasy/)
+- **Paper**: [arXiv:2508.01020](https://arxiv.org/abs/2508.01020)
+- **License**: Open Source (PyPI distribution)
 
 ## Overview
-**Status**: UNVERIFIED - The GitHub URL provided in the master list (https://github.com/GroupePhysiqueTheorique/Pheasy) returns a 404 error. No valid repository or documentation found through web search. This tool may not exist, may be a typo, or may be a private/discontinued project.
+Pheasy is a robust and user-friendly program for first-principles phonon physics. It accurately reconstructs the potential energy surface of crystalline solids via a Taylor expansion of arbitrarily high order. Developed to enable efficient and accurate extraction of interatomic force constants (IFCs) from force-displacement datasets, it is designed to be parameter-free and high-throughput compatible.
 
-**Note**: Cannot provide detailed documentation without valid sources.
+**Scientific domain**: Phonon physics, Lattice dynamics, Interatomic force constants
+**Target user community**: Computational materials scientists, High-throughput research
 
-## Recommendation
-Use established phonon codes:
-- **phonopy**: Standard phonon calculations
-- **ASE phonons**: Python-based simple phonon tools
-- **phono3py**: Anharmonic phonons
+## Theoretical Methods
+- Potential Energy Surface (PES) reconstruction
+- Taylor expansion of PES
+- Interatomic Force Constants (IFC) extraction (high order)
+- Temperature renormalization of phonon quasiparticles
+
+## Capabilities (CRITICAL)
+- Extraction of high-order interatomic force constants
+- Accurate reconstruction of potential energy surfaces
+- Compatible with high-throughput workflows (e.g., Materials Project tools)
+- Parameter-free calculations
+- Temperature-dependent phonon properties
+
+## Inputs & Outputs
+- **Inputs**: Force-displacement datasets (from DFT)
+- **Outputs**: Interatomic force constants (IFCs), phonon properties
+
+## Interfaces & Ecosystem
+- **Integration**: Compatible with `atomate2` and Materials Project workflows
+- **Python**: Distributed via PyPI
 
 ## Verification & Sources
-**Primary sources**: NONE FOUND
+**Primary sources**:
+1.  arXiv:2508.01020 "First-principles phonon physics using the Pheasy code"
+2.  PyPI: https://pypi.org/project/pheasy/
 
-**Confidence**: ❌ UNVERIFIED
-
-**Verification status**: ❌ UNVERIFIED
-- Master list URL: INVALID (404 error)
-- GitHub search: No results
-- Web search: No valid repository found
-- Recommendation: Tool may not exist or URL is incorrect in master list
+**Confidence**: VERIFIED
+**Verification status**: ✅ VERIFIED
+- **Status**: Active research code (Recent release).
+- **Documentation**: Available via PyPI and arXiv publication.

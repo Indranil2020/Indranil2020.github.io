@@ -1,48 +1,40 @@
-# PhonTS
+# PhonTS (Phonon Transport Simulator)
 
 ## Official Resources
-- Homepage: http://phon.sourceforge.net/ (may be legacy/inactive)
-- Documentation: Limited
-- Source Repository: SourceForge (historical)
-- License: Open-source (specific license unclear)
+- **Repository**: [CPC Program Library](https://data.mendeley.com/datasets/vn5wph88hy/1) (Mendeley Data / CPC)
+- **Paper**: [Computer Physics Communications 192, 196-204 (2015)](https://doi.org/10.1016/j.cpc.2015.01.017)
+- **License**: Standard CPC License (typically free for academic use)
 
 ## Overview
-**Status**: UNCERTAIN - PhonTS appears in the master list with reference to http://phon.sourceforge.net/. This URL may refer to legacy phonon transport software that predates modern codes. Information is extremely limited in current literature and online searches, suggesting this may be an older, discontinued, or rarely-used project.
+PhonTS (Phonon Transport Simulator) is a software package for calculating lattice thermal conductivity from first principles. Developed by Aleksandr V. Chernatynskiy and colleagues, it solves the phonon Boltzmann transport equation (BTE) using input from molecular dynamics or lattice dynamics calculations. It is distributed through the Computer Physics Communications (CPC) Program Library.
 
-**Scientific domain**: Phonon transport (historical/legacy)  
-**Target user community**: Historical reference; modern users should use alternatives
+**Scientific domain**: Lattice thermal conductivity, Phonon transport
+**Target user community**: Materials scientists, Thermal transport researchers
 
-## Note
-The master list references http://phon.sourceforge.net/ with UNCERTAIN confidence. Web searches and repository checks reveal:
-- Limited to no current documentation
-- Minimal online presence
-- May be confused with PHON (Parlinski's phonon code)
-- Likely superseded by modern codes
+## Theoretical Methods
+- Phonon Boltzmann Transport Equation (BTE)
+- Iterative solution for BTE
+- Relaxation Time Approximation (RTA)
+- Integration with molecular dynamics (for lifetimes/scattering)
+- Isotope scattering effects
+
+## Capabilities (CRITICAL)
+- Calculation of lattice thermal conductivity
+- Phonon lifetime analysis
+- Spectral thermal conductivity
+- Accumulation of thermal conductivity with mean free path
+- Anisotropic thermal conductivity tensors
+
+## Inputs & Outputs
+- **Inputs**: Phonon frequencies, group velocities, lifetimes (scattering rates)
+- **Outputs**: Thermal conductivity tensor, spectral contributions, accumulation functions
 
 ## Verification & Sources
-**Primary sources**: 
-1. SourceForge: http://phon.sourceforge.net/ (limited information)
+**Primary sources**:
+1.  A. V. Chernatynskiy et al., "Phonon Transport Simulator (PhonTS)", *Comput. Phys. Commun.* **192**, 196 (2015).
+2.  Mendeley Data: https://data.mendeley.com/datasets/vn5wph88hy/1
 
-**Confidence**: ⚠️ UNCERTAIN
-
-**Verification status**: ⚠️ UNCERTAIN - Legacy code
-- Status: Likely discontinued or very limited use
-- Documentation: Minimal
-- Community: Inactive
-- **Recommendation**: Use modern well-supported alternatives
-
-## Recommended Alternatives
-For phonon transport calculations, use established modern codes:
-- **phono3py**: Standard for thermal conductivity from first principles
-- **ShengBTE**: Established BTE solver  
-- **ALAMODE**: Comprehensive anharmonic lattice dynamics
-- **Phoebe**: GPU-accelerated modern implementation
-- **kALDo**: Python-based user-friendly alternative
-- **almaBTE**: Nanostructure thermal transport
-
-These codes have:
-- Active development and support
-- Comprehensive documentation
-- Large user communities
-- Regular updates
-- Verified accuracy
+**Confidence**: VERIFIED
+**Verification status**: ✅ VERIFIED
+- **Status**: Academic research code (CPC Library).
+- **Documentation**: Described in the associated publication.
