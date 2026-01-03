@@ -1261,7 +1261,8 @@
 
 **302. STMng**
 - Confidence: UNCERTAIN
-- Resources: **UNKNOWN** - Likely a specific STM simulator (e.g., *bSKAN* or *Hive*).
+- Resources: https://uspex-team.org/en/codes
+https://uspex-team.org/static/file/Valle2005_Zkrist.pdf
 
 **303. JMol**
 - Confidence: VERIFIED
@@ -1286,6 +1287,9 @@
 **308. dbaAutomator**
 - Confidence: UNCERTAIN
 - Resources: **UNKNOWN** - Likely a database automation script.
+https://github.com/xingyu-alfred-liu/dbaAutomator
+https://berkeleygw.org/2020/01/29/dbaautomator-now-available-for-berkeleygw/
+https://iopscience.iop.org/article/10.1088/1361-648X/ab699e
 
 **309. gpaw-tools**
 - Confidence: VERIFIED
@@ -1317,7 +1321,7 @@
 
 ---
 
-## CATEGORY 9: FRAMEWORKS (38 tools)
+## CATEGORY 9: FRAMEWORKS (39 tools)
 
 **316. ASE**
 - Confidence: CONFIRMED
@@ -1331,9 +1335,9 @@
 - Confidence: VERIFIED
 - Resources: https://spglib.github.io/
 
-**319. MatPy**
+**319. matscipy**
 - Confidence: UNCERTAIN
-- Resources: **UNKNOWN** - No specific framework found with this name (likely generic or typo).
+- Resources: matscipy **UNKNOWN** - No specific framework found with this name (likely generic or typo).
 
 **320. AiiDA**
 - Confidence: VERIFIED
@@ -1445,11 +1449,11 @@
 
 **347. qmpy**
 - Confidence: VERIFIED
-- Resources: https://github.com/materialsinnovation/qmpy
+- Resources: https://github.com/wolverton-research-group/qmpy
 
 **348. NCD**
-- Confidence: UNCERTAIN
-- Resources: **UNKNOWN** - Likely refers to "Nanocrystallography Database" or specific group database.
+- Confidence: VERIFIED
+- Resources: http://www.nanocrystallography.org/
 
 **349. ASR**
 - Confidence: VERIFIED

@@ -1,25 +1,28 @@
 # HubbardFermiMatsubara (HFM)
 
 ## Official Resources
-- Homepage: https://github.com/CQMP/HFM (Likely repository)
-- Documentation: Minimal
-- Source Repository: https://github.com/CQMP/HFM
-- License: GPL v3
+- **Homepage**: https://github.com/CQMP/HFM (Potential match)
+- **Source Repository**: https://github.com/CQMP/HFM (Unconfirmed)
+- **License**: Unknown
 
 ## Overview
-**Status**: NICHE - Likely refers to a specific code for solving the Hubbard model using diagrammatic Monte Carlo or similar techniques in the Matsubara formalism. This appears to be a specialized research code rather than a general-purpose package.
+**Status**: ⚠️ UNCERTAIN / RESEARCH CODE
+
+"HubbardFermiMatsubara" appears to be a specific research code or script for solving the Hubbard model in the Matsubara formalism, likely using Diagrammatic Monte Carlo (DiagMC) or similar techniques. It is not a widely distributed or documented software package. References to it are scarce and likely point to internal group codes (possibly related to the Haule Group or CQMP, but no public repository with this exact name is reliably accessible).
 
 **Scientific domain**: Many-body physics, Hubbard model  
-**Target user community**: Theoretical physicists
+**Target user community**: Theoretical physicists (Internal research groups)
 
-## Capabilities (CRITICAL)
+## Capabilities (Presumed)
 - **Model**: Hubbard model.
-- **Method**: Likely Diagrammatic Monte Carlo or similar fermionic QMC.
+- **Method**: Fermionic QMC or Diagrammatic expansion.
 - **Formalism**: Matsubara frequency domain.
 
 ## Verification & Sources
-**Confidence**: ⚠️ UNCERTAIN (Specific features require code inspection)
+**Confidence**: ⚠️ UNCERTAIN
 
 **Verification status**: ⚠️ UNVERIFIED
-- Resources: Minimal public documentation.
-- Recommendation: Contact developers (Center for Quantum Materials Physics?) or check specific papers citing it.
+- **Website**: No definitive public homepage found.
+- **Documentation**: None found.
+- **Source**: Potential broken links or private repos.
+- **Recommendation**: Users should look for established alternatives like **TRIQS**, **ALPS**, or **opendf** for similar physics.
