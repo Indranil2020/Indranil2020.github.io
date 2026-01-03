@@ -1,44 +1,58 @@
 # PyLada
 
 ## Official Resources
-- Homepage: https://github.com/pylada/pylada
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/pylada/pylada-light
+- Documentation: Minimal
+- Source Repository: https://github.com/pylada/pylada-light
+- License: BSD License
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+PyLada is a Python framework for high-throughput computational materials science. It provides tools for managing DFT calculations (wrapping VASP and Crystal), handling crystal structures, and managing job submission to clusters. It is designed to be lightweight and scriptable.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Workflow management, high-throughput DFT  
+**Target user community**: VASP/Crystal users
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Wrappers**: Interfaces for VASP and Crystal.
+- **Structure**: Crystal structure classes (superlattices, etc.).
+- **Job Management**: Simple job folder management.
+- **High-throughput**: Tools for enumerating structures (e.g., alloys).
 
-**Sources**: Pending verification
+**Sources**: PyLada GitHub
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Python scripts
+- **Output data types**: VASP outputs
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **VASP**: Primary engine.
+- **Crystal**: Supported.
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Define structure.
+2. Setup functional: `vasp = Vasp()`
+3. Launch job.
+
+## Performance Characteristics
+- Lightweight Python wrapper.
+
+## Application Areas
+- Alloy theory (Cluster expansion)
+- Defect calculations
+
+## Community and Support
+- Developed at NREL (Lany group)
+- **Status**: Less active than Pymatgen/Atomate.
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/pylada/pylada-light
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: TO BE VERIFIED
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: MINIMAL
+- Source: OPEN (GitHub)
+- Development: SLOW/MAINTENANCE
+- Applications: VASP wrapper

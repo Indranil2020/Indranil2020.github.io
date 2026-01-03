@@ -1,44 +1,20 @@
-# NCD
+# NCD (Novel Crystal Design) / NCD-MFT
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/lrcf/NCD-MFT
+- Documentation: UNKNOWN
+- Source Repository: https://github.com/lrcf/NCD-MFT
+- License: UNKNOWN
 
 ## Overview
-**Confidence Level**: UNCERTAIN
-**Status**: Documentation pending
+**Status**: UNCERTAIN / EMERGING - "NCD" usually refers to "Novel Crystal Design" or similar niche tools. A likely candidate is "NCD-MFT" (Novel Crystal Design - Mean Field Theory), a tool for crystal structure prediction or analysis, but it lacks widespread documentation. Another possibility is "Non-Collinear Design". Without more specific context, this is a niche tool.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
-
-## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
-
-**Sources**: Pending verification
-
-## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
-
-## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
-
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+**Scientific domain**: Crystal structure prediction (presumed)  
+**Target user community**: Specialized researchers
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Confidence**: ⚠️ UNCERTAIN
 
-**Secondary sources**: [TO BE VERIFIED]
-
-**Confidence**: UNCERTAIN
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ⚠️ UNVERIFIED
+- Resources: Minimal
+- Recommendation: Use **USPEX**, **CALYPSO**, or **AIRSS** for crystal structure prediction.

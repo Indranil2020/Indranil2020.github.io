@@ -1,44 +1,67 @@
-# NequIP
+# NequIP (Neural Equivariant Interatomic Potentials)
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/mir-group/nequip
+- Documentation: https://github.com/mir-group/nequip (README/Wiki)
+- Source Repository: https://github.com/mir-group/nequip
+- License: MIT License
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+NequIP is a code for building E(3)-equivariant neural network interatomic potentials. It uses the `e3nn` library to ensure that the learned potentials respect rotation and translation symmetries and parity by construction. This data efficiency allows NequIP to achieve high accuracy with very small training sets compared to invariant models.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Machine learning potentials, equivariant neural networks  
+**Target user community**: MD users, ML researchers
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Equivariance**: E(3)-equivariant features (vectors, tensors) used throughout the network.
+- **Data Efficiency**: High accuracy with few (100-1000) training structures.
+- **LAMMPS**: Interface for running MD with NequIP potentials via `pair_nequip`.
+- **ASE**: ASE calculator interface.
 
-**Sources**: Pending verification
+**Sources**: NequIP GitHub, Nat. Commun. 13, 2453 (2022)
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Extended XYZ (for training), YAML config
+- **Output data types**: PyTorch model (.pth), deployed model for LAMMPS
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **PyTorch**: Core framework.
+- **e3nn**: Library for equivariant operations.
+- **LAMMPS**: Plugin available.
+- **ASE**: Integration.
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Prepare training data (extxyz with energy/forces).
+2. Create config YAML.
+3. Train: `nequip-train config.yaml`
+4. Deploy: `nequip-deploy build --train-dir results/ model.pth`
+5. Run LAMMPS MD.
+
+## Performance Characteristics
+- Slower inference than simple invariant models (due to tensor products).
+- Extremely high accuracy and stability.
+- Excellent for complex materials where angular dependence is critical.
+
+## Application Areas
+- Phase transitions
+- Reaction dynamics
+- Complex oxides
+- Liquid structures
+
+## Community and Support
+- Developed by Kozinsky Group (Harvard)
+- Active development
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/mir-group/nequip
+2. Publication: S. Batzner et al., Nat. Commun. 13, 2453 (2022)
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: AVAILABLE
+- Source: OPEN (GitHub)
+- Development: ACTIVE
+- Applications: Equivariant ML potentials

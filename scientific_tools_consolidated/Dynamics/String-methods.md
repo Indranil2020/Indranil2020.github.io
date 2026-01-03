@@ -1,44 +1,76 @@
-# String-methods
+# String methods
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: Method - Implemented in many codes (VASP, Quantum ESPRESSO, etc.)
+- Documentation: https://theory.cm.utexas.edu/vtsttools/ (VTST implementation)
+- Source Repository: https://github.com/henkelmanlab/vtstscripts
+- License: Varies by implementation
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+String methods (including the Simplified String Method and Finite Temperature String Method) are a class of chain-of-states methods used to find the minimum energy path (MEP) or transition pathways in complex energy landscapes. Similar to NEB, they evolve a string of images connecting two minima, but with different parametrization and evolution equations, often offering better stability or different convergence properties.
 
-[TO BE COMPLETED]
+**Scientific domain**: Transition path sampling, rare events, minimum energy paths  
+**Target user community**: Computational chemists, condensed matter physicists
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- String Method (SM)
+- Simplified String Method (SSM)
+- Finite Temperature String Method (FTSM)
+- Zero-Temperature String Method
+- Reparametrization of path
+- Transition Path Theory
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- Finding Minimum Energy Paths (MEP)
+- Determining transition tubes in free energy landscapes
+- Sampling rare events
+- Calculating transition rates
+- Handling collective variables
+- Implemented in: VASP (VTST), Quantum ESPRESSO, molecular dynamics codes
 
-**Sources**: Pending verification
+**Sources**: E, Ren, and Vanden-Eijnden, Phys. Rev. B 66, 052301 (2002)
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Initial/Final states, string of images
+- **Output data types**: Evolved path, energy profile, free energy surface
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **VASP**: Via VTST tools
+- **Quantum ESPRESSO**: Native or plugin support
+- **MD Codes**: Often implemented for exploring free energy surfaces
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Define collective variables or reaction coordinate
+2. Initialize string connecting reactants and products
+3. Evolve string according to potential/free energy gradient
+4. Reparametrize string to maintain equidistant images
+5. Converge to MEP or principal curve
+
+## Performance Characteristics
+- Highly parallelizable (images evolved independently step-wise)
+- Convergence depends on landscape complexity
+- FTSM computationally expensive due to sampling
+
+## Application Areas
+- Phase transitions
+- Protein conformational changes
+- Nucleation processes
+- Chemical reaction pathways
+- Diffusion in complex media
+
+## Community and Support
+- Method developers (E, Vanden-Eijnden)
+- Code-specific communities (VASP, QE)
+- Literature and theoretical physics community
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Publication: W. E, W. Ren, and E. Vanden-Eijnden, Phys. Rev. B 66, 052301 (2002)
+2. VTST Tools: https://theory.cm.utexas.edu/vtsttools/
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Method: STANDARD
+- Documentation: Available in implementation codes
+- Applications: MEP finding, rare events, transition paths

@@ -1,44 +1,66 @@
 # Jarvis-Tools
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://jarvis-tools.readthedocs.io/
+- Documentation: https://jarvis-tools.readthedocs.io/
+- Source Repository: https://github.com/usnistgov/jarvis
+- License: NIST License
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+jarvis-tools is the open-source Python software package that powers the JARVIS database. It provides a suite of tools for designing, managing, and analyzing atomistic simulations (DFT, MD) and applying machine learning to materials data. It supports VASP, Quantum ESPRESSO, LAMMPS, and other codes.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Materials informatics, automation, machine learning  
+**Target user community**: Users of JARVIS database, high-throughput researchers
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Automation**: Workflows for VASP (TB-mBJ, SOC), QE, and LAMMPS.
+- **Analysis**: Band structure, DOS, topological invariants, elastic tensors, STM images.
+- **Machine Learning**: Graph Convolutional Networks (GCN), descriptors, and pre-trained models.
+- **Database**: Tools to interact with and download JARVIS datasets.
+- **Wannier**: Tight-binding hamiltonian generation via Wannier90.
 
-**Sources**: Pending verification
+**Sources**: jarvis-tools documentation
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Atomic structures (POSCAR, CIF), calculation inputs
+- **Output data types**: JSON, XML, Plots
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **Codes**: VASP, QE, LAMMPS, Wannier90, Boltztrap.
+- **ML**: DGL, PyTorch, Scikit-learn.
+- **JARVIS**: Official API.
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Install: `pip install jarvis-tools`
+2. Download data:
+   ```python
+   from jarvis.db.figshare import data
+   d = data('dft_3d')
+   ```
+3. Run ML model: `AL = GraphConv(config).train(...)`
+
+## Performance Characteristics
+- Comprehensive suite for 2D and 3D materials
+- Strong focus on post-processing and ML
+
+## Application Areas
+- High-throughput screening
+- Machine learning model development
+- Electronic structure analysis
+
+## Community and Support
+- Developed by NIST
+- Active development
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/usnistgov/jarvis
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: COMPREHENSIVE
+- Source: OPEN (GitHub)
+- Development: ACTIVE
+- Applications: JARVIS ecosystem, ML, DFT automation

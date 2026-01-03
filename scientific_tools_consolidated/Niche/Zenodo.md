@@ -1,44 +1,64 @@
 # Zenodo
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://zenodo.org/
+- Documentation: https://help.zenodo.org/
+- Source Repository: https://github.com/zenodo/zenodo
+- License: Open Source (Code), Open Data
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+Zenodo is a general-purpose open-access repository developed under the European OpenAIRE program and operated by CERN. It allows researchers to deposit data sets, research software, reports, and any other research related digital artifacts. For each submission, a persistent identifier (DOI) is minted, making the stored items easily citeable.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: General research repository, open science  
+**Target user community**: All researchers
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **DOI Minting**: Automatic DOI assignment for every upload.
+- **GitHub Integration**: Automatically archives GitHub releases and assigns DOIs to code.
+- **Versioning**: Supports versioning of datasets and software.
+- **Communities**: Users can create "Communities" to curate collections (e.g., "Materials Science").
+- **Long-term Retention**: Hosted at CERN Data Center.
 
-**Sources**: Pending verification
+**Sources**: Zenodo website
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Any file format (up to 50GB per record).
+- **Output data types**: DOI, landing page.
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **GitHub**: Webhooks for auto-archiving.
+- **REST API**: For automated uploading/downloading.
+- **OAI-PMH**: Metadata harvesting.
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Go to zenodo.org.
+2. Upload files (data, code).
+3. Fill metadata.
+4. Publish -> Get DOI.
+5. Cite DOI in paper.
+
+## Performance Characteristics
+- Reliable, long-term storage.
+- Free.
+
+## Application Areas
+- Publishing supplementary data for papers.
+- Archiving research software.
+- Sharing training datasets for ML.
+
+## Community and Support
+- CERN / OpenAIRE.
+- Global standard for general data sharing.
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Homepage: https://zenodo.org/
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: COMPREHENSIVE
+- Source: OPEN
+- Development: ACTIVE
+- Applications: Data repository, DOI

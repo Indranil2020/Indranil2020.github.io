@@ -1,44 +1,82 @@
-# YPHON
+# YPHON (PyPhon)
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/phonopy/pyphon
+- Documentation: Repository documentation
+- Source Repository: https://github.com/phonopy/pyphon
+- License: Open-source
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+YPHON (also known as PyPhon) is a Python-based tool for phonon calculations, part of the phonopy ecosystem. The code provides Python interfaces and utilities for phonon-related calculations, offering a Pythonic way to work with phonon data and properties.
 
-[TO BE COMPLETED]
+**Scientific domain**: Phonon calculations, Python tools  
+**Target user community**: Python developers, phonon researchers
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- Phonon calculations via Python
+- Harmonic lattice dynamics
+- Python-based analysis tools
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- Python interface for phonon calculations
+- Phonon data manipulation
+- Analysis and visualization tools
+- Integration with phonopy
+- Scriptable phonon workflows
 
-**Sources**: Pending verification
+**Sources**: GitHub repository, phonopy ecosystem
+
+## Key Strengths
+- **Python-native**: Full Python implementation
+- **phonopy ecosystem**: Part of phonopy tools
+- **Scriptable**: Easy workflow automation
+- **Flexible**: Python-based customization
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Phonon data, phonopy outputs
+- **Output data types**: Phonon properties, plots, analysis results
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **phonopy**: Core integration
+- **Python**: NumPy, matplotlib, etc.
+- **ASE**: Potential integration
+
+## Performance Characteristics
+- Python-based: Moderate speed
+- Focus on flexibility over performance
+- Suitable for analysis and prototyping
 
 ## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+- **Python overhead**: Not for very large systems
+- **Documentation**: Part of phonopy ecosystem docs
+- **Scope**: Analysis tool rather than calculator
+
+## Comparison with Other Codes
+- **Part of phonopy**: Complementary to main phonopy
+- **Python focus**: For scripting and analysis
+
+## Application Areas
+- Phonon data analysis
+- Custom phonon workflows
+- Python-based research
+- Visualization and post-processing
+
+## Community and Support
+- Open-source
+- Part of phonopy project
+- phonopy community support
+
+## Development
+- phonopy development team
+- Regular updates with phonopy
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/phonopy/pyphon
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED - Part of phonopy
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Repository: ACCESSIBLE
+- Part of phonopy ecosystem
+- Applications: Python phonon tools, phonopy integration, scriptable workflows

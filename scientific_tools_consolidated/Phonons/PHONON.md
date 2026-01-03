@@ -1,44 +1,78 @@
 # PHONON
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: http://wolf.ifj.edu.pl/phonon/
+- Documentation: Included with software package
+- Source Repository: Academic distribution
+- License: Free for academic research
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+PHONON is a software package for lattice dynamics calculations developed at the Institute of Nuclear Physics, Polish Academy of Sciences. The code calculates phonon dispersion relations and related properties using ab-initio force constants. PHONON is closely related to the PHON code and shares similar methodology and applications.
 
-[TO BE COMPLETED]
+**Scientific domain**: Lattice dynamics, phonon dispersion, thermodynamics  
+**Target user community**: Computational materials scientists, solid-state physicists
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- Harmonic lattice dynamics
+- Direct force constant method
+- Dynamical matrix diagonalization
+- Phonon density of states
+- Thermodynamic functions
+- Isotope effects
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- Phonon dispersion curves
+- Phonon density of states
+- Thermodynamic properties
+- Free energy calculations
+- Entropy and heat capacity
+- Isotope scattering effects
+- Integration with ab-initio codes
 
-**Sources**: Pending verification
+**Sources**: PHONON software documentation, IFJ PAN
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**:
+  - Ab-initio force calculations
+  - Crystal structure data
+  - Displacement configurations
+  
+- **Output data types**:
+  - Phonon frequencies
+  - Eigenvectors
+  - DOS
+  - Thermodynamic quantities
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- Works with various DFT codes
+- Manual workflow setup
+- Text-based interface
 
 ## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+- **Harmonic only**: No anharmonicity
+- **Manual setup**: Requires careful preparation
+- **Documentation**: Limited compared to modern codes
+- **Community**: Smaller user base
+
+## Comparison with Other Codes
+- **Similar to PHON**: Related development
+- **vs Modern codes**: Less automated than Phonopy
+- **Legacy use**: Historical importance in phonon calculations
+
+## Application Areas
+- Fundamental phonon studies
+- Thermodynamic property calculations
+- Academic research
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Homepage: http://wolf.ifj.edu.pl/phonon/
+2. IFJ PAN documentation
+3. Academic publications
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED - Academic phonon code
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Institution: IFJ PAN, Poland
+- Status: Available for academic use
+- Applications: Harmonic phonon calculations

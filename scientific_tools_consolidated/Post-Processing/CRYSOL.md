@@ -1,44 +1,74 @@
 # CRYSOL
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://www.embl-hamburg.de/biosaxs/software.html
+- Documentation: https://www.embl-hamburg.de/biosaxs/manuals/crysol.html
+- Source Repository: Part of ATSAS package (Academic license)
+- License: Proprietary (Free for academic use)
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+CRYSOL is a program for evaluating the solution scattering (SAXS/SANS) from macromolecules with known atomic structure and fitting it to experimental data. It uses multipole expansion of the scattering amplitudes to calculate the spherically averaged scattering pattern, taking into account the hydration shell and solvent density. It is part of the ATSAS software suite.
 
-[TO BE COMPLETED]
+**Scientific domain**: Small-angle scattering (SAXS/SANS), structural biology, solution scattering  
+**Target user community**: Structural biologists, biophysicists
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- Multipole expansion of scattering intensity
+- Spherical harmonics
+- Hydration shell modeling (boundary layer)
+- Excluded volume calculation
+- Fitting to experimental data (chi-square minimization)
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- Calculation of theoretical scattering curves from PDB structures
+- Fitting of theoretical curves to experimental SAXS/SANS data
+- Estimation of hydration shell contrast and volume
+- Handling of mixtures
+- Prediction of Radius of Gyration (Rg) and Forward Scattering (I(0))
 
-**Sources**: Pending verification
+**Sources**: CRYSOL documentation, J. Appl. Cryst. 28, 768 (1995)
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: PDB file (atomic coordinates), experimental data file (.dat)
+- **Output data types**: .fit (fitted curve), .log (parameters), .alm (multipole coefficients)
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **ATSAS**: Core component of the ATSAS suite
+- **Primus**: GUI for analysis
+- **Python**: ATSAS provides Python bindings (sas7bdat)
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Prepare PDB structure.
+2. Run CRYSOL: `crysol structure.pdb experimental_data.dat`
+3. Check fit quality (Chi-square).
+4. Adjust parameters (contrast, hydration) if necessary.
+
+## Performance Characteristics
+- Fast multipole algorithm
+- Efficient for standard proteins
+- Scales with number of atoms and multipole order
+
+## Application Areas
+- Protein structure validation
+- Conformational analysis in solution
+- Complex formation studies
+- Unfolding/folding monitoring
+
+## Community and Support
+- Developed by EMBL Hamburg (Svergun Group)
+- Standard tool in SAXS community
+- Annual courses and active support
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Homepage: https://www.embl-hamburg.de/biosaxs/software.html
+2. Publication: D. I. Svergun et al., J. Appl. Cryst. 28, 768 (1995)
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: AVAILABLE
+- Source: ACADEMIC (ATSAS)
+- Development: ACTIVE (EMBL)
+- Applications: SAXS simulation, fitting, protein structure

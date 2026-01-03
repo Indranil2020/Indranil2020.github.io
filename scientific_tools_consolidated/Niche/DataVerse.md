@@ -1,44 +1,60 @@
-# DataVerse
+# Dataverse
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://dataverse.org/
+- Documentation: https://guides.dataverse.org/en/latest/
+- Source Repository: https://github.com/IQSS/dataverse
+- License: Apache License 2.0
 
 ## Overview
-**Confidence Level**: UNCERTAIN
-**Status**: Documentation pending
+Dataverse is an open-source web application to share, preserve, cite, explore, and analyze research data. It facilitates making data available to others and allows you to replicate others' work more easily. Institutions often host their own Dataverse repositories (e.g., Harvard Dataverse).
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Research data management, repository software  
+**Target user community**: Institutions, libraries, researchers
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Repository Hosting**: Institutions host their own "Dataverse".
+- **Citation**: Generates data citations with DOIs.
+- **Versioning**: Tracks changes to datasets.
+- **Metadata**: Standardized metadata schemas (DDI, DC).
+- **APIs**: Search and deposit APIs.
 
-**Sources**: Pending verification
+**Sources**: Dataverse website
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Any research data
+- **Output data types**: Citation, Files
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **R/Python**: Client libraries (`pyDataverse`).
+- **OJS**: Journal integration.
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Log in to an institutional Dataverse.
+2. Create a Dataset.
+3. Upload files.
+4. Publish.
+
+## Performance Characteristics
+- Federated network of repositories.
+
+## Application Areas
+- Institutional data repositories.
+- Journal data hosting.
+
+## Community and Support
+- Developed by IQSS (Harvard) and community.
+- Large installation base globally.
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Homepage: https://dataverse.org/
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: UNCERTAIN
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: COMPREHENSIVE
+- Source: OPEN (GitHub)
+- Development: ACTIVE
+- Applications: Data repository software

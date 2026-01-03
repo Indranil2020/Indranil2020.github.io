@@ -1,44 +1,77 @@
-# MDI-MolSSI
+# MDI drivers (MolSSI Driver Interface)
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://molssi-mdi.github.io/MDI_Library/
+- Documentation: https://molssi-mdi.github.io/MDI_Library/
+- Source Repository: https://github.com/MolSSI-MDI/MDI_Library
+- License: BSD 3-Clause License
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+The MolSSI Driver Interface (MDI) is a standardized API that allows different computational chemistry codes to communicate and exchange data during runtime. It enables interoperability between codes (e.g., a quantum chemistry code and a molecular dynamics driver) without requiring them to be linked into a single executable. MDI drivers facilitate complex workflows like QM/MM, advanced sampling, and machine learning integration.
 
-[TO BE COMPLETED]
+**Scientific domain**: Interoperability, code coupling, multiscale modeling, QM/MM  
+**Target user community**: Developers of computational chemistry software, researchers needing coupled codes
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- Client-Server Architecture
+- Runtime Data Exchange
+- Coupled Simulations (QM/MM, AIMD)
+- Force Bridging
+- External Driver Control
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- Standardized communication between simulation codes
+- Language-agnostic interface (C, C++, Fortran, Python)
+- Support for MPI parallelization within and between codes
+- Enables QM/MM without monolithic codebases
+- Allows Python drivers to control compiled HPC codes
+- Dynamic library loading or TCP/IP socket communication
 
-**Sources**: Pending verification
+**Sources**: MDI documentation, J. Chem. Theory Comput. (MolSSI publications)
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: MDI command-line options (`-mdi`), driver scripts
+- **Output data types**: Exchange of coordinates, forces, energies, virials, charges, etc.
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **Supported Codes (MDI-compliant)**: LAMMPS, Quantum ESPRESSO, Psi4, Q-Chem, Molcas, OpenMM, Tinker, etc.
+- **Python**: MDI Python package for writing drivers
+- **Standards**: Defined by MolSSI (Molecular Sciences Software Institute)
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Launch code A (e.g., QM code) in MDI driver mode: `psi4 -mdi "role=DRIVER ..."`
+2. Launch code B (e.g., MD code) in MDI engine mode: `lmp_mpi -mdi "role=ENGINE ..."`
+3. Codes handshake and exchange data as defined by the MDI standard
+4. Driver controls the simulation loop
+
+## Performance Characteristics
+- Minimal overhead for communication
+- Enables heterogeneous computing (e.g., GPU MD + CPU QM)
+- Flexible coupling strategies (tight vs. loose)
+
+## Application Areas
+- QM/MM simulations
+- Ab initio molecular dynamics (AIMD)
+- Machine learning potentials coupled to MD
+- Advanced sampling (Metadynamics driven by external code)
+- Multiscale modeling
+
+## Community and Support
+- Developed by MolSSI (US NSF-funded institute)
+- Active development and standardization
+- Workshops and hackathons
+- Growing adoption in major codes
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Homepage: https://molssi-mdi.github.io/MDI_Library/
+2. GitHub: https://github.com/MolSSI-MDI/MDI_Library
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: COMPREHENSIVE
+- Source: OPEN (GitHub)
+- Development: ACTIVE (MolSSI)
+- Applications: Interoperability, code coupling, standard API

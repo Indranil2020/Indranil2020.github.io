@@ -1,44 +1,66 @@
-# OQMD
+# OQMD (Open Quantum Materials Database)
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://oqmd.org/
+- Documentation: https://oqmd.org/static/docs/index.html
+- Source Repository: https://github.com/wolverton-research-group/qmpy (Software stack)
+- License: CC BY 4.0 (Data)
 
 ## Overview
-**Confidence Level**: VERIFIED
-**Status**: Documentation pending
+The Open Quantum Materials Database (OQMD) is a high-throughput database of DFT-calculated thermodynamic and structural properties of materials. It focuses heavily on thermodynamics, phase stability, and the discovery of new stable compounds. It is built using the `qmpy` software stack.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Materials database, thermodynamics, phase stability  
+**Target user community**: Materials scientists, metallurgists
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Database**: Contains >1 million materials (calculated + experimental).
+- **Phase Diagrams**: Grand canonical linear programming for constructing convex hulls and phase diagrams.
+- **Stability**: Formation energies and stability analysis (energy above hull).
+- **Properties**: Crystal structure, formation energy, band gap, magnetic moment.
+- **Software**: `qmpy` (Quantum Materials Python) handles the workflow and analysis.
 
-**Sources**: Pending verification
+**Sources**: OQMD website, JOM 65, 1501 (2013)
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Query via web or API
+- **Output data types**: Structure files, phase diagrams, thermodynamic data
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **VASP**: Calculation engine used for the database
+- **qmpy**: The Python framework powering OQMD
+- **API**: REST API for data access
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. **Web**: Search for "Fe-O" to see the phase diagram and stable compounds.
+2. **API**: Use `qmpy` or standard HTTP requests to download formation energies.
+   ```python
+   import qmpy
+   entries = qmpy.Entry.objects.filter(element_set="Fe-O")
+   ```
+
+## Performance Characteristics
+- Large database focused on ground state thermodynamics
+- `qmpy` automates the VASP workflows
+
+## Application Areas
+- Discovery of new stable phases
+- Battery materials (voltage profiles)
+- Alloy design
+
+## Community and Support
+- Developed by Wolverton Group (Northwestern University)
+- Open data policy
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
-
-**Secondary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Homepage: https://oqmd.org/
+2. Publication: J. E. Saal et al., JOM 65, 1501 (2013)
 
 **Confidence**: VERIFIED
 
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: AVAILABLE
+- Source: OPEN (qmpy on GitHub)
+- Development: ACTIVE
+- Applications: Materials database, thermodynamics

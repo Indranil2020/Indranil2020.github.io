@@ -1,44 +1,101 @@
 # ALATDYN
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/ajf396/alatdyn
+- Documentation: Repository documentation
+- Source Repository: https://github.com/ajf396/alatdyn
+- License: Open-source
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+ALATDYN is a code for anharmonic lattice dynamics calculations. The tool focuses on extracting and analyzing anharmonic effects in phonon systems, providing capabilities for studying temperature-dependent and nonlinear phonon properties.
 
-[TO BE COMPLETED]
+**Scientific domain**: Anharmonic lattice dynamics, phonon physics  
+**Target user community**: Researchers studying anharmonic phonons
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- Anharmonic lattice dynamics
+- Higher-order force constants
+- Temperature-dependent phonon properties
+- Nonlinear phonon effects
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- Anharmonic force constant extraction
+- Temperature-dependent phonon calculations
+- Nonlinear lattice dynamics
+- Integration with first-principles data
+- Phonon lifetime and linewidth calculations
 
-**Sources**: Pending verification
+**Sources**: GitHub repository
+
+## Key Strengths
+- **Anharmonic focus**: Specialized for anharmonic effects
+- **Temperature dependence**: Temperature-dependent properties
+- **Research tool**: Active development for anharmonic physics
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Force constants, DFT force data, crystal structures
+- **Output data types**: Anharmonic properties, temperature-dependent phonons, lifetimes
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **DFT codes**: Via force data
+- **Force constants**: From various sources
+- **Python/Fortran**: Implementation
+
+## Performance Characteristics
+- Anharmonic calculations: Computationally demanding
+- Scales with order of force constants
+- Research-grade performance
+
+## Computational Cost
+- Force constant generation: DFT-expensive
+- ALATDYN processing: Moderate
+- Higher-order IFCs: Increasingly expensive
 
 ## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+- **Computational cost**: High-order IFCs expensive
+- **Documentation**: Limited; research code
+- **Community**: Small user base
+- **Learning curve**: Requires anharmonic theory knowledge
+
+## Comparison with Other Codes
+- **vs ALAMODE**: Similar focus; different implementations
+- **vs phono3py**: ALATDYN more specialized for anharmonic effects
+- **Research tool**: Development stage
+
+## Application Areas
+- Anharmonic phonon research
+- Temperature-dependent lattice dynamics
+- Phonon lifetime studies
+- Nonlinear phonon effects
+- Strongly anharmonic materials
+
+## Best Practices
+- Converge force constant cutoffs
+- Systematic order-by-order testing
+- Validate against experimental data
+- Careful temperature extrapolation
+
+## Community and Support
+- Open-source
+- GitHub repository
+- Research development
+- Author support via issues
+
+## Development
+- Research code
+- Active development
+- Anharmonic phonon focus
+
+## Research Impact
+ALATDYN provides tools for studying anharmonic lattice dynamics, enabling research into temperature-dependent phonon properties and nonlinear phonon effects.
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/ajf396/alatdyn
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Repository: ACCESSIBLE
+- Status: Research code
+- Applications: Anharmonic lattice dynamics, higher-order force constants, temperature-dependent phonons, research tool

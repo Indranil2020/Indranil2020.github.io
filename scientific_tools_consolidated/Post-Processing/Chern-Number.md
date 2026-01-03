@@ -1,24 +1,26 @@
 # Chern-Number
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: UNKNOWN
+- Documentation: UNKNOWN
+- Source Repository: UNKNOWN
+- License: UNKNOWN
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+**Status**: UNCERTAIN - "Chern-Number" appears to be a generic name or a placeholder for a script/method rather than a specific, widely-distributed software package with this exact name. Chern numbers are calculated by many tools (Wannier90, Z2Pack, PyProcar, WannierTools, Fukui's code), but a standalone code named simply "Chern-Number" is not a standard community tool.
 
-[TO BE COMPLETED]
+**Scientific domain**: Topological invariants, Chern number calculation  
+**Target user community**: Topological physics researchers
+
+## Note
+There is a code by T. Fukui (Hatsugai-Fukui method) often used for Chern numbers, sometimes referred to generically.
 
 ## Theoretical Methods
 [TO BE COMPLETED - Requires verification from official sources]
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
-
-**Sources**: Pending verification
+- Calculation of Chern numbers (likely using lattice gauge theory method)
+- Topological invariant determination
 
 ## Inputs & Outputs
 **Input formats**: [TO BE COMPLETED]
@@ -36,9 +38,8 @@
 
 **Secondary sources**: [TO BE VERIFIED]
 
-**Confidence**: LOW_CONF
+**Confidence**: ⚠️ UNCERTAIN
 
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ⚠️ UNVERIFIED
+- Resources: Unknown
+- Recommendation: Use **Z2Pack**, **Wannier90**, **WannierTools**, or **PyProcar** for reliable Chern number calculations.

@@ -1,44 +1,55 @@
-# COHP
+# COHP (Crystal Orbital Hamilton Population)
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://www.cohp.de/
+- Documentation: http://www.cohp.de/
+- Source Repository: Part of LOBSTER or other implementations
+- License: Varies (LOBSTER is academic free)
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+**Status**: METHOD/TOOL - COHP refers to the Crystal Orbital Hamilton Population method, a theoretical framework for analyzing chemical bonding in solids by partitioning the band structure energy into bonding and antibonding contributions. While "COHP" is a method, the term is often used to refer to the LOBSTER code (which implements it) or legacy codes like Cray-COHP.
 
-[TO BE COMPLETED]
+**Scientific domain**: Chemical bonding analysis, solid-state chemistry  
+**Target user community**: Solid-state chemists, materials scientists
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- Partitioning of band structure energy
+- Bonding/Antibonding analysis
+- Projected density of states (pDOS)
+- Crystal Orbital Overlap Population (COOP)
+- Integrated COHP (ICOHP) for bond strength
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- Visualization of bonding interactions (bonding vs. antibonding)
+- Quantitative assessment of bond strengths (ICOHP)
+- Analysis of electronic stability
+- Implemented in: LOBSTER (standard), tight-binding codes, some DFT packages (SIESTA, LMTO)
 
-**Sources**: Pending verification
+**Sources**: Dronskowski and Bloechl, J. Phys. Chem. 97, 8617 (1993)
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input**: Wavefunctions/Hamiltonians from DFT (VASP, QE, etc.)
+- **Output**: COHP vs Energy plots, ICOHP values
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **LOBSTER**: The main modern implementation
+- **LobsterPy**: Python analysis tool
+- **VASP/QE**: Source of electronic structure data
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Application Areas
+- Phase stability analysis
+- Magnetic ordering origins
+- Bond strength in intermetallics
+- Surface adsorption
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Homepage: https://www.cohp.de/
+2. Publication: R. Dronskowski, P. E. Bloechl, J. Phys. Chem. 97, 8617 (1993)
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Method: STANDARD
+- Implementation: Primarily via LOBSTER
+- Applications: Bonding analysis

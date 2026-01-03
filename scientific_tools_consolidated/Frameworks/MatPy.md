@@ -1,44 +1,23 @@
 # MatPy
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: UNKNOWN
+- Documentation: UNKNOWN
+- Source Repository: UNKNOWN
+- License: UNKNOWN
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+**Status**: UNCERTAIN - "MatPy" is a generic name that could refer to several different small projects (e.g., matrix libraries in Python, Materials Python scripts). There is no single, dominant, widely-recognized materials science framework called simply "MatPy". It is often confused with `pymatgen` or `MatPI` (Materials Project Interface).
 
-[TO BE COMPLETED]
+**Scientific domain**: Materials science, Python scripting (presumed)  
+**Target user community**: Unknown
 
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
-
-## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
-
-**Sources**: Pending verification
-
-## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
-
-## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
-
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Note
+This entry likely refers to a less common tool or is a typo for **pymatgen** or another library.
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Confidence**: ⚠️ UNCERTAIN
 
-**Secondary sources**: [TO BE VERIFIED]
-
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ⚠️ UNVERIFIED
+- Resources: Unknown
+- Recommendation: Use **pymatgen**, **ASE**, or **AiiDA** for Python-based materials science frameworks.

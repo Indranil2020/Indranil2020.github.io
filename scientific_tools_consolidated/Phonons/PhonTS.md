@@ -1,44 +1,48 @@
 # PhonTS
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: http://phon.sourceforge.net/ (may be legacy/inactive)
+- Documentation: Limited
+- Source Repository: SourceForge (historical)
+- License: Open-source (specific license unclear)
 
 ## Overview
-**Confidence Level**: UNCERTAIN
-**Status**: Documentation pending
+**Status**: UNCERTAIN - PhonTS appears in the master list with reference to http://phon.sourceforge.net/. This URL may refer to legacy phonon transport software that predates modern codes. Information is extremely limited in current literature and online searches, suggesting this may be an older, discontinued, or rarely-used project.
 
-[TO BE COMPLETED]
+**Scientific domain**: Phonon transport (historical/legacy)  
+**Target user community**: Historical reference; modern users should use alternatives
 
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
-
-## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
-
-**Sources**: Pending verification
-
-## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
-
-## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
-
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Note
+The master list references http://phon.sourceforge.net/ with UNCERTAIN confidence. Web searches and repository checks reveal:
+- Limited to no current documentation
+- Minimal online presence
+- May be confused with PHON (Parlinski's phonon code)
+- Likely superseded by modern codes
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**: 
+1. SourceForge: http://phon.sourceforge.net/ (limited information)
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: ⚠️ UNCERTAIN
 
-**Confidence**: UNCERTAIN
+**Verification status**: ⚠️ UNCERTAIN - Legacy code
+- Status: Likely discontinued or very limited use
+- Documentation: Minimal
+- Community: Inactive
+- **Recommendation**: Use modern well-supported alternatives
 
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+## Recommended Alternatives
+For phonon transport calculations, use established modern codes:
+- **phono3py**: Standard for thermal conductivity from first principles
+- **ShengBTE**: Established BTE solver  
+- **ALAMODE**: Comprehensive anharmonic lattice dynamics
+- **Phoebe**: GPU-accelerated modern implementation
+- **kALDo**: Python-based user-friendly alternative
+- **almaBTE**: Nanostructure thermal transport
+
+These codes have:
+- Active development and support
+- Comprehensive documentation
+- Large user communities
+- Regular updates
+- Verified accuracy

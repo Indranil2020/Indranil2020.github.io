@@ -1,44 +1,64 @@
-# Materials-Cloud
+# Materials Cloud
 
 ## Official Resources
-- Homepage: https://materialscloud.org/
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://www.materialscloud.org/
+- Documentation: https://www.materialscloud.org/learn
+- Source Repository: https://github.com/materialscloud-org
+- License: Various (platform components are open source)
 
 ## Overview
-**Confidence Level**: VERIFIED
-**Status**: Documentation pending
+Materials Cloud is a web platform for Open Science in computational materials science. Built on top of AiiDA, it enables researchers to FAIRly share their data, calculations, and provenance graphs. It provides interactive tools for visualizing data (structures, bands, phonons) and a "Work" section for running simulations in the cloud (AiiDA Lab).
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Open science, data repository, interactive visualization  
+**Target user community**: Computational materials scientists, AiiDA users
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Archive**: Long-term repository for research data with DOI assignment.
+- **Discover**: Interactive exploration of curated datasets (e.g., 2D materials, COFs).
+- **Explore**: Graphical interface to browse AiiDA provenance graphs.
+- **Tools**: Web-based tools for common tasks (seekpath, band structure plotting, structure visualization).
+- **AiiDA Lab**: Cloud environment (JupyterHub) for running AiiDA workflows.
 
-**Sources**: Pending verification
+**Sources**: Materials Cloud website, APL Mater. 6, 101101 (2018)
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: AiiDA export files, various structure formats
+- **Output data types**: DOIs, interactive plots, downloadable datasets
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **AiiDA**: Deeply integrated; acts as the frontend for AiiDA data.
+- **Quantum Mobile**: Virtual machine with pre-installed codes.
+- **OPTIMADE**: Supports the OPTIMADE API for interoperability.
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Run calculations with AiiDA.
+2. Export database: `verdi archive create data.aiida`.
+3. Upload to Materials Cloud Archive.
+4. Data becomes browsable and citable.
+
+## Performance Characteristics
+- Web-based; performance depends on browser and server load.
+- Visualizers are highly optimized for interactivity.
+
+## Application Areas
+- Publishing reproducible research data
+- Teaching (via AiiDA Lab)
+- Quick visualization of standard file formats
+
+## Community and Support
+- Developed by EPFL (Theos), PSI, and partners
+- Core component of the MARVEL NCCR
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
-
-**Secondary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Homepage: https://www.materialscloud.org/
+2. Publication: N. Mounet et al., Nat. Nanotechnol. 13, 246 (2018); A. V. Yakutovich et al., Comp. Mater. Sci. 188, 110165 (2021)
 
 **Confidence**: VERIFIED
 
-**Verification status**: ⏸️ PENDING
-- Official homepage: TO BE VERIFIED
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: COMPREHENSIVE
+- Source: OPEN (GitHub)
+- Development: ACTIVE
+- Applications: Data sharing, visualization, AiiDA integration

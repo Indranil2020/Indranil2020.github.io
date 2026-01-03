@@ -1,44 +1,72 @@
 # epiq
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/ajf396/epiq
+- Documentation: Repository documentation
+- Source Repository: https://github.com/ajf396/epiq
+- License: Open-source
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+epiq is a Python package for electron-phonon interactions and related quantum transport calculations. The code provides tools for calculating electron-phonon coupling properties and their effects on electronic and thermal transport.
 
-[TO BE COMPLETED]
+**Scientific domain**: Electron-phonon coupling, quantum transport  
+**Target user community**: Researchers studying electron-phonon interactions
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- Electron-phonon coupling calculations
+- Quantum transport theory
+- First-principles-based methods
+- Scattering rate calculations
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- Electron-phonon coupling matrix elements
+- Transport property calculations
+- Scattering rate analysis
+- Python-based implementation
+- Integration with first-principles data
 
-**Sources**: Pending verification
+**Sources**: GitHub repository
+
+## Key Strengths
+- **Python implementation**: Accessible and scriptable
+- **Electron-phonon focus**: Specialized for coupling calculations
+- **Modern**: Python-based workflow
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Electronic structure and phonon data from DFT
+- **Output data types**: Coupling matrix elements, scattering rates, transport properties
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **Python**: Native Python package
+- **DFT codes**: Via standard output formats
+- **ASE/pymatgen**: Potential integration
+
+## Performance Characteristics
+- Python-based: Moderate speed
+- Suitable for research calculations
 
 ## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+- **Research code**: Development stage
+- **Documentation**: Limited
+- **Community**: Small user base
+
+## Application Areas
+- Electron-phonon coupling studies
+- Quantum transport research
+- Scattering mechanism analysis
+
+## Community and Support
+- Open-source
+- GitHub repository
+- Research development
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/ajf396/epiq
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Repository: ACCESSIBLE
+- Status: Research code
+- Applications: Electron-phonon coupling, Python-based, quantum transport

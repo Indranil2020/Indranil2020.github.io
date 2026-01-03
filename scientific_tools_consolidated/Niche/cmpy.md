@@ -1,44 +1,19 @@
-# cmpy
+# cmpy (Condensed Matter Python)
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/itensor/cmpy
+- Documentation: Minimal
+- Source Repository: https://github.com/itensor/cmpy (Note: Likely a different project than intended, verifying context)
+- License: Unknown
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+**Status**: UNCERTAIN - "cmpy" is a generic name used by multiple small projects (e.g., "Condensed Matter Python"). There is no single major community code with this name. It might refer to a specific group's internal tool or a small utility library. One candidate is a library for exact diagonalization or DMFT tools, but without more context, it is ambiguous.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
-
-## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
-
-**Sources**: Pending verification
-
-## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
-
-## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
-
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+**Scientific domain**: Condensed matter physics (presumed)
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Confidence**: ⚠️ UNCERTAIN
 
-**Secondary sources**: [TO BE VERIFIED]
-
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ⚠️ UNVERIFIED
+- Resources: Ambiguous
+- Recommendation: Verify specific tool functionality.

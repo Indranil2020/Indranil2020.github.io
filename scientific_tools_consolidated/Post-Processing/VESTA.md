@@ -1,20 +1,20 @@
-# VESTA
+# VESTA (Visualization for Electronic and STructural Analysis)
 
 ## Official Resources
 - Homepage: https://jp-minerals.org/vesta/en/
-- Documentation: https://jp-minerals.org/vesta/en/doc.html
-- Source Repository: Closed source (freeware)
-- License: Freeware (free for all users)
+- Documentation: https://jp-minerals.org/vesta/en/manual.html
+- Source Repository: Distributed via website (Proprietary/Free)
+- License: Freeware (Academic/Non-commercial)
 
 ## Overview
-VESTA (Visualization for Electronic and STructural Analysis) is a 3D visualization program for structural models, volumetric data such as electron/nuclear densities, and crystal morphologies. It is the most widely used crystal structure visualization tool in materials science and crystallography, known for its user-friendly interface, high-quality graphics, and comprehensive features for analyzing and presenting crystallographic data.
+VESTA is a 3D visualization program for structural models, volumetric data such as electron/nuclear densities, and crystal morphologies. It is one of the most popular tools in materials science for visualizing crystal structures and electronic structure data (charge densities, wavefunctions). VESTA supports a wide range of file formats and provides high-quality rendering for publications.
 
-**Scientific domain**: Crystal structure visualization, electron density analysis, crystallography  
-**Target user community**: Materials scientists, crystallographers, chemists visualizing crystal structures and properties
+**Scientific domain**: Crystal structure visualization, volumetric data analysis  
+**Target user community**: Crystallographers, materials scientists, solid-state chemists
 
 ## Theoretical Methods
-VESTA is primarily a visualization tool and does not perform calculations. It displays:
-- Crystal structures
+- Isosurface rendering (Marching Cubes)
+- 3D lattice visualization
 - Electron density maps
 - Nuclear density distributions
 - Electrostatic potentials

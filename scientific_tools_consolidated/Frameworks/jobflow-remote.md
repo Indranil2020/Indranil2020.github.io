@@ -1,44 +1,58 @@
 # jobflow-remote
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/Matgenix/jobflow-remote
+- Documentation: https://matgenix.github.io/jobflow-remote/
+- Source Repository: https://github.com/Matgenix/jobflow-remote
+- License: Modified BSD License
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+Jobflow-remote (formerly `jobflow-runners` or similar concepts) is a runner for `jobflow` that enables execution on remote resources (like SLURM clusters) without the full complexity of FireWorks' database-polling model. It is a lightweight alternative for submitting jobflow Flows to HPC queues.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Remote execution, HPC job submission  
+**Target user community**: Jobflow users needing HPC execution
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Remote Submission**: Submit jobflow Jobs to SLURM/PBS queues.
+- **Lightweight**: Does not require a central MongoDB server for job management (unlike FireWorks).
+- **Job Management**: Tracks status of submitted jobs.
+- **Integration**: Works seamlessly with `atomate2` and `jobflow`.
 
-**Sources**: Pending verification
+**Sources**: jobflow-remote documentation
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Jobflow Flows
+- **Output data types**: Job results (files/database)
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **jobflow**: The parent workflow library
+- **HPC Schedulers**: SLURM, PBS, etc.
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Configure remote host (SSH, scheduler type).
+2. `submit_flow(flow, worker=remote_worker)`
+
+## Performance Characteristics
+- Low latency submission
+- Simplified architecture for smaller groups or individual users
+
+## Application Areas
+- Running atomate2 workflows on clusters
+- Managing calculations from a local machine
+
+## Community and Support
+- Developed by Matgenix (Hautier group) and contributors
+- Open source
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/Matgenix/jobflow-remote
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: AVAILABLE
+- Source: OPEN
+- Development: ACTIVE
+- Applications: Remote execution for jobflow

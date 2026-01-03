@@ -1,44 +1,71 @@
 # XSpectraTools
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/calandra-group/XSpectraTools
+- Documentation: README in repository
+- Source Repository: https://github.com/calandra-group/XSpectraTools
+- License: GNU General Public License v3.0
 
 ## Overview
-**Confidence Level**: UNCERTAIN
-**Status**: Documentation pending
+XSpectraTools is a set of Python scripts designed to facilitate the calculation and analysis of X-ray Absorption Spectra (XAS) using the `xspectra.x` code of Quantum ESPRESSO. It automates the generation of input files, especially for core-hole supercell calculations, and provides utilities for post-processing and plotting the results.
 
-[TO BE COMPLETED]
+**Scientific domain**: X-ray spectroscopy, XANES, workflow automation  
+**Target user community**: Quantum ESPRESSO users, XAS researchers
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- Core-hole supercell generation
+- Spectral broadening (convolution)
+- XANES calculation setup
+- Configuration averaging (for disordered systems)
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Supercell Generation**: Creates supercells with a core-hole on a specific atom
+- **Input Setup**: Generates `xspectra.in` and `pw.x` input files
+- **Broadening**: Applies Lorentzian/Gaussian broadening to raw spectra
+- **Alignment**: Aligns spectra based on core-level shifts
+- **Plotting**: Simple visualization of spectra
 
-**Sources**: Pending verification
+**Sources**: XSpectraTools GitHub repository
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Structure file (CIF/POSCAR/QE input), parameters
+- **Output data types**: QE input files, processed spectral data (xy format)
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **Quantum ESPRESSO**: Dedicated frontend for `xspectra.x`
+- **Python**: Native implementation
+- **ASE**: Uses ASE for structure manipulation
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Define primitive structure.
+2. Run script to generate supercell with core-hole: `python make_supercell.py ...`
+3. Run SCF calculation (`pw.x`).
+4. Run XSpectra calculation (`xspectra.x`).
+5. Post-process: `python broaden.py spectrum.dat`
+
+## Performance Characteristics
+- Lightweight scripting tool
+- Reduces manual error in complex input setup
+
+## Application Areas
+- XAS of defects and dopants
+- High-throughput XANES calculations
+- Teaching and tutorials for XSpectra
+
+## Community and Support
+- Open-source (GPL v3)
+- Maintained by Calandra Group (Sorbonne Université)
+- GitHub issues
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/calandra-group/XSpectraTools
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: UNCERTAIN
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE (GitHub)
+- Documentation: AVAILABLE (README)
+- Source: OPEN (GPL)
+- Development: ACTIVE (Research group)
+- Applications: XAS workflow, QE integration

@@ -1,44 +1,29 @@
 # Pheasy
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: UNKNOWN - Master list URL returns 404
+- Documentation: NOT FOUND
+- Source Repository: NOT FOUND (https://github.com/GroupePhysiqueTheorique/Pheasy returns 404)
+- License: UNKNOWN
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+**Status**: UNVERIFIED - The GitHub URL provided in the master list (https://github.com/GroupePhysiqueTheorique/Pheasy) returns a 404 error. No valid repository or documentation found through web search. This tool may not exist, may be a typo, or may be a private/discontinued project.
 
-[TO BE COMPLETED]
+**Note**: Cannot provide detailed documentation without valid sources.
 
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
-
-## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
-
-**Sources**: Pending verification
-
-## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
-
-## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
-
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Recommendation
+Use established phonon codes:
+- **phonopy**: Standard phonon calculations
+- **ASE phonons**: Python-based simple phonon tools
+- **phono3py**: Anharmonic phonons
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**: NONE FOUND
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: ❌ UNVERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ❌ UNVERIFIED
+- Master list URL: INVALID (404 error)
+- GitHub search: No results
+- Web search: No valid repository found
+- Recommendation: Tool may not exist or URL is incorrect in master list

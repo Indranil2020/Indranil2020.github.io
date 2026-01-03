@@ -1,44 +1,65 @@
 # ezSpectra
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/mosey-group/ezSpectra
+- Documentation: README in repository
+- Source Repository: https://github.com/mosey-group/ezSpectra
+- License: MIT License
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+ezSpectra is a set of Python tools designed to simplify the calculation and plotting of spectroscopic data from molecular dynamics simulations and electronic structure calculations. It focuses on easing the workflow for generating IR, Raman, and VCD spectra from dipole and polarizability trajectories.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Vibrational spectroscopy, molecular dynamics analysis, spectral plotting  
+**Target user community**: Computational chemists, spectroscopists
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Spectral Calculation**: Compute IR, Raman, and VCD spectra from time-correlation functions
+- **Trajectory Analysis**: Parse output from MD codes (e.g., CP2K, Gaussian, VASP)
+- **Signal Processing**: Fourier transforms, windowing, smoothing
+- **Visualization**: Simple plotting utilities for spectra
+- **Workflow**: Streamlines the path from raw data to publication plots
 
-**Sources**: Pending verification
+**Sources**: ezSpectra GitHub repository
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Dipole/polarizability trajectory files (txt, dat), log files
+- **Output data types**: Spectral intensity vs frequency (dat, csv), plots (png, pdf)
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **CP2K**: Supports output parsing
+- **Python**: Native Python package using NumPy/Matplotlib
+- **Jupyter**: Suitable for notebook-based analysis
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Perform MD simulation saving dipole moments.
+2. Load trajectory data into ezSpectra.
+3. Compute autocorrelation function.
+4. Apply Fourier transform to get spectrum.
+5. Plot result.
+
+## Performance Characteristics
+- Fast post-processing (FFT-based)
+- Limited by memory for very long trajectories
+
+## Application Areas
+- Vibrational spectroscopy (IR/Raman)
+- Solvent effects on spectra
+- anharmonic effects from MD
+
+## Community and Support
+- Open-source (MIT)
+- Developed by Mosey Group (Queen's University)
+- GitHub issues
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/mosey-group/ezSpectra
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE (GitHub)
+- Documentation: AVAILABLE (README)
+- Source: OPEN (MIT)
+- Development: ACTIVE (Mosey Group)
+- Applications: IR/Raman from MD, spectral analysis

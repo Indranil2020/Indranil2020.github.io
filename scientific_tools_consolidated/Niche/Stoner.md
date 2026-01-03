@@ -1,44 +1,57 @@
-# Stoner
+# Stoner (Stoner Python Code)
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://stoner.readthedocs.io/
+- Documentation: https://stoner.readthedocs.io/
+- Source Repository: https://github.com/PhysicsStoner/Stoner
+- License: GPL v3
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+The Stoner package is a Python library containing a collection of utilities for managing and analyzing experimental data, particularly in physics. It provides a `Data` class (subclassing Pandas DataFrame) with metadata handling and specialized plotting/analysis methods useful for experimentalists (e.g., hysteresis loops, IV curves).
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Experimental physics data analysis  
+**Target user community**: Experimental physicists (Leeds University origin)
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Data Loading**: Readers for various instrument formats (VSM, resistivity, etc.).
+- **Metadata**: Dictionary-like metadata associated with data.
+- **Analysis**: Curve fitting, smoothing, differentiation.
+- **Plotting**: Publication-quality plotting wrappers around Matplotlib.
 
-**Sources**: Pending verification
+**Sources**: Stoner documentation
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: CSV, instrument text files
+- **Output data types**: Plots, processed files
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **Pandas/Matplotlib/Scipy**: Built on top of the standard stack.
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. `d = Stoner.Data.load('file.dat')`
+2. `d.plot(x='Field', y='Moment')`
+3. `d.analyze(...)`
+
+## Performance Characteristics
+- Python convenience wrapper.
+
+## Application Areas
+- Magnetism (VSM data)
+- Transport measurements
+- General lab data analysis
+
+## Community and Support
+- Developed at University of Leeds (Cond. Matt. group).
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/PhysicsStoner/Stoner
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: AVAILABLE
+- Source: OPEN (GitHub)
+- Development: ACTIVE
+- Applications: Experimental data analysis

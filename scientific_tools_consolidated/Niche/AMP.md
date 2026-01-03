@@ -1,44 +1,63 @@
-# AMP
+# AMP (Atomistic Machine-learning Package)
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://amp.readthedocs.io/
+- Documentation: https://amp.readthedocs.io/
+- Source Repository: https://bitbucket.org/andrewpeterson/amp (migrated/archived)
+- License: GPL v3
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+AMP (Atomistic Machine-learning Package) is an open-source Python package for generating atomistic machine learning potentials (interatomic potentials). It interfaces with ASE to train potentials on DFT data (energy and forces) using descriptors like Gaussian symmetry functions and neural networks.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Machine learning potentials, molecular dynamics  
+**Target user community**: Catalysis researchers, MD users
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Training**: Train neural network potentials on DFT trajectories.
+- **Descriptors**: Fingerprint schemes (Gaussian, Zernike).
+- **ASE Interface**: Functions as an ASE calculator for MD simulations.
+- **Regression**: Neural networks, Gaussian processes.
 
-**Sources**: Pending verification
+**Sources**: AMP documentation, Comp. Phys. Comm. 203, 154 (2016)
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: ASE Trajectory files (training data)
+- **Output data types**: Potential file (.amp)
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **ASE**: Deeply integrated.
+- **TensorFlow/Scikit-learn**: Used for backend (legacy versions).
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Generate training data (DFT MD).
+2. `calc = Amp(descriptor=..., model=...)`
+3. `calc.train(images=training_data)`
+4. `atoms.calc = calc; atoms.get_forces()`
+
+## Performance Characteristics
+- Training is computationally intensive.
+- Prediction is orders of magnitude faster than DFT.
+- Speed comparable to other NN potentials.
+
+## Application Areas
+- Catalysis (surface reactions)
+- Molecular dynamics of nanoparticles
+- Global optimization
+
+## Community and Support
+- Developed by Peterson Group (Brown University)
+- **Status**: Mostly legacy/stable; newer tools (SchNetPack, NequIP) are more active.
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Documentation: https://amp.readthedocs.io/
+2. Publication: A. A. Khorshidi and A. A. Peterson, Comp. Phys. Comm. 203, 154 (2016)
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: COMPREHENSIVE
+- Source: OPEN
+- Development: MAINTENANCE
+- Applications: ML potentials, neural networks

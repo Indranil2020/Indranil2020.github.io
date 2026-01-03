@@ -1,44 +1,38 @@
 # DMDW
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: UNKNOWN
+- Documentation: UNKNOWN
+- Source Repository: UNKNOWN
+- License: UNKNOWN
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+DMDW appears in the master list with UNCERTAIN confidence. The tool name and resources are unclear, possibly representing a typo, abbreviation for an internal research code, or a tool with limited public documentation. Without verifiable resources, comprehensive documentation cannot be provided.
 
-[TO BE COMPLETED]
+**Confidence Level**: UNCERTAIN
 
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+## Note
+If DMDW refers to a specific phonon or molecular dynamics code, please provide:
+- Full name or expansion of acronym
+- Institution or research group
+- Publications or documentation
+- Repository or download location
 
-## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+**Possible interpretations**:
+- Diffusive Molecular Dynamics (speculative)
+- Internal or proprietary research code
+- Typo or abbreviation
 
-**Sources**: Pending verification
-
-## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
-
-## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
-
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Recommendation
+For phonon and thermal transport calculations, users should consider well-documented alternatives:
+- **phonopy/phono3py**: Standard phonon calculations
+- **LAMMPS**: Molecular dynamics with thermal transport
+- **ALAMODE**: Anharmonic lattice dynamics
+- **ShengBTE**: Boltzmann transport
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Status**: ⚠️ UNCERTAIN - Insufficient information
 
-**Secondary sources**: [TO BE VERIFIED]
-
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ❌ UNVERIFIED
+- Resources: UNKNOWN
+- Recommendation: Use established alternatives unless specific information available

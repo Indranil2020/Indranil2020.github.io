@@ -1,44 +1,59 @@
 # PyProcar-Unfold
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://romerogroup.github.io/pyprocar/
+- Documentation: https://romerogroup.github.io/pyprocar/modules.html#module-pyprocar.unfold
+- Source Repository: https://github.com/romerogroup/pyprocar
+- License: MIT License
 
 ## Overview
-**Confidence Level**: UNCERTAIN
-**Status**: Documentation pending
+PyProcar-Unfold refers to the band unfolding module within the PyProcar package. It provides functionality to unfold the electronic band structure of supercells into the primitive cell Brillouin zone. This is particularly useful for studying the effective band structure of systems with broken translational symmetry, such as defects, interfaces, and alloys, using VASP or other supported DFT codes.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Band unfolding, supercell analysis, electronic structure  
+**Target user community**: VASP users, defect researchers
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Band Unfolding**: Recovering primitive cell spectral weights from supercell calculations
+- **Projection**: Projecting unfolded bands onto atomic orbitals
+- **Spin Texture**: Unfolding spin-polarized bands
+- **Visualization**: Plotting the effective band structure (EBS)
+- **Integration**: Part of the larger PyProcar ecosystem
 
-**Sources**: Pending verification
+**Sources**: PyProcar documentation, Comp. Phys. Comm. 251, 107206 (2020)
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: PROCAR/OUTCAR (VASP), supercell transformation matrix
+- **Output data types**: Unfolded spectral weights, band structure plots
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **PyProcar**: Core package
+- **VASP**: Primary input source
+- **Matplotlib**: Visualization backend
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Perform supercell DFT calculation.
+2. Define the supercell matrix (transformation from primitive to supercell).
+3. Run unfolding: `pyprocar.unfold(code='vasp', dirname='.', supercell_matrix=[[2,0,0],[0,2,0],[0,0,2]])`
+4. Plot the result.
+
+## Performance Characteristics
+- Python-based, generally efficient
+- Depends on PROCAR size
+
+## Application Areas
+- Impurity levels in semiconductors
+- Alloy band structures
+- Surface states in slab calculations
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Homepage: https://romerogroup.github.io/pyprocar/
+2. GitHub: https://github.com/romerogroup/pyprocar
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: UNCERTAIN
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: AVAILABLE
+- Source: OPEN (GitHub)
+- Part of PyProcar package

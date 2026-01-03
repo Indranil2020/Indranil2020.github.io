@@ -1,44 +1,78 @@
-# IMD
+# IMD (ITAP Molecular Dynamics)
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://imd.itap.physik.uni-stuttgart.de/
+- Documentation: https://imd.itap.physik.uni-stuttgart.de/doc/imd_guide.html
+- Source Repository: https://imd.itap.physik.uni-stuttgart.de/ (Source available)
+- License: GNU General Public License v2.0
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+IMD (ITAP Molecular Dynamics) is a software package for classical molecular dynamics simulations developed at the Institute for Theoretical and Applied Physics (ITAP) of the University of Stuttgart. It is designed for massive parallelism and simulations of very large systems, with a focus on solid state physics, shock waves, and fracture mechanics.
 
-[TO BE COMPLETED]
+**Scientific domain**: Classical molecular dynamics, solid state physics, shock waves, fracture  
+**Target user community**: Physicists, materials scientists studying mechanical properties
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- Classical Molecular Dynamics (NVE, NVT, NPT, NPH)
+- Microcanonical, Canonical, and Isobaric ensembles
+- Energy Minimization
+- Non-equilibrium MD (shock waves, deformation)
+- 2D and 3D simulations
+- Quasi-crystals and complex structures
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- Efficient parallelization (MPI)
+- Simulations of metals (EAM, ADP potentials), covalent systems (Tersoff, Stillinger-Weber), and ionic systems
+- Laser ablation simulation (Two-temperature model)
+- Shock wave generation
+- Crack propagation and fracture analysis
+- Online analysis/visualization (socket communication)
+- Support for quasicrystals and complex geometries
 
-**Sources**: Pending verification
+**Sources**: IMD website, Comp. Phys. Comm. 118, 50 (1999)
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Parameter file (.param), Configuration file (.conf)
+- **Output data types**: Configurations (.conf), Energies (.eng), Distributions (.dist)
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **Visualization**: Output compatible with standard visualization tools
+- **Tools**: `imd_tools` for pre/post-processing
+- **QM/MM**: Basic interface capabilities
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Prepare initial configuration: Use `imd_make_config` or custom script
+2. Configure: Edit parameter file (integrator, potential, run steps)
+3. Run: `imd_mpi`
+4. Analysis: Post-process output files
+
+## Performance Characteristics
+- Highly scalable on massively parallel machines
+- Optimized for short-range interactions
+- Dynamic load balancing
+
+## Application Areas
+- Mechanical properties of materials (fracture, plasticity)
+- Laser-matter interaction (ablation)
+- Shock physics
+- Quasicrystal dynamics
+- Granular matter
+
+## Community and Support
+- Open-source (GPL v2)
+- Developed at University of Stuttgart
+- Documentation and mailing list available
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Homepage: https://imd.itap.physik.uni-stuttgart.de/
+2. Publication: J. Stadler et al., Int. J. Mod. Phys. C 8, 1131 (1997)
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: AVAILABLE
+- Source: OPEN (GPL)
+- Development: ACTIVE (ITAP Stuttgart)
+- Applications: MD, fracture, shock waves, laser ablation, quasicrystals

@@ -1,44 +1,65 @@
 # AiiDA-yambo
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/yambo-code/aiida-yambo
+- Documentation: https://aiida-yambo.readthedocs.io/
+- Source Repository: https://github.com/yambo-code/aiida-yambo
+- License: MIT License
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+AiiDA-yambo is the AiiDA plugin for the Yambo code, which performs Many-Body Perturbation Theory (MBPT) calculations (GW approximation, Bethe-Salpeter Equation). It allows users to automate complex excited-state calculations, including convergence tests for the many numerical parameters involved in GW/BSE.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Many-body perturbation theory, excited states, GW, BSE  
+**Target user community**: Yambo users, AiiDA users
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Calculations**: Support for `yambo` (initialization), `yambo` (run), `p2y` (interface).
+- **WorkChains**:
+  - `YamboConvergence`: Automated convergence of parameters (k-points, bands, cutoff, FFT grid).
+  - `YamboRestart`: Automatic handling of walltime and errors.
+  - `YamboWorkflow`: End-to-end GW calculation starting from DFT.
+- **Parsing**: Extraction of quasiparticle energies and optical spectra.
 
-**Sources**: Pending verification
+**Sources**: AiiDA-yambo documentation
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: AiiDA Nodes, Parent DFT calculations (RemoteData)
+- **Output data types**: ArrayData (quasiparticle energies), BandsData
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **Yambo**: The backend engine
+- **AiiDA-QuantumESPRESSO**: Typically used for the precursor DFT calculation
+- **Materials Cloud**: Used to share GW datasets
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Run DFT (QE `pw.x`).
+2. Run `p2y` and `yambo -i` (initialization).
+3. Submit `YamboConvergence` WorkChain to find optimal parameters.
+4. Run production GW calculation.
+
+## Performance Characteristics
+- Essential for managing the complexity of GW convergence
+- Handles multi-step dependencies (DFT -> p2y -> init -> run)
+
+## Application Areas
+- High-throughput GW band gaps
+- Optical spectra of 2D materials
+- Benchmarking MBPT methods
+
+## Community and Support
+- Developed by Yambo team and CNR-NANO (Modena)
+- Active development
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/yambo-code/aiida-yambo
+2. Documentation: https://aiida-yambo.readthedocs.io/
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: COMPREHENSIVE
+- Source: OPEN (GitHub)
+- Development: ACTIVE
+- Applications: GW/BSE workflows, convergence automation

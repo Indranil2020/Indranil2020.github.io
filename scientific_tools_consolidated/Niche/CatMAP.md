@@ -1,44 +1,64 @@
 # CatMAP
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://catmap.readthedocs.io/
+- Documentation: https://catmap.readthedocs.io/
+- Source Repository: https://github.com/SUNCAT-Center/CatMAP
+- License: GPL v3
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+CatMAP is a software package for thermodynamic and kinetic modeling of catalytic reactions. It allows users to create microkinetic models based on DFT-calculated energies. CatMAP automates the solution of the mean-field rate equations to predict turnover frequencies (TOF), coverages, and reaction rates as a function of temperature and pressure.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Heterogeneous catalysis, microkinetic modeling  
+**Target user community**: Catalysis researchers
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Microkinetics**: Solves steady-state rate equations.
+- **Scaling Relations**: Uses linear scaling relations/BEP relations to estimate energies across materials.
+- **Parser**: Reads energy inputs from text files (table format).
+- **Analysis**: Rate control analysis, degree of rate control, coverage maps.
+- **Phase Diagrams**: Surface coverage phase diagrams.
 
-**Sources**: Pending verification
+**Sources**: CatMAP documentation, Comp. Phys. Comm. 204, 206 (2016)
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Python setup script, energy table (txt)
+- **Output data types**: Rates, coverages, plots
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **ASE**: Used for some thermodynamic utilities.
+- **Matplotlib**: For plotting results.
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Define reaction mechanism (elementary steps).
+2. Provide formation energies of intermediates (from DFT).
+3. `model = ReactionModel(setup_file='setup.mkm')`
+4. `model.run()`
+5. Analyze TOF vs T/P.
+
+## Performance Characteristics
+- Fast solution of algebraic/differential equations.
+- Bottleneck is usually gathering DFT data.
+
+## Application Areas
+- Catalyst screening
+- Understanding reaction mechanisms
+- Volcano plots
+
+## Community and Support
+- Developed by SUNCAT (Stanford/SLAC)
+- Active user base in catalysis
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/SUNCAT-Center/CatMAP
+2. Publication: A. J. Medford et al., Comp. Phys. Comm. 204, 206 (2016)
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: COMPREHENSIVE
+- Source: OPEN (GitHub)
+- Development: ACTIVE
+- Applications: Microkinetic modeling, catalysis

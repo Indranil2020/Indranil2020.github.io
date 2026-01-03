@@ -2,19 +2,19 @@
 
 ## Official Resources
 - Homepage: http://www.xcrysden.org/
-- Documentation: http://www.xcrysden.org/doc/XCrySDen.html
-- Source Repository: Available on homepage
+- Documentation: http://www.xcrysden.org/Documentation.html
+- Source Repository: http://www.xcrysden.org/Download.html (Source available)
 - License: GNU General Public License v2.0
 
 ## Overview
-XCrySDen (X-window CRYstalline Structures and DENsities) is a crystalline and molecular structure visualization program with emphasis on displaying isosurfaces and contours from electronic structure calculations. Developed primarily for use with CRYSTAL, Quantum ESPRESSO, and WIEN2k codes, it provides interactive 3D visualization with particular strength in displaying charge densities, Fermi surfaces, and other volumetric data.
+XCrySDen (X-Window Crystalline Structures and Densities) is a crystalline and molecular structure visualization program capable of displaying isosurfaces and contours from grid data. It is specifically designed for solid-state physics and interfaces seamlessly with major electronic structure codes like WIEN2k, Quantum ESPRESSO, and CRYSTAL. It allows for the interactive selection of k-paths in the Brillouin zone and real-time manipulation of structures.
 
-**Scientific domain**: Crystal structure visualization, charge density analysis, Fermi surfaces  
-**Target user community**: Computational materials scientists, solid-state physicists visualizing DFT results
+**Scientific domain**: Structure visualization, electron density plotting, k-path selection  
+**Target user community**: Solid-state physicists, DFT users (WIEN2k, QE)
 
 ## Theoretical Methods
-XCrySDen is a visualization tool and does not perform calculations. It displays:
-- Crystal and molecular structures
+- Isosurface rendering
+- Color-plane visualization (2D cuts)
 - Electron density (charge density)
 - Molecular orbitals
 - Fermi surfaces

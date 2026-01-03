@@ -1,44 +1,61 @@
 # pymatgen-db
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://materialsproject.github.io/pymatgen-db/
+- Documentation: https://materialsproject.github.io/pymatgen-db/
+- Source Repository: https://github.com/materialsproject/pymatgen-db
+- License: Modified BSD License
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+pymatgen-db is a tool for managing MongoDB databases of materials data. It works with Pymatgen to parse calculation results (from VASP, Q-Chem, etc.) and insert them into a database with a structured schema. It allows for powerful querying of materials properties using a Python API or CLI.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Database management, materials informatics  
+**Target user community**: Users of FireWorks/Atomate, researchers managing their own data
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Insertion**: Automates insertion of VASP/Q-Chem outputs into MongoDB.
+- **Querying**: Rich query language for filtering by chemistry, properties, and metadata.
+- **CLI**: Command-line interface (`mgdb`) for quick database interactions.
+- **Schema**: Defines the standard map of JSON keys for calculation data.
 
-**Sources**: Pending verification
+**Sources**: pymatgen-db documentation
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Calculation directories, JSON files
+- **Output data types**: MongoDB documents
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **MongoDB**: Required backend
+- **Pymatgen**: Core dependency
+- **Atomate**: Uses pymatgen-db logic for database interactions
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Configure `db.json`.
+2. Insert calculation: `mgdb insert .`
+3. Query: `mgdb query --criteria '{"elements": {"$all": ["Li", "O"]}}' --props energy`
+
+## Performance Characteristics
+- Efficient management of JSON documents
+- Scalable with MongoDB
+
+## Application Areas
+- Personal research databases
+- Group-level data sharing
+- Data backend for high-throughput studies
+
+## Community and Support
+- Developed by Materials Project
+- Active GitHub repository
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/materialsproject/pymatgen-db
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: AVAILABLE
+- Source: OPEN (GitHub)
+- Development: ACTIVE
+- Applications: Materials database management

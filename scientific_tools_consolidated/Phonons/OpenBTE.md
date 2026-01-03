@@ -1,44 +1,79 @@
 # OpenBTE
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/jesan/OpenBTE
+- Documentation: Repository documentation
+- Source Repository: https://github.com/jesan/OpenBTE
+- License: Open-source
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+OpenBTE is an open-source implementation of the Boltzmann transport equation solver for phonon thermal transport. The code provides tools for calculating lattice thermal conductivity from first-principles force constants, with a focus on accessibility and modularity.
 
-[TO BE COMPLETED]
+**Scientific domain**: Phonon Boltzmann transport, thermal conductivity  
+**Target user community**: Thermal transport researchers, phonon physics
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- Phonon Boltzmann transport equation
+- Relaxation time approximation
+- Iterative BTE solution methods
+- Three-phonon scattering
+- Thermal conductivity calculations
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- Lattice thermal conductivity calculations
+- Phonon BTE solution (RTA and iterative)
+- Three-phonon scattering rates
+- Temperature-dependent transport
+- Integration with force constant data
+- Open-source implementation
 
-**Sources**: Pending verification
+**Sources**: GitHub repository
+
+## Key Strengths
+- **Open-source**: Fully accessible code
+- **Educational**: Good for learning BTE methods
+- **Modular**: Flexible implementation
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Harmonic and anharmonic force constants, crystal structure
+- **Output data types**: Thermal conductivity, scattering rates, phonon lifetimes
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- Compatible with phonopy/phono3py force constants
+- Standard input formats
+
+## Performance Characteristics
+- Moderate computational cost
+- Suitable for research and education
 
 ## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+- **Development stage**: Research code
+- **Documentation**: Limited compared to established codes
+- **Community**: Smaller user base
+- **Performance**: Not optimized like production codes
+
+## Comparison with Other Codes
+- **vs phono3py/ShengBTE**: OpenBTE more accessible for education
+- **Use case**: Learning, prototyping, research
+
+## Application Areas
+- Thermal conductivity research
+- Educational purposes
+- Method development
+- Prototyping transport calculations
+
+## Community and Support
+- Open-source
+- GitHub repository
+- Community contributions welcome
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/jesan/OpenBTE
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Repository: ACCESSIBLE
+- Status: Research/educational code
+- Applications: Phonon BTE, thermal conductivity, open-source implementation

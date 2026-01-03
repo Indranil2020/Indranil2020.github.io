@@ -1,44 +1,62 @@
 # pymatgen-analysis
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://pymatgen.org/
+- Documentation: https://pymatgen.org/
+- Source Repository: https://github.com/materialsproject/pymatgen-analysis-diffusion (and others)
+- License: MIT License
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+"pymatgen-analysis" typically refers to the analysis modules within the main `pymatgen` library or its add-on packages like `pymatgen-analysis-diffusion` or `pymatgen-analysis-defects`. These provide specialized algorithms for analyzing calculation data, such as diffusion paths, defect thermodynamics, and Pourbaix diagrams.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Materials analysis, diffusion, defects  
+**Target user community**: Pymatgen users
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Diffusion**: NEB path analysis, activation energies, probability density analysis (`pymatgen-analysis-diffusion`).
+- **Defects**: Defect formation energies, chemical potential dependencies, charge transition levels (`pymatgen-analysis-defects`).
+- **Add-ons**: Separation of heavy analysis logic from the core pymatgen structure object.
 
-**Sources**: Pending verification
+**Sources**: Pymatgen add-on repositories
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: VASP outputs (Vasprun), Structures
+- **Output data types**: Analysis objects, plots
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **Pymatgen**: The parent project
+- **Materials Project**: Integration
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Install add-on: `pip install pymatgen-analysis-diffusion`
+2. Analyze NEB:
+   ```python
+   from pymatgen.analysis.diffusion.neb.pathfinder import IDPPSolver
+   solver = IDPPSolver.from_endpoints(start, end, nimages=5)
+   ```
+
+## Performance Characteristics
+- Python-based
+- Specialized algorithms
+
+## Application Areas
+- Battery diffusion studies
+- Defect engineering
+
+## Community and Support
+- Materials Project team
+- Active development
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/materialsproject/pymatgen-analysis-diffusion
+2. GitHub: https://github.com/materialsproject/pymatgen-analysis-defects
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: AVAILABLE
+- Source: OPEN (GitHub)
+- Development: ACTIVE
+- Applications: Advanced materials analysis

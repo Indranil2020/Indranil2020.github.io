@@ -1,22 +1,23 @@
 # STMng
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: UNKNOWN
+- Documentation: UNKNOWN
+- Source Repository: UNKNOWN
+- License: UNKNOWN
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+**Confidence Level**: UNCERTAIN
+**Status**: UNCERTAIN - "STMng" likely refers to a Scanning Tunneling Microscopy (STM) simulation tool (perhaps "Next Generation"?). However, there is no prominent, widely-distributed software package with this exact name in the standard materials science community. It might be a specific research code from a single group or a typo for another tool (e.g., *bSKAN*, *Tersoff-Hamann* implementations).
 
-[TO BE COMPLETED]
+**Scientific domain**: STM simulation, surface science  
+**Target user community**: Surface physicists
 
 ## Theoretical Methods
 [TO BE COMPLETED - Requires verification from official sources]
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Hypothetical**: Simulation of STM images from DFT data (Tersoff-Hamann approximation or Bardeen method).
 
 **Sources**: Pending verification
 
@@ -36,9 +37,8 @@
 
 **Secondary sources**: [TO BE VERIFIED]
 
-**Confidence**: LOW_CONF
+**Confidence**: ⚠️ UNCERTAIN
 
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ⚠️ UNVERIFIED
+- Resources: Unknown
+- Recommendation: Use **VASP** (partial charge density), **Quantum ESPRESSO** (`pp.x`), **bSKAN**, or **Create-STM-Image** (from ASE/Pymatgen ecosystem) for STM simulations.

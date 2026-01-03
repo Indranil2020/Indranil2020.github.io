@@ -1,44 +1,63 @@
-# OSF
+# OSF (Open Science Framework)
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://osf.io/
+- Documentation: https://help.osf.io/
+- Source Repository: https://github.com/CenterForOpenScience/osf.io
+- License: Apache License 2.0
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+The Open Science Framework (OSF) is a free, open-source project management tool that supports researchers throughout their entire project lifecycle. It functions as a collaboration platform, allowing teams to manage files, data, code, and protocols in one centralized location. It integrates with many other services (GitHub, Dropbox, Google Drive, Dataverse) to act as a hub.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Project management, open science, collaboration  
+**Target user community**: Research teams, labs
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Project Management**: Hierarchical structure (Projects -> Components).
+- **Add-ons**: Connects to GitHub, Dropbox, Box, Google Drive, S3, Zotero, etc.
+- **Registrations**: Freeze a project state (preregistration).
+- **Preprints**: Host preprints (OSF Preprints).
+- **Wiki**: Built-in documentation.
 
-**Sources**: Pending verification
+**Sources**: OSF website
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Files, Wikis, links
+- **Output data types**: Project pages, DOIs (for registrations)
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **Integrations**: Connects disparate tools into a single workflow.
+- **API**: Full read/write API.
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Create OSF Project.
+2. Add contributors.
+3. Link GitHub repo (code) and Google Drive (data).
+4. Write Wiki.
+5. Make public when ready.
+
+## Performance Characteristics
+- Cloud-based platform.
+- Central hub logic.
+
+## Application Areas
+- Managing lab projects.
+- Preregistering studies.
+- Collaborative writing.
+
+## Community and Support
+- Developed by Center for Open Science (COS).
+- Non-profit.
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Homepage: https://osf.io/
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: COMPREHENSIVE
+- Source: OPEN (GitHub)
+- Development: ACTIVE
+- Applications: Project management, collaboration

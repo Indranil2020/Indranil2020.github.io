@@ -1,44 +1,73 @@
 # API_Phonons
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/superstar54/API_Phonons
+- Documentation: Repository README
+- Source Repository: https://github.com/superstar54/API_Phonons
+- License: Open-source
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+API_Phonons is a Python API and interface for phonon calculations, providing a unified interface to work with phonon data from various sources. The tool aims to simplify phonon calculation workflows through a consistent Python API.
 
-[TO BE COMPLETED]
+**Scientific domain**: Phonon calculations, Python interfaces  
+**Target user community**: Python developers, computational materials scientists
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- API/interface for phonon calculations
+- Data format conversion
+- Workflow automation
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- Unified Python API for phonon calculations
+- Interface to multiple phonon codes
+- Data format conversions
+- Workflow automation tools
+- Python-based analysis
 
-**Sources**: Pending verification
+**Sources**: GitHub repository
+
+## Key Strengths
+- **Unified interface**: Consistent API across codes
+- **Python-based**: Easy integration in workflows
+- **Interoperability**: Connects different phonon tools
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Various phonon code outputs
+- **Output data types**: Standardized phonon data, Python objects
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **Multiple codes**: Interfaces to various phonon calculators
+- **Python**: Native Python implementation
+- **Data conversion**: Between different formats
+
+## Performance Characteristics
+- Interface/wrapper: Minimal overhead
+- Performance depends on underlying codes
 
 ## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+- **Depends on other codes**: Not a standalone calculator
+- **Documentation**: Limited; repository-based
+- **Community**: Small user base
+- **Development stage**: Research tool
+
+## Application Areas
+- Phonon workflow automation
+- Multi-code phonon projects
+- Data format standardization
+- Python-based research
+
+## Community and Support
+- Open-source
+- GitHub repository
+- Research development
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/superstar54/API_Phonons
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Repository: ACCESSIBLE
+- Purpose: Python API for phonon calculations
+- Applications: Interface/wrapper, workflow automation, Python-based

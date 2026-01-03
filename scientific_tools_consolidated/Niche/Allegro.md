@@ -1,44 +1,60 @@
 # Allegro
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/mir-group/allegro
+- Documentation: https://github.com/mir-group/allegro
+- Source Repository: https://github.com/mir-group/allegro
+- License: MIT License
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+Allegro is a strictly local equivariant deep learning interatomic potential. It is built on the same principles as NequIP (E(3)-equivariance) but is designed to be strictly local (no message passing beyond a cutoff) and massively parallel. This allows it to scale to extremely large systems (millions of atoms) while maintaining high accuracy.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Machine learning potentials, large-scale MD  
+**Target user community**: Researchers simulating very large systems (proteins, cracks, grain boundaries)
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Strict Locality**: Interactions are strictly limited to a cutoff radius, enabling efficient parallelization.
+- **Equivariance**: Uses tensor products for high accuracy.
+- **Scalability**: Linear scaling with number of atoms, excellent strong scaling on GPUs.
+- **LAMMPS**: Integration for large-scale MD.
 
-**Sources**: Pending verification
+**Sources**: Allegro GitHub, Nat. Commun. 14, 2038 (2023)
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Training data (extxyz)
+- **Output data types**: PyTorch models
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **NequIP**: Share the same codebase/infrastructure.
+- **LAMMPS**: Primary deployment target.
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Train model using `nequip-train` with Allegro config.
+2. Deploy for LAMMPS.
+3. Run large-scale MD.
+
+## Performance Characteristics
+- Faster than message-passing networks for large systems.
+- High parallel efficiency.
+
+## Application Areas
+- Large-scale fracture simulations
+- Biomacromolecules
+- Electrolytes
+
+## Community and Support
+- Developed by Kozinsky Group (Harvard)
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/mir-group/allegro
+2. Publication: A. Musaelian et al., Nat. Commun. 14, 2038 (2023)
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: AVAILABLE
+- Source: OPEN (GitHub)
+- Development: ACTIVE
+- Applications: Large-scale equivariant MD

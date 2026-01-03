@@ -1,44 +1,61 @@
-# AiiDA-plugin-registry
+# AiiDA Plugin Registry
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://aiidateam.github.io/aiida-registry/
+- Documentation: https://aiidateam.github.io/aiida-registry/
+- Source Repository: https://github.com/aiidateam/aiida-registry
+- License: MIT License
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+The AiiDA Plugin Registry is not a software tool itself but the central catalog of all available plugins for the AiiDA ecosystem. It lists verified and community-contributed plugins that interface AiiDA with various simulation codes, schedulers, and data tools. It serves as the primary discovery mechanism for AiiDA users to find extensions for their specific codes.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Software catalog, ecosystem management  
+**Target user community**: AiiDA users looking for code support
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Discovery**: Searchable list of plugins (e.g., VASP, QE, CP2K, LAMMPS).
+- **Metadata**: Provides installation info, documentation links, and PyPI package names.
+- **Status**: Indicates development status (stable, beta, development) and CI status.
+- **Registration**: Process for developers to register new plugins.
 
-**Sources**: Pending verification
+**Sources**: AiiDA Plugin Registry website
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input**: Pull requests to register new plugins
+- **Output**: JSON database of plugins, web interface
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **AiiDA**: The core framework
+- **PyPI**: Where plugins are hosted
+- **GitHub**: Where source code lives
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Visit https://aiidateam.github.io/aiida-registry/
+2. Search for a code (e.g., "SIESTA").
+3. Find the plugin package name (e.g., `aiida-siesta`).
+4. Install: `pip install aiida-siesta`.
+
+## Performance Characteristics
+- Static website / JSON API
+- Automatically updated via GitHub Actions
+
+## Application Areas
+- Finding tools for AiiDA workflows
+- Ecosystem health monitoring
+
+## Community and Support
+- Maintained by AiiDA team
+- Community contributions for new plugins
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Homepage: https://aiidateam.github.io/aiida-registry/
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: AVAILABLE
+- Source: OPEN (GitHub)
+- Development: ACTIVE
+- Applications: Plugin discovery

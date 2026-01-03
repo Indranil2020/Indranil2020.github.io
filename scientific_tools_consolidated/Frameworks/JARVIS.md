@@ -1,44 +1,69 @@
-# JARVIS
+# JARVIS (Joint Automated Repository for Various Integrated Simulations)
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://jarvis.nist.gov/
+- Documentation: https://jarvis-tools.readthedocs.io/
+- Source Repository: https://github.com/usnistgov/jarvis
+- License: NIST License (Public Domain)
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+JARVIS is an integrated framework and database developed by NIST for data-driven materials design. It consists of the JARVIS-DFT database (DFT calculations), JARVIS-FF (Force fields), and JARVIS-ML (Machine learning). It emphasizes properties relevant to applications (e.g., solar cells, thermoelectrics, dielectrics) and uses high-throughput workflows powered by `jarvis-tools`.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Materials database, high-throughput DFT, machine learning  
+**Target user community**: Materials scientists, ML researchers
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **JARVIS-DFT**: Database of >80,000 materials with VASP/TB-mBJ calculations.
+- **Properties**: Elastic constants, dielectric tensors, piezoelectricity, topological invariants, solar efficiency, exfoliation energy.
+- **JARVIS-FF**: Database of classical force field properties.
+- **JARVIS-ML**: Machine learning models and descriptors.
+- **Tools**: `jarvis-tools` python package for automation and analysis.
 
-**Sources**: Pending verification
+**Sources**: JARVIS website, Sci. Data 5, 180082 (2018)
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: VASP inputs, LAMMPS inputs
+- **Output data types**: JSON databases, XML files
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **VASP**: Primary DFT engine
+- **LAMMPS**: Primary MD engine
+- **TensorFlow/PyTorch**: Used for ML models
+- **Web API**: For programmatic access
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. **Web**: Search JARVIS-DFT for "MoS2".
+2. **Python**:
+   ```python
+   from jarvis.db.figshare import data
+   dft_data = data('dft_3d')
+   ```
+
+## Performance Characteristics
+- High-quality data (TB-mBJ for band gaps)
+- Comprehensive coverage of 2D materials
+
+## Application Areas
+- 2D materials discovery
+- Thermoelectric materials
+- Topological materials
+- Machine learning benchmarking
+
+## Community and Support
+- Developed by NIST (Kamal Choudhary et al.)
+- Public domain
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Homepage: https://jarvis.nist.gov/
+2. GitHub: https://github.com/usnistgov/jarvis
+3. Publication: K. Choudhary et al., Sci. Data 5, 180082 (2018)
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: COMPREHENSIVE
+- Source: OPEN (GitHub)
+- Development: ACTIVE (NIST)
+- Applications: Materials database, ML, DFT

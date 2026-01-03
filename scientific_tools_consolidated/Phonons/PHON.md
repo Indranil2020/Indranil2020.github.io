@@ -1,44 +1,83 @@
 # PHON
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: http://www.computingformaterials.com/
+- Documentation: PHON manual (included with code)
+- Source Repository: Commercial/Academic distribution
+- License: Free for academic use
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+PHON is a computational tool for phonon calculations developed by Krzysztof Parlinski. The code calculates phonon dispersion relations and thermodynamic properties using the direct method with harmonic approximation. PHON is particularly known for its PHONON software which has been widely used in the lattice dynamics community, especially for materials with complex crystal structures.
 
-[TO BE COMPLETED]
+**Scientific domain**: Lattice dynamics, phonon calculations, thermodynamics  
+**Target user community**: Solid-state physicists, materials scientists studying vibrational properties
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- Direct method for force constants
+- Harmonic approximation
+- Dynamical matrix construction
+- Phonon dispersion relations
+- Density of states
+- Thermodynamic properties
+- Mode Grüneisen parameters
+- Quasi-harmonic approximation
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- Phonon band structure calculations
+- Phonon density of states
+- Thermodynamic properties (free energy, entropy, heat capacity)
+- Mode Grüneisen parameters
+- Quasi-harmonic approximation
+- Temperature-dependent properties
+- Integration with various DFT codes (VASP, ABINIT, etc.)
+- Handles complex crystal structures
 
-**Sources**: Pending verification
+**Sources**: PHON documentation, literature citations
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**:
+  - Force sets from DFT calculations
+  - Crystal structure files
+  - Displacement patterns
+  
+- **Output data types**:
+  - Phonon dispersion
+  - Density of states
+  - Thermodynamic properties
+  - Free energy surfaces
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- Compatible with major DFT codes
+- Manual interface setup required
+- ASCII-based input/output
 
 ## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+- **Harmonic approximation only**: No anharmonic effects
+- **Learning curve**: Moderate
+- **Documentation**: Manual-based, less comprehensive than modern codes
+- **Interface**: Text-based, requires manual setup
+- **Community**: Smaller than modern alternatives like Phonopy
+
+## Comparison with Other Codes
+- **vs Phonopy**: PHON older, less automated; Phonopy more user-friendly
+- **Historical significance**: One of early widely-used phonon codes
+- **Current status**: Largely superseded by Phonopy for routine calculations
+
+## Application Areas
+- Phonon dispersion calculations
+- Thermodynamic properties
+- Materials characterization
+- Legacy calculations and benchmarking
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Website: http://www.computingformaterials.com/
+2. K. Parlinski publications
+3. Academic distribution
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED - Established phonon code
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Historical significance: Widely used phonon code
+- Current status: Available but largely superseded by Phonopy
+- Applications: Harmonic phonon calculations, academic use

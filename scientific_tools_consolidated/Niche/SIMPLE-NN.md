@@ -1,44 +1,59 @@
 # SIMPLE-NN
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/MDIL-SNU/SIMPLE-NN
+- Documentation: https://github.com/MDIL-SNU/SIMPLE-NN
+- Source Repository: https://github.com/MDIL-SNU/SIMPLE-NN
+- License: Apache License 2.0
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+SIMPLE-NN (SImple Machine Learning Potential Energy with Neural Networks) is a package for constructing neural network potentials using Behler-Parrinello symmetry functions. It is designed to be easy to use and integrates with LAMMPS for MD simulations.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Machine learning potentials  
+**Target user community**: MD users
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Descriptors**: Atom-centered symmetry functions (ACSF).
+- **Model**: Feed-forward neural networks.
+- **LAMMPS**: Interface provided.
+- **Google Colab**: Tutorials available.
 
-**Sources**: Pending verification
+**Sources**: SIMPLE-NN GitHub, Comp. Phys. Comm. 220, 158 (2017)
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: VASP OUTCAR, XYZ
+- **Output data types**: Potential files
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **TensorFlow**: Backend.
+- **LAMMPS**: MD engine.
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Prepare data.
+2. Train model.
+3. Run LAMMPS MD.
+
+## Performance Characteristics
+- Standard NN performance.
+- Easy entry point for beginners.
+
+## Application Areas
+- General MD
+- Phase transitions
+
+## Community and Support
+- Developed by Han Group (Seoul National University)
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/MDIL-SNU/SIMPLE-NN
+2. Publication: K. Lee et al., Comp. Phys. Comm. 220, 158 (2017)
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: AVAILABLE
+- Source: OPEN (GitHub)
+- Development: ACTIVE
+- Applications: NN potentials

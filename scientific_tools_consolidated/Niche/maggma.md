@@ -1,44 +1,60 @@
 # maggma
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://materialsproject.github.io/maggma/
+- Documentation: https://materialsproject.github.io/maggma/
+- Source Repository: https://github.com/materialsproject/maggma
+- License: Modified BSD License
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+Maggma is a framework for building scientific data pipelines. It provides an abstraction layer (Stores) for various databases (MongoDB, S3, GridFS, Filesystem) and a "Builder" pattern for processing data from one store to another. It is the backbone of the Materials Project's new data infrastructure.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Data engineering, materials informatics  
+**Target user community**: Database maintainers, data scientists
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Stores**: Unified API for MongoDB, S3, JSON files, etc.
+- **Builders**: Python classes that process items from a source store and write to a target store.
+- **Incremental Processing**: Keeps track of processed items to allow incremental updates.
+- **Aggregation**: Tools for grouping and reducing data.
 
-**Sources**: Pending verification
+**Sources**: Maggma documentation
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Database records
+- **Output data types**: Processed database records
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **MongoDB**: Primary backend.
+- **Materials Project**: Core infrastructure.
+- **Jobflow**: Integration for workflow-driven building.
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Define Source Store (e.g., Raw VASP files on S3).
+2. Define Target Store (e.g., MongoDB for properties).
+3. Create Builder: `class MyBuilder(Builder): ...`
+4. Run Builder.
+
+## Performance Characteristics
+- Designed for processing millions of materials records.
+- Parallel processing supported.
+
+## Application Areas
+- Building materials databases (MP, various research groups)
+- ETL (Extract, Transform, Load) pipelines
+
+## Community and Support
+- Developed by Materials Project (LBNL)
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/materialsproject/maggma
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: AVAILABLE
+- Source: OPEN (GitHub)
+- Development: ACTIVE
+- Applications: Data pipelines, ETL

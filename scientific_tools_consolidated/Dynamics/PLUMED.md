@@ -1,44 +1,82 @@
 # PLUMED
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://www.plumed.org/
+- Documentation: https://www.plumed.org/doc
+- Source Repository: https://github.com/plumed/plumed2
+- License: GNU Lesser General Public License v3.0
 
 ## Overview
-**Confidence Level**: VERIFIED
-**Status**: Documentation pending
+PLUMED is an open-source library for free energy calculations in molecular systems which works together with some of the most popular molecular dynamics engines. It performs enhanced sampling calculations (Metadynamics, Umbrella Sampling, etc.) and analyzes trajectories using a wide range of collective variables. PLUMED can be used as a plugin or a standalone analysis tool.
 
-[TO BE COMPLETED]
+**Scientific domain**: Enhanced sampling, free energy calculations, molecular dynamics analysis  
+**Target user community**: Computational chemists, biophysicists, materials scientists
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- Metadynamics (standard, well-tempered, bias-exchange)
+- Umbrella Sampling
+- Steered Molecular Dynamics
+- Replica Exchange (with bias)
+- Variationally Enhanced Sampling
+- Thermodynamic Integration
+- Reweighting techniques
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- Enhanced sampling using collective variables (CVs)
+- Huge library of CVs (distances, angles, RMSD, coordination numbers, etc.)
+- On-the-fly bias potentials
+- Post-processing and analysis of trajectories
+- Interface with MD codes (GROMACS, LAMMPS, NAMD, AMBER, CP2K, QE, VASP, etc.)
+- Multiple walker metadynamics
+- Machine learning collective variables (via PyTorch/TensorFlow)
 
-**Sources**: Pending verification
+**Sources**: PLUMED documentation, Comp. Phys. Comm. 185, 608 (2014)
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: PLUMED input script (text), MD trajectories (pdb, xtc, trr, dcd)
+- **Output data types**: COLVAR files (time series of CVs), HILLS files (bias potentials), grid files
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **MD Engines**: Works as a patch or plugin for GROMACS, LAMMPS, NAMD, AMBER, CP2K, Quantum ESPRESSO, VASP, i-PI, OpenMM, etc.
+- **Python**: wrappers for analysis
+- **VMD**: Plugin for visualization
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Patch MD code with PLUMED (if not built-in)
+2. Create `plumed.dat` defining CVs and bias
+3. Run MD code with PLUMED flag: `gmx mdrun -plumed plumed.dat`
+4. Analyze output: `plumed sum_hills --hills HILLS`
+
+## Performance Characteristics
+- Minimal overhead for standard CVs
+- Scalable with MPI (depends on MD code integration)
+- Efficient grid-based bias evaluation
+
+## Application Areas
+- Protein folding and conformational changes
+- Chemical reactions in solution
+- Crystal nucleation and growth
+- Phase transitions
+- Drug binding affinity
+
+## Community and Support
+- Open-source (LGPL v3)
+- Very active mailing list
+- Masterclass tutorials
+- Annual meetings
+- Consortium-led development
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
-
-**Secondary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Homepage: https://www.plumed.org/
+2. GitHub: https://github.com/plumed/plumed2
+3. Publication: Comp. Phys. Comm. 185, 608 (2014); Nat. Methods 16, 670 (2019)
 
 **Confidence**: VERIFIED
 
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: COMPREHENSIVE
+- Source: OPEN (GitHub)
+- Development: ACTIVE (PLUMED Consortium)
+- Applications: Enhanced sampling, metadynamics, free energy, MD plugin

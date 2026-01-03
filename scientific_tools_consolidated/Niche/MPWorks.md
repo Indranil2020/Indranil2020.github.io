@@ -1,44 +1,38 @@
 # MPWorks
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/materialsproject/MPWorks
+- Documentation: None
+- Source Repository: https://github.com/materialsproject/MPWorks
+- License: Unknown
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+MPWorks was the legacy workflow repository for the Materials Project, based on FireWorks. It has been **superseded** by **atomate** and subsequently **atomate2**. It contained the specific FireTasks and workflows used in the early days of MP.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Workflow automation (Legacy)  
+**Target user community**: Historical reference
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Legacy Workflows**: Old VASP workflows.
+- **Deprecated**: Do not use for new projects.
 
-**Sources**: Pending verification
+**Sources**: GitHub
 
-## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
+## Status
+**Status**: 🛑 DEPRECATED / ARCHIVED
 
-**Output data types**: [TO BE COMPLETED]
-
-## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
-
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Recommendation
+Use **atomate2** or **atomate** for VASP workflows.
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/materialsproject/MPWorks
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED (AS LEGACY)
+- Website: ARCHIVED
+- Documentation: NONE
+- Source: OPEN
+- Development: INACTIVE
+- Applications: Legacy workflows

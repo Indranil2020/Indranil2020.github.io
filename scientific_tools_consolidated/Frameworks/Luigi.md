@@ -1,44 +1,67 @@
 # Luigi
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://luigi.readthedocs.io/
+- Documentation: https://luigi.readthedocs.io/
+- Source Repository: https://github.com/spotify/luigi
+- License: Apache License 2.0
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+Luigi is a Python package that helps you build complex pipelines of batch jobs. It handles dependency resolution, workflow management, visualization, handling failures, command line integration, and much more. While originally developed by Spotify for data science (Hadoop/Spark), it is also used in scientific computing for managing data analysis pipelines.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: General workflow management, data pipelines  
+**Target user community**: Data engineers, scientists building analysis pipelines
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Dependency Management**: Explicitly defines dependencies between tasks.
+- **Visualization**: Web-based visualizer to see the progress of the workflow graph.
+- **Failure Recovery**: Handles failures and resumes pipeline from the point of failure.
+- **Target-Based**: Workflows are driven by the existence of output files (Targets).
+- **Hadoop/Spark**: Deep integration with big data tools (though not required).
 
-**Sources**: Pending verification
+**Sources**: Luigi documentation
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Python Task classes
+- **Output data types**: Files (LocalTarget, HdfsTarget, S3Target)
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **Python**: Core language
+- **Pandas/Scikit-Learn**: Often used within tasks
+- **Workflow Tools**: Comparable to Airflow, but simpler and "make-like"
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Define a Task class inheriting from `luigi.Task`.
+2. Define `requires()` (dependencies) and `output()` (target file).
+3. Implement `run()` (the logic).
+4. Run via CLI: `luigi --module my_module MyTask`
+
+## Performance Characteristics
+- Python-based
+- Scalable to thousands of tasks
+- Central scheduler for coordination
+
+## Application Areas
+- Data processing pipelines
+- Machine learning model training
+- Bioinformatics pipelines
+- Extract-Transform-Load (ETL) tasks
+
+## Community and Support
+- Developed by Spotify
+- Open source (Apache 2.0)
+- Mature and stable
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Homepage: https://luigi.readthedocs.io/
+2. GitHub: https://github.com/spotify/luigi
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: COMPREHENSIVE
+- Source: OPEN (GitHub)
+- Development: MATURE
+- Applications: Workflow pipelines, dependency management

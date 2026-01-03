@@ -1,44 +1,64 @@
 # Hirshfeld
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: Method - Implemented in various codes (Tonto, Q-Chem, ORCA, VASP via scripts)
+- Documentation: https://github.com/theochem/tonto/wiki (Tonto implementation)
+- Source Repository: https://github.com/theochem/tonto
+- License: LGPL (Tonto) / Varies by implementation
 
 ## Overview
-**Confidence Level**: UNCERTAIN
-**Status**: Documentation pending
+"Hirshfeld" refers to Hirshfeld Charge Analysis (and its variants like Hirshfeld-I, Iterative Hirshfeld), a method for partitioning the electron density of a molecule or crystal into atomic contributions. It assigns partial charges to atoms based on the ratio of the free-atom density to the total molecular density ("stockholder" partitioning). The term here likely refers to specific implementations or scripts (e.g., Tonto, or VASP scripts) rather than a single code named "Hirshfeld".
 
-[TO BE COMPLETED]
+**Scientific domain**: Charge analysis, population analysis, electron density partitioning  
+**Target user community**: Computational chemists, crystallographers
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- Hirshfeld Partitioning (Stockholder)
+- Iterative Hirshfeld (Hirshfeld-I)
+- Extended Hirshfeld (Hirshfeld-E)
+- Atomic Dipole Moments
+- Electrostatic Potential Fitting
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- Calculation of net atomic charges
+- Basis-set independent partial charges
+- Atomic volumes and moments
+- Analysis of electron density topology
+- Implemented in: Tonto, Q-Chem, ORCA, ADF, Multiwfn, VASP (via scripts), Gaussian
 
-**Sources**: Pending verification
+**Sources**: F. L. Hirshfeld, Theor. Chim. Acta 44, 129 (1977)
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Electron density (cube, CHGCAR), wavefunction files
+- **Output data types**: Partial charges, atomic populations
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **Tonto**: Powerful crystallographic toolbox implementing Hirshfeld-I
+- **Multiwfn**: Popular analysis tool supporting Hirshfeld
+- **VASP**: Scripts available for charge analysis
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Performance Characteristics
+- Fast for standard Hirshfeld
+- Iterative Hirshfeld (Hirshfeld-I) requires convergence loops
+
+## Application Areas
+- Force field parameterization
+- Analysis of ionic vs covalent character
+- Electrostatic potential modeling
+- Reactivity indices
+
+## Community and Support
+- Method is standard in quantum chemistry
+- Tonto and Multiwfn communities
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Tonto Wiki: https://github.com/theochem/tonto/wiki
+2. Publication: F. L. Hirshfeld, Theor. Chim. Acta 44, 129 (1977)
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: UNCERTAIN
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Method: STANDARD
+- Implementation: Common in major codes (Tonto, Multiwfn, ORCA)
+- Applications: Charge analysis, density partitioning

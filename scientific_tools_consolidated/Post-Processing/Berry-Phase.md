@@ -1,16 +1,19 @@
 # Berry-Phase
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: UNKNOWN
+- Documentation: UNKNOWN
+- Source Repository: UNKNOWN
+- License: UNKNOWN
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+**Status**: UNCERTAIN - "Berry-Phase" is a physical concept (method), not a single specific software package name. Most major DFT codes (VASP, Quantum ESPRESSO, ABINIT) have built-in Berry phase implementations (modern theory of polarization). Several post-processing tools (BerryPI, Wannier90, Z2Pack) also calculate it.
 
-[TO BE COMPLETED]
+**Scientific domain**: Electric polarization, topological phases  
+**Target user community**: Solid-state physicists
+
+## Note
+This entry likely refers to the method itself or a generic reference to Berry phase calculators.
 
 ## Theoretical Methods
 [TO BE COMPLETED - Requires verification from official sources]
@@ -36,9 +39,8 @@
 
 **Secondary sources**: [TO BE VERIFIED]
 
-**Confidence**: LOW_CONF
+**Confidence**: ⚠️ UNCERTAIN
 
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ⚠️ UNVERIFIED
+- Resources: Unknown as a standalone code
+- Recommendation: Use **VASP** (LBERRY tag), **Quantum ESPRESSO** (`ph.x` or `pw.x` berry option), **BerryPI**, or **Wannier90**.

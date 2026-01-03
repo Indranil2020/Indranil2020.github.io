@@ -1,44 +1,75 @@
 # AutoBZ.jl
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/lxvm/AutoBZ.jl
+- Documentation: https://lxvm.github.io/AutoBZ.jl/stable/
+- Source Repository: https://github.com/lxvm/AutoBZ.jl
+- License: MIT License
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+AutoBZ.jl is a Julia package for constructing and integrating Brillouin zone (BZ) quantities. It provides a flexible and efficient framework for defining the BZ, discretizing it (using various quadrature rules), and calculating properties like density of states, Fermi surfaces, and transport coefficients. It is designed to be highly modular and composable with other Julia packages in the electronic structure ecosystem.
 
-[TO BE COMPLETED]
+**Scientific domain**: Brillouin zone integration, electronic structure, numerical quadrature  
+**Target user community**: Julia developers, condensed matter theorists
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- Adaptive quadrature (h-adaptive)
+- Tetrahedron method
+- Monkhorst-Pack grids
+- Wannier interpolation (via Wannier.jl or similar)
+- Fermi surface integration
+- Green's function integration
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Automatic BZ Integration**: Adaptive algorithms for calculating integrals over the BZ
+- **Fermi Surface**: Calculation of iso-energy surfaces and integrals over them
+- **Modularity**: Works with user-defined Hamiltonians or interpolated bands
+- **Efficiency**: Julia's JIT compilation for high performance
+- **Dimensions**: Supports 1D, 2D, and 3D systems
 
-**Sources**: Pending verification
+**Sources**: AutoBZ.jl documentation, JuliaCon presentations
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Julia objects (Hamiltonian, lattice vectors), Wannier models
+- **Output data types**: Numerical values (integrals), Arrays (DOS), Plots
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **Julia Ecosystem**: Interoperable with `Wannier.jl`, `DFT.jl`, `TightBinding.jl`
+- **LinearAlgebra**: Uses standard Julia linear algebra
+- **Plotting**: Compatible with `Plots.jl`
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Define lattice and Hamiltonian in Julia.
+2. Construct BZ object: `bz = BrillouinZone(lattice, shift=...)`
+3. Define integrand function (e.g., spectral function).
+4. Compute integral: `integral = solve(IntegralProblem(integrand, bz))`
+
+## Performance Characteristics
+- Highly efficient due to Julia
+- Adaptive schemes can outperform uniform grids for singular integrands
+- Parallelizable
+
+## Application Areas
+- High-precision DOS calculations
+- Transport properties (conductivity tensors)
+- Spectral function integration
+- Method development
+
+## Community and Support
+- Open-source (MIT)
+- Active development by L. V. M. (lxvm)
+- GitHub issues and Julia Discourse
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/lxvm/AutoBZ.jl
+2. Documentation: https://lxvm.github.io/AutoBZ.jl/stable/
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE (GitHub)
+- Documentation: AVAILABLE
+- Source: OPEN (MIT)
+- Development: ACTIVE
+- Applications: BZ integration, Julia, adaptive quadrature

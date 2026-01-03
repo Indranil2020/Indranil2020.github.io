@@ -1,44 +1,60 @@
 # Matbench
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://matbench.materialsproject.org/
+- Documentation: https://hackingmaterials.lbl.gov/matbench/
+- Source Repository: https://github.com/materialsproject/matbench
+- License: MIT License
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+Matbench is an automated leaderboard and benchmark suite for materials science machine learning. It consists of a curated set of 13 materials datasets (covering properties like band gap, formation energy, elastic moduli) and a python package to simplify testing and submission. It aims to standardize the comparison of ML algorithms in materials science.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Machine learning benchmarking  
+**Target user community**: ML researchers, materials informaticians
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Datasets**: 13 diverse datasets (experimental and computational).
+- **Leaderboard**: Online ranking of algorithms (RF, Graph Networks, etc.).
+- **Python API**: `MatbenchBenchmark` class to automate cross-validation and scoring.
+- **Metrics**: MAE, RMSE, etc.
 
-**Sources**: Pending verification
+**Sources**: Matbench website, npj Comput. Mater. 6, 181 (2020)
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Algorithms (Python functions)
+- **Output data types**: Benchmark scores
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **matminer**: Often used for baselines.
+- **scikit-learn**: Compatible.
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. `mb = MatbenchBenchmark()`
+2. `for task in mb.tasks: task.record(predictions)`
+3. `mb.to_file("results.json.gz")`
+4. Submit to leaderboard.
+
+## Performance Characteristics
+- Standardized nested cross-validation ensures fair comparison.
+
+## Application Areas
+- Validating new ML models
+- Comparing descriptors
+
+## Community and Support
+- Materials Project (Dunn, Jain, et al.)
+- Active community challenges
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Homepage: https://matbench.materialsproject.org/
+2. Publication: A. Dunn et al., npj Comput. Mater. 6, 181 (2020)
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: COMPREHENSIVE
+- Source: OPEN
+- Development: ACTIVE
+- Applications: ML benchmarking

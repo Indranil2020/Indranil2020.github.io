@@ -1,44 +1,76 @@
 # IrRep
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://irrep.readthedocs.io/
+- Documentation: https://irrep.readthedocs.io/en/latest/
+- Source Repository: https://github.com/stepan-tsirkin/irrep
+- License: GNU General Public License v3.0
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+IrRep is a Python code for calculating the irreducible representations of Bloch states in ab-initio calculations. It interfaces with Quantum ESPRESSO, VASP, and Abinit to determine the symmetry properties of electronic bands, which is essential for identifying topological invariants, enforcing selection rules, and understanding band connectivity.
 
-[TO BE COMPLETED]
+**Scientific domain**: Symmetry analysis, irreducible representations, topological materials  
+**Target user community**: Topological physics researchers, DFT users
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- Group theory
+- Irreducible representations of space groups
+- Trace of symmetry operators
+- Character tables
+- Topological quantum chemistry (TQC)
+- Elementary Band Representations (EBR)
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- Calculation of irreps for all space groups (with/without SOC)
+- Identification of topological invariants
+- Analysis of band connectivity
+- Interface with Quantum ESPRESSO, VASP, Abinit
+- Calculation of symmetry eigenvalues
+- Trace of symmetry operators
 
-**Sources**: Pending verification
+**Sources**: IrRep documentation, Comp. Phys. Comm. 262, 107836 (2021)
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: DFT wavefunctions (WAVECAR/tmp.pp), structural data
+- **Output data types**: Irrep labels, traces, character tables
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **Quantum ESPRESSO**: Native interface
+- **VASP**: Supported via WAVECAR
+- **Abinit**: Supported
+- **Python**: Core implementation language
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Perform DFT calculation.
+2. Run IrRep: `python -m irrep <input_flags>`
+3. Analyze output for symmetry labels.
+
+## Performance Characteristics
+- Fast analysis of wavefunctions
+- Efficient handling of large basis sets
+
+## Application Areas
+- Topological insulators
+- Weyl semimetals
+- Symmetry-protected topological phases
+- Band structure analysis
+
+## Community and Support
+- Open-source (GPL v3)
+- GitHub repository
+- Developed by Stepan Tsirkin (University of Zurich)
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Homepage: https://irrep.readthedocs.io/
+2. GitHub: https://github.com/stepan-tsirkin/irrep
+3. Publication: M. Iraola, J. L. Mañes, B. Bradlyn, T. Neupert, M. G. Vergniory, S. S. Tsirkin, Comp. Phys. Comm. 262, 107836 (2021)
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: AVAILABLE
+- Source: OPEN (GitHub)
+- Development: ACTIVE (Tsirkin)
+- Applications: Irreps, topological phases, DFT interface

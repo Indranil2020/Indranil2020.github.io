@@ -1,44 +1,62 @@
-# MACE
+# MACE (Multi-Atomic Cluster Expansion)
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://mace-docs.readthedocs.io/
+- Documentation: https://mace-docs.readthedocs.io/
+- Source Repository: https://github.com/ACEsuit/mace
+- License: MIT License
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+MACE creates fast and accurate machine learning interatomic potentials using higher-order equivariant message passing. It combines the strengths of the Atomic Cluster Expansion (ACE) with message passing neural networks (MPNNs). MACE achieves state-of-the-art accuracy and is designed to be scalable for large simulations.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Machine learning potentials, equivariant neural networks  
+**Target user community**: MD users, ML researchers
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Higher Order Message Passing**: Captures many-body interactions efficiently.
+- **Foundation Models**: Pre-trained "universal" potentials (MACE-MP-0) available for the periodic table.
+- **Speed**: Optimized for GPU execution.
+- **LAMMPS/ASE**: Interfaces for MD.
 
-**Sources**: Pending verification
+**Sources**: MACE GitHub, arXiv:2206.07697
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: XYZ training data
+- **Output data types**: PyTorch models
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **PyTorch**: Backend.
+- **ASE**: Calculator.
+- **LAMMPS**: Production MD.
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Download pre-trained model or train your own.
+2. `calc = MACECalculator(model_path='MACE.model', device='cuda')`
+3. Run MD with ASE or LAMMPS.
+
+## Performance Characteristics
+- Very fast inference for an equivariant model.
+- High accuracy across diverse chemical spaces.
+
+## Application Areas
+- General purpose MD
+- Chemistry (reactions)
+- Materials discovery
+
+## Community and Support
+- Developed by Kovacs, Batatia, et al. (Cambridge/EPFL)
+- Rapidly growing community
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/ACEsuit/mace
+2. Publication: I. Batatia et al., NeurIPS 2022
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: AVAILABLE
+- Source: OPEN (GitHub)
+- Development: ACTIVE
+- Applications: SOTA ML potentials

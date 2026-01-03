@@ -1,44 +1,69 @@
 # AiiDA-VASP
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/aiida-vasp/aiida-vasp
+- Documentation: https://aiida-vasp.readthedocs.io/
+- Source Repository: https://github.com/aiida-vasp/aiida-vasp
+- License: MIT License
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+AiiDA-VASP is the official AiiDA plugin for the Vienna Ab initio Simulation Package (VASP). It provides an interface to run VASP calculations within the AiiDA workflow engine. It handles input generation (INCAR, POSCAR, KPOINTS, POTCAR), job submission, and parsing of output files (XML, OUTCAR) into the AiiDA database, preserving full provenance.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: DFT workflows, high-throughput VASP  
+**Target user community**: VASP users using AiiDA
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Calculations**: Support for standard VASP runs (`VaspCalculation`).
+- **WorkChains**: High-level workflows for relaxation (`RelaxWorkChain`), bands (`BandsWorkChain`), and convergence.
+- **Parsing**: Robust parsing of VASP outputs into Python dictionaries and AiiDA nodes.
+- **POTCAR Management**: Tools for managing VASP pseudopotentials families.
+- **Error Handling**: Basic error handling via AiiDA mechanisms.
 
-**Sources**: Pending verification
+**Sources**: AiiDA-VASP documentation
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: AiiDA Nodes (StructureData, KpointsData, Dict for parameters)
+- **Output data types**: BandsData, TrajectoryData, Dict (energies, forces)
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **AiiDA**: The parent framework
+- **VASP**: The calculation engine
+- **Pymatgen**: Often used for underlying IO logic
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Install plugin: `pip install aiida-vasp`
+2. Configure code and potentials.
+3. Submit WorkChain:
+   ```python
+   builder = WorkflowFactory('vasp.relax').get_builder()
+   builder.structure = structure
+   builder.parameters = Dict(dict={'incar': {...}})
+   submit(builder)
+   ```
+
+## Performance Characteristics
+- Dependent on VASP performance
+- AiiDA overhead is minimal compared to DFT runtime
+
+## Application Areas
+- High-throughput screening of materials properties
+- Database generation
+- reproducible VASP calculations
+
+## Community and Support
+- Maintained by AiiDA developers and community contributors
+- Active GitHub repository
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/aiida-vasp/aiida-vasp
+2. Documentation: https://aiida-vasp.readthedocs.io/
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: COMPREHENSIVE
+- Source: OPEN (GitHub)
+- Development: ACTIVE
+- Applications: VASP interface for AiiDA

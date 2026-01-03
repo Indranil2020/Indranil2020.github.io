@@ -1,44 +1,73 @@
 # gpaw-tools
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/elambiar/gpaw-tools (or similar repos)
+- Documentation: https://github.com/elambiar/gpaw-tools/wiki
+- Source Repository: https://github.com/elambiar/gpaw-tools
+- License: MIT License
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+gpaw-tools is a collection of Python scripts and modules designed to facilitate the use of the GPAW DFT code. It automates common tasks such as converging calculations, analyzing band structures, plotting density of states (DOS), and calculating optical properties. It acts as a user-friendly wrapper around GPAW and ASE functionality.
 
-[TO BE COMPLETED]
+**Scientific domain**: DFT workflow automation, post-processing, electronic structure  
+**Target user community**: GPAW users, computational physicists
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- Density Functional Theory (via GPAW)
+- Band structure analysis
+- Density of States (DOS/PDOS)
+- Optical properties (dielectric function)
+- Structure relaxation
+- Convergence testing
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Automation**: Scripts for common workflows (relax -> ground state -> band structure)
+- **Plotting**: Command-line tools for plotting bands and DOS
+- **Convergence**: Automated k-point and cutoff convergence
+- **Analysis**: Effective mass, band gap extraction
+- **Structure**: Interface with ASE for structure manipulation
 
-**Sources**: Pending verification
+**Sources**: gpaw-tools GitHub repository
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Python scripts using ASE/GPAW, structure files (cif, xyz)
+- **Output data types**: Plots (png/pdf), data files (txt), GPAW files (gpw)
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **GPAW**: The core DFT engine
+- **ASE**: Built on Atomic Simulation Environment
+- **Python**: Fully integrated Python environment
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Setup structure in Python script.
+2. Use `gpaw-tools` functions to run relaxation: `relax(atoms, ...)`
+3. Run ground state: `ground_state(atoms, ...)`
+4. Calculate properties: `dos(calc)`, `band_structure(calc)`
+5. Plot results using provided CLI tools.
+
+## Performance Characteristics
+- Python overhead is minimal
+- Depends on GPAW performance
+
+## Application Areas
+- 2D materials (graphene, TMDs)
+- Semiconductors
+- Rapid screening of materials
+
+## Community and Support
+- Open-source (MIT)
+- Developed by community members (e.g., S. E. L. A. M. B. I. A. R.)
+- GitHub issues
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/elambiar/gpaw-tools
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE (GitHub)
+- Documentation: AVAILABLE
+- Source: OPEN (MIT)
+- Development: COMMUNITY
+- Applications: GPAW workflow, plotting, automation

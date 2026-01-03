@@ -1,44 +1,57 @@
 # emmet
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/materialsproject/emmet
+- Documentation: https://github.com/materialsproject/emmet
+- Source Repository: https://github.com/materialsproject/emmet
+- License: Modified BSD License
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+Emmet is the core library defining the data models and "Builders" for the Materials Project. It defines the schema for materials properties (e.g., `MaterialDoc`, `TaskDoc`) and contains the logic to aggregate raw calculation tasks into consolidated material documents.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Materials data schema, database building  
+**Target user community**: Materials Project developers, users building MP-like databases
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Models**: Pydantic models for VASP tasks, materials, diffraction patterns, etc.
+- **Builders**: Maggma builders for processing tasks into materials (e.g., grouping relaxation and static runs).
+- **Validation**: Ensures data integrity via schema validation.
 
-**Sources**: Pending verification
+**Sources**: Emmet GitHub
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Task documents (from atomate/atomate2)
+- **Output data types**: Material documents (JSON/BSON)
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **Maggma**: Uses Maggma for building pipelines.
+- **Pymatgen**: Uses Pymatgen objects.
+- **MP API**: Serves data structured by Emmet.
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Parse VASP directory -> TaskDoc.
+2. Emmet Builder aggregates TaskDocs -> MaterialDoc.
+3. MaterialDoc is served via API.
+
+## Performance Characteristics
+- The logic behind MP's data generation.
+
+## Application Areas
+- Database construction
+- Data standardization
+
+## Community and Support
+- Materials Project Team
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/materialsproject/emmet
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: AVAILABLE
+- Source: OPEN (GitHub)
+- Development: ACTIVE
+- Applications: MP schema, data models

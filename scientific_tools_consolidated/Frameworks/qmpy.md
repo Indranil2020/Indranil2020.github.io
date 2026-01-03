@@ -1,44 +1,61 @@
-# qmpy
+# qmpy (Quantum Materials Python)
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/wolverton-research-group/qmpy
+- Documentation: https://qmpy.readthedocs.io/
+- Source Repository: https://github.com/wolverton-research-group/qmpy
+- License: MIT License
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+qmpy is the backend software stack for the Open Quantum Materials Database (OQMD). It provides tools for creating, managing, and analyzing high-throughput DFT calculations. It includes modules for structure manipulation, VASP input generation, job management, and thermodynamic analysis (phase diagrams).
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: High-throughput DFT, thermodynamics, OQMD backend  
+**Target user community**: OQMD users, Wolverton group, alloy researchers
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **OQMD Interface**: Direct interaction with OQMD database models (Django-based).
+- **Phase Diagrams**: Robust construction of convex hulls and stability analysis.
+- **Workflow**: Manages VASP jobs (local or cluster).
+- **Analysis**: Formation energies, reaction energies, grand canonical stability.
 
-**Sources**: Pending verification
+**Sources**: qmpy documentation
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Structure files, database queries
+- **Output data types**: Phase diagrams, VASP inputs
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **Django**: Uses Django ORM for database abstraction.
+- **VASP**: Primary calculation engine.
+- **OQMD**: The data it manages.
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Setup database settings.
+2. Ingest structure: `entry = Entry.create("POSCAR")`
+3. Analyze stability: `phase_diagram = PhaseDiagram(entry.elements); phase_diagram.stability(entry)`
+
+## Performance Characteristics
+- Database-centric (MySQL/PostgreSQL)
+- Optimized for thermodynamic analysis
+
+## Application Areas
+- Maintaining OQMD
+- Local high-throughput studies
+- Phase stability research
+
+## Community and Support
+- Developed by Wolverton Group (Northwestern)
+- Open source
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/wolverton-research-group/qmpy
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: AVAILABLE
+- Source: OPEN (GitHub)
+- Development: ACTIVE
+- Applications: OQMD, thermodynamics, VASP workflow

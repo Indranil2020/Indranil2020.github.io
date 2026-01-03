@@ -1,44 +1,60 @@
 # AFLOW-SYM
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: http://aflow.org/
+- Documentation: http://aflow.org/aflow-sym/
+- Source Repository: Part of AFLOW codebase
+- License: GPL v3
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+AFLOW-SYM is a robust symmetry analysis tool integrated into the AFLOW framework. It determines the symmetry of crystals (space group, Pearson symbol, Wyckoff positions) and performs symmetry-based operations like finding the primitive cell or standardization. It is designed to handle noisy experimental data and high-throughput calculations robustly.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Crystallography, symmetry analysis  
+**Target user community**: Materials scientists, crystallographers
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Symmetry Determination**: Space group, point group, crystal system.
+- **Tolerance**: Adaptive tolerance handling for distorted structures.
+- **Standardization**: Conversion to standard conventional/primitive cells.
+- **Wyckoff Positions**: Identification of site symmetries.
+- **Brillouin Zone**: Calculation of high-symmetry k-paths for band structures.
 
-**Sources**: Pending verification
+**Sources**: AFLOW website, Chem. Mater. 22, 585 (2010)
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: POSCAR, AFLOW input
+- **Output data types**: JSON, text report
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **AFLOW**: Part of the suite.
+- **VASP**: Used for standardizing inputs.
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. `aflow --sym --poscar=POSCAR`
+2. Returns symmetry report.
+
+## Performance Characteristics
+- High speed
+- Robust against numerical noise
+
+## Application Areas
+- High-throughput database generation
+- Structure classification
+- Band structure path generation
+
+## Community and Support
+- Developed by Curtarolo Group (Duke)
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Homepage: http://aflow.org/
+2. Publication: R. H. Taylor et al., Comp. Mater. Sci. 151, 104 (2018)
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: AVAILABLE
+- Source: OPEN (GPL)
+- Development: ACTIVE
+- Applications: Symmetry analysis

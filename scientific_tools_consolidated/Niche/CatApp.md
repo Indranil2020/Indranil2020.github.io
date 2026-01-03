@@ -1,44 +1,56 @@
 # CatApp
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: http://suncat.stanford.edu/catapp/
+- Documentation: Minimal
+- Source Repository: Web-based tool
+- License: Free to use
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+CatApp is a web-based application (and mobile app) providing a database of DFT-calculated reaction energies and activation barriers for surface reactions relevant to heterogeneous catalysis. It allows users to quickly look up activation energies for elementary steps on various metal surfaces.
 
-[TO BE COMPLETED]
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+**Scientific domain**: Catalysis, surface science database  
+**Target user community**: Catalysis researchers
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- **Database**: Activation energies and reaction energies for C, N, O, H species on transition metals.
+- **Visualization**: Reaction path diagrams.
+- **Interface**: Simple drop-down menu selection.
 
-**Sources**: Pending verification
+**Sources**: CatApp website, Angew. Chem. Int. Ed. 50, 10102 (2011)
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Web selection (Reactants, Products, Surface)
+- **Output data types**: Energy values (eV)
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- **SUNCAT**: Part of the SUNCAT ecosystem.
 
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+## Workflow and Usage
+1. Select surface (e.g., Pt(111)).
+2. Select reaction (e.g., CO + O -> CO2).
+3. Read activation energy.
+
+## Performance Characteristics
+- Instant lookup.
+
+## Application Areas
+- Quick estimation of barriers.
+- Educational use.
+
+## Community and Support
+- Developed by SUNCAT (Stanford/SLAC).
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. Homepage: http://suncat.stanford.edu/catapp/
+2. Publication: F. Abild-Pedersen et al., Angew. Chem. Int. Ed. 50, 10102 (2011)
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: MINIMAL (Self-explanatory)
+- Source: WEB APP
+- Development: STABLE
+- Applications: Catalysis database

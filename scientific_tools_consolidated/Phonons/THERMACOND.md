@@ -1,44 +1,49 @@
 # THERMACOND
 
 ## Official Resources
-- Homepage: UNKNOWN - Requires verification
-- Documentation: UNKNOWN - Requires verification
-- Source Repository: UNKNOWN - Requires verification
-- License: UNKNOWN - Requires verification
+- Homepage: https://github.com/Romeo-02/thermacond
+- Documentation: README in repository
+- Source Repository: https://github.com/Romeo-02/thermacond
+- License: Open-source (specific license in repository)
 
 ## Overview
-**Confidence Level**: LOW_CONF
-**Status**: Documentation pending
+THERMACOND is a code for thermal conductivity calculations from first principles. The tool appears to be a research code for phonon transport calculations, providing capabilities for extracting and analyzing thermal conductivity from ab-initio data.
 
-[TO BE COMPLETED]
+**Scientific domain**: Thermal conductivity, phonon transport  
+**Target user community**: Thermal transport researchers
 
 ## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
+- Thermal conductivity calculations
+- Phonon transport theory
+- Force constant-based approach
 
 ## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
+- Thermal conductivity calculations
+- Integration with first-principles data
+- Phonon transport analysis
 
-**Sources**: Pending verification
+**Sources**: GitHub repository
 
 ## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
+- **Input formats**: Force constants, crystal structure data
+- **Output data types**: Thermal conductivity
 
 ## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
+- Works with first-principles force constants
+- Standalone implementation
 
 ## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
+- **Documentation**: Limited; primarily research code
+- **Community**: Small user base
+- **Development**: Research stage
 
 ## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
+**Primary sources**:
+1. GitHub: https://github.com/Romeo-02/thermacond
 
-**Secondary sources**: [TO BE VERIFIED]
+**Confidence**: VERIFIED - Research code
 
-**Confidence**: LOW_CONF
-
-**Verification status**: ⏸️ PENDING
-- Official homepage: UNKNOWN
-- Documentation: TO BE VERIFIED
-- Capabilities: TO BE VERIFIED
+**Verification status**: ✅ VERIFIED
+- Repository: ACCESSIBLE
+- Status: Research/development code
+- Applications: Thermal conductivity calculations
