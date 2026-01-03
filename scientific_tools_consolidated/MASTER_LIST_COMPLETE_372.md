@@ -1009,9 +1009,8 @@
 - Resources: https://github.com/tamercan/MAISE
 
 **240. EVO**
-- Confidence: VERIFIED
-- Resources: https://github.com/evolutionary-codes/evo
-
+- Confidence: i checked it is a ppaer about evo but can not find any code for it 
+- Resources: https://doi.org/10.1016/j.cpc.2013.02.007
 **241. FLAME**
 - Confidence: VERIFIED
 - Resources: https://github.com/zhang-kai/FLAME (or similar research repo)

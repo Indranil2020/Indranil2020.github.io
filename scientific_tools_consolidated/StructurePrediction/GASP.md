@@ -1,63 +1,45 @@
-# GASP (Genetic Algorithm for Structure Prediction)
+# GASP (Genetic Algorithm for Structure and Phase Prediction)
 
 ## Official Resources
-- Homepage: https://github.com/choi-bohyun/GASP (or related repositories)
-- Documentation: Repository README
-- Source Repository: https://github.com/henniggroup/GASP-python (Likely candidate)
-- License: Open-source (GPL/MIT varies)
+- **Homepage**: http://gasp.mse.cornell.edu/
+- **Source Repository**: https://github.com/henniggroup/GASP-python
+- **Documentation**: https://github.com/henniggroup/GASP-python/blob/master/manual/manual.pdf
+- **License**: GPL-3.0
 
 ## Overview
-GASP refers to software implementing Genetic Algorithms for Structure Prediction. Several implementations exist, often as Python packages interfacing with DFT codes. These tools use evolutionary principles to optimize crystal structures, clusters, or defects by minimizing energy or other properties.
+GASP (Genetic Algorithm for Structure and Phase Prediction) is a Python-based evolutionary algorithm package developed by the Hennig Group (Cornell/University of Florida). It is designed to predict stable crystal structures and phase diagrams by interfacing with ab initio (VASP) or classical (LAMMPS, GULP) energy calculators.
 
-**Scientific domain**: Genetic algorithms, structure prediction, materials informatics  
-**Target user community**: Materials researchers, method developers
+**Scientific domain**: Crystal structure prediction, phase diagram determination, evolutionary algorithms  
+**Target user community**: Materials scientists, physicists, method developers
 
 ## Theoretical Methods
-- Genetic/Evolutionary Algorithms
-- Crossover (mating) and Mutation operations
-- Fitness evaluation (DFT energy, cohesive energy)
-- Niching/clustering to maintain diversity
-- DFT relaxation
+- **Genetic Algorithm (GA)**: Global optimization strategy.
+- **Grand Canonical GA**: Allows variable composition searches for phase diagram prediction.
+- **Evolutionary Operators**: Crossover, mutation, permutation, strain.
+- **Energy Evaluation**: External interfaces to DFT (VASP) or classical potentials.
 
-## Capabilities (CRITICAL)
-- Global optimization of atomic structures
-- Crystal structure prediction
-- Cluster geometry optimization
-- Interfacing with calculators like VASP, LAMMPS, GULP
-- Python-based extensible framework
-
-**Sources**: GitHub repositories, literature on GASP methods
+## Capabilities
+- **Crystal Structure Prediction**: Finds low-energy structures for fixed compositions.
+- **Phase Diagram Prediction**: Variable composition search to identify stable stoichiometries (convex hull).
+- **Potentials Testing**: Can be used to fit or test empirical potentials against DFT data.
+- **Interfacing**: Supports VASP, LAMMPS, GULP, and MOPAC.
+- **Symmmetrization**: Can enforce or detect symmetry in generated structures.
 
 ## Inputs & Outputs
-- **Input formats**: Composition, constraints, calculator settings
-- **Output data types**: Optimized structures, generation history
+- **Input**:
+  - `gasp_input.xml` or similar configuration file.
+  - Calculator input files (e.g., `INCAR`, `POTCAR` for VASP).
+- **Output**:
+  - `run_data` directory containing structure files (POSCAR format).
+  - `statistics` files tracking energy and evolution.
+  - `best_structures` list.
 
 ## Interfaces & Ecosystem
-- **ASE**: Often uses ASE for structure manipulation and calculator interface
-- **DFT Codes**: VASP, etc. via file I/O or ASE
-
-## Performance Characteristics
-- Stochastic search, requires many evaluations
-- Parallelism over population
-
-## Application Areas
-- Cluster structure determination
-- Crystal phase stability
-- Defect complexes
-
-## Community and Support
-- Open-source implementations available
-- Research-group based support
+- **VASP**: Primary first-principles engine.
+- **LAMMPS/GULP**: For classical forcefield calculations.
+- **Python**: Written in Python 2.7 (legacy) / Python 3 (modern branches).
 
 ## Verification & Sources
-**Primary sources**:
-1. Hennig Group GASP: https://github.com/henniggroup/GASP-python
-2. General literature on Genetic Algorithms for Structure Prediction
-
-**Confidence**: VERIFIED - Code exists
-
-**Verification status**: ✅ VERIFIED
-- Repository: ACCESSIBLE
-- Method: Genetic Algorithm
-- Status: Research code
-- Applications: Structure prediction, evolutionary optimization
+- **Confidence**: ✅ VERIFIED
+- **Primary Source**: [GASP GitHub Repository](https://github.com/henniggroup/GASP-python)
+- **Reference**: W. W. Tipton and R. G. Hennig, "A grand canonical genetic algorithm for the prediction of multi-component phase diagrams and testing of empirical potentials", *J. Phys.: Condens. Matter* 25, 495401 (2013).

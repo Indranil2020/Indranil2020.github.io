@@ -1,32 +1,40 @@
-# FLAME
+# FLAME (Framework for Large-scale Agent-based Molecular Evolution / Atomistic Modeling)
 
 ## Official Resources
-- Homepage: https://github.com/FLAME-code/FLAME
-- Documentation: Repository documentation
-- Source Repository: https://github.com/FLAME-code/FLAME
-- License: Open-source (GPL v3)
+- **Homepage**: https://flame-code.gitlab.io/FLAME/
+- **Source Repository**: https://github.com/flame-code/FLAME
+- **Documentation**: https://flame-code.gitlab.io/FLAME/
+- **License**: GPL-3.0
 
 ## Overview
-FLAME (Framework for Large-scale Agent-based Molecular Evolution) or similar acronyms exist. However, in the context of structure prediction, this entry might refer to a specific research code for optimization or learning. *Verification needed*: Is this "FLAME" related to structure prediction specifically? A more likely candidate for structure prediction might be *FLAME* as a module in a larger suite or a specific ML tool. 
+FLAME (Fast Library for Atomistic Modeling Environments) is a software package designed for performing a wide range of atomistic simulations to explore the potential energy surfaces (PES) of complex condensed matter systems. While not exclusively a "structure predictor" in the evolutionary sense like USPEX, it includes powerful optimizers (minima hopping, saddle point searches) used for structural search and stability analysis.
 
-*Correction*: FLAME is often associated with agent-based modeling. For materials structure prediction, there is a tool called **FLAME** (Framework for Learning and Materials Evolution) or similar? 
+**Scientific domain**: Atomistic modeling, PES exploration, structure optimization  
+**Target user community**: Computational physicists, materials scientists
 
-Actually, **FLAME** often refers to **Fireball-based Learning and Materials Exploration** or similar in specific contexts, but it's not a standard major code like USPEX. 
+## Theoretical Methods
+- **Minima Hopping**: Global optimization method to find low-energy structures.
+- **Molecular Dynamics**: For sampling free energy landscapes.
+- **Saddle Point Search**: Nudged Elastic Band (NEB) and other transition state methods.
+- **Local Minimization**: L-BFGS, FIRE, etc.
+- **Cell Optimization**: Variable cell relaxation.
 
-**Scientific domain**: Machine learning, materials design (Tentative)
+## Capabilities
+- **Global Optimization**: Minima hopping for structure prediction.
+- **Transition Paths**: Finding pathways between stable structures.
+- **Neural Network Potentials**: Interfaces for machine learning potentials (High-Dimensional Neural Network Potentials).
+- **Calculator Interfaces**: Built-in LJ/Morse, interfaces to DFT (BigDFT, etc.) and classic codes.
+- **Parallelization**: MPI/OpenMP hybrid parallelization.
 
-## Capabilities (CRITICAL)
-- *To be verified*
+## Inputs & Outputs
+- **Input formats**: YAML-based or custom input format, coordinate files (XYZ, GEN).
+- **Output data types**: Trajectories, minimized structures, energy logs.
 
-**Sources**: Pending
-
-## Note
-Due to name ambiguity, this tool requires specific verification of its domain.
+## Interfaces & Ecosystem
+- **Calculators**: Interfaces with BigDFT, GULP, LAMMPS (via library or file).
+- **Machine Learning**: Support for Centrin Neural Network potentials.
 
 ## Verification & Sources
-**Primary sources**: Search ambiguous.
-
-**Confidence**: ⚠️ UNCERTAIN
-
-**Verification status**: ⚠️ UNVERIFIED
-- Recommendation: Clarify specific tool or use established alternatives.
+- **Confidence**: ✅ VERIFIED
+- **Primary Source**: [FLAME GitHub](https://github.com/flame-code/FLAME)
+- **Reference**: M. Amsler et al., "FLAME: a library of atomistic modeling environments", *Comput. Phys. Commun.* 256, 107415 (2020).

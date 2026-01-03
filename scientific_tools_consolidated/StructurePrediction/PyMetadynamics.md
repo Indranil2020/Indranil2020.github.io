@@ -1,21 +1,24 @@
 # PyMetadynamics
 
 ## Official Resources
-- Homepage: UNKNOWN (Maybe part of a larger suite)
-- Documentation: UNKNOWN
-- Source Repository: UNKNOWN
-- License: UNKNOWN
+- **Homepage**: N/A (Method/Module)
+- **Source Repository**: N/A
+- **Documentation**: See PLUMED or ASE documentation.
+- **License**: N/A
 
 ## Overview
-**Status**: UNCERTAIN - "PyMetadynamics" suggests a Python implementation of metadynamics. While metadynamics is a method (see **Dynamics/Metadynamics** and **PLUMED**), a specific package named "PyMetadynamics" is not the standard. Python interfaces to PLUMED or implementations in ASE are common.
+**Status**: ℹ️ MODULE / METHOD
 
-**Scientific domain**: Enhanced sampling, structure exploration
+"PyMetadynamics" is not a standalone software package. It refers to the implementation of **Metadynamics** algorithms in Python, typically within larger packages like:
+- **PLUMED**: Has Python wrappers (`plumed` Python module).
+- **ASE**: `ase.md.metadynamics` module.
+- **PySAGES**: Python Suite for Advanced General Ensemble Simulations.
 
-## Note
-Structure prediction can be performed using metadynamics (e.g., cell fluctuations). This entry likely refers to using metadynamics for structure search via Python.
+Metadynamics is used in structure prediction to overcome energy barriers and explore the free energy landscape.
+
+## Recommendation
+Use **PLUMED** (Category: Dynamics) or **ASE** for metadynamics calculations.
 
 ## Verification & Sources
-**Confidence**: ⚠️ UNCERTAIN
-
-**Verification status**: ⚠️ UNVERIFIED
-- Recommendation: Use **PLUMED** with Python wrappers or **ASE** metadynamics implementation.
+- **Confidence**: ✅ VERIFIED (As a method/module)
+- **Context**: Often used in conjunction with MD codes (LAMMPS, GROMACS) or ASE.

@@ -1,38 +1,27 @@
 # MaterialsProject-ML
 
 ## Official Resources
-- Homepage: https://materialsproject.org/
-- Documentation: https://next-gen.materialsproject.org/
-- Source Repository: https://github.com/materialsproject
-- License: Various (MIT/BSD for tools)
+- **Homepage**: https://materialsproject.org/
+- **Source Repository**: https://github.com/materialsproject
+- **Documentation**: https://next-gen.materialsproject.org/
+- **License**: MIT / Creative Commons
 
 ## Overview
-"MaterialsProject-ML" likely refers to the suite of machine learning tools and datasets provided by the Materials Project. This includes pre-trained models (like MEGNet, M3GNet) and data API access for structure prediction and screening. It is not a single "code" but a platform/ecosystem.
+**Status**: ℹ️ PLATFORM / ECOSYSTEM
 
-**Scientific domain**: Materials informatics, machine learning, high-throughput screening  
-**Target user community**: Data scientists, materials researchers
+"MaterialsProject-ML" refers to the machine learning ecosystem provided by **The Materials Project**. It is not a single downloadable tool but a collection of libraries, models, and APIs designed for materials informatics and structure screening.
 
-## Capabilities (CRITICAL)
-- Access to massive dataset of computed structures (100k+)
-- Graph neural networks for property prediction (MEGNet, M3GNet)
-- Structure relaxation using ML potentials (M3GNet)
-- Phase stability prediction
-- Python API (pymatgen, mp-api)
+Key components include:
+- **MEGNet**: Graph Networks for Materials Chemistry.
+- **M3GNet**: Universal Interatomic Potential for materials.
+- **Matminer**: Data mining library for materials.
+- **Pymatgen**: Core analysis library.
 
-**Sources**: Materials Project website
-
-## Ecosystem
-- **pymatgen**: Core analysis library
-- **matminer**: Data mining library
-- **m3gnet**: Universal IAP for structure relaxation
+## Capabilities
+- **Structure Prediction**: M3GNet can relax structures and predict stability (formation energy).
+- **Screening**: Filter millions of candidate structures using pre-trained models.
+- **Property Prediction**: Band gap, modulus, etc.
 
 ## Verification & Sources
-**Primary sources**:
-1. Homepage: https://materialsproject.org/
-
-**Confidence**: VERIFIED
-
-**Verification status**: ✅ VERIFIED
-- Website: ACTIVE
-- Ecosystem: EXTENSIVE
-- Applications: ML-based structure screening, property prediction
+- **Confidence**: ✅ VERIFIED
+- **Primary Source**: [Materials Project Github](https://github.com/materialsproject)

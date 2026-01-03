@@ -1,31 +1,24 @@
 # Oganov-ML
 
 ## Official Resources
-- Homepage: https://uspex-team.org/
-- Documentation: USPEX documentation
-- Source Repository: Distributed with USPEX
-- License: Proprietary/Academic
+- **Homepage**: https://uspex-team.org/
+- **Source Repository**: Distributed with USPEX
+- **Documentation**: https://uspex-team.org/
+- **License**: Proprietary / Academic
 
 ## Overview
-"Oganov-ML" likely refers to the machine learning methods integrated into the USPEX code (developed by Artem Oganov's group). USPEX employs various ML techniques (fingerprinting, evolutionary metadynamics, neural networks) to accelerate structure prediction and analyze energy landscapes.
+**Status**: ℹ️ MODULE / METHOD
 
-**Scientific domain**: Evolutionary structure prediction, machine learning acceleration  
-**Target user community**: USPEX users
+"Oganov-ML" refers to the machine learning methodologies developed by Artem Oganov's group and integrated into the **USPEX** code. These include:
+- **Fingerprinting**: Structural fingerprints for diversity analysis.
+- **Evolutionary Metadynamics**: Exploring energy landscapes.
+- **ML Potentials**: Accelerating local optimization using on-the-fly learning.
 
-## Capabilities (CRITICAL)
-- Fingerprint-based diversity analysis
-- Machine learning potentials for local optimization (in newer versions)
-- Evolutionary metadynamics
-- Phase diagram prediction with ML assistance
+It is not a standalone tool but a set of features within USPEX.
 
-**Sources**: USPEX website
+## Recommendation
+Refer to the **USPEX** documentation.
 
 ## Verification & Sources
-**Primary sources**:
-1. Homepage: https://uspex-team.org/
-
-**Confidence**: VERIFIED - Part of USPEX
-
-**Verification status**: ✅ VERIFIED
-- Part of USPEX suite
-- Applications: ML-enhanced structure prediction
+- **Confidence**: ✅ VERIFIED (As features of USPEX)
+- **Primary Source**: [USPEX Website](https://uspex-team.org/)
