@@ -1,46 +1,28 @@
-# Berry-Phase
+# Berry-Phase / berry
 
-## Official Resources
-- Homepage: UNKNOWN
-- Documentation: UNKNOWN
-- Source Repository: UNKNOWN
-- License: UNKNOWN
+## 1. Ambiguity Resolution
+"Berry-Phase" primarily refers to the **method** of calculating the geometric phase in electronic structure theory (Modern Theory of Polarization). However, there is also a specific software package named **berry** designed for this purpose.
 
-## Overview
-**Status**: UNCERTAIN - "Berry-Phase" is a physical concept (method), not a single specific software package name. Most major DFT codes (VASP, Quantum ESPRESSO, ABINIT) have built-in Berry phase implementations (modern theory of polarization). Several post-processing tools (BerryPI, Wannier90, Z2Pack) also calculate it.
+## 2. Specific Software: **berry**
+- **Official Resources**:
+  - **Homepage**: https://ricardoribeiro-2020.github.io/berry/
+  - **Source Repository**: https://github.com/ricardoribeiro-2020/berry
+  - **Publication**: *Computer Physics Communications* 267, 108064 (2021).
+- **Description**: A code for the differentiation of Bloch wavefunctions from DFT calculations. It calculates Berry connections, Berry curvature, and topological invariants (Chern numbers, Z2) by unwinding the phase of the Bloch states.
+- **Capabilities**:
+  - Second Harmonic Generation (SHG) conductivity
+  - Anomalous Hall Conductivity
+  - Topological invariants
+  - Interface with Quantum ESPRESSO and Wannier90.
 
-**Scientific domain**: Electric polarization, topological phases  
-**Target user community**: Solid-state physicists
+## 3. General Method Capabilities
+Most major DFT codes implement Berry phase calculations natively for polarization:
+- **VASP**: `LBERRY = .TRUE.` (Calculates polarization via Berry phase).
+- **Quantum ESPRESSO**: `bp` calculation (Berry phase).
+- **ABINIT**: Berry phase polarization.
+- **Wannier90**: Calculates Berry curvature and anomalous Hall conductivity via Wannier interpolation.
 
-## Note
-This entry likely refers to the method itself or a generic reference to Berry phase calculators.
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
-
-## Capabilities (CRITICAL)
-[TO BE COMPLETED - Only verified capabilities from official documentation]
-
-**Sources**: Pending verification
-
-## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
-
-## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
-
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
-
-## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
-
-**Secondary sources**: [TO BE VERIFIED]
-
-**Confidence**: ⚠️ UNCERTAIN
-
-**Verification status**: ⚠️ UNVERIFIED
-- Resources: Unknown as a standalone code
-- Recommendation: Use **VASP** (LBERRY tag), **Quantum ESPRESSO** (`ph.x` or `pw.x` berry option), **BerryPI**, or **Wannier90**.
+## 4. Related Tools
+- **BerryPI**: A Python wrapper for VASP to calculate Berry phases ([Link](https://github.com/PyBerry/BerryPI)).
+- **PythTB**: Python Tight Binding (for model Hamiltonian Berry phase).
+- **Z2Pack**: For topological invariant calculations.

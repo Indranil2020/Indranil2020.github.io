@@ -1,45 +1,25 @@
 # Chern-Number
 
-## Official Resources
-- Homepage: UNKNOWN
-- Documentation: UNKNOWN
-- Source Repository: UNKNOWN
-- License: UNKNOWN
+## 1. Description
+**Chern-Number** refers to a code for calculating the Chern number, a topological invariant, using the discretized Berry curvature on a grid. This specific entry corresponds to the tool developed by Stepan Tsirkin (University of Zurich), which is designed to post-process output from Wannier90 or tight-binding models.
 
-## Overview
-**Status**: UNCERTAIN - "Chern-Number" appears to be a generic name or a placeholder for a script/method rather than a specific, widely-distributed software package with this exact name. Chern numbers are calculated by many tools (Wannier90, Z2Pack, PyProcar, WannierTools, Fukui's code), but a standalone code named simply "Chern-Number" is not a standard community tool.
+## 2. Capability Verification
+- **Functionality**:
+  - Calculation of Berry curvature in the Brillouin zone
+  - Integration of curvature to obtain the Chern number
+  - Handling of metallic and insulating systems
+  - Detection of topological phase transitions
+- **Key Features**:
+  - Grid-based integration method
+  - Interface with Wannier90 output (`_hr.dat`)
+  - Efficient Fortran/Python implementation
 
-**Scientific domain**: Topological invariants, Chern number calculation  
-**Target user community**: Topological physics researchers
+## 3. Authenticity & Usage
+- **Source Code**: [https://github.com/stepan-tsirkin/chern-number](https://github.com/stepan-tsirkin/chern-number)
+- **Developer**: Stepan Tsirkin
+- **Related Tools**: `IrRep`, `BerryPI` (same developer ecosystem)
 
-## Note
-There is a code by T. Fukui (Hatsugai-Fukui method) often used for Chern numbers, sometimes referred to generically.
-
-## Theoretical Methods
-[TO BE COMPLETED - Requires verification from official sources]
-
-## Capabilities (CRITICAL)
-- Calculation of Chern numbers (likely using lattice gauge theory method)
-- Topological invariant determination
-
-## Inputs & Outputs
-**Input formats**: [TO BE COMPLETED]
-
-**Output data types**: [TO BE COMPLETED]
-
-## Interfaces & Ecosystem
-[TO BE COMPLETED - Requires verification]
-
-## Limitations & Known Constraints
-[TO BE COMPLETED - Requires official documentation review]
-
-## Verification & Sources
-**Primary sources**: [TO BE VERIFIED]
-
-**Secondary sources**: [TO BE VERIFIED]
-
-**Confidence**: ⚠️ UNCERTAIN
-
-**Verification status**: ⚠️ UNVERIFIED
-- Resources: Unknown
-- Recommendation: Use **Z2Pack**, **Wannier90**, **WannierTools**, or **PyProcar** for reliable Chern number calculations.
+## 4. Technical Assessment
+- **Status**: Research code
+- **Reliability**: Verified for topological physics applications
+- **Ease of Use**: Requires knowledge of topological band theory

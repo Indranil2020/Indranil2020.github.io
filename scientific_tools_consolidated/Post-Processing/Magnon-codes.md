@@ -60,5 +60,5 @@ This entry serves as a category placeholder for magnon simulation and spin dynam
 **Confidence**: VERIFIED
 
 **Verification status**: ✅ VERIFIED
-- Category: Placeholder for verified codes
-- Recommendation: See individual entries for **Spirit**, **VAMPIRE**, **TB2J**. Use **SpinW** for experimental fitting.
+- **Category**: Placeholder for verified codes
+- **Recommendation**: See individual entries for **Spirit**, **VAMPIRE**, **SpinW** (new file), and **TB2J**.
