@@ -1,7 +1,7 @@
 # DMol3
 
 ## Official Resources
-- Homepage: Part of BIOVIA Materials Studio (Dassault Systèmes)
+- Homepage: https://www.3ds.com/products/biovia/materials-studio/dmol3
 - Documentation: Available through Materials Studio documentation
 - Source Repository: Proprietary (commercial license)
 - License: Commercial license (part of Materials Studio)

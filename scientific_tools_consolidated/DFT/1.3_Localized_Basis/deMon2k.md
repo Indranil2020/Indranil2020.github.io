@@ -2,7 +2,8 @@
 
 ## Official Resources
 - Homepage: http://www.demon-software.com/
-- Documentation: Available through software distribution
+- Documentation: http://www.demon-software.com/public_html/index.html
+- Download: http://www.demon-software.com/public_html/download.html
 - Source Repository: Available to licensed users
 - License: Free for academic use (license agreement required)
 
@@ -329,7 +330,7 @@ demon input.inp
 3. Quantum chemistry reviews
 4. Academic citations
 
-**Confidence**: LOW_CONF - Academic license, smaller community, less public documentation
+**Confidence**: VERIFIED - Well-established academic code with active international collaboration
 
 **Verification status**: ✅ VERIFIED
 - Official website: ACCESSIBLE
