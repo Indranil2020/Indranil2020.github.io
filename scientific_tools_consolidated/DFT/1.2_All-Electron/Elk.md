@@ -80,6 +80,77 @@ Elk (formerly Exciting) is an all-electron full-potential linearized augmented p
   - Built-in analysis tools
   - elk-optics for optical spectra
 
+## Workflow and Usage
+
+### Basic DFT Calculation
+```bash
+# 1. Create elk.in input file with structure and parameters
+# 2. Run Elk
+elk
+
+# Check convergence in INFO.OUT
+# Results in EIGVAL.OUT, TDOS.OUT, etc.
+```
+
+### Optical Properties Calculation
+```bash
+# 1. Ground state calculation
+elk
+
+# 2. Add optics tasks to elk.in:
+# ! Calculate optical response
+tasks
+  0    # Ground state
+  120  # Dielectric function
+  121  # Optical conductivity
+
+# 3. Run calculation
+elk
+
+# Results in EPSILON_*.OUT files
+```
+
+### GW Calculation
+```bash
+# 1. Converged DFT ground state
+elk
+
+# 2. Setup GW calculation in elk.in:
+tasks
+  0    # Ground state
+  300  # G0W0 calculation
+
+# 3. Run GW
+elk
+
+# Quasiparticle energies in QPENE.OUT
+```
+
+### Magnetic Calculations
+```bash
+# Enable spin-polarized calculation in elk.in:
+spinpol
+  .true.
+
+# Set initial magnetic moments
+bfcmt
+  [atom index] 0.0 0.0 [magnetic moment]
+
+# Run calculation
+elk
+
+# Magnetic moments in INFO.OUT
+```
+
+## Application Areas
+- Magnetic materials and spintronics
+- Optical spectroscopy (absorption, reflectivity)
+- X-ray spectroscopy (XAS, XES, EELS)
+- Excited-state properties (GW, BSE)
+- Heavy element systems (relativistic effects)
+- Complex magnetic structures
+- Phonons and lattice dynamics
+
 ## Limitations & Known Constraints
 - **Open-source but specialized**: Smaller community than WIEN2k
 - **All-electron cost**: Computationally expensive; ~100-200 atom limit

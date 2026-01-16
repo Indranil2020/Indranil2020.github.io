@@ -82,6 +82,71 @@ WIEN2k is an all-electron full-potential (linearized) augmented plane-wave plus 
   - Extensive built-in analysis tools
   - Property calculation modules
 
+## Workflow and Usage
+
+### Basic DFT Calculation
+```bash
+# 1. Initialize calculation
+init_lapw
+
+# 2. Run self-consistent field calculation
+run_lapw
+
+# 3. Calculate band structure
+x lapw1 -band
+x lapw2 -band -qtl
+
+# 4. Calculate DOS
+x lapw2 -qtl
+x tetra
+
+# Results in case.scf, case.qtl, case.dos*
+```
+
+### Using w2web GUI
+```bash
+# Start web interface
+w2web
+
+# Access at http://localhost:7890
+# Graphical setup of calculations
+```
+
+### Spin-Polarized Calculation
+```bash
+# Initialize with spin polarization
+init_lapw -sp
+
+# Run spin-polarized SCF
+runsp_lapw
+
+# Magnetic moments in case.scf
+```
+
+### GW Calculation
+```bash
+# After converged DFT
+prepare_gw_lapw
+
+# Run GW module
+run_gw
+
+# Quasiparticle energies in case.gw
+```
+
+## Application Areas
+- Benchmark-quality electronic structure calculations
+- Magnetic materials (complex magnetic structures, anisotropy)
+- Electric field gradients (NMR, Mössbauer spectroscopy)
+- X-ray spectroscopy (XANES, EELS, XES)
+- Hyperfine interactions
+- Strongly correlated systems (DFT+U, DFT+DMFT)
+- Accurate band structure predictions
+- Transition metal oxides and compounds
+- Heavy element systems (relativistic effects)
+- Thermoelectric materials
+- Materials requiring highest accuracy
+
 ## Limitations & Known Constraints
 - **Licensing**: Requires purchase of academic or commercial license
 - **Cost**: Not free; license fees required

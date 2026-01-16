@@ -70,6 +70,63 @@ Questaal is a suite of codes for electronic structure calculations using DFT, QS
   - Built-in analysis tools
   - lmf utilities suite
 
+## Workflow and Usage
+
+### Basic DFT Calculation
+```bash
+# 1. Create ctrl file (control file)
+lmfa material  # Generate free-atom densities
+
+# 2. Self-consistent DFT calculation
+lmf material   # Run DFT calculation
+
+# 3. Generate DOS
+lmf material --quit=band  # Calculate band structure
+lmdos material            # Calculate DOS
+```
+
+### QSGW Calculation
+```bash
+# 1. Start with converged DFT
+lmf material
+
+# 2. Generate GW basis
+lmfgwd material
+
+# 3. Self-consistent QSGW loop
+for i in {1..10}; do
+  lmgw material        # GW calculation
+  lmf material --rs=1  # Update DFT with QSGW
+done
+
+# 4. Analyze band structure
+lmf material --quit=band
+```
+
+### LDA+DMFT Workflow
+```bash
+# 1. DFT calculation
+lmf material --ldadc
+
+# 2. Setup DMFT
+lmfdmft material --setup
+
+# 3. DMFT self-consistency
+lmfdmft material --iter=20
+
+# 4. Post-process results
+lmfdmft material --spectral
+```
+
+## Application Areas
+- Strongly correlated materials (Mott insulators, heavy fermions)
+- Accurate band structure predictions (QSGW)
+- Transition metal oxides and chalcogenides
+- Magnetic materials and spintronics
+- Surfaces and interfaces
+- Defect and impurity calculations
+- Materials with strong correlation effects
+
 ## Limitations & Known Constraints
 - **Learning curve**: LMTO methods and input format require familiarity
 - **Documentation**: Comprehensive but still evolving

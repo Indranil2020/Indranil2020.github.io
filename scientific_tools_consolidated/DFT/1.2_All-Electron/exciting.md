@@ -78,6 +78,80 @@ exciting is an all-electron full-potential linearized augmented planewave (FP-LA
   - exciting-xs - excited states analysis
   - Python-based analysis tools
 
+## Workflow and Usage
+
+### Basic DFT Calculation
+```bash
+# 1. Create input.xml
+exciting
+
+# Ground state results in INFO.OUT
+# Band structure in bandstructure.xml
+```
+
+### Optical Spectra (TDDFT)
+```xml
+<!-- Add to input.xml -->
+<xs xstype="TDDFT" 
+    ngridk="4 4 4" 
+    vkloff="0.0 0.0 0.0"
+    nempty="30">
+    <energywindow intv="0.0 1.0" points="500"/>
+    <screening screentype="full"/>
+    <BSE bsetype="singlet"/>
+</xs>
+```
+
+```bash
+exciting
+# Optical absorption in EPSILON*.OUT
+```
+
+### GW Calculation
+```xml
+<!-- GW calculation setup -->
+<xs xstype="BSE"
+    ngridk="4 4 4"
+    nempty="50">
+    <qpointset>
+        <qpoint>0.0 0.0 0.0</qpoint>
+    </qpointset>
+    <gw selfenergy="ppm"/>
+</xs>
+```
+
+```bash
+exciting
+# Quasiparticle energies in QPENE.OUT
+```
+
+### BSE for Excitonic Effects
+```xml
+<!-- BSE calculation for optical excitations -->
+<xs xstype="BSE"
+    ngridk="6 6 6"
+    nempty="40">
+    <screening screentype="full"/>
+    <BSE bsetype="singlet"
+         nstlbse=" 1 5  1 3"/>
+</xs>
+```
+
+```bash
+exciting
+# Excitonic optical spectra including electron-hole effects
+```
+
+## Application Areas
+- Optical spectroscopy (absorption, reflectivity, EELS)
+- Excited-state properties
+- Excitons and optical excitations (BSE)
+- Band structure calculations (GW)
+- X-ray spectroscopy
+- Magneto-optical effects
+- Phonons and lattice dynamics
+- Materials with strong excitonic effects
+
 ## Limitations & Known Constraints
 - **All-electron cost**: Computationally expensive; ~100-200 atom limit for DFT, smaller for GW/BSE
 - **GW/BSE expensive**: Very demanding; limited to smaller systems

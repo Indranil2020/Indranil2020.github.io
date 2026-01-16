@@ -75,6 +75,70 @@ Fleur is a feature-full, freely available FLAPW (Full-potential Linearized Augme
   - JuKKR - KKR method code (same team)
   - masci-tools - Python interface
 
+## Workflow and Usage
+
+### Basic DFT Calculation
+```bash
+# 1. Generate input file (inp.xml)
+inpgen -f structure.cif
+
+# 2. Run self-consistent calculation
+fleur
+
+# Results in out.xml
+```
+
+### AiiDA-Fleur Workflow
+```python
+from aiida import load_profile
+from aiida_fleur.workflows import FleurScfWorkChain
+
+# Setup structure and parameters
+structure = ...  # AiiDA StructureData
+parameters = {...}
+
+# Run automated SCF with AiiDA
+submit(FleurScfWorkChain,
+       fleur=code,
+       structure=structure,
+       calc_parameters=parameters)
+```
+
+### Magnetic Properties
+```bash
+# Enable spin-polarized calculation in inp.xml
+# Set initial magnetic moments
+
+# Calculate exchange interactions
+fleur_exch
+
+# Calculate magnetic anisotropy
+fleur_mae
+
+# Results: J_ij parameters, MAE values
+```
+
+### Surface Calculations
+```bash
+# 1. Generate film structure
+inpgen -f slab_structure.cif -film
+
+# 2. optimize film geometry  
+fleur
+
+# 3. Calculate surface properties
+# Surface energies, work functions in out.xml
+```
+
+## Application Areas
+- Magnetic materials (exchange interactions, anisotropy)
+- Spintronics (spin-orbit coupling, DMI)
+- Surfaces and interfaces
+- Thin films and multilayers
+- Anomalous Hall effect
+- Orbital magnetization
+- High-throughput materials screening (AiiDA)
+
 ## Limitations & Known Constraints
 - **All-electron cost**: Computationally expensive; limited to ~100-200 atoms
 - **Learning curve**: FLAPW methods require understanding
