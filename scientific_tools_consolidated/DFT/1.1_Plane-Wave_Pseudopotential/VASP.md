@@ -96,7 +96,29 @@ VASP (Vienna Ab initio Simulation Package) is a leading commercial plane-wave DF
 - **Pseudopotentials**: PAW datasets must be obtained separately; quality depends on PAW library version
 - **Convergence**: Can be challenging for metallic systems or strongly correlated materials without appropriate settings
 - **Hybrid functionals**: Computationally expensive; limited to smaller systems (~100 atoms)
+
+## Computational Cost
+- **Standard DFT**: $O(N^3)$ scaling; feasible for < 500 atoms.
+- **Hybrid Functionals**: $O(N^4)$ formally; feasible for < 100 atoms expensive.
+- **GW/MP2**: $O(N^4)$ - $O(N^5)$; feasible for < 50 atoms.
+- **Memory**: High for gw/random-phase approximation.
 - **Documentation**: Some advanced features poorly documented; community wiki varies in quality
+
+## Comparison with Other Codes
+- **vs Quantum ESPRESSO**: VASP is commercial, QE is open-source. VASP often considered more robust for metals/hybrids; QE has more advanced phonon/response implementations.
+- **vs CASTEP**: Both commercial; VASP has larger user base and ML-FF support; CASTEP strong in spectroscopy (NMR).
+- **vs ABINIT**: ABINIT leads in response functions/GW; VASP is generally faster for standard relaxation/MD tasks.
+
+## Best Practices
+- **Parallelization**: Standard VASP scales to ~256-512 cores. Use `NCORE` for band parallelization.
+- **Precision**: Use `PREC = Accurate` for publication-quality forces/stresses.
+- **Hybrids**: Use `ALGO = Damped` or `All` for stable convergence.
+- **ML-FF**: Train on diverse structures; validation on independent test set is mandatory.
+
+## Community and Support
+- **Support**: Official VASP Forum (moderated by developers).
+- **Training**: Regular workshops (Vienna, online).
+- **Resources**: VASP wiki, Materials Project forum.
 
 ## Verification & Sources
 **Primary sources**:

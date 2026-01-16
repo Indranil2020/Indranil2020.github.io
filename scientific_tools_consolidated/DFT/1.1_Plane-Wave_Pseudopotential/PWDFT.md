@@ -47,6 +47,14 @@ PWDFT is a plane-wave density functional theory (DFT) code developed by Eric J. 
   - Standard output (Energy, convergence)
   - Wavefunction files
 
+## Computational Cost
+- **Research Code**: Optimized for benchmarking FFTs and parallel communications.
+- **Scaling**: Designed to test limits of HPC scaling; not optimized for production throughput like NWChem.
+
+## Best Practices
+- **Usage**: Use for testing new algorithms or compiling on novel architectures (Cray/GPU).
+- **Production**: Use NWChem for actual science production runs.
+
 ## Comparison with Other Codes
 - **vs NWChem**: PWDFT is a smaller, standalone research code/mini-app, while NWChem is a full production suite.
 - **vs PWDFT.jl**: PWDFT.jl is a separate educational project in Julia by F. Fathurrahman; this PWDFT is the C++/Fortran research code by Bylaska.

@@ -88,7 +88,25 @@ JDFTx (Joint Density Functional Theory - extended) is a plane-wave DFT code desi
 - **GPU requirement**: Best performance requires CUDA-capable GPU
 - **Input format**: Unique syntax requires learning curve
 - **Post-processing**: Fewer established analysis tools
-- **Platform support**: Primarily Linux; GPU drivers required
+- **Platform support**: Primarily Linux/Unix; GPU drivers required
+
+## Computational Cost
+- **Scaling**: Excellent on GPUs; CPU scaling is standard $O(N^3)$.
+- **Solvation**: Implicit solvation adds minimal overhead (~10-20%) compared to vacuum calculations, much cheaper than explicit solvent.
+- **Memory**: GPU memory can be a bottleneck for large systems.
+
+## Comparison with Other Codes
+- **vs VASP/QE**: JDFTx is specialized for solvation/electrochemistry. If you need standard solid-state properties, VASP/QE are more feature-rich. If you need electrochemical interfaces, JDFTx is superior.
+- **vs Qbox**: Both are C++ and scalable, but JDFTx focuses on solvation/embedding, Qbox on massive MD.
+
+## Best Practices
+- **GPU**: Use `jdw` (JDFTx wrapper) to manage GPU resources effectively.
+- **Solvation**: Start with `PCM` or `CANDLE` before moving to more complex `SaLSA` models.
+- **Minimization**: Use `Minimize` for electronic steps; it is often more robust than `SCF` mixing for difficult solvated systems.
+
+## Community and Support
+- **Support**: GitHub Issues are the primary support channel.
+- **Development**: Active interaction with developers (Sundararaman group).
 
 ## Verification & Sources
 **Primary sources**:

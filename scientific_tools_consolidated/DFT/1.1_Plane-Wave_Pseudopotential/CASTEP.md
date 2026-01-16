@@ -98,6 +98,25 @@ CASTEP is a leading academic and commercial plane-wave DFT code for studying mat
 - **Documentation**: Comprehensive but requires familiarity with input file format
 - **Platform support**: Primarily Linux/Unix; Windows support limited
 
+## Computational Cost
+- **Scaling**: Good MPI efficiency; $O(N^3)$ generally.
+- **Memory**: Can be high for NMR/response calculations.
+- **On-the-fly Potentials**: Adds small overhead but ensures accuracy.
+
+## Comparison with Other Codes
+- **vs VASP**: CASTEP has on-the-fly pseudopotential generation (OTFG), whereas VASP uses a fixed PAW library. CASTEP is often preferred for NMR/spectroscopy.
+- **vs Quantum ESPRESSO**: CASTEP is commercial/academic-licensed; QE is GPL. CASTEP's integration with Materials Studio offers a better GUI experience for beginners.
+
+## Best Practices
+- **OTFG**: Use "On-The-Fly Generation" for pseudopotentials to avoid database inconsistencies.
+- **Cutoff**: Use `QC5` (Quality 5) settings for publication-grade convergence.
+- **Parallelization**: Use `mpirun` with optimized libraries (MKL); CASTEP balances k-point and G-vector parallelism automatically.
+
+## Community and Support
+- **Support**: CASTEP email list (for licensees).
+- **Training**: Annual workshops in the UK (e.g., York, Oxford).
+- **Commercial**: Support via BIOVIA (Materials Studio) for commercial users.
+
 ## Verification & Sources
 **Primary sources**:
 1. Official website: https://www.castep.org/

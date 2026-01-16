@@ -89,12 +89,18 @@ CP2K is a versatile quantum chemistry and solid-state physics software package p
 - **Mixed basis complexity**: GPW method requires understanding of basis set convergence for both Gaussian and plane-wave components
 - **Memory intensive**: Hybrid functionals and MP2 require substantial memory
 - **Input complexity**: Hierarchical input format has steep learning curve
-- **Pseudopotentials**: Limited to GTH pseudopotentials for GPW; all-electron expensive
+- **Efficient pseudopotentials**: Use GTH potentials optimized for GPW.
 - **K-point sampling**: Limited support for k-points; best for large supercells
 - **Scaling**: Parallel efficiency varies by method; hybrid DFT scales well
 - **Documentation**: Extensive but can be difficult to navigate for beginners
 - **Convergence**: Some systems require careful tuning of SCF parameters
 - **Periodic/non-periodic mixing**: Some methods restricted to specific boundary conditions
+
+## Best Practices
+- **Basis Sets**: Use the "MOLOPT" basis sets (molecularly optimized) for best convergence.
+- **Cutoff**: The `CUTOFF` parameter refers to the plane-wave grid; usually 300-600 Ry is needed. This is much higher than PW-only codes because it handles the density, not wavefunctions.
+- **OT vs Diagonalization**: Use Orbital Transformation (OT) for large insulating systems (linear scaling); use diagonalization for metals.
+- **Filesystem**: CP2K creates many temporary files; ensure fast I/O or use scratch directories.
 
 ## Verification & Sources
 **Primary sources**:

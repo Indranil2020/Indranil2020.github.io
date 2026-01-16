@@ -55,6 +55,22 @@ PLATO is a localized orbital-based electronic structure package developed by And
 - **Availability**: Not a standard open-source repository; often obtained via academic channels (CCP9).
 - **Documentation**: Less publicly accessible than major community codes like VASP or QE.
 
+## Computational Cost
+- **O(N) Scaling**: Linear scaling with system size, enabling calculations on thousands of atoms.
+- **Efficiency**: Very high for tight-binding; DFT mode slower but competitive for large systems.
+
+## Comparison with Other Codes
+- **vs SIESTA**: Both are O(N) codes using localized orbitals. PLATO allows direct comparison of TB and DFT parameters.
+- **vs VASP**: PLATO is specialized for large systems/O(N); VASP is a general purpose plane-wave code (scaling $N^3$).
+
+## Best Practices
+- **Basis Set**: Careful testing of basis set completeness is required (unlike plane waves).
+- **Parameters**: TB parameters must be transferable to your system of interest.
+
+## Community and Support
+- **Access**: Distributed via CCP9 (Collaborative Computational Project 9) or by request.
+- **Support**: Direct academic collaboration with developers.
+
 ## Verification & Sources
 - **Primary Source**: Published literature (Phys. Rev. B 62, 4899) and Imperial College research pages.
 - **Confidence**: VERIFIED - Well-established code in the tight-binding/DFT community.

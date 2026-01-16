@@ -86,7 +86,25 @@ Qbox is a scalable parallel implementation of first-principles molecular dynamic
 - **Hybrid functionals**: Limited implementation
 - **Features**: Focuses on MD; fewer property calculations than general codes
 - **Basis sets**: Plane-wave only
-- **Platform**: Primarily for HPC systems; not optimized for desktop use
+- **Platform support**: Primarily for HPC systems; not optimized for desktop use
+
+## Computational Cost
+- **Scalability**: Scaling to 100,000+ cores demonstrated (Blue Gene/Q).
+- **Efficiency**: Optimized for large-scale AIMD (1000+ atoms).
+- **Overhead**: Minimum system size recommended is ~50 atoms due to parallel overhead structure.
+
+## Comparison with Other Codes
+- **vs Quantum ESPRESSO**: Qbox is designed specifically for "First Principles MD at scale". QE is a general purpose swiss-army knife. Qbox is simpler but faster for its specific niche (large AIMD).
+- **vs CPMD**: Qbox uses Born-Oppenheimer MD (mostly), CPMD uses Car-Parrinello. Qbox scales better on modern massive supercomputers.
+
+## Best Practices
+- **Input**: Learn the XML-based input or use the interactive command line for steering simulations.
+- **HPC**: Use the `row_m`, `col_m` matrix distributions to map the calculation to the specific torus/interconnect topology of your supercomputer.
+- **Restart**: Qbox's XML restart files are robust; use them frequently to checkpoint long MD runs.
+
+## Community and Support
+- **Mailing List**: `qbox-users` list available.
+- **Documentation**: Online HTML manual is the primary resource.
 
 ## Verification & Sources
 **Primary sources**:

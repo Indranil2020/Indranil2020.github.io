@@ -90,6 +90,26 @@ ABINIT is a comprehensive open-source package for electronic structure calculati
 - **Installation**: Build process can be complex with many optional dependencies
 - **File I/O**: NetCDF files can become very large for big systems
 
+## Computational Cost
+- **Ground State (PW)**: $O(N^3)$.
+- **GW/BSE**: Highly expensive ($O(N^4)$); requires massive memory.
+- **Wavelets (BigDFT)**: $O(N)$ linear scaling mode available via BigDFT integration.
+
+## Comparison with Other Codes
+- **vs Quantum ESPRESSO**: ABINIT has a longer history with GW/response functions; QE is often faster for standard MD.
+- **vs Yambo**: Yambo acts as a post-processor for QE; ABINIT has GW built-in, offering a more unified but sometimes monolithic experience.
+- **vs VASP**: ABINIT is open-source and has more diverse basis set options (wavelets); VASP is faster for simple relaxation.
+
+## Best Practices
+- **Parallelization**: Study the `autoparal` feature (automatic parallelization tuning).
+- **Pseudopotentials**: Use `PseudoDojo` tables (standard for ABINIT).
+- **Convergence**: GW calculations require convergence of empty states (`nband`), which is much harder than ground state.
+
+## Community and Support
+- **Forum**: Official ABINIT Forum (forum.abinit.org).
+- **Events**: ABINIT schools held annually (often in Europe/Louvain).
+- **Development**: Hosted on GitHub (switched from diverse repos).
+
 ## Verification & Sources
 **Primary sources**:
 1. Official website: https://www.abinit.org/

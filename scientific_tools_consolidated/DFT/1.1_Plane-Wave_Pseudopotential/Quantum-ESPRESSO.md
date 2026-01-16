@@ -88,8 +88,29 @@ Quantum ESPRESSO (QE) is an integrated suite of open-source codes for electronic
 - **Memory**: Can be memory-intensive for hybrid functionals or exact exchange
 - **Convergence**: Metallic systems require appropriate smearing; insulators need careful k-point sampling
 - **Hybrid functionals**: Computationally expensive via experimental ACE feature
+
+## Computational Cost
+- **Plane Wave DFT**: $O(N^3)$ with system size.
+- **Parallel Scaling**: Excellent scaling (up to thousands of cores) due to FFT parallelization.
+- **Memory**: Plane-wave basis requires significant memory for vacuum regions (use implicit solvent or Coulomb cutoff if needed).
 - **User interface**: Command-line driven; learning curve for input file syntax
 - **Documentation**: Extensive but can be overwhelming; scattered across multiple manuals
+
+## Comparison with Other Codes
+- **vs VASP**: QE is free/open-source; performance is competitive (often slightly slower per SCF, but scales better to massive core counts).
+- **vs ABINIT**: QE is generally faster for ground state/MD; ABINIT has historically stronger many-body perturbation theory features (though QE's Yambo interface is excellent).
+- **vs CP2K**: QE uses pure plane waves (better for accuracy/hard potentials); CP2K uses Gaussian+Plane Waves (faster for large systems/MD).
+
+## Best Practices
+- **Parallelization**: Use hybrid MPI/OpenMP. Segregate cores with `-ndiag` for large matrices.
+- **Smearing**: Use `smearing='mv'` (Marzari-Vanderbilt) for metals.
+- **Pseudopotentials**: Stick to `SSSP` (Standard Solid State Pseudopotentials) library for verified accuracy.
+- **Convergence**: Checking `ecutwfc` and `ecutrho` is critical; default values often insufficient for specialized properties.
+
+## Community and Support
+- **Forum**: Active discourse forum and mailing list.
+- **Events**: Regular schools in Trieste (ICTP) and worldwide.
+- **Development**: Open contributions via GitLab.
 
 ## Verification & Sources
 **Primary sources**:

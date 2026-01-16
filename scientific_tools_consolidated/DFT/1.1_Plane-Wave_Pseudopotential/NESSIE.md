@@ -28,6 +28,21 @@ NESSIE is a modern first-principles calculation software designed to address the
 - **Scalability**: Targeted at large-scale simulations.
 - **Modern Architecture**: Described as "modern" software for current computational needs.
 
+## Computational Cost
+- **Status**: Code appears inactive/historic. Performance on modern hardware is unverified.
+- **Accuracy**: Designed for high numerical precision.
+
+## Comparison with Other Codes
+- **vs Modern Codes**: Likely superseded by active projects like Qbox or Quantum ESPRESSO.
+- **Significance**: Historical interest for high-precision methods.
+
+## Best Practices
+- **Use Case**: Primarily for historical validation or specific high-precision benchmarks if source can be compiled.
+
+## Community and Support
+- **Hosting**: SourceForge (inactive).
+- **Support**: None active.
+
 ## Verification & Sources
 - **Primary Source**: SourceForge Project Page (https://sourceforge.net/projects/nessie-code/)
 - **Confidence**: VERIFIED - Code exists on SourceForge.

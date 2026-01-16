@@ -94,6 +94,24 @@ GPAW is a density-functional theory Python code based on the projector-augmented
 - **Documentation**: Good but assumes Python/ASE familiarity
 - **Installation**: Dependencies can be complex (libxc, BLAS/LAPACK, FFTW)
 
+## Computational Cost
+- **LCAO Mode**: Very fast ($O(N)$), comparable to SIESTA.
+- **FD/PW Mode**: Slower than VASP/QE for small systems due to Python overhead, but scales well for large grids.
+- **Memory**: Real-space grids can consume significant RAM if grid spacing ($h$) is very small (< 0.15 Å).
+
+## Comparison with Other Codes
+- **vs VASP/QE**: GPAW offers greater flexibility (3 modes: PW, FD, LCAO) and full Python scripting, but pure compute speed in PW mode is often lower than optimized Fortran codes.
+- **vs ASE**: GPAW is the "reference" calculator for ASE and has the tightest integration.
+
+## Best Practices
+- **Mode Selection**: Use LCAO for quick screening, then Finite Difference (FD) or Plane Wave (PW) for final high-accuracy numbers.
+- **Grid Spacing**: Standard is $h=0.18-0.20$ Å. Refine to $0.15$ Å for hard potentials.
+- **Parallelization**: Parallelize over k-points first, then domains.
+
+## Community and Support
+- **Mailing List**: `gpaw-users` list is very active.
+- **Development**: Hosted on GitLab; easy to contribute Python code.
+
 ## Verification & Sources
 **Primary sources**:
 1. Official website: https://wiki.fysik.dtu.dk/gpaw/
