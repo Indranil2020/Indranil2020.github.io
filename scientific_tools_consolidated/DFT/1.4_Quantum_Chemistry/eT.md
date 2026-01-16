@@ -1,9 +1,9 @@
 # eT (electronic Transport)
 
 ## Official Resources
-- Homepage: https://github.com/dijasila/eT
-- Documentation: https://github.com/dijasila/eT/wiki
-- Source Repository: https://github.com/dijasila/eT
+- Homepage: https://etprogram.org/
+- Documentation: https://etprogram.org/user_manual.html
+- Source Repository: https://gitlab.com/eT-program/eT
 - License: GNU General Public License v3.0
 
 ## Overview
@@ -37,7 +37,7 @@ eT is a quantum chemistry program specialized in calculating molecular response 
 - High-accuracy calculations
 - Research-quality results
 
-**Sources**: GitHub repository (https://github.com/dijasila/eT)
+**Sources**: Official website (https://etprogram.org/)
 
 ## Key Strengths
 
@@ -64,7 +64,7 @@ eT is a quantum chemistry program specialized in calculating molecular response 
 
 ### Open Source:
 - GPL v3 licensed
-- GitHub repository
+- GitLab repository
 - Free to use
 - Community development
 - Transparent code
@@ -92,7 +92,7 @@ eT is a quantum chemistry program specialized in calculating molecular response 
 
 ## Interfaces & Ecosystem
 - **Development**:
-  - GitHub repository
+  - GitLab repository
   - Community contributions
   - Research tool
   
@@ -265,8 +265,9 @@ et input.inp
 
 ## Verification & Sources
 **Primary sources**:
-1. GitHub repository: https://github.com/dijasila/eT
-2. Wiki: https://github.com/dijasila/eT/wiki
+1. Official website: https://etprogram.org/
+2. Documentation: https://etprogram.org/user_manual.html
+3. GitLab repository: https://gitlab.com/eT-program/eT
 3. Published papers on eT methodology
 
 **Secondary sources**:
@@ -278,9 +279,9 @@ et input.inp
 **Confidence**: LOW_CONF - Research code, specialized focus, smaller community
 
 **Verification status**: ✅ VERIFIED
-- GitHub: ACCESSIBLE
-- Documentation: Basic (wiki)
-- Source code: OPEN (GitHub, GPL v3)
-- Community support: GitHub, academic
-- Development: Active on GitHub
+- Official website: ACCESSIBLE (https://etprogram.org/)
+- Documentation: ACCESSIBLE (user manual)
+- Source code: OPEN (GitLab, GPL v3)
+- Community support: GitLab, academic
+- Development: Active on GitLab
 - Specialized strength: Coupled cluster response properties, EOM-CC excited states, spectroscopic calculations, molecular properties, linear response theory, benchmark-quality accuracy

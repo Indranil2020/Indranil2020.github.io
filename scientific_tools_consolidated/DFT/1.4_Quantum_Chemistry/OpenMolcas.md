@@ -192,6 +192,14 @@ OpenMolcas uses a modular approach:
 - **Memory**: Active space dominates memory
 - **Typical systems**: 10-100 atoms depending on active space
 
+## Computational Cost
+- **CASSCF**: Expensive, scales exponentially with active space size
+- **CASPT2**: Steep scaling (N^4 to N^5), dominant step for large systems
+- **RASSCF**: More affordable than CASSCF for larger active spaces
+- **DMRG**: Linear scaling with system size for 1D topologies
+- **Cholesky**: Reduces I/O and storage costs significantly
+- **Generally**: More expensive than DFT, suitable for scientific questions requiring multi-reference treatment
+
 ## Limitations & Known Constraints
 - **Learning curve**: Very steep; requires understanding of CASSCF/CASPT2
 - **Active space**: Manual selection challenging

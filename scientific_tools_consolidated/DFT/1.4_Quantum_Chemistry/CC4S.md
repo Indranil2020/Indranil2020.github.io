@@ -1,8 +1,8 @@
 # CC4S (Coupled Cluster for Solids)
 
 ## Official Resources
-- Homepage: https://cc4s.github.io/
-- Documentation: https://cc4s.github.io/documentation/
+- Homepage: https://www.cc4s.org/
+- Documentation: https://www.cc4s.org/documentation/
 - Source Repository: https://github.com/cc4s/cc4s
 - License: MIT License (open-source)
 
@@ -309,9 +309,9 @@ tasks:
 
 ## Verification & Sources
 **Primary sources**:
-1. Website: https://cc4s.github.io/
+1. Website: https://www.cc4s.org/
 2. GitHub: https://github.com/cc4s/cc4s
-3. Documentation: https://cc4s.github.io/documentation/
+3. Documentation: https://www.cc4s.org/documentation/
 4. A. Grüneis et al., J. Chem. Theory Comput. papers on CC4S
 
 **Secondary sources**:

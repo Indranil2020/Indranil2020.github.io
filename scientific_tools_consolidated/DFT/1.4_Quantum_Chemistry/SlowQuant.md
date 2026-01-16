@@ -1,10 +1,10 @@
 # SlowQuant
 
 ## Official Resources
-- Homepage: https://github.com/slowquant/slowquant
-- Documentation: https://github.com/slowquant/slowquant
-- Source Repository: https://github.com/slowquant/slowquant
-- License: GNU General Public License v3.0
+- Homepage: https://github.com/erikkjellgren/SlowQuant
+- Documentation: https://github.com/erikkjellgren/SlowQuant
+- Source Repository: https://github.com/erikkjellgren/SlowQuant
+- License: Apache License 2.0
 
 ## Overview
 SlowQuant is a Python-based educational quantum chemistry package developed for teaching and learning quantum chemistry methods. Written entirely in Python with emphasis on code readability and pedagogical value, SlowQuant implements various quantum chemistry methods in a transparent, easy-to-understand manner. It prioritizes educational clarity over computational performance, making it ideal for students and researchers learning quantum chemistry theory and implementation.
@@ -291,7 +291,7 @@ energy = hf.run()
 
 ## Verification & Sources
 **Primary sources**:
-1. GitHub repository: https://github.com/slowquant/slowquant
+1. GitHub repository: https://github.com/erikkjellgren/SlowQuant
 2. Source code documentation
 3. README and examples
 
@@ -305,7 +305,7 @@ energy = hf.run()
 **Verification status**: ✅ VERIFIED
 - GitHub: ACCESSIBLE
 - Documentation: Source code and README
-- Source code: OPEN (GitHub, GPL v3)
+- Source code: OPEN (GitHub, Apache 2.0)
 - Community support: Educational, GitHub
 - Purpose: Educational and learning
 - Specialized strength: Code transparency, educational clarity, quantum chemistry teaching, readable Python implementations, learning platform, algorithm understanding
