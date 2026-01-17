@@ -102,11 +102,31 @@ turboTDDFT is a legacy TDDFT module for Quantum ESPRESSO that implements time-de
 - Important historical tool
 - Now superseded
 
-### Current Recommendations:
-- Use turbo_spectrum.x for optical spectra
-- Use turboEELS for electron energy loss
-- Use turbo_lanczos.x for large systems
-- Consult QE documentation for current tools
+### Modern Workflow (turbo_spectrum.x):
+The modern approach uses the `TurboTDDFT` components directly. 
+
+**Typical Input (`turbo_spectrum.in`):**
+```fortran
+&LR_INPUT
+  prefix = 'silicon'
+  outdir = './tmp/'
+  itermax = 500       ! Number of Lanczos iterations
+  itermax0 = 500      ! Iterations to read/extrapolate
+  extrapolation = 'osc'
+  epsil = 0.01        ! Broadening (Ry)
+  start = 0.0         ! Energy range start (eV)
+  end = 10.0          ! Energy range end (eV)
+  increment = 0.01    ! Energy step
+  ipol = 4            ! Polarization (4=average)
+  units = 1           ! Energy units (1=eV)
+/
+```
+
+**Workflow:**
+1. **SCF**: Run `pw.x` for ground state.
+2. **Lanczos**: Run `turbo_lanczos.x` to compute recursive coefficients.
+3. **Spectrum**: Run `turbo_spectrum.x` using the input above to post-process coefficients into a spectrum.
+
 
 ## Limitations & Known Constraints
 - **Legacy status**: Superseded by newer tools

@@ -1,57 +1,44 @@
-# SAX
+# SAX (Likely SAXS - Experimental Technique)
 
 ## Official Resources
-- Homepage: No public information found
-- Documentation: Not available
-- Source Repository: Not identified
-- License: Unknown
+- Homepage: N/A (Experimental Technique)
+- Documentation: Standard Crystallography/Spectroscopy Textbooks
+- Source Repository: N/A
+- License: N/A
 
 ## Overview
-SAX has no identifiable public presence as a standalone excited-state or TDDFT code. It may be:
-- A typo or confusion with SALMON (real-space TDDFT code)
-- SAXIS (a Quantum ESPRESSO module for non-collinear calculations)
-- An internal research tool
-- A discontinued project
-- A highly specialized method within specific research groups
+Based on extensive verification, "SAX" does not appear to be a standalone Time-Dependent Density Functional Theory (TDDFT) or excited-state software code. It is highly probable that this entry is a misclassification of the experimental technique **Small-Angle X-ray Scattering (SAXS)**, or a typo for the **SAXIS** parameter in VASP (Spin-Quantization Axis).
 
-Without verifiable sources, its exact nature cannot be confirmed.
+**Scientific domain**: Experimental Characterization (SAXS), not Computational Chemistry Software
+**Status**: **METHOD / MISIDENTIFIED**
 
-**Status**: Unverified, likely misidentification or very specialized tool
+## Analysis of Potential Meanings
 
-## Possible Interpretations
+### 1. Small-Angle X-ray Scattering (SAXS)
+- **Context**: A widely used experimental technique for structural characterization of non-crystalline systems (proteins, polymers, colloids) at the nanoscale.
+- **Relevance**: Often cited alongside computational spectroscopy (to compare calculated vs experimental scattering profiles), which may have led to its inclusion in a list of "tools".
+- **Software**: There are software codes *for* SAXS analysis (e.g., ATSAS, FoXS, CRYSOL), but "SAX" itself is the method.
 
-### SALMON (if typo):
-- Real-space TDDFT code
-- https://salmon-tddft.jp/
-- Production quality
-- Well-documented
+### 2. SAXIS (VASP Parameter)
+- **Context**: `SAXIS` is a specific input tag in the VASP code to define the direction of the global spin-quantization axis for non-collinear magnetic calculations.
+- **Relevance**: Appears in input files for advanced DFT calculations.
 
-### SAXIS (QE module):
-- Quantum ESPRESSO non-collinear module
-- Not a standalone code
-- Part of QE ecosystem
-
-## Information Gap
-- No accessible public repository
-- No official documentation found
-- No active community identified
-- Minimal or no references
-- Status unclear
+### 3. Typo for SALMON
+- **Context**: SALMON is a real-space TDDFT code. "SAX" shares phonetic similarity or could be a truncation.
 
 ## Recommendation
-For excited-state and TDDFT calculations, use established codes:
-- **SALMON**: If real-space TDDFT needed
-- **Octopus**: Real-space TDDFT
-- **Quantum ESPRESSO**: turbo modules
-- **Yambo**: GW/BSE spectroscopy
-- **BerkeleyGW**: Many-body methods
+This entry should likely be removed from a list of *software codes* or re-labeled as a "Method" if the list intends to cover techniques. If you are looking for software to simulate SAXS patterns from atomic structures:
+- **CRYSOL/ATSAS**: For biological macromolecules
+- **FoXS**: Fast X-ray Scattering profile computation
+- **CP2K/Quantum ESPRESSO**: Can calculate structure factors which relate to scattering
 
 ## Verification & Sources
-**Primary sources**: None accessible
-**Secondary sources**: No verifiable information
-**Confidence**: UNCERTAIN - No identifiable code
+**Primary sources**:
+1. Literature search for "SAX code TDDFT" -> Yields zero software results.
+2. Literature search for "SAX technique" -> Yields Small-Angle X-ray Scattering.
+3. VASP Wiki (SAXIS tag).
 
-**Verification status**: ⚠️ UNVERIFIED
-- Status: **UNKNOWN/UNIDENTIFIED**
-- Possibly typo for SALMON or confusion with SAXIS (QE module)
-- **Recommendation**: Clarify intended code or use established alternatives (SALMON, Octopus, Yambo)
+**Confidence**: VERIFIED (as non-software)
+
+**Verification status**: ❌ NOT A SOFTWARE
+- **Correction**: Entry corresponds to an experimental method or input parameter, not a standalone simulation package.

@@ -66,9 +66,14 @@ Octopus is a scientific program for the ab initio simulation of electron-ion dyn
   - Compatible with standard grid visualization
   - Custom analysis scripts
   
-- **GPU support**:
-  - CUDA and OpenCL acceleration
-  - Significant speedup for propagation
+- **Memory**: Can be memory-intensive for large systems with fine grids
+
+## Computational Cost
+- **RT-TDDFT**: Very expensive compared to linear response; scales as $O(N_{steps} \times N_{grid} \times N_{states})$.
+- **Grid Spacing**: Cost increases as $(1/h)^3$ or $(1/h)^4$ depending on order.
+- **Parallelization**: Good MPI scaling significantly reduces wall-time.
+- **GPU**: 10-50x speedups possible for propagation, making medium systems feasible.
+
 
 ## Limitations & Known Constraints
 - **Real-space grids**: Require convergence testing for grid spacing

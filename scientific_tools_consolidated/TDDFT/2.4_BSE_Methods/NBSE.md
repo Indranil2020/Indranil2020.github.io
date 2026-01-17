@@ -1,54 +1,26 @@
-# NBSE (N-Body Schrödinger Equation / Bethe-Salpeter?)
+# NBSE (NIST Core-Level BSE Solver)
 
 ## Official Resources
-- Homepage: No public distinct repository found
-- Documentation: Not available
-- Source Repository: Not identified as standalone code
-- License: Unknown
+- **Homepage**: [OCEAN Website](http://feff.phys.washington.edu/OCEAN/) (Distributed as part of OCEAN)
+- **Documentation**: Referenced in OCEAN documentation
+- **License**: Ask OCEAN developers
 
 ## Overview
-NBSE has no identifiable public presence as a standalone code. The acronym could potentially refer to:
-- N-Body Schrödinger Equation methods (general term)
-- A specific BSE (Bethe-Salpeter Equation) solver (but no distinct code found)
-- An internal research tool or module
-- Part of another code's functionality
+**NBSE** (NIST Bethe-Salpeter Equation solver) is the core solver engine used within the **OCEAN** (Obtaining Core Excitations using ABINIT and NBSE) package. Originally developed by Eric Shirley at NIST, it is designed for the accurate calculation of **core-level spectroscopic properties** (XAS, XES, NRIXS) using the Bethe-Salpeter Equation. It is typically not used as a standalone user-facing tool but is the computational heart of the OCEAN workflow.
 
-Without verifiable public sources, NBSE cannot be confirmed as a distinct software tool.
+## Scientific Domain
+- **Core-Level Spectroscopy**: XAS, XES
+- **Bethe-Salpeter Equation**: Core-hole implementation
+- **X-ray Physics**: Synchrotron theoretical support
 
-**Status**: Unverified, possibly method name or internal tool
-
-## Possible Context
-
-### BSE Solvers (if related):
-Established codes with BSE capabilities:
-- **Yambo**: Comprehensive BSE implementation
-- **BerkeleyGW**: GW/BSE code
-- **exciting**: All-electron BSE
-- **Spex**: FLAPW-based BSE
-- **molgw**: Molecular BSE
-
-## Information Gap
-- No public repository identified
-- No official documentation found
-- No active community
-- Not referenced as standalone software
-- Likely method abbreviation rather than software
+## Relationship with OCEAN
+- **OCEAN**: The user-facing package that interfaces DFT (ABINIT/QE) with NBSE.
+- **NBSE**: The numeric solver that handles the BSE matrix construction and diagonalization for core excitations.
 
 ## Recommendation
-For Bethe-Salpeter Equation calculations, use established codes:
-- **Yambo**: Production BSE for solids
-- **BerkeleyGW**: Many-body BSE
-- **exciting**: All-electron BSE
-- **Spex**: FLAPW-based
-- **molgw**: Molecular systems
-- **WEST**: Large-scale
+> **Use OCEAN**: For researchers wanting to use NBSE, the correct approach is to install and use the **OCEAN** package (#100), which wraps NBSE with necessary pre/post-processing and DFT interfaces.
 
-## Verification & Sources
-**Primary sources**: None accessible
-**Secondary sources**: No verifiable information as distinct software
-**Confidence**: UNCERTAIN - No distinct software identified
-
-**Verification status**: ⚠️ UNVERIFIED
-- Status: **NOT IDENTIFIED AS STANDALONE SOFTWARE**
-- Possibly method abbreviation or internal module
-- **Recommendation**: Use established BSE codes (Yambo, BerkeleyGW, exciting, Spex, molgw) for production calculations
+## Verification
+- **Status**: ✅ VERIFIED (as component)
+- **Identity**: Confirmed as "Obtaining Core Excitations using ABINIT and **NBSE**".
+- **Primary Use**: Backend for OCEAN.

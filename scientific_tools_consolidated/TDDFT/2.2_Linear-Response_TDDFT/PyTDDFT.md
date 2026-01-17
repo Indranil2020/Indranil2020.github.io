@@ -59,7 +59,15 @@ PyTDDFT is a research/educational Python implementation of time-dependent densit
 - **Performance**: Not optimized
 - **Features**: Basic TDDFT only
 - **System size**: Very small
-- **Documentation**: Minimal
+- **Input formats**:
+  - Python script (`.py`) defining molecule and parameters
+  - Direct NumPy array interfaces
+  - Standard XYZ coordinates within Python strings
+  
+- **Output data types**:
+  - Standard output log (energies, convergence)
+  - NumPy arrays of excitation energies
+  - Oscillator strength arrays
 - **Support**: Research-level
 - **Purpose**: Educational/prototyping
 

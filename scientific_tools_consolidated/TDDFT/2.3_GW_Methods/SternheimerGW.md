@@ -1,16 +1,16 @@
 # SternheimerGW
 
 ## Official Resources
-- Homepage: No central public repository
-- Documentation: Research group specific
-- Source Repository: Limited availability
-- License: Academic/research (group-specific)
+- Homepage: https://cqme.org/ (Center for Quantum Materials Engineering)
+- Documentation: https://cqme.org/software/
+- Source Repository: Available via CQME / GitLab (CI/CD mentioned)
+- License: GNU GPL v3.0
 
 ## Overview
-SternheimerGW is a research implementation of the GW approximation using Sternheimer linear-response approach, developed primarily at Oxford/Imperial College and related research groups. Unlike standard GW implementations that require explicit summation over empty states, SternheimerGW uses linear-response techniques to avoid this summation, potentially offering computational advantages. The code has limited public distribution and is primarily used within specific research collaborations.
+SternheimerGW is a specialized GW code utilizing the Sternheimer linear-response approach to avoid explicit summation over empty states. Developed and maintained by Feliciano Giustino’s group (CQME at UT Austin), it offers an efficient alternative to standard sum-over-states implementations, integral to the EPW and Quantum ESPRESSO ecosystems.
 
-**Scientific domain**: GW approximation, linear-response methods, research implementation  
-**Target user community**: Specialized research groups, method developers
+**Scientific domain**: GW approximation, linear-response methods, electron-phonon coupling  
+**Target user community**: Researchers in electron-phonon coupling and efficient GW methodologies
 
 ## Theoretical Methods
 - GW approximation

@@ -20,8 +20,7 @@ Yambo is an open-source code for calculating excited state properties of materia
 - Dynamical Berry phase
 - Real-time propagation
 - Non-equilibrium Green's function (NEGF)
-- Plasmon-pole approximation
-- Full-frequency integration
+- Full-frequency integration (Real-axis, Godby-Needs, Plasmon-Pole)
 - Hartree-Fock exchange
 - Hybrid functionals
 - Spin-orbit coupling
@@ -30,18 +29,15 @@ Yambo is an open-source code for calculating excited state properties of materia
 - GW quasiparticle energies and band structures
 - Optical absorption spectra including excitonic effects (BSE)
 - Electron energy loss spectroscopy (EELS)
-- Optical conductivity
-- Dielectric function (RPA and BSE)
-- Quasiparticle lifetimes
-- Spectral functions
-- Satellite structures
-- Real-time TDDFT (experimental)
-- Non-linear optics (experimental)
-- Spin-orbit coupling treatment
-- Interfaces with multiple DFT codes
-- Massively parallel calculations
+- Optical conductivity and dielectric function (RPA/BSE)
+- Real-time propagation (improved in v5.3)
+- Non-linear optics (SHG, DFG, multipole approximation - v5.2+)
+- GPU acceleration (CUDA/OpenACC via devxlib - v5.3)
+- Spin-orbit coupling and magnetic systems
+- Interfaces with Quantum ESPRESSO, ABINIT
+- Massively parallel (MPI/OpenMP/GPU)
 
-**Sources**: Official Yambo documentation, cited in 7/7 source lists
+**Sources**: Official Yambo documentation (v5.3), cited in 7/7 source lists
 
 ## Inputs & Outputs
 - **Input formats**:
