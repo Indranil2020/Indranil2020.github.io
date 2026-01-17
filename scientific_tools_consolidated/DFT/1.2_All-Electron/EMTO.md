@@ -33,7 +33,45 @@
 
 ## Inputs & Outputs
 - **Inputs**: Fortran-style input files defining structure, concentration, and potential parameters.
-- **Outputs**: Total energies, DOS, spectral functions, equilibrium properties.
+- **Outputs**: Total energies, DOS, spectral functions, equilibrium properties, elastic constants.
+
+## Interfaces & Ecosystem
+- **Workflow Integration**:
+  - No direct ASE/Phonopy interface, but often used in scripted workflows for force constants.
+  - Integration with machine learning pipelines for high-entropy alloy property prediction.
+- **Visualization**:
+  - Standard plotting tools for DOS and spectral functions.
+- **Related Tools**:
+  - **KKR-CPA**: Similar methodology but EMTO is often favored for structural energy differences.
+
+## Workflow and Usage
+
+### Elastic Constants Calculation:
+1. **Equation of State**: Calculate total energy vs volume to find equilibrium lattice constant.
+2. **Distortion**: Apply small volume-conserving strains (orthorhombic, monoclinic) to the lattice.
+3. **Energy-Strain**: Calculate energy changes for distortions.
+4. **Fitting**: Fit energy curves to extract elastic constants ($C_{11}, C_{12}, C_{44}$).
+5. **Polycrystalline Moduli**: Use Voigt-Reuss-Hill averaging for bulk and shear moduli.
+
+### CPA Alloying:
+- Define mixing ratios in input file (e.g., Fe$_{0.7}$Ni$_{0.3}$).
+- Run self-consistent loop to determine effective medium potential.
+- Calculate properties on the effective medium.
+
+## Advanced Features
+
+### Elastic Constant Prediction:
+- **CPA Accuracy**: Uniquely capable of calculating elastic constants of random alloys without supercells.
+- **High-Entropy Alloys**: Standard tool for predicting mechanical properties of HEAs.
+- **Polycrystalline Averages**: Direct calculation of B, G, E, and Poisson's ratio.
+
+### Full Charge Density (FCD):
+- Improves upon the muffin-tin approximation for total energy calculations.
+- Critical for accurate structural energy differences and phase stability.
+
+### Temperature Dependence:
+- Can be coupled with Debye-Grüneisen model or phonon calculations (via displacement method) to estimating finite-temperature elastic properties.
+
 ## Performance Characteristics
 - **Efficiency**: Highly efficient for disordered alloys compared to supercell (SQS) methods.
 - **Parallelization**: Parallelization is typically handled over k-points and energy points in the contour integration.
