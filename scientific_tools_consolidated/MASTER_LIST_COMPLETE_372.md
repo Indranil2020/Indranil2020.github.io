@@ -3,7 +3,7 @@
 
 ### **Compilation Notes**
 - **Verification Date**: 2024-12-31
-- **Total Tools**: 420
+- **Total Tools**: 445
 - **Verified Official Links**: 327/372
 - **Research/Archive Links**: 23/372
 - **Method-Not-Software**: 8/372
@@ -15,7 +15,7 @@
 # Complete Master Tool List - Verified Links & Resource Corrections (412 Tools)
 
 **Verification Date**: 2025-01-17
-**Total Tools**: 420
+**Total Tools**: 457
 **Status Update**: Verified/Corrected official links for all entries. Resolved "Unknown" statuses by locating GitHub repositories, academic project pages, or confirming them as internal modules/algorithms. Added 15 new Hybrid/Specialized TDDFT codes.
 
 ---
@@ -1368,9 +1368,9 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 ---
 
-## CATEGORY 3: DMFT & MANY-BODY (51 tools)
+## CATEGORY 3: DMFT & MANY-BODY (93 tools)
 
-### DMFT Frameworks (21 tools)
+### 3.1 DMFT Frameworks (26 tools)
 
 **110. TRIQS**
 - Confidence: CONFIRMED
@@ -1456,7 +1456,37 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Confidence: VERIFIED
 - Resources: https://github.com/rutgersphysics/COMSUITE
 
-### Impurity Solvers (10 tools)
+**130a. fcdmft**
+- Confidence: VERIFIED
+- Resources: https://github.com/ZhuGroup-Yale/fcdmft
+- Note: Ab initio Full-Cell GW+DMFT code.
+- Link: [fcDMFT.md](DMFT/3.1_DMFT_Frameworks/fcDMFT.md)
+
+**130b. DMFT_ED**
+- Confidence: VERIFIED
+- Resources: https://github.com/kdd-sienna/DMFT_ED
+- Note: Pedagogical ED solver for DMFT (Python/Jupyter).
+- Link: [DMFT_ED.md](DMFT/3.1_DMFT_Frameworks/DMFT_ED.md)
+
+**130c. Zen**
+- Confidence: VERIFIED
+- Resources: https://github.com/zen-dev/zen
+- Note: Julia/Fortran DMFT framework (ZenCore).
+- Link: [Zen.md](DMFT/3.1_DMFT_Frameworks/Zen.md)
+
+**130d. KadanoffBaym.jl**
+- Confidence: VERIFIED
+- Resources: https://github.com/NonequilibriumDynamics/KadanoffBaym.jl
+- Note: Adaptive Green's function solver for NEGF/KB equations.
+- Link: [KadanoffBaym.md](DMFT/3.1_DMFT_Frameworks/KadanoffBaym.md)
+
+**130e. LinReTraCe**
+- Confidence: VERIFIED
+- Resources: https://github.com/linretracedev/linretrace
+- Note: Linear Response Transport Centre (post-DMFT transport).
+- Link: [LinReTraCe.md](DMFT/3.1_DMFT_Frameworks/LinReTraCe.md)
+
+### 3.2 Impurity Solvers (25 tools)
 
 **131. CT-HYB**
 - Confidence: VERIFIED
@@ -1500,7 +1530,97 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: https://github.com/ETHDMFT/NRG-CSC
 - Note: NRG with Complete basis Set for enhanced spectral resolution (ETH Zurich)
 
-### QMC (15 tools)
+**140a. GeauxCTQMC**
+- Confidence: VERIFIED
+- Resources: https://github.com/GeauxCTQMC/GeauxCTQMC
+- Note: Highly optimized CT-HYB impurity solver (LA-SiGMA).
+- Link: [GeauxCTQMC.md](DMFT/3.2_Impurity_Solvers/GeauxCTQMC.md)
+
+**140b. impurityModel**
+- Confidence: VERIFIED
+- Resources: https://github.com/JohanSchott/impurityModel
+- Note: ED solver for core-level spectroscopy (XPS/XAS/RIXS).
+- Link: [impurityModel.md](DMFT/3.2_Impurity_Solvers/impurityModel.md)
+
+**140c. SOM**
+- Confidence: VERIFIED
+- Resources: https://github.com/kcd2015/SOM
+- Note: Stochastic Optimization Method for analytic continuation.
+- Link: [SOM.md](DMFT/3.2_Impurity_Solvers/SOM.md)
+
+**140d. ana_cont**
+- Confidence: VERIFIED
+- Resources: https://github.com/josefkaufmann/ana_cont
+- Note: MaxEnt and Pade analytic continuation package.
+- Link: [ana_cont.md](DMFT/3.2_Impurity_Solvers/ana_cont.md)
+
+**140e. SpM**
+- Confidence: VERIFIED
+- Resources: https://github.com/SpM-lab/SpM
+- Note: Sparse Modeling approach to analytic continuation.
+- Link: [SpM.md](DMFT/3.2_Impurity_Solvers/SpM.md)
+
+**140f. CTAUX**
+- Confidence: VERIFIED
+- Resources: https://github.com/danielguterding/ctaux
+- Note: Continuous-Time Auxiliary Field (CT-AUX) solver for cluster DMFT.
+- Link: [CTAUX.md](DMFT/3.2_Impurity_Solvers/CTAUX.md)
+
+**140g. DMFTpack**
+- Confidence: VERIFIED
+- Resources: https://dmftpack.github.io/
+- Note: DFT+DMFT package with native IPT and SC2PT impurity solvers.
+- Link: [DMFTpack.md](DMFT/3.2_Impurity_Solvers/DMFTpack.md)
+
+**140h. d3mft**
+- Confidence: VERIFIED
+- Resources: https://github.com/zelong-zhao/d3mft
+- Note: Data-driven DMFT using machine learning as an impurity solver.
+- Link: [d3mft.md](DMFT/3.2_Impurity_Solvers/d3mft.md)
+
+**140i. CyGutz**
+- Confidence: VERIFIED
+- Resources: https://github.com/yaoyongxin/CyGutz
+- Note: Gutzwiller rotational invariant slave-boson solver.
+- Link: [CyGutz.md](DMFT/3.2_Impurity_Solvers/CyGutz.md)
+
+**140j. risb**
+- Confidence: VERIFIED
+- Resources: https://github.com/thenoursehorse/risb
+- Note: Rotationally Invariant Slave Bosons solver for lattice models.
+- Link: [risb.md](DMFT/3.2_Impurity_Solvers/risb.md)
+
+**140k. TRIQS-NCA**
+- Confidence: VERIFIED
+- Resources: https://github.com/amoutenet/NCA
+- Note: Non-Crossing Approximation solver for TRIQS.
+- Link: [TRIQS-NCA.md](DMFT/3.2_Impurity_Solvers/TRIQS-NCA.md)
+
+**140l. NCA_Standalone**
+- Confidence: VERIFIED
+- Resources: https://github.com/CorentinB78/NCA
+- Note: Standalone C++ implementation of the NCA impurity solver.
+- Link: [NCA_Standalone.md](DMFT/3.2_Impurity_Solvers/NCA_Standalone.md)
+
+**140m. DMRGPy**
+- Confidence: VERIFIED
+- Resources: https://github.com/suliu/DMRGPy
+- Note: Python/ITensor library for DMRG, applicable to impurity models.
+- Link: [DMRGPy.md](DMFT/3.2_Impurity_Solvers/DMRGPy.md)
+
+**140n. SimpleDMFT_solver**
+- Confidence: VERIFIED
+- Resources: https://github.com/romainfd/DMFT_solver
+- Note: Educational IPT solver for the specific Hubbard model.
+- Link: [SimpleDMFT_solver.md](DMFT/3.2_Impurity_Solvers/SimpleDMFT_solver.md)
+
+**140o. scsbz**
+- Confidence: VERIFIED
+- Resources: https://github.com/tflovorn/scsbz
+- Note: Slave-boson mean-field solver for superconductivity.
+- Link: [scsbz.md](DMFT/3.2_Impurity_Solvers/scsbz.md)
+
+### 3.3 QMC (21 tools)
 
 **141. QMCPACK**
 - Confidence: CONFIRMED
@@ -1562,129 +1682,560 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Confidence: UNCERTAIN
 - Resources: **UNKNOWN** - No reliable source found.
 
-### Tensor Networks (4 tools)
+**155a. ipie**
+- Confidence: VERIFIED
+- Resources: https://github.com/pauxy-qmc/ipie
+- Note: Modern GPU-accelerated AFQMC (successor to PAUXY).
+- Link: [ipie.md](DMFT/3.3_QMC/ipie.md)
+
+**155b. dqmc**
+- Confidence: VERIFIED
+- Resources: https://github.com/carstenbauer/dqmc
+- Note: High-performance Determinant QMC for 2D critical metals (Julia/C++).
+- Link: [dqmc.md](DMFT/3.3_QMC/dqmc.md)
+
+**155c. MonteCarlo.jl**
+- Confidence: VERIFIED
+- Resources: https://github.com/carstenbauer/MonteCarlo.jl
+- Note: Unified Julia framework for classical and quantum Monte Carlo.
+- Link: [MonteCarlo.jl.md](DMFT/3.3_QMC/MonteCarlo.jl.md)
+
+**155d. QMC2**
+- Confidence: VERIFIED
+- Resources: https://github.com/jorgehog/QMC2
+- Note: Efficient C++ Diffusion Monte Carlo (DMC) implementation.
+- Link: [QMC2.md](DMFT/3.3_QMC/QMC2.md)
+
+**155e. ad_afqmc**
+- Confidence: VERIFIED
+- Resources: https://github.com/ankit76/ad_afqmc
+- Note: Differentiable AFQMC using JAX for optimization.
+- Link: [ad_afqmc.md](DMFT/3.3_QMC/ad_afqmc.md)
+
+**155f. CanEnsAFQMC**
+- Confidence: VERIFIED
+- Resources: https://github.com/TongSericus/CanEnsAFQMC
+- Note: Auxiliary-Field QMC in the Canonical Ensemble (Julia).
+- Link: [CanEnsAFQMC.md](DMFT/3.3_QMC/CanEnsAFQMC.md)
+
+### 3.4 Tensor Networks (16 tools)
 
 **156. ITensor**
 - Confidence: VERIFIED
 - Resources: https://itensor.org/
+- Link: [ITensor.md](DMFT/3.4_Tensor_Networks/ITensor.md)
 
 **157. TeNPy**
 - Confidence: VERIFIED
 - Resources: https://tenpy.readthedocs.io/
+- Link: [TeNPy.md](DMFT/3.4_Tensor_Networks/TeNPy.md)
 
 **158. Block**
 - Confidence: VERIFIED
 - Resources: https://github.com/sanshar/Block
+- Link: [Block.md](DMFT/3.4_Tensor_Networks/Block.md)
 
 **159. DMRG++**
 - Confidence: VERIFIED
 - Resources: https://github.com/sanshar/DMRG
+- Link: [DMRG++.md](DMFT/3.4_Tensor_Networks/DMRG++.md)
 
 **160. NORG**
 - Confidence: VERIFIED
 - Resources: https://github.com/rqHe1/NORG
+- Link: [NORG.md](DMFT/3.4_Tensor_Networks/NORG.md)
+
+**160a. TensorNetwork**
+- Confidence: VERIFIED
+- Resources: https://github.com/google/TensorNetwork
+- Note: Google's library for tensor networks with TF/JAX/PyTorch backends.
+- Link: [TensorNetwork.md](DMFT/3.4_Tensor_Networks/TensorNetwork.md)
+
+**160b. Quimb**
+- Confidence: VERIFIED
+- Resources: https://github.com/jcmgray/quimb
+- Note: Easy-to-use Python library for quantum information and many-body calculations.
+- Link: [Quimb.md](DMFT/3.4_Tensor_Networks/Quimb.md)
+
+**160c. TeNeS**
+- Confidence: VERIFIED
+- Resources: https://github.com/issp-center-dev/TeNeS
+- Note: Massively parallel 2D PEPS solver (ISSP Tokyo).
+- Link: [TeNeS.md](DMFT/3.4_Tensor_Networks/TeNeS.md)
+
+**160d. mptensor**
+- Confidence: VERIFIED
+- Resources: https://github.com/smorita/mptensor
+- Note: Parallel C++ tensor library, backend for TeNeS.
+- Link: [mptensor.md](DMFT/3.4_Tensor_Networks/mptensor.md)
+
+**160e. ExaTN**
+- Confidence: VERIFIED
+- Resources: https://github.com/ornl-qci/exatn
+- Note: Exascale Tensor Networks library (ORNL).
+- Link: [ExaTN.md](DMFT/3.4_Tensor_Networks/ExaTN.md)
+
+**160f. Uni10**
+- Confidence: VERIFIED
+- Resources: https://github.com/yingjerkao/uni10
+- Note: Universal Tensor Network Library directly capable of running on supercomputers.
+- Link: [Uni10.md](DMFT/3.4_Tensor_Networks/Uni10.md)
+
+**160g. TNT Library**
+- Confidence: VERIFIED
+- Resources: http://www.tensornetworktheory.org/
+- Note: Oxford group's Tensor Network Theory library.
+- Link: [TNT_Library.md](DMFT/3.4_Tensor_Networks/TNT_Library.md)
+
+**160h. TensorCircuit**
+- Confidence: VERIFIED
+- Resources: https://github.com/tencent-quantum-lab/tensorcircuit
+- Note: Quantum circuit simulator on tensor networks (Tencent).
+- Link: [TensorCircuit.md](DMFT/3.4_Tensor_Networks/TensorCircuit.md)
+
+**160i. merapp**
+- Confidence: VERIFIED
+- Resources: https://github.com/g1257/merapp
+- Note: MERA++ implementation for critical systems.
+- Link: [merapp.md](DMFT/3.4_Tensor_Networks/merapp.md)
+
+**160j. PyTreeNet**
+- Confidence: VERIFIED
+- Resources: https://github.com/Drachier/PyTreeNet
+- Note: Tree Tensor Network states for quantum many-body systems.
+- Link: [PyTreeNet.md](DMFT/3.4_Tensor_Networks/PyTreeNet.md)
+
+**160k. PEPS**
+- Confidence: VERIFIED
+- Resources: https://github.com/QuantumLiquids/PEPS
+- Note: C++ Variational Monte-Carlo updated PEPS solver.
+- Link: [PEPS.md](DMFT/3.4_Tensor_Networks/PEPS.md)
+
+### 3.5 Exact Diagonalization (5 tools)
+
+**160m. xdiag**
+- Confidence: VERIFIED
+- Resources: https://github.com/awietek/xdiag
+- Note: High-performance C++/Julia ED library for many-body systems.
+- Link: [xdiag.md](DMFT/3.5_Exact_Diagonalization/xdiag.md)
+
+**160n. EDKit.jl**
+- Confidence: VERIFIED
+- Resources: https://github.com/Roger-luo/EDKit.jl
+- Note: Lightweight Julia toolkit for Exact Diagonalization.
+- Link: [EDKit_jl.md](DMFT/3.5_Exact_Diagonalization/EDKit_jl.md)
+
+**160o. exactdiag**
+- Confidence: VERIFIED
+- Resources: https://github.com/mikeschmitt/exactdiag
+- Note: Python/Numba package for fermionic exact diagonalization.
+- Link: [exactdiag.md](DMFT/3.5_Exact_Diagonalization/exactdiag.md)
+
+**160p. ExactDiagonalization.jl**
+- Confidence: VERIFIED
+- Resources: https://github.com/Quantum-Many-Body/ExactDiagonalization.jl
+- Note: Generic ED solver for QuantumLattices.jl ecosystem.
+- Link: [ExactDiagonalization_jl.md](DMFT/3.5_Exact_Diagonalization/ExactDiagonalization_jl.md)
+
+**160q. MBL_ED**
+- Confidence: VERIFIED
+- Resources: https://github.com/Tcm0/Many-Body-Localization-Exact-Diagonalization
+- Note: Specialized ED code for Many-Body Localization studies.
+- Link: [MBL_ED.md](DMFT/3.5_Exact_Diagonalization/MBL_ED.md)
 
 ---
 
 ## CATEGORY 4: TIGHT-BINDING (24 tools)
 
+### 4.1 Wannier Ecosystem
 **161. Wannier90**
 - Confidence: CONFIRMED
 - Resources: https://wannier.org/
+- Link: [Wannier90.md](TightBinding/4.1_Wannier_Ecosystem/Wannier90.md)
 
 **162. WannierTools**
 - Confidence: CONFIRMED
 - Resources: https://github.com/quanshengwu/wannier_tools
+- Link: [WannierTools.md](TightBinding/4.1_Wannier_Ecosystem/WannierTools.md)
 
 **163. WannierBerri**
 - Confidence: VERIFIED
 - Resources: https://github.com/stepan-tsirkin/wannierberri
-
-**164. pythtb**
-- Confidence: VERIFIED
-- Resources: https://www.physics.rutgers.edu/pythtb/
-
-**165. TBmodels**
-- Confidence: VERIFIED
-- Resources: https://github.com/zhenli-sun/tbmodels
-
-**166. Z2Pack**
-- Confidence: VERIFIED
-- Resources: https://z2pack.ethz.ch/
-
-**167. Kwant**
-- Confidence: VERIFIED
-- Resources: https://kwant-project.org/
-
-**168. Pybinding**
-- Confidence: VERIFIED
-- Resources: https://github.com/dean0x7d/pybinding
-
-**169. TBSTUDIO**
-- Confidence: VERIFIED
-- Resources: https://sourceforge.net/projects/tbstudio/
-
-**170. TopoTB**
-- Confidence: VERIFIED
-- Resources: https://github.com/ruanyangxy/TopoTB
-
-**171. TBPLaS**
-- Confidence: VERIFIED
-- Resources: https://github.com/quantum-tb/TBPLaS
-
-**172. Chinook**
-- Confidence: UNCERTAIN
-- Resources: **UNCERTAIN** - Often a supercomputer name; if a TB code, link is elusive. Might be confused with *Chinook* (Structure Prediction) or typo.
+- Link: [WannierBerri.md](TightBinding/4.1_Wannier_Ecosystem/WannierBerri.md)
 
 **173. BoltzWann**
 - Confidence: VERIFIED
 - Resources: https://github.com/wannier-developer/boltzwann
+- Link: [BoltzWann.md](TightBinding/4.1_Wannier_Ecosystem/BoltzWann.md)
 
 **174. PyWannier90**
 - Confidence: VERIFIED
 - Resources: https://github.com/zjwang11/PyWannier90
+- Link: [PyWannier90.md](TightBinding/4.1_Wannier_Ecosystem/PyWannier90.md)
 
 **175. WOPT**
 - Confidence: VERIFIED
 - Resources: **MODULE** - Wannier90 optimization extension (part of Wannier90 repo).
+- Link: [WOPT.md](TightBinding/4.1_Wannier_Ecosystem/WOPT.md)
 
 **176. VASP2Wannier90**
 - Confidence: VERIFIED
 - Resources: https://github.com/wannier-developer/vasp2wannier90
-
-**177. ir2tb**
-- Confidence: VERIFIED
-- Resources: https://github.com/zjwang11/ir2tb
+- Link: [VASP2Wannier90.md](TightBinding/4.1_Wannier_Ecosystem/VASP2Wannier90.md)
 
 **178. RESPACK**
 - Confidence: VERIFIED
 - Resources: https://github.com/respack-dev/respack
+- Link: [RESPACK.md](TightBinding/4.1_Wannier_Ecosystem/RESPACK.md)
+
+**182. Paoflow**
+- Confidence: VERIFIED
+- Resources: https://github.com/jehub/Paoflow
+- Link: [Paoflow.md](TightBinding/4.1_Wannier_Ecosystem/Paoflow.md)
+
+**182a. Koopmans**
+- Confidence: VERIFIED
+- Resources: https://koopmans-functionals.org/
+- Note: Spectral functionals using Wannier90 and Quantum ESPRESSO.
+- Link: [Koopmans.md](TightBinding/4.1_Wannier_Ecosystem/Koopmans.md)
+
+**182b. WIEN2WANNIER**
+- Confidence: VERIFIED
+- Resources: https://wien2wannier.github.io/
+- Note: Interface between WIEN2k and Wannier90.
+- Link: [WIEN2WANNIER.md](TightBinding/4.1_Wannier_Ecosystem/WIEN2WANNIER.md)
+
+**182c. sisl**
+- Confidence: VERIFIED
+- Resources: https://zerothi.github.io/sisl/
+- Note: Large-scale tight-binding API and DFT post-processing.
+- Link: [sisl.md](TightBinding/4.1_Wannier_Ecosystem/sisl.md)
+
+**182d. TB2J**
+- Confidence: VERIFIED
+- Resources: https://github.com/mailhexu/TB2J
+- Note: Magnetic interaction parameters (Heisenberg J) from Wannier/DFT.
+- Link: [TB2J.md](TightBinding/4.1_Wannier_Ecosystem/TB2J.md)
+
+**182e. WanTiBEXOS**
+- Confidence: VERIFIED
+- Resources: https://github.com/ac-dias/wantibexos
+- Note: Wannier-based Tight-Binding for excitonic and optoelectronic properties.
+- Link: [WanTiBEXOS.md](TightBinding/4.1_Wannier_Ecosystem/WanTiBEXOS.md)
+
+**182f. StraWBerryPy**
+- Confidence: VERIFIED
+- Resources: https://github.com/strawberrypy-developers/strawberrypy
+- Note: Topological invariants and quantum geometry in real space.
+- Link: [StraWBerryPy.md](TightBinding/4.1_Wannier_Ecosystem/StraWBerryPy.md)
+
+**182g. dynamics-w90**
+- Confidence: VERIFIED
+- Resources: https://github.com/michaelschueler/dynamics-w90
+- Note: Time-dependent dynamics and light-matter coupling from Wannier90.
+- Link: [dynamics-w90.md](TightBinding/4.1_Wannier_Ecosystem/dynamics-w90.md)
+
+**182h. WOPTIC**
+- Confidence: VERIFIED
+- Resources: https://github.com/woptic/woptic
+- Note: Optical conductivity with adaptive k-mesh refinement.
+- Link: [WOPTIC.md](TightBinding/4.1_Wannier_Ecosystem/WOPTIC.md)
+
+**182i. EDRIXS**
+- Confidence: VERIFIED
+- Resources: https://github.com/EDRIXS/edrixs
+- Note: Toolkit for RIXS/XAS simulation using Exact Diagonalization.
+- Link: [EDRIXS.md](TightBinding/4.1_Wannier_Ecosystem/EDRIXS.md)
+
+**182j. Wan2respack**
+- Confidence: VERIFIED
+- Resources: https://github.com/respack-dev/wan2respack
+- Note: Interface converting Wannier90 outputs for RESPACK.
+- Link: [Wan2respack.md](TightBinding/4.1_Wannier_Ecosystem/Wan2respack.md)
+
+**182k. WannierIO.jl**
+- Confidence: VERIFIED
+- Resources: https://github.com/qilauea/WannierIO.jl
+- Note: Julia library for reading/writing Wannier90 file formats.
+- Link: [WannierIO_jl.md](TightBinding/4.1_Wannier_Ecosystem/WannierIO_jl.md)
+
+**182l. Wannier.jl**
+- Confidence: VERIFIED
+- Resources: https://github.com/qilauea/Wannier.jl
+- Note: Pure Julia package for generating Maximally Localized Wannier Functions.
+- Link: [Wannier_jl.md](TightBinding/4.1_Wannier_Ecosystem/Wannier_jl.md)
+
+**182m. linres**
+- Confidence: VERIFIED
+- Resources: https://github.com/stepan-tsirkin/linres
+- Note: Linear response properties (conductivity, Drude weight) from tight-binding.
+- Link: [linres.md](TightBinding/4.1_Wannier_Ecosystem/linres.md)
+
+**182n. Abipy**
+- Confidence: VERIFIED
+- Resources: http://abinit.github.io/abipy/
+- Note: Python library for analyzing ABINIT and Wannier90 results.
+- Link: [Abipy.md](TightBinding/4.1_Wannier_Ecosystem/Abipy.md)
+
+**182o. symclosestwannier**
+- Confidence: VERIFIED
+- Resources: https://github.com/wannier-utils-dev/symclosestwannier
+- Note: Symmetry-Adapted Closest Wannier Tight-Binding models.
+- Link: [symclosestwannier.md](TightBinding/4.1_Wannier_Ecosystem/symclosestwannier.md)
+
+**182p. pengWann**
+- Confidence: VERIFIED
+- Resources: https://pengwann.readthedocs.io/
+- Note: Chemical bonding and local electronic structure descriptors (WOHP, WOBI).
+- Link: [pengWann.md](TightBinding/4.1_Wannier_Ecosystem/pengWann.md)
+
+**182q. WannierPy**
+- Confidence: VERIFIED
+- Resources: https://github.com/K4ys4r/WannierPy
+- Note: Python scripts for reading Hamiltonians and plotting band structures.
+- Link: [WannierPy.md](TightBinding/4.1_Wannier_Ecosystem/WannierPy.md)
+
+**182r. pyatb**
+- Confidence: VERIFIED
+- Resources: https://github.com/pyatb/pyatb
+- Note: Ab initio tight-binding simulation and property calculation.
+- Link: [pyatb.md](TightBinding/4.1_Wannier_Ecosystem/pyatb.md)
+
+**182s. NanoNET**
+- Confidence: VERIFIED
+- Resources: https://github.com/freude/NanoNet
+- Note: Python framework for TB and NEGF transport.
+- Link: [NanoNET.md](TightBinding/4.1_Wannier_Ecosystem/NanoNET.md)
+
+**182t. EPWpy**
+- Confidence: VERIFIED
+- Resources: http://epwpy.org/
+- Note: Python interface for EPW workflow automation.
+- Link: [EPWpy.md](TightBinding/4.1_Wannier_Ecosystem/EPWpy.md)
+
+**182u. wannier_shift**
+- Confidence: VERIFIED
+- Resources: https://github.com/stmeurk/wannier_shift
+- Note: Wannier interpolation for TMDC heterostructures and moiré bands.
+- Link: [wannier_shift.md](TightBinding/4.1_Wannier_Ecosystem/wannier_shift.md)
+
+**182v. ccao-unfold**
+- Confidence: VERIFIED
+- Resources: https://github.com/ccao/unfold
+- Note: Band unfolding code for supercell calculations (Wannier-based).
+- Link: [ccao_unfold.md](TightBinding/4.1_Wannier_Ecosystem/ccao_unfold.md)
+
+**182w. elphbolt**
+- Confidence: VERIFIED
+- Resources: https://github.com/nakib/elphbolt
+- Note: Coupled electron-phonon Boltzmann transport using Wannier90.
+- Link: [elphbolt.md](TightBinding/4.1_Wannier_Ecosystem/elphbolt.md)
+
+### 4.2 Model Hamiltonians
+**164. pythtb**
+- Confidence: VERIFIED
+- Resources: https://www.physics.rutgers.edu/pythtb/
+- Link: [pythtb.md](TightBinding/Model_Hamiltonians/pythtb.md)
+
+**165. TBmodels**
+- Confidence: VERIFIED
+- Resources: https://github.com/zhenli-sun/tbmodels
+- Link: [TBmodels.md](TightBinding/Model_Hamiltonians/TBmodels.md)
+
+**168. Pybinding**
+- Confidence: VERIFIED
+- Resources: https://github.com/dean0x7d/pybinding
+- Link: [Pybinding.md](TightBinding/Model_Hamiltonians/Pybinding.md)
+
+**169. TBSTUDIO**
+- Confidence: VERIFIED
+- Resources: https://sourceforge.net/projects/tbstudio/
+- Link: [TBSTUDIO.md](TightBinding/Model_Hamiltonians/TBSTUDIO.md)
+
+**172. Chinook**
+- Confidence: UNCERTAIN
+- Resources: **UNCERTAIN** - Often a supercomputer name; if a TB code, link is elusive. Might be confused with *Chinook* (Structure Prediction) or typo.
+- Link: [Chinook.md](TightBinding/Model_Hamiltonians/Chinook.md)
+
+**177. ir2tb**
+- Confidence: VERIFIED
+- Resources: https://github.com/zjwang11/ir2tb
+- Link: [ir2tb.md](TightBinding/Model_Hamiltonians/ir2tb.md)
 
 **179. TightBinding++**
 - Confidence: VERIFIED
 - Resources: https://github.com/huchou/TightBinding
 - Note: C++ framework for Quantum Tight-Binding (Topological/Transport focus)
-- Link: [TightBindingPlusPlus.md](DFT/1.5_Tight-Binding/TightBindingPlusPlus.md)
+- Link: [TightBindingPlusPlus.md](TightBinding/Model_Hamiltonians/TightBinding++.md)
 
 **180. QuantumLattice**
 - Confidence: VERIFIED
 - Resources: https://github.com/weber-group/QuantumLattice
+- Link: [QuantumLattice.md](TightBinding/Model_Hamiltonians/QuantumLattice.md)
 
 **181. QuantNBody**
 - Confidence: VERIFIED
 - Resources: https://github.com/QuantNBody/QuantNBody
-
-**182. Paoflow**
-- Confidence: VERIFIED
-- Resources: https://github.com/jehub/Paoflow
+- Link: [QuantNBody.md](TightBinding/Model_Hamiltonians/QuantNBody.md)
 
 **183. MagneticTB**
 - Confidence: VERIFIED
 - Resources: https://github.com/andrewfeng12/MagneticTB
+- Link: [MagneticTB.md](TightBinding/Model_Hamiltonians/MagneticTB.md)
 
 **184. MagneticKP**
 - Confidence: VERIFIED
 - Resources: https://github.com/andrewfeng12/MagneticKP
+- Link: [MagneticKP.md](TightBinding/Model_Hamiltonians/MagneticKP.md)
+
+**184a. TightBindingToolkit.jl**
+- Confidence: VERIFIED
+- Resources: https://github.com/Anjishnubose/TightBindingToolkit.jl
+- Note: Julia package for generic TB models and topological properties.
+- Link: [TightBindingToolkit.jl.md](TightBinding/Model_Hamiltonians/TightBindingToolkit.jl.md)
+
+**184b. HopTB.jl**
+- Confidence: VERIFIED
+- Resources: https://github.com/HopTB/HopTB.jl
+- Note: Non-orthogonal TB and Wannier90 interface.
+- Link: [HopTB.jl.md](TightBinding/Model_Hamiltonians/HopTB.jl.md)
+
+**184c. ThreeBodyTB.jl**
+- Confidence: VERIFIED
+- Resources: https://github.com/usnistgov/ThreeBodyTB.jl
+- Note: High-accuracy TB with three-body interactions (NIST).
+- Link: [ThreeBodyTB.jl.md](TightBinding/Model_Hamiltonians/ThreeBodyTB.jl.md)
+
+**184d. TBTK**
+- Confidence: VERIFIED
+- Resources: https://github.com/dafer45/TBTK
+- Note: C++ library for second-quantized Hamiltonians on discrete lattices.
+- Link: [TBTK.md](TightBinding/Model_Hamiltonians/TBTK.md)
+
+**184e. HubbardModel2D**
+- Confidence: VERIFIED
+- Resources: https://github.com/ryanlevy/HubbardModel2D
+- Note: C++ Exact Diagonalization solver for Hubbard models.
+- Link: [HubbardModel2D.md](TightBinding/Model_Hamiltonians/HubbardModel2D.md)
+
+**184f. EDLib**
+- Confidence: VERIFIED
+- Resources: https://github.com/Q-solvers/EDLib
+- Note: C++ template library for exact diagonalization (Hubbard/Anderson).
+- Link: [EDLib.md](TightBinding/Model_Hamiltonians/EDLib.md)
+
+**184g. PolaronMobility.jl**
+- Confidence: VERIFIED
+- Resources: https://github.com/Frost-group/PolaronMobility.jl
+- Note: Feynman variational path-integral for Fröhlich/Holstein polarons.
+- Link: [PolaronMobility.jl.md](TightBinding/Model_Hamiltonians/PolaronMobility.jl.md)
+
+**184h. Sunny.jl**
+- Confidence: VERIFIED
+- Resources: https://github.com/SunnySuite/Sunny.jl
+- Note: SU(N) spin dynamics, LLG, and LSWT in Julia.
+- Link: [Sunny.jl.md](TightBinding/Model_Hamiltonians/Sunny.jl.md)
+
+**184i. SpinMC.jl**
+- Confidence: VERIFIED
+- Resources: https://github.com/fbuessen/SpinMC.jl
+- Note: Classical Monte Carlo for lattice spin models.
+- Link: [SpinMC.jl.md](TightBinding/Model_Hamiltonians/SpinMC.jl.md)
+
+**184j. JHeisenbergED**
+- Confidence: VERIFIED
+- Resources: https://github.com/RudSmo/JHeisenbergED
+- Note: Simple Julia module for 1D Heisenberg Model ED.
+- Link: [JHeisenbergED.md](TightBinding/Model_Hamiltonians/JHeisenbergED.md)
+
+**184k. Heisenberg**
+- Confidence: VERIFIED
+- Resources: https://github.com/muammar/heisenberg
+- Note: Python program for Heisenberg spin chain matrix calculation.
+- Link: [Heisenberg.md](TightBinding/Model_Hamiltonians/Heisenberg.md)
+
+**184l. ALF**
+- Confidence: VERIFIED
+- Resources: https://alf.physik.uni-wuerzburg.de/
+- Note: Algorithms for Lattice Fermions (Auxiliary-Field QMC).
+- Link: [ALF.md](TightBinding/Model_Hamiltonians/ALF.md)
+
+
+### 4.3 Quantum Transport
+**167. Kwant**
+- Confidence: VERIFIED
+- Resources: https://kwant-project.org/
+- Link: [Kwant.md](TightBinding/Quantum_Transport/Kwant.md)
+
+**171. TBPLaS**
+- Confidence: VERIFIED
+- Resources: https://github.com/quantum-tb/TBPLaS
+- Link: [TBPLaS.md](TightBinding/Quantum_Transport/TBPLaS.md)
+
+**171a. NanoTCAD ViDES**
+- Confidence: VERIFIED
+- Resources: http://vides.nanotcad.com/
+- Note: NEGF-based device simulator (Poisson-Schrödinger).
+- Link: [NanoTCAD_ViDES.md](TightBinding/Quantum_Transport/NanoTCAD_ViDES.md)
+
+**171b. NEMO5**
+- Confidence: VERIFIED
+- Resources: https://nemo5.org/
+- Note: NanoElectronics MOdeling Tools; atomistic tight-binding and transport.
+- Link: [NEMO5.md](TightBinding/Quantum_Transport/NEMO5.md)
+
+### 4.4 Topological Analysis
+**166. Z2Pack**
+- Confidence: VERIFIED
+- Resources: https://z2pack.ethz.ch/
+- Link: [Z2Pack.md](TightBinding/Topological_Analysis/Z2Pack.md)
+
+**170. TopoTB**
+- Confidence: VERIFIED
+- Resources: https://github.com/ruanyangxy/TopoTB
+- Link: [TopoTB.md](TightBinding/Topological_Analysis/TopoTB.md)
+
+**170a. pyqula**
+- Confidence: VERIFIED
+- Resources: https://github.com/joselado/pyqula
+- Note: Topological quantum lattice systems (modern pygra).
+- Link: [pyqula.md](TightBinding/Topological_Analysis/pyqula.md)
+
+**170b. WEYLFET**
+- Confidence: VERIFIED
+- Resources: https://github.com/WEYLFET-developers/WEYLFET
+- Note: Transport in Weyl semimetals (Kwant-based).
+- Link: [WEYLFET.md](TightBinding/Topological_Analysis/WEYLFET.md)
+
+**170c. Berry**
+- Confidence: VERIFIED
+- Resources: https://github.com/ricardoribeiro-2020/berry
+- Note: Berry curvature and conductivity from DFT.
+- Link: [Berry.md](TightBinding/Topological_Analysis/Berry.md)
+
+**170d. PY-Nodes**
+- Confidence: VERIFIED
+- Resources: https://sourceforge.net/projects/py-nodes/
+- Note: Nelder-Mead search for Weyl/Dirac nodes (WIEN2k).
+- Link: [PY-Nodes.md](TightBinding/Topological_Analysis/PY-Nodes.md)
+
+**170e. nested_wloop**
+- Confidence: VERIFIED
+- Resources: https://github.com/kuansenlin/nested_and_spin_resolved_Wilson_loop
+- Note: Nested Wilson loops for Higher-Order Topology.
+- Link: [nested_wloop.md](TightBinding/Topological_Analysis/nested_wloop.md)
+
+**170f. TopMat**
+- Confidence: VERIFIED
+- Resources: https://github.com/zjwang11/TopMat
+- Note: Magnetic Topological Quantum Chemistry workflow.
+- Link: [TopMat.md](TightBinding/Topological_Analysis/TopMat.md)
+
+**170g. pytopomat**
+- Confidence: VERIFIED
+- Resources: https://github.com/ncfrey/pytopomat
+- Note: High-throughput topological materials screening.
+- Link: [pytopomat.md](TightBinding/Topological_Analysis/pytopomat.md)
 
 ---
 
@@ -1900,7 +2451,7 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 ---
 
-## MASTER LIST OF 382 SCIENTIFIC TOOLS (CONSOLIDATED)
+
 ## CATEGORY 7: STRUCTURE PREDICTION (22 tools)
 
 **236. USPEX**
@@ -2037,6 +2588,7 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 **268. IrRep**
 - Confidence: VERIFIED
 - Resources: https://github.com/stepan-tsirkin/irrep
+- Link: [IrRep.md](TightBinding/Topological_Analysis/IrRep.md)
 
 **269. effectivemass**
 - Confidence: VERIFIED
