@@ -65,6 +65,14 @@ CT-SEG (Continuous-Time Segment) is a continuous-time quantum Monte Carlo algori
 - Temperature scaling
 - Learning curve for TRIQS ecosystem
 
+## Comparison with Other Codes
+| Feature | CT-SEG (TRIQS) | CT-HYB (Standard) | CT-INT |
+| :--- | :--- | :--- | :--- |
+| **Basis** | Segment Picture | Matrix Formulation | Interaction Expansion |
+| **Interactions** | Density-Density Only | General (Slater-Kanamori) | General |
+| **Efficiency** | Very High (for dens-dens) | Moderate/High | Regime Dependent |
+| **Sign Problem** | Absent (usually) | Minimal | Regime Dependent |
+
 ## Verification & Sources
 **Primary sources**:
 1. Official documentation: https://triqs.github.io/ctseg/

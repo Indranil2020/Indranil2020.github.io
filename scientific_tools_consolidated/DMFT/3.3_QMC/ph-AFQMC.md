@@ -77,6 +77,14 @@ ph-AFQMC refers to particle-hole formulation of Auxiliary-Field Quantum Monte Ca
 - Method research
 - Sign problem studies
 
+## Comparison with Other Codes
+| Feature | ph-AFQMC (Research) | QMCPACK | ALF |
+| :--- | :--- | :--- | :--- |
+| **Method** | Particle-Hole AFQMC | Real-Space / AFQMC | Lattice QMC (Aux-Field) |
+| **Focus** | Sign Problem Mitigation | Continuum / Materials | Lattice Models |
+| **Temperature** | Finite T | Ground State (mostly) | Finite T / Ground State |
+| **Status** | Research Implementation | Production Standard | Community Standard |
+
 ## Verification & Sources
 **Primary sources**:
 1. AFQMC literature

@@ -78,6 +78,17 @@ w2dynamics is a continuous-time quantum Monte Carlo (CTQMC) impurity solver for 
 - **Documentation**: Good but assumes DMFT familiarity
 - **Platform**: Linux/Unix; MPI required for large calculations
 
+
+## Performance Characteristics
+- **Efficiency**: Highly optimized C++/Fortran core with efficient sampling updates.
+- **Parallelization**: Massively parallel MPI implementation scaling to thousands of cores.
+- **Worm Sampling**: Advanced worm algorithms improve ergodic sampling and convergence.
+
+## Comparison with Other Solvers
+- **vs iQIST**: Both are similar CT-HYB/CT-INT solvers; iQIST offers more diverse interaction handling; w2dynamics has strong worm sampling support.
+- **vs TRIQS/cthyb**: w2dynamics is a standalone solver; TRIQS/cthyb is part of a library. Both are state-of-the-art.
+- **vs ALPS/cthyb**: w2dynamics offers superior performance and modern algorithms (worm sampling) compared to legacy ALPS.
+
 ## Verification & Sources
 **Primary sources**:
 1. GitHub repository: https://github.com/w2dynamics/w2dynamics

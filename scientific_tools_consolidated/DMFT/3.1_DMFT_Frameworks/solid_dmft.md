@@ -70,6 +70,17 @@ solid_dmft is a versatile Python wrapper to perform DFT+DMFT calculations utiliz
 - Charge self-consistency significantly increases cost
 - Documentation assumes DMFT familiarity
 
+
+## Performance Characteristics
+- **Efficiency**: Inherits the performance of the underlying TRIQS/cthyb solver.
+- **Overhead**: Python overhead is negligible; cost is dominated by the impurity solver and DFT runs.
+- **Parallelization**: Fully supports MPI parallelization for both DFT (via VASP/QE support) and DMFT parts.
+
+## Comparison with Other Frameworks
+- **vs DMFTwDFT**: Both wrap DFT+DMFT workflows; solid_dmft relies on the TRIQS ecosystem, while DMFTwDFT is standalone/Wannier-based.
+- **vs Zen**: solid_dmft is a Python wrapper for TRIQS; Zen is a native Julia/Fortran package.
+- **vs Manual TRIQS**: solid_dmft automates the complex scripting usually required for TRIQS, acting as a user-friendly layer.
+
 ## Verification & Sources
 **Primary sources**:
 1. Official documentation: https://triqs.github.io/solid_dmft/

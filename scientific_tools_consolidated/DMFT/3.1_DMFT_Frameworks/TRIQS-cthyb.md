@@ -72,6 +72,18 @@ TRIQS/cthyb is a state-of-the-art continuous-time hybridization expansion quantu
 - Requires TRIQS ecosystem installation
 - Learning curve for TRIQS framework
 
+
+## Performance Characteristics
+- **Efficiency**: State-of-the-art C++ implementation with optimized local updates.
+- **Parallelization**: MPI parallelization over Monte Carlo walkers; near-linear scaling.
+- **Memory**: Dense matrix operations can be memory intensive for 5+ orbitals.
+- **Bottlenecks**: Matrix multiplications (BLAS level 3) and measuring two-particle quantities.
+
+## Comparison with Other Solvers
+- **vs iQIST**: iQIST offers more solver variants (CT-INT, CT-AUX) and is standalone Fortran; TRIQS/cthyb is C++/Python integrated.
+- **vs w2dynamics**: Both are top-tier CT-HYB solvers; TRIQS/cthyb integrates deeply with the TRIQS library ecosystem.
+- **vs ALPS/cthyb**: TRIQS/cthyb is the modern successor with better performance and active development.
+
 ## Verification & Sources
 **Primary sources**:
 1. Official documentation: https://triqs.github.io/cthyb/latest/

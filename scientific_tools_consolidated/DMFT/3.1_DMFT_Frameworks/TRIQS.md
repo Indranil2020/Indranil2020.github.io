@@ -95,6 +95,18 @@ TRIQS (Toolbox for Research on Interacting Quantum Systems) is a comprehensive s
 - **Platform support**: Best supported on Linux; limited Windows support
 - **HDF5 version sensitivity**: Can have compatibility issues between different HDF5 versions
 
+
+## Performance Characteristics
+- **Architecture**: C++ core for speed, Python for ease of use.
+- **Parallelization**: Extensive MPI support across all major components.
+- **Optimization**: Use of N-dimensional array (NDA) library for efficient memory access.
+- **Bottlenecks**: Impurity solvers (QMC) are the primary computational bottleneck.
+
+## Comparison with Other Ecosystems
+- **vs ALPSCore**: TRIQS is a complete DMFT framework; ALPSCore is a library of algorithms (older ALPS project is legacy).
+- **vs ComDMFT**: ComDMFT is a specialized, monolithic code for GW+DMFT; TRIQS is a general-purpose library/toolbox.
+- **vs Zen**: Zen is Julia-based and "all-in-one"; TRIQS is C++/Python and modular.
+
 ## Verification & Sources
 **Primary sources**:
 1. Official website: https://triqs.github.io/

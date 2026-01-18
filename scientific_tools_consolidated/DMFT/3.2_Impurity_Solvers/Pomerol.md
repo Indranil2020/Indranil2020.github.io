@@ -66,6 +66,14 @@ Pomerol is an exact diagonalization (full ED) code written in C++ for solving co
 - Exact solver: computationally expensive
 - Best for small clusters or impurity problems
 
+## Comparison with Other Codes
+| Feature | Pomerol | HPhi |
+| :--- | :--- | :--- |
+| **Method** | Exact Diagonalization (Full ED) | Exact Diagonalization (Lanczos, TPQ) |
+| **Primary Application** | DMFT Impurity Solver, Green's Functions | Lattice Models, Ground State/Thermal Properties |
+| **Performance** | Optimized for GF calculation, automatic symmetries | Massively parallel, TPQ for finite T |
+| **Key Strength** | Versatility for generic fermionic interactions (libcommute) | Scalability to larger lattice sizes |
+
 ## Verification & Sources
 **Primary sources**:
 1. GitHub repository: https://github.com/pomerol-ed/pomerol

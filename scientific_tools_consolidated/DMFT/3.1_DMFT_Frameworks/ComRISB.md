@@ -62,6 +62,26 @@ ComRISB (Rotationally Invariant Slave Boson) is a Gutzwiller approximation solve
 - Documentation within ComDMFT package
 - Requires understanding of Gutzwiller method
 
+
+## Performance Characteristics
+- **Speed**: Significantly faster than full DMFT (saddle-point approximation)
+- **Scaling**: Efficient for many-band models and large clusters
+- **Cost**: Fraction of the cost of CTQMC-based DMFT
+- **Capabilities**: Zero-temperature ground state properties
+- **Efficiency**: Handles f-electrons (lanthanides/actinides) efficiently
+
+## Comparison with Other Codes
+- **vs DMFT**: ComRISB (Gutzwiller) is approximate but much faster than full dynamic DMFT
+- **vs CyGUTZ**: ComRISB likely uses CyGUTZ as its backend or is the integration of it within Comscope
+- **vs DFT+U**: RISB captures more correlation effects (mass renormalization) than static DFT+U
+- **Unique strength**: Rapid estimation of correlation effects in complex structures
+
+## Best Practices
+- **Use Case**: Screening materials or when DMFT is too expensive
+- **Validation**: Compare with full DMFT for select cases
+- **Temperature**: Best for ground state/low-temperature properties
+- **Combination**: Use as a precursor or alongside DMFT calculations
+
 ## Verification & Sources
 **Primary sources**:
 1. Comscope website: https://www.bnl.gov/comscope/software/comscope-software-packages.php

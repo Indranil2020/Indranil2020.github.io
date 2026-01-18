@@ -62,6 +62,14 @@ CT-QMC (Continuous-Time Quantum Monte Carlo) is a general term for the family of
 - Memory intensive for large problems
 - Requires substantial compute resources
 
+## Comparison of CT-QMC Variants
+| Algorithm | Expansion Term | Core Object | Best For |
+| :--- | :--- | :--- | :--- |
+| **CT-HYB** | Hybridization $\Delta$ | Local Hamiltonian | Strong Coupling, Multi-orbital |
+| **CT-INT** | Interaction $U$ | Non-interacting $G_0$ | Weak Coupling, Clusters |
+| **CT-AUX** | Auxiliary Field | Non-interacting $G_0$ | Large Clusters, Weak $U$ |
+| **CT-SEG** | $\Delta$ (Segment) | Segment Configs | Density-Density only (Faster) |
+
 ## Verification & Sources
 **Primary sources**:
 1. w2dynamics: https://github.com/w2dynamics/w2dynamics

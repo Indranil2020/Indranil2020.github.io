@@ -75,6 +75,14 @@ For production QMC calculations, consider:
 - Algorithm learning
 - QMC evolution understanding
 
+## Comparison with Other Codes
+| Feature | QMcBeaver (Legacy) | QMCPACK | CASINO | pyQMC |
+| :--- | :--- | :--- | :--- | :--- |
+| **Language** | C++ (Older) | C++ (Modern/HPC) | F90 | Python |
+| **Status** | Inactive/Historical | Active Production | Active Production | Active Development |
+| **Methods** | VMC, DMC | VMC, DMC, AFQMC | VMC, DMC | VMC, DMC |
+| **Performance** | Basic | Exascale Optimized | High Performance | Prototyping/Teaching |
+
 ## Verification & Sources
 **Primary sources**:
 1. GitHub: https://github.com/nitroamos/QMcBeaver

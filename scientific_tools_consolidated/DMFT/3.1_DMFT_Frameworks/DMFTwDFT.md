@@ -64,6 +64,25 @@ DMFTwDFT is an open-source code combining Dynamical Mean Field Theory with vario
 - Charge self-consistency increases computational cost
 - Platform: Linux/Unix primary support
 
+
+## Performance Characteristics
+- **Parallelization**: MPI-based parallelization
+- **Efficiency**: Dependent on the chosen impurity solver (CTQMC, etc.)
+- **Cost**: Charge self-consistency adds significant overhead
+- **Flexibility**: Can trade off accuracy for speed by choosing different solvers
+
+## Comparison with Other DMFT Frameworks
+- **vs ComDMFT**: DMFTwDFT is more flexible with various DFT backends; ComDMFT focuses on VASP/GW integration
+- **vs EDMFTF**: EDMFTF is tightly coupled with WIEN2k and uses a stationary functional approach; DMFTwDFT is more modular
+- **vs TRIQS/DFTTools**: Both are flexible; DMFTwDFT aims for a more "black-box" user-friendly approach with standardized workflows
+- **Unique strength**: Open-source, supports multiple major DFT codes (VASP, QE, Siesta), user-friendly
+
+## Best Practices
+- **DFT Backend**: Choose the backend you are most familiar with (e.g., VASP or QE)
+- **Wannier90**: Ensure high-quality Wannier projections
+- **Solver**: Use CTQMC for high accuracy, cheaper solvers for initial checks
+- **Convergence**: Monitor charge density convergence in self-consistent runs
+
 ## Verification & Sources
 **Primary sources**:
 1. Official documentation: https://dmftwdft-project.github.io/DMFTwDFT/

@@ -68,6 +68,21 @@ EDIpack is a massively parallel exact diagonalization solver for generic quantum
 - Not suitable for very large multi-orbital systems
 - Real-frequency only (advantage: no analytical continuation)
 
+## Performance Characteristics
+- **Massively Parallel**: Designed for distributed memory systems using MPI, scaling to large core counts.
+- **Sub-linear Scaling**: Optimized Fock basis organization minimizes inter-processor communication.
+- **Efficiency**: Uses Lanczos and Arnoldi algorithms (with internal restarts) for efficient ground state and spectral calculations.
+- **Memory Management**: Distributed storage of the Hamiltonian and vectors.
+
+## Comparison with Other Codes
+| Feature | EDIpack | Pomerol | HPhi |
+| :--- | :--- | :--- | :--- |
+| **Primary Focus** | Quantum Impurity Problems | Impurity Models & Green's Functions | Lattice Models (Hubbard, Heisenberg) |
+| **Method** | Lanczos / Arnoldi ED | Full ED / Lanczos | Lanczos / TPQ |
+| **Parallelization** | Massively Parallel (MPI) | MPI + OpenMP | Hybrid MPI/OpenMP + GPU |
+| **Specialization** | Multi-orbital impurities, Electron-Phonon | Green's functions, optimizations for symmetries | Finite T (TPQ), Large scale lattice models |
+| **Language** | Fortran (SciFortran) | C++ | C / Fortran |
+
 ## Verification & Sources
 **Primary sources**:
 1. Official documentation: https://edipack.github.io/EDIpack/

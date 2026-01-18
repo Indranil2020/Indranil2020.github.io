@@ -63,6 +63,24 @@ COMSUITE (Combination Suite) is a computational materials physics code for simul
 - Platform: Linux/Unix
 - Active development status varies
 
+
+## Performance Characteristics
+- **Solvers**: Efficient CTQMC and RISB solvers
+- **Parallelization**: MPI support for large-scale calculations
+- **Gutzwiller**: ComRISB provides fast, low-cost approximate solutions
+- **ComLowH**: optimized downfolding to low-energy Hamiltonians
+
+## Comparison with Other Codes
+- **vs TRIQS**: COMSUITE is a specialized package for LDA+DMFT calculations with predefined workflows, whereas TRIQS is a general library for building DMFT tools
+- **vs EDMFTF**: Both provide DMFT capabilities, but COMSUITE emphasizes the RISB (Gutzwiller) approach alongside DMFT
+- **vs DFT+DMFT**: COMSUITE offers a complete suite including Wannier construction and multiple solvers
+- **Unique strength**: Integrated Gutzwiller (RISB) and DMFT with charge self-consistency
+
+## Best Practices
+- **Workflow**: Use ComWann for basis construction, then ComRISB/ComCTQMC for solving
+- **Solver Selection**: Use RISB for quick estimates or wider bandwidths, CTQMC for exact results
+- **Self-consistency**: Ensure charge self-consistency for strongly correlated oxides
+
 ## Verification & Sources
 **Primary sources**:
 1. GitHub repository: https://github.com/rutgersphysics/COMSUITE

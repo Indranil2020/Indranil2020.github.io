@@ -59,6 +59,14 @@ CT-HYB (Continuous-Time Hybridization Expansion) is an algorithm for solving qua
 - Scales with inverse temperature
 - Implementation-specific limitations
 
+## Comparison with Other Algorithms
+| Algorithm | CT-HYB | CT-INT | CT-AUX |
+| :--- | :--- | :--- | :--- |
+| **Expansion** | Hybridization ($\Delta$) | Interaction ($U$) | Auxiliary Field |
+| **Best Regime** | Strong Coupling (Large $U$) | Weak Coupling (Small $U$) | Weak/Intermediate |
+| **Sign Problem** | Generally mild | Moderate | Moderate |
+| **Matrix Size** | Linear in expansion order | Linear in expansion order | Linear in expansion order |
+
 ## Verification & Sources
 **Primary sources**:
 1. E. Gull et al., Rev. Mod. Phys. 83, 349 (2011) - CT-HYB review

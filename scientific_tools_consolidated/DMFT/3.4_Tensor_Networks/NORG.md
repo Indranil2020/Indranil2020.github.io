@@ -82,6 +82,14 @@ NORG (Numerical Orbital Renormalization Group) is a specialized tensor network m
 - **Multi-orbital DMFT**: Complementary approach
 - **Tensor networks**: General framework
 
+## Comparison with Other Codes
+| Feature | NORG | Block/DMRG++ | ITensor |
+| :--- | :--- | :--- | :--- |
+| **Method** | Orbital Renormalization Group | Standard DMRG | General Tensor Networks |
+| **Basis** | Multi-orbital (Orbital Space) | Real Space / Orbitals | General |
+| **Specialization** | Orbital Ordering / Fluctuations | Quantum Chemistry / Lattice | General Physics |
+| **Status** | Research Code | Production | Production |
+
 ## Verification & Sources
 **Primary sources**:
 1. GitHub: https://github.com/rqHe1/NORG

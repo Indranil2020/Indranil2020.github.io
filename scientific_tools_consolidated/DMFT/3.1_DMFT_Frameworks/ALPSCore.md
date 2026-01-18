@@ -57,6 +57,26 @@ ALPSCore (ALPS Core Libraries) represents the modernized core libraries extracte
 - Some features still under development
 - Smaller community than original ALPS project
 
+
+## Performance Characteristics
+- **Accumulators**: ALEA library provides O(N) scaling for accumulating statistics (improved from O(N log N))
+- **Memory**: Optimized memory footprint with efficient object management
+- **Parallelization**: MPI-based parallel accumulation
+- **Efficiency**: Minimized temporary object creation using Eigen library
+- **Compilation**: Faster compilation times due to reduced dependencies
+
+## Comparison with Other Codes
+- **vs ALPS**: ALPSCore is the modern, modular C++11 successor with better performance
+- **vs TRIQS**: Both provide C++ libraries, but ALPSCore is lightweight and focused on core utilities (accumulators, MC updates) rather than a full DMFT framework
+- **vs Stan**: ALPSCore is specialized for physics simulations rather than general statistics
+- **Unique strength**: High-performance, standardized components for building custom physics codes
+
+## Best Practices
+- **Integration**: Use as a library component in custom C++ codes
+- **Accumulators**: Use ALEA library for efficient statistical analysis
+- **Data I/O**: Leverage HDF5 for portable binary data storage
+- **Dependencies**: Requires C++14/C++17 compliant compiler
+
 ## Verification & Sources
 **Primary sources**:
 1. Official website: https://alpscore.org/

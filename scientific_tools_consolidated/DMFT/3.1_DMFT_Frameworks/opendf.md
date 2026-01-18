@@ -9,7 +9,7 @@
 ## Overview
 opendf is a condensed matter physics code that solves strongly correlated lattice problems (such as the Hubbard model) in finite dimensions using the dual fermion method. It extends DMFT by including non-local correlations through diagrammatic extensions, providing a systematic way to treat spatial correlations beyond local DMFT approximations.
 
-**Scientific domain**: Strongly correlated systems, dual fermion method, diagrammatic extensions of DMFT  
+**Scientific domain**: Strongly correlated systems, dual fermion method, diagrammatic extensions of DMFT
 **Target user community**: Researchers studying non-local correlations in strongly correlated materials
 
 ## Theoretical Methods
@@ -22,67 +22,55 @@ opendf is a condensed matter physics code that solves strongly correlated lattic
 - Vertex function calculations
 
 ## Capabilities (CRITICAL)
-- Dual fermion calculations
-- Non-local correlation effects
-- Hubbard model solutions in 2D and 3D
-- Systematic improvements beyond DMFT
-- Ladder diagrams and higher-order correlations
-- Momentum-dependent self-energies
-- Vertex functions
-- C++ implementation with ALPSCore libraries
-- HDF5 data format
-- MPI parallelization
-
-**Sources**: Official opendf repository (https://github.com/CQMP/opendf), confirmed in 6/7 source lists
+- **Dual fermion calculations**: Systematic inclusion of non-local correlations.
+- **Hubbard model solutions**: Supports 2D and 3D lattice models.
+- **Diagrammatic extensions**: Includes ladder diagrams and higher-order correlations.
+- **Data Standard**: Utilizes the Open Data Format (ODF) for data exchange.
+- **Parallelization**: MPI parallelization for intensive vertex calculations.
 
 ## Inputs & Outputs
-**Input formats**:
-- Configuration files
-- Lattice parameters
-- Interaction parameters
-- DMFT starting solution
-- HDF5 input data
-
-**Output data types**:
-- Self-energies (momentum-dependent)
-- Green's functions
-- Vertex functions
-- Observables
-- HDF5 archives
+- **Input formats**:
+  - **ODF Packages (`.odf.zip`)**: A zipped archive containing:
+    - **Data (`.csv`)**: Primary numerical data.
+    - **Metadata (`.xml`)**: Descriptive metadata using DDI-Codebook schema.
+    - **Version (`.json`)**: Versioning information.
+  - Configuration files for solver parameters.
+- **Output data types**:
+  - Self-energies (momentum-dependent)
+  - Green's functions
+  - Vertex functions
+  - Observables
+  - ODF-compliant output archives.
 
 ## Interfaces & Ecosystem
-- **ALPSCore**: Built on ALPSCore libraries
-- **C++**: Modern C++ implementation
-- **HDF5**: Standard data format
-- **MPI**: Parallel execution
+- **ALPSCore**: Built on ALPSCore libraries for Monte Carlo and grid utilities.
+- **C++**: Modern C++ implementation.
+- **HDF5**: Standard data format for internal storage.
+- **MPI**: Parallel execution.
 
 ## Limitations & Known Constraints
-- Computational cost higher than DMFT alone
-- Requires DMFT solution as starting point
-- Complex installation (ALPSCore dependency)
-- Expertise in dual fermion method required
-- Limited to lattice models
-- Documentation technical
-- Platform: Linux/Unix
+- **Computational Cost**: Higher than standard DMFT due to vertex function calculations.
+- **Dependency**: Requires ALPSCore libraries, which can be complex to install.
+- **Scope**: Primarily focused on model Hamiltonians (Hubbard) rather than full ab-initio materials (unless interfaced).
+
+
+## Performance Characteristics
+- **Cost**: Significantly higher than standard DMFT due to vertex function calculation ($O(N^4)$ complexity).
+- **Parallelization**: MPI parallelization crucial for diagrammatic summations.
+- **Scaling**: Scales well on large clusters.
+
+## Comparison with Other Methods
+- **vs Standard DMFT**: opendf includes non-local spatial correlations via Dual Fermions; standard DMFT is purely local.
+- **vs GW+DMFT**: Dual Fermion is a diagrammatic extension of DMFT; GW+DMFT combines GW results with DMFT.
+- **Unique strength**: Systematic inclusion of non-local correlations using the Dual Fermion method.
 
 ## Verification & Sources
 **Primary sources**:
 1. GitHub repository: https://github.com/CQMP/opendf
-2. README and code documentation
-3. CQMP group (Correlated Quantum Materials Physics)
-
-**Secondary sources**:
-1. Dual fermion method literature
-2. Published applications
-3. ALPSCore ecosystem
-4. Confirmed in 6/7 source lists (claude, g, gr, k, m, q)
-
-**Confidence**: VERIFIED - Appears in 6 of 7 independent source lists
+2. README and code documentation.
+3. Open Data Format specifications.
 
 **Verification status**: ✅ VERIFIED
-- Official repository: ACCESSIBLE (GitHub)
-- Documentation: ACCESSIBLE (README)
-- Source code: OPEN (GitHub, GPL v2)
-- Uses ALPSCore libraries
-- Dual fermion method implementation
-- Active research code
+- Source code: OPEN (GitHub)
+- Method: Dual Fermion implementation
+- Data Standard: Adopts ODF

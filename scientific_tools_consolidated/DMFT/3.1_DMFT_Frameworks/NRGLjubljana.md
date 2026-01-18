@@ -65,6 +65,19 @@ NRG Ljubljana is a framework of interrelated computer codes for performing numer
 - Limited to local impurity problems
 - Documentation technical
 
+
+## Performance Characteristics
+- **Efficiency**: Optimized hybrid Mathematica/C++ implementation.
+- **Bottleneck**: ~90% of time spent in LAPACK diagonalization routines.
+- **Scaling**: Efficient on clusters for large parameter sweeps.
+- **Integration**: Can be coupled to TRIQS via `nrgljubljana_interface`.
+
+## Comparison with Other Codes
+- **vs TRIQS/NRG**: NRGLjubljana is a specialized, mature standalone solver; TRIQS offers a modern C++/Python framework.
+- **vs DMFT_ED**: NRG is better suited for low-energy Kondo physics than ED.
+- **vs CTQMC**: NRG accesses zero temperature and real frequencies directly, unlike CTQMC.
+- **Unique strength**: Extreme precision for Kondo/impurity physics, real-frequency spectra without analytic continuation.
+
 ## Verification & Sources
 **Primary sources**:
 1. Official website: http://nrgljubljana.ijs.si/

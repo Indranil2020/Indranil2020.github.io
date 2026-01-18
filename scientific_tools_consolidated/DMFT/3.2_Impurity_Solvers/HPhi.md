@@ -52,6 +52,15 @@ HPhi is a software package for solving quantum lattice models using the exact di
 - GitHub repository
 - Active development by ISSP, University of Tokyo
 
+## Comparison with Other Codes
+| Feature | HPhi | Pomerol |
+| :--- | :--- | :--- |
+| **Method** | Exact Diagonalization (Lanczos, TPQ, Full) | Exact Diagonalization (Full ED) |
+| **Focus** | Lattice models (Hubbard, Heisenberg, Kitaev) | Impurity models, Green's functions |
+| **Finite Temperature** | Thermal Pure Quantum (TPQ) states | Trace over states, Matsubara formalism |
+| **Parallelization** | MPI/OpenMP Hybrid, GPU (v3.1+) | MPI/OpenMP Hybrid |
+| **Key Strength** | Handling large lattice systems, TPQ method | Efficient Green's function calculation, symmetry analysis |
+
 ## Verification & Sources
 **Primary sources**:
 1. GitHub: https://github.com/QLMS/HPhi

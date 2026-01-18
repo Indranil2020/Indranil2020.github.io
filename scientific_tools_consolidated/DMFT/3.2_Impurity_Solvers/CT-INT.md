@@ -60,6 +60,14 @@ CT-INT (Continuous-Time Interaction Expansion) is a quantum Monte Carlo algorith
 - Implementation-specific constraints
 - Typically slower than CT-HYB for strong coupling
 
+## Comparison with Other Algorithms
+| Algorithm | CT-INT | CT-HYB |
+| :--- | :--- | :--- |
+| **Expansion Parameter** | Interaction ($U$) | Hybridization ($\Delta$) |
+| **Best Regime** | Weak Coupling | Strong Coupling |
+| **Complexity** | $O(k^3)$ in perturbation order | $O(k^3)$ in perturbation order |
+| **Sign Problem** | Can be severe at large $U$ | Generally better at large $U$ |
+
 ## Verification & Sources
 **Primary sources**:
 1. ALPSCore/CT-INT: https://github.com/ALPSCore/CT-INT

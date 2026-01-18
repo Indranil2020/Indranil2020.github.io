@@ -64,6 +64,14 @@ Rutgers-DMFT refers to the collection of DMFT codes developed by Kristjan Haule'
 - Platform: Linux/Unix
 - Academic/research use focus
 
+## Comparison with Other Codes
+| Feature | Rutgers-DMFT (Haule) | TRIQS | w2dynamics |
+| :--- | :--- | :--- | :--- |
+| **Focus** | Materials / DFT+DMFT | General Framework / Solver Library | Multi-orbital Solvers |
+| **DFT Interface** | Wien2k (Strongly integrated) | VASP, Wien2k, QE (via DFTTools) | VASP, Wien2k |
+| **Solvers** | CT-QMC (Custom), NCA | CT-HYB, CT-INT, CT-SEG | CT-HYB, CT-INT |
+| **Status** | Research / Academic Leader | Open Source Community Standard | Open Source |
+
 ## Verification & Sources
 **Primary sources**:
 1. GitHub repository: https://github.com/HauleGroup/CODES

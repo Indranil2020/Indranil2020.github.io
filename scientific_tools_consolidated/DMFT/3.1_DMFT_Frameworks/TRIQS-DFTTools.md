@@ -69,6 +69,18 @@ TRIQS/DFTTools is a TRIQS application providing the necessary tools to perform D
 - Analytical continuation introduces uncertainties
 - HDF5 version compatibility issues possible
 
+
+## Performance Characteristics
+- **Efficiency**: Heavily dependent on the impurity solver backend (e.g., TRIQS/cthyb).
+- **Parallelization**: Inherits MPI parallelization from TRIQS applications.
+- **Overhead**: Python-layer overhead is minimal compared to the QMC solver cost.
+- **Scalability**: Can scale to large clusters for complex impurity problems.
+
+## Comparison with Other Frameworks
+- **vs DMFTwDFT**: TRIQS/DFTTools is modular and requires Python scripting; DMFTwDFT aims for a "black-box" experience.
+- **vs EDMFTF**: EDMFTF is a stationary functional code tightly coupled with Wien2k; DFTTools is a flexible library for various DFT codes.
+- **vs solid_dmft**: solid_dmft is a high-level wrapper built *on top* of DFTTools to automate workflows.
+
 ## Verification & Sources
 **Primary sources**:
 1. Official documentation: https://triqs.github.io/dft_tools/latest/

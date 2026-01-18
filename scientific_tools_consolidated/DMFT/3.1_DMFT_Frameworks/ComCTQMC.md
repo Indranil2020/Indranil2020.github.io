@@ -63,6 +63,26 @@ ComCTQMC is a GPU-accelerated continuous-time quantum Monte Carlo impurity solve
 - Documentation primarily in repository
 - Platform: Linux with NVIDIA GPU
 
+
+## Performance Characteristics
+- **GPU Acceleration**: Up to 600x speedup for f-shell (14 orbitals) problems compared to CPU
+- **Scaling**: Excellent scaling on supercomputers (e.g., Summit)
+- **Efficiency**: Optimized for large Hilbert spaces and multi-orbital systems
+- **Algorithm**: Improved estimators and reduced density matrix measurements
+- **Implementation**: C++, CUDA, C
+
+## Comparison with Other Codes
+- **vs w2dynamics**: ComCTQMC is heavily optimized for GPUs (up to 600x speedup), while w2dynamics focuses on multi-orbital physics on CPUs
+- **vs TRIQS/cthyb**: ComCTQMC is a specialized standalone solver with strong GPU focus
+- **vs ALPS CT-HYB**: ComCTQMC offers significantly higher performance on modern hardware
+- **Unique strength**: Extreme GPU acceleration for complex multi-orbital systems (f-electrons)
+
+## Best Practices
+- **Hardware**: Use NVIDIA GPUs for production runs
+- **System Size**: Most effective for large Hilbert spaces (d and f shells) where GPU acceleration dominates
+- **Temperature**: Efficient at low temperatures due to segment/matrix implementations
+- **MPI/GPU**: Utilize one MPI rank per GPU for optimal resource usage
+
 ## Verification & Sources
 **Primary sources**:
 1. Comscope website: https://www.bnl.gov/comscope/software/comscope-software-packages.php

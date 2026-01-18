@@ -58,6 +58,24 @@ ALPS (Algorithms and Libraries for Physics Simulations) is an international coll
 - Documentation scattered across wiki pages
 - Some components less actively maintained
 
+
+## Performance Characteristics
+- **Algorithm efficiency**: Standard implementations of classical Monte Carlo
+- **Parallelization**: MPI-based parallelization
+- **Scalability**: Scaling limitations relative to modern ALPSCore
+- **Legacy status**: Not optimized for modern hardware architectures
+
+## Comparison with Other Codes
+- **vs ALPSCore**: ALPS is the legacy version; ALPSCore is the modern C++11 rewrite with better performance and modularity
+- **vs TRIQS**: ALPS is more focused on lattice models, while TRIQS offers a broader framework for continuous-time solvers
+- **vs TeNPy**: ALPS focuses on Monte Carlo and ED, while TeNPy focuses on tensor networks
+- **Unique strength**: Extensive library of quantum lattice models and legacy datasets
+
+## Best Practices
+- **Migration**: New projects should use ALPSCore
+- **Data format**: Use HDF5 for large datasets
+- **Visualization**: Use included tools for initial analysis
+
 ## Verification & Sources
 **Primary sources**:
 1. Official website: https://alps.comp-phys.org/
