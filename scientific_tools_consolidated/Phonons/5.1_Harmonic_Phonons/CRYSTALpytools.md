@@ -158,7 +158,7 @@ CRYSTALpytools is an open-source Python infrastructure for the CRYSTAL quantum c
 **Primary sources**:
 1. GitHub: https://github.com/crystal-code-tools/CRYSTALpytools
 2. Documentation: https://crystal-code-tools.github.io/CRYSTALpytools/
-3. W. F. Perger et al., Comput. Phys. Commun. 292, 108853 (2023)
+3. B. Camino, H. Zhou, E. Ascrizzi, A. Boccuni, F. Cossio, A. Erba, Comput. Phys. Commun. 292, 108853 (2023)
 
 **Confidence**: VERIFIED
 

@@ -158,7 +158,7 @@ elphmod is a collection of Python modules to handle coupled tight-binding and ma
 **Primary sources**:
 1. GitHub: https://github.com/janberges/elphmod
 2. Documentation: https://janberges.github.io/elphmod/
-3. Zenodo: https://zenodo.org/records/17702034
+3. Zenodo: https://doi.org/10.5281/zenodo.5919991
 
 **Confidence**: VERIFIED
 

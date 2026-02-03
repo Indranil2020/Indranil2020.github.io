@@ -95,6 +95,12 @@ mace_phonopy is a code to generate second-order interatomic force constants (IFC
 - **Scalability**: Large systems feasible (100s-1000s atoms)
 - **GPU requirement**: CUDA-capable GPU recommended
 
+## Computational Cost
+- **Force evaluation**: Fast with GPU (milliseconds per structure)
+- **Supercell forces**: Minutes for typical systems
+- **Total workflow**: Minutes to hours (depends on system size)
+- **Memory**: Moderate (MACE model + structures)
+
 ## Limitations & Known Constraints
 - Requires trained MACE potential
 - MACE-specific
