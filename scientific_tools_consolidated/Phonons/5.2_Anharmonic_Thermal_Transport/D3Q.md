@@ -60,25 +60,24 @@ D3Q is a code for computing third-order anharmonic force constants from density 
 
 
 ## Advanced Features
+- **2n+1 theorem**: Exact third derivatives without finite differences
+- **DFPT integration**: Direct use of QE perturbation theory
+- **No supercell needed**: Works with primitive cell
+- **Metal support**: Efficient for metallic systems
+- **Symmetry exploitation**: Reduces computational cost
+- **THERMAL2 integration**: Complete thermal conductivity workflow
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- **DFPT efficiency**: No supercell calculations needed
+- **Memory**: Can be intensive for large q-grids
+- **Parallelization**: MPI support via QE
+- **Accuracy**: Exact third derivatives
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
+- Ground state (pw.x): Standard DFT cost
+- Phonon (ph.x): DFPT cost per q-point
+- D3Q calculation: Additional DFPT cost for third derivatives
+- Overall: Comparable to or less than supercell methods for small cells
 
 ## Limitations & Known Constraints
 - QE-specific

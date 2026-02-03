@@ -55,18 +55,13 @@ TDEP (Temperature Dependent Effective Potential) is software for extracting temp
 
 
 ## Advanced Features
-
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
+- **Temperature-dependent effective potential**: True finite-temperature phonons
+- **AIMD-based extraction**: Captures full anharmonicity from MD
+- **Soft mode stabilization**: Handles imaginary phonon modes
+- **Free energy calculations**: Thermodynamic properties vs temperature
+- **Thermal expansion**: Grüneisen parameters and expansion coefficients
+- **Phase transition detection**: Identifies structural instabilities
+- **Phonon spectral functions**: Beyond harmonic approximation
 
 ## Performance Characteristics
 - AIMD: Days (computationally expensive)

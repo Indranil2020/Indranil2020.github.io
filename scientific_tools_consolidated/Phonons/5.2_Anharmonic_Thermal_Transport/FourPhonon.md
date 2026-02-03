@@ -71,25 +71,19 @@ FourPhonon is a computational package that extends ShengBTE to calculate four-ph
 
 
 ## Advanced Features
-
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+- **Four-phonon scattering**: Complete 4-phonon process implementation
+- **Adaptive broadening**: Automatic energy broadening for numerical stability
+- **fourthorder.py**: Companion script for 4th-order force constants
+- **ShengBTE compatibility**: Uses familiar ShengBTE workflow
+- **Mode-resolved analysis**: Detailed phonon mode contributions
+- **Temperature dependence**: Full temperature-dependent calculations
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
+- 4th-order force constants: Very expensive (N⁴ scaling with atoms)
+- fourthorder.py: Generates many displaced configurations
+- BTE solution: Hours to days (more expensive than 3-phonon)
+- Memory: Significant for 4th-order tensors
+- Overall: Order of magnitude more expensive than 3-phonon only
 
 ## Performance Characteristics
 - **Computational cost**: Higher than 3-phonon (4th-order scaling)
