@@ -51,6 +51,38 @@ PHON is a computational tool for phonon calculations developed by Krzysztof Parl
 - Manual interface setup required
 - ASCII-based input/output
 
+## Advanced Features
+
+### Thermodynamic Analysis:
+- Helmholtz free energy
+- Entropy calculations
+- Heat capacity (Cv)
+- Temperature-dependent properties
+
+### Quasi-Harmonic Approximation:
+- Volume-dependent phonons
+- Thermal expansion
+- Grüneisen parameters
+- Pressure effects
+
+### Complex Structures:
+- Handles large unit cells
+- Multiple atom types
+- Low-symmetry systems
+- Molecular crystals
+
+## Performance Characteristics
+- **Speed**: Efficient for harmonic calculations
+- **Memory**: Moderate requirements
+- **Accuracy**: Good for harmonic properties
+- **Scalability**: Handles complex structures
+
+## Computational Cost
+- **Post-processing**: Fast (DFT dominates cost)
+- **Thermodynamics**: Quick computation
+- **QHA**: Requires multiple volumes
+- **Overall**: Efficient for established workflows
+
 ## Limitations & Known Constraints
 - **Harmonic approximation only**: No anharmonic effects
 - **Learning curve**: Moderate
@@ -62,12 +94,37 @@ PHON is a computational tool for phonon calculations developed by Krzysztof Parl
 - **vs Phonopy**: PHON older, less automated; Phonopy more user-friendly
 - **Historical significance**: One of early widely-used phonon codes
 - **Current status**: Largely superseded by Phonopy for routine calculations
+- **Legacy value**: Still used in some established workflows
+
+## Best Practices
+
+### Workflow Setup:
+- Carefully prepare input files
+- Validate force constant convergence
+- Check acoustic sum rules
+- Compare with experimental data
+
+### QHA Calculations:
+- Use sufficient volume points
+- Check convergence with mesh density
+- Validate temperature range
+- Monitor numerical stability
 
 ## Application Areas
 - Phonon dispersion calculations
 - Thermodynamic properties
 - Materials characterization
 - Legacy calculations and benchmarking
+- Academic research
+- Established workflows
+
+## Community and Support
+- **Developer**: Krzysztof Parlinski
+- **License**: Free for academic use
+- **Documentation**: Manual included with code
+- **Support**: Limited (legacy code)
+- **User base**: Established users, legacy workflows
+- **Status**: Available but largely superseded by Phonopy
 
 ## Verification & Sources
 **Primary sources**:

@@ -48,6 +48,38 @@ PHONON is a software package for lattice dynamics calculations developed at the 
 - Manual workflow setup
 - Text-based interface
 
+## Advanced Features
+
+### Isotope Effects:
+- Isotope mass substitution
+- Isotope scattering calculations
+- Mass disorder effects
+- Isotope-dependent properties
+
+### Thermodynamic Properties:
+- Free energy calculations
+- Entropy and heat capacity
+- Temperature-dependent analysis
+- Thermal property curves
+
+### Force Constant Analysis:
+- Direct method implementation
+- Symmetry exploitation
+- Long-range interactions
+- Force constant validation
+
+## Performance Characteristics
+- **Speed**: Efficient for harmonic phonons
+- **Memory**: Moderate requirements
+- **Accuracy**: Good within harmonic approximation
+- **Scalability**: Handles typical crystal systems
+
+## Computational Cost
+- **Phonon calculation**: Fast post-processing
+- **DOS computation**: Quick
+- **Thermodynamics**: Efficient
+- **Overall**: Lightweight (DFT is bottleneck)
+
 ## Limitations & Known Constraints
 - **Harmonic only**: No anharmonicity
 - **Manual setup**: Requires careful preparation
@@ -58,11 +90,36 @@ PHONON is a software package for lattice dynamics calculations developed at the 
 - **Similar to PHON**: Related development
 - **vs Modern codes**: Less automated than Phonopy
 - **Legacy use**: Historical importance in phonon calculations
+- **vs Phonopy**: PHONON requires more manual setup
+
+## Best Practices
+
+### Input Preparation:
+- Carefully format input files
+- Validate crystal structure
+- Check force constant symmetry
+- Use appropriate supercell size
+
+### Calculations:
+- Verify acoustic sum rules
+- Check DOS integration
+- Validate thermodynamic properties
+- Compare with known results
 
 ## Application Areas
 - Fundamental phonon studies
 - Thermodynamic property calculations
 - Academic research
+- Isotope effect studies
+- Legacy research workflows
+
+## Community and Support
+- **Institution**: IFJ PAN, Poland
+- **License**: Free for academic research
+- **Documentation**: Included with package
+- **Support**: Limited (academic distribution)
+- **User base**: Academic researchers
+- **Status**: Available for academic use
 
 ## Verification & Sources
 **Primary sources**:

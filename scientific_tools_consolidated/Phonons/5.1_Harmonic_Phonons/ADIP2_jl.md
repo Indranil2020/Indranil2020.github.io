@@ -58,17 +58,71 @@ ADIP2.jl (Automatic Differentiation of Interatomic Potentials with Phonons) is a
 - AtomsBase.jl integration
 - Unitful.jl for units
 
+## Advanced Features
+
+### Automatic Differentiation:
+- Exact force constant derivatives
+- No finite difference approximations
+- Efficient gradient computation
+- Support for complex potentials
+
+### Potential Flexibility:
+- Custom potential definitions
+- Machine learning potential support
+- Analytical potential forms
+- Easy potential development
+
+## Performance Characteristics
+- **Speed**: Fast with Julia's JIT compilation
+- **Memory**: Efficient for typical systems
+- **Accuracy**: Exact derivatives via AD
+- **Scalability**: Good for medium-sized systems
+
+## Computational Cost
+- **AD overhead**: Minimal with Julia
+- **Force constants**: Fast computation
+- **Phonon calculation**: Efficient
+- **Overall**: Competitive with established codes
+
 ## Limitations & Known Constraints
 - Requires Julia knowledge
 - Limited to supported potentials
 - Smaller community than Python tools
 - Documentation evolving
+- Less mature than Phonopy ecosystem
+
+## Comparison with Other Codes
+- **vs Phonopy**: ADIP2.jl uses AD; Phonopy uses finite differences
+- **vs Python tools**: Julia performance advantages
+- **Unique strength**: Exact derivatives via automatic differentiation
+
+## Best Practices
+
+### Potential Setup:
+- Validate potential accuracy
+- Test on known systems
+- Check force constant symmetry
+- Compare with DFT results
+
+### Calculations:
+- Use appropriate supercell size
+- Check convergence
+- Validate acoustic sum rules
 
 ## Application Areas
 - Phonon calculations with ML potentials
 - Force constant extraction
 - Lattice dynamics research
 - Potential development and testing
+- Rapid prototyping in Julia
+
+## Community and Support
+- **License**: Open-source MIT License
+- **Development**: GitHub repository
+- **Community**: Julia materials science community
+- **Documentation**: Growing with examples
+- **Support**: GitHub issues
+- **Integration**: Julia package ecosystem
 
 ## Verification & Sources
 **Primary sources**:
