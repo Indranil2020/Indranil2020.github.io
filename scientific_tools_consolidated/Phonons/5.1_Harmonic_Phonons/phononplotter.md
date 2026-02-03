@@ -59,6 +59,11 @@ phononplotter is a Python tool for plotting phonon band structures and density o
 - **Matplotlib**: Plotting backend
 - **Python**: Implementation
 
+## Performance Characteristics
+- **Speed**: Fast plotting
+- **Memory**: Efficient for standard phonon data
+- **Output**: High-quality vector graphics support
+
 ## Limitations & Known Constraints
 - Phonopy-specific
 - Plotting only
@@ -75,6 +80,24 @@ phononplotter is a Python tool for plotting phonon band structures and density o
 - Phonon dispersion visualization
 - DOS plotting
 - Multi-system comparison
+
+## Best Practices
+
+### Plot Preparation:
+- Ensure converged Phonopy calculations
+- Use appropriate q-point path density
+- Check for imaginary frequencies before plotting
+- Validate band.yaml file integrity
+
+### Publication Quality:
+- Use vector formats (PDF, SVG) for publications
+- Adjust font sizes for readability
+- Use consistent color schemes across figures
+
+## Community and Support
+- Open-source GitHub repository
+- Phonopy ecosystem compatibility
+- Simple Python codebase
 
 ## Verification & Sources
 **Primary sources**:

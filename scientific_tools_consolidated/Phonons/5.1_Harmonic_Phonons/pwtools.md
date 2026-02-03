@@ -74,10 +74,46 @@ pwtools is a Python package for pre- and post-processing of atomistic calculatio
 - **LAMMPS**: Trajectory parsing
 - **ASE**: Some compatibility
 
+## Advanced Features
+
+### Multi-Code Parsing:
+- Unified interface for QE, CPMD, CP2K, LAMMPS
+- Automatic format detection
+- Flexible parser architecture
+- Custom parser development support
+
+### Phonon Analysis Tools:
+- Dispersion curve extraction from matdyn.x
+- DOS calculation and smoothing
+- Force constant matrix handling
+- q2r.x output processing
+- Acoustic sum rule checking
+
+### Trajectory Analysis:
+- MD trajectory parsing
+- Structure evolution tracking
+- Energy/force extraction
+- Coordinate transformations
+- Batch processing capabilities
+
+### Data Processing:
+- NumPy array integration
+- Scipy interpolation tools
+- Statistical analysis
+- Unit conversions
+- Data filtering and smoothing
+
 ## Performance Characteristics
-- **Speed**: Efficient parsing
-- **Memory**: Handles large trajectories
+- **Speed**: Efficient parsing (seconds for typical files)
+- **Memory**: Handles large trajectories (GBs with streaming)
 - **Flexibility**: Extensible parsers
+- **Scalability**: Batch processing capable
+
+## Computational Cost
+- **Parsing**: Fast (seconds to minutes)
+- **Phonon extraction**: Minimal overhead
+- **Plotting**: Near-instantaneous
+- **Trajectory analysis**: Depends on file size
 
 ## Limitations & Known Constraints
 - Less actively maintained than some alternatives
@@ -111,10 +147,13 @@ pwtools is a Python package for pre- and post-processing of atomistic calculatio
 - Phonon dispersion visualization
 
 ## Community and Support
-- Open-source BSD-3 License
-- GitHub repository
-- Documentation available
-- Examples included
+- **License**: Open-source BSD-3-Clause
+- **Development**: GitHub repository (maintained)
+- **Documentation**: Online docs with examples
+- **Examples**: Included in repository
+- **Support**: GitHub issues
+- **User base**: QE and CPMD users
+- **Integration**: Works with ASE, Matplotlib
 
 ## Verification & Sources
 **Primary sources**:

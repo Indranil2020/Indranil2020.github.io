@@ -71,10 +71,47 @@ elphmod is a collection of Python modules to handle coupled tight-binding and ma
 - **RESPACK**: cRPA
 - **i-PI**: Path integral MD
 
+## Advanced Features
+
+### Electron-Phonon Coupling:
+- Matrix element calculations
+- Wannier interpolation
+- EPW interface for dense meshes
+- Superconducting properties (Tc, gap)
+- Transport coefficients
+
+### Phonon Manipulation:
+- Dynamical matrix interpolation
+- Force constant real-space representation
+- Supercell unfolding
+- Long-range corrections
+- Acoustic sum rule enforcement
+
+### Model Construction:
+- Tight-binding Hamiltonians
+- Mass-spring models
+- Wannier function integration
+- Model parameter extraction
+- Effective models from DFT
+
+### Analysis Tools:
+- Spectral functions
+- Self-energies
+- Green's functions
+- Transport properties
+- Phase diagram calculations
+
 ## Performance Characteristics
-- **Speed**: Efficient Python/NumPy
-- **Parallelization**: MPI support via mpi4py
-- **Memory**: Handles large systems
+- **Speed**: Efficient Python/NumPy (optimized routines)
+- **Parallelization**: MPI support via mpi4py (good scaling)
+- **Memory**: Handles large systems (GBs for dense meshes)
+- **Scalability**: Suitable for production calculations
+
+## Computational Cost
+- **Interpolation**: Fast (seconds to minutes)
+- **Electron-phonon**: Moderate (depends on mesh density)
+- **Transport**: Can be expensive (dense k/q meshes)
+- **Post-processing**: Generally efficient
 
 ## Limitations & Known Constraints
 - Primarily QE-focused
@@ -108,11 +145,14 @@ elphmod is a collection of Python modules to handle coupled tight-binding and ma
 - 2D materials
 
 ## Community and Support
-- Open-source GPL-3.0
-- Active development (Jan Berges)
-- Zenodo releases
-- Documentation with examples
-- Published applications
+- **License**: Open-source GPL-3.0
+- **Developer**: Jan Berges (active maintainer)
+- **Development**: Regular updates and improvements
+- **Documentation**: Comprehensive with examples
+- **Zenodo**: Archived releases with DOIs
+- **Publications**: Used in peer-reviewed research
+- **Support**: GitHub issues and discussions
+- **User base**: Electron-phonon research community
 
 ## Verification & Sources
 **Primary sources**:

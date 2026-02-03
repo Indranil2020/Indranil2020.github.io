@@ -98,6 +98,12 @@ mace_phonopy is a code to generate second-order interatomic force constants (IFC
 - ML potential validation
 - Rapid phonon estimation
 
+## Community and Support
+- Open-source GitHub repository
+- MACE ecosystem compatibility
+- Phonopy integration
+- Active ML potential community
+
 ## Verification & Sources
 **Primary sources**:
 1. GitHub: https://github.com/Mofahdi/mace_phonopy

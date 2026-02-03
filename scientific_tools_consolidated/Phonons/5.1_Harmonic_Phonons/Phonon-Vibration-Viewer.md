@@ -54,6 +54,11 @@ Phonon-Vibration-Viewer is a Python tool for visualizing lattice vibration infor
 - **Python**: Implementation
 - **Matplotlib**: Plotting
 
+## Performance Characteristics
+- **Speed**: Fast visualization
+- **Memory**: Efficient for typical phonon data
+- **Flexibility**: Customizable output
+
 ## Limitations & Known Constraints
 - Phonopy-specific
 - Limited to visualization
@@ -70,6 +75,24 @@ Phonon-Vibration-Viewer is a Python tool for visualizing lattice vibration infor
 - Mode character analysis
 - Educational purposes
 - Publication figures
+
+## Best Practices
+
+### Visualization Setup:
+- Ensure Phonopy calculation includes eigenvectors
+- Use appropriate q-point path
+- Check mode frequencies before visualization
+- Validate displacement directions
+
+### Output Quality:
+- Adjust arrow scaling for clarity
+- Use consistent color schemes
+- Export at appropriate resolution
+
+## Community and Support
+- Open-source GitHub repository
+- Phonopy ecosystem compatibility
+- Python-based for easy modification
 
 ## Verification & Sources
 **Primary sources**:

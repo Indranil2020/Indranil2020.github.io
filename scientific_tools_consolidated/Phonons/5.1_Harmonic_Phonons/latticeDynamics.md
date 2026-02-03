@@ -65,6 +65,50 @@ latticeDynamics is a Python package for lattice dynamics calculations using rigi
 - **Matplotlib**: Plotting
 - **Python**: Pure Python implementation
 
+## Advanced Features
+
+### Rigid Ion Model:
+- Born-Mayer short-range potentials
+- Coulomb interactions via Ewald summation
+- Polarizability effects
+- Dipole-dipole interactions
+- Flexible potential parameterization
+
+### Shell Model (In Development):
+- Core-shell coupling
+- Polarization effects
+- Optical phonon splitting
+- Dielectric properties
+
+### Surface Phonons:
+- Slab geometry support
+- Surface-localized modes
+- Interface phonons
+- Boundary condition handling
+
+### Educational Tools:
+- Clear code structure
+- Well-commented implementation
+- Example calculations
+- Tutorial-friendly design
+
+## Performance Characteristics
+- **Speed**: Fast for small-medium systems (seconds)
+- **Memory**: Minimal (<100 MB typical)
+- **Scalability**: Best for systems <1000 atoms
+- **Accuracy**: Depends on potential quality
+
+## Computational Cost
+- **Dynamical matrix**: Fast construction
+- **Ewald summation**: Efficient implementation
+- **Diagonalization**: Standard NumPy (fast)
+- **Typical runtime**: Seconds to minutes
+
+## Performance Characteristics
+- **Speed**: Fast for empirical potentials
+- **Memory**: Efficient for typical crystal sizes
+- **Scalability**: Suitable for educational and research use
+
 ## Limitations & Known Constraints
 - Empirical potential focus
 - Limited to supported models
@@ -97,10 +141,13 @@ latticeDynamics is a Python package for lattice dynamics calculations using rigi
 - Model development
 
 ## Community and Support
-- Open-source MIT License
-- GitHub repository
-- Educational focus
-- Python-native
+- **License**: Open-source MIT License
+- **Development**: GitHub repository
+- **Focus**: Educational and research
+- **Documentation**: Code comments and examples
+- **Support**: GitHub issues
+- **User base**: Students and researchers
+- **Language**: Pure Python (easy to modify)
 
 ## Verification & Sources
 **Primary sources**:

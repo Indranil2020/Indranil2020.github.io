@@ -71,10 +71,47 @@ CRYSTALpytools is an open-source Python infrastructure for the CRYSTAL quantum c
 - **Matplotlib**: Plotting
 - **Jupyter**: Interactive analysis
 
+## Advanced Features
+
+### Thermodynamic Analysis:
+- Helmholtz and Gibbs free energies
+- Heat capacity (Cv, Cp)
+- Entropy calculations
+- Thermal expansion coefficients
+- Temperature-dependent properties
+
+### Spectroscopy Tools:
+- IR absorption spectra
+- Raman scattering intensities
+- Mode assignment analysis
+- Symmetry-based selection rules
+- Intensity calculations
+
+### Structure Manipulation:
+- Supercell generation
+- Structure conversion (CIF, POSCAR, etc.)
+- Symmetry analysis
+- k-path generation
+- Band structure unfolding
+
+### Visualization:
+- Band structure plots
+- DOS plots
+- Thermodynamic property curves
+- Electronic structure visualization
+- Customizable plotting styles
+
 ## Performance Characteristics
-- **Speed**: Fast post-processing
-- **Memory**: Efficient for typical calculations
+- **Speed**: Fast post-processing (seconds to minutes)
+- **Memory**: Efficient for typical calculations (<1 GB)
 - **Parallelization**: Python multiprocessing support
+- **Scalability**: Handles systems up to hundreds of atoms
+
+## Computational Cost
+- **Post-processing**: Minimal (CRYSTAL does the heavy lifting)
+- **Thermodynamics**: Fast (seconds for typical meshes)
+- **Plotting**: Near-instantaneous
+- **Analysis**: Efficient Python/NumPy operations
 
 ## Limitations & Known Constraints
 - CRYSTAL-specific
@@ -108,11 +145,14 @@ CRYSTALpytools is an open-source Python infrastructure for the CRYSTAL quantum c
 - Surface chemistry
 
 ## Community and Support
-- Open-source MIT License
-- Active GitHub development
-- Published CPC paper (2023)
-- Documentation with examples
-- Jupyter notebook tutorials
+- **License**: Open-source MIT License
+- **Development**: Active GitHub repository (regular commits)
+- **Publication**: Comput. Phys. Commun. 292, 108853 (2023)
+- **Documentation**: Comprehensive online docs with API reference
+- **Tutorials**: Jupyter notebook examples included
+- **Support**: GitHub issues for bug reports and questions
+- **User base**: Growing CRYSTAL community adoption
+- **Integration**: Part of CRYSTAL ecosystem
 
 ## Verification & Sources
 **Primary sources**:
