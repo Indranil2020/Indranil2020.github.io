@@ -2497,9 +2497,9 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 ---
 
 
-## CATEGORY 7: STRUCTURE PREDICTION (22 tools)
+## CATEGORY 7: STRUCTURE PREDICTION (47 tools)
 
-### 7.1 Global Optimization & Evolutionary Algorithms (8 tools)
+### 7.1 Global Optimization & Evolutionary Algorithms (17 tools)
 *Crystal structure prediction using evolutionary/genetic algorithms*
 
 **236. USPEX**
@@ -2542,13 +2542,58 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: https://github.com/zhang-kai/FLAME
 - Link: [FLAME.md](StructurePrediction/7.1_Global_Optimization/FLAME.md)
 
-### 7.2 Basin Hopping & Local Optimization (3 tools)
+**243a. CrySPY**
+- Confidence: VERIFIED
+- Resources: https://github.com/Tomoki-YAMASHITA/CrySPY
+- Link: [CrySPY.md](StructurePrediction/7.1_Global_Optimization/CrySPY.md)
+
+**243b. GAtor**
+- Confidence: VERIFIED
+- Resources: https://arxiv.org/abs/1802.08602
+- Link: [GAtor.md](StructurePrediction/7.1_Global_Optimization/GAtor.md)
+
+**243c. Genarris**
+- Confidence: VERIFIED
+- Resources: https://github.com/timcrose/Genarris
+- Link: [Genarris.md](StructurePrediction/7.1_Global_Optimization/Genarris.md)
+
+**243d. PyChemia**
+- Confidence: VERIFIED
+- Resources: https://github.com/MaterialsDiscovery/PyChemia
+- Link: [PyChemia.md](StructurePrediction/7.1_Global_Optimization/PyChemia.md)
+
+**243e. AGOX**
+- Confidence: VERIFIED
+- Resources: https://github.com/kimrojas/agox
+- Link: [AGOX.md](StructurePrediction/7.1_Global_Optimization/AGOX.md)
+
+**243f. ParetoCSP**
+- Confidence: VERIFIED
+- Resources: https://github.com/sadmanomee/ParetoCSP
+- Link: [ParetoCSP.md](StructurePrediction/7.1_Global_Optimization/ParetoCSP.md)
+
+**243g. StructOpt**
+- Confidence: VERIFIED
+- Resources: https://github.com/uw-cmg/StructOpt_modular
+- Link: [StructOpt.md](StructurePrediction/7.1_Global_Optimization/StructOpt.md)
+
+**243h. MGAC**
+- Confidence: VERIFIED
+- Resources: https://github.com/MGAC-group/MGAC2
+- Link: [MGAC.md](StructurePrediction/7.1_Global_Optimization/MGAC.md)
+
+### 7.2 Basin Hopping & Local Optimization (4 tools)
 *Energy landscape exploration methods*
 
 **244. Basin hopping**
 - Confidence: VERIFIED
 - Resources: **ALGORITHM** - Implemented in ASE, OpenBabel
 - Link: [Basin-hopping.md](StructurePrediction/7.2_Basin_Hopping/Basin-hopping.md)
+
+**244a. TGMin**
+- Confidence: VERIFIED
+- Resources: Nano Res. 10, 3407 (2017)
+- Link: [TGMin.md](StructurePrediction/7.2_Basin_Hopping/TGMin.md)
 
 **249. GMIN**
 - Confidence: VERIFIED
@@ -2560,12 +2605,12 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: https://wiki.fysik.dtu.dk/ase/ase/optimize.html
 - Link: [ASE-BasinHopping.md](StructurePrediction/7.2_Basin_Hopping/ASE-BasinHopping.md)
 
-### 7.3 Crystal Structure Generation (8 tools)
+### 7.3 Crystal Structure Generation (14 tools)
 *Tools for generating and manipulating crystal structures*
 
 **245. HTOCSP**
-- Confidence: UNCERTAIN
-- Resources: **UNKNOWN** - High Throughput Organic Crystal Structure Prediction
+- Confidence: VERIFIED
+- Resources: https://github.com/MaterSim/HTOCSP
 - Link: [HTOCSP.md](StructurePrediction/7.3_Crystal_Generation/HTOCSP.md)
 
 **246. PyXtal**
@@ -2603,7 +2648,37 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: **MODULE** - Part of PLUMED/ASE ecosystem
 - Link: [PyMetadynamics.md](StructurePrediction/7.3_Crystal_Generation/PyMetadynamics.md)
 
-### 7.4 ML-Accelerated Structure Prediction (3 tools)
+**254a. RandSpg**
+- Confidence: VERIFIED
+- Resources: https://github.com/xtalopt/randSpg
+- Link: [RandSpg.md](StructurePrediction/7.3_Crystal_Generation/RandSpg.md)
+
+**254b. SOPRANO**
+- Confidence: VERIFIED
+- Resources: https://github.com/CCP-NC/soprano
+- Link: [SOPRANO.md](StructurePrediction/7.3_Crystal_Generation/SOPRANO.md)
+
+**254c. pyocse**
+- Confidence: VERIFIED
+- Resources: https://github.com/MaterSim/pyocse
+- Link: [pyocse.md](StructurePrediction/7.3_Crystal_Generation/pyocse.md)
+
+**254d. TCSP**
+- Confidence: VERIFIED
+- Resources: https://arxiv.org/abs/2111.14049
+- Link: [TCSP.md](StructurePrediction/7.3_Crystal_Generation/TCSP.md)
+
+**254e. CrySPR**
+- Confidence: VERIFIED
+- Resources: https://github.com/Tosykie/CrySPR
+- Link: [CrySPR.md](StructurePrediction/7.3_Crystal_Generation/CrySPR.md)
+
+**254f. CSPBench**
+- Confidence: VERIFIED
+- Resources: https://github.com/usccolumbia/cspbenchmark
+- Link: [CSPBench.md](StructurePrediction/7.3_Crystal_Generation/CSPBench.md)
+
+### 7.4 ML-Accelerated Structure Prediction (10 tools)
 *Machine learning enhanced prediction methods*
 
 **255. MaterialsProject-ML**
@@ -2620,6 +2695,89 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Confidence: UNCERTAIN
 - Resources: **RESEARCH CODE** - Part of USPEX ML features
 - Link: [Oganov-ML.md](StructurePrediction/7.4_ML_Accelerated/Oganov-ML.md)
+
+**257a. CSPML**
+- Confidence: VERIFIED
+- Resources: https://github.com/Minoru938/CSPML
+- Link: [CSPML.md](StructurePrediction/7.4_ML_Accelerated/CSPML.md)
+
+**257b. CrySPAI**
+- Confidence: VERIFIED
+- Resources: https://arxiv.org/abs/2501.15838
+- Link: [CrySPAI.md](StructurePrediction/7.4_ML_Accelerated/CrySPAI.md)
+
+**257c. GNOA**
+- Confidence: VERIFIED
+- Resources: https://www.nature.com/articles/s41467-022-29241-4
+- Link: [GNOA.md](StructurePrediction/7.4_ML_Accelerated/GNOA.md)
+
+**257d. PyMCSP**
+- Confidence: VERIFIED
+- Resources: https://github.com/polbeni/PyMCSP
+- Link: [PyMCSP.md](StructurePrediction/7.4_ML_Accelerated/PyMCSP.md)
+
+### 7.5 Generative Models (12 tools)
+*Deep learning generative models for crystal structure*
+
+**257e. CDVAE**
+- Confidence: VERIFIED
+- Resources: https://github.com/txie-93/cdvae
+- Link: [CDVAE.md](StructurePrediction/7.5_Generative_Models/CDVAE.md)
+
+**257f. DiffCSP**
+- Confidence: VERIFIED
+- Resources: https://github.com/jiaor17/DiffCSP
+- Link: [DiffCSP.md](StructurePrediction/7.5_Generative_Models/DiffCSP.md)
+
+**257g. MatterGen**
+- Confidence: VERIFIED
+- Resources: https://github.com/microsoft/mattergen
+- Link: [MatterGen.md](StructurePrediction/7.5_Generative_Models/MatterGen.md)
+
+**257h. GNoME**
+- Confidence: VERIFIED
+- Resources: https://github.com/google-deepmind/materials_discovery
+- Link: [GNoME.md](StructurePrediction/7.5_Generative_Models/GNoME.md)
+
+**257i. FlowMM**
+- Confidence: VERIFIED
+- Resources: https://github.com/facebookresearch/flowmm
+- Link: [FlowMM.md](StructurePrediction/7.5_Generative_Models/FlowMM.md)
+
+**257j. CrystalFlow**
+- Confidence: VERIFIED
+- Resources: https://github.com/ixsluo/CrystalFlow
+- Link: [CrystalFlow.md](StructurePrediction/7.5_Generative_Models/CrystalFlow.md)
+
+**257k. EquiCSP**
+- Confidence: VERIFIED
+- Resources: https://github.com/EmperorJia/EquiCSP
+- Link: [EquiCSP.md](StructurePrediction/7.5_Generative_Models/EquiCSP.md)
+
+**257l. SyMat**
+- Confidence: VERIFIED
+- Resources: https://arxiv.org/abs/2307.02707
+- Link: [SyMat.md](StructurePrediction/7.5_Generative_Models/SyMat.md)
+
+**257m. OMatG**
+- Confidence: VERIFIED
+- Resources: https://github.com/FERMat-ML/OMatG
+- Link: [OMatG.md](StructurePrediction/7.5_Generative_Models/OMatG.md)
+
+**257n. AlphaCrystal**
+- Confidence: VERIFIED
+- Resources: https://github.com/usccolumbia/AlphaCrystal
+- Link: [AlphaCrystal.md](StructurePrediction/7.5_Generative_Models/AlphaCrystal.md)
+
+**257o. CrystalGAN**
+- Confidence: VERIFIED
+- Resources: https://pubs.acs.org/doi/10.1021/acscentsci.0c00426
+- Link: [CrystalGAN.md](StructurePrediction/7.5_Generative_Models/CrystalGAN.md)
+
+**257p. ICSG3D**
+- Confidence: VERIFIED
+- Resources: https://github.com/by256/icsg3d
+- Link: [ICSG3D.md](StructurePrediction/7.5_Generative_Models/ICSG3D.md)
 
 ---
 
