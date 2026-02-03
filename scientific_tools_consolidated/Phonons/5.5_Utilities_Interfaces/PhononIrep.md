@@ -58,40 +58,27 @@ PhononIrep is a tool for analyzing phonon irreducible representations (irreps) a
 
 
 ## Advanced Features
+- **Group theory analysis**: Rigorous symmetry classification
+- **Character table generation**: Complete irrep analysis
+- **Selection rules**: Raman and IR activity determination
+- **Phonopy integration**: Direct use of Phonopy output
+- **spglib compatibility**: Symmetry operation handling
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- Post-processing tool: Fast
+- Depends on number of modes
+- Python-based implementation
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
-
+- Phonopy calculation: External (dominant cost)
+- PhononIrep analysis: Fast (seconds to minutes)
+- Overall: Minimal overhead
 
 ## Best Practices
-
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
-
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+- Ensure proper symmetry in structure
+- Use high-symmetry q-points for analysis
+- Validate against known irrep assignments
+- Compare with experimental spectroscopy data
 
 ## Limitations & Known Constraints
 - High-symmetry points only

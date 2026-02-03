@@ -61,40 +61,29 @@ ElectronPhononCoupling is a Python module for analyzing electron-phonon coupling
 
 
 ## Advanced Features
+- **Allen-Heine-Cardona theory**: Complete temperature dependence
+- **Zero-point renormalization**: Quantum effects on band gaps
+- **Fan-Migdal self-energy**: Electron-phonon coupling contributions
+- **Debye-Waller terms**: Lattice vibration effects
+- **Spectral functions**: Full energy-dependent analysis
+- **Abinit netCDF**: Direct parsing of Abinit output
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- Post-processing tool: Moderate speed
+- Depends on k-point and q-point grids
+- Python-based implementation
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
-
+- Abinit DFPT: Dominant cost (external)
+- EPC analysis: Minutes to hours
+- Scales with system size and grid density
+- Overall: DFPT calculations dominate
 
 ## Best Practices
-
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
-
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+- Converge k-point and q-point grids
+- Validate against experimental band gap temperature dependence
+- Check Fan and Debye-Waller contributions separately
+- Use appropriate smearing for spectral functions
 
 ## Limitations & Known Constraints
 - Abinit-specific

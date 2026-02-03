@@ -56,40 +56,27 @@ Phonopy_VESTA is a tool for exporting phonon eigenvectors from Phonopy calculati
 
 
 ## Advanced Features
+- **Eigenvector export**: Phonopy to VESTA format conversion
+- **Displacement arrows**: 3D atomic displacement visualization
+- **Mode selection**: Choose specific phonon modes
+- **Multiple q-points**: Support for various k-points
+- **Publication quality**: High-resolution visualization
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- Conversion tool: Very fast
+- Minimal computational overhead
+- Simple Python script
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
-
+- Phonopy calculation: External (dominant cost)
+- Phonopy_VESTA conversion: Seconds
+- Overall: Negligible overhead
 
 ## Best Practices
-
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
-
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+- Use converged Phonopy calculations
+- Select appropriate displacement amplitude for visualization
+- Verify mode character matches expectations
+- Use VESTA's animation features for dynamic visualization
 
 ## Limitations & Known Constraints
 - Simple tool
