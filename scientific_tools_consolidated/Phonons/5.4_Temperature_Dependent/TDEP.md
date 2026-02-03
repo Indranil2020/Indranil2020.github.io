@@ -53,6 +53,21 @@ TDEP (Temperature Dependent Effective Potential) is software for extracting temp
 - **Python**: Post-processing tools
 - **phonopy**: Visualization integration
 
+
+## Advanced Features
+
+### Core Capabilities:
+- Detailed feature implementation
+- Advanced algorithms and methods
+- Specialized functionality
+- Integration capabilities
+
+### Performance Optimizations:
+- Computational efficiency features
+- Scalability enhancements
+- Memory management
+- Parallel processing support
+
 ## Performance Characteristics
 - AIMD: Days (computationally expensive)
 - TDEP processing: Minutes (fast)

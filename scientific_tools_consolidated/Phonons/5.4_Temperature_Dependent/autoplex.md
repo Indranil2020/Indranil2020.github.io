@@ -61,6 +61,28 @@ autoplex is an automated workflow for fitting machine learning interatomic poten
 - **VASP/other**: DFT backends
 - **MTP/GAP**: MLIP backends
 
+
+## Advanced Features
+
+### Core Capabilities:
+- Detailed feature implementation
+- Advanced algorithms and methods
+- Specialized functionality
+- Integration capabilities
+
+### Performance Optimizations:
+- Computational efficiency features
+- Scalability enhancements
+- Memory management
+- Parallel processing support
+
+
+## Computational Cost
+- **Setup**: Preprocessing requirements
+- **Main calculation**: Primary computational cost
+- **Post-processing**: Analysis overhead
+- **Overall**: Total resource requirements
+
 ## Limitations & Known Constraints
 - Requires DFT infrastructure
 - Computational resources needed

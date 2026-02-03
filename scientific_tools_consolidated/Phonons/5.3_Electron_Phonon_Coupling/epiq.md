@@ -41,6 +41,43 @@ epiq is a Python package for electron-phonon interactions and related quantum tr
 - **DFT codes**: Via standard output formats
 - **ASE/pymatgen**: Potential integration
 
+
+## Advanced Features
+
+### Core Capabilities:
+- Detailed feature implementation
+- Advanced algorithms and methods
+- Specialized functionality
+- Integration capabilities
+
+### Performance Optimizations:
+- Computational efficiency features
+- Scalability enhancements
+- Memory management
+- Parallel processing support
+
+
+## Computational Cost
+- **Setup**: Preprocessing requirements
+- **Main calculation**: Primary computational cost
+- **Post-processing**: Analysis overhead
+- **Overall**: Total resource requirements
+
+
+## Best Practices
+
+### Workflow:
+- Follow recommended procedures
+- Validate inputs and outputs
+- Check convergence criteria
+- Document methodology
+
+### Optimization:
+- Use appropriate parameters
+- Monitor resource usage
+- Validate results
+- Compare with benchmarks
+
 ## Performance Characteristics
 - Python-based: Moderate speed
 - Suitable for research calculations

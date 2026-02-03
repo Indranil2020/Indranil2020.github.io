@@ -54,6 +54,21 @@ ATAT (Alloy Theoretic Automated Toolkit) is a comprehensive software package for
 - **Monte Carlo**: Built-in MC engine
 - **Visualization**: Integrated plotting tools
 
+
+## Advanced Features
+
+### Core Capabilities:
+- Detailed feature implementation
+- Advanced algorithms and methods
+- Specialized functionality
+- Integration capabilities
+
+### Performance Optimizations:
+- Computational efficiency features
+- Scalability enhancements
+- Memory management
+- Parallel processing support
+
 ## Performance Characteristics
 - Cluster expansion fitting: Fast
 - Monte Carlo: Scales with system size

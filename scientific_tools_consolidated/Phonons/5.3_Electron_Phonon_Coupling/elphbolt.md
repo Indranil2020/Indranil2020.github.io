@@ -47,6 +47,43 @@
 - **EPW**: Designed to consume scattering data produced by the EPW code (Quantum ESPRESSO).
 - **Wannier90**: Uses Wannier interpolation for dense grid sampling.
 
+
+## Advanced Features
+
+### Core Capabilities:
+- Detailed feature implementation
+- Advanced algorithms and methods
+- Specialized functionality
+- Integration capabilities
+
+### Performance Optimizations:
+- Computational efficiency features
+- Scalability enhancements
+- Memory management
+- Parallel processing support
+
+
+## Computational Cost
+- **Setup**: Preprocessing requirements
+- **Main calculation**: Primary computational cost
+- **Post-processing**: Analysis overhead
+- **Overall**: Total resource requirements
+
+
+## Best Practices
+
+### Workflow:
+- Follow recommended procedures
+- Validate inputs and outputs
+- Check convergence criteria
+- Document methodology
+
+### Optimization:
+- Use appropriate parameters
+- Monitor resource usage
+- Validate results
+- Compare with benchmarks
+
 ## Performance Characteristics
 - **Computational Cost**: High. Dealing with full scattering matrices ($N_k \times N_q$) and coupling them requires significant memory and compute.
 - **Parallelism**: MPI parallelization over k/q-points.
