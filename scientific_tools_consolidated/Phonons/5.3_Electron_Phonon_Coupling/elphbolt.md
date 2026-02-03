@@ -49,40 +49,25 @@
 
 
 ## Advanced Features
-
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+- **Coupled BTE**: Simultaneous electron and phonon non-equilibrium
+- **Phonon drag**: Explicit drag contribution to Seebeck coefficient
+- **Mutual scattering**: Electron-phonon and phonon-electron coupling
+- **Hydrodynamic transport**: Momentum-conserving scattering regimes
+- **Spectral decomposition**: Mode-resolved drag analysis
+- **Modern Fortran**: Object-oriented Fortran 2008 implementation
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
-
+- EPW input generation: Expensive (external)
+- elphbolt BTE solution: Hours to days
+- Memory: High (full scattering matrices)
+- Scales with k-point and q-point grid density
 
 ## Best Practices
-
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
-
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+- Validate EPW electron-phonon matrix elements first
+- Converge k-point and q-point grids systematically
+- Check phonon-phonon scattering convergence
+- Compare with experimental Seebeck coefficients
+- Analyze temperature dependence of drag contribution
 
 ## Performance Characteristics
 - **Computational Cost**: High. Dealing with full scattering matrices ($N_k \times N_q$) and coupling them requires significant memory and compute.

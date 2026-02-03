@@ -63,25 +63,23 @@ DynaPhoPy is a computational code for extracting microscopic anharmonic phonon p
 
 
 ## Advanced Features
+- **Normal mode decomposition**: Phonon-resolved spectral analysis
+- **Velocity autocorrelation**: Time-domain analysis
+- **Quasiparticle extraction**: Frequency and linewidth fitting
+- **Phonopy integration**: Seamless force constant compatibility
+- **Multiple MD codes**: LAMMPS and VASP support
+- **Spectral functions**: Full phonon spectral density
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- Python-based: Moderate speed
+- FFT-limited: Scales with trajectory length
+- Memory: Depends on system size
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
+- MD simulation: Dominant cost (external)
+- DynaPhoPy analysis: Minutes to hours
+- Depends on trajectory length and q-point sampling
+- Long trajectories needed for frequency resolution
 
 ## Limitations & Known Constraints
 - Requires long MD trajectories

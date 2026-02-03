@@ -43,18 +43,11 @@ ALATDYN is a code for anharmonic lattice dynamics calculations. The tool focuses
 
 
 ## Advanced Features
-
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
+- **Higher-order force constants**: Beyond third-order anharmonicity
+- **Temperature-dependent phonons**: Finite-temperature renormalization
+- **Nonlinear effects**: Phonon-phonon coupling analysis
+- **Lifetime calculations**: Anharmonic phonon lifetimes
+- **Force constant fitting**: Extraction from DFT data
 
 ## Performance Characteristics
 - Anharmonic calculations: Computationally demanding
