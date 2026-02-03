@@ -2216,9 +2216,9 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 ---
 
-## CATEGORY 5: PHONONS (35 tools)
+## CATEGORY 5: PHONONS (62 tools)
 
-### 5.1 Harmonic Phonons (8 tools)
+### 5.1 Harmonic Phonons (10 tools)
 
 **185. Phonopy**
 - Confidence: CONFIRMED
@@ -2260,7 +2260,19 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: https://github.com/phonon/phonopy-api (or just Phonopy wrapper)
 - Link: [Phonopy-API.md](Phonons/5.1_Harmonic_Phonons/Phonopy-API.md)
 
-### 5.2 Anharmonic & Thermal Transport (13 tools)
+**215a. OpenPhonon**
+- Confidence: VERIFIED
+- Resources: https://www.esrf.fr/computing/scientific/OpenPhonon/
+- Note: ESRF lattice dynamics code for phonon calculations.
+- Link: [OpenPhonon.md](Phonons/5.1_Harmonic_Phonons/OpenPhonon.md)
+
+**215b. ADIP2.jl**
+- Confidence: VERIFIED
+- Resources: https://github.com/JuliaMatSci/ADIP2.jl
+- Note: Julia package for phonons via automatic differentiation of interatomic potentials.
+- Link: [ADIP2_jl.md](Phonons/5.1_Harmonic_Phonons/ADIP2_jl.md)
+
+### 5.2 Anharmonic & Thermal Transport (19 tools)
 
 **186. phono3py**
 - Confidence: CONFIRMED
@@ -2322,7 +2334,43 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: https://github.com/jesan/OpenBTE
 - Link: [OpenBTE.md](Phonons/5.2_Anharmonic_Thermal_Transport/OpenBTE.md)
 
-### 5.3 Electron-Phonon Coupling (5 tools)
+**210a. FourPhonon**
+- Confidence: VERIFIED
+- Resources: https://github.com/FourPhonon/FourPhonon
+- Note: Extension to ShengBTE for four-phonon scattering rates and thermal conductivity.
+- Link: [FourPhonon.md](Phonons/5.2_Anharmonic_Thermal_Transport/FourPhonon.md)
+
+**210b. GPUMD**
+- Confidence: VERIFIED
+- Resources: https://github.com/brucefan1983/GPUMD
+- Note: GPU-accelerated MD with NEP machine learning potentials for thermal transport.
+- Link: [GPUMD.md](Phonons/5.2_Anharmonic_Thermal_Transport/GPUMD.md)
+
+**210c. D3Q**
+- Confidence: VERIFIED
+- Resources: https://anharmonic.github.io/d3q/
+- Note: Third-order force constants from DFPT within Quantum ESPRESSO.
+- Link: [D3Q.md](Phonons/5.2_Anharmonic_Thermal_Transport/D3Q.md)
+
+**210d. THERMAL2**
+- Confidence: VERIFIED
+- Resources: https://anharmonic.github.io/thermal2/
+- Note: Thermal conductivity from anharmonic force constants (QE ecosystem).
+- Link: [THERMAL2.md](Phonons/5.2_Anharmonic_Thermal_Transport/THERMAL2.md)
+
+**210e. phonon-sed**
+- Confidence: VERIFIED
+- Resources: https://github.com/tyst3273/phonon-sed
+- Note: Phonon spectral energy density from MD simulations.
+- Link: [phonon-sed.md](Phonons/5.2_Anharmonic_Thermal_Transport/phonon-sed.md)
+
+**210f. freepaths**
+- Confidence: VERIFIED
+- Resources: https://github.com/anufrievroman/freepaths
+- Note: Monte Carlo simulator of phonon transport in nanostructures.
+- Link: [freepaths.md](Phonons/5.2_Anharmonic_Thermal_Transport/freepaths.md)
+
+### 5.3 Electron-Phonon Coupling (10 tools)
 
 **191. EPW**
 - Confidence: VERIFIED
@@ -2350,7 +2398,37 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: Coupled electron-phonon Boltzmann transport.
 - Link: [elphbolt.md](Phonons/5.3_Electron_Phonon_Coupling/elphbolt.md)
 
-### 5.4 Temperature-Dependent Methods (5 tools)
+**213b. ElectronPhononCoupling**
+- Confidence: VERIFIED
+- Resources: https://github.com/GkAntonius/ElectronPhononCoupling
+- Note: Python module for electron-phonon analysis from Abinit.
+- Link: [ElectronPhononCoupling.md](Phonons/5.3_Electron_Phonon_Coupling/ElectronPhononCoupling.md)
+
+**213c. USER-EPH**
+- Confidence: VERIFIED
+- Resources: https://github.com/LLNL/USER-EPH
+- Note: LAMMPS extension for electron-phonon coupling (LLNL).
+- Link: [USER-EPH.md](Phonons/5.3_Electron_Phonon_Coupling/USER-EPH.md)
+
+**213d. XTANT-3**
+- Confidence: VERIFIED
+- Resources: https://github.com/N-Medvedev/XTANT-3
+- Note: X-ray induced thermal and nonthermal transitions with electron-phonon coupling.
+- Link: [XTANT-3.md](Phonons/5.3_Electron_Phonon_Coupling/XTANT-3.md)
+
+**213e. Phonopy-Spectroscopy**
+- Confidence: VERIFIED
+- Resources: https://github.com/skelton-group/Phonopy-Spectroscopy
+- Note: IR and Raman spectra simulation from Phonopy.
+- Link: [Phonopy-Spectroscopy.md](Phonons/5.3_Electron_Phonon_Coupling/Phonopy-Spectroscopy.md)
+
+**213f. Phono3py-Power-Tools**
+- Confidence: VERIFIED
+- Resources: https://github.com/skelton-group/Phono3py-Power-Tools
+- Note: Advanced analysis tools for Phono3py power users.
+- Link: [Phono3py-Power-Tools.md](Phonons/5.3_Electron_Phonon_Coupling/Phono3py-Power-Tools.md)
+
+### 5.4 Temperature-Dependent Methods (8 tools)
 
 **190. TDEP**
 - Confidence: VERIFIED
@@ -2377,7 +2455,25 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: https://github.com/ajf396/alatdyn
 - Link: [ALATDYN.md](Phonons/5.4_Temperature_Dependent/ALATDYN.md)
 
-### 5.5 Utilities & Interfaces (5 tools)
+**218a. DynaPhoPy**
+- Confidence: VERIFIED
+- Resources: https://github.com/abelcarreras/DynaPhoPy
+- Note: Phonon quasiparticles from MD using normal-mode decomposition.
+- Link: [DynaPhoPy.md](Phonons/5.4_Temperature_Dependent/DynaPhoPy.md)
+
+**218b. a-TDEP**
+- Confidence: VERIFIED
+- Resources: Abinit integration (Comput. Phys. Commun. 254, 107301)
+- Note: Temperature Dependent Effective Potential for Abinit.
+- Link: [a-TDEP.md](Phonons/5.4_Temperature_Dependent/a-TDEP.md)
+
+**218c. autoplex**
+- Confidence: VERIFIED
+- Resources: https://github.com/autoatml/autoplex
+- Note: Automated ML potential fitting with phonon validation.
+- Link: [autoplex.md](Phonons/5.4_Temperature_Dependent/autoplex.md)
+
+### 5.5 Utilities & Interfaces (13 tools)
 
 **197. ATAT**
 - Confidence: VERIFIED
@@ -2403,6 +2499,68 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Confidence: VERIFIED
 - Resources: https://github.com/gabrielelanaro/simphony
 - Link: [Simphony.md](Phonons/5.5_Utilities_Interfaces/Simphony.md)
+
+**217a. phononwebsite**
+- Confidence: VERIFIED
+- Resources: https://henriquemiranda.github.io/phononwebsite/
+- Note: Web-based interactive phonon visualization tool.
+- Link: [phononwebsite.md](Phonons/5.5_Utilities_Interfaces/phononwebsite.md)
+
+**217b. AtomicContributions**
+- Confidence: VERIFIED
+- Resources: https://github.com/JaGeo/AtomicContributions
+- Note: Visualization of atomic contributions to phonon modes.
+- Link: [AtomicContributions.md](Phonons/5.5_Utilities_Interfaces/AtomicContributions.md)
+
+**217c. KPROJ**
+- Confidence: VERIFIED
+- Resources: https://arxiv.org/abs/2410.10910
+- Note: Program for unfolding electronic and phononic bands.
+- Link: [KPROJ.md](Phonons/5.5_Utilities_Interfaces/KPROJ.md)
+
+**217d. easyunfold**
+- Confidence: VERIFIED
+- Resources: https://github.com/SMTG-Bham/easyunfold
+- Note: Band structure unfolding including phonons.
+- Link: [easyunfold.md](Phonons/5.5_Utilities_Interfaces/easyunfold.md)
+
+**217e. Phonopy_VESTA**
+- Confidence: VERIFIED
+- Resources: https://github.com/AdityaRoy-1996/Phonopy_VESTA
+- Note: Export Phonopy eigenvectors to VESTA for visualization.
+- Link: [Phonopy_VESTA.md](Phonons/5.5_Utilities_Interfaces/Phonopy_VESTA.md)
+
+**217f. qha**
+- Confidence: VERIFIED
+- Resources: https://github.com/MineralsCloud/qha
+- Note: Python package for quasi-harmonic approximation calculations.
+- Link: [qha.md](Phonons/5.5_Utilities_Interfaces/qha.md)
+
+**217g. PhononIrep**
+- Confidence: VERIFIED
+- Resources: https://github.com/zhangzeyingvv/PhononIrep
+- Note: Phonon irreducible representation analysis.
+- Link: [PhononIrep.md](Phonons/5.5_Utilities_Interfaces/PhononIrep.md)
+
+**217h. IR2PW**
+- Confidence: VERIFIED
+- Resources: https://github.com/zjwang11/IR2PW
+- Note: Irreducible representations to plane wave for phonons.
+- Link: [IR2PW.md](Phonons/5.5_Utilities_Interfaces/IR2PW.md)
+
+### 5.6 Green's Function / NEGF (2 tools)
+
+**217i. AGF-phonon-transport**
+- Confidence: VERIFIED
+- Resources: https://github.com/brucefan1983/AGF-phonon-transport
+- Note: Atomistic Green's function for phonon transport (MATLAB).
+- Link: [AGF-phonon-transport.md](Phonons/5.6_Greens_Function_NEGF/AGF-phonon-transport.md)
+
+**217j. NEGF-phonon-1D-matlab**
+- Confidence: VERIFIED
+- Resources: https://github.com/brucefan1983/NEGF-phonon-1D-matlab
+- Note: NEGF method for 1D phonon transport (educational).
+- Link: [NEGF-phonon-1D-matlab.md](Phonons/5.6_Greens_Function_NEGF/NEGF-phonon-1D-matlab.md)
 
 ---
 

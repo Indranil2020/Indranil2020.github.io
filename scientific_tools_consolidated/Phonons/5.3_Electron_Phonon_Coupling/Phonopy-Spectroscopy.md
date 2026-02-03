@@ -1,0 +1,85 @@
+# Phonopy-Spectroscopy
+
+## Official Resources
+- Homepage: https://github.com/skelton-group/Phonopy-Spectroscopy
+- Source Repository: https://github.com/skelton-group/Phonopy-Spectroscopy
+- Documentation: https://github.com/skelton-group/Phonopy-Spectroscopy
+- License: MIT License
+
+## Overview
+Phonopy-Spectroscopy is a collection of tools to add vibrational spectroscopy simulation capabilities to Phonopy. It enables calculation of infrared (IR) and Raman spectra from first-principles phonon calculations.
+
+**Scientific domain**: Vibrational spectroscopy, IR/Raman spectra simulation  
+**Target user community**: Researchers simulating IR and Raman spectra from DFT
+
+## Theoretical Methods
+- Infrared intensity calculations
+- Raman activity tensors
+- Born effective charges
+- Dielectric tensor derivatives
+- Phonon mode analysis
+- Spectral broadening
+
+## Capabilities (CRITICAL)
+- IR intensity calculations
+- Raman activity calculations
+- Spectral simulation
+- Phonopy integration
+- VASP interface
+- Mode visualization
+- Isotope effects
+
+## Key Strengths
+
+### Phonopy Integration:
+- Works with Phonopy output
+- Familiar workflow
+- Well-tested
+- Active maintenance
+
+### Spectroscopy Focus:
+- IR and Raman spectra
+- Experimental comparison
+- Intensity calculations
+- Broadening options
+
+## Inputs & Outputs
+- **Input formats**:
+  - Phonopy files
+  - VASP OUTCAR (Born charges)
+  - Raman tensors
+  
+- **Output data types**:
+  - IR spectra
+  - Raman spectra
+  - Mode intensities
+  - Spectral plots
+
+## Interfaces & Ecosystem
+- **Phonopy**: Primary integration
+- **VASP**: DFT calculations
+- **Python**: Analysis scripts
+
+## Limitations & Known Constraints
+- Primarily VASP interface
+- Requires additional DFT calculations
+- Raman needs tensor derivatives
+- Setup complexity
+
+## Application Areas
+- Vibrational spectroscopy
+- Material identification
+- Experimental validation
+- Molecular crystals
+- Functional materials
+
+## Verification & Sources
+**Primary sources**:
+1. GitHub: https://github.com/skelton-group/Phonopy-Spectroscopy
+2. J. M. Skelton et al., J. Phys.: Condens. Matter 27, 305402 (2015)
+
+**Confidence**: VERIFIED
+
+**Verification status**: ✅ VERIFIED
+- Source code: OPEN (GitHub, MIT)
+- Active development
