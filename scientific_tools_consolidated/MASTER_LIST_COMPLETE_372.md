@@ -2564,9 +2564,9 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 ---
 
-## CATEGORY 6: DYNAMICS (17 tools)
+## CATEGORY 6: DYNAMICS (46 tools)
 
-### 6.1 Classical MD Engines (8 tools)
+### 6.1 Classical MD Engines (14 tools)
 *General-purpose molecular dynamics using classical force fields and Newton's equations of motion*
 
 **219. LAMMPS**
@@ -2617,7 +2617,49 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: Interactive Molecular Dynamics for materials simulations.
 - Link: [IMD.md](Dynamics/6.1_Classical_MD_Engines/IMD.md)
 
-### 6.2 Path Integral & Quantum Dynamics (1 tool)
+**226a. OpenMM**
+- Confidence: VERIFIED
+- Resources: https://openmm.org/
+- Note: High-performance GPU-accelerated MD toolkit with Python API and custom forces.
+- Link: [OpenMM.md](Dynamics/6.1_Classical_MD_Engines/OpenMM.md)
+
+**226b. HOOMD-blue**
+- Confidence: VERIFIED
+- Resources: https://github.com/glotzerlab/hoomd-blue
+- Note: GPU-accelerated MD and Monte Carlo for soft matter simulations.
+- Link: [HOOMD-blue.md](Dynamics/6.1_Classical_MD_Engines/HOOMD-blue.md)
+
+**226c. ESPResSo**
+- Confidence: VERIFIED
+- Resources: https://github.com/espressomd/espresso
+- Note: Extensible simulation package for soft matter with electrokinetics.
+- Link: [ESPResSo.md](Dynamics/6.1_Classical_MD_Engines/ESPResSo.md)
+
+**226d. ACEMD**
+- Confidence: VERIFIED
+- Resources: https://www.acellera.com/acemd
+- Note: GPU-accelerated MD engine (OpenMM-based) for biomolecular simulations.
+- Link: [ACEMD.md](Dynamics/6.1_Classical_MD_Engines/ACEMD.md)
+
+**226e. Tinker**
+- Confidence: VERIFIED
+- Resources: https://github.com/TinkerTools/tinker
+- Note: Molecular mechanics with AMOEBA polarizable force field.
+- Link: [Tinker.md](Dynamics/6.1_Classical_MD_Engines/Tinker.md)
+
+**226f. GENESIS**
+- Confidence: VERIFIED
+- Resources: https://www.r-ccs.riken.jp/labs/cbrt/
+- Note: High-performance parallel MD for large biomolecular systems (RIKEN).
+- Link: [GENESIS.md](Dynamics/6.1_Classical_MD_Engines/GENESIS.md)
+
+**226g. SPONGE**
+- Confidence: VERIFIED
+- Resources: https://spongemm.cn/en/home
+- Note: GPU-accelerated MD with MindSpore deep learning integration.
+- Link: [SPONGE.md](Dynamics/6.1_Classical_MD_Engines/SPONGE.md)
+
+### 6.2 Path Integral & Quantum Dynamics (2 tools)
 *Nuclear quantum effects via path integral molecular dynamics (PIMD), ring polymer MD*
 
 **227. i-PI**
@@ -2626,7 +2668,13 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: Universal force engine for path integral MD and advanced nuclear quantum effects.
 - Link: [i-PI.md](Dynamics/6.2_Path_Integral_Quantum_Dynamics/i-PI.md)
 
-### 6.3 Machine Learning Potentials (3 tools)
+**227a. NQCDynamics.jl**
+- Confidence: VERIFIED
+- Resources: https://nqcd.github.io/NQCDynamics.jl/
+- Note: Julia package for nonadiabatic quantum-classical dynamics (RPMD, surface hopping).
+- Link: [NQCDynamics.md](Dynamics/6.2_Path_Integral_Quantum_Dynamics/NQCDynamics.md)
+
+### 6.3 Machine Learning Potentials (14 tools)
 *Neural network potentials and ML-driven force fields bridging DFT accuracy with classical MD speed*
 
 **228. N2P2**
@@ -2647,7 +2695,67 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: Library for atomistic simulations with GAP (Gaussian Approximation Potentials).
 - Link: [libAtoms-Quippy.md](Dynamics/6.3_Machine_Learning_Potentials/libAtoms-Quippy.md)
 
-### 6.4 Enhanced Sampling Methods (4 tools)
+**230a. MACE**
+- Confidence: VERIFIED
+- Resources: https://github.com/ACEsuit/mace
+- Note: E(3)-equivariant message passing potentials with foundation models (MACE-MP, MACE-OFF).
+- Link: [MACE.md](Dynamics/6.3_Machine_Learning_Potentials/MACE.md)
+
+**230b. NequIP**
+- Confidence: VERIFIED
+- Resources: https://github.com/mir-group/nequip
+- Note: E(3)-equivariant neural network potentials with exceptional data efficiency.
+- Link: [NequIP.md](Dynamics/6.3_Machine_Learning_Potentials/NequIP.md)
+
+**230c. Allegro**
+- Confidence: VERIFIED
+- Resources: https://github.com/mir-group/allegro
+- Note: Scalable E(3)-equivariant deep learning potential for large-scale MD.
+- Link: [Allegro.md](Dynamics/6.3_Machine_Learning_Potentials/Allegro.md)
+
+**230d. TorchANI**
+- Confidence: VERIFIED
+- Resources: https://github.com/aiqm/torchani
+- Note: PyTorch ANI neural network potentials for organic molecules.
+- Link: [TorchANI.md](Dynamics/6.3_Machine_Learning_Potentials/TorchANI.md)
+
+**230e. FLARE**
+- Confidence: VERIFIED
+- Resources: https://github.com/mir-group/flare
+- Note: Bayesian active learning for on-the-fly potential training.
+- Link: [FLARE.md](Dynamics/6.3_Machine_Learning_Potentials/FLARE.md)
+
+**230f. AmpTorch**
+- Confidence: VERIFIED
+- Resources: https://github.com/ulissigroup/amptorch
+- Note: PyTorch implementation of Atomistic Machine-learning Package.
+- Link: [AmpTorch.md](Dynamics/6.3_Machine_Learning_Potentials/AmpTorch.md)
+
+**230g. CHGNet**
+- Confidence: VERIFIED
+- Resources: https://github.com/CederGroupHub/chgnet
+- Note: Charge-informed universal neural network potential for materials.
+- Link: [CHGNet.md](Dynamics/6.3_Machine_Learning_Potentials/CHGNet.md)
+
+**230h. M3GNet/MatGL**
+- Confidence: VERIFIED
+- Resources: https://github.com/materialsvirtuallab/matgl
+- Note: Universal materials graph neural network with 3-body interactions.
+- Link: [M3GNet.md](Dynamics/6.3_Machine_Learning_Potentials/M3GNet.md)
+
+**230i. SevenNet**
+- Confidence: VERIFIED
+- Resources: https://github.com/MDIL-SNU/SevenNet
+- Note: Multi-GPU parallel graph neural network potentials.
+- Link: [SevenNet.md](Dynamics/6.3_Machine_Learning_Potentials/SevenNet.md)
+
+**230j. AI2BMD**
+- Confidence: VERIFIED
+- Resources: https://github.com/microsoft/AI2BMD
+- Note: AI-powered ab initio biomolecular dynamics (Microsoft Research).
+- Link: [AI2BMD.md](Dynamics/6.3_Machine_Learning_Potentials/AI2BMD.md)
+
+### 6.4 Enhanced Sampling Methods (9 tools)
 *Free energy calculations, rare event sampling, and transition state finding methods*
 
 **231. PLUMED**
@@ -2674,14 +2782,86 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: Enhanced sampling method for free energy landscapes using history-dependent bias.
 - Link: [Metadynamics.md](Dynamics/6.4_Enhanced_Sampling_Methods/Metadynamics.md)
 
-### 6.5 Interoperability & Drivers (1 tool)
+**234a. SSAGES**
+- Confidence: VERIFIED
+- Resources: https://github.com/SSAGESproject/SSAGES
+- Note: Software Suite for Advanced General Ensemble Simulations (C++).
+- Link: [SSAGES.md](Dynamics/6.4_Enhanced_Sampling_Methods/SSAGES.md)
+
+**234b. PySAGES**
+- Confidence: VERIFIED
+- Resources: https://github.com/SSAGESLabs/PySAGES
+- Note: GPU-accelerated Python enhanced sampling with JAX backend.
+- Link: [PySAGES.md](Dynamics/6.4_Enhanced_Sampling_Methods/PySAGES.md)
+
+**234c. OpenPathSampling**
+- Confidence: VERIFIED
+- Resources: https://github.com/openpathsampling/openpathsampling
+- Note: Python framework for transition path sampling (TPS, TIS).
+- Link: [OpenPathSampling.md](Dynamics/6.4_Enhanced_Sampling_Methods/OpenPathSampling.md)
+
+**234d. Colvars**
+- Confidence: VERIFIED
+- Resources: https://github.com/Colvars/colvars
+- Note: Collective variables library for NAMD, LAMMPS, GROMACS.
+- Link: [Colvars.md](Dynamics/6.4_Enhanced_Sampling_Methods/Colvars.md)
+
+**234e. WESTPA**
+- Confidence: VERIFIED
+- Resources: https://github.com/westpa/westpa
+- Note: Weighted Ensemble Simulation Toolkit for rare events.
+- Link: [WESTPA.md](Dynamics/6.4_Enhanced_Sampling_Methods/WESTPA.md)
+
+### 6.5 Analysis & Utilities (3 tools)
+*Trajectory analysis, coarse-graining, and workflow tools*
+
+**234f. HTMD**
+- Confidence: VERIFIED
+- Resources: https://github.com/Acellera/htmd
+- Note: High-Throughput MD for adaptive sampling and Markov state models.
+- Link: [HTMD.md](Dynamics/6.5_Analysis_Utilities/HTMD.md)
+
+**234g. VOTCA**
+- Confidence: VERIFIED
+- Resources: https://www.votca.org/
+- Note: Versatile toolkit for coarse-graining applications.
+- Link: [VOTCA.md](Dynamics/6.5_Analysis_Utilities/VOTCA.md)
+
+**234h. MDANSE**
+- Confidence: VERIFIED
+- Resources: https://github.com/ISISNeutronMuon/MDANSE
+- Note: MD Analysis for Neutron Scattering Experiments.
+- Link: [MDANSE.md](Dynamics/6.5_Analysis_Utilities/MDANSE.md)
+
+### 6.6 Differentiable MD (2 tools)
+*End-to-end differentiable molecular dynamics for machine learning integration*
+
+**234i. JAX-MD**
+- Confidence: VERIFIED
+- Resources: https://github.com/jax-md/jax-md
+- Note: Differentiable physics simulations in JAX with GPU/TPU acceleration.
+- Link: [JAX-MD.md](Dynamics/6.6_Differentiable_MD/JAX-MD.md)
+
+**234j. TorchMD**
+- Confidence: VERIFIED
+- Resources: https://github.com/torchmd/torchmd
+- Note: End-to-end differentiable MD engine using PyTorch.
+- Link: [TorchMD.md](Dynamics/6.6_Differentiable_MD/TorchMD.md)
+
+### 6.7 Interoperability & Drivers (2 tools)
 *Code coupling, multi-scale interfaces, and driver-based workflows*
 
 **235. MDI drivers**
 - Confidence: VERIFIED
 - Resources: https://molssi-mdi.github.io/
 - Note: MolSSI Driver Interface for coupling simulation codes.
-- Link: [MDI-MolSSI.md](Dynamics/6.5_Interoperability_Drivers/MDI-MolSSI.md)
+- Link: [MDI-MolSSI.md](Dynamics/6.7_Interoperability_Drivers/MDI-MolSSI.md)
+
+**235a. ASE**
+- Confidence: VERIFIED
+- Resources: https://wiki.fysik.dtu.dk/ase/
+- Note: Atomic Simulation Environment - unified Python interface to 50+ simulation codes.
+- Link: [ASE.md](Dynamics/6.7_Interoperability_Drivers/ASE.md)
 
 ---
 
