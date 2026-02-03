@@ -64,40 +64,28 @@ freepaths is a Monte Carlo simulator of phonon transport in nanostructures. It s
 
 
 ## Advanced Features
+- **3D geometry modeling**: Complex nanostructure shapes
+- **Multiple boundary types**: Specular and diffuse scattering
+- **Phonon dispersion models**: Customizable material properties
+- **Visualization output**: Trajectory and heat flux maps
+- **Statistical analysis**: Convergence monitoring
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- Monte Carlo: Stochastic convergence
+- Python-based: Moderate speed
+- Suitable for research-scale calculations
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
-
+- Geometry setup: Fast
+- Monte Carlo simulation: Minutes to hours
+- Depends on number of phonon trajectories
+- Convergence requires sufficient sampling
 
 ## Best Practices
-
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
-
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+- Use sufficient phonon trajectories for convergence
+- Validate with analytical solutions for simple geometries
+- Check boundary condition effects
+- Compare with experimental data when available
 
 ## Limitations & Known Constraints
 - Simplified phonon physics

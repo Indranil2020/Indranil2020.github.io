@@ -62,40 +62,29 @@ THERMAL2 is a suite of codes for computing lattice thermal conductivity and rela
 
 
 ## Advanced Features
+- **Variational BTE**: Beyond relaxation time approximation
+- **Wigner transport**: Quantum corrections to thermal conductivity
+- **Multiple scattering**: Three-phonon, isotope, grain boundary
+- **D3Q integration**: Seamless workflow with DFPT force constants
+- **Mode-resolved analysis**: Detailed phonon contributions
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- BTE solution: Fast (minutes to hours)
+- Depends on q-point grid density
+- Efficient for QE-based workflows
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
-
+- D3Q force constants: Dominant cost (external)
+- THERMAL2 BTE solution: Fast (minutes)
+- Variational method slightly more expensive than RTA
+- Overall: Efficient once force constants available
 
 ## Best Practices
-
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
-
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+- Validate harmonic phonons before anharmonic calculations
+- Converge q-point grid systematically
+- Compare RTA and variational results
+- Check isotope scattering contributions
+- Validate against experimental thermal conductivity
 
 ## Limitations & Known Constraints
 - Primarily for D3Q workflow

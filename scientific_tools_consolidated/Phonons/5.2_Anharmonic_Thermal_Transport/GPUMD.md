@@ -71,25 +71,18 @@ GPUMD (Graphics Processing Units Molecular Dynamics) is a highly efficient molec
 
 
 ## Advanced Features
-
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+- **NEP training**: Built-in neuroevolution potential development
+- **HNEMD method**: Homogeneous non-equilibrium MD for thermal conductivity
+- **Spectral decomposition**: Frequency-resolved thermal conductivity
+- **Modal analysis**: Phonon mode contributions to transport
+- **Multi-GPU support**: Scalable to large systems
+- **Active learning**: Efficient training data selection
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
+- NEP training: Hours to days (one-time cost)
+- MD simulations: Very fast on GPU (millions of atoms)
+- Thermal conductivity: Minutes to hours depending on convergence
+- Overall: Orders of magnitude faster than DFT-MD
 
 ## Performance Characteristics
 - **Speed**: Extremely fast on GPU
