@@ -55,40 +55,27 @@ IR2PW (Irreducible Representations to Plane Wave) is a tool for analyzing irredu
 
 
 ## Advanced Features
+- **Irreducible representation analysis**: Complete symmetry classification
+- **Character table analysis**: Group theory-based mode assignment
+- **Selection rules**: Raman and IR activity determination
+- **VASP integration**: Direct parsing of VASP output
+- **Mode labeling**: Automatic symmetry labels
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- Post-processing tool: Fast
+- Depends on phonon calculation size
+- Python-based implementation
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
-
+- Phonon calculation: External (VASP)
+- IR2PW analysis: Fast (seconds to minutes)
+- Overall: Minimal overhead
 
 ## Best Practices
-
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
-
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+- Ensure proper symmetry in DFT calculation
+- Use appropriate k-point sampling
+- Validate against known symmetry assignments
+- Compare with experimental spectroscopy
 
 ## Limitations & Known Constraints
 - VASP-specific

@@ -61,40 +61,28 @@ easyunfold is a Python package for band structure unfolding, making it easy to o
 
 
 ## Advanced Features
+- **Spectral weight calculation**: Bloch character analysis
+- **Phonon unfolding**: Supercell phonon band structures
+- **Multiple DFT codes**: VASP and CASTEP support
+- **Automated workflow**: Minimal user intervention
+- **Publication-quality plots**: Built-in visualization
+- **pymatgen integration**: Structure handling
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- Post-processing tool: Fast
+- Scales with supercell size
+- Python-based implementation
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
-
+- Supercell DFT calculation: External (dominant cost)
+- Unfolding analysis: Fast (minutes)
+- Overall: Minimal overhead for unfolding
 
 ## Best Practices
-
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
-
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+- Use commensurate supercell-primitive mapping
+- Check spectral weight convergence
+- Validate against primitive cell bands
+- Use appropriate broadening for visualization
 
 ## Limitations & Known Constraints
 - Limited DFT codes

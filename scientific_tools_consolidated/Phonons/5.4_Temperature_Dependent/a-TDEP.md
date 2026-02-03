@@ -62,40 +62,30 @@ a-TDEP (Abinit Temperature Dependent Effective Potential) is an implementation o
 
 
 ## Advanced Features
+- **Abinit AIMD integration**: Native workflow with Abinit
+- **Symmetry-adapted fitting**: Efficient force constant extraction
+- **Free energy calculations**: Thermodynamic properties
+- **Thermal expansion**: Volume-temperature relationships
+- **Phase stability**: Temperature-dependent phase diagrams
+- **abipy tools**: Python post-processing
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- AIMD: Computationally expensive
+- Force constant fitting: Fast
+- Abinit parallelization: Efficient
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
-
+- AIMD trajectories: Dominant cost (days to weeks)
+- a-TDEP fitting: Fast (minutes to hours)
+- Per temperature: Separate AIMD run needed
+- Overall: AIMD cost dominates
 
 ## Best Practices
-
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
-
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+- Use sufficient AIMD trajectory length (>1000 steps)
+- Ensure proper thermalization before sampling
+- Converge supercell size
+- Validate against experimental phonon data
+- Check force constant convergence with trajectory length
 
 ## Limitations & Known Constraints
 - Abinit-specific
