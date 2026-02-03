@@ -2564,9 +2564,9 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 ---
 
-## CATEGORY 6: DYNAMICS (46 tools)
+## CATEGORY 6: DYNAMICS (52 tools)
 
-### 6.1 Classical MD Engines (14 tools)
+### 6.1 Classical MD Engines (15 tools)
 *General-purpose molecular dynamics using classical force fields and Newton's equations of motion*
 
 **219. LAMMPS**
@@ -2659,7 +2659,13 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: GPU-accelerated MD with MindSpore deep learning integration.
 - Link: [SPONGE.md](Dynamics/6.1_Classical_MD_Engines/SPONGE.md)
 
-### 6.2 Path Integral & Quantum Dynamics (2 tools)
+**226h. Desmond**
+- Confidence: VERIFIED
+- Resources: https://www.schrodinger.com/platform/products/desmond/
+- Note: High-performance GPU MD for drug discovery (Schrödinger, commercial).
+- Link: [Desmond.md](Dynamics/6.1_Classical_MD_Engines/Desmond.md)
+
+### 6.2 Path Integral & Quantum Dynamics (3 tools)
 *Nuclear quantum effects via path integral molecular dynamics (PIMD), ring polymer MD*
 
 **227. i-PI**
@@ -2674,7 +2680,13 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: Julia package for nonadiabatic quantum-classical dynamics (RPMD, surface hopping).
 - Link: [NQCDynamics.md](Dynamics/6.2_Path_Integral_Quantum_Dynamics/NQCDynamics.md)
 
-### 6.3 Machine Learning Potentials (14 tools)
+**227b. MixPI**
+- Confidence: VERIFIED
+- Resources: https://github.com/xuanleng/MixPI
+- Note: Mixed-time slicing path integral MD for efficient nuclear quantum effects.
+- Link: [MixPI.md](Dynamics/6.2_Path_Integral_Quantum_Dynamics/MixPI.md)
+
+### 6.3 Machine Learning Potentials (17 tools)
 *Neural network potentials and ML-driven force fields bridging DFT accuracy with classical MD speed*
 
 **228. N2P2**
@@ -2755,6 +2767,24 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: AI-powered ab initio biomolecular dynamics (Microsoft Research).
 - Link: [AI2BMD.md](Dynamics/6.3_Machine_Learning_Potentials/AI2BMD.md)
 
+**230k. SchNetPack**
+- Confidence: VERIFIED
+- Resources: https://github.com/atomistic-machine-learning/schnetpack
+- Note: Deep neural networks for atomistic systems (SchNet, PaiNN architectures).
+- Link: [SchNetPack.md](Dynamics/6.3_Machine_Learning_Potentials/SchNetPack.md)
+
+**230l. AMP**
+- Confidence: VERIFIED
+- Resources: https://amp.readthedocs.io/
+- Note: Atomistic Machine-learning Package with Behler-Parrinello symmetry functions.
+- Link: [AMP.md](Dynamics/6.3_Machine_Learning_Potentials/AMP.md)
+
+**230m. mlmod**
+- Confidence: VERIFIED
+- Resources: https://github.com/atzberg/mlmod
+- Note: ML package for LAMMPS with PyTorch model integration.
+- Link: [mlmod.md](Dynamics/6.3_Machine_Learning_Potentials/mlmod.md)
+
 ### 6.4 Enhanced Sampling Methods (9 tools)
 *Free energy calculations, rare event sampling, and transition state finding methods*
 
@@ -2812,7 +2842,7 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: Weighted Ensemble Simulation Toolkit for rare events.
 - Link: [WESTPA.md](Dynamics/6.4_Enhanced_Sampling_Methods/WESTPA.md)
 
-### 6.5 Analysis & Utilities (3 tools)
+### 6.5 Analysis & Utilities (4 tools)
 *Trajectory analysis, coarse-graining, and workflow tools*
 
 **234f. HTMD**
@@ -2832,6 +2862,12 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: https://github.com/ISISNeutronMuon/MDANSE
 - Note: MD Analysis for Neutron Scattering Experiments.
 - Link: [MDANSE.md](Dynamics/6.5_Analysis_Utilities/MDANSE.md)
+
+**234i. MDMC**
+- Confidence: VERIFIED
+- Resources: https://github.com/MDMCproject/MDMC
+- Note: MD Monte Carlo for refining simulations against experimental scattering data.
+- Link: [MDMC.md](Dynamics/6.5_Analysis_Utilities/MDMC.md)
 
 ### 6.6 Differentiable MD (2 tools)
 *End-to-end differentiable molecular dynamics for machine learning integration*
