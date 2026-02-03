@@ -94,12 +94,31 @@ PySAGES (Python Suite for Advanced General Ensemble Simulations) is a Python imp
 - Materials science
 - Drug discovery
 
+## Comparison with Other Codes
+- **vs SSAGES**: PySAGES Python/GPU, SSAGES C++
+- **vs PLUMED**: PySAGES JAX-based GPU, PLUMED CPU plugin
+- **vs Colvars**: PySAGES neural network CVs, Colvars traditional CVs
+- **Unique strength**: GPU acceleration via JAX, neural network CVs, Python-native
+
+## Community and Support
+- Active development
+- GitHub issues
+- Good documentation
+- JAX community
+
 ## Verification & Sources
 **Primary sources**:
 1. GitHub: https://github.com/SSAGESLabs/PySAGES
 2. P. Zubieta Rico et al., npj Comput. Mater. 10, 43 (2024)
 
+**Secondary sources**:
+1. PySAGES tutorials
+2. JAX ecosystem documentation
+3. SSAGES documentation
+
 **Confidence**: VERIFIED
 
 **Verification status**: ✅ VERIFIED
 - Source code: OPEN (GitHub, MIT)
+- Published in npj Computational Materials
+- Active development

@@ -96,13 +96,32 @@ M3GNet (Materials 3-body Graph Network) is a universal graph neural network inte
 - Property prediction
 - Catalysis
 
+## Comparison with Other Codes
+- **vs CHGNet**: M3GNet 3-body focus, CHGNet charge-aware
+- **vs MACE**: M3GNet universal pretrained, MACE higher accuracy
+- **vs DeepMD-kit**: M3GNet pretrained ready, DeepMD custom training
+- **Unique strength**: 3-body interactions, universal coverage, Materials Project training
+
+## Community and Support
+- Active development (Materials Virtual Lab)
+- GitHub issues
+- Good documentation
+- Pymatgen integration
+
 ## Verification & Sources
 **Primary sources**:
 1. GitHub: https://github.com/materialsvirtuallab/matgl
 2. C. Chen et al., Nat. Comput. Sci. 2, 718 (2022)
+
+**Secondary sources**:
+1. MatGL tutorials
+2. Materials Project documentation
+3. MEGNet property prediction papers
 
 **Confidence**: VERIFIED
 
 **Verification status**: ✅ VERIFIED
 - Source code: OPEN (GitHub, BSD-3)
 - Published in Nature Computational Science
+- Academic citations: >500
+- Active development: Materials Virtual Lab

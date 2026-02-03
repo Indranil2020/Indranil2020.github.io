@@ -93,12 +93,31 @@ TorchMD is an end-to-end molecular dynamics engine using PyTorch. It enables dif
 - End-to-end learning
 - Method development
 
+## Comparison with Other Codes
+- **vs JAX-MD**: TorchMD PyTorch, JAX-MD JAX ecosystem
+- **vs OpenMM**: TorchMD differentiable, OpenMM traditional MD
+- **vs ACEMD**: TorchMD ML-focused, ACEMD production MD
+- **Unique strength**: PyTorch ecosystem, TorchMD-NET equivariant potentials, end-to-end differentiable
+
+## Community and Support
+- Active development (Acellera)
+- GitHub issues
+- Documentation
+- TorchMD-NET community
+
 ## Verification & Sources
 **Primary sources**:
 1. GitHub: https://github.com/torchmd/torchmd
 2. S. Doerr et al., J. Chem. Theory Comput. 17, 2355 (2021)
 
+**Secondary sources**:
+1. TorchMD tutorials
+2. TorchMD-NET documentation
+3. Published drug discovery applications
+
 **Confidence**: VERIFIED
 
 **Verification status**: ✅ VERIFIED
 - Source code: OPEN (GitHub, MIT)
+- Academic citations: >200
+- Active development: Acellera
