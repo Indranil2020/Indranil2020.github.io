@@ -58,40 +58,29 @@ phononwebsite is a web-based tool for visualizing lattice vibrations (phonons) i
 
 
 ## Advanced Features
+- **3D visualization**: Interactive crystal structure display
+- **Mode animation**: Atomic displacement animations
+- **Q-point navigation**: Interactive path selection
+- **Branch selection**: Individual phonon branch visualization
+- **Three.js rendering**: High-quality WebGL graphics
+- **Shareable links**: Direct URL to specific visualizations
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- Web-based: Runs in browser
+- No installation required
+- Fast rendering with WebGL
+- Cross-platform compatible
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
-
+- Phonopy calculation: External (dominant cost)
+- phononwebsite: No computation (visualization only)
+- Overall: Zero computational overhead
 
 ## Best Practices
-
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
-
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+- Use converged Phonopy calculations
+- Export band.yaml with eigenvectors
+- Use modern browser for best performance
+- Adjust animation speed for clarity
 
 ## Limitations & Known Constraints
 - Limited analysis features

@@ -60,40 +60,27 @@ KPROJ is a program for unfolding electronic and phononic band structures of mate
 
 
 ## Advanced Features
+- **Dual unfolding**: Both electronic and phononic band structures
+- **Layer projection**: Layer-resolved spectral weights
+- **Twisted bilayer support**: Moiré superlattice calculations
+- **Spectral weight calculation**: Bloch character analysis
+- **Multiple DFT codes**: VASP and Phonopy interfaces
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- Post-processing tool: Fast
+- Scales with supercell size
+- Python-based implementation
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
-
+- Supercell DFT/phonon calculation: External (dominant cost)
+- KPROJ unfolding: Fast (minutes)
+- Overall: Minimal overhead for unfolding
 
 ## Best Practices
-
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
-
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+- Use commensurate supercell-primitive mapping
+- Check spectral weight convergence
+- Validate against primitive cell bands when possible
+- Use appropriate broadening for visualization
 
 ## Limitations & Known Constraints
 - Recent development

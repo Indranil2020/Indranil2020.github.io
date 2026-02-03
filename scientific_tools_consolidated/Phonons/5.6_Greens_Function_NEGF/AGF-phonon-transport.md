@@ -58,40 +58,29 @@ AGF-phonon-transport is a MATLAB implementation of the Atomistic Green's Functio
 
 
 ## Advanced Features
+- **Atomistic Green's Function**: Exact ballistic phonon transport
+- **Surface self-energies**: Lead-device coupling
+- **Transmission function**: Frequency-resolved transport
+- **Landauer formalism**: Thermal conductance calculation
+- **Interface modeling**: Heterojunction phonon transport
+- **Educational code**: Well-commented MATLAB implementation
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- MATLAB-based: Moderate speed
+- Matrix operations: Efficient for small systems
+- Memory: Scales with system size
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
-
+- Force constants: External (DFT or empirical)
+- AGF calculation: Minutes to hours
+- Scales with interface size and frequency points
+- Overall: Moderate for typical interface systems
 
 ## Best Practices
-
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
-
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+- Validate force constants before transport calculation
+- Check convergence with lead size
+- Use sufficient frequency resolution
+- Compare with analytical limits when available
 
 ## Limitations & Known Constraints
 - MATLAB required
