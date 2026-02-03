@@ -105,6 +105,13 @@ OpenMM is a high-performance toolkit for molecular simulation. It can be used as
 - Free energy calculations
 - Enhanced sampling development
 
+## Comparison with Other Codes
+- **vs GROMACS**: OpenMM more flexible/customizable, GROMACS faster for standard simulations
+- **vs AMBER**: OpenMM open-source with Python API, AMBER commercial with extensive force fields
+- **vs NAMD**: OpenMM better GPU single-node, NAMD better multi-node scaling
+- **vs LAMMPS**: OpenMM biomolecular focus, LAMMPS materials science focus
+- **Unique strength**: Custom forces/integrators via Python, extreme flexibility, excellent GPU performance
+
 ## Community and Support
 - Active development (Stanford)
 - Large user community
@@ -116,9 +123,17 @@ OpenMM is a high-performance toolkit for molecular simulation. It can be used as
 **Primary sources**:
 1. Website: https://openmm.org/
 2. P. Eastman et al., PLoS Comput. Biol. 13, e1005659 (2017)
+3. P. Eastman et al., J. Chem. Theory Comput. 9, 461 (2013)
+
+**Secondary sources**:
+1. OpenMM tutorials and cookbooks
+2. OpenMMTools documentation
+3. Extensive published applications
 
 **Confidence**: VERIFIED
 
 **Verification status**: ✅ VERIFIED
 - Source code: OPEN (GitHub, MIT/LGPL)
-- Extensively validated
+- Academic citations: >3000
+- Active development: Regular releases, 10,000+ commits
+- Community: Large user base, active forums

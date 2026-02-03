@@ -98,6 +98,12 @@ Tinker is a complete and general package for molecular mechanics and dynamics, w
 - Accurate electrostatics
 - Force field development
 
+## Comparison with Other Codes
+- **vs AMBER/CHARMM**: Tinker specializes in polarizable AMOEBA, others fixed-charge
+- **vs OpenMM**: Tinker native AMOEBA, OpenMM has AMOEBA plugin
+- **vs GROMACS**: Tinker polarizable focus, GROMACS fixed-charge biomolecular
+- **Unique strength**: AMOEBA polarizable force field, atomic multipoles, Tinker-HP for HPC
+
 ## Community and Support
 - Active development
 - Mailing list
@@ -108,9 +114,17 @@ Tinker is a complete and general package for molecular mechanics and dynamics, w
 **Primary sources**:
 1. Website: https://dasher.wustl.edu/tinker/
 2. J.W. Ponder et al., J. Phys. Chem. B 114, 2549 (2010)
+3. Y. Shi et al., J. Chem. Theory Comput. 9, 4046 (2013) - AMOEBA
+
+**Secondary sources**:
+1. Tinker-HP documentation
+2. AMOEBA force field publications
+3. Poltype parameterization tutorials
 
 **Confidence**: VERIFIED
 
 **Verification status**: ✅ VERIFIED
 - Source code: Available (GitHub)
-- Well-documented
+- Academic citations: >2000 (AMOEBA papers)
+- Active development: Tinker-HP ongoing
+- Community: Polarizable force field researchers

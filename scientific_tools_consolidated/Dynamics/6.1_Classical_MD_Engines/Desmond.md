@@ -58,23 +58,56 @@ Desmond is a high-performance molecular dynamics engine developed by D.E. Shaw R
 - GPU provides major speedup
 - Overall: Industry-leading performance
 
+## Best Practices
+- Use FEP+ for lead optimization
+- Validate with experimental binding data
+- Use Maestro for system preparation
+- Enable GPU acceleration
+- Use appropriate OPLS force field version
+
 ## Limitations & Known Constraints
 - Commercial license (expensive)
 - Schrödinger ecosystem lock-in
 - Less flexible than open-source
+- Requires Maestro interface
+- Limited customization compared to open-source
 
 ## Application Areas
 - Drug discovery
 - Lead optimization
 - Binding affinity prediction
 - Protein-ligand simulations
+- GPCR and membrane protein studies
+
+## Comparison with Other Codes
+- **vs GROMACS**: Desmond commercial with FEP+, GROMACS open-source
+- **vs AMBER**: Both strong for biomolecules, Desmond better FEP workflow
+- **vs ACEMD**: Both GPU-focused, Desmond in Schrödinger ecosystem
+- **vs OpenMM**: Desmond turnkey solution, OpenMM more flexible
+- **Unique strength**: FEP+ for drug discovery, Maestro integration, validated OPLS force fields
+
+## Community and Support
+- Commercial support (Schrödinger)
+- Extensive documentation
+- Training courses
+- User forums
+- Regular updates
 
 ## Verification & Sources
 **Primary sources**:
 1. Website: https://www.schrodinger.com/platform/products/desmond/
 2. K.J. Bowers et al., SC '06 Proceedings (2006)
+3. W.L. Jorgensen et al., J. Chem. Theory Comput. (OPLS papers)
+
+**Secondary sources**:
+1. Schrödinger documentation
+2. FEP+ validation studies
+3. Published pharmaceutical applications
 
 **Confidence**: VERIFIED
 
 **Verification status**: ✅ VERIFIED
 - Commercial software (Schrödinger)
+- Industry standard for drug discovery
+- Extensive pharmaceutical validation
+- Active development and support

@@ -71,28 +71,51 @@ SPONGE (Simulation Package tOward Next GEneration molecular modelling) is a GPU-
 - Overall: Competitive performance
 
 ## Best Practices
-- Use GPU acceleration
-- Validate ML potentials
-- Check energy conservation
+- Use GPU acceleration for all simulations
+- Validate ML potentials against reference data
+- Check energy conservation in NVE
+- Use MindSpore ecosystem for ML integration
+- Start with classical FF before ML potentials
 
 ## Limitations & Known Constraints
-- Newer software
-- MindSpore dependency
-- Documentation in Chinese primarily
-- Smaller community
+- Newer software (less mature than GROMACS/AMBER)
+- MindSpore dependency (Huawei ecosystem)
+- Documentation primarily in Chinese
+- Smaller international community
+- Less third-party tool integration
 
 ## Application Areas
 - AI-enhanced MD
 - Drug discovery
 - Materials science
 - Method development
+- Protein structure prediction
+
+## Comparison with Other Codes
+- **vs OpenMM**: SPONGE MindSpore-native, OpenMM PyTorch/TensorFlow plugins
+- **vs TorchMD**: SPONGE MindSpore ecosystem, TorchMD PyTorch ecosystem
+- **vs DeepMD-kit**: Both ML-focused, different framework backends
+- **Unique strength**: Native MindSpore integration, Chinese HPC ecosystem
+
+## Community and Support
+- Huawei/MindSpore development
+- Chinese research community
+- Gitee repository
+- Growing documentation
 
 ## Verification & Sources
 **Primary sources**:
 1. Website: https://spongemm.cn/en/home
 2. Y.-P. Huang et al., arXiv:2205.12213 (2022)
+3. MindSPONGE documentation
+
+**Secondary sources**:
+1. MindSpore tutorials
+2. Chinese computational chemistry publications
 
 **Confidence**: VERIFIED
 
 **Verification status**: ✅ VERIFIED
 - Source code: OPEN (Gitee, Apache-2.0)
+- Active development: Huawei/MindSpore team
+- Growing adoption in China

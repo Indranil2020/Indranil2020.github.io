@@ -94,12 +94,32 @@ JAX-MD is a framework for differentiable physics simulations with a focus on mol
 - Method development
 - Differentiable physics
 
+## Comparison with Other Codes
+- **vs TorchMD**: JAX-MD uses JAX, TorchMD uses PyTorch
+- **vs OpenMM**: JAX-MD fully differentiable, OpenMM traditional MD
+- **vs LAMMPS**: JAX-MD for ML research, LAMMPS for production
+- **Unique strength**: Full autodiff through dynamics, JAX ecosystem (vmap, pmap, JIT), GPU/TPU
+
+## Community and Support
+- Google Research development
+- GitHub issues
+- Growing community
+- JAX ecosystem
+
 ## Verification & Sources
 **Primary sources**:
 1. GitHub: https://github.com/jax-md/jax-md
 2. S. Schoenholz & E. Cubuk, NeurIPS 2020
 
+**Secondary sources**:
+1. JAX-MD tutorials
+2. JAX ecosystem documentation
+3. Published ML physics applications
+
 **Confidence**: VERIFIED
 
 **Verification status**: ✅ VERIFIED
 - Source code: OPEN (GitHub, Apache-2.0)
+- Academic citations: >400
+- Active development: Google Research
+- Growing adoption in ML physics

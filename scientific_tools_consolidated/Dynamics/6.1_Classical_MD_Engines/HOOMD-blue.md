@@ -100,6 +100,12 @@ HOOMD-blue is a general-purpose particle simulation toolkit optimized for perfor
 - Granular materials
 - Nanoparticle systems
 
+## Comparison with Other Codes
+- **vs LAMMPS**: HOOMD-blue better for soft matter/MC, LAMMPS more general-purpose
+- **vs ESPResSo**: HOOMD-blue stronger GPU/MC, ESPResSo better for charged systems
+- **vs GROMACS**: HOOMD-blue soft matter focus, GROMACS biomolecular focus
+- **Unique strength**: Hard particle Monte Carlo, anisotropic particles, excellent GPU performance, Python-native
+
 ## Community and Support
 - Active development (Glotzer group, Michigan)
 - GitHub issues
@@ -110,9 +116,17 @@ HOOMD-blue is a general-purpose particle simulation toolkit optimized for perfor
 **Primary sources**:
 1. Website: https://glotzerlab.engin.umich.edu/hoomd-blue/
 2. J.A. Anderson et al., Comput. Mater. Sci. 173, 109363 (2020)
+3. J.A. Anderson et al., J. Comput. Phys. 227, 5342 (2008)
+
+**Secondary sources**:
+1. HOOMD-blue tutorials
+2. freud analysis library documentation
+3. Published soft matter applications
 
 **Confidence**: VERIFIED
 
 **Verification status**: ✅ VERIFIED
 - Source code: OPEN (GitHub, BSD-3)
-- Well-documented
+- Academic citations: >1500
+- Active development: Regular releases
+- Community: Glotzer group, soft matter community

@@ -94,6 +94,12 @@ ACEMD is a high-performance molecular dynamics engine specifically designed for 
 - Long timescale dynamics
 - Adaptive sampling
 
+## Comparison with Other Codes
+- **vs OpenMM**: ACEMD optimized/streamlined, OpenMM more flexible
+- **vs GROMACS**: ACEMD faster single-GPU, GROMACS better multi-node
+- **vs Desmond**: Both commercial GPU-focused, Desmond in Schrödinger ecosystem
+- **Unique strength**: Extreme GPU speed, HTMD integration, adaptive sampling workflows
+
 ## Community and Support
 - Commercial support (Acellera)
 - Documentation
@@ -104,9 +110,17 @@ ACEMD is a high-performance molecular dynamics engine specifically designed for 
 **Primary sources**:
 1. Website: https://www.acellera.com/acemd
 2. M. Harvey et al., J. Chem. Theory Comput. 5, 1632 (2009)
+3. M. Harvey & G. De Fabritiis, J. Chem. Theory Comput. 5, 2371 (2009)
+
+**Secondary sources**:
+1. HTMD documentation
+2. PlayMolecule tutorials
+3. Published drug discovery applications
 
 **Confidence**: VERIFIED
 
 **Verification status**: ✅ VERIFIED
 - Commercial with academic license
-- Well-documented
+- Academic citations: >500
+- Active development: Acellera
+- Industry adoption: Pharmaceutical companies

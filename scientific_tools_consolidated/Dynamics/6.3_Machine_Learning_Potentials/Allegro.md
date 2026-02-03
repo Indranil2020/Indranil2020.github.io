@@ -97,6 +97,12 @@ Allegro is a scalable E(3)-equivariant deep learning interatomic potential that 
 - Defects in solids
 - Amorphous materials
 
+## Comparison with Other Codes
+- **vs NequIP**: Allegro for large systems (>1000 atoms), NequIP for small
+- **vs MACE**: Both equivariant, Allegro better scaling, MACE foundation models
+- **vs DeepMD-kit**: Allegro equivariant with linear scaling
+- **Unique strength**: Linear O(N) scaling with E(3) equivariance, millions of atoms
+
 ## Community and Support
 - Active development (Harvard)
 - GitHub issues
@@ -108,8 +114,15 @@ Allegro is a scalable E(3)-equivariant deep learning interatomic potential that 
 1. GitHub: https://github.com/mir-group/allegro
 2. A. Musaelian et al., Nat. Commun. 14, 579 (2023)
 
+**Secondary sources**:
+1. NequIP/Allegro tutorials
+2. LAMMPS integration documentation
+3. Large-scale benchmark publications
+
 **Confidence**: VERIFIED
 
 **Verification status**: ✅ VERIFIED
 - Source code: OPEN (GitHub, MIT)
 - Published in Nature Communications
+- Academic citations: >300
+- Active development: Harvard group

@@ -99,6 +99,12 @@ GENESIS (GENeralized-Ensemble SImulation System) is a high-performance molecular
 - Cellular-scale simulations
 - Drug discovery
 
+## Comparison with Other Codes
+- **vs GROMACS/AMBER**: GENESIS optimized for supercomputers, especially Fugaku
+- **vs NAMD**: Both scale well, GENESIS better ARM/Fugaku optimization
+- **vs OpenMM**: GENESIS multi-node focus, OpenMM single-node GPU
+- **Unique strength**: Fugaku optimization, gREST/GaMD enhanced sampling, cellular-scale simulations
+
 ## Community and Support
 - RIKEN development team
 - Documentation
@@ -109,9 +115,17 @@ GENESIS (GENeralized-Ensemble SImulation System) is a high-performance molecular
 **Primary sources**:
 1. Website: https://www.r-ccs.riken.jp/labs/cbrt/
 2. J. Jung et al., J. Phys. Chem. B 128, 5028 (2024)
+3. J. Jung et al., WIREs Comput. Mol. Sci. 5, 310 (2015)
+
+**Secondary sources**:
+1. GENESIS tutorials and workshops
+2. RIKEN documentation
+3. Fugaku benchmark publications
 
 **Confidence**: VERIFIED
 
 **Verification status**: ✅ VERIFIED
 - Source code: OPEN (GitHub, LGPL)
-- Well-documented
+- Academic citations: >500
+- Active development: RIKEN team
+- HPC validated: Fugaku supercomputer

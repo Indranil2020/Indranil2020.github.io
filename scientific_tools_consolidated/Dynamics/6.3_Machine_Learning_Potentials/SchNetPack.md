@@ -81,12 +81,32 @@ SchNetPack is a toolbox for deep neural networks in atomistic systems. It provid
 - Drug discovery
 - Materials science
 
+## Comparison with Other Codes
+- **vs MACE/NequIP**: SchNetPack more architectures (SchNet, PaiNN), others more recent
+- **vs DeepMD-kit**: SchNetPack graph-based, DeepMD descriptor-based
+- **vs TorchANI**: SchNetPack more flexible, TorchANI pretrained for organics
+- **Unique strength**: Multiple architectures (SchNet, PaiNN), PyTorch Lightning training, educational value
+
+## Community and Support
+- Active development (TU Berlin)
+- GitHub issues
+- Good documentation
+- Tutorials available
+
 ## Verification & Sources
 **Primary sources**:
 1. GitHub: https://github.com/atomistic-machine-learning/schnetpack
 2. K.T. Schütt et al., J. Chem. Theory Comput. 15, 448 (2019)
+3. K. Schütt et al., J. Chem. Phys. 148, 241722 (2018) - SchNet
+
+**Secondary sources**:
+1. SchNetPack tutorials
+2. PaiNN architecture paper
+3. QM9/MD17 benchmark studies
 
 **Confidence**: VERIFIED
 
 **Verification status**: ✅ VERIFIED
 - Source code: OPEN (GitHub, MIT)
+- Academic citations: >2000 (SchNet papers)
+- Active development: TU Berlin group

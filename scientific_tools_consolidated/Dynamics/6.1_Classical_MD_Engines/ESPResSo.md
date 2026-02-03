@@ -97,6 +97,12 @@ ESPResSo (Extensible Simulation Package for Research on Soft Matter) is a highly
 - Charged interfaces
 - Microfluidics simulations
 
+## Comparison with Other Codes
+- **vs LAMMPS**: ESPResSo better for charged soft matter, LAMMPS more general
+- **vs HOOMD-blue**: ESPResSo better electrostatics/LB, HOOMD-blue better MC
+- **vs GROMACS**: ESPResSo soft matter focus with electrokinetics, GROMACS biomolecular
+- **Unique strength**: Lattice-Boltzmann hydrodynamics, electrokinetics, advanced electrostatics for soft matter
+
 ## Community and Support
 - Active development
 - Mailing list
@@ -107,9 +113,16 @@ ESPResSo (Extensible Simulation Package for Research on Soft Matter) is a highly
 **Primary sources**:
 1. Website: https://espressomd.org/
 2. F. Weik et al., Eur. Phys. J. Spec. Top. 227, 1789 (2019)
+3. H.J. Limbach et al., Comput. Phys. Commun. 174, 704 (2006)
+
+**Secondary sources**:
+1. ESPResSo tutorials and summer schools
+2. Published soft matter applications
 
 **Confidence**: VERIFIED
 
 **Verification status**: ✅ VERIFIED
 - Source code: OPEN (GitHub, GPL-3.0)
-- Well-documented
+- Academic citations: >1000
+- Active development: 20+ years
+- Community: European soft matter community

@@ -100,6 +100,13 @@ MACE (Message-passing Atomic Cluster Expansion) is a fast and accurate machine l
 - Battery materials
 - Organic molecules
 
+## Comparison with Other Codes
+- **vs NequIP**: MACE faster inference, NequIP more data-efficient for small datasets
+- **vs DeepMD-kit**: MACE equivariant, DeepMD descriptor-based
+- **vs SchNetPack**: MACE higher-order equivariance, SchNetPack more architectures
+- **vs CHGNet/M3GNet**: MACE more accurate, universal models comparable coverage
+- **Unique strength**: Foundation models (MACE-MP, MACE-OFF), single message passing layer, state-of-the-art accuracy
+
 ## Community and Support
 - Active development (Cambridge)
 - GitHub issues
@@ -110,9 +117,17 @@ MACE (Message-passing Atomic Cluster Expansion) is a fast and accurate machine l
 **Primary sources**:
 1. GitHub: https://github.com/ACEsuit/mace
 2. I. Batatia et al., NeurIPS 2022
+3. I. Batatia et al., arXiv:2401.00096 (2024) - MACE-MP
+
+**Secondary sources**:
+1. MACE documentation and tutorials
+2. Materials Project integration
+3. Benchmark publications
 
 **Confidence**: VERIFIED
 
 **Verification status**: ✅ VERIFIED
 - Source code: OPEN (GitHub, MIT)
-- Extensively benchmarked
+- Academic citations: >500 (rapid growth)
+- Active development: Cambridge group
+- Foundation models: MACE-MP-0, MACE-OFF

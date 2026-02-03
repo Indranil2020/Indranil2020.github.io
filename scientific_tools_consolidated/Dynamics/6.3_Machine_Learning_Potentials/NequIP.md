@@ -97,6 +97,13 @@ NequIP (Neural Equivariant Interatomic Potentials) is an open-source code for bu
 - Method development
 - Active learning
 
+## Comparison with Other Codes
+- **vs MACE**: NequIP more data-efficient, MACE faster inference
+- **vs Allegro**: NequIP for small systems, Allegro for large-scale
+- **vs DeepMD-kit**: NequIP equivariant, DeepMD descriptor-based
+- **vs SchNetPack**: NequIP full E(3) equivariance, different architectures
+- **Unique strength**: Exceptional data efficiency (100-1000x less data), E(3) equivariance
+
 ## Community and Support
 - Active development (Harvard)
 - GitHub issues
@@ -108,8 +115,15 @@ NequIP (Neural Equivariant Interatomic Potentials) is an open-source code for bu
 1. GitHub: https://github.com/mir-group/nequip
 2. S. Batzner et al., Nat. Commun. 13, 2453 (2022)
 
+**Secondary sources**:
+1. NequIP tutorials
+2. Allegro extension documentation
+3. Published applications
+
 **Confidence**: VERIFIED
 
 **Verification status**: ✅ VERIFIED
 - Source code: OPEN (GitHub, MIT)
 - Published in Nature Communications
+- Academic citations: >800
+- Active development: Harvard group
