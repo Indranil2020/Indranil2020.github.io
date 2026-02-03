@@ -38,6 +38,26 @@ LAMMPS is a classical molecular dynamics code with a focus on materials modeling
 
 **Sources**: LAMMPS documentation, Comp. Phys. Comm. 183, 1136 (2012)
 
+## Key Strengths
+
+### Versatility:
+- Huge variety of potentials (100+)
+- Materials and soft matter
+- Coarse-grained to atomistic
+- User-extensible via C++
+
+### Parallelization:
+- Excellent MPI scaling
+- GPU acceleration (Kokkos, GPU package)
+- Billions of atoms possible
+- Load balancing
+
+### Ecosystem:
+- Python interface
+- ASE integration
+- PLUMED support
+- Extensive community packages
+
 ## Inputs & Outputs
 - **Input formats**: Text-based script files, data files for initial structure
 - **Output data types**: Dump files (text/binary/custom), log files (thermodynamics), restart files, XTC, DCD
@@ -62,6 +82,25 @@ LAMMPS is a classical molecular dynamics code with a focus on materials modeling
 - Optimized for MPI and accelerators (GPU/Kokkos)
 - Load balancing for inhomogeneous systems
 
+## Computational Cost
+- Scales linearly with atoms for short-range
+- Long-range (Ewald/PPPM) adds overhead
+- GPU provides 10-100x speedup
+- Overall: Highly efficient for materials
+
+## Best Practices
+- Use appropriate units for your system
+- Choose neighbor list settings carefully
+- Validate potential for your application
+- Use restart files for long runs
+- Check energy conservation in NVE
+
+## Limitations & Known Constraints
+- Less optimized for biomolecules than GROMACS
+- Steeper learning curve than some codes
+- Some packages require compilation
+- Documentation can be overwhelming
+
 ## Application Areas
 - Metals and alloys (defects, mechanics)
 - Polymers and biomolecules
@@ -70,6 +109,12 @@ LAMMPS is a classical molecular dynamics code with a focus on materials modeling
 - Shock physics
 - Thermal transport
 - Chemical reactions (ReaxFF)
+
+## Comparison with Other Codes
+- **vs GROMACS**: LAMMPS more materials-focused, GROMACS faster for biomolecules
+- **vs AMBER**: LAMMPS open-source with more potentials, AMBER better force fields for bio
+- **vs OpenMM**: LAMMPS more general, OpenMM more flexible custom forces
+- **Unique strength**: Unmatched potential variety, materials science focus, extensibility
 
 ## Community and Support
 - Open-source (GPL v2)
@@ -84,6 +129,11 @@ LAMMPS is a classical molecular dynamics code with a focus on materials modeling
 2. Documentation: https://docs.lammps.org/
 3. GitHub: https://github.com/lammps/lammps
 4. Publication: S. Plimpton, J. Comp. Phys. 117, 1 (1995)
+
+**Secondary sources**:
+1. LAMMPS tutorials and workshops
+2. Extensive published applications
+3. Community packages documentation
 
 **Confidence**: VERIFIED
 

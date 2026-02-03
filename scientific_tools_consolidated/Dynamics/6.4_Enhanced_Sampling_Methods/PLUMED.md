@@ -32,6 +32,26 @@ PLUMED is an open-source library for free energy calculations in molecular syste
 
 **Sources**: PLUMED documentation, Comp. Phys. Comm. 185, 608 (2014)
 
+## Key Strengths
+
+### Universality:
+- Works with 20+ MD codes
+- Plugin architecture
+- Standalone analysis
+- Consistent interface
+
+### CV Library:
+- 100+ collective variables
+- Custom CVs via Python
+- Machine learning CVs
+- Extensible
+
+### Methods:
+- Metadynamics variants
+- Umbrella sampling
+- Steered MD
+- Reweighting
+
 ## Inputs & Outputs
 - **Input formats**: PLUMED input script (text), MD trajectories (pdb, xtc, trr, dcd)
 - **Output data types**: COLVAR files (time series of CVs), HILLS files (bias potentials), grid files
@@ -52,12 +72,37 @@ PLUMED is an open-source library for free energy calculations in molecular syste
 - Scalable with MPI (depends on MD code integration)
 - Efficient grid-based bias evaluation
 
+## Computational Cost
+- Minimal overhead for simple CVs
+- Complex CVs add cost
+- Efficient grid-based bias
+- Overall: Low overhead
+
+## Best Practices
+- Start with simple CVs
+- Validate CV choice with unbiased runs
+- Check metadynamics convergence
+- Use well-tempered metadynamics
+- Reweight for unbiased estimates
+
+## Limitations & Known Constraints
+- Requires patching some MD codes
+- CV choice is critical
+- Convergence can be slow
+- Learning curve for advanced methods
+
 ## Application Areas
 - Protein folding and conformational changes
 - Chemical reactions in solution
 - Crystal nucleation and growth
 - Phase transitions
 - Drug binding affinity
+
+## Comparison with Other Codes
+- **vs Colvars**: PLUMED more methods, Colvars native to NAMD
+- **vs SSAGES**: PLUMED plugin-based, SSAGES standalone
+- **vs OpenPathSampling**: PLUMED bias-based, OPS path-based
+- **Unique strength**: Universal plugin, huge CV library, active consortium
 
 ## Community and Support
 - Open-source (LGPL v3)
@@ -71,6 +116,11 @@ PLUMED is an open-source library for free energy calculations in molecular syste
 1. Homepage: https://www.plumed.org/
 2. GitHub: https://github.com/plumed/plumed2
 3. Publication: Comp. Phys. Comm. 185, 608 (2014); Nat. Methods 16, 670 (2019)
+
+**Secondary sources**:
+1. PLUMED Masterclass tutorials
+2. PLUMED-NEST repository
+3. Extensive published applications (>5000 citations)
 
 **Confidence**: VERIFIED
 

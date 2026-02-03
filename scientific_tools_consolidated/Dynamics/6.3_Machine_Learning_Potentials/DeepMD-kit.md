@@ -31,6 +31,26 @@ DeepMD-kit is a deep learning package for many-body potential energy representat
 
 **Sources**: DeepMD-kit documentation, Comp. Phys. Comm. 228, 178 (2018)
 
+## Key Strengths
+
+### Accuracy:
+- DFT-level accuracy
+- < 1 meV/atom typical error
+- Smooth PES
+- Good extrapolation
+
+### Efficiency:
+- 1000-10000x faster than DFT
+- GPU acceleration
+- Linear scaling O(N)
+- Model compression
+
+### Ecosystem:
+- DP-GEN active learning
+- LAMMPS integration
+- Large community
+- Extensive documentation
+
 ## Inputs & Outputs
 - **Input formats**: Training data (coordinates, forces, energies, virials) in NumPy/HDF5 format
 - **Output data types**: Trained model (.pb), Training logs, Validation metrics
@@ -55,12 +75,31 @@ DeepMD-kit is a deep learning package for many-body potential energy representat
 - Slower than simple empirical potentials but much more accurate
 - Optimized for NVIDIA GPUs
 
+## Best Practices
+- Use diverse training data
+- Validate on held-out test set
+- Use DP-GEN for active learning
+- Check model uncertainty
+- Compress model for production
+
+## Limitations & Known Constraints
+- Requires quality training data
+- Training can be expensive
+- May fail outside training domain
+- GPU recommended for training
+
 ## Application Areas
 - Water and ice phase diagrams
 - High-entropy alloys
 - Chemical reactions and catalysis
 - Battery materials (electrolytes)
 - Warm dense matter
+
+## Comparison with Other Codes
+- **vs NequIP/MACE**: DeepMD descriptor-based, others equivariant
+- **vs N2P2**: DeepMD deep learning, N2P2 Behler-Parrinello
+- **vs SchNetPack**: DeepMD LAMMPS-focused, SchNetPack research-focused
+- **Unique strength**: DP-GEN active learning, mature ecosystem, GPU optimization
 
 ## Community and Support
 - Open-source (LGPL v3)
@@ -73,6 +112,11 @@ DeepMD-kit is a deep learning package for many-body potential energy representat
 1. Homepage: http://www.deepmd.org/
 2. GitHub: https://github.com/deepmodeling/deepmd-kit
 3. Publication: Wang et al., Comp. Phys. Comm. 228, 178 (2018)
+
+**Secondary sources**:
+1. DeepMD tutorials
+2. DP-GEN documentation
+3. DeepModeling community resources
 
 **Confidence**: VERIFIED
 

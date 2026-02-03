@@ -33,6 +33,26 @@ NAMD is a parallel molecular dynamics code designed for high-performance simulat
 
 **Sources**: NAMD website, J. Comput. Chem. 26, 1781 (2005)
 
+## Key Strengths
+
+### Scalability:
+- Extreme parallel scaling (100K+ cores)
+- Charm++ runtime system
+- Millions of atoms routine
+- Supercomputer optimized
+
+### VMD Integration:
+- Seamless visualization
+- QwikMD easy setup
+- Interactive MD
+- Analysis tools
+
+### Methods:
+- Steered MD
+- Alchemical FEP
+- Constant pH
+- QM/MM
+
 ## Inputs & Outputs
 - **Input formats**: Configuration file (.conf), PDB/PSF files (structure/topology), Parameter files
 - **Output data types**: DCD trajectories, Output logs, Restart files, Velocity files
@@ -54,12 +74,37 @@ NAMD is a parallel molecular dynamics code designed for high-performance simulat
 - **GPU**: Excellent CUDA performance
 - **Efficiency**: Optimized for large systems (millions of atoms)
 
+## Computational Cost
+- Excellent multi-node scaling
+- GPU provides major speedup
+- Efficient for very large systems
+- Overall: Best for supercomputer runs
+
+## Best Practices
+- Use VMD/QwikMD for setup
+- Enable PME for electrostatics
+- Use appropriate timestep (2 fs with SHAKE)
+- Validate with short test runs
+- Use collective variables (Colvars) for enhanced sampling
+
+## Limitations & Known Constraints
+- Single-node slower than GROMACS
+- Tcl scripting can be complex
+- Less flexible than LAMMPS for custom potentials
+- Requires careful parameter file setup
+
 ## Application Areas
 - Viral capsids and large assemblies
 - Membrane proteins and channels
 - Protein folding
 - Free energy calculations
 - Mechanobiology (Steered MD)
+
+## Comparison with Other Codes
+- **vs GROMACS**: NAMD better multi-node scaling, GROMACS faster single-node
+- **vs AMBER**: NAMD open-source, AMBER better GPU single-node
+- **vs LAMMPS**: NAMD biomolecular focus, LAMMPS more general
+- **Unique strength**: Extreme scalability, VMD integration, Steered MD
 
 ## Community and Support
 - Developed by TCBG at UIUC (NIH funded)
@@ -72,6 +117,11 @@ NAMD is a parallel molecular dynamics code designed for high-performance simulat
 1. Homepage: https://www.ks.uiuc.edu/Research/namd/
 2. Publication: Phillips et al., J. Comput. Chem. 26, 1781 (2005)
 3. Repository: https://gitlab.com/tcbg/namd
+
+**Secondary sources**:
+1. NAMD tutorials and wiki
+2. VMD documentation
+3. Extensive published applications (>15,000 citations)
 
 **Confidence**: VERIFIED
 

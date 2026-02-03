@@ -34,6 +34,26 @@ GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the 
 
 **Sources**: GROMACS documentation, SoftwareX 1-2, 19 (2015)
 
+## Key Strengths
+
+### Performance:
+- World-leading single-node speed
+- Excellent GPU utilization
+- SIMD optimizations
+- Dynamic load balancing
+
+### Biomolecular Focus:
+- Optimized for proteins/lipids/DNA
+- Extensive analysis tools
+- Free energy methods
+- Coarse-grained (Martini)
+
+### Ecosystem:
+- PLUMED integration
+- BioExcel workflows
+- Extensive tutorials
+- Professional support available
+
 ## Inputs & Outputs
 - **Input formats**: pdb/gro (structure), top (topology), mdp (run parameters), tpr (compiled run input)
 - **Output data types**: xtc/trr (trajectory), edr (energy), log (log file), gro (final structure)
@@ -59,12 +79,37 @@ GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the 
 - Efficient domain decomposition for MPI
 - Dynamic load balancing
 
+## Computational Cost
+- Fastest single-node performance available
+- GPU provides 10-50x speedup
+- Efficient for 10K-10M atoms
+- Overall: Industry-leading efficiency
+
+## Best Practices
+- Use latest version for GPU support
+- Choose appropriate integrator (md, sd)
+- Validate force field for your system
+- Use checkpointing for long runs
+- Check for LINCS/SETTLE warnings
+
+## Limitations & Known Constraints
+- Less flexible than LAMMPS for custom potentials
+- Biomolecular focus (less materials)
+- Complex topology format
+- Steep learning curve for advanced features
+
 ## Application Areas
 - Protein folding and dynamics
 - Drug discovery (binding affinity)
 - Membrane biophysics
 - Polymer melts and solutions
 - Micelles and self-assembly
+
+## Comparison with Other Codes
+- **vs LAMMPS**: GROMACS faster for biomolecules, LAMMPS more versatile potentials
+- **vs AMBER**: GROMACS open-source, AMBER better GPU for some systems
+- **vs NAMD**: GROMACS faster single-node, NAMD better multi-node scaling
+- **Unique strength**: Fastest biomolecular MD, excellent free energy methods
 
 ## Community and Support
 - Open-source (LGPL v2.1)
@@ -78,6 +123,11 @@ GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the 
 1. Homepage: https://www.gromacs.org/
 2. GitLab: https://gitlab.com/gromacs/gromacs
 3. Publication: Abraham et al., SoftwareX 1-2, 19 (2015)
+
+**Secondary sources**:
+1. GROMACS tutorials
+2. BioExcel documentation
+3. Extensive published applications (>50,000 citations)
 
 **Confidence**: VERIFIED
 
