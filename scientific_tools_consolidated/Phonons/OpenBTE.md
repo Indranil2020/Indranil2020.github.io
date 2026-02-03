@@ -45,6 +45,12 @@ OpenBTE is an open-source implementation of the Boltzmann transport equation sol
 ## Performance Characteristics
 - Moderate computational cost
 - Suitable for research and education
+- Focus on accessibility over optimization
+
+## Computational Cost
+- Force constant generation: External (DFT)
+- OpenBTE BTE solution: Moderate
+- Iterative methods more expensive than RTA
 
 ## Limitations & Known Constraints
 - **Development stage**: Research code
@@ -66,6 +72,21 @@ OpenBTE is an open-source implementation of the Boltzmann transport equation sol
 - Open-source
 - GitHub repository
 - Community contributions welcome
+- Educational focus
+
+## Best Practices
+- Start with simple systems for learning
+- Validate against established codes (ShengBTE, phono3py)
+- Converge q-point grids systematically
+- Use for prototyping before production codes
+
+## Development
+- Open-source development
+- Educational and research focus
+- Community-driven improvements
+
+## Research Impact
+OpenBTE provides an accessible, open-source BTE solver for phonon transport, valuable for education and method development in thermal transport research.
 
 ## Verification & Sources
 **Primary sources**:

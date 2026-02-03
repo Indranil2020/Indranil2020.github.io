@@ -44,6 +44,17 @@ API_Phonons is a Python API and interface for phonon calculations, providing a u
 - Interface/wrapper: Minimal overhead
 - Performance depends on underlying codes
 
+## Advanced Features
+- Unified API across multiple phonon codes
+- Data format conversion utilities
+- Workflow automation capabilities
+- Python-based extensibility
+
+## Computational Cost
+- API overhead: Negligible
+- Actual cost depends on underlying phonon codes
+- Suitable for workflow automation
+
 ## Limitations & Known Constraints
 - **Depends on other codes**: Not a standalone calculator
 - **Documentation**: Limited; repository-based
@@ -60,6 +71,27 @@ API_Phonons is a Python API and interface for phonon calculations, providing a u
 - Open-source
 - GitHub repository
 - Research development
+- Author support via issues
+
+## Comparison with Other Codes
+- **vs direct phonon codes**: API_Phonons provides unified interface
+- **vs Phonopy API**: API_Phonons aims for multi-code support
+- **Use case**: Workflow integration and interoperability
+
+## Best Practices
+- Use for multi-code workflows
+- Leverage Python ecosystem for analysis
+- Validate data conversions
+- Contribute to interface development
+
+## Development
+- Research code
+- Python-based implementation
+- Interface/wrapper focus
+- Community contributions welcome
+
+## Research Impact
+API_Phonons provides a unified Python interface for phonon calculations, facilitating workflow automation and interoperability between different phonon codes.
 
 ## Verification & Sources
 **Primary sources**:

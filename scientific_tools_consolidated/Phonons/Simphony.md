@@ -45,6 +45,11 @@ Simphony is a Python package for phonon and vibrational spectroscopy simulations
 - Focus on spectroscopy analysis
 - Post-processing oriented
 
+## Computational Cost
+- Spectroscopy simulations: Fast (seconds to minutes)
+- Depends on input data complexity
+- Post-processing overhead minimal
+
 ## Limitations & Known Constraints
 - **Specialized scope**: Focused on spectroscopy
 - **Documentation**: Limited
@@ -61,6 +66,21 @@ Simphony is a Python package for phonon and vibrational spectroscopy simulations
 - Open-source
 - GitHub repository
 - Research development
+- Author support via issues
+
+## Best Practices
+- Validate simulated spectra against experimental data
+- Appropriate spectral resolution settings
+- Use with accurate phonon input data
+- Leverage matplotlib for visualization
+
+## Development
+- Research code
+- Python-based implementation
+- Spectroscopy focus
+
+## Research Impact
+Simphony provides tools for vibrational spectroscopy simulations, enabling researchers to interpret and predict spectroscopic measurements from phonon calculations.
 
 ## Verification & Sources
 **Primary sources**:

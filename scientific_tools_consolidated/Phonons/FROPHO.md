@@ -46,6 +46,11 @@ FROPHO is a tool for frozen phonon calculations developed by Atsushi Togo (same 
 - DFT calculations: User responsibility
 - Processing: Efficient
 
+## Computational Cost
+- FROPHO processing: Negligible
+- DFT calculations: Dominant cost (user responsibility)
+- Overall: Efficient workflow tool
+
 ## Limitations & Known Constraints
 - **Specialized tool**: For frozen phonon approach
 - **Documentation**: Limited; assumes phonopy knowledge
@@ -68,6 +73,15 @@ FROPHO is a tool for frozen phonon calculations developed by Atsushi Togo (same 
 ## Development
 - Atsushi Togo (phonopy developer)
 - Part of phonopy tool suite
+
+## Best Practices
+- Follow phonopy conventions for consistency
+- Validate frozen phonon results against finite displacement
+- Use appropriate displacement amplitudes
+- Leverage phonopy ecosystem for analysis
+
+## Research Impact
+FROPHO provides an alternative frozen phonon approach within the phonopy ecosystem, enabling methodology comparisons and specialized phonon calculations.
 
 ## Verification & Sources
 **Primary sources**:

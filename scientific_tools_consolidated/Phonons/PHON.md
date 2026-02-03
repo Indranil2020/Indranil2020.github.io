@@ -34,6 +34,12 @@ PHON is a computational tool for phonon calculations developed by Krzysztof Parl
 
 **Sources**: PHON documentation, literature citations
 
+## Key Strengths
+- **Established**: One of the early widely-used phonon codes
+- **QHA support**: Quasi-harmonic approximation capabilities
+- **Thermodynamics**: Comprehensive thermodynamic property calculations
+- **Complex structures**: Handles materials with many atoms
+
 ## Inputs & Outputs
 - **Input formats**:
   - Force sets from DFT calculations
@@ -50,6 +56,16 @@ PHON is a computational tool for phonon calculations developed by Krzysztof Parl
 - Compatible with major DFT codes
 - Manual interface setup required
 - ASCII-based input/output
+
+## Performance Characteristics
+- Phonon calculations: Efficient for harmonic properties
+- Thermodynamics: Fast post-processing
+- Suitable for production calculations
+
+## Computational Cost
+- DFT force calculations: Dominant cost
+- PHON processing: Fast (minutes)
+- QHA calculations: Moderate
 
 ## Limitations & Known Constraints
 - **Harmonic approximation only**: No anharmonic effects
@@ -68,6 +84,26 @@ PHON is a computational tool for phonon calculations developed by Krzysztof Parl
 - Thermodynamic properties
 - Materials characterization
 - Legacy calculations and benchmarking
+
+## Best Practices
+- Follow established PHON workflows
+- Careful force constant convergence
+- Validate against experimental phonon data
+- Consider Phonopy for new projects
+
+## Community and Support
+- Academic distribution
+- Documentation via manual
+- Literature-based support
+- Historical user community
+
+## Development
+- Krzysztof Parlinski
+- Established code with long history
+- Academic maintenance
+
+## Research Impact
+PHON was one of the pioneering phonon codes, enabling widespread adoption of first-principles lattice dynamics calculations and contributing to many early computational phonon studies.
 
 ## Verification & Sources
 **Primary sources**:

@@ -31,6 +31,12 @@ PHONON is a software package for lattice dynamics calculations developed at the 
 
 **Sources**: PHONON software documentation, IFJ PAN
 
+## Key Strengths
+- **Established**: Long-standing academic phonon code
+- **Isotope effects**: Includes isotope scattering calculations
+- **Thermodynamics**: Comprehensive thermodynamic property calculations
+- **Academic support**: IFJ PAN institutional backing
+
 ## Inputs & Outputs
 - **Input formats**:
   - Ab-initio force calculations
@@ -48,6 +54,16 @@ PHONON is a software package for lattice dynamics calculations developed at the 
 - Manual workflow setup
 - Text-based interface
 
+## Performance Characteristics
+- Phonon calculations: Efficient for harmonic properties
+- Thermodynamics: Fast post-processing
+- Suitable for academic research
+
+## Computational Cost
+- DFT force calculations: Dominant cost
+- PHONON processing: Fast (minutes)
+- Overall: Practical for standard systems
+
 ## Limitations & Known Constraints
 - **Harmonic only**: No anharmonicity
 - **Manual setup**: Requires careful preparation
@@ -63,6 +79,26 @@ PHONON is a software package for lattice dynamics calculations developed at the 
 - Fundamental phonon studies
 - Thermodynamic property calculations
 - Academic research
+
+## Best Practices
+- Follow established PHONON workflows
+- Careful force constant preparation
+- Validate against experimental data
+- Consider modern alternatives for new projects
+
+## Community and Support
+- Academic distribution (IFJ PAN)
+- Documentation via software package
+- Academic support
+- Historical user community
+
+## Development
+- Institute of Nuclear Physics, Polish Academy of Sciences
+- Academic maintenance
+- Long-standing development
+
+## Research Impact
+PHONON has contributed to numerous academic phonon studies, providing reliable lattice dynamics calculations for the solid-state physics community.
 
 ## Verification & Sources
 **Primary sources**:

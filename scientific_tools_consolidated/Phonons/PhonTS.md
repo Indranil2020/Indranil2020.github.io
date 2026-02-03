@@ -25,9 +25,68 @@ PhonTS (Phonon Transport Simulator) is a software package for calculating lattic
 - Accumulation of thermal conductivity with mean free path
 - Anisotropic thermal conductivity tensors
 
+## Key Strengths
+- **BTE solver**: Full iterative and RTA solutions
+- **Spectral analysis**: Mode-resolved thermal conductivity
+- **Accumulation functions**: Mean free path analysis
+- **Published methodology**: Well-documented in CPC publication
+
 ## Inputs & Outputs
 - **Inputs**: Phonon frequencies, group velocities, lifetimes (scattering rates)
 - **Outputs**: Thermal conductivity tensor, spectral contributions, accumulation functions
+
+## Interfaces & Ecosystem
+- **Force constants**: From phonopy, phono3py, or MD simulations
+- **MD codes**: Interfaces for lifetime extraction
+- **Standalone**: Self-contained BTE solver
+
+## Performance Characteristics
+- **Computational cost**: Moderate; depends on q-point grid
+- **Scalability**: Handles standard phonon transport calculations
+- **Purpose**: Research-grade thermal transport
+
+## Computational Cost
+- Force constant/lifetime generation: External (DFT or MD)
+- PhonTS BTE solution: Minutes to hours
+- Iterative BTE more expensive than RTA
+
+## Limitations & Known Constraints
+- **Requires external input**: Phonon properties from other codes
+- **Documentation**: Primarily via publication
+- **Community**: Academic user base
+- **Development**: CPC library distribution
+
+## Comparison with Other Codes
+- **vs ShengBTE/phono3py**: PhonTS alternative BTE solver
+- **vs Phoebe**: PhonTS more traditional approach
+- **Use case**: Academic research, methodology comparison
+
+## Application Areas
+- Lattice thermal conductivity research
+- Phonon transport analysis
+- Spectral thermal conductivity studies
+- Mean free path accumulation analysis
+- Academic thermal transport research
+
+## Best Practices
+- Converge phonon properties before BTE solution
+- Test RTA vs iterative convergence
+- Validate against experimental thermal conductivity
+- Appropriate q-point grid for convergence
+
+## Community and Support
+- CPC Program Library distribution
+- Academic support via authors
+- Publication-based documentation
+- Free for academic use
+
+## Development
+- Aleksandr V. Chernatynskiy and colleagues
+- CPC library maintenance
+- Academic research code
+
+## Research Impact
+PhonTS provides a well-documented BTE solver for lattice thermal conductivity calculations, enabling detailed spectral and accumulation analysis of phonon transport.
 
 ## Verification & Sources
 **Primary sources**:

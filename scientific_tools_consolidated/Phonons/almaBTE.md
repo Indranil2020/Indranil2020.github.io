@@ -68,6 +68,12 @@ almaBTE is a software package for phonon transport simulations based on ab-initi
 - Nanostructure calculations: Moderate computational cost
 - Parallelization: MPI support
 
+## Computational Cost
+- Force constant generation: External (DFT)
+- almaBTE Monte Carlo: Hours to days
+- Variance reduction improves efficiency
+- Nanostructure geometry adds complexity
+
 ## Application Areas
 - Nanostructure thermal transport
 - Size-dependent thermal conductivity
@@ -91,6 +97,15 @@ almaBTE is a software package for phonon transport simulations based on ab-initi
 - MIT and University of Barcelona
 - Active development
 - Research-driven features
+
+## Best Practices
+- Converge Monte Carlo sampling
+- Validate bulk thermal conductivity first
+- Appropriate geometry discretization for nanostructures
+- Compare with deterministic BTE solvers
+
+## Research Impact
+almaBTE enables first-principles thermal transport simulations in nanostructures, advancing understanding of size effects and phonon hydrodynamics in nanoscale thermal management.
 
 ## Verification & Sources
 **Primary sources**:

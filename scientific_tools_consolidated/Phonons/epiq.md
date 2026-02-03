@@ -44,6 +44,12 @@ epiq is a Python package for electron-phonon interactions and related quantum tr
 ## Performance Characteristics
 - Python-based: Moderate speed
 - Suitable for research calculations
+- Focus on flexibility over raw performance
+
+## Computational Cost
+- DFT input generation: External (dominant cost)
+- epiq processing: Moderate (Python-based)
+- Scattering rate calculations: Depends on system size
 
 ## Limitations & Known Constraints
 - **Research code**: Development stage
@@ -59,6 +65,22 @@ epiq is a Python package for electron-phonon interactions and related quantum tr
 - Open-source
 - GitHub repository
 - Research development
+- Author support via issues
+
+## Best Practices
+- Validate electron-phonon matrix elements
+- Converge k-point and q-point grids
+- Compare with established codes (EPW, PERTURBO)
+- Systematic temperature convergence
+
+## Development
+- Research code
+- Python-based implementation
+- Electron-phonon focus
+- Active development
+
+## Research Impact
+epiq provides Python tools for electron-phonon coupling calculations, enabling research into quantum transport and scattering mechanisms.
 
 ## Verification & Sources
 **Primary sources**:

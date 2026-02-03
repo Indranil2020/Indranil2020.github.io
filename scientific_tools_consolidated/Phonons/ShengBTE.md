@@ -38,6 +38,12 @@ ShengBTE is a software package for computing lattice thermal conductivity of cry
 
 **Sources**: Official ShengBTE documentation, cited in 6/7 source lists
 
+## Key Strengths
+- **Production quality**: Widely used and validated
+- **Full BTE solution**: Both RTA and iterative methods
+- **Comprehensive**: Mode-resolved and spectral analysis
+- **Well-documented**: Established methodology and publications
+
 ## Inputs & Outputs
 - **Input formats**:
   - CONTROL file (calculation parameters)
@@ -62,6 +68,43 @@ ShengBTE is a software package for computing lattice thermal conductivity of cry
   - Python scripts for analysis
   - Plotting utilities
   - cumulative_kappa.py for analysis
+
+## Workflow and Usage
+
+### Typical ShengBTE Workflow:
+```bash
+# 1. Generate 2nd order force constants (phonopy)
+phonopy -d --dim="2 2 2" -c POSCAR
+# Run DFT on displaced structures
+phonopy --fc vasprun.xml
+
+# 2. Generate 3rd order force constants (thirdorder.py)
+thirdorder.py sow POSCAR
+# Run DFT on displaced structures
+thirdorder.py reap POSCAR
+
+# 3. Run ShengBTE
+ShengBTE
+```
+
+## Advanced Features
+- **Iterative BTE**: Full solution beyond RTA for accurate transport
+- **Spectral analysis**: Frequency-resolved thermal conductivity
+- **Cumulative functions**: Mean free path accumulation
+- **Size effects**: Grain boundary and nanostructure scattering
+- **Isotope scattering**: Natural isotope disorder effects
+
+## Performance Characteristics
+- **Computational cost**: Moderate for BTE solution
+- **Scalability**: Handles standard q-point grids efficiently
+- **Parallelization**: MPI support for large calculations
+- **Typical runtime**: Hours to days depending on system and grid
+
+## Computational Cost
+- Force constant calculations (DFT): Dominant cost
+- ShengBTE BTE solution: Hours to days
+- Iterative BTE more expensive than RTA
+- Dense q-grids increase cost significantly
 
 ## Limitations & Known Constraints
 - **Requires force constants**: Needs 2nd and 3rd order from DFT
@@ -95,3 +138,26 @@ ShengBTE is a software package for computing lattice thermal conductivity of cry
 - Community support: Active (email, publications)
 - Academic citations: >500
 - Standard tool: Widely used for thermal conductivity
+
+## Best Practices
+- Converge supercell size for force constants
+- Systematic q-point grid convergence
+- Test RTA vs iterative BTE
+- Validate against experimental data
+- Appropriate cutoff distances for 3rd order IFCs
+
+## Community and Support
+- Open-source (GPL v3)
+- Active user community
+- Email support and publications
+- Extensive literature using ShengBTE
+- Workshop materials available
+
+## Development
+- Wu Li and colleagues
+- Established and well-maintained
+- Regular updates
+- Standard tool in thermal transport community
+
+## Research Impact
+ShengBTE is a standard tool for first-principles lattice thermal conductivity calculations, widely cited in thermoelectric and thermal transport literature with >500 citations.

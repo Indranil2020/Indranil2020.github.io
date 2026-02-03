@@ -46,6 +46,11 @@ YPHON (also known as PyPhon) is a Python-based tool for phonon calculations, par
 - Focus on flexibility over performance
 - Suitable for analysis and prototyping
 
+## Computational Cost
+- Analysis tasks: Fast (seconds to minutes)
+- Depends on input data size
+- Python overhead acceptable for typical use
+
 ## Limitations & Known Constraints
 - **Python overhead**: Not for very large systems
 - **Documentation**: Part of phonopy ecosystem docs
@@ -69,6 +74,15 @@ YPHON (also known as PyPhon) is a Python-based tool for phonon calculations, par
 ## Development
 - phonopy development team
 - Regular updates with phonopy
+
+## Best Practices
+- Use with phonopy for complete workflows
+- Leverage Python ecosystem for analysis
+- Validate results against phonopy outputs
+- Contribute improvements to phonopy ecosystem
+
+## Research Impact
+YPHON provides Python tools within the phonopy ecosystem, enabling scriptable phonon analysis and custom workflow development.
 
 ## Verification & Sources
 **Primary sources**:
