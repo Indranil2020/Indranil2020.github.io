@@ -41,10 +41,31 @@ YPHON (also known as PyPhon) is a Python-based tool for phonon calculations, par
 - **Python**: NumPy, matplotlib, etc.
 - **ASE**: Potential integration
 
+## Advanced Features
+
+### Python Tools:
+- Phonon data manipulation
+- Analysis utilities
+- Visualization tools
+- Custom workflow support
+
+### Integration:
+- Phonopy data structures
+- NumPy array operations
+- Matplotlib plotting
+- Scriptable analysis
+
 ## Performance Characteristics
 - Python-based: Moderate speed
 - Focus on flexibility over performance
 - Suitable for analysis and prototyping
+- Efficient for typical use cases
+
+## Computational Cost
+- Analysis operations: Fast
+- Visualization: Quick
+- Python overhead: Minimal
+- Overall: Lightweight tool
 
 ## Limitations & Known Constraints
 - **Python overhead**: Not for very large systems
@@ -54,6 +75,22 @@ YPHON (also known as PyPhon) is a Python-based tool for phonon calculations, par
 ## Comparison with Other Codes
 - **Part of phonopy**: Complementary to main phonopy
 - **Python focus**: For scripting and analysis
+- **vs Phonopy API**: Different scope; YPHON for utilities
+- **Unique strength**: Python-native phonon tools
+
+## Best Practices
+
+### Analysis Workflow:
+- Use with phonopy calculations
+- Leverage Python ecosystem
+- Document custom scripts
+- Validate results
+
+### Development:
+- Follow phonopy conventions
+- Use NumPy efficiently
+- Create reusable functions
+- Share useful scripts
 
 ## Application Areas
 - Phonon data analysis
@@ -62,9 +99,12 @@ YPHON (also known as PyPhon) is a Python-based tool for phonon calculations, par
 - Visualization and post-processing
 
 ## Community and Support
-- Open-source
-- Part of phonopy project
-- phonopy community support
+- **License**: Open-source
+- **Project**: Part of phonopy ecosystem
+- **Development**: phonopy team
+- **Support**: phonopy community
+- **Documentation**: Repository and phonopy docs
+- **Status**: Maintained with phonopy
 
 ## Development
 - phonopy development team

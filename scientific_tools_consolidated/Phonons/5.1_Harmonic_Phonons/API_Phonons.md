@@ -40,15 +40,56 @@ API_Phonons is a Python API and interface for phonon calculations, providing a u
 - **Python**: Native Python implementation
 - **Data conversion**: Between different formats
 
+## Advanced Features
+
+### Unified Interface:
+- Consistent API across multiple codes
+- Standardized data structures
+- Format conversion utilities
+- Workflow automation tools
+
+### Interoperability:
+- Multi-code support
+- Data format translation
+- Python object models
+- Integration capabilities
+
 ## Performance Characteristics
 - Interface/wrapper: Minimal overhead
 - Performance depends on underlying codes
+- Python-based: Moderate speed
+- Focus on interoperability
+
+## Computational Cost
+- API overhead: Negligible
+- Conversion operations: Fast
+- Depends on underlying calculators
+- Overall: Lightweight wrapper
 
 ## Limitations & Known Constraints
 - **Depends on other codes**: Not a standalone calculator
 - **Documentation**: Limited; repository-based
 - **Community**: Small user base
 - **Development stage**: Research tool
+- **Maintenance**: Research project status
+
+## Comparison with Other Codes
+- **vs Direct code usage**: API_Phonons provides unified interface
+- **vs Phonopy API**: Different scope; focuses on interoperability
+- **Unique strength**: Multi-code interface standardization
+
+## Best Practices
+
+### Workflow Integration:
+- Understand underlying code requirements
+- Validate data conversions
+- Test with known systems
+- Document custom workflows
+
+### Development:
+- Use for prototyping
+- Leverage Python ecosystem
+- Contribute improvements back
 
 ## Application Areas
 - Phonon workflow automation
@@ -57,9 +98,12 @@ API_Phonons is a Python API and interface for phonon calculations, providing a u
 - Python-based research
 
 ## Community and Support
-- Open-source
-- GitHub repository
-- Research development
+- **License**: Open-source
+- **Development**: GitHub repository
+- **Status**: Research tool
+- **Support**: GitHub issues
+- **Community**: Small research user base
+- **Documentation**: Repository README
 
 ## Verification & Sources
 **Primary sources**:
