@@ -63,10 +63,37 @@ mace_phonopy is a code to generate second-order interatomic force constants (IFC
 - **ASE**: Structure handling
 - **PyTorch**: ML backend
 
+## Advanced Features
+
+### MACE Integration:
+- Direct MACE potential loading
+- GPU-accelerated force evaluation
+- Batch displacement calculations
+- Efficient force constant extraction
+
+### Workflow Automation:
+- Automatic supercell generation
+- Displacement pattern creation
+- Force constant symmetrization
+- band.conf generation for Phonopy
+
+### Stability Analysis:
+- Automatic imaginary frequency detection
+- Customizable stability threshold
+- Stability report generation
+- Quick screening capability
+
+### Quality Control:
+- Force accuracy checking
+- Symmetry validation
+- Acoustic sum rule verification
+- Comparison with DFT option
+
 ## Performance Characteristics
-- **Speed**: Fast with GPU (MACE)
-- **Accuracy**: Near-DFT quality
-- **Scalability**: Large systems feasible
+- **Speed**: Fast with GPU (seconds to minutes)
+- **Accuracy**: Near-DFT quality (depends on MACE training)
+- **Scalability**: Large systems feasible (100s-1000s atoms)
+- **GPU requirement**: CUDA-capable GPU recommended
 
 ## Limitations & Known Constraints
 - Requires trained MACE potential
@@ -97,12 +124,16 @@ mace_phonopy is a code to generate second-order interatomic force constants (IFC
 - Large system phonons
 - ML potential validation
 - Rapid phonon estimation
+- Materials discovery
+- Stability screening
 
 ## Community and Support
-- Open-source GitHub repository
-- MACE ecosystem compatibility
-- Phonopy integration
-- Active ML potential community
+- **License**: Open source
+- **Development**: Active GitHub repository
+- **Documentation**: README with examples
+- **Support**: GitHub issues
+- **User base**: MACE and Phonopy users
+- **Integration**: MACE-Phonopy bridge
 
 ## Verification & Sources
 **Primary sources**:

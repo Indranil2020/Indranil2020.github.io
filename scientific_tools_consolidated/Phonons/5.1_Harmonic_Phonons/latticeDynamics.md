@@ -104,11 +104,6 @@ latticeDynamics is a Python package for lattice dynamics calculations using rigi
 - **Diagonalization**: Standard NumPy (fast)
 - **Typical runtime**: Seconds to minutes
 
-## Performance Characteristics
-- **Speed**: Fast for empirical potentials
-- **Memory**: Efficient for typical crystal sizes
-- **Scalability**: Suitable for educational and research use
-
 ## Limitations & Known Constraints
 - Empirical potential focus
 - Limited to supported models

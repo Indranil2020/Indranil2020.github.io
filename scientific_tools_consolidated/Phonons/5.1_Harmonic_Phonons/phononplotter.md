@@ -59,10 +59,58 @@ phononplotter is a Python tool for plotting phonon band structures and density o
 - **Matplotlib**: Plotting backend
 - **Python**: Implementation
 
+## Advanced Features
+
+### Plotting Customization:
+- Line styles and colors
+- Font sizes and families
+- Axis labels and limits
+- Legend positioning
+- Figure size control
+
+### Multi-System Comparison:
+- Overlay multiple dispersions
+- Side-by-side plots
+- Difference plots
+- Color-coded systems
+
+### Output Formats:
+- PNG for presentations
+- PDF for publications
+- SVG for editing
+- High-resolution options
+
+### Band Structure Features:
+- High-symmetry path labels
+- Frequency range selection
+- Grid customization
+- Annotation support
+
 ## Performance Characteristics
-- **Speed**: Fast plotting
-- **Memory**: Efficient for standard phonon data
-- **Output**: High-quality vector graphics support
+- **Speed**: Fast plotting (seconds)
+- **Memory**: Minimal (<100 MB)
+- **File handling**: Efficient band.yaml parsing
+- **Output quality**: Publication-ready
+
+## Computational Cost
+- **Parsing**: Negligible
+- **Plotting**: Fast (seconds)
+- **Export**: Near-instantaneous
+- **Overall**: Very lightweight
+
+## Best Practices
+
+### Plot Quality:
+- Use vector formats (PDF/SVG) for publications
+- Choose appropriate DPI for raster images
+- Ensure readable font sizes
+- Use color-blind friendly palettes
+
+### Comparison Plots:
+- Align frequency ranges
+- Use consistent styling
+- Label systems clearly
+- Include legends
 
 ## Limitations & Known Constraints
 - Phonopy-specific
@@ -80,24 +128,16 @@ phononplotter is a Python tool for plotting phonon band structures and density o
 - Phonon dispersion visualization
 - DOS plotting
 - Multi-system comparison
-
-## Best Practices
-
-### Plot Preparation:
-- Ensure converged Phonopy calculations
-- Use appropriate q-point path density
-- Check for imaginary frequencies before plotting
-- Validate band.yaml file integrity
-
-### Publication Quality:
-- Use vector formats (PDF, SVG) for publications
-- Adjust font sizes for readability
-- Use consistent color schemes across figures
+- Presentation slides
+- Thesis figures
 
 ## Community and Support
-- Open-source GitHub repository
-- Phonopy ecosystem compatibility
-- Simple Python codebase
+- **License**: Open source
+- **Development**: GitHub repository
+- **Documentation**: README with examples
+- **Support**: GitHub issues
+- **User base**: Phonopy users
+- **Focus**: Simple, focused plotting tool
 
 ## Verification & Sources
 **Primary sources**:

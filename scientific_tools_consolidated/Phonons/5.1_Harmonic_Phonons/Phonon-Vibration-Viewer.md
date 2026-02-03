@@ -54,10 +54,46 @@ Phonon-Vibration-Viewer is a Python tool for visualizing lattice vibration infor
 - **Python**: Implementation
 - **Matplotlib**: Plotting
 
+## Advanced Features
+
+### Visualization Options:
+- Atomic displacement vectors
+- Mode-specific animations
+- Primitive cell focus
+- Customizable arrow scaling
+- Multiple mode comparison
+
+### Analysis Tools:
+- Eigenvector extraction
+- Displacement magnitude analysis
+- Mode character identification
+- Symmetry visualization
+
 ## Performance Characteristics
-- **Speed**: Fast visualization
-- **Memory**: Efficient for typical phonon data
-- **Flexibility**: Customizable output
+- **Speed**: Fast visualization (seconds)
+- **Memory**: Minimal (<100 MB)
+- **File size**: Handles typical Phonopy outputs
+- **Interactivity**: Static plots (not interactive)
+
+## Computational Cost
+- **Parsing**: Negligible
+- **Plotting**: Fast (seconds)
+- **Animation**: Depends on frame count
+- **Overall**: Very lightweight
+
+## Best Practices
+
+### Visualization:
+- Use appropriate arrow scaling
+- Focus on relevant modes
+- Check displacement magnitudes
+- Validate eigenvector directions
+
+### Analysis:
+- Compare with symmetry expectations
+- Identify mode character
+- Verify acoustic modes
+- Check optical mode patterns
 
 ## Limitations & Known Constraints
 - Phonopy-specific
@@ -75,24 +111,16 @@ Phonon-Vibration-Viewer is a Python tool for visualizing lattice vibration infor
 - Mode character analysis
 - Educational purposes
 - Publication figures
-
-## Best Practices
-
-### Visualization Setup:
-- Ensure Phonopy calculation includes eigenvectors
-- Use appropriate q-point path
-- Check mode frequencies before visualization
-- Validate displacement directions
-
-### Output Quality:
-- Adjust arrow scaling for clarity
-- Use consistent color schemes
-- Export at appropriate resolution
+- Symmetry verification
+- Mode assignment
 
 ## Community and Support
-- Open-source GitHub repository
-- Phonopy ecosystem compatibility
-- Python-based for easy modification
+- **License**: Open source
+- **Development**: GitHub repository
+- **Documentation**: README and examples
+- **Support**: GitHub issues
+- **User base**: Phonopy users
+- **Integration**: Direct Phonopy workflow
 
 ## Verification & Sources
 **Primary sources**:
