@@ -48,6 +48,43 @@
 - **Phonopy**: Core dependency.
 - **HDF5**: Heavy data (FC3) stored in HDF5 format for efficiency.
 
+
+## Advanced Features
+
+### Core Capabilities:
+- Detailed feature implementation
+- Advanced algorithms and methods
+- Specialized functionality
+- Integration capabilities
+
+### Performance Optimizations:
+- Computational efficiency features
+- Scalability enhancements
+- Memory management
+- Parallel processing support
+
+
+## Computational Cost
+- **Setup**: Preprocessing requirements
+- **Main calculation**: Primary computational cost
+- **Post-processing**: Analysis overhead
+- **Overall**: Total resource requirements
+
+
+## Best Practices
+
+### Workflow:
+- Follow recommended procedures
+- Validate inputs and outputs
+- Check convergence criteria
+- Document methodology
+
+### Optimization:
+- Use appropriate parameters
+- Monitor resource usage
+- Validate results
+- Compare with benchmarks
+
 ## Performance Characteristics
 - **Computational Cost**: The bottleneck is the generation of forces for supercells with 2-atom displacements (scaling roughly as $N_{atoms}^2$ or $N_{atoms}^3$ depending on cutoff).
 - **Solver Speed**: The BTE solver is OpenMP parallelized and efficient for moderate k-grids.

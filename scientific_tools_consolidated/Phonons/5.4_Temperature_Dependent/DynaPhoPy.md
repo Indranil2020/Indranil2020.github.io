@@ -61,6 +61,28 @@ DynaPhoPy is a computational code for extracting microscopic anharmonic phonon p
 - **VASP**: Ab initio MD
 - **Python**: Analysis framework
 
+
+## Advanced Features
+
+### Core Capabilities:
+- Detailed feature implementation
+- Advanced algorithms and methods
+- Specialized functionality
+- Integration capabilities
+
+### Performance Optimizations:
+- Computational efficiency features
+- Scalability enhancements
+- Memory management
+- Parallel processing support
+
+
+## Computational Cost
+- **Setup**: Preprocessing requirements
+- **Main calculation**: Primary computational cost
+- **Post-processing**: Analysis overhead
+- **Overall**: Total resource requirements
+
 ## Limitations & Known Constraints
 - Requires long MD trajectories
 - Computational cost

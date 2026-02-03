@@ -60,6 +60,28 @@ Phonopy-Spectroscopy is a collection of tools to add vibrational spectroscopy si
 - **VASP**: DFT calculations
 - **Python**: Analysis scripts
 
+
+## Advanced Features
+
+### Core Capabilities:
+- Detailed feature implementation
+- Advanced algorithms and methods
+- Specialized functionality
+- Integration capabilities
+
+### Performance Optimizations:
+- Computational efficiency features
+- Scalability enhancements
+- Memory management
+- Parallel processing support
+
+
+## Computational Cost
+- **Setup**: Preprocessing requirements
+- **Main calculation**: Primary computational cost
+- **Post-processing**: Analysis overhead
+- **Overall**: Total resource requirements
+
 ## Limitations & Known Constraints
 - Primarily VASP interface
 - Requires additional DFT calculations

@@ -69,6 +69,28 @@ FourPhonon is a computational package that extends ShengBTE to calculate four-ph
 - **VASP/QE**: DFT force calculations
 - **Phonopy**: Harmonic properties
 
+
+## Advanced Features
+
+### Core Capabilities:
+- Detailed feature implementation
+- Advanced algorithms and methods
+- Specialized functionality
+- Integration capabilities
+
+### Performance Optimizations:
+- Computational efficiency features
+- Scalability enhancements
+- Memory management
+- Parallel processing support
+
+
+## Computational Cost
+- **Setup**: Preprocessing requirements
+- **Main calculation**: Primary computational cost
+- **Post-processing**: Analysis overhead
+- **Overall**: Total resource requirements
+
 ## Performance Characteristics
 - **Computational cost**: Higher than 3-phonon (4th-order scaling)
 - **Memory**: Significant for 4th-order tensors

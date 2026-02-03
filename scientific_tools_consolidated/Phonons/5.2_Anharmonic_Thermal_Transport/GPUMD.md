@@ -69,6 +69,28 @@ GPUMD (Graphics Processing Units Molecular Dynamics) is a highly efficient molec
 - **ASE**: Python interface available
 - **calorine**: Python package for NEP
 
+
+## Advanced Features
+
+### Core Capabilities:
+- Detailed feature implementation
+- Advanced algorithms and methods
+- Specialized functionality
+- Integration capabilities
+
+### Performance Optimizations:
+- Computational efficiency features
+- Scalability enhancements
+- Memory management
+- Parallel processing support
+
+
+## Computational Cost
+- **Setup**: Preprocessing requirements
+- **Main calculation**: Primary computational cost
+- **Post-processing**: Analysis overhead
+- **Overall**: Total resource requirements
+
 ## Performance Characteristics
 - **Speed**: Extremely fast on GPU
 - **System size**: Millions of atoms feasible

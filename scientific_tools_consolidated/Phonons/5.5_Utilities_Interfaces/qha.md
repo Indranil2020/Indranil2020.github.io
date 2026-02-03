@@ -62,6 +62,28 @@ qha is a Python package for quasi-harmonic approximation (QHA) calculations of t
 - **Python**: Analysis framework
 - **matplotlib**: Plotting
 
+
+## Advanced Features
+
+### Core Capabilities:
+- Detailed feature implementation
+- Advanced algorithms and methods
+- Specialized functionality
+- Integration capabilities
+
+### Performance Optimizations:
+- Computational efficiency features
+- Scalability enhancements
+- Memory management
+- Parallel processing support
+
+
+## Computational Cost
+- **Setup**: Preprocessing requirements
+- **Main calculation**: Primary computational cost
+- **Post-processing**: Analysis overhead
+- **Overall**: Total resource requirements
+
 ## Limitations & Known Constraints
 - QHA approximation limits
 - Requires multiple volumes

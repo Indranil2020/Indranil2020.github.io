@@ -61,6 +61,43 @@ Phono3py-Power-Tools is a collection of codes and scripts for Phono(3)py "power 
 - **CASTEP**: Additional interface
 - **Python/matplotlib**: Plotting
 
+
+## Advanced Features
+
+### Core Capabilities:
+- Detailed feature implementation
+- Advanced algorithms and methods
+- Specialized functionality
+- Integration capabilities
+
+### Performance Optimizations:
+- Computational efficiency features
+- Scalability enhancements
+- Memory management
+- Parallel processing support
+
+
+## Computational Cost
+- **Setup**: Preprocessing requirements
+- **Main calculation**: Primary computational cost
+- **Post-processing**: Analysis overhead
+- **Overall**: Total resource requirements
+
+
+## Best Practices
+
+### Workflow:
+- Follow recommended procedures
+- Validate inputs and outputs
+- Check convergence criteria
+- Document methodology
+
+### Optimization:
+- Use appropriate parameters
+- Monitor resource usage
+- Validate results
+- Compare with benchmarks
+
 ## Limitations & Known Constraints
 - Requires Phono3py expertise
 - Script-based workflow
