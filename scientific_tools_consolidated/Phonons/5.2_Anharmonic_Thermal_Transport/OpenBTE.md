@@ -46,17 +46,77 @@
 - **Upstream**: ShengBTE, Phono3py.
 - **Python**: Fully Pythonic API.
 
+## Advanced Features
+
+### Space-Dependent BTE:
+- Finite Volume Method (FVM) solver
+- Monte Carlo particle tracking
+- Anisotropic Mean-Free-Path (aMFP) formulation
+- Temperature and heat flux field calculations
+
+### Geometry Handling:
+- Complex 3D geometries via mesh files
+- Porous media and phononic crystals
+- Boundary condition specification
+- Device-level thermal modeling
+
+### Physics Modeling:
+- Ballistic-diffusive crossover
+- Boundary scattering (diffuse/specular)
+- Size effects on thermal conductivity
+- Interface thermal resistance
+
+### GPU Acceleration:
+- PyTorch-based linear solvers
+- Efficient for large mesh calculations
+- Scalable to complex geometries
+
 ## Performance Characteristics
 - **Speed**: Efficient aMFP formulation makes it feasible for 3D meshes.
 - **Scaling**: Scales with mesh size ($N_{vol}$) and number of phonon modes.
+- **GPU support**: PyTorch acceleration available
+- **Memory**: Depends on mesh resolution
+
+## Computational Cost
+- **Mesh generation**: Preprocessing step
+- **BTE solution**: Minutes to hours for 3D
+- **Visualization**: Fast with VTK/ParaView
+- **Overall**: Efficient for device-level simulations
 
 ## Comparison with Other Codes
 - **vs. almaBTE**: Both solve space-dependent BTE; OpenBTE emphasizes the FVM/aMFP approach and Python integration, while almaBTE uses Monte Carlo.
 - **vs. ShengBTE**: ShengBTE is for bulk material properties; OpenBTE takes those properties and applies them to specific device geometries.
+- **Unique strength**: Device-level thermal modeling with complex geometries
+
+## Best Practices
+
+### Workflow:
+- Start with bulk BTE calculation (ShengBTE/phono3py)
+- Generate appropriate mesh for geometry
+- Define boundary conditions carefully
+- Validate with analytical solutions when possible
+
+### Mesh Design:
+- Use appropriate mesh resolution
+- Refine mesh in critical regions
+- Check mesh convergence
+- Balance accuracy vs computational cost
+
+## Application Areas
+- Device-level thermal modeling
+- Nanostructured thermoelectrics
+- Phononic crystal design
+- Thermal interface engineering
+- Heat spreader optimization
 
 ## Community and Support
-- **Development**: MIT / UIUC (Giuseppe Romano).
-- **Source**: GitHub.
+- **Development**: MIT / UIUC (Giuseppe Romano)
+- **License**: GPL-3.0
+- **Repository**: GitHub (active)
+- **Documentation**: https://openbte.readthedocs.io/
+- **Support**: GitHub issues
+- **User base**: Nanoscale thermal transport community
+- **Integration**: Python ecosystem
 
 ## Verification & Sources
 - **Repository**: [https://github.com/OpenBTE/OpenBTE](https://github.com/OpenBTE/OpenBTE)

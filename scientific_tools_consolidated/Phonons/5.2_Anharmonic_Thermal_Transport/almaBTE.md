@@ -50,22 +50,71 @@
 - **Downstream**:
   - Plotting scripts included for visualization.
 
+## Advanced Features
+
+### Multiscale Capabilities:
+- Thin film thermal conductivity (cross-plane and in-plane)
+- Superlattice modeling (effective medium and explicit)
+- Nanowire transport with boundary scattering
+- Ballistic-diffusive transport regimes
+
+### Disorder Treatment:
+- Virtual Crystal Approximation (VCA)
+- Isotope scattering effects
+- Alloy mass disorder
+- Phonon-defect scattering
+
+### Advanced BTE Solutions:
+- Full scattering matrix inversion
+- Beyond relaxation time approximation
+- Normal and Umklapp processes
+- Mode-resolved analysis
+
 ## Performance Characteristics
 - **Computational Cost**: Dominant cost is the input DFPT/Force calculations. The BTE solution itself is relatively fast (minutes to hours).
 - **Scaling**: Good MPI scaling for the BTE solver.
+- **Parallelization**: MPI and OpenMP support
+- **Memory**: Efficient HDF5 storage
+
+## Computational Cost
+- **Force constants**: DFT calculations dominate (external)
+- **BTE solution**: Minutes to hours depending on grid
+- **Nanostructure calculations**: Additional cost for geometry
+- **Overall**: Efficient once force constants available
 
 ## Comparison with Other Codes
 - **vs. ShengBTE**: almaBTE is considered a successor or alternative, with better object-oriented design (C++) and more features for nanostructures (thin films).
 - **vs. Phono3py**: Phono3py focuses on the force constants and simple BTE; almaBTE offers more flexible BTE solvers (e.g., for superlattices) on top of those constants.
 
+## Best Practices
+
+### Input Preparation:
+- Use high-quality force constants from phono3py
+- Validate bulk properties before nanostructure calculations
+- Check convergence with q-point density
+- Test different boundary conditions
+
+### Calculations:
+- Start with RTA for quick estimates
+- Use full BTE for accurate results
+- Monitor convergence of iterative solver
+- Validate against experimental data
+
 ## Application Areas
 - **Thermoelectrics**: Designing materials with low $\kappa_L$ to high $zT$.
 - **Thermal Management**: Understanding heat flow in semiconductor thin films.
 - **Isotope Engineering**: Effect of isotopic purity on diamond/Si thermal conductivity.
+- **Nanostructured materials**: Thin films, superlattices, nanowires
+- **Phononic engineering**: Thermal conductivity reduction
 
 ## Community and Support
 - **Development**: Developed by Jesus Carrete, Bjorn Vermeersch, and collaborators.
-- **Source**: Bitbucket.
+- **Source**: Bitbucket repository
+- **License**: Apache License 2.0
+- **Documentation**: http://www.almabte.eu/
+- **Support**: Issue tracking on Bitbucket
+- **Publications**: Well-cited in thermal transport community
+- **User base**: Thermoelectrics and thermal management researchers
 
 ## Verification & Sources
 - **Repository**: [https://bitbucket.org/sousaw/almabte](https://bitbucket.org/sousaw/almabte)
