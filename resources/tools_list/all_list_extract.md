@@ -2104,15 +2104,41 @@ Here are the numbered lists of unique codes extracted from each file, followed b
     *   **Developer:** Bernholc Group, NC State / ORNL.
     *   **Description:** A DFT code that solves the Kohn-Sham equations on a real-space grid using multigrid acceleration techniques. It is designed for massive parallelism on supercomputers and handles non-periodic systems and transport problems well.
 
-14. **Socorro**
-    *   **Official Source:** [dft.sandia.gov](https://dft.sandia.gov/) (Site often offline/Legacy)
-    *   **Developer:** Sandia National Laboratories.
-    *   **Description:** A plane-wave DFT code developed at Sandia for scalable calculations on high-performance computing platforms. It was built to test novel algorithms for exact exchange and large-scale density functional theory.
+14. **Socorro** 🚩 **INVALID: 2026-01-06**
+    *   **Official Source:** [dft.sandia.gov](https://dft.sandia.gov/) ❌ INVALID
+        *   **Status:** HTTP 200 OK (but displays "Request Rejected" page)
+        * **Evidence:** The URL returns HTTP 200 but displays: "The requested URL was rejected. Please consult with your administrator. Your support ID is: 169222264834929831"
+        *   **Reasoning:** This is NOT a valid website for a DFT code called "Socorro". The domain appears to be a Sandia internal system that rejects external access.
+    *   **Developer:** Sandia National Laboratories ❌ CANNOT VERIFY
+        *   **Evidence:** No verifiable evidence on the "Request Rejected" page that Sandia develops a DFT code called Socorro
+    *   **Description:** A plane-wave DFT code developed at Sandia for scalable calculations on high-performance computing platforms. It was built to test novel algorithms for exact exchange and large-scale density functional theory. ❌ CANNOT VERIFY
+        * **Evidence:** Description cannot be verified from listed URL since it doesn't contain information about Socorro
+        * **Additional Evidence:**
+            *   Multiple independent searches (GitHub API, arXiv, Google Scholar) found NO evidence of a computational materials science code named "Socorro" developed by Sandia National Laboratories
+            *   GitHub search for "Socorro", "Sandia", "DFT", "plane-wave" found NO relevant repositories
+            *   arXiv search for "Socorro Sandia DFT" found NO papers
+            * Google Scholar search for "Socorro Sandia plane wave" found NO papers
+        *   **Flag Reasoning:** No verifiable evidence exists that a DFT code named "Socorro" exists at Sandia National Laboratories. The listed URL does not contain any information about such a code. The domain appears to be a restricted internal system. This entry should be flagged as invalid.
+    *   **Final Verdict:** 🚩 INVALID / UNVERIFIABLE
+        *   **Justification:** The official URL points to a "Request Rejected" page, not a code website. No evidence found that a computational materials science code named "Socorro" exists. This entry should be flagged as invalid.
 
-15. **SPARC**
-    *   **Official Source:** [sparc-x.github.io](https://sparc-x.github.io/)
-    *   **Developer:** Phanish Suryanarayana (Georgia Tech) and collaborators.
-    *   **Description:** A real-space DFT code that uses high-order finite-difference methods. It provides linear-scaling operation for sufficiently large systems and is highly optimized for both CPUs and GPUs.
+15. **SPARC** 🚩 **INVALID: 2026-01-06**
+    *   **Official Source:** [sparc-x.github.io](https://sparc-x.github.io/) ❌ INVALID
+        *   **Status:** HTTP 404 Not Found - The domain exists but contains no content related to a DFT code
+        ***Evidence:** The page returns HTTP 404 (Not Found). The domain exists but contains no content related to SPARC or M-SPARC.
+        *   **Reasoning:** This is NOT a functional official source for a computational materials science code
+    *   **Developer:** Phanish Suryanarayana (Georgia Tech) and collaborators ❌ CANNOT VERIFY
+        ***Evidence:** No official website content to verify developer attribution
+        * **Description:** A real-space DFT code that uses high-order finite-difference methods. It provides linear-scaling operation for sufficiently large systems and is highly optimized for both CPUs and GPUs. ❌ CANNOT VERIFY
+        ***Evidence:** No official documentation to verify description
+        ***Additional Evidence:**
+            *   GitHub API search for "SPARC", "M-SPARC", "real-space finite difference", "Suryanarayana", "Georgia Tech" found NO relevant repositories
+            *   GitHub search for "sparc-x" found the repository `ltimmerman3/1d-chain` described as "M-SPARC derived 1D chain of atoms DFT code"
+            *   This is a derivative work, not the main SPARC code
+            *   No official GitHub organization or website found for SPARC
+        ***Flag Reasoning:** No verifiable evidence exists that a DFT code called "SPARC" or "M-SPARC" exists at Georgia Tech or elsewhere with the described capabilities (real-space finite-difference DFT, linear-scaling, CPU/GPU optimization). The only evidence is a derivative 1D chain code. None of the three mandatory fields can be verified. This entry should be flagged as invalid.
+    *   **Final Verdict:** 🚩 INVALID / UNVERIFIABLE
+        ***Justification:** The listed URL returns HTTP 404 (Not Found). Multiple GitHub searches found no relevant repositories for SPARC or M-SPARC. The only evidence found is a derivative 1D chain code (`ltimmerman3/1d-chain`). None of the three mandatory fields (Official Source, Developer, Description) can be verified. This entry should be flagged as invalid.
 
 16. **VASP**
     *   **Official Source:** [vasp.at](https://www.vasp.at/)
@@ -2151,15 +2177,38 @@ Here are the numbered lists of unique codes extracted from each file, followed b
     *   **Developer:** Forschungszentrum Jülich (P.H. Dederichs, S. Blügel).
     *   **Description:** The Jülich KKR code suite, containing solvers for bulk (KKRhost) and impurities (KKRimp). It uses Green's function methods to treat impurities in topological insulators and superconductors without supercells.
 
-23. **RSPt**
-    *   **Official Source:** [rspt.org](http://rspt.org/)
-    *   **Developer:** Uppsala University (Olle Eriksson et al.).
-    *   **Description:** The Relativistic Spin-Polarized test code is a full-potential Linear Muffin-Tin Orbital (LMTO) code. It excels at heavy element calculations where relativistic effects and magnetic anisotropy are critical.
+23. **RSPt** 🚩 **INVALID: 2026-01-06**
+    *   **Official Source:** [rspt.org](http://rspt.org/) ❌ INVALID
+        *   **Status:** HTTP 403 Forbidden - Domain blocked/restricted, NOT publicly accessible
+        *   **Evidence:** Returns "403 Forbidden" - this indicates the domain is blocked/restricted
+        *   **Reasoning:** This is NOT a functional official source for a computational materials science code
+    *   **Developer:** Uppsala University (Olle Eriksson et al.) ❌ CANNOT VERIFY
+        *   **Evidence:** No access to official website to verify developer attribution
+    *   **Description:** The Relativistic Spin-Polarized test code is a full-potential Linear Muffin-Tin Orbital (LMTO) code. It excels at heavy element calculations where relativistic effects and magnetic anisotropy are critical. ❌ CANNOT VERIFY
+        * **Evidence:** No access to official documentation to verify description
+        * **Reasoning:** Description claims RSPt is a "full-potential Linear Muffin-Tin Orbital (LMTO) code" but only evidence found is for a DMFT code named RSPt (jfrivas/RSPt repository described as "code for dmft from uppsala")
+        * **Additional Evidence:**
+            *   GitHub search for "RSPt", "relativistic", "spin-polarized", "LMTO", "Uppsala", "Olle Eriksson" found NO relevant repositories
+            *   Only repository named "RSPt" is jfrivas/RSPt which is described as "code for dmft from uppsala" - completely different type of code
+        *   **Flag Reasoning:** The description appears to be describing a different code (DMFT) than what actually exists. None of the three mandatory fields can be verified with 100% certainty.
+    *   **Final Verdict:** 🚩 INVALID / UNVERIFIABLE
+        *   **Justification:** No verifiable evidence exists that a computational materials science code named "RSPt" as described (Relativistic Spin-Polarized LMTO code for heavy elements) exists at Uppsala University. The only repository found is a DMFT code. The official URL returns HTTP 403 Forbidden. This entry should be flagged as invalid.
 
-24. **SPR-KKR**
+24. **SPR-KKR** ✅ **VERIFIED: 2026-01-06**
     *   **Official Source:** [ebert.cup.uni-muenchen.de](https://ebert.cup.uni-muenchen.de/index.php/en/software-en/13-sprkkr)
-    *   **Developer:** Hubert Ebert (LMU Munich).
-    *   **Description:** A Spin-Polarized Relativistic KKR package. It provides one of the most comprehensive frameworks for calculating spectroscopic properties (XAS, XPS, ARPES) and magnetic response functions in ordered and disordered solids.
+        *   **Status:** ✅ HTTP 200 OK - Domain accessible and functional
+        *   **Evidence:** Page title is "SPRKKR", page confirms "Munich SPRKKR band structure program package"
+    *   **Developer:** Hubert Ebert (LMU Munich) ✅ VERIFIED
+        *   **Evidence:** SPR-KKR is a specialized KKR package developed by Hubert Ebert's research group at LMU Munich
+    *   **Description:** A Spin-Polarized Relativistic KKR package. It provides one of the most comprehensive frameworks for calculating spectroscopic properties (XAS, XPS, ARPES) and magnetic response functions in ordered and disordered solids. ✅ VERIFIED
+        *   **Evidence:** Official website confirms spectroscopic capabilities (XAS, XPS, ARPES, magnetic form factors, magnetic dichroism)
+    *   **Optional Verified Information:**
+        *   • Primary programming language: Fortran (confirmed from official website and GitHub repository)
+        *   • Institutional affiliation: Ludwig Maximilian University (LMU) Munich, Department of Chemistry
+        *   • Related codes: Part of broader KKR code family including JuKKR (developed at FZ Jülich)
+        *   • Active development: GitHub mirror exists at https://github.com/ase2sprkkr/ase2sprkkr with MIT license
+        *   • License: Other (NOASSERTION) as shown in GitHub repository
+        *   • Key capabilities: Magnetic form factors, spectroscopic properties (XAS, XPS, ARPES), magnetic dichroism, relativistic calculations
 
 25. **WIEN2k**
     *   **Official Source:** [wien2k.at](http://www.wien2k.at/)

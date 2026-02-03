@@ -1,109 +1,75 @@
 # almaBTE
 
 ## Official Resources
-- Homepage: https://www.almabte.eu/
-- Documentation: https://www.almabte.eu/documentation/
-- Source Repository: https://bitbucket.org/almabte/almabte
-- License: Mozilla Public License 2.0
+- **Repository**: https://bitbucket.org/sousaw/almabte
+- **Documentation**: http://www.almabte.eu/
+- **License**: Apache License 2.0
 
 ## Overview
-almaBTE is a software package for phonon transport simulations based on ab-initio calculations. Developed at MIT and University of Barcelona, almaBTE solves the phonon Boltzmann transport equation to calculate thermal conductivity and related properties. The code features a modular architecture with Python bindings and supports various transport regimes including diffusive, ballistic, and hydrodynamic phonon transport.
+**almaBTE** is a high-performance C++ software package designed for calculating the **lattice thermal conductivity** and other phonon transport properties of materials from first principles. It solves the **Peierls-Boltzmann Transport Equation (BTE)** for phonons, moving beyond the relaxation time approximation (RTA) to capture full scattering processes, including three-phonon interactions. It is particularly adept at handling multiscale systems, from bulk crystals to thin films, superlattices, and alloys.
 
-**Scientific domain**: Phonon transport, thermal conductivity, nanostructure thermal properties  
-**Target user community**: Thermal transport researchers, nanostructure modeling
+**Scientific domain**: Phonon Transport, Thermal Conductivity, Nanoscale Heat Transfer
+**Target user community**: Researchers in thermoelectrics, thermal management, and phononics
 
 ## Theoretical Methods
-- Phonon Boltzmann transport equation
-- Iterative solution methods
-- Relaxation time approximation
-- Variance-reduced Monte Carlo
-- Hydrodynamic phonon transport
-- Ballistic-diffusive transport
-- Nanostructure modeling
-- Boundary scattering
-- Size effects
+- **Phonon BTE**: Solves the linearized BTE for the phonon deviation distribution function.
+- **Iterative Solver**: Self-consistent solution to capture Normal (N) and Umklapp (U) scattering processes.
+- **Second & Third-Order Force Constants**: Inputs derived from DFT (via codes like VASP, Quantum ESPRESSO, or Phono3py).
+- **Kappa Decomposition**: Resolves thermal conductivity by mode, mean free path, and frequency.
 
-## Capabilities (CRITICAL)
-- Lattice thermal conductivity calculations
-- Nanostructure thermal transport
-- Size-dependent thermal conductivity
-- Boundary scattering effects
-- Hydrodynamic phonon transport
-- Monte Carlo transport simulations
-- Variance-reduced algorithms
-- Python and C++ interfaces
-- Integration with first-principles codes
-- Visualization tools
-
-**Sources**: almaBTE documentation, Comp. Phys. Comm. 220, 351 (2017)
-
-## Inputs & Outputs
-- **Input formats**:
-  - Harmonic and anharmonic force constants
-  - Crystal structure data
-  - Geometry definitions for nanostructures
-  - Boundary conditions
-  
-- **Output data types**:
-  - Thermal conductivity (bulk and nanostructures)
-  - Temperature profiles
-  - Phonon distributions
-  - Heat flux
-  - Size-dependent properties
-
-## Interfaces & Ecosystem
-- **Force constants**: From phonopy, phono3py, ShengBTE
-- **Python**: Python bindings for workflows
-- **C++**: Core C++ implementation
-- **Visualization**: Built-in plotting capabilities
+## Capabilities
+- **Bulk Properties**:
+  - Lattice thermal conductivity tensor ($\kappa_{\alpha\beta}$).
+  - Cumulative $\kappa$ vs. MFP.
+  - Phonon lifetimes and line widths.
+- **Nanostructures**:
+  - Thin films (Cross-plane and In-plane).
+  - Superlattices (effective medium or explicit).
+  - Nanowires (diffuse boundary scattering).
+- **Disorder**:
+  - Virtual Crystal Approximation (VCA) for mass disorder (isotopes/alloys).
 
 ## Key Strengths
-- **Nanostructures**: Specialized for finite-size effects
-- **Monte Carlo**: Variance-reduced algorithms for efficiency
-- **Hydrodynamic**: Beyond simple diffusive transport
-- **Modern**: Python interface with C++ performance
+- **Beyond RTA**: One of the few publicly available codes that rigorously solves the full scattering matrix inversions.
+- **Multiscale**: Can treat ballistic-diffusive regimes in nanostructures.
+- **Interface**: User-friendly Python/XML inputs and HDF5 outputs.
+- **Efficiency**: Parallelized with MPI and OpenMP for large q-grids.
+
+## Inputs & Outputs
+- **Inputs**:
+  - `FORCE_CONSTANTS_2ND` and `FORCE_CONSTANTS_3RD` (from Phono3py/ShengBTE format).
+  - XML input file defining the grid and temperature.
+- **Outputs**:
+  - HDF5 files containing mode-resolved properties.
+  - Text summaries of thermal conductivity.
+
+## Interfaces & Ecosystem
+- **Upstream**:
+  - **Phono3py**: Common generator for the necessary force constants.
+  - **VASP/QE**: Source of force calculations.
+- **Downstream**:
+  - Plotting scripts included for visualization.
 
 ## Performance Characteristics
-- Monte Carlo: Stochastic, convergence-dependent
-- Nanostructure calculations: Moderate computational cost
-- Parallelization: MPI support
+- **Computational Cost**: Dominant cost is the input DFPT/Force calculations. The BTE solution itself is relatively fast (minutes to hours).
+- **Scaling**: Good MPI scaling for the BTE solver.
+
+## Comparison with Other Codes
+- **vs. ShengBTE**: almaBTE is considered a successor or alternative, with better object-oriented design (C++) and more features for nanostructures (thin films).
+- **vs. Phono3py**: Phono3py focuses on the force constants and simple BTE; almaBTE offers more flexible BTE solvers (e.g., for superlattices) on top of those constants.
 
 ## Application Areas
-- Nanostructure thermal transport
-- Size-dependent thermal conductivity
-- Thermal interface materials
-- Phononic devices
-- Heat management in nanoscale devices
-
-## Limitations & Known Constraints
-- **Requires force constants**: External calculation needed
-- **Monte Carlo variance**: Stochastic noise in results
-- **Learning curve**: Moderate
-- **Documentation**: Good but specialized focus
+- **Thermoelectrics**: Designing materials with low $\kappa_L$ to high $zT$.
+- **Thermal Management**: Understanding heat flow in semiconductor thin films.
+- **Isotope Engineering**: Effect of isotopic purity on diamond/Si thermal conductivity.
 
 ## Community and Support
-- Open-source (MPL 2.0)
-- Bitbucket repository
-- Documentation website
-- Academic development
-
-## Development
-- MIT and University of Barcelona
-- Active development
-- Research-driven features
+- **Development**: Developed by Jesus Carrete, Bjorn Vermeersch, and collaborators.
+- **Source**: Bitbucket.
 
 ## Verification & Sources
-**Primary sources**:
-1. Homepage: https://www.almabte.eu/
-2. Documentation: https://www.almabte.eu/documentation/
-3. Bitbucket: https://bitbucket.org/almabte/almabte
-4. Publication: Comp. Phys. Comm. 220, 351 (2017)
-
-**Confidence**: VERIFIED
-
-**Verification status**: ✅ VERIFIED
-- Website: ACTIVE
-- Documentation: AVAILABLE
-- Source: OPEN (Bitbucket, MPL 2.0)
-- Development: MIT/Barcelona
-- Applications: Nanostructure thermal transport, Monte Carlo BTE, hydrodynamic phonons, size effects
+- **Repository**: [https://bitbucket.org/sousaw/almabte](https://bitbucket.org/sousaw/almabte)
+- **Primary Publication**: Carrete et al., Comp. Phys. Comm. 220, 351 (2017).
+- **Verification status**: ✅ VERIFIED
+  - Active and widely cited.
+  - Considered a standard tool in the field.

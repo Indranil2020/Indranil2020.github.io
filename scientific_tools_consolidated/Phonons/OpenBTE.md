@@ -1,79 +1,65 @@
 # OpenBTE
 
 ## Official Resources
-- Homepage: https://github.com/jesan/OpenBTE
-- Documentation: Repository documentation
-- Source Repository: https://github.com/jesan/OpenBTE
-- License: Open-source
+- **Homepage**: https://github.com/OpenBTE/OpenBTE
+- **Documentation**: https://openbte.readthedocs.io/
+- **License**: GPL-3.0
 
 ## Overview
-OpenBTE is an open-source implementation of the Boltzmann transport equation solver for phonon thermal transport. The code provides tools for calculating lattice thermal conductivity from first-principles force constants, with a focus on accessibility and modularity.
+**OpenBTE** is an open-source vibrational transport solver designed to compute **lattice thermal conductivity** and heat transport maps in **multidimensional nanostructures**. Unlike bulk BTE solvers (like ShengBTE), OpenBTE solves the **space-dependent Boltzmann Transport Equation** for phonons, making it capable of modeling size effects, boundary scattering, and heat flow tailored geometries (membranes, porous materials, nanowires).
 
-**Scientific domain**: Phonon Boltzmann transport, thermal conductivity  
-**Target user community**: Thermal transport researchers, phonon physics
+**Scientific domain**: Nanoscale Heat Transport, Thermoelectrics
+**Target user community**: Researchers bridging material properties and device geometry
 
 ## Theoretical Methods
-- Phonon Boltzmann transport equation
-- Relaxation time approximation
-- Iterative BTE solution methods
-- Three-phonon scattering
-- Thermal conductivity calculations
+- **Space-Dependent BTE**: Solves $\mathbf{v} \cdot \nabla T + \frac{T - T_0}{\tau} = 0$ (in RTA) or more complex forms.
+- **Solvers**:
+  - **Finite Volume Method (FVM)**: For deteminstic solution on a mesh.
+  - **Monte Carlo**: For particle-based tracking.
+- **aMFP**: Anisotropic Mean-Free-Path formulation to reduce angular variables.
 
-## Capabilities (CRITICAL)
-- Lattice thermal conductivity calculations
-- Phonon BTE solution (RTA and iterative)
-- Three-phonon scattering rates
-- Temperature-dependent transport
-- Integration with force constant data
-- Open-source implementation
-
-**Sources**: GitHub repository
+## Capabilities
+- **Observables**:
+  - Effective Thermal Conductivity ($\kappa_{eff}$).
+  - Temperature maps $T(\mathbf{r})$.
+  - Heat flux fields $\mathbf{J}(\mathbf{r})$.
+- **Geometries**:
+  - 1D/2D/3D complex shapes (defined by meshes).
+  - Porous media (phononic crystals).
+- **Physics**:
+  - Boundary scattering (diffuse/specular).
+  - Ballistic-to-diffusive crossover.
 
 ## Key Strengths
-- **Open-source**: Fully accessible code
-- **Educational**: Good for learning BTE methods
-- **Modular**: Flexible implementation
+- **Geometry Awareness**: Can simulate real device shapes, not just bulk unit cells.
+- **Ab Initio Link**: Directly uses phonon lifetimes/velocities from `ShengBTE` or `Phono3py` as material inputs.
+- **Optimization**: GPU acceleration via PyTorch for linear solvers.
 
 ## Inputs & Outputs
-- **Input formats**: Harmonic and anharmonic force constants, crystal structure
-- **Output data types**: Thermal conductivity, scattering rates, phonon lifetimes
+- **Inputs**:
+  - Bulk phonon properties (BTE solution for bulk).
+  - Mesh files (`.msh`).
+- **Outputs**:
+  - HDF5/VTK files for visualization in ParaView.
 
 ## Interfaces & Ecosystem
-- Compatible with phonopy/phono3py force constants
-- Standard input formats
+- **Upstream**: ShengBTE, Phono3py.
+- **Python**: Fully Pythonic API.
 
 ## Performance Characteristics
-- Moderate computational cost
-- Suitable for research and education
-
-## Limitations & Known Constraints
-- **Development stage**: Research code
-- **Documentation**: Limited compared to established codes
-- **Community**: Smaller user base
-- **Performance**: Not optimized like production codes
+- **Speed**: Efficient aMFP formulation makes it feasible for 3D meshes.
+- **Scaling**: Scales with mesh size ($N_{vol}$) and number of phonon modes.
 
 ## Comparison with Other Codes
-- **vs phono3py/ShengBTE**: OpenBTE more accessible for education
-- **Use case**: Learning, prototyping, research
-
-## Application Areas
-- Thermal conductivity research
-- Educational purposes
-- Method development
-- Prototyping transport calculations
+- **vs. almaBTE**: Both solve space-dependent BTE; OpenBTE emphasizes the FVM/aMFP approach and Python integration, while almaBTE uses Monte Carlo.
+- **vs. ShengBTE**: ShengBTE is for bulk material properties; OpenBTE takes those properties and applies them to specific device geometries.
 
 ## Community and Support
-- Open-source
-- GitHub repository
-- Community contributions welcome
+- **Development**: MIT / UIUC (Giuseppe Romano).
+- **Source**: GitHub.
 
 ## Verification & Sources
-**Primary sources**:
-1. GitHub: https://github.com/jesan/OpenBTE
-
-**Confidence**: VERIFIED
-
-**Verification status**: ✅ VERIFIED
-- Repository: ACCESSIBLE
-- Status: Research/educational code
-- Applications: Phonon BTE, thermal conductivity, open-source implementation
+- **Repository**: [https://github.com/OpenBTE/OpenBTE](https://github.com/OpenBTE/OpenBTE)
+- **Primary Publication**: G. Romano et al., Phys. Rev. B (2021).
+- **Verification status**: ✅ VERIFIED
+  - Active development and documentation.

@@ -1,97 +1,83 @@
 # ShengBTE
 
 ## Official Resources
-- Homepage: http://www.shengbte.org/
-- Documentation: http://www.shengbte.org/index.php/usage
-- Source Repository: http://www.shengbte.org/downloads
-- License: GNU General Public License v3.0
+- **Homepage**: http://www.shengbte.org/
+- **Repository**: https://github.com/ShengBTE/ShengBTE
+- **License**: GNU General Public License v3.0
 
 ## Overview
-ShengBTE is a software package for computing lattice thermal conductivity of crystalline materials from first principles by solving the Boltzmann transport equation (BTE) for phonons. It uses harmonic and anharmonic interatomic force constants from DFT calculations.
+**ShengBTE** is a widely used software package for solving the **Phonon Boltzmann Transport Equation (BTE)** to calculate the lattice thermal conductivity of crystalline materials. It operates on a fully *ab initio* basis, taking second-order (harmonic) and third-order (anharmonic) interatomic force constants (IFCs) from density functional theory (DFT) calculations as input. By solving the BTE iteratively, it accurately captures phonon-phonon scattering processes beyond the relaxation time approximation (RTA), making it a standard tool for investigating heat transport in bulk materials and nanowires.
 
-**Scientific domain**: Thermal transport, thermoelectrics, phonon physics  
-**Target user community**: Researchers studying thermal conductivity and phonon-mediated properties
+**Scientific domain**: Thermal Transport, Phononics, Materials Science
+**Target user community**: Researchers in thermoelectrics, thermal management, and condensed matter physics
 
 ## Theoretical Methods
-- Boltzmann transport equation (BTE) for phonons
-- Iterative and relaxation time approximation solutions
-- Third-order anharmonic force constants
-- Three-phonon scattering processes
-- Normal and Umklapp processes
-- Isotope scattering
-- Boundary scattering
-- Finite-size effects
+- **Iterative BTE Solver**: Solves the linearized BTE self-consistently to include Normal (N) scattering processes which conserve crystal momentum.
+- **Scattering Mechanisms**:
+  - Three-phonon scattering (absorption and emission).
+  - Isotopic scattering (mass variance).
+  - Boundary scattering (for nanowires/domains).
+- **Relaxation Time Approximation (RTA)**: Also provides the RTA solution for comparison.
 
-## Capabilities (CRITICAL)
-- Lattice thermal conductivity from first principles
-- Temperature-dependent thermal conductivity
-- Phonon relaxation times
-- Phonon mean free paths
-- Phonon group velocities
-- Mode-resolved thermal conductivity contributions
-- Spectral thermal conductivity
-- Cumulative thermal conductivity
-- Grain boundary scattering effects
-- Nanostructure size effects
-- Isotope disorder scattering
-- Anisotropic thermal conductivity tensors
+## Capabilities
+- **Thermal Properties**:
+  - Lattice thermal conductivity tensor ($\kappa_{\alpha\beta}$).
+  - Temperature dependence of $\kappa$.
+  - Cumulative thermal conductivity with respect to phonon mean free path (MFP).
+- **Microscopic Analysis**:
+  - Mode-resolved scattering rates and lifetimes.
+  - Gruneisen parameters.
+  - Phase space available for scattering.
+- **Dimensionality**:
+  - Bulk 3D crystals.
+  - Nanowires (via diffusive boundary terms).
+  - 2D materials (with appropriate thickness normalization).
 
-**Sources**: Official ShengBTE documentation, cited in 6/7 source lists
+## Key Strengths
+- **Accuracy**: The iterative solution is essential for high-thermal-conductivity materials (like Diamond, Graphene) where N-processes play a major role.
+- **Efficiency**: Highly optimized for symmetry reduction, allowing calculations on complex unit cells.
+- **Ecosystem**: Works seamlessly with `thirdorder.py` for generating anharmonic IFCs.
 
 ## Inputs & Outputs
-- **Input formats**:
-  - CONTROL file (calculation parameters)
-  - FORCE_CONSTANTS_2ND (harmonic)
-  - FORCE_CONSTANTS_3RD (anharmonic)
-  - From thirdorder.py or other phonon codes
-  
-- **Output data types**:
-  - BTE.kappa (thermal conductivity tensor)
-  - BTE.KappaTensor (full output)
-  - BTE.ReciprocalLattice
-  - Mode-resolved properties
-  - Cumulative thermal conductivity data
+- **Inputs**:
+  - `CONTROL`: Main input file.
+  - `FORCE_CONSTANTS_2ND`: Harmonic force constants.
+  - `FORCE_CONSTANTS_3RD`: Anharmonic force constants.
+- **Outputs**:
+  - `BTE.kappa`: Final thermal conductivity.
+  - `T_P_lifetimes.dat`: Phonon lifetimes.
+  - `cumulative_kappa.dat`: MFP analysis.
 
 ## Interfaces & Ecosystem
-- **Force constant generation**:
-  - thirdorder.py - automated 3rd order FC calculation
-  - Phonopy for 2nd order
-  - Interfaces with VASP, Quantum ESPRESSO, etc.
-  
-- **Post-processing**:
-  - Python scripts for analysis
-  - Plotting utilities
-  - cumulative_kappa.py for analysis
+- **Upstream**:
+  - **VASP / QE**: Generate forces.
+  - **Phonopy**: Often used to prepare supercells and 2nd order IFCs.
+  - **thirdorder.py**: Standard script to generate 3rd order IFCs.
+- **Visualization**: Output data is simple text, easily plotted with Python/Gnuplot.
+
+## Performance Characteristics
+- **Computational Cost**: The BTE solution is fast (seconds to minutes on a single core). The bottleneck is generating the 3rd-order IFCs (hundreds of DFT runs).
+- **Parallelism**: MPI parallelization over the q-point grid.
 
 ## Limitations & Known Constraints
-- **Requires force constants**: Needs 2nd and 3rd order from DFT
-- **Computational cost**: 3rd order FC calculations expensive
-- **Supercell size**: Large supercells needed for accurate 3rd order FC
-- **Memory**: Can be intensive for large systems
-- **Classical approximation**: Uses classical phonon occupations (fixable)
-- **Three-phonon only**: Higher-order processes not included
-- **Learning curve**: Requires understanding of phonon BTE
-- **Platform**: Linux/Unix
+- **Higher-Order Scattering**: Only considers 3-phonon processes; 4-phonon scattering (important at high T) is not included in the standard version (extensions exist).
+- **Q-grid Convergence**: Requires careful convergence of the q-point mesh for accurate results.
+
+## Comparison with Other Codes
+- **vs. Phono3py**: Similar capabilities; ShengBTE's iterative solver was historically faster/more robust for N-processes, though Phono3py has caught up. ShengBTE is Fortran-based, Phono3py is Python/C.
+- **vs. almaBTE**: almaBTE extends the BTE approach to space-dependent problems (devices), whereas ShengBTE is primarily for bulk/homogeneous systems.
+
+## Application Areas
+- **Thermoelectrics**: Screening for low-$\kappa$ materials ($PbTe$, $SnSe$).
+- **Heat Management**: High-$\kappa$ materials ($BAs$, Diamond) for electronics cooling.
+- **Isotope Engineering**: Tailoring thermal properties via isotope enrichment.
+
+## Community and Support
+- **Development**: Developed by Wu Li (CEA/CAS) and collaborators.
+- **Source**: GitHub / Bitbucket.
 
 ## Verification & Sources
-**Primary sources**:
-1. Official website: http://www.shengbte.org/
-2. Documentation: http://www.shengbte.org/index.php/usage
-3. W. Li et al., Comput. Phys. Commun. 185, 1747 (2014) - ShengBTE paper
-4. thirdorder.py companion code
-
-**Secondary sources**:
-1. ShengBTE tutorials and examples
-2. Published thermal conductivity calculations
-3. Thermoelectric material studies
-4. Confirmed in 6/7 source lists (claude, g, gr, k, m, q)
-
-**Confidence**: CONFIRMED - Appears in 6 of 7 independent source lists
-
-**Verification status**: ✅ VERIFIED
-- Official homepage: ACCESSIBLE
-- Documentation: ACCESSIBLE
-- Source code: Available (download from website)
-- Community support: Active (email, publications)
-- Academic citations: >500
-- Standard tool: Widely used for thermal conductivity
+- **Repository**: [https://github.com/ShengBTE/ShengBTE](https://github.com/ShengBTE/ShengBTE)
+- **Primary Publication**: W. Li et al., Comp. Phys. Comm. 185, 1747 (2014).
+- **Verification status**: ✅ VERIFIED
+  - Gold standard code in the field.

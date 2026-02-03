@@ -1811,7 +1811,7 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: C++ Variational Monte-Carlo updated PEPS solver.
 - Link: [PEPS.md](DMFT/3.4_Tensor_Networks/PEPS.md)
 
-### 3.5 Exact Diagonalization (5 tools)
+### 3.5 Exact Diagonalization (9 tools)
 
 **160m. xdiag**
 - Confidence: VERIFIED
@@ -1843,9 +1843,33 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: Specialized ED code for Many-Body Localization studies.
 - Link: [MBL_ED.md](DMFT/3.5_Exact_Diagonalization/MBL_ED.md)
 
+**160r. HubbardModel2D**
+- Confidence: VERIFIED
+- Resources: https://github.com/ryanlevy/HubbardModel2D
+- Note: C++ Exact Diagonalization solver for Hubbard models.
+- Link: [HubbardModel2D.md](DMFT/3.5_Exact_Diagonalization/HubbardModel2D.md)
+
+**160s. EDLib**
+- Confidence: VERIFIED
+- Resources: https://github.com/Q-solvers/EDLib
+- Note: C++ template library for exact diagonalization (Hubbard/Anderson).
+- Link: [EDLib.md](DMFT/3.5_Exact_Diagonalization/EDLib.md)
+
+**160t. JHeisenbergED**
+- Confidence: VERIFIED
+- Resources: https://github.com/RudSmo/JHeisenbergED
+- Note: Simple Julia module for 1D Heisenberg Model ED.
+- Link: [JHeisenbergED.md](DMFT/3.5_Exact_Diagonalization/JHeisenbergED.md)
+
+**160u. Heisenberg**
+- Confidence: VERIFIED
+- Resources: https://github.com/muammar/heisenberg
+- Note: Python program for Heisenberg spin chain matrix calculation.
+- Link: [Heisenberg.md](DMFT/3.5_Exact_Diagonalization/Heisenberg.md)
+
 ---
 
-## CATEGORY 4: TIGHT-BINDING (24 tools)
+## CATEGORY 4: TIGHT-BINDING (56 tools)
 
 ### 4.1 Wannier Ecosystem
 **161. Wannier90**
@@ -2112,53 +2136,6 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: C++ library for second-quantized Hamiltonians on discrete lattices.
 - Link: [TBTK.md](TightBinding/Model_Hamiltonians/TBTK.md)
 
-**184e. HubbardModel2D**
-- Confidence: VERIFIED
-- Resources: https://github.com/ryanlevy/HubbardModel2D
-- Note: C++ Exact Diagonalization solver for Hubbard models.
-- Link: [HubbardModel2D.md](TightBinding/Model_Hamiltonians/HubbardModel2D.md)
-
-**184f. EDLib**
-- Confidence: VERIFIED
-- Resources: https://github.com/Q-solvers/EDLib
-- Note: C++ template library for exact diagonalization (Hubbard/Anderson).
-- Link: [EDLib.md](TightBinding/Model_Hamiltonians/EDLib.md)
-
-**184g. PolaronMobility.jl**
-- Confidence: VERIFIED
-- Resources: https://github.com/Frost-group/PolaronMobility.jl
-- Note: Feynman variational path-integral for Fröhlich/Holstein polarons.
-- Link: [PolaronMobility.jl.md](TightBinding/Model_Hamiltonians/PolaronMobility.jl.md)
-
-**184h. Sunny.jl**
-- Confidence: VERIFIED
-- Resources: https://github.com/SunnySuite/Sunny.jl
-- Note: SU(N) spin dynamics, LLG, and LSWT in Julia.
-- Link: [Sunny.jl.md](TightBinding/Model_Hamiltonians/Sunny.jl.md)
-
-**184i. SpinMC.jl**
-- Confidence: VERIFIED
-- Resources: https://github.com/fbuessen/SpinMC.jl
-- Note: Classical Monte Carlo for lattice spin models.
-- Link: [SpinMC.jl.md](TightBinding/Model_Hamiltonians/SpinMC.jl.md)
-
-**184j. JHeisenbergED**
-- Confidence: VERIFIED
-- Resources: https://github.com/RudSmo/JHeisenbergED
-- Note: Simple Julia module for 1D Heisenberg Model ED.
-- Link: [JHeisenbergED.md](TightBinding/Model_Hamiltonians/JHeisenbergED.md)
-
-**184k. Heisenberg**
-- Confidence: VERIFIED
-- Resources: https://github.com/muammar/heisenberg
-- Note: Python program for Heisenberg spin chain matrix calculation.
-- Link: [Heisenberg.md](TightBinding/Model_Hamiltonians/Heisenberg.md)
-
-**184l. ALF**
-- Confidence: VERIFIED
-- Resources: https://alf.physik.uni-wuerzburg.de/
-- Note: Algorithms for Lattice Fermions (Auxiliary-Field QMC).
-- Link: [ALF.md](TightBinding/Model_Hamiltonians/ALF.md)
 
 
 ### 4.3 Quantum Transport
@@ -2952,7 +2929,41 @@ https://iopscience.iop.org/article/10.1088/1361-648X/ab699e
 
 ---
 
-## CATEGORY 10: NICHE & ML (43 tools)
+## CATEGORY 10: NICHE & ML (47 tools)
+
+### 10.1 Spin Dynamics
+
+**355a. Sunny.jl**
+- Confidence: VERIFIED
+- Resources: https://github.com/SunnySuite/Sunny.jl
+- Note: SU(N) spin dynamics, LLG, and LSWT in Julia.
+- Link: [Sunny.jl.md](Niche/Spin_Dynamics/Sunny.jl.md)
+
+**355b. SpinMC.jl**
+- Confidence: VERIFIED
+- Resources: https://github.com/fbuessen/SpinMC.jl
+- Note: Classical Monte Carlo for lattice spin models.
+- Link: [SpinMC.jl.md](Niche/Spin_Dynamics/SpinMC.jl.md)
+
+**355c. Spirit**
+- Confidence: VERIFIED
+- Resources: https://spirit-code.github.io/
+- Note: Atomistic spin dynamics framework.
+- Link: [Spirit.md](Niche/Spin_Dynamics/Spirit.md)
+
+**355d. UppASD**
+- Confidence: VERIFIED
+- Resources: https://github.com/UppASD/UppASD
+- Note: Uppsala Atomistic Spin Dynamics code.
+- Link: [UppASD.md](Niche/Spin_Dynamics/UppASD.md)
+
+**355e. PolaronMobility.jl**
+- Confidence: VERIFIED
+- Resources: https://github.com/Frost-group/PolaronMobility.jl
+- Note: Feynman variational path-integral for Fröhlich/Holstein polarons.
+- Link: [PolaronMobility.jl.md](Niche/PolaronMobility.jl.md)
+
+### 10.2 Machine Learning & Specialized
 
 **355-372. [ML and specialized tools]**
 - **MLIP**: https://mlip.org/
