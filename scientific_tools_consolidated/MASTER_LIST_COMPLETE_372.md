@@ -2566,73 +2566,122 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 ## CATEGORY 6: DYNAMICS (17 tools)
 
-**219. i-PI**
-- Confidence: VERIFIED
-- Resources: https://ipi-code.org/
+### 6.1 Classical MD Engines (8 tools)
+*General-purpose molecular dynamics using classical force fields and Newton's equations of motion*
 
-**220. LAMMPS**
+**219. LAMMPS**
 - Confidence: VERIFIED
 - Resources: https://www.lammps.org/
+- Note: Large-scale Atomic/Molecular Massively Parallel Simulator for materials modeling.
+- Link: [LAMMPS.md](Dynamics/6.1_Classical_MD_Engines/LAMMPS.md)
 
-**221. PLUMED**
-- Confidence: VERIFIED
-- Resources: https://www.plumed.org/
-
-**222. GROMACS**
+**220. GROMACS**
 - Confidence: VERIFIED
 - Resources: https://www.gromacs.org/
+- Note: High-performance MD for biomolecular simulations (proteins, lipids, nucleic acids).
+- Link: [GROMACS.md](Dynamics/6.1_Classical_MD_Engines/GROMACS.md)
 
-**223. AMBER**
+**221. AMBER**
 - Confidence: VERIFIED
 - Resources: https://ambermd.org/
+- Note: Biomolecular simulation suite with well-validated AMBER force fields.
+- Link: [AMBER.md](Dynamics/6.1_Classical_MD_Engines/AMBER.md)
 
-**224. CHARMM**
+**222. CHARMM**
 - Confidence: VERIFIED
 - Resources: https://www.charmm.org/
+- Note: Versatile MD program with CHARMM force fields and advanced free energy methods.
+- Link: [CHARMM.md](Dynamics/6.1_Classical_MD_Engines/CHARMM.md)
 
-**225. NAMD**
+**223. NAMD**
 - Confidence: VERIFIED
 - Resources: https://www.ks.uiuc.edu/Research/namd/
+- Note: Scalable MD for large biomolecular systems, GPU-accelerated.
+- Link: [NAMD.md](Dynamics/6.1_Classical_MD_Engines/NAMD.md)
 
-**226. DL_POLY**
+**224. DL_POLY**
 - Confidence: VERIFIED
 - Resources: https://www.scd.stfc.ac.uk/Pages/DL_POLY.aspx
+- Note: General-purpose classical MD code from Daresbury Laboratory.
+- Link: [DL_POLY.md](Dynamics/6.1_Classical_MD_Engines/DL_POLY.md)
 
-**227. N2P2**
-- Confidence: VERIFIED
-- Resources: https://github.com/CompPhysVienna/n2p2
-
-**228. DeepMD-kit**
-- Confidence: VERIFIED
-- Resources: https://github.com/deepmodeling/deepmd-kit
-
-**229. OpenMD**
+**225. OpenMD**
 - Confidence: VERIFIED
 - Resources: https://openmd.org/
+- Note: Open-source MD for condensed phase systems with unique features.
+- Link: [OpenMD.md](Dynamics/6.1_Classical_MD_Engines/OpenMD.md)
 
-**230. IMD**
+**226. IMD**
 - Confidence: VERIFIED
 - Resources: https://imd.mpibpc.mpg.de/
+- Note: Interactive Molecular Dynamics for materials simulations.
+- Link: [IMD.md](Dynamics/6.1_Classical_MD_Engines/IMD.md)
 
-**231. NEB**
+### 6.2 Path Integral & Quantum Dynamics (1 tool)
+*Nuclear quantum effects via path integral molecular dynamics (PIMD), ring polymer MD*
+
+**227. i-PI**
 - Confidence: VERIFIED
-- Resources: **MODULE** - Implemented in VASP, ASE, etc.
+- Resources: https://ipi-code.org/
+- Note: Universal force engine for path integral MD and advanced nuclear quantum effects.
+- Link: [i-PI.md](Dynamics/6.2_Path_Integral_Quantum_Dynamics/i-PI.md)
 
-**232. String methods**
+### 6.3 Machine Learning Potentials (3 tools)
+*Neural network potentials and ML-driven force fields bridging DFT accuracy with classical MD speed*
+
+**228. N2P2**
 - Confidence: VERIFIED
-- Resources: **MODULE** - Implemented in VASP, ASE, etc.
+- Resources: https://github.com/CompPhysVienna/n2p2
+- Note: Neural network potential package based on Behler-Parrinello symmetry functions.
+- Link: [N2P2.md](Dynamics/6.3_Machine_Learning_Potentials/N2P2.md)
 
-**233. Metadynamics**
+**229. DeepMD-kit**
 - Confidence: VERIFIED
-- Resources: **MODULE** - Implemented in PLUMED, ASE, CP2K.
+- Resources: https://github.com/deepmodeling/deepmd-kit
+- Note: Deep learning-based molecular dynamics with Deep Potential models.
+- Link: [DeepMD-kit.md](Dynamics/6.3_Machine_Learning_Potentials/DeepMD-kit.md)
 
-**234. libAtoms/Quippy**
+**230. libAtoms/Quippy**
 - Confidence: VERIFIED
 - Resources: https://github.com/libatoms/libatoms
+- Note: Library for atomistic simulations with GAP (Gaussian Approximation Potentials).
+- Link: [libAtoms-Quippy.md](Dynamics/6.3_Machine_Learning_Potentials/libAtoms-Quippy.md)
+
+### 6.4 Enhanced Sampling Methods (4 tools)
+*Free energy calculations, rare event sampling, and transition state finding methods*
+
+**231. PLUMED**
+- Confidence: VERIFIED
+- Resources: https://www.plumed.org/
+- Note: Plugin for free energy calculations and enhanced sampling (metadynamics, umbrella sampling).
+- Link: [PLUMED.md](Dynamics/6.4_Enhanced_Sampling_Methods/PLUMED.md)
+
+**232. NEB**
+- Confidence: VERIFIED
+- Resources: **MODULE** - Implemented in VASP, ASE, etc.
+- Note: Nudged Elastic Band method for minimum energy path and transition state finding.
+- Link: [NEB.md](Dynamics/6.4_Enhanced_Sampling_Methods/NEB.md)
+
+**233. String methods**
+- Confidence: VERIFIED
+- Resources: **MODULE** - Implemented in VASP, ASE, etc.
+- Note: String method variants for reaction pathway optimization.
+- Link: [String-methods.md](Dynamics/6.4_Enhanced_Sampling_Methods/String-methods.md)
+
+**234. Metadynamics**
+- Confidence: VERIFIED
+- Resources: **MODULE** - Implemented in PLUMED, ASE, CP2K.
+- Note: Enhanced sampling method for free energy landscapes using history-dependent bias.
+- Link: [Metadynamics.md](Dynamics/6.4_Enhanced_Sampling_Methods/Metadynamics.md)
+
+### 6.5 Interoperability & Drivers (1 tool)
+*Code coupling, multi-scale interfaces, and driver-based workflows*
 
 **235. MDI drivers**
 - Confidence: VERIFIED
 - Resources: https://molssi-mdi.github.io/
+- Note: MolSSI Driver Interface for coupling simulation codes.
+- Link: [MDI-MolSSI.md](Dynamics/6.5_Interoperability_Drivers/MDI-MolSSI.md)
 
 ---
 
