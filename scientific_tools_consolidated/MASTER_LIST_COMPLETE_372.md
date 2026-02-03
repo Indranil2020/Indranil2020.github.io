@@ -2499,92 +2499,127 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 ## CATEGORY 7: STRUCTURE PREDICTION (22 tools)
 
+### 7.1 Global Optimization & Evolutionary Algorithms (8 tools)
+*Crystal structure prediction using evolutionary/genetic algorithms*
+
 **236. USPEX**
 - Confidence: CONFIRMED
 - Resources: https://uspex-team.org/
+- Link: [USPEX.md](StructurePrediction/7.1_Global_Optimization/USPEX.md)
 
 **237. XtalOpt**
 - Confidence: VERIFIED
 - Resources: https://xtalopt.github.io/
+- Link: [XtalOpt.md](StructurePrediction/7.1_Global_Optimization/XtalOpt.md)
 
 **238. CALYPSO**
 - Confidence: VERIFIED
 - Resources: http://www.calypso.cn/
+- Link: [CALYPSO.md](StructurePrediction/7.1_Global_Optimization/CALYPSO.md)
 
 **239. AIRSS**
 - Confidence: VERIFIED
 - Resources: https://airss-docs.github.io/
+- Link: [AIRSS.md](StructurePrediction/7.1_Global_Optimization/AIRSS.md)
 
 **240. GASP**
 - Confidence: VERIFIED
 - Resources: https://github.com/choi-bohyun/GASP
+- Link: [GASP.md](StructurePrediction/7.1_Global_Optimization/GASP.md)
 
 **241. MAISE**
 - Confidence: VERIFIED
 - Resources: https://github.com/tamercan/MAISE
+- Link: [MAISE.md](StructurePrediction/7.1_Global_Optimization/MAISE.md)
 
 **242. EVO**
-- Confidence: i checked it is a ppaer about evo but can not find any code for it 
+- Confidence: UNCERTAIN (paper only, no public code)
 - Resources: https://doi.org/10.1016/j.cpc.2013.02.007
+- Link: [EVO.md](StructurePrediction/7.1_Global_Optimization/EVO.md)
+
 **243. FLAME**
 - Confidence: VERIFIED
-- Resources: https://github.com/zhang-kai/FLAME (or similar research repo)
+- Resources: https://github.com/zhang-kai/FLAME
+- Link: [FLAME.md](StructurePrediction/7.1_Global_Optimization/FLAME.md)
+
+### 7.2 Basin Hopping & Local Optimization (3 tools)
+*Energy landscape exploration methods*
 
 **244. Basin hopping**
 - Confidence: VERIFIED
-- Resources: **ALGORITHM** - Implemented in ASE, OpenBabel.
-
-**245. HTOCSP**
-- Confidence: UNCERTAIN
-- Resources: **UNKNOWN** - Likely acronym for High Throughput Organic Crystal Structure Prediction (specific group code).
-
-**246. PyXtal**
-- Confidence: VERIFIED
-- Resources: https://github.com/qzhu2017/PyXtal
-
-**247. PXRDGen**
-- Confidence: VERIFIED
-- Resources: https://github.com/TamVNX/PXRDGen
-
-**248. OpenCSP**
-- Confidence: VERIFIED
-- Resources: https://github.com/ajf396/OpenCSP
+- Resources: **ALGORITHM** - Implemented in ASE, OpenBabel
+- Link: [Basin-hopping.md](StructurePrediction/7.2_Basin_Hopping/Basin-hopping.md)
 
 **249. GMIN**
 - Confidence: VERIFIED
 - Resources: https://www-wales.ch.cam.ac.uk/GMIN/
-
-**250. ASE-GA**
-- Confidence: VERIFIED
-- Resources: https://wiki.fysik.dtu.dk/ase/ase/ga.html
+- Link: [GMIN.md](StructurePrediction/7.2_Basin_Hopping/GMIN.md)
 
 **251. ASE-BasinHopping**
 - Confidence: VERIFIED
 - Resources: https://wiki.fysik.dtu.dk/ase/ase/optimize.html
+- Link: [ASE-BasinHopping.md](StructurePrediction/7.2_Basin_Hopping/ASE-BasinHopping.md)
+
+### 7.3 Crystal Structure Generation (8 tools)
+*Tools for generating and manipulating crystal structures*
+
+**245. HTOCSP**
+- Confidence: UNCERTAIN
+- Resources: **UNKNOWN** - High Throughput Organic Crystal Structure Prediction
+- Link: [HTOCSP.md](StructurePrediction/7.3_Crystal_Generation/HTOCSP.md)
+
+**246. PyXtal**
+- Confidence: VERIFIED
+- Resources: https://github.com/qzhu2017/PyXtal
+- Link: [PyXtal.md](StructurePrediction/7.3_Crystal_Generation/PyXtal.md)
+
+**247. PXRDGen**
+- Confidence: VERIFIED
+- Resources: https://github.com/TamVNX/PXRDGen
+- Link: [PXRDGen.md](StructurePrediction/7.3_Crystal_Generation/PXRDGen.md)
+
+**248. OpenCSP**
+- Confidence: VERIFIED
+- Resources: https://github.com/ajf396/OpenCSP
+- Link: [OpenCSP.md](StructurePrediction/7.3_Crystal_Generation/OpenCSP.md)
+
+**250. ASE-GA**
+- Confidence: VERIFIED
+- Resources: https://wiki.fysik.dtu.dk/ase/ase/ga.html
+- Link: [ASE-GA.md](StructurePrediction/7.3_Crystal_Generation/ASE-GA.md)
 
 **252. MUSE**
 - Confidence: VERIFIED
 - Resources: https://github.com/MUSE-group/MUSE
+- Link: [MUSE.md](StructurePrediction/7.3_Crystal_Generation/MUSE.md)
 
 **253. PyMaterial-Search**
 - Confidence: UNCERTAIN
-- Resources: **UNKNOWN** - Likely a specific script or private repo.
+- Resources: **UNKNOWN** - Likely a specific script or private repo
+- Link: [PyMaterial-Search.md](StructurePrediction/7.3_Crystal_Generation/PyMaterial-Search.md)
 
 **254. PyMetadynamics**
 - Confidence: VERIFIED
-- Resources: **MODULE** - Part of PLUMED/ASE ecosystem.
+- Resources: **MODULE** - Part of PLUMED/ASE ecosystem
+- Link: [PyMetadynamics.md](StructurePrediction/7.3_Crystal_Generation/PyMetadynamics.md)
+
+### 7.4 ML-Accelerated Structure Prediction (3 tools)
+*Machine learning enhanced prediction methods*
 
 **255. MaterialsProject-ML**
 - Confidence: VERIFIED
 - Resources: https://materialsproject.org/
+- Link: [MaterialsProject-ML.md](StructurePrediction/7.4_ML_Accelerated/MaterialsProject-ML.md)
 
 **256. PyXtal-ML**
 - Confidence: VERIFIED
 - Resources: https://github.com/qzhu2017/PyXtal
+- Link: [PyXtal-ML.md](StructurePrediction/7.4_ML_Accelerated/PyXtal-ML.md)
 
 **257. Oganov-ML**
 - Confidence: UNCERTAIN
-- Resources: **RESEARCH CODE** - Part of USPEX ML features, no separate public link.
+- Resources: **RESEARCH CODE** - Part of USPEX ML features
+- Link: [Oganov-ML.md](StructurePrediction/7.4_ML_Accelerated/Oganov-ML.md)
 
 ---
 
