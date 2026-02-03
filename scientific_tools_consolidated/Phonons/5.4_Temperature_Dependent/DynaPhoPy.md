@@ -74,6 +74,41 @@ DynaPhoPy is a computational code for extracting microscopic anharmonic phonon p
 - Thermal transport
 - Strongly anharmonic systems
 
+## Comparison with Other Codes
+- **vs Phonopy**: DynaPhoPy extracts T-dependent properties from MD; Phonopy is harmonic only
+- **vs TDEP**: Both give T-dependent phonons; DynaPhoPy uses spectral analysis, TDEP fits force constants
+- **vs SSCHA**: Different methodology; SSCHA is variational, DynaPhoPy is spectral analysis
+- **vs Phono3py**: DynaPhoPy extracts from MD, Phono3py uses perturbation theory
+- **vs phonon-sed**: Similar SED approach, DynaPhoPy has better Phonopy integration
+- **Unique strength**: Normal-mode decomposition with seamless Phonopy compatibility
+
+## Best Practices
+
+### MD Trajectory Preparation:
+- Use long enough trajectories (>100 ps)
+- Ensure proper thermalization
+- Use appropriate time step
+- Save velocities at sufficient frequency
+
+### Analysis Settings:
+- Choose appropriate frequency resolution
+- Use sufficient q-point sampling
+- Validate against harmonic limit
+- Check convergence with trajectory length
+
+### Physical Interpretation:
+- Compare with harmonic Phonopy results
+- Analyze temperature-dependent shifts
+- Examine linewidth broadening
+- Identify anharmonic modes
+
+## Community and Support
+- Open-source MIT License
+- Active development by Abel Carreras
+- Well-documented with examples
+- Published methodology (CPC 2017)
+- Integration with Phonopy ecosystem
+
 ## Verification & Sources
 **Primary sources**:
 1. GitHub: https://github.com/abelcarreras/DynaPhoPy

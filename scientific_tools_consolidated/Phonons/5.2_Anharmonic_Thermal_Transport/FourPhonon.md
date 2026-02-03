@@ -88,6 +88,39 @@ FourPhonon is a computational package that extends ShengBTE to calculate four-ph
 - Phase-change materials
 - Materials with soft modes
 
+## Comparison with Other Codes
+- **vs ShengBTE**: FourPhonon extends ShengBTE with 4-phonon processes; ShengBTE is 3-phonon only
+- **vs Phono3py**: Different methodology; FourPhonon uses ShengBTE framework, Phono3py is standalone
+- **vs almaBTE**: Both solve BTE; FourPhonon adds 4-phonon, almaBTE focuses on nanostructures
+- **Unique strength**: Only widely-available code for 4-phonon scattering with exact BTE solution
+
+## Best Practices
+
+### Force Constant Calculation:
+- Use sufficient supercell size for 4th-order
+- Converge cutoff distances carefully
+- Validate with 3-phonon first
+- Check symmetry preservation
+
+### Computational Efficiency:
+- Start with coarse q-mesh
+- Use adaptive broadening
+- Monitor memory usage
+- Parallelize with MPI
+
+### Physical Validation:
+- Compare with experimental data
+- Check temperature trends
+- Verify isotope effects
+- Test convergence systematically
+
+## Community and Support
+- Open-source GPL-3.0
+- Active GitHub repository
+- Growing user community
+- Published methodology papers
+- Integration with ShengBTE ecosystem
+
 ## Verification & Sources
 **Primary sources**:
 1. GitHub: https://github.com/FourPhonon/FourPhonon

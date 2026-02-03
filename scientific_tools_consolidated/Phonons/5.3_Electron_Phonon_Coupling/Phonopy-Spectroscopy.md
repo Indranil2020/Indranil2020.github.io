@@ -73,6 +73,39 @@ Phonopy-Spectroscopy is a collection of tools to add vibrational spectroscopy si
 - Molecular crystals
 - Functional materials
 
+## Comparison with Other Codes
+- **vs VASP native**: Phonopy-Spectroscopy provides post-processing flexibility
+- **vs Quantum ESPRESSO**: Similar capabilities, different DFT backend
+- **vs Gaussian**: Phonopy-Spectroscopy for periodic systems
+- **Unique strength**: Seamless Phonopy integration for IR/Raman
+
+## Best Practices
+
+### DFT Calculations:
+- Use tight convergence for Born charges
+- Calculate dielectric tensor accurately
+- For Raman: compute Raman tensors with VASP
+- Ensure proper symmetry handling
+
+### Spectral Simulation:
+- Choose appropriate broadening
+- Consider isotope effects if relevant
+- Validate peak assignments
+- Compare with experimental data
+
+### Intensity Analysis:
+- Check sum rules for IR
+- Validate Raman tensor symmetry
+- Analyze mode character
+- Consider temperature effects
+
+## Community and Support
+- Open-source MIT License
+- Developed by Skelton group
+- Active maintenance
+- Well-documented examples
+- Published methodology (JPCM 2015)
+
 ## Verification & Sources
 **Primary sources**:
 1. GitHub: https://github.com/skelton-group/Phonopy-Spectroscopy

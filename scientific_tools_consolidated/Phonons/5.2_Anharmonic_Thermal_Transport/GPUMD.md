@@ -88,6 +88,40 @@ GPUMD (Graphics Processing Units Molecular Dynamics) is a highly efficient molec
 - High-temperature properties
 - Materials with strong anharmonicity
 
+## Comparison with Other Codes
+- **vs LAMMPS**: GPUMD is fully GPU-native; LAMMPS has GPU packages but CPU-centric design
+- **vs Phono3py/ShengBTE**: GPUMD uses MD-based methods; others use perturbation theory
+- **vs DeepMD-kit**: Both support ML potentials; GPUMD has built-in NEP, DeepMD uses DP
+- **Unique strength**: Integrated NEP training + GPU MD + thermal transport in one package
+
+## Best Practices
+
+### NEP Training:
+- Use diverse training dataset
+- Include thermal expansion data
+- Validate phonon dispersions
+- Test force/energy predictions
+
+### MD Simulations:
+- Equilibrate system thoroughly
+- Use sufficient system size
+- Run long enough for convergence
+- Monitor temperature stability
+
+### Thermal Conductivity:
+- Use both GK and HNEMD methods
+- Check size convergence
+- Validate with experiments
+- Analyze spectral contributions
+
+## Community and Support
+- Open-source GPL-3.0
+- Very active development (Zheyong Fan)
+- Comprehensive documentation
+- Tutorial examples included
+- Growing user community
+- Regular updates and new features
+
 ## Verification & Sources
 **Primary sources**:
 1. GitHub: https://github.com/brucefan1983/GPUMD

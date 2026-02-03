@@ -70,6 +70,39 @@ D3Q is a code for computing third-order anharmonic force constants from density 
 - Phonon linewidths
 - Materials with strong anharmonicity
 
+## Comparison with Other Codes
+- **vs thirdorder.py (ShengBTE)**: D3Q uses DFPT (no supercell), thirdorder.py uses finite differences
+- **vs Phono3py**: Different approach; D3Q is DFPT-based, Phono3py uses supercell finite differences
+- **vs hiPhive**: D3Q is DFPT, hiPhive uses machine learning for force constants
+- **Unique strength**: Exact DFPT third derivatives without supercell, efficient for metals
+
+## Best Practices
+
+### DFPT Calculations:
+- Use dense k-point mesh for metals
+- Converge phonon q-point grid
+- Check 2n+1 theorem convergence
+- Validate symmetry preservation
+
+### Integration with THERMAL2:
+- Use consistent q-point grids
+- Check force constant quality
+- Validate with harmonic phonons
+- Test temperature convergence
+
+### Computational Efficiency:
+- Use symmetry to reduce calculations
+- Parallelize over q-points
+- Monitor memory requirements
+- Use restart capabilities
+
+## Community and Support
+- Open-source GPL-2.0
+- Active development (Lorenzo Paulatto group)
+- Part of QE ecosystem
+- Well-documented methodology
+- Published in Phys. Rev. B
+
 ## Verification & Sources
 **Primary sources**:
 1. Website: https://anharmonic.github.io/d3q/

@@ -74,6 +74,39 @@ autoplex is an automated workflow for fitting machine learning interatomic poten
 - Materials discovery
 - Thermal property prediction
 
+## Comparison with Other Codes
+- **vs manual MLIP fitting**: autoplex automates entire workflow
+- **vs GPUMD NEP**: autoplex supports multiple MLIP backends
+- **vs traditional workflows**: Built-in phonon validation
+- **Unique strength**: End-to-end automation with phonon focus
+
+## Best Practices
+
+### Training Data Generation:
+- Include diverse configurations
+- Sample relevant temperature range
+- Add strained structures
+- Include phonon-relevant displacements
+
+### Potential Validation:
+- Always validate phonon dispersions
+- Check elastic constants
+- Test thermal expansion
+- Compare energy/force predictions
+
+### Workflow Configuration:
+- Start with small test systems
+- Use appropriate DFT settings
+- Monitor computational costs
+- Iterate on training set
+
+## Community and Support
+- Open-source BSD-3-Clause
+- Active development (AutoAtML team)
+- Integration with atomate2
+- Growing documentation
+- Modern workflow approach
+
 ## Verification & Sources
 **Primary sources**:
 1. GitHub: https://github.com/autoatml/autoplex

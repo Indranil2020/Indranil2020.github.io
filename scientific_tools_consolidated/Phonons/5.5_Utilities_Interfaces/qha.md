@@ -75,6 +75,45 @@ qha is a Python package for quasi-harmonic approximation (QHA) calculations of t
 - Thermal expansion
 - Geophysics applications
 
+## Comparison with Other Codes
+- **vs Phonopy native QHA**: qha provides more EOS options and analysis
+- **vs Gibbs2**: qha is Python-based, more flexible
+- **vs thermo_pw**: qha works with any phonon code via Phonopy
+- **Unique strength**: Comprehensive QHA with multiple EOS models
+
+## Best Practices
+
+### Volume Sampling:
+- Use at least 5-7 volume points
+- Cover ±5-10% volume range
+- Ensure smooth E-V curve
+- Check for imaginary modes
+
+### Phonon Calculations:
+- Use consistent settings across volumes
+- Converge q-point mesh
+- Check for negative frequencies
+- Validate harmonic approximation
+
+### EOS Fitting:
+- Try multiple EOS models
+- Check fitting quality
+- Validate pressure range
+- Compare with experiments
+
+### Temperature Range:
+- Start from low temperature
+- Extend to relevant T range
+- Check QHA validity limits
+- Monitor anharmonic effects
+
+## Community and Support
+- Open-source GPL-3.0
+- Active development (MineralsCloud)
+- Published methodology (CPC 2019)
+- ReadTheDocs documentation
+- Examples and tutorials
+
 ## Verification & Sources
 **Primary sources**:
 1. GitHub: https://github.com/MineralsCloud/qha
