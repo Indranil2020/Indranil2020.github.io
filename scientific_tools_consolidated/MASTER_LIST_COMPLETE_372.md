@@ -2239,11 +2239,14 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 ---
 
-## CATEGORY 5: PHONONS (35 tools)
+## CATEGORY 5: PHONONS (42 tools)
+
+### 5.1 Harmonic Phonons (17 tools)
 
 **185. Phonopy**
 - Confidence: CONFIRMED
 - Resources: https://phonopy.github.io/phonopy/
+- Link: [Phonopy.md](Phonons/5.1_Harmonic_Phonons/Phonopy.md)
 
 **186. phono3py**
 - Confidence: CONFIRMED
@@ -2376,6 +2379,48 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 **218. ALATDYN**
 - Confidence: VERIFIED
 - Resources: https://github.com/ajf396/alatdyn
+
+**218a. CRYSTALpytools**
+- Confidence: VERIFIED
+- Resources: https://github.com/crystal-code-tools/CRYSTALpytools
+- Note: Python infrastructure for CRYSTAL code with phonon support.
+- Link: [CRYSTALpytools.md](Phonons/5.1_Harmonic_Phonons/CRYSTALpytools.md)
+
+**218b. pwtools**
+- Confidence: VERIFIED
+- Resources: https://github.com/elcorto/pwtools
+- Note: Python tools for QE phonon post-processing.
+- Link: [pwtools.md](Phonons/5.1_Harmonic_Phonons/pwtools.md)
+
+**218c. elphmod**
+- Confidence: VERIFIED
+- Resources: https://github.com/janberges/elphmod
+- Note: Python modules for electron-phonon models with phonon support.
+- Link: [elphmod.md](Phonons/5.1_Harmonic_Phonons/elphmod.md)
+
+**218d. latticeDynamics**
+- Confidence: VERIFIED
+- Resources: https://github.com/jgwillingham/latticeDynamics
+- Note: Python tools for lattice dynamics with rigid ion models.
+- Link: [latticeDynamics.md](Phonons/5.1_Harmonic_Phonons/latticeDynamics.md)
+
+**218e. Phonon-Vibration-Viewer**
+- Confidence: VERIFIED
+- Resources: https://github.com/Tingliangstu/Phonon-Vibration-Viewer
+- Note: Phonon dispersion visualization for primitive atoms.
+- Link: [Phonon-Vibration-Viewer.md](Phonons/5.1_Harmonic_Phonons/Phonon-Vibration-Viewer.md)
+
+**218f. mace_phonopy**
+- Confidence: VERIFIED
+- Resources: https://github.com/Mofahdi/mace_phonopy
+- Note: MACE ML potential to Phonopy force constants bridge.
+- Link: [mace_phonopy.md](Phonons/5.1_Harmonic_Phonons/mace_phonopy.md)
+
+**218g. phononplotter**
+- Confidence: VERIFIED
+- Resources: https://github.com/warda-rahim/phononplotter
+- Note: Phonon band structure and DOS plotting tool.
+- Link: [phononplotter.md](Phonons/5.1_Harmonic_Phonons/phononplotter.md)
 
 ---
 
