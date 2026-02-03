@@ -58,40 +58,27 @@ AtomicContributions is a Python tool for visualizing atomic contributions to pho
 
 
 ## Advanced Features
+- **Eigenvector decomposition**: Atomic contribution analysis
+- **Site-projected DOS**: Element-resolved phonon DOS
+- **Participation ratio**: Mode localization analysis
+- **Phonopy integration**: Direct use of Phonopy output
+- **Visualization**: Publication-quality contribution plots
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- Post-processing tool: Fast
+- Python-based implementation
+- Minimal computational overhead
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
-
+- Phonopy calculation: External (dominant cost)
+- AtomicContributions analysis: Fast (seconds)
+- Overall: Negligible overhead
 
 ## Best Practices
-
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
-
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+- Use converged Phonopy calculations with eigenvectors
+- Validate mode assignments with known references
+- Compare with experimental spectroscopy
+- Use appropriate frequency ranges for analysis
 
 ## Limitations & Known Constraints
 - Phonopy-specific

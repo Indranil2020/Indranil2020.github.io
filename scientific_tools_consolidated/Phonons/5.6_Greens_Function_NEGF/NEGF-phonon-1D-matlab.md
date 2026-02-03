@@ -55,40 +55,28 @@ NEGF-phonon-1D-matlab is a compact (~100 lines) MATLAB code implementing the Non
 
 
 ## Advanced Features
+- **Compact implementation**: ~100 lines of MATLAB code
+- **NEGF basics**: Core Green's function concepts
+- **Transmission function**: Frequency-resolved transport
+- **Self-energy calculation**: Lead coupling
+- **Landauer formalism**: Thermal conductance
+- **Educational focus**: Clear, readable code
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- MATLAB-based: Fast for 1D systems
+- Educational tool: Clarity over optimization
+- Minimal dependencies
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
-
+- 1D chain: Very fast (seconds)
+- Scales with chain length
+- Overall: Minimal for educational purposes
 
 ## Best Practices
-
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
-
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+- Start with simple atomic chain models
+- Validate against analytical solutions
+- Extend to more complex systems gradually
+- Use as foundation for learning NEGF
 
 ## Limitations & Known Constraints
 - 1D systems only

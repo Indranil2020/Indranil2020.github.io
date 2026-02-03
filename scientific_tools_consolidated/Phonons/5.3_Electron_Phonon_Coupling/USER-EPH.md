@@ -61,40 +61,29 @@ USER-EPH is a LAMMPS extension package for incorporating electron-phonon couplin
 
 
 ## Advanced Features
+- **Two-temperature model**: Electronic and ionic subsystems
+- **Electronic heat diffusion**: Spatial temperature evolution
+- **Langevin thermostat**: Stochastic electron-ion coupling
+- **Energy exchange**: Non-equilibrium dynamics
+- **LAMMPS fix**: Standard LAMMPS integration
+- **Parallel support**: MPI-compatible
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- LAMMPS-based: Efficient MD
+- Scales with system size
+- MPI parallelization available
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
-
+- Standard LAMMPS MD cost
+- Additional overhead for TTM: Moderate
+- Electronic grid: Scales with spatial resolution
+- Overall: Comparable to standard LAMMPS simulations
 
 ## Best Practices
-
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
-
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+- Validate electron-phonon coupling parameter
+- Check electronic temperature evolution
+- Use appropriate time steps for energy transfer
+- Compare with experimental relaxation times
 
 ## Limitations & Known Constraints
 - Requires coupling parameter input
