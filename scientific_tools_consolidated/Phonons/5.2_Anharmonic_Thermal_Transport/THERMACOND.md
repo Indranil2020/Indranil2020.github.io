@@ -24,6 +24,11 @@ THERMACOND is a code for thermal conductivity calculations from first principles
 
 **Sources**: GitHub repository
 
+## Key Strengths
+- **Open-source**: Freely available research code
+- **First-principles**: Works with ab-initio force constants
+- **Focused**: Dedicated thermal conductivity tool
+
 ## Inputs & Outputs
 - **Input formats**: Force constants, crystal structure data
 - **Output data types**: Thermal conductivity
@@ -31,48 +36,54 @@ THERMACOND is a code for thermal conductivity calculations from first principles
 ## Interfaces & Ecosystem
 - Works with first-principles force constants
 - Standalone implementation
+- Compatible with standard force constant formats
 
-
-## Advanced Features
-
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- Research-grade calculations
+- Moderate computational requirements
+- Suitable for standard thermal transport studies
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
-
-
-## Best Practices
-
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
-
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+- Force constant generation: External (DFT)
+- THERMACOND processing: Moderate
+- Depends on system size and q-point grid
 
 ## Limitations & Known Constraints
 - **Documentation**: Limited; primarily research code
 - **Community**: Small user base
 - **Development**: Research stage
+- **Learning curve**: Requires thermal transport knowledge
+
+## Comparison with Other Codes
+- **vs ShengBTE/phono3py**: THERMACOND smaller, research-focused
+- **vs Phoebe**: THERMACOND simpler implementation
+- **Use case**: Research and development
+
+## Application Areas
+- Thermal conductivity research
+- Phonon transport studies
+- Academic research projects
+- Method development
+
+## Best Practices
+- Validate force constants before use
+- Converge q-point grids systematically
+- Compare with established codes for validation
+- Check against experimental data when available
+
+## Community and Support
+- Open-source (GitHub)
+- Research development
+- Author support via issues
+- Small but focused user base
+
+## Development
+- Research code
+- GitHub-based development
+- Thermal transport focus
+
+## Research Impact
+THERMACOND provides a research tool for thermal conductivity calculations, enabling studies of phonon transport from first-principles data.
 
 ## Verification & Sources
 **Primary sources**:

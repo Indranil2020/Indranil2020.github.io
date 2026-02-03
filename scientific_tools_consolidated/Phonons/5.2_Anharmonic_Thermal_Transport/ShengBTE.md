@@ -56,41 +56,45 @@
 - **Visualization**: Output data is simple text, easily plotted with Python/Gnuplot.
 
 
+## Workflow and Usage
+
+### Typical ShengBTE Workflow:
+```bash
+# 1. Generate 2nd order force constants (phonopy)
+phonopy -d --dim="2 2 2" -c POSCAR
+# Run DFT on displaced structures
+phonopy --fc vasprun.xml
+
+# 2. Generate 3rd order force constants (thirdorder.py)
+thirdorder.py sow POSCAR
+# Run DFT on displaced structures
+thirdorder.py reap POSCAR
+
+# 3. Run ShengBTE
+ShengBTE
+```
+
 ## Advanced Features
-
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+- **Iterative BTE**: Full solution beyond RTA for accurate transport
+- **Spectral analysis**: Frequency-resolved thermal conductivity
+- **Cumulative functions**: Mean free path accumulation
+- **Size effects**: Grain boundary and nanostructure scattering
+- **Isotope scattering**: Natural isotope disorder effects
+- **Nanowire support**: Diffusive boundary scattering for 1D systems
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
-
+- Force constant calculations (DFT): Dominant cost (hundreds of calculations for 3rd order)
+- ShengBTE BTE solution: Minutes to hours
+- Iterative BTE more expensive than RTA
+- Dense q-grids increase cost significantly
 
 ## Best Practices
-
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
-
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+- Converge supercell size for force constants
+- Systematic q-point grid convergence
+- Test RTA vs iterative BTE
+- Validate against experimental data
+- Appropriate cutoff distances for 3rd order IFCs
+- Use symmetry to reduce DFT calculations
 
 ## Performance Characteristics
 - **Computational Cost**: The BTE solution is fast (seconds to minutes on a single core). The bottleneck is generating the 3rd-order IFCs (hundreds of DFT runs).

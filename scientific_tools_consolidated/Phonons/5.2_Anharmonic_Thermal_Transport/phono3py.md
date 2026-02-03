@@ -50,6 +50,13 @@ phono3py is a code for computing lattice thermal conductivity and related proper
 
 **Sources**: Official phono3py documentation, GitHub, cited in 7/7 source lists
 
+## Key Strengths
+- **Production quality**: Standard tool for thermal conductivity
+- **phonopy integration**: Seamless workflow with phonopy
+- **Comprehensive**: Full BTE solution with mode-resolved analysis
+- **Well-documented**: Extensive documentation and examples
+- **Multi-code support**: Interfaces to 12+ DFT codes
+
 ## Inputs & Outputs
 - **Input formats**:
   - POSCAR (VASP structure format)
@@ -92,41 +99,42 @@ phono3py is a code for computing lattice thermal conductivity and related proper
   - Python API for custom analysis
 
 
+## Workflow and Usage
+
+### Typical phono3py Workflow:
+```bash
+# 1. Generate displaced supercells
+phono3py -d --dim="2 2 2" -c POSCAR
+
+# 2. Run DFT on all displaced structures
+# (many calculations required)
+
+# 3. Create FORCES_FC3
+phono3py --cf3 disp-{00001..NNNNN}/vasprun.xml
+
+# 4. Calculate thermal conductivity
+phono3py --mesh="11 11 11" --fc3 --fc2 --br
+```
+
 ## Advanced Features
+- **Iterative BTE**: Full solution beyond RTA for accurate transport
+- **Spectral analysis**: Frequency-resolved thermal conductivity
+- **Cumulative functions**: Mean free path accumulation
+- **Isotope scattering**: Natural isotope disorder effects
+- **Boundary scattering**: Size-dependent thermal conductivity
+- **Python API**: Programmatic access for automation
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- **Computational cost**: Very high for 3rd order IFCs
+- **Scalability**: Handles standard systems; large systems challenging
+- **Parallelization**: OpenMP support
+- **Typical runtime**: Days to weeks for complete workflow
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
-
-
-## Best Practices
-
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
-
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+- 3rd order force constants: Extremely expensive (N³ scaling)
+- BTE solution: Hours to days
+- Dense q-grids increase cost significantly
+- Supercell size critical for accuracy
 
 ## Limitations & Known Constraints
 - **Computational cost**: Extremely expensive; requires forces for numerous displaced supercells (scales as N³)
@@ -162,3 +170,28 @@ phono3py is a code for computing lattice thermal conductivity and related proper
 - Community support: Active (GitHub issues, shared with phonopy)
 - Academic citations: >400 (Google Scholar)
 - DFT interfaces: Verified for 10+ codes
+
+## Best Practices
+- Converge supercell size carefully
+- Systematic q-point grid convergence
+- Test RTA vs iterative BTE
+- Validate against experimental data
+- Appropriate cutoff distances for 3rd order IFCs
+- Use HDF5 for large datasets
+
+## Community and Support
+- Open-source (BSD 3-Clause)
+- Active GitHub development
+- Comprehensive documentation
+- Large user community (shared with phonopy)
+- Mailing list and GitHub issues
+- Workshop materials available
+
+## Development
+- Atsushi Togo (lead developer)
+- Active development
+- Regular updates
+- Standard tool in thermal transport community
+
+## Research Impact
+phono3py is the standard tool for first-principles lattice thermal conductivity calculations, widely cited in thermoelectric and thermal transport literature with >400 citations.
