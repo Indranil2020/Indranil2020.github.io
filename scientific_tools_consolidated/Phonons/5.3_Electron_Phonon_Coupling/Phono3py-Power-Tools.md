@@ -63,40 +63,29 @@ Phono3py-Power-Tools is a collection of codes and scripts for Phono(3)py "power 
 
 
 ## Advanced Features
+- **Extended analysis**: Beyond standard Phono3py output
+- **Mode Grüneisen**: Detailed anharmonicity analysis
+- **Cumulative κ plots**: Mean free path accumulation
+- **CASTEP conversion**: Force constant format bridging
+- **Publication plots**: High-quality matplotlib figures
+- **Three-phonon strength**: Interaction analysis
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- Post-processing tool: Fast
+- Python/matplotlib-based
+- Minimal computational overhead
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
-
+- Phono3py calculation: External (dominant cost)
+- Power-Tools analysis: Fast (minutes)
+- Plotting: Seconds
+- Overall: Negligible overhead
 
 ## Best Practices
-
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
-
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+- Use converged Phono3py calculations
+- Validate thermal conductivity convergence
+- Check mode-resolved contributions
+- Compare cumulative κ with experimental MFP data
 
 ## Limitations & Known Constraints
 - Requires Phono3py expertise

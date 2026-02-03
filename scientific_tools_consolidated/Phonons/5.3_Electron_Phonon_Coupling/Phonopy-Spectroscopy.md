@@ -62,25 +62,23 @@ Phonopy-Spectroscopy is a collection of tools to add vibrational spectroscopy si
 
 
 ## Advanced Features
+- **IR intensity calculation**: Born effective charge-based intensities
+- **Raman activity**: Raman tensor derivative analysis
+- **Spectral broadening**: Lorentzian and Gaussian options
+- **Isotope effects**: Mass substitution analysis
+- **Mode visualization**: Displacement pattern display
+- **Phonopy integration**: Seamless workflow
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- Post-processing tool: Fast
+- DFT calculations: External (dominant cost)
+- Python-based implementation
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
+- Phonopy phonon calculation: External
+- Born charge calculation: Additional DFT cost
+- Raman tensor: Additional DFPT cost
+- Spectroscopy analysis: Fast (minutes)
 
 ## Limitations & Known Constraints
 - Primarily VASP interface

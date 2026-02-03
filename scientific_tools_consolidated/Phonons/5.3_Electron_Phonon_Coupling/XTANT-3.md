@@ -61,40 +61,29 @@ XTANT-3 (X-ray-induced Thermal And Nonthermal Transitions) is a hybrid code for 
 
 
 ## Advanced Features
+- **Hybrid MC/MD**: Multi-scale physics simulation
+- **Electron cascade**: High-energy electron transport
+- **Tight-binding MD**: Atomic dynamics with electronic structure
+- **Boltzmann collision**: Electron-phonon energy transfer
+- **Non-thermal melting**: Phase transition modeling
+- **X-ray pulse**: Femtosecond irradiation simulation
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- Hybrid approach: Moderate computational cost
+- Scales with system size and simulation time
+- Fortran implementation: Efficient
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
-
+- MC electron transport: Moderate
+- TB-MD: Scales with atom count
+- Coupled simulation: Hours to days
+- Overall: Significant for large systems
 
 ## Best Practices
-
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
-
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+- Validate tight-binding parameters for material
+- Check energy conservation in coupled dynamics
+- Use appropriate time steps for ultrafast processes
+- Compare with experimental X-ray damage data
 
 ## Limitations & Known Constraints
 - Specialized application
