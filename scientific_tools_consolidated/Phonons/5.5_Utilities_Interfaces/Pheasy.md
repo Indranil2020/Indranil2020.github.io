@@ -31,43 +31,70 @@ Pheasy is a robust and user-friendly program for first-principles phonon physics
 ## Interfaces & Ecosystem
 - **Integration**: Compatible with `atomate2` and Materials Project workflows
 - **Python**: Distributed via PyPI
+- **DFT codes**: Works with force data from any DFT code
 
+## Key Strengths
+- **Parameter-free**: No manual tuning required for IFC extraction
+- **High-order IFCs**: Supports arbitrarily high-order force constants
+- **High-throughput**: Designed for automated workflows
+- **Accuracy**: Robust PES reconstruction via Taylor expansion
+- **Integration**: Compatible with atomate2 and Materials Project
 
 ## Advanced Features
+- Parameter-free IFC extraction algorithm
+- Arbitrarily high-order force constants
+- Temperature renormalization of phonons
+- High-throughput workflow compatibility
+- Automated convergence handling
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- **Efficiency**: Optimized for high-throughput calculations
+- **Scalability**: Handles large datasets efficiently
+- **Automation**: Designed for minimal user intervention
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
+- DFT force calculations: Dominant cost
+- Pheasy processing: Fast (minutes)
+- High-order IFCs: Scales with order and system size
 
+## Limitations & Known Constraints
+- **Requires DFT input**: Not a standalone DFT code
+- **New code**: Recent release, smaller user base
+- **Documentation**: Growing; primarily via publication and PyPI
+- **Learning curve**: Low for Python users familiar with phonon physics
+
+## Comparison with Other Codes
+- **vs hiPhive**: Both extract high-order IFCs; Pheasy parameter-free
+- **vs ALAMODE**: Pheasy more automated; ALAMODE more established
+- **Unique strength**: Parameter-free, high-throughput compatible
+
+## Application Areas
+- High-throughput phonon calculations
+- Anharmonic phonon studies
+- Temperature-dependent lattice dynamics
+- Materials Project workflows
+- Automated force constant extraction
 
 ## Best Practices
+- Use with atomate2 for automated workflows
+- Validate extracted IFCs against known materials
+- Systematic convergence of displacement sampling
+- Compare with experimental phonon data when available
 
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
+## Community and Support
+- Open-source (PyPI distribution)
+- Active development
+- Support via publication authors
+- Integration with Materials Project community
 
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+## Development
+- Recent release (2025)
+- Active research code
+- High-throughput focus
+- Materials Project integration
+
+## Research Impact
+Pheasy enables parameter-free extraction of high-order interatomic force constants, facilitating accurate and automated phonon calculations for high-throughput materials discovery.
 
 ## Verification & Sources
 **Primary sources**:

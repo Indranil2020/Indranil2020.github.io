@@ -43,40 +43,27 @@ epiq is a Python package for electron-phonon interactions and related quantum tr
 
 
 ## Advanced Features
+- Electron-phonon matrix element calculations
+- Scattering rate analysis tools
+- Transport property extraction
+- Python-based extensibility
+- Integration with DFT output formats
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- Python-based: Moderate speed
+- Suitable for research calculations
+- Focus on flexibility over raw performance
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
-
+- DFT input generation: External (dominant cost)
+- epiq processing: Moderate (Python-based)
+- Scattering rate calculations: Depends on system size
 
 ## Best Practices
-
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
-
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+- Validate electron-phonon matrix elements
+- Converge k-point and q-point grids
+- Compare with established codes (EPW, PERTURBO)
+- Systematic temperature convergence
 
 ## Performance Characteristics
 - Python-based: Moderate speed
@@ -96,6 +83,16 @@ epiq is a Python package for electron-phonon interactions and related quantum tr
 - Open-source
 - GitHub repository
 - Research development
+- Author support via issues
+
+## Development
+- Research code
+- Python-based implementation
+- Electron-phonon focus
+- Active development
+
+## Research Impact
+epiq provides Python tools for electron-phonon coupling calculations, enabling research into quantum transport and scattering mechanisms.
 
 ## Verification & Sources
 **Primary sources**:
