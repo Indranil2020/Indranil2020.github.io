@@ -34,6 +34,24 @@ DL_POLY is a general-purpose classical molecular dynamics simulation package dev
 
 **Sources**: STFC website, Mol. Simulat. 28, 95 (2002)
 
+## Key Strengths
+
+### Materials Focus:
+- Ionic materials (oxides, minerals)
+- Metals (EAM, Sutton-Chen)
+- Shell model polarization
+- Radiation damage
+
+### Parallelization:
+- Domain decomposition (DL_POLY_4)
+- Excellent HPC scaling
+- Millions of atoms
+
+### Versatility:
+- Wide range of potentials
+- Multiple ensembles
+- Non-equilibrium MD
+
 ## Inputs & Outputs
 - **Input formats**: CONTROL (simulation parameters), CONFIG (coordinates), FIELD (force field), TABLE (tabulated potentials)
 - **Output data types**: HISTORY (trajectory), OUTPUT (log), REVCON (restart), STATIS (statistics)
@@ -55,12 +73,35 @@ DL_POLY is a general-purpose classical molecular dynamics simulation package dev
 - DL_POLY_Classic: Good for smaller systems (Replicated Data)
 - Optimized for HPC environments
 
+## Computational Cost
+- Excellent parallel scaling (DL_POLY_4)
+- Efficient for ionic systems
+- Good for large systems
+- Overall: HPC-optimized
+
+## Best Practices
+- Use DL_POLY_4 for large systems
+- Validate potential parameters
+- Use appropriate cutoffs
+- Check energy conservation
+
+## Limitations & Known Constraints
+- DL_POLY_4 requires license
+- Less biomolecular focus
+- Older interface style
+- Limited GPU support
+
 ## Application Areas
 - Solid state materials (defects, diffusion)
 - Ionic liquids and molten salts
 - Biomolecular simulations
 - Surface science and catalysis
 - Radiation damage (cascades)
+
+## Comparison with Other Codes
+- **vs LAMMPS**: DL_POLY better ionic/shell model, LAMMPS more potentials
+- **vs GROMACS**: DL_POLY materials focus, GROMACS biomolecular
+- **Unique strength**: Shell model polarization, ionic materials, radiation damage
 
 ## Community and Support
 - Developed by STFC Daresbury Laboratory
@@ -73,6 +114,11 @@ DL_POLY is a general-purpose classical molecular dynamics simulation package dev
 1. Homepage: https://www.scd.stfc.ac.uk/software/dl_poly/
 2. GitLab: https://gitlab.com/DL_POLY_Classic/dl_poly_classic
 3. Publication: I.T. Todorov et al., J. Mater. Chem. 16, 1911 (2006)
+
+**Secondary sources**:
+1. DL_POLY documentation
+2. STFC training materials
+3. Published materials science applications
 
 **Confidence**: VERIFIED
 

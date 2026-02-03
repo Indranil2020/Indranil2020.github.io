@@ -33,6 +33,23 @@ OpenMD is an open source molecular dynamics engine written in C++ that is design
 
 **Sources**: OpenMD website, J. Chem. Phys. 124, 024109 (2006)
 
+## Key Strengths
+
+### Rigid Bodies:
+- Quaternion dynamics
+- Efficient for rigid molecules
+- Coarse-grained models
+
+### Metals:
+- EAM potentials
+- Fluctuating charge
+- Nanoparticle simulations
+
+### Simplicity:
+- All-in-one input format
+- Self-contained
+- Good documentation
+
 ## Inputs & Outputs
 - **Input formats**: .omd file (XML-like structure + coordinates)
 - **Output data types**: .dump (trajectory), .stat (thermodynamics), .eor (end of run)
@@ -53,12 +70,35 @@ OpenMD is an open source molecular dynamics engine written in C++ that is design
 - Specialized for rigid bodies and metals
 - Not as ultra-optimized as GROMACS for biomolecules but efficient for general chemistry
 
+## Computational Cost
+- Good for medium systems
+- Efficient rigid body dynamics
+- MPI parallelization
+- Overall: Efficient for specialty applications
+
+## Best Practices
+- Use appropriate ensemble
+- Validate EAM parameters
+- Check rigid body constraints
+- Use analysis tools provided
+
+## Limitations & Known Constraints
+- Smaller community than major codes
+- Less optimized than GROMACS/LAMMPS
+- Limited GPU support
+- Niche applications
+
 ## Application Areas
 - Metallic nanoparticles and alloys
 - Lipid bilayers
 - Water interfaces
 - Zeolites and minerals
 - Ionic liquids
+
+## Comparison with Other Codes
+- **vs LAMMPS**: OpenMD better rigid bodies, LAMMPS more general
+- **vs GROMACS**: OpenMD metals/nanoparticles, GROMACS biomolecular
+- **Unique strength**: Rigid body dynamics, metallic nanoparticles, fluctuating charge
 
 ## Community and Support
 - Open-source (BSD)
@@ -70,6 +110,11 @@ OpenMD is an open source molecular dynamics engine written in C++ that is design
 1. Homepage: https://openmd.org/
 2. GitHub: https://github.com/OpenMD/OpenMD
 3. Publication: M. A. Meineke et al., J. Comput. Chem. 26, 252 (2005)
+
+**Secondary sources**:
+1. OpenMD documentation
+2. Gezelter group publications
+3. Nanoparticle simulation applications
 
 **Confidence**: VERIFIED
 

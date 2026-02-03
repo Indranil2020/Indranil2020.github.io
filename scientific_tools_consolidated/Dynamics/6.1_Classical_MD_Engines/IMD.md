@@ -31,6 +31,23 @@ IMD (ITAP Molecular Dynamics) is a software package for classical molecular dyna
 
 **Sources**: IMD website, Comp. Phys. Comm. 118, 50 (1999)
 
+## Key Strengths
+
+### Shock Physics:
+- Shock wave generation
+- Non-equilibrium MD
+- High strain rates
+
+### Fracture:
+- Crack propagation
+- Mechanical properties
+- Large deformations
+
+### Parallelization:
+- Excellent MPI scaling
+- Dynamic load balancing
+- Large systems
+
 ## Inputs & Outputs
 - **Input formats**: Parameter file (.param), Configuration file (.conf)
 - **Output data types**: Configurations (.conf), Energies (.eng), Distributions (.dist)
@@ -51,12 +68,35 @@ IMD (ITAP Molecular Dynamics) is a software package for classical molecular dyna
 - Optimized for short-range interactions
 - Dynamic load balancing
 
+## Computational Cost
+- Excellent parallel scaling
+- Efficient for short-range
+- Good for large systems
+- Overall: HPC-optimized for materials
+
+## Best Practices
+- Use appropriate potential for material
+- Validate shock wave setup
+- Check energy conservation
+- Use visualization for crack analysis
+
+## Limitations & Known Constraints
+- Specialized for materials/shock
+- Smaller community
+- Less general than LAMMPS
+- Limited documentation in English
+
 ## Application Areas
 - Mechanical properties of materials (fracture, plasticity)
 - Laser-matter interaction (ablation)
 - Shock physics
 - Quasicrystal dynamics
 - Granular matter
+
+## Comparison with Other Codes
+- **vs LAMMPS**: IMD specialized for shock/fracture, LAMMPS more general
+- **vs DL_POLY**: IMD better shock physics, DL_POLY better ionic
+- **Unique strength**: Shock waves, fracture mechanics, laser ablation
 
 ## Community and Support
 - Open-source (GPL v2)
@@ -67,6 +107,11 @@ IMD (ITAP Molecular Dynamics) is a software package for classical molecular dyna
 **Primary sources**:
 1. Homepage: https://imd.itap.physik.uni-stuttgart.de/
 2. Publication: J. Stadler et al., Int. J. Mod. Phys. C 8, 1131 (1997)
+
+**Secondary sources**:
+1. IMD documentation
+2. ITAP Stuttgart publications
+3. Shock physics applications
 
 **Confidence**: VERIFIED
 
