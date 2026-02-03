@@ -2218,141 +2218,191 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 ## CATEGORY 5: PHONONS (35 tools)
 
+### 5.1 Harmonic Phonons (8 tools)
+
 **185. Phonopy**
 - Confidence: CONFIRMED
 - Resources: https://phonopy.github.io/phonopy/
-
-**186. phono3py**
-- Confidence: CONFIRMED
-- Resources: https://phonopy.github.io/phono3py/
-
-**187. ShengBTE**
-- Confidence: VERIFIED
-- Resources: https://github.com/lingjqi/shengbte
-
-**188. ALAMODE**
-- Confidence: VERIFIED
-- Resources: https://github.com/atztogo/alamode
-
-**189. almaBTE**
-- Confidence: VERIFIED
-- Resources: https://github.com/AlmaBTE/AlmaBTE
-
-**190. TDEP**
-- Confidence: VERIFIED
-- Resources: https://github.com/phonon/tdep
-
-**191. EPW**
-- Confidence: VERIFIED
-- Resources: https://epw.org.uk/
-
-**192. PERTURBO**
-- Confidence: VERIFIED
-- Resources: https://perturbo.org/
-
-**193. Phoebe**
-- Confidence: VERIFIED
-- Resources: https://github.com/AFND-PH/phoebe
+- Link: [Phonopy.md](Phonons/5.1_Harmonic_Phonons/Phonopy.md)
 
 **194. PHON**
 - Confidence: VERIFIED
 - Resources: http://www.computingformaterials.com/ (Parlinski's code)
+- Link: [PHON.md](Phonons/5.1_Harmonic_Phonons/PHON.md)
 
 **195. PHONON**
 - Confidence: VERIFIED
 - Resources: http://wolf.ifj.edu.pl/phonon/
+- Link: [PHONON.md](Phonons/5.1_Harmonic_Phonons/PHONON.md)
 
 **196. YPHON**
 - Confidence: VERIFIED
 - Resources: https://github.com/phonon/pyphon
-
-**197. ATAT**
-- Confidence: VERIFIED
-- Resources: https://www.brown.edu/Departments/Engineering/Labs/avdw/atat/
+- Link: [YPHON.md](Phonons/5.1_Harmonic_Phonons/YPHON.md)
 
 **198. FROPHO**
 - Confidence: VERIFIED
 - Resources: https://github.com/atztogo/fropho
-
-**199. hiPhive**
-- Confidence: VERIFIED
-- Resources: https://hiphive.materialsmodeling.org/
+- Link: [FROPHO.md](Phonons/5.1_Harmonic_Phonons/FROPHO.md)
 
 **200. ASE-phonons**
 - Confidence: VERIFIED
 - Resources: https://wiki.fysik.dtu.dk/ase/ase/phonons.html
-
-**201. kALDo**
-- Confidence: VERIFIED
-- Resources: https://github.com/nanotheorygroup/kaldo
-
-**202. GPU_PBTE**
-- Confidence: VERIFIED
-- Resources: https://github.com/brucefan1983/GPU_PBTE
-
-**203. PhonTS**
-- Confidence: VERIFIED
-- Resources: http://phon.sourceforge.net/
-
-**204. SCAILD**
-- Confidence: VERIFIED
-- Resources: https://github.com/ajf396/scaild
-
-**205. QSCAILD**
-- Confidence: VERIFIED
-- Resources: https://github.com/ajf396/qscaild
-
-**206. SSCHA**
-- Confidence: VERIFIED
-- Resources: https://github.com/epfl-theos/sscha
-
-**207. ALM**
-- Confidence: VERIFIED
-- Resources: https://github.com/atztogo/alm (part of ALAMODE)
-
-**208. thirdorder.py**
-- Confidence: VERIFIED
-- Resources: **MODULE** - Part of ShengBTE package.
-
-**209. THERMACOND**
-- Confidence: VERIFIED
-- Resources: https://github.com/Romeo-02/thermacond
-
-**210. OpenBTE**
-- Confidence: VERIFIED
-- Resources: https://github.com/jesan/OpenBTE
-
-**211. DMDW**
-- Confidence: UNCERTAIN
-- Resources: **UNKNOWN** - Likely a typo for *DMDW* (Diffusive Molecular Dynamics?) or internal code.
-
-**212. RTDW**
-- Confidence: UNCERTAIN
-- Resources: **UNKNOWN** - Likely typo or research code.
-
-**213. epiq**
-- Confidence: VERIFIED
-- Resources: https://github.com/ajf396/epiq
+- Link: [ASE-phonons.md](Phonons/5.1_Harmonic_Phonons/ASE-phonons.md)
 
 **214. API_Phonons**
 - Confidence: VERIFIED
 - Resources: https://github.com/superstar54/API_Phonons
+- Link: [API_Phonons.md](Phonons/5.1_Harmonic_Phonons/API_Phonons.md)
 
 **215. Phonopy-API**
 - Confidence: VERIFIED
 - Resources: https://github.com/phonon/phonopy-api (or just Phonopy wrapper)
+- Link: [Phonopy-API.md](Phonons/5.1_Harmonic_Phonons/Phonopy-API.md)
 
-**216. Pheasy**
-- Confidence: VERIFIED
-- Resources: https://github.com/GroupePhysiqueTheorique/Pheasy
+### 5.2 Anharmonic & Thermal Transport (13 tools)
 
-**217. Simphony**
+**186. phono3py**
+- Confidence: CONFIRMED
+- Resources: https://phonopy.github.io/phono3py/
+- Link: [phono3py.md](Phonons/5.2_Anharmonic_Thermal_Transport/phono3py.md)
+
+**187. ShengBTE**
 - Confidence: VERIFIED
-- Resources: https://github.com/gabrielelanaro/simphony
+- Resources: https://github.com/lingjqi/shengbte
+- Link: [ShengBTE.md](Phonons/5.2_Anharmonic_Thermal_Transport/ShengBTE.md)
+
+**188. ALAMODE**
+- Confidence: VERIFIED
+- Resources: https://github.com/atztogo/alamode
+- Link: [ALAMODE.md](Phonons/5.2_Anharmonic_Thermal_Transport/ALAMODE.md)
+
+**189. almaBTE**
+- Confidence: VERIFIED
+- Resources: https://github.com/AlmaBTE/AlmaBTE
+- Link: [almaBTE.md](Phonons/5.2_Anharmonic_Thermal_Transport/almaBTE.md)
+
+**199. hiPhive**
+- Confidence: VERIFIED
+- Resources: https://hiphive.materialsmodeling.org/
+- Link: [hiPhive.md](Phonons/5.2_Anharmonic_Thermal_Transport/hiPhive.md)
+
+**201. kALDo**
+- Confidence: VERIFIED
+- Resources: https://github.com/nanotheorygroup/kaldo
+- Link: [kALDo.md](Phonons/5.2_Anharmonic_Thermal_Transport/kALDo.md)
+
+**202. GPU_PBTE**
+- Confidence: VERIFIED
+- Resources: https://github.com/brucefan1983/GPU_PBTE
+- Link: [GPU_PBTE.md](Phonons/5.2_Anharmonic_Thermal_Transport/GPU_PBTE.md)
+
+**203. PhonTS**
+- Confidence: VERIFIED
+- Resources: http://phon.sourceforge.net/
+- Link: [PhonTS.md](Phonons/5.2_Anharmonic_Thermal_Transport/PhonTS.md)
+
+**207. ALM**
+- Confidence: VERIFIED
+- Resources: https://github.com/atztogo/alm (part of ALAMODE)
+- Link: [ALM.md](Phonons/5.2_Anharmonic_Thermal_Transport/ALM.md)
+
+**208. thirdorder.py**
+- Confidence: VERIFIED
+- Resources: **MODULE** - Part of ShengBTE package.
+- Link: [thirdorder.py.md](Phonons/5.2_Anharmonic_Thermal_Transport/thirdorder.py.md)
+
+**209. THERMACOND**
+- Confidence: VERIFIED
+- Resources: https://github.com/Romeo-02/thermacond
+- Link: [THERMACOND.md](Phonons/5.2_Anharmonic_Thermal_Transport/THERMACOND.md)
+
+**210. OpenBTE**
+- Confidence: VERIFIED
+- Resources: https://github.com/jesan/OpenBTE
+- Link: [OpenBTE.md](Phonons/5.2_Anharmonic_Thermal_Transport/OpenBTE.md)
+
+### 5.3 Electron-Phonon Coupling (5 tools)
+
+**191. EPW**
+- Confidence: VERIFIED
+- Resources: https://epw.org.uk/
+- Link: [EPW.md](Phonons/5.3_Electron_Phonon_Coupling/EPW.md)
+
+**192. PERTURBO**
+- Confidence: VERIFIED
+- Resources: https://perturbo.org/
+- Link: [PERTURBO.md](Phonons/5.3_Electron_Phonon_Coupling/PERTURBO.md)
+
+**193. Phoebe**
+- Confidence: VERIFIED
+- Resources: https://github.com/AFND-PH/phoebe
+- Link: [Phoebe.md](Phonons/5.3_Electron_Phonon_Coupling/Phoebe.md)
+
+**213. epiq**
+- Confidence: VERIFIED
+- Resources: https://github.com/ajf396/epiq
+- Link: [epiq.md](Phonons/5.3_Electron_Phonon_Coupling/epiq.md)
+
+**213a. elphbolt**
+- Confidence: VERIFIED
+- Resources: https://github.com/nakib/elphbolt
+- Note: Coupled electron-phonon Boltzmann transport.
+- Link: [elphbolt.md](Phonons/5.3_Electron_Phonon_Coupling/elphbolt.md)
+
+### 5.4 Temperature-Dependent Methods (5 tools)
+
+**190. TDEP**
+- Confidence: VERIFIED
+- Resources: https://github.com/phonon/tdep
+- Link: [TDEP.md](Phonons/5.4_Temperature_Dependent/TDEP.md)
+
+**204. SCAILD**
+- Confidence: VERIFIED
+- Resources: https://github.com/ajf396/scaild
+- Link: [SCAILD.md](Phonons/5.4_Temperature_Dependent/SCAILD.md)
+
+**205. QSCAILD**
+- Confidence: VERIFIED
+- Resources: https://github.com/ajf396/qscaild
+- Link: [QSCAILD.md](Phonons/5.4_Temperature_Dependent/QSCAILD.md)
+
+**206. SSCHA**
+- Confidence: VERIFIED
+- Resources: https://github.com/epfl-theos/sscha
+- Link: [SSCHA.md](Phonons/5.4_Temperature_Dependent/SSCHA.md)
 
 **218. ALATDYN**
 - Confidence: VERIFIED
 - Resources: https://github.com/ajf396/alatdyn
+- Link: [ALATDYN.md](Phonons/5.4_Temperature_Dependent/ALATDYN.md)
+
+### 5.5 Utilities & Interfaces (5 tools)
+
+**197. ATAT**
+- Confidence: VERIFIED
+- Resources: https://www.brown.edu/Departments/Engineering/Labs/avdw/atat/
+- Link: [ATAT.md](Phonons/5.5_Utilities_Interfaces/ATAT.md)
+
+**211. DMDW**
+- Confidence: UNCERTAIN
+- Resources: **UNKNOWN** - Likely a typo for *DMDW* (Diffusive Molecular Dynamics?) or internal code.
+- Link: [DMDW.md](Phonons/5.5_Utilities_Interfaces/DMDW.md)
+
+**212. RTDW**
+- Confidence: UNCERTAIN
+- Resources: **UNKNOWN** - Likely typo or research code.
+- Link: [RTDW.md](Phonons/5.5_Utilities_Interfaces/RTDW.md)
+
+**216. Pheasy**
+- Confidence: VERIFIED
+- Resources: https://github.com/GroupePhysiqueTheorique/Pheasy
+- Link: [Pheasy.md](Phonons/5.5_Utilities_Interfaces/Pheasy.md)
+
+**217. Simphony**
+- Confidence: VERIFIED
+- Resources: https://github.com/gabrielelanaro/simphony
+- Link: [Simphony.md](Phonons/5.5_Utilities_Interfaces/Simphony.md)
 
 ---
 
