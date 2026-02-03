@@ -33,6 +33,24 @@ AMBER refers to two things: a set of molecular mechanical force fields for the s
 
 **Sources**: AMBER website, J. Chem. Inf. Model. 58, 2043 (2018)
 
+## Key Strengths
+
+### Force Fields:
+- AMBER force fields (ff14SB, ff19SB)
+- GAFF for small molecules
+- Extensively validated
+- Regular updates
+
+### GPU Performance:
+- Industry-leading pmemd.cuda
+- Multi-GPU support
+- Long timescales routine
+
+### Analysis:
+- cpptraj comprehensive analysis
+- pytraj Python bindings
+- MM-PBSA/GBSA
+
 ## Inputs & Outputs
 - **Input formats**: prmtop (topology/params), inpcrd (coordinates), mdin (control parameters)
 - **Output data types**: mdcrd/NetCDF (trajectory), mdout (log), rst (restart)
@@ -57,12 +75,37 @@ AMBER refers to two things: a set of molecular mechanical force fields for the s
 - **Scaling**: Excellent on single/multi-GPU nodes
 - **Efficiency**: Optimized for long timescales
 
+## Computational Cost
+- Excellent GPU performance
+- Microseconds/day on modern GPUs
+- Efficient for biomolecules
+- Overall: Industry-leading for drug discovery
+
+## Best Practices
+- Use tleap for system setup
+- Validate force field choice
+- Use cpptraj for analysis
+- Enable GPU acceleration
+- Check for clashes before production
+
+## Limitations & Known Constraints
+- Commercial license for pmemd
+- Less flexible than LAMMPS
+- Biomolecular focus
+- Complex parameter files
+
 ## Application Areas
 - Drug discovery (lead optimization)
 - Protein-ligand binding
 - Conformational sampling
 - Nucleic acid dynamics
 - Refinement of NMR/X-ray structures
+
+## Comparison with Other Codes
+- **vs GROMACS**: AMBER better GPU single-node, GROMACS open-source
+- **vs NAMD**: AMBER faster GPU, NAMD better multi-node
+- **vs CHARMM**: AMBER more GPU-focused, CHARMM more methods
+- **Unique strength**: AMBER force fields, GPU performance, drug discovery focus
 
 ## Community and Support
 - AmberTools: Open source community
@@ -76,6 +119,11 @@ AMBER refers to two things: a set of molecular mechanical force fields for the s
 2. AmberTools: https://ambermd.org/AmberTools.php
 3. Publication: Case et al., J. Comput. Chem. 26, 1668 (2005)
 
+**Secondary sources**:
+1. AMBER tutorials
+2. cpptraj documentation
+3. Extensive published applications (>30,000 citations)
+
 **Confidence**: VERIFIED
 
 **Verification status**: ✅ VERIFIED
@@ -84,4 +132,3 @@ AMBER refers to two things: a set of molecular mechanical force fields for the s
 - Source: MIXED (AmberTools open, PMEMD licensed)
 - Development: ACTIVE (Rutgers, UCSF, etc.)
 - Applications: Force fields, GPU MD, drug design, biomolecules
-VERIFIED

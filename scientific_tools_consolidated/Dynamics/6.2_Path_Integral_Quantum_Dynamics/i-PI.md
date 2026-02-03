@@ -35,6 +35,26 @@ i-PI is a universal force engine interface that decouples the evolution of nucle
 
 **Sources**: i-PI documentation, Comp. Phys. Comm. 205, 106 (2016)
 
+## Key Strengths
+
+### Universality:
+- Works with any force engine
+- Socket-based communication
+- Code-agnostic
+- Flexible
+
+### Quantum Methods:
+- PIMD, RPMD, CMD
+- GLE thermostats
+- Isotope effects
+- Nuclear quantum effects
+
+### Flexibility:
+- Python-based
+- Easy customization
+- Multiple clients
+- Active development
+
 ## Inputs & Outputs
 - **Input formats**: XML input file controlling dynamics, sockets, ensembles
 - **Output data types**: Trajectories (pdb, xyz), properties, restart files
@@ -56,12 +76,35 @@ i-PI is a universal force engine interface that decouples the evolution of nucle
 - Parallelism via multiple force clients
 - Efficient socket communication
 
+## Computational Cost
+- Minimal driver overhead
+- Cost dominated by force engine
+- Scales with number of beads
+- Overall: Efficient for PIMD
+
+## Best Practices
+- Choose appropriate number of beads
+- Use GLE thermostats for efficiency
+- Validate with classical limit
+- Use multiple force clients for parallelism
+
+## Limitations & Known Constraints
+- Requires socket-compatible force engine
+- PIMD adds computational cost
+- Python overhead (minimal)
+- Learning curve for path integrals
+
 ## Application Areas
 - Water and aqueous solutions (nuclear effects)
 - Hydrogen storage materials
 - Proton transfer reactions
 - Low-temperature dynamics
 - Isotope effects in materials
+
+## Comparison with Other Codes
+- **vs NQCDynamics.jl**: i-PI more universal, NQCDynamics more nonadiabatic methods
+- **vs CP2K PIMD**: i-PI code-agnostic, CP2K integrated
+- **Unique strength**: Universal force engine interface, works with any DFT code
 
 ## Community and Support
 - Open-source (GPL v3)
@@ -74,6 +117,11 @@ i-PI is a universal force engine interface that decouples the evolution of nucle
 1. Homepage: http://ipi-code.org/
 2. GitHub: https://github.com/i-pi/i-pi
 3. Publication: Comp. Phys. Comm. 205, 106 (2016)
+
+**Secondary sources**:
+1. i-PI tutorials
+2. PIMD methodology papers
+3. Published applications
 
 **Confidence**: VERIFIED
 

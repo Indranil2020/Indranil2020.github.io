@@ -33,6 +33,26 @@ CHARMM is a highly versatile and widely used molecular simulation program with b
 
 **Sources**: CHARMM website, J. Comput. Chem. 30, 1545 (2009)
 
+## Key Strengths
+
+### Force Fields:
+- CHARMM force fields (C36, C36m)
+- CGenFF for small molecules
+- Drude polarizable
+- Extensively validated
+
+### Methods:
+- Advanced free energy (FEP, TI)
+- QM/MM capabilities
+- Normal mode analysis
+- Path sampling
+
+### CHARMM-GUI:
+- Powerful web interface
+- System setup automation
+- Membrane builder
+- Ligand parameterization
+
 ## Inputs & Outputs
 - **Input formats**: Input scripts (.inp), Topology files (.rtf), Parameter files (.prm), Coordinate files (.crd/.pdb)
 - **Output data types**: Trajectories (.dcd), Output logs (.out), Restart files (.res)
@@ -56,12 +76,37 @@ CHARMM is a highly versatile and widely used molecular simulation program with b
 - GPU acceleration available via OpenMM or BLaDE (Basic Lambda Dynamics Engine)
 - Scaling depends on system size and parallelization scheme
 
+## Computational Cost
+- Good parallel scaling (DOMDEC)
+- GPU via OpenMM/BLaDE
+- Efficient for medium systems
+- Overall: Good for method development
+
+## Best Practices
+- Use CHARMM-GUI for setup
+- Validate force field parameters
+- Use appropriate ensemble
+- Check energy conservation
+- Use DOMDEC for parallel runs
+
+## Limitations & Known Constraints
+- Commercial/academic license
+- Steeper learning curve
+- Less GPU-optimized than AMBER
+- Complex scripting language
+
 ## Application Areas
 - Protein folding and stability
 - Ligand binding affinity
 - Lipid membrane dynamics
 - Nucleic acid interactions
 - Enzyme catalysis (QM/MM)
+
+## Comparison with Other Codes
+- **vs AMBER**: CHARMM more methods, AMBER better GPU
+- **vs GROMACS**: CHARMM more flexible, GROMACS faster
+- **vs NAMD**: CHARMM more features, NAMD better scaling
+- **Unique strength**: CHARMM force fields, CHARMM-GUI, QM/MM, method development
 
 ## Community and Support
 - Managed by the CHARMM Development Project
@@ -73,6 +118,11 @@ CHARMM is a highly versatile and widely used molecular simulation program with b
 **Primary sources**:
 1. Homepage: https://www.charmm.org/
 2. Publication: Brooks et al., J. Comput. Chem. 30, 1545 (2009)
+
+**Secondary sources**:
+1. CHARMM-GUI tutorials
+2. CHARMM force field publications
+3. Extensive published applications (>20,000 citations)
 
 **Confidence**: VERIFIED
 
