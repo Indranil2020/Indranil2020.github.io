@@ -64,25 +64,23 @@ qha is a Python package for quasi-harmonic approximation (QHA) calculations of t
 
 
 ## Advanced Features
+- **Multiple EOS models**: Birch-Murnaghan, Vinet, Murnaghan, etc.
+- **Free energy minimization**: Optimal volume at each T/P
+- **Thermal expansion**: Temperature-dependent lattice parameters
+- **Grüneisen analysis**: Mode-resolved thermal properties
+- **Phonopy integration**: Seamless workflow with Phonopy output
+- **Pressure dependence**: Full P-T phase diagram support
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- Python-based: Fast post-processing
+- Phonon calculations: External (Phonopy)
+- QHA analysis: Minutes
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
+- Phonon calculations at multiple volumes: Dominant cost (external)
+- qha analysis: Fast (minutes)
+- Scales with number of volume points
+- Overall: Efficient once phonon data available
 
 ## Limitations & Known Constraints
 - QHA approximation limits

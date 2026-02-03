@@ -56,18 +56,12 @@ ATAT (Alloy Theoretic Automated Toolkit) is a comprehensive software package for
 
 
 ## Advanced Features
-
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
+- **Cluster expansion**: Automated fitting for alloy energetics
+- **Vibrational entropy**: Phonon contributions to phase stability
+- **Monte Carlo**: Thermodynamic sampling for alloys
+- **Phase diagrams**: Temperature-composition diagrams
+- **Structure enumeration**: Systematic alloy configuration generation
+- **Free energy integration**: Complete thermodynamic modeling
 
 ## Performance Characteristics
 - Cluster expansion fitting: Fast

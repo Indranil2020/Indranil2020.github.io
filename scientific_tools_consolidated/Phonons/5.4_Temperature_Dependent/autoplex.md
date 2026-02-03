@@ -63,25 +63,24 @@ autoplex is an automated workflow for fitting machine learning interatomic poten
 
 
 ## Advanced Features
+- **End-to-end automation**: From DFT to validated potential
+- **Multiple MLIP backends**: MTP, GAP, and other potentials
+- **Phonon validation**: Built-in phonon benchmarking
+- **Active learning**: Efficient training data selection
+- **atomate2 integration**: Modern workflow engine
+- **Quality metrics**: Automated accuracy assessment
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- Workflow overhead: Minimal
+- DFT calculations: Dominant cost
+- MLIP training: Hours to days
+- Validation: Fast once potential trained
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
+- DFT data generation: Expensive (many configurations)
+- MLIP training: Moderate (hours)
+- Phonon validation: Fast with MLIP
+- Overall: Significant upfront cost, fast subsequent calculations
 
 ## Limitations & Known Constraints
 - Requires DFT infrastructure
