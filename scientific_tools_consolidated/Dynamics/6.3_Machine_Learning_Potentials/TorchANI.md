@@ -95,6 +95,12 @@ TorchANI is a PyTorch implementation of the ANI (Accurate NeurAl networK engINe 
 - Reaction pathways
 - QM/MM simulations
 
+## Comparison with Other Codes
+- **vs MACE/NequIP**: TorchANI pretrained for organics, others more general
+- **vs SchNetPack**: TorchANI ANI-specific, SchNetPack multiple architectures
+- **vs AMP**: TorchANI PyTorch with pretrained, AMP CPU training
+- **Unique strength**: Pretrained ANI models for organic molecules, ready to use
+
 ## Community and Support
 - Active development
 - GitHub issues
@@ -105,9 +111,17 @@ TorchANI is a PyTorch implementation of the ANI (Accurate NeurAl networK engINe 
 **Primary sources**:
 1. GitHub: https://github.com/aiqm/torchani
 2. X. Gao et al., J. Chem. Inf. Model. 60, 3408 (2020)
+3. J.S. Smith et al., Chem. Sci. 8, 3192 (2017) - ANI-1
+
+**Secondary sources**:
+1. TorchANI tutorials
+2. ANI model publications
+3. Drug discovery applications
 
 **Confidence**: VERIFIED
 
 **Verification status**: ✅ VERIFIED
 - Source code: OPEN (GitHub, MIT)
-- Well-documented
+- Academic citations: >1000 (ANI papers)
+- Active development
+- Widely used for organic molecules

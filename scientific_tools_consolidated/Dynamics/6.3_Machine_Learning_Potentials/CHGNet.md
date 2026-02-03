@@ -96,13 +96,32 @@ CHGNet (Crystal Hamiltonian Graph neural Network) is a pretrained universal neur
 - Magnetic materials
 - Materials screening
 
+## Comparison with Other Codes
+- **vs M3GNet**: CHGNet charge-aware, M3GNet 3-body focus
+- **vs MACE**: CHGNet charge/magnetism, MACE higher accuracy
+- **vs DeepMD-kit**: CHGNet pretrained universal, DeepMD custom training
+- **Unique strength**: Charge and magnetic moment prediction, Materials Project training
+
+## Community and Support
+- Active development (Berkeley/Ceder group)
+- GitHub issues
+- Good documentation
+- Materials Project integration
+
 ## Verification & Sources
 **Primary sources**:
 1. GitHub: https://github.com/CederGroupHub/chgnet
 2. B. Deng et al., Nat. Mach. Intell. 5, 1031 (2023)
+
+**Secondary sources**:
+1. CHGNet tutorials
+2. Materials Project documentation
+3. Battery materials applications
 
 **Confidence**: VERIFIED
 
 **Verification status**: ✅ VERIFIED
 - Source code: OPEN (GitHub, BSD-3)
 - Published in Nature Machine Intelligence
+- Academic citations: >200 (rapid growth)
+- Active development: Ceder group

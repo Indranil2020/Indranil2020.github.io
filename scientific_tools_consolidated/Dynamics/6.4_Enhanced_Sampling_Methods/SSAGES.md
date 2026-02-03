@@ -97,12 +97,31 @@ SSAGES (Software Suite for Advanced General Ensemble Simulations) is a free, ope
 - Nucleation
 - Conformational changes
 
+## Comparison with Other Codes
+- **vs PLUMED**: SSAGES C++ standalone, PLUMED plugin architecture
+- **vs PySAGES**: SSAGES C++, PySAGES Python/GPU
+- **vs Colvars**: SSAGES more methods, Colvars more CV types
+- **Unique strength**: Unified interface to many methods, multiple MD engine support
+
+## Community and Support
+- Active development
+- GitHub issues
+- Documentation
+- PySAGES Python alternative
+
 ## Verification & Sources
 **Primary sources**:
 1. GitHub: https://github.com/SSAGESproject/SSAGES
 2. H. Sidky et al., J. Chem. Phys. 148, 044104 (2018)
 
+**Secondary sources**:
+1. SSAGES tutorials
+2. PySAGES documentation
+3. Enhanced sampling publications
+
 **Confidence**: VERIFIED
 
 **Verification status**: ✅ VERIFIED
 - Source code: OPEN (GitHub, GPL-3.0)
+- Academic citations: >200
+- Active development

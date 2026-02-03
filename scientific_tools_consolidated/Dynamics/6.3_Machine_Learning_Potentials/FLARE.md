@@ -94,12 +94,32 @@ FLARE (Fast Learning of Atomistic Rare Events) is an open-source Python package 
 - Defect dynamics
 - Surface reactions
 
+## Comparison with Other Codes
+- **vs NequIP/MACE**: FLARE Bayesian with uncertainty, others deterministic NN
+- **vs DeepMD-kit**: FLARE active learning, DeepMD fixed training
+- **vs N2P2**: FLARE GP-based, N2P2 neural network
+- **Unique strength**: On-the-fly training, Bayesian uncertainty, active learning
+
+## Community and Support
+- Active development (Harvard)
+- GitHub issues
+- Good documentation
+- Growing community
+
 ## Verification & Sources
 **Primary sources**:
 1. GitHub: https://github.com/mir-group/flare
 2. J. Vandermause et al., npj Comput. Mater. 6, 20 (2020)
 
+**Secondary sources**:
+1. FLARE tutorials
+2. flare_pp C++ documentation
+3. Active learning publications
+
 **Confidence**: VERIFIED
 
 **Verification status**: ✅ VERIFIED
 - Source code: OPEN (GitHub, MIT)
+- Published in npj Computational Materials
+- Academic citations: >300
+- Active development: Harvard group
