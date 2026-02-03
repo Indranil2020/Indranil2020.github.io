@@ -41,31 +41,10 @@ FROPHO is a tool for frozen phonon calculations developed by Atsushi Togo (same 
 - **DFT codes**: Via phonopy interface
 - **Python**: Python-based tools
 
-## Advanced Features
-
-### Frozen Phonon Method:
-- Systematic displacement generation
-- Eigenvector-based displacements
-- Force constant extraction
-- Validation against finite displacement
-
-### Integration:
-- Phonopy ecosystem compatibility
-- DFT code interfaces
-- Python scripting
-- Automated workflows
-
 ## Performance Characteristics
 - Displacement generation: Fast
 - DFT calculations: User responsibility
 - Processing: Efficient
-- Python-based: Minimal overhead
-
-## Computational Cost
-- Setup: Negligible
-- DFT calculations: Dominates cost
-- Post-processing: Fast
-- Overall: Efficient workflow tool
 
 ## Computational Cost
 - FROPHO processing: Negligible
@@ -80,22 +59,6 @@ FROPHO is a tool for frozen phonon calculations developed by Atsushi Togo (same 
 ## Comparison with Other Codes
 - **vs finite displacement**: Alternative methodology
 - **Complementary to phonopy**: Same ecosystem
-- **vs Standard phonopy**: Different displacement approach
-- **Unique strength**: Frozen phonon systematic implementation
-
-## Best Practices
-
-### Displacement Setup:
-- Choose appropriate displacement magnitude
-- Validate with known systems
-- Compare with finite displacement results
-- Check force constant symmetry
-
-### Workflow:
-- Use phonopy for post-processing
-- Validate acoustic sum rules
-- Test convergence
-- Document methodology
 
 ## Application Areas
 - Frozen phonon calculations
@@ -103,12 +66,9 @@ FROPHO is a tool for frozen phonon calculations developed by Atsushi Togo (same 
 - Phonon calculation validation
 
 ## Community and Support
-- **License**: Open-source
-- **Developer**: Atsushi Togo (phonopy author)
-- **Repository**: GitHub
-- **Ecosystem**: Part of phonopy tools
-- **Support**: phonopy community
-- **Documentation**: Repository-based
+- Open-source
+- GitHub repository
+- phonopy ecosystem
 
 ## Development
 - Atsushi Togo (phonopy developer)

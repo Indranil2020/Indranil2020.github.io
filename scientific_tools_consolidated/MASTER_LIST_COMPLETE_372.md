@@ -1811,7 +1811,7 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: C++ Variational Monte-Carlo updated PEPS solver.
 - Link: [PEPS.md](DMFT/3.4_Tensor_Networks/PEPS.md)
 
-### 3.5 Exact Diagonalization (9 tools)
+### 3.5 Exact Diagonalization (5 tools)
 
 **160m. xdiag**
 - Confidence: VERIFIED
@@ -1843,33 +1843,9 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: Specialized ED code for Many-Body Localization studies.
 - Link: [MBL_ED.md](DMFT/3.5_Exact_Diagonalization/MBL_ED.md)
 
-**160r. HubbardModel2D**
-- Confidence: VERIFIED
-- Resources: https://github.com/ryanlevy/HubbardModel2D
-- Note: C++ Exact Diagonalization solver for Hubbard models.
-- Link: [HubbardModel2D.md](DMFT/3.5_Exact_Diagonalization/HubbardModel2D.md)
-
-**160s. EDLib**
-- Confidence: VERIFIED
-- Resources: https://github.com/Q-solvers/EDLib
-- Note: C++ template library for exact diagonalization (Hubbard/Anderson).
-- Link: [EDLib.md](DMFT/3.5_Exact_Diagonalization/EDLib.md)
-
-**160t. JHeisenbergED**
-- Confidence: VERIFIED
-- Resources: https://github.com/RudSmo/JHeisenbergED
-- Note: Simple Julia module for 1D Heisenberg Model ED.
-- Link: [JHeisenbergED.md](DMFT/3.5_Exact_Diagonalization/JHeisenbergED.md)
-
-**160u. Heisenberg**
-- Confidence: VERIFIED
-- Resources: https://github.com/muammar/heisenberg
-- Note: Python program for Heisenberg spin chain matrix calculation.
-- Link: [Heisenberg.md](DMFT/3.5_Exact_Diagonalization/Heisenberg.md)
-
 ---
 
-## CATEGORY 4: TIGHT-BINDING (56 tools)
+## CATEGORY 4: TIGHT-BINDING (24 tools)
 
 ### 4.1 Wannier Ecosystem
 **161. Wannier90**
@@ -2136,6 +2112,53 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: C++ library for second-quantized Hamiltonians on discrete lattices.
 - Link: [TBTK.md](TightBinding/Model_Hamiltonians/TBTK.md)
 
+**184e. HubbardModel2D**
+- Confidence: VERIFIED
+- Resources: https://github.com/ryanlevy/HubbardModel2D
+- Note: C++ Exact Diagonalization solver for Hubbard models.
+- Link: [HubbardModel2D.md](TightBinding/Model_Hamiltonians/HubbardModel2D.md)
+
+**184f. EDLib**
+- Confidence: VERIFIED
+- Resources: https://github.com/Q-solvers/EDLib
+- Note: C++ template library for exact diagonalization (Hubbard/Anderson).
+- Link: [EDLib.md](TightBinding/Model_Hamiltonians/EDLib.md)
+
+**184g. PolaronMobility.jl**
+- Confidence: VERIFIED
+- Resources: https://github.com/Frost-group/PolaronMobility.jl
+- Note: Feynman variational path-integral for Fröhlich/Holstein polarons.
+- Link: [PolaronMobility.jl.md](TightBinding/Model_Hamiltonians/PolaronMobility.jl.md)
+
+**184h. Sunny.jl**
+- Confidence: VERIFIED
+- Resources: https://github.com/SunnySuite/Sunny.jl
+- Note: SU(N) spin dynamics, LLG, and LSWT in Julia.
+- Link: [Sunny.jl.md](TightBinding/Model_Hamiltonians/Sunny.jl.md)
+
+**184i. SpinMC.jl**
+- Confidence: VERIFIED
+- Resources: https://github.com/fbuessen/SpinMC.jl
+- Note: Classical Monte Carlo for lattice spin models.
+- Link: [SpinMC.jl.md](TightBinding/Model_Hamiltonians/SpinMC.jl.md)
+
+**184j. JHeisenbergED**
+- Confidence: VERIFIED
+- Resources: https://github.com/RudSmo/JHeisenbergED
+- Note: Simple Julia module for 1D Heisenberg Model ED.
+- Link: [JHeisenbergED.md](TightBinding/Model_Hamiltonians/JHeisenbergED.md)
+
+**184k. Heisenberg**
+- Confidence: VERIFIED
+- Resources: https://github.com/muammar/heisenberg
+- Note: Python program for Heisenberg spin chain matrix calculation.
+- Link: [Heisenberg.md](TightBinding/Model_Hamiltonians/Heisenberg.md)
+
+**184l. ALF**
+- Confidence: VERIFIED
+- Resources: https://alf.physik.uni-wuerzburg.de/
+- Note: Algorithms for Lattice Fermions (Auxiliary-Field QMC).
+- Link: [ALF.md](TightBinding/Model_Hamiltonians/ALF.md)
 
 
 ### 4.3 Quantum Transport
@@ -2216,780 +2239,545 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 ---
 
-## CATEGORY 5: PHONONS (62 tools)
+## CATEGORY 5: PHONONS (42 tools)
 
-### 5.1 Harmonic Phonons (10 tools)
+### 5.1 Harmonic Phonons (17 tools)
 
 **185. Phonopy**
 - Confidence: CONFIRMED
 - Resources: https://phonopy.github.io/phonopy/
 - Link: [Phonopy.md](Phonons/5.1_Harmonic_Phonons/Phonopy.md)
 
-**194. PHON**
-- Confidence: VERIFIED
-- Resources: http://www.computingformaterials.com/ (Parlinski's code)
-- Link: [PHON.md](Phonons/5.1_Harmonic_Phonons/PHON.md)
-
-**195. PHONON**
-- Confidence: VERIFIED
-- Resources: http://wolf.ifj.edu.pl/phonon/
-- Link: [PHONON.md](Phonons/5.1_Harmonic_Phonons/PHONON.md)
-
-**196. YPHON**
-- Confidence: VERIFIED
-- Resources: https://github.com/phonon/pyphon
-- Link: [YPHON.md](Phonons/5.1_Harmonic_Phonons/YPHON.md)
-
-**198. FROPHO**
-- Confidence: VERIFIED
-- Resources: https://github.com/atztogo/fropho
-- Link: [FROPHO.md](Phonons/5.1_Harmonic_Phonons/FROPHO.md)
-
-**200. ASE-phonons**
-- Confidence: VERIFIED
-- Resources: https://wiki.fysik.dtu.dk/ase/ase/phonons.html
-- Link: [ASE-phonons.md](Phonons/5.1_Harmonic_Phonons/ASE-phonons.md)
-
-**214. API_Phonons**
-- Confidence: VERIFIED
-- Resources: https://github.com/superstar54/API_Phonons
-- Link: [API_Phonons.md](Phonons/5.1_Harmonic_Phonons/API_Phonons.md)
-
-**215. Phonopy-API**
-- Confidence: VERIFIED
-- Resources: https://github.com/phonon/phonopy-api (or just Phonopy wrapper)
-- Link: [Phonopy-API.md](Phonons/5.1_Harmonic_Phonons/Phonopy-API.md)
-
-**215a. OpenPhonon**
-- Confidence: VERIFIED
-- Resources: https://www.esrf.fr/computing/scientific/OpenPhonon/
-- Note: ESRF lattice dynamics code for phonon calculations.
-- Link: [OpenPhonon.md](Phonons/5.1_Harmonic_Phonons/OpenPhonon.md)
-
-**215b. ADIP2.jl**
-- Confidence: VERIFIED
-- Resources: https://github.com/JuliaMatSci/ADIP2.jl
-- Note: Julia package for phonons via automatic differentiation of interatomic potentials.
-- Link: [ADIP2_jl.md](Phonons/5.1_Harmonic_Phonons/ADIP2_jl.md)
-
-### 5.2 Anharmonic & Thermal Transport (19 tools)
-
 **186. phono3py**
 - Confidence: CONFIRMED
 - Resources: https://phonopy.github.io/phono3py/
-- Link: [phono3py.md](Phonons/5.2_Anharmonic_Thermal_Transport/phono3py.md)
 
 **187. ShengBTE**
 - Confidence: VERIFIED
 - Resources: https://github.com/lingjqi/shengbte
-- Link: [ShengBTE.md](Phonons/5.2_Anharmonic_Thermal_Transport/ShengBTE.md)
 
 **188. ALAMODE**
 - Confidence: VERIFIED
 - Resources: https://github.com/atztogo/alamode
-- Link: [ALAMODE.md](Phonons/5.2_Anharmonic_Thermal_Transport/ALAMODE.md)
 
 **189. almaBTE**
 - Confidence: VERIFIED
 - Resources: https://github.com/AlmaBTE/AlmaBTE
-- Link: [almaBTE.md](Phonons/5.2_Anharmonic_Thermal_Transport/almaBTE.md)
-
-**199. hiPhive**
-- Confidence: VERIFIED
-- Resources: https://hiphive.materialsmodeling.org/
-- Link: [hiPhive.md](Phonons/5.2_Anharmonic_Thermal_Transport/hiPhive.md)
-
-**201. kALDo**
-- Confidence: VERIFIED
-- Resources: https://github.com/nanotheorygroup/kaldo
-- Link: [kALDo.md](Phonons/5.2_Anharmonic_Thermal_Transport/kALDo.md)
-
-**202. GPU_PBTE**
-- Confidence: VERIFIED
-- Resources: https://github.com/brucefan1983/GPU_PBTE
-- Link: [GPU_PBTE.md](Phonons/5.2_Anharmonic_Thermal_Transport/GPU_PBTE.md)
-
-**203. PhonTS**
-- Confidence: VERIFIED
-- Resources: http://phon.sourceforge.net/
-- Link: [PhonTS.md](Phonons/5.2_Anharmonic_Thermal_Transport/PhonTS.md)
-
-**207. ALM**
-- Confidence: VERIFIED
-- Resources: https://github.com/atztogo/alm (part of ALAMODE)
-- Link: [ALM.md](Phonons/5.2_Anharmonic_Thermal_Transport/ALM.md)
-
-**208. thirdorder.py**
-- Confidence: VERIFIED
-- Resources: **MODULE** - Part of ShengBTE package.
-- Link: [thirdorder.py.md](Phonons/5.2_Anharmonic_Thermal_Transport/thirdorder.py.md)
-
-**209. THERMACOND**
-- Confidence: VERIFIED
-- Resources: https://github.com/Romeo-02/thermacond
-- Link: [THERMACOND.md](Phonons/5.2_Anharmonic_Thermal_Transport/THERMACOND.md)
-
-**210. OpenBTE**
-- Confidence: VERIFIED
-- Resources: https://github.com/jesan/OpenBTE
-- Link: [OpenBTE.md](Phonons/5.2_Anharmonic_Thermal_Transport/OpenBTE.md)
-
-**210a. FourPhonon**
-- Confidence: VERIFIED
-- Resources: https://github.com/FourPhonon/FourPhonon
-- Note: Extension to ShengBTE for four-phonon scattering rates and thermal conductivity.
-- Link: [FourPhonon.md](Phonons/5.2_Anharmonic_Thermal_Transport/FourPhonon.md)
-
-**210b. GPUMD**
-- Confidence: VERIFIED
-- Resources: https://github.com/brucefan1983/GPUMD
-- Note: GPU-accelerated MD with NEP machine learning potentials for thermal transport.
-- Link: [GPUMD.md](Phonons/5.2_Anharmonic_Thermal_Transport/GPUMD.md)
-
-**210c. D3Q**
-- Confidence: VERIFIED
-- Resources: https://anharmonic.github.io/d3q/
-- Note: Third-order force constants from DFPT within Quantum ESPRESSO.
-- Link: [D3Q.md](Phonons/5.2_Anharmonic_Thermal_Transport/D3Q.md)
-
-**210d. THERMAL2**
-- Confidence: VERIFIED
-- Resources: https://anharmonic.github.io/thermal2/
-- Note: Thermal conductivity from anharmonic force constants (QE ecosystem).
-- Link: [THERMAL2.md](Phonons/5.2_Anharmonic_Thermal_Transport/THERMAL2.md)
-
-**210e. phonon-sed**
-- Confidence: VERIFIED
-- Resources: https://github.com/tyst3273/phonon-sed
-- Note: Phonon spectral energy density from MD simulations.
-- Link: [phonon-sed.md](Phonons/5.2_Anharmonic_Thermal_Transport/phonon-sed.md)
-
-**210f. freepaths**
-- Confidence: VERIFIED
-- Resources: https://github.com/anufrievroman/freepaths
-- Note: Monte Carlo simulator of phonon transport in nanostructures.
-- Link: [freepaths.md](Phonons/5.2_Anharmonic_Thermal_Transport/freepaths.md)
-
-### 5.3 Electron-Phonon Coupling (10 tools)
-
-**191. EPW**
-- Confidence: VERIFIED
-- Resources: https://epw.org.uk/
-- Link: [EPW.md](Phonons/5.3_Electron_Phonon_Coupling/EPW.md)
-
-**192. PERTURBO**
-- Confidence: VERIFIED
-- Resources: https://perturbo.org/
-- Link: [PERTURBO.md](Phonons/5.3_Electron_Phonon_Coupling/PERTURBO.md)
-
-**193. Phoebe**
-- Confidence: VERIFIED
-- Resources: https://github.com/AFND-PH/phoebe
-- Link: [Phoebe.md](Phonons/5.3_Electron_Phonon_Coupling/Phoebe.md)
-
-**213. epiq**
-- Confidence: VERIFIED
-- Resources: https://github.com/ajf396/epiq
-- Link: [epiq.md](Phonons/5.3_Electron_Phonon_Coupling/epiq.md)
-
-**213a. elphbolt**
-- Confidence: VERIFIED
-- Resources: https://github.com/nakib/elphbolt
-- Note: Coupled electron-phonon Boltzmann transport.
-- Link: [elphbolt.md](Phonons/5.3_Electron_Phonon_Coupling/elphbolt.md)
-
-**213b. ElectronPhononCoupling**
-- Confidence: VERIFIED
-- Resources: https://github.com/GkAntonius/ElectronPhononCoupling
-- Note: Python module for electron-phonon analysis from Abinit.
-- Link: [ElectronPhononCoupling.md](Phonons/5.3_Electron_Phonon_Coupling/ElectronPhononCoupling.md)
-
-**213c. USER-EPH**
-- Confidence: VERIFIED
-- Resources: https://github.com/LLNL/USER-EPH
-- Note: LAMMPS extension for electron-phonon coupling (LLNL).
-- Link: [USER-EPH.md](Phonons/5.3_Electron_Phonon_Coupling/USER-EPH.md)
-
-**213d. XTANT-3**
-- Confidence: VERIFIED
-- Resources: https://github.com/N-Medvedev/XTANT-3
-- Note: X-ray induced thermal and nonthermal transitions with electron-phonon coupling.
-- Link: [XTANT-3.md](Phonons/5.3_Electron_Phonon_Coupling/XTANT-3.md)
-
-**213e. Phonopy-Spectroscopy**
-- Confidence: VERIFIED
-- Resources: https://github.com/skelton-group/Phonopy-Spectroscopy
-- Note: IR and Raman spectra simulation from Phonopy.
-- Link: [Phonopy-Spectroscopy.md](Phonons/5.3_Electron_Phonon_Coupling/Phonopy-Spectroscopy.md)
-
-**213f. Phono3py-Power-Tools**
-- Confidence: VERIFIED
-- Resources: https://github.com/skelton-group/Phono3py-Power-Tools
-- Note: Advanced analysis tools for Phono3py power users.
-- Link: [Phono3py-Power-Tools.md](Phonons/5.3_Electron_Phonon_Coupling/Phono3py-Power-Tools.md)
-
-### 5.4 Temperature-Dependent Methods (8 tools)
 
 **190. TDEP**
 - Confidence: VERIFIED
 - Resources: https://github.com/phonon/tdep
-- Link: [TDEP.md](Phonons/5.4_Temperature_Dependent/TDEP.md)
 
-**204. SCAILD**
+**191. EPW**
 - Confidence: VERIFIED
-- Resources: https://github.com/ajf396/scaild
-- Link: [SCAILD.md](Phonons/5.4_Temperature_Dependent/SCAILD.md)
+- Resources: https://epw.org.uk/
 
-**205. QSCAILD**
+**192. PERTURBO**
 - Confidence: VERIFIED
-- Resources: https://github.com/ajf396/qscaild
-- Link: [QSCAILD.md](Phonons/5.4_Temperature_Dependent/QSCAILD.md)
+- Resources: https://perturbo.org/
 
-**206. SSCHA**
+**193. Phoebe**
 - Confidence: VERIFIED
-- Resources: https://github.com/epfl-theos/sscha
-- Link: [SSCHA.md](Phonons/5.4_Temperature_Dependent/SSCHA.md)
+- Resources: https://github.com/AFND-PH/phoebe
 
-**218. ALATDYN**
+**194. PHON**
 - Confidence: VERIFIED
-- Resources: https://github.com/ajf396/alatdyn
-- Link: [ALATDYN.md](Phonons/5.4_Temperature_Dependent/ALATDYN.md)
+- Resources: http://www.computingformaterials.com/ (Parlinski's code)
 
-**218a. DynaPhoPy**
+**195. PHONON**
 - Confidence: VERIFIED
-- Resources: https://github.com/abelcarreras/DynaPhoPy
-- Note: Phonon quasiparticles from MD using normal-mode decomposition.
-- Link: [DynaPhoPy.md](Phonons/5.4_Temperature_Dependent/DynaPhoPy.md)
+- Resources: http://wolf.ifj.edu.pl/phonon/
 
-**218b. a-TDEP**
+**196. YPHON**
 - Confidence: VERIFIED
-- Resources: Abinit integration (Comput. Phys. Commun. 254, 107301)
-- Note: Temperature Dependent Effective Potential for Abinit.
-- Link: [a-TDEP.md](Phonons/5.4_Temperature_Dependent/a-TDEP.md)
-
-**218c. autoplex**
-- Confidence: VERIFIED
-- Resources: https://github.com/autoatml/autoplex
-- Note: Automated ML potential fitting with phonon validation.
-- Link: [autoplex.md](Phonons/5.4_Temperature_Dependent/autoplex.md)
-
-### 5.5 Utilities & Interfaces (13 tools)
+- Resources: https://github.com/phonon/pyphon
 
 **197. ATAT**
 - Confidence: VERIFIED
 - Resources: https://www.brown.edu/Departments/Engineering/Labs/avdw/atat/
-- Link: [ATAT.md](Phonons/5.5_Utilities_Interfaces/ATAT.md)
+
+**198. FROPHO**
+- Confidence: VERIFIED
+- Resources: https://github.com/atztogo/fropho
+
+**199. hiPhive**
+- Confidence: VERIFIED
+- Resources: https://hiphive.materialsmodeling.org/
+
+**200. ASE-phonons**
+- Confidence: VERIFIED
+- Resources: https://wiki.fysik.dtu.dk/ase/ase/phonons.html
+
+**201. kALDo**
+- Confidence: VERIFIED
+- Resources: https://github.com/nanotheorygroup/kaldo
+
+**202. GPU_PBTE**
+- Confidence: VERIFIED
+- Resources: https://github.com/brucefan1983/GPU_PBTE
+
+**203. PhonTS**
+- Confidence: VERIFIED
+- Resources: http://phon.sourceforge.net/
+
+**204. SCAILD**
+- Confidence: VERIFIED
+- Resources: https://github.com/ajf396/scaild
+
+**205. QSCAILD**
+- Confidence: VERIFIED
+- Resources: https://github.com/ajf396/qscaild
+
+**206. SSCHA**
+- Confidence: VERIFIED
+- Resources: https://github.com/epfl-theos/sscha
+
+**207. ALM**
+- Confidence: VERIFIED
+- Resources: https://github.com/atztogo/alm (part of ALAMODE)
+
+**208. thirdorder.py**
+- Confidence: VERIFIED
+- Resources: **MODULE** - Part of ShengBTE package.
+
+**209. THERMACOND**
+- Confidence: VERIFIED
+- Resources: https://github.com/Romeo-02/thermacond
+
+**210. OpenBTE**
+- Confidence: VERIFIED
+- Resources: https://github.com/jesan/OpenBTE
 
 **211. DMDW**
 - Confidence: UNCERTAIN
 - Resources: **UNKNOWN** - Likely a typo for *DMDW* (Diffusive Molecular Dynamics?) or internal code.
-- Link: [DMDW.md](Phonons/5.5_Utilities_Interfaces/DMDW.md)
 
 **212. RTDW**
 - Confidence: UNCERTAIN
 - Resources: **UNKNOWN** - Likely typo or research code.
-- Link: [RTDW.md](Phonons/5.5_Utilities_Interfaces/RTDW.md)
+
+**213. epiq**
+- Confidence: VERIFIED
+- Resources: https://github.com/ajf396/epiq
+
+**214. API_Phonons**
+- Confidence: VERIFIED
+- Resources: https://github.com/superstar54/API_Phonons
+
+**215. Phonopy-API**
+- Confidence: VERIFIED
+- Resources: https://github.com/phonon/phonopy-api (or just Phonopy wrapper)
 
 **216. Pheasy**
 - Confidence: VERIFIED
 - Resources: https://github.com/GroupePhysiqueTheorique/Pheasy
-- Link: [Pheasy.md](Phonons/5.5_Utilities_Interfaces/Pheasy.md)
 
 **217. Simphony**
 - Confidence: VERIFIED
 - Resources: https://github.com/gabrielelanaro/simphony
-- Link: [Simphony.md](Phonons/5.5_Utilities_Interfaces/Simphony.md)
 
-**217a. phononwebsite**
+**218. ALATDYN**
 - Confidence: VERIFIED
-- Resources: https://henriquemiranda.github.io/phononwebsite/
-- Note: Web-based interactive phonon visualization tool.
-- Link: [phononwebsite.md](Phonons/5.5_Utilities_Interfaces/phononwebsite.md)
+- Resources: https://github.com/ajf396/alatdyn
 
-**217b. AtomicContributions**
+**218a. CRYSTALpytools**
 - Confidence: VERIFIED
-- Resources: https://github.com/JaGeo/AtomicContributions
-- Note: Visualization of atomic contributions to phonon modes.
-- Link: [AtomicContributions.md](Phonons/5.5_Utilities_Interfaces/AtomicContributions.md)
+- Resources: https://github.com/crystal-code-tools/CRYSTALpytools
+- Note: Python infrastructure for CRYSTAL code with phonon support.
+- Link: [CRYSTALpytools.md](Phonons/5.1_Harmonic_Phonons/CRYSTALpytools.md)
 
-**217c. KPROJ**
+**218b. pwtools**
 - Confidence: VERIFIED
-- Resources: https://arxiv.org/abs/2410.10910
-- Note: Program for unfolding electronic and phononic bands.
-- Link: [KPROJ.md](Phonons/5.5_Utilities_Interfaces/KPROJ.md)
+- Resources: https://github.com/elcorto/pwtools
+- Note: Python tools for QE phonon post-processing.
+- Link: [pwtools.md](Phonons/5.1_Harmonic_Phonons/pwtools.md)
 
-**217d. easyunfold**
+**218c. elphmod**
 - Confidence: VERIFIED
-- Resources: https://github.com/SMTG-Bham/easyunfold
-- Note: Band structure unfolding including phonons.
-- Link: [easyunfold.md](Phonons/5.5_Utilities_Interfaces/easyunfold.md)
+- Resources: https://github.com/janberges/elphmod
+- Note: Python modules for electron-phonon models with phonon support.
+- Link: [elphmod.md](Phonons/5.1_Harmonic_Phonons/elphmod.md)
 
-**217e. Phonopy_VESTA**
+**218d. latticeDynamics**
 - Confidence: VERIFIED
-- Resources: https://github.com/AdityaRoy-1996/Phonopy_VESTA
-- Note: Export Phonopy eigenvectors to VESTA for visualization.
-- Link: [Phonopy_VESTA.md](Phonons/5.5_Utilities_Interfaces/Phonopy_VESTA.md)
+- Resources: https://github.com/jgwillingham/latticeDynamics
+- Note: Python tools for lattice dynamics with rigid ion models.
+- Link: [latticeDynamics.md](Phonons/5.1_Harmonic_Phonons/latticeDynamics.md)
 
-**217f. qha**
+**218e. Phonon-Vibration-Viewer**
 - Confidence: VERIFIED
-- Resources: https://github.com/MineralsCloud/qha
-- Note: Python package for quasi-harmonic approximation calculations.
-- Link: [qha.md](Phonons/5.5_Utilities_Interfaces/qha.md)
+- Resources: https://github.com/Tingliangstu/Phonon-Vibration-Viewer
+- Note: Phonon dispersion visualization for primitive atoms.
+- Link: [Phonon-Vibration-Viewer.md](Phonons/5.1_Harmonic_Phonons/Phonon-Vibration-Viewer.md)
 
-**217g. PhononIrep**
+**218f. mace_phonopy**
 - Confidence: VERIFIED
-- Resources: https://github.com/zhangzeyingvv/PhononIrep
-- Note: Phonon irreducible representation analysis.
-- Link: [PhononIrep.md](Phonons/5.5_Utilities_Interfaces/PhononIrep.md)
+- Resources: https://github.com/Mofahdi/mace_phonopy
+- Note: MACE ML potential to Phonopy force constants bridge.
+- Link: [mace_phonopy.md](Phonons/5.1_Harmonic_Phonons/mace_phonopy.md)
 
-**217h. IR2PW**
+**218g. phononplotter**
 - Confidence: VERIFIED
-- Resources: https://github.com/zjwang11/IR2PW
-- Note: Irreducible representations to plane wave for phonons.
-- Link: [IR2PW.md](Phonons/5.5_Utilities_Interfaces/IR2PW.md)
-
-### 5.6 Green's Function / NEGF (2 tools)
-
-**217i. AGF-phonon-transport**
-- Confidence: VERIFIED
-- Resources: https://github.com/brucefan1983/AGF-phonon-transport
-- Note: Atomistic Green's function for phonon transport (MATLAB).
-- Link: [AGF-phonon-transport.md](Phonons/5.6_Greens_Function_NEGF/AGF-phonon-transport.md)
-
-**217j. NEGF-phonon-1D-matlab**
-- Confidence: VERIFIED
-- Resources: https://github.com/brucefan1983/NEGF-phonon-1D-matlab
-- Note: NEGF method for 1D phonon transport (educational).
-- Link: [NEGF-phonon-1D-matlab.md](Phonons/5.6_Greens_Function_NEGF/NEGF-phonon-1D-matlab.md)
+- Resources: https://github.com/warda-rahim/phononplotter
+- Note: Phonon band structure and DOS plotting tool.
+- Link: [phononplotter.md](Phonons/5.1_Harmonic_Phonons/phononplotter.md)
 
 ---
 
-## CATEGORY 6: DYNAMICS (52 tools)
+## CATEGORY 6: DYNAMICS (17 tools)
 
-### 6.1 Classical MD Engines (15 tools)
-*General-purpose molecular dynamics using classical force fields and Newton's equations of motion*
-
-**219. LAMMPS**
-- Confidence: VERIFIED
-- Resources: https://www.lammps.org/
-- Note: Large-scale Atomic/Molecular Massively Parallel Simulator for materials modeling.
-- Link: [LAMMPS.md](Dynamics/6.1_Classical_MD_Engines/LAMMPS.md)
-
-**220. GROMACS**
-- Confidence: VERIFIED
-- Resources: https://www.gromacs.org/
-- Note: High-performance MD for biomolecular simulations (proteins, lipids, nucleic acids).
-- Link: [GROMACS.md](Dynamics/6.1_Classical_MD_Engines/GROMACS.md)
-
-**221. AMBER**
-- Confidence: VERIFIED
-- Resources: https://ambermd.org/
-- Note: Biomolecular simulation suite with well-validated AMBER force fields.
-- Link: [AMBER.md](Dynamics/6.1_Classical_MD_Engines/AMBER.md)
-
-**222. CHARMM**
-- Confidence: VERIFIED
-- Resources: https://www.charmm.org/
-- Note: Versatile MD program with CHARMM force fields and advanced free energy methods.
-- Link: [CHARMM.md](Dynamics/6.1_Classical_MD_Engines/CHARMM.md)
-
-**223. NAMD**
-- Confidence: VERIFIED
-- Resources: https://www.ks.uiuc.edu/Research/namd/
-- Note: Scalable MD for large biomolecular systems, GPU-accelerated.
-- Link: [NAMD.md](Dynamics/6.1_Classical_MD_Engines/NAMD.md)
-
-**224. DL_POLY**
-- Confidence: VERIFIED
-- Resources: https://www.scd.stfc.ac.uk/Pages/DL_POLY.aspx
-- Note: General-purpose classical MD code from Daresbury Laboratory.
-- Link: [DL_POLY.md](Dynamics/6.1_Classical_MD_Engines/DL_POLY.md)
-
-**225. OpenMD**
-- Confidence: VERIFIED
-- Resources: https://openmd.org/
-- Note: Open-source MD for condensed phase systems with unique features.
-- Link: [OpenMD.md](Dynamics/6.1_Classical_MD_Engines/OpenMD.md)
-
-**226. IMD**
-- Confidence: VERIFIED
-- Resources: https://imd.mpibpc.mpg.de/
-- Note: Interactive Molecular Dynamics for materials simulations.
-- Link: [IMD.md](Dynamics/6.1_Classical_MD_Engines/IMD.md)
-
-**226a. OpenMM**
-- Confidence: VERIFIED
-- Resources: https://openmm.org/
-- Note: High-performance GPU-accelerated MD toolkit with Python API and custom forces.
-- Link: [OpenMM.md](Dynamics/6.1_Classical_MD_Engines/OpenMM.md)
-
-**226b. HOOMD-blue**
-- Confidence: VERIFIED
-- Resources: https://github.com/glotzerlab/hoomd-blue
-- Note: GPU-accelerated MD and Monte Carlo for soft matter simulations.
-- Link: [HOOMD-blue.md](Dynamics/6.1_Classical_MD_Engines/HOOMD-blue.md)
-
-**226c. ESPResSo**
-- Confidence: VERIFIED
-- Resources: https://github.com/espressomd/espresso
-- Note: Extensible simulation package for soft matter with electrokinetics.
-- Link: [ESPResSo.md](Dynamics/6.1_Classical_MD_Engines/ESPResSo.md)
-
-**226d. ACEMD**
-- Confidence: VERIFIED
-- Resources: https://www.acellera.com/acemd
-- Note: GPU-accelerated MD engine (OpenMM-based) for biomolecular simulations.
-- Link: [ACEMD.md](Dynamics/6.1_Classical_MD_Engines/ACEMD.md)
-
-**226e. Tinker**
-- Confidence: VERIFIED
-- Resources: https://github.com/TinkerTools/tinker
-- Note: Molecular mechanics with AMOEBA polarizable force field.
-- Link: [Tinker.md](Dynamics/6.1_Classical_MD_Engines/Tinker.md)
-
-**226f. GENESIS**
-- Confidence: VERIFIED
-- Resources: https://www.r-ccs.riken.jp/labs/cbrt/
-- Note: High-performance parallel MD for large biomolecular systems (RIKEN).
-- Link: [GENESIS.md](Dynamics/6.1_Classical_MD_Engines/GENESIS.md)
-
-**226g. SPONGE**
-- Confidence: VERIFIED
-- Resources: https://spongemm.cn/en/home
-- Note: GPU-accelerated MD with MindSpore deep learning integration.
-- Link: [SPONGE.md](Dynamics/6.1_Classical_MD_Engines/SPONGE.md)
-
-**226h. Desmond**
-- Confidence: VERIFIED
-- Resources: https://www.schrodinger.com/platform/products/desmond/
-- Note: High-performance GPU MD for drug discovery (Schrödinger, commercial).
-- Link: [Desmond.md](Dynamics/6.1_Classical_MD_Engines/Desmond.md)
-
-### 6.2 Path Integral & Quantum Dynamics (3 tools)
-*Nuclear quantum effects via path integral molecular dynamics (PIMD), ring polymer MD*
-
-**227. i-PI**
+**219. i-PI**
 - Confidence: VERIFIED
 - Resources: https://ipi-code.org/
-- Note: Universal force engine for path integral MD and advanced nuclear quantum effects.
-- Link: [i-PI.md](Dynamics/6.2_Path_Integral_Quantum_Dynamics/i-PI.md)
 
-**227a. NQCDynamics.jl**
+**220. LAMMPS**
 - Confidence: VERIFIED
-- Resources: https://nqcd.github.io/NQCDynamics.jl/
-- Note: Julia package for nonadiabatic quantum-classical dynamics (RPMD, surface hopping).
-- Link: [NQCDynamics.md](Dynamics/6.2_Path_Integral_Quantum_Dynamics/NQCDynamics.md)
+- Resources: https://www.lammps.org/
 
-**227b. MixPI**
-- Confidence: VERIFIED
-- Resources: https://github.com/xuanleng/MixPI
-- Note: Mixed-time slicing path integral MD for efficient nuclear quantum effects.
-- Link: [MixPI.md](Dynamics/6.2_Path_Integral_Quantum_Dynamics/MixPI.md)
-
-### 6.3 Machine Learning Potentials (17 tools)
-*Neural network potentials and ML-driven force fields bridging DFT accuracy with classical MD speed*
-
-**228. N2P2**
-- Confidence: VERIFIED
-- Resources: https://github.com/CompPhysVienna/n2p2
-- Note: Neural network potential package based on Behler-Parrinello symmetry functions.
-- Link: [N2P2.md](Dynamics/6.3_Machine_Learning_Potentials/N2P2.md)
-
-**229. DeepMD-kit**
-- Confidence: VERIFIED
-- Resources: https://github.com/deepmodeling/deepmd-kit
-- Note: Deep learning-based molecular dynamics with Deep Potential models.
-- Link: [DeepMD-kit.md](Dynamics/6.3_Machine_Learning_Potentials/DeepMD-kit.md)
-
-**230. libAtoms/Quippy**
-- Confidence: VERIFIED
-- Resources: https://github.com/libatoms/libatoms
-- Note: Library for atomistic simulations with GAP (Gaussian Approximation Potentials).
-- Link: [libAtoms-Quippy.md](Dynamics/6.3_Machine_Learning_Potentials/libAtoms-Quippy.md)
-
-**230a. MACE**
-- Confidence: VERIFIED
-- Resources: https://github.com/ACEsuit/mace
-- Note: E(3)-equivariant message passing potentials with foundation models (MACE-MP, MACE-OFF).
-- Link: [MACE.md](Dynamics/6.3_Machine_Learning_Potentials/MACE.md)
-
-**230b. NequIP**
-- Confidence: VERIFIED
-- Resources: https://github.com/mir-group/nequip
-- Note: E(3)-equivariant neural network potentials with exceptional data efficiency.
-- Link: [NequIP.md](Dynamics/6.3_Machine_Learning_Potentials/NequIP.md)
-
-**230c. Allegro**
-- Confidence: VERIFIED
-- Resources: https://github.com/mir-group/allegro
-- Note: Scalable E(3)-equivariant deep learning potential for large-scale MD.
-- Link: [Allegro.md](Dynamics/6.3_Machine_Learning_Potentials/Allegro.md)
-
-**230d. TorchANI**
-- Confidence: VERIFIED
-- Resources: https://github.com/aiqm/torchani
-- Note: PyTorch ANI neural network potentials for organic molecules.
-- Link: [TorchANI.md](Dynamics/6.3_Machine_Learning_Potentials/TorchANI.md)
-
-**230e. FLARE**
-- Confidence: VERIFIED
-- Resources: https://github.com/mir-group/flare
-- Note: Bayesian active learning for on-the-fly potential training.
-- Link: [FLARE.md](Dynamics/6.3_Machine_Learning_Potentials/FLARE.md)
-
-**230f. AmpTorch**
-- Confidence: VERIFIED
-- Resources: https://github.com/ulissigroup/amptorch
-- Note: PyTorch implementation of Atomistic Machine-learning Package.
-- Link: [AmpTorch.md](Dynamics/6.3_Machine_Learning_Potentials/AmpTorch.md)
-
-**230g. CHGNet**
-- Confidence: VERIFIED
-- Resources: https://github.com/CederGroupHub/chgnet
-- Note: Charge-informed universal neural network potential for materials.
-- Link: [CHGNet.md](Dynamics/6.3_Machine_Learning_Potentials/CHGNet.md)
-
-**230h. M3GNet/MatGL**
-- Confidence: VERIFIED
-- Resources: https://github.com/materialsvirtuallab/matgl
-- Note: Universal materials graph neural network with 3-body interactions.
-- Link: [M3GNet.md](Dynamics/6.3_Machine_Learning_Potentials/M3GNet.md)
-
-**230i. SevenNet**
-- Confidence: VERIFIED
-- Resources: https://github.com/MDIL-SNU/SevenNet
-- Note: Multi-GPU parallel graph neural network potentials.
-- Link: [SevenNet.md](Dynamics/6.3_Machine_Learning_Potentials/SevenNet.md)
-
-**230j. AI2BMD**
-- Confidence: VERIFIED
-- Resources: https://github.com/microsoft/AI2BMD
-- Note: AI-powered ab initio biomolecular dynamics (Microsoft Research).
-- Link: [AI2BMD.md](Dynamics/6.3_Machine_Learning_Potentials/AI2BMD.md)
-
-**230k. SchNetPack**
-- Confidence: VERIFIED
-- Resources: https://github.com/atomistic-machine-learning/schnetpack
-- Note: Deep neural networks for atomistic systems (SchNet, PaiNN architectures).
-- Link: [SchNetPack.md](Dynamics/6.3_Machine_Learning_Potentials/SchNetPack.md)
-
-**230l. AMP**
-- Confidence: VERIFIED
-- Resources: https://amp.readthedocs.io/
-- Note: Atomistic Machine-learning Package with Behler-Parrinello symmetry functions.
-- Link: [AMP.md](Dynamics/6.3_Machine_Learning_Potentials/AMP.md)
-
-**230m. mlmod**
-- Confidence: VERIFIED
-- Resources: https://github.com/atzberg/mlmod
-- Note: ML package for LAMMPS with PyTorch model integration.
-- Link: [mlmod.md](Dynamics/6.3_Machine_Learning_Potentials/mlmod.md)
-
-### 6.4 Enhanced Sampling Methods (9 tools)
-*Free energy calculations, rare event sampling, and transition state finding methods*
-
-**231. PLUMED**
+**221. PLUMED**
 - Confidence: VERIFIED
 - Resources: https://www.plumed.org/
-- Note: Plugin for free energy calculations and enhanced sampling (metadynamics, umbrella sampling).
-- Link: [PLUMED.md](Dynamics/6.4_Enhanced_Sampling_Methods/PLUMED.md)
 
-**232. NEB**
+**222. GROMACS**
+- Confidence: VERIFIED
+- Resources: https://www.gromacs.org/
+
+**223. AMBER**
+- Confidence: VERIFIED
+- Resources: https://ambermd.org/
+
+**224. CHARMM**
+- Confidence: VERIFIED
+- Resources: https://www.charmm.org/
+
+**225. NAMD**
+- Confidence: VERIFIED
+- Resources: https://www.ks.uiuc.edu/Research/namd/
+
+**226. DL_POLY**
+- Confidence: VERIFIED
+- Resources: https://www.scd.stfc.ac.uk/Pages/DL_POLY.aspx
+
+**227. N2P2**
+- Confidence: VERIFIED
+- Resources: https://github.com/CompPhysVienna/n2p2
+
+**228. DeepMD-kit**
+- Confidence: VERIFIED
+- Resources: https://github.com/deepmodeling/deepmd-kit
+
+**229. OpenMD**
+- Confidence: VERIFIED
+- Resources: https://openmd.org/
+
+**230. IMD**
+- Confidence: VERIFIED
+- Resources: https://imd.mpibpc.mpg.de/
+
+**231. NEB**
 - Confidence: VERIFIED
 - Resources: **MODULE** - Implemented in VASP, ASE, etc.
-- Note: Nudged Elastic Band method for minimum energy path and transition state finding.
-- Link: [NEB.md](Dynamics/6.4_Enhanced_Sampling_Methods/NEB.md)
 
-**233. String methods**
+**232. String methods**
 - Confidence: VERIFIED
 - Resources: **MODULE** - Implemented in VASP, ASE, etc.
-- Note: String method variants for reaction pathway optimization.
-- Link: [String-methods.md](Dynamics/6.4_Enhanced_Sampling_Methods/String-methods.md)
 
-**234. Metadynamics**
+**233. Metadynamics**
 - Confidence: VERIFIED
 - Resources: **MODULE** - Implemented in PLUMED, ASE, CP2K.
-- Note: Enhanced sampling method for free energy landscapes using history-dependent bias.
-- Link: [Metadynamics.md](Dynamics/6.4_Enhanced_Sampling_Methods/Metadynamics.md)
 
-**234a. SSAGES**
+**234. libAtoms/Quippy**
 - Confidence: VERIFIED
-- Resources: https://github.com/SSAGESproject/SSAGES
-- Note: Software Suite for Advanced General Ensemble Simulations (C++).
-- Link: [SSAGES.md](Dynamics/6.4_Enhanced_Sampling_Methods/SSAGES.md)
-
-**234b. PySAGES**
-- Confidence: VERIFIED
-- Resources: https://github.com/SSAGESLabs/PySAGES
-- Note: GPU-accelerated Python enhanced sampling with JAX backend.
-- Link: [PySAGES.md](Dynamics/6.4_Enhanced_Sampling_Methods/PySAGES.md)
-
-**234c. OpenPathSampling**
-- Confidence: VERIFIED
-- Resources: https://github.com/openpathsampling/openpathsampling
-- Note: Python framework for transition path sampling (TPS, TIS).
-- Link: [OpenPathSampling.md](Dynamics/6.4_Enhanced_Sampling_Methods/OpenPathSampling.md)
-
-**234d. Colvars**
-- Confidence: VERIFIED
-- Resources: https://github.com/Colvars/colvars
-- Note: Collective variables library for NAMD, LAMMPS, GROMACS.
-- Link: [Colvars.md](Dynamics/6.4_Enhanced_Sampling_Methods/Colvars.md)
-
-**234e. WESTPA**
-- Confidence: VERIFIED
-- Resources: https://github.com/westpa/westpa
-- Note: Weighted Ensemble Simulation Toolkit for rare events.
-- Link: [WESTPA.md](Dynamics/6.4_Enhanced_Sampling_Methods/WESTPA.md)
-
-### 6.5 Analysis & Utilities (4 tools)
-*Trajectory analysis, coarse-graining, and workflow tools*
-
-**234f. HTMD**
-- Confidence: VERIFIED
-- Resources: https://github.com/Acellera/htmd
-- Note: High-Throughput MD for adaptive sampling and Markov state models.
-- Link: [HTMD.md](Dynamics/6.5_Analysis_Utilities/HTMD.md)
-
-**234g. VOTCA**
-- Confidence: VERIFIED
-- Resources: https://www.votca.org/
-- Note: Versatile toolkit for coarse-graining applications.
-- Link: [VOTCA.md](Dynamics/6.5_Analysis_Utilities/VOTCA.md)
-
-**234h. MDANSE**
-- Confidence: VERIFIED
-- Resources: https://github.com/ISISNeutronMuon/MDANSE
-- Note: MD Analysis for Neutron Scattering Experiments.
-- Link: [MDANSE.md](Dynamics/6.5_Analysis_Utilities/MDANSE.md)
-
-**234i. MDMC**
-- Confidence: VERIFIED
-- Resources: https://github.com/MDMCproject/MDMC
-- Note: MD Monte Carlo for refining simulations against experimental scattering data.
-- Link: [MDMC.md](Dynamics/6.5_Analysis_Utilities/MDMC.md)
-
-### 6.6 Differentiable MD (2 tools)
-*End-to-end differentiable molecular dynamics for machine learning integration*
-
-**234i. JAX-MD**
-- Confidence: VERIFIED
-- Resources: https://github.com/jax-md/jax-md
-- Note: Differentiable physics simulations in JAX with GPU/TPU acceleration.
-- Link: [JAX-MD.md](Dynamics/6.6_Differentiable_MD/JAX-MD.md)
-
-**234j. TorchMD**
-- Confidence: VERIFIED
-- Resources: https://github.com/torchmd/torchmd
-- Note: End-to-end differentiable MD engine using PyTorch.
-- Link: [TorchMD.md](Dynamics/6.6_Differentiable_MD/TorchMD.md)
-
-### 6.7 Interoperability & Drivers (2 tools)
-*Code coupling, multi-scale interfaces, and driver-based workflows*
+- Resources: https://github.com/libatoms/libatoms
 
 **235. MDI drivers**
 - Confidence: VERIFIED
 - Resources: https://molssi-mdi.github.io/
-- Note: MolSSI Driver Interface for coupling simulation codes.
-- Link: [MDI-MolSSI.md](Dynamics/6.7_Interoperability_Drivers/MDI-MolSSI.md)
-
-**235a. ASE**
-- Confidence: VERIFIED
-- Resources: https://wiki.fysik.dtu.dk/ase/
-- Note: Atomic Simulation Environment - unified Python interface to 50+ simulation codes.
-- Link: [ASE.md](Dynamics/6.7_Interoperability_Drivers/ASE.md)
 
 ---
 
 
-## CATEGORY 7: STRUCTURE PREDICTION (22 tools)
+## CATEGORY 7: STRUCTURE PREDICTION (47 tools)
+
+### 7.1 Global Optimization & Evolutionary Algorithms (17 tools)
+*Crystal structure prediction using evolutionary/genetic algorithms*
 
 **236. USPEX**
 - Confidence: CONFIRMED
 - Resources: https://uspex-team.org/
+- Link: [USPEX.md](StructurePrediction/7.1_Global_Optimization/USPEX.md)
 
 **237. XtalOpt**
 - Confidence: VERIFIED
 - Resources: https://xtalopt.github.io/
+- Link: [XtalOpt.md](StructurePrediction/7.1_Global_Optimization/XtalOpt.md)
 
 **238. CALYPSO**
 - Confidence: VERIFIED
 - Resources: http://www.calypso.cn/
+- Link: [CALYPSO.md](StructurePrediction/7.1_Global_Optimization/CALYPSO.md)
 
 **239. AIRSS**
 - Confidence: VERIFIED
 - Resources: https://airss-docs.github.io/
+- Link: [AIRSS.md](StructurePrediction/7.1_Global_Optimization/AIRSS.md)
 
 **240. GASP**
 - Confidence: VERIFIED
 - Resources: https://github.com/choi-bohyun/GASP
+- Link: [GASP.md](StructurePrediction/7.1_Global_Optimization/GASP.md)
 
 **241. MAISE**
 - Confidence: VERIFIED
 - Resources: https://github.com/tamercan/MAISE
+- Link: [MAISE.md](StructurePrediction/7.1_Global_Optimization/MAISE.md)
 
 **242. EVO**
-- Confidence: i checked it is a ppaer about evo but can not find any code for it 
+- Confidence: UNCERTAIN (paper only, no public code)
 - Resources: https://doi.org/10.1016/j.cpc.2013.02.007
+- Link: [EVO.md](StructurePrediction/7.1_Global_Optimization/EVO.md)
+
 **243. FLAME**
 - Confidence: VERIFIED
-- Resources: https://github.com/zhang-kai/FLAME (or similar research repo)
+- Resources: https://github.com/zhang-kai/FLAME
+- Link: [FLAME.md](StructurePrediction/7.1_Global_Optimization/FLAME.md)
+
+**243a. CrySPY**
+- Confidence: VERIFIED
+- Resources: https://github.com/Tomoki-YAMASHITA/CrySPY
+- Link: [CrySPY.md](StructurePrediction/7.1_Global_Optimization/CrySPY.md)
+
+**243b. GAtor**
+- Confidence: VERIFIED
+- Resources: https://arxiv.org/abs/1802.08602
+- Link: [GAtor.md](StructurePrediction/7.1_Global_Optimization/GAtor.md)
+
+**243c. Genarris**
+- Confidence: VERIFIED
+- Resources: https://github.com/timcrose/Genarris
+- Link: [Genarris.md](StructurePrediction/7.1_Global_Optimization/Genarris.md)
+
+**243d. PyChemia**
+- Confidence: VERIFIED
+- Resources: https://github.com/MaterialsDiscovery/PyChemia
+- Link: [PyChemia.md](StructurePrediction/7.1_Global_Optimization/PyChemia.md)
+
+**243e. AGOX**
+- Confidence: VERIFIED
+- Resources: https://github.com/kimrojas/agox
+- Link: [AGOX.md](StructurePrediction/7.1_Global_Optimization/AGOX.md)
+
+**243f. ParetoCSP**
+- Confidence: VERIFIED
+- Resources: https://github.com/sadmanomee/ParetoCSP
+- Link: [ParetoCSP.md](StructurePrediction/7.1_Global_Optimization/ParetoCSP.md)
+
+**243g. StructOpt**
+- Confidence: VERIFIED
+- Resources: https://github.com/uw-cmg/StructOpt_modular
+- Link: [StructOpt.md](StructurePrediction/7.1_Global_Optimization/StructOpt.md)
+
+**243h. MGAC**
+- Confidence: VERIFIED
+- Resources: https://github.com/MGAC-group/MGAC2
+- Link: [MGAC.md](StructurePrediction/7.1_Global_Optimization/MGAC.md)
+
+### 7.2 Basin Hopping & Local Optimization (4 tools)
+*Energy landscape exploration methods*
 
 **244. Basin hopping**
 - Confidence: VERIFIED
-- Resources: **ALGORITHM** - Implemented in ASE, OpenBabel.
+- Resources: **ALGORITHM** - Implemented in ASE, OpenBabel
+- Link: [Basin-hopping.md](StructurePrediction/7.2_Basin_Hopping/Basin-hopping.md)
 
-**245. HTOCSP**
-- Confidence: UNCERTAIN
-- Resources: **UNKNOWN** - Likely acronym for High Throughput Organic Crystal Structure Prediction (specific group code).
-
-**246. PyXtal**
+**244a. TGMin**
 - Confidence: VERIFIED
-- Resources: https://github.com/qzhu2017/PyXtal
-
-**247. PXRDGen**
-- Confidence: VERIFIED
-- Resources: https://github.com/TamVNX/PXRDGen
-
-**248. OpenCSP**
-- Confidence: VERIFIED
-- Resources: https://github.com/ajf396/OpenCSP
+- Resources: Nano Res. 10, 3407 (2017)
+- Link: [TGMin.md](StructurePrediction/7.2_Basin_Hopping/TGMin.md)
 
 **249. GMIN**
 - Confidence: VERIFIED
 - Resources: https://www-wales.ch.cam.ac.uk/GMIN/
-
-**250. ASE-GA**
-- Confidence: VERIFIED
-- Resources: https://wiki.fysik.dtu.dk/ase/ase/ga.html
+- Link: [GMIN.md](StructurePrediction/7.2_Basin_Hopping/GMIN.md)
 
 **251. ASE-BasinHopping**
 - Confidence: VERIFIED
 - Resources: https://wiki.fysik.dtu.dk/ase/ase/optimize.html
+- Link: [ASE-BasinHopping.md](StructurePrediction/7.2_Basin_Hopping/ASE-BasinHopping.md)
+
+### 7.3 Crystal Structure Generation (14 tools)
+*Tools for generating and manipulating crystal structures*
+
+**245. HTOCSP**
+- Confidence: VERIFIED
+- Resources: https://github.com/MaterSim/HTOCSP
+- Link: [HTOCSP.md](StructurePrediction/7.3_Crystal_Generation/HTOCSP.md)
+
+**246. PyXtal**
+- Confidence: VERIFIED
+- Resources: https://github.com/qzhu2017/PyXtal
+- Link: [PyXtal.md](StructurePrediction/7.3_Crystal_Generation/PyXtal.md)
+
+**247. PXRDGen**
+- Confidence: VERIFIED
+- Resources: https://github.com/TamVNX/PXRDGen
+- Link: [PXRDGen.md](StructurePrediction/7.3_Crystal_Generation/PXRDGen.md)
+
+**248. OpenCSP**
+- Confidence: VERIFIED
+- Resources: https://github.com/ajf396/OpenCSP
+- Link: [OpenCSP.md](StructurePrediction/7.3_Crystal_Generation/OpenCSP.md)
+
+**250. ASE-GA**
+- Confidence: VERIFIED
+- Resources: https://wiki.fysik.dtu.dk/ase/ase/ga.html
+- Link: [ASE-GA.md](StructurePrediction/7.3_Crystal_Generation/ASE-GA.md)
 
 **252. MUSE**
 - Confidence: VERIFIED
 - Resources: https://github.com/MUSE-group/MUSE
+- Link: [MUSE.md](StructurePrediction/7.3_Crystal_Generation/MUSE.md)
 
 **253. PyMaterial-Search**
 - Confidence: UNCERTAIN
-- Resources: **UNKNOWN** - Likely a specific script or private repo.
+- Resources: **UNKNOWN** - Likely a specific script or private repo
+- Link: [PyMaterial-Search.md](StructurePrediction/7.3_Crystal_Generation/PyMaterial-Search.md)
 
 **254. PyMetadynamics**
 - Confidence: VERIFIED
-- Resources: **MODULE** - Part of PLUMED/ASE ecosystem.
+- Resources: **MODULE** - Part of PLUMED/ASE ecosystem
+- Link: [PyMetadynamics.md](StructurePrediction/7.3_Crystal_Generation/PyMetadynamics.md)
+
+**254a. RandSpg**
+- Confidence: VERIFIED
+- Resources: https://github.com/xtalopt/randSpg
+- Link: [RandSpg.md](StructurePrediction/7.3_Crystal_Generation/RandSpg.md)
+
+**254b. SOPRANO**
+- Confidence: VERIFIED
+- Resources: https://github.com/CCP-NC/soprano
+- Link: [SOPRANO.md](StructurePrediction/7.3_Crystal_Generation/SOPRANO.md)
+
+**254c. pyocse**
+- Confidence: VERIFIED
+- Resources: https://github.com/MaterSim/pyocse
+- Link: [pyocse.md](StructurePrediction/7.3_Crystal_Generation/pyocse.md)
+
+**254d. TCSP**
+- Confidence: VERIFIED
+- Resources: https://arxiv.org/abs/2111.14049
+- Link: [TCSP.md](StructurePrediction/7.3_Crystal_Generation/TCSP.md)
+
+**254e. CrySPR**
+- Confidence: VERIFIED
+- Resources: https://github.com/Tosykie/CrySPR
+- Link: [CrySPR.md](StructurePrediction/7.3_Crystal_Generation/CrySPR.md)
+
+**254f. CSPBench**
+- Confidence: VERIFIED
+- Resources: https://github.com/usccolumbia/cspbenchmark
+- Link: [CSPBench.md](StructurePrediction/7.3_Crystal_Generation/CSPBench.md)
+
+### 7.4 ML-Accelerated Structure Prediction (10 tools)
+*Machine learning enhanced prediction methods*
 
 **255. MaterialsProject-ML**
 - Confidence: VERIFIED
 - Resources: https://materialsproject.org/
+- Link: [MaterialsProject-ML.md](StructurePrediction/7.4_ML_Accelerated/MaterialsProject-ML.md)
 
 **256. PyXtal-ML**
 - Confidence: VERIFIED
 - Resources: https://github.com/qzhu2017/PyXtal
+- Link: [PyXtal-ML.md](StructurePrediction/7.4_ML_Accelerated/PyXtal-ML.md)
 
 **257. Oganov-ML**
 - Confidence: UNCERTAIN
-- Resources: **RESEARCH CODE** - Part of USPEX ML features, no separate public link.
+- Resources: **RESEARCH CODE** - Part of USPEX ML features
+- Link: [Oganov-ML.md](StructurePrediction/7.4_ML_Accelerated/Oganov-ML.md)
+
+**257a. CSPML**
+- Confidence: VERIFIED
+- Resources: https://github.com/Minoru938/CSPML
+- Link: [CSPML.md](StructurePrediction/7.4_ML_Accelerated/CSPML.md)
+
+**257b. CrySPAI**
+- Confidence: VERIFIED
+- Resources: https://arxiv.org/abs/2501.15838
+- Link: [CrySPAI.md](StructurePrediction/7.4_ML_Accelerated/CrySPAI.md)
+
+**257c. GNOA**
+- Confidence: VERIFIED
+- Resources: https://www.nature.com/articles/s41467-022-29241-4
+- Link: [GNOA.md](StructurePrediction/7.4_ML_Accelerated/GNOA.md)
+
+**257d. PyMCSP**
+- Confidence: VERIFIED
+- Resources: https://github.com/polbeni/PyMCSP
+- Link: [PyMCSP.md](StructurePrediction/7.4_ML_Accelerated/PyMCSP.md)
+
+### 7.5 Generative Models (12 tools)
+*Deep learning generative models for crystal structure*
+
+**257e. CDVAE**
+- Confidence: VERIFIED
+- Resources: https://github.com/txie-93/cdvae
+- Link: [CDVAE.md](StructurePrediction/7.5_Generative_Models/CDVAE.md)
+
+**257f. DiffCSP**
+- Confidence: VERIFIED
+- Resources: https://github.com/jiaor17/DiffCSP
+- Link: [DiffCSP.md](StructurePrediction/7.5_Generative_Models/DiffCSP.md)
+
+**257g. MatterGen**
+- Confidence: VERIFIED
+- Resources: https://github.com/microsoft/mattergen
+- Link: [MatterGen.md](StructurePrediction/7.5_Generative_Models/MatterGen.md)
+
+**257h. GNoME**
+- Confidence: VERIFIED
+- Resources: https://github.com/google-deepmind/materials_discovery
+- Link: [GNoME.md](StructurePrediction/7.5_Generative_Models/GNoME.md)
+
+**257i. FlowMM**
+- Confidence: VERIFIED
+- Resources: https://github.com/facebookresearch/flowmm
+- Link: [FlowMM.md](StructurePrediction/7.5_Generative_Models/FlowMM.md)
+
+**257j. CrystalFlow**
+- Confidence: VERIFIED
+- Resources: https://github.com/ixsluo/CrystalFlow
+- Link: [CrystalFlow.md](StructurePrediction/7.5_Generative_Models/CrystalFlow.md)
+
+**257k. EquiCSP**
+- Confidence: VERIFIED
+- Resources: https://github.com/EmperorJia/EquiCSP
+- Link: [EquiCSP.md](StructurePrediction/7.5_Generative_Models/EquiCSP.md)
+
+**257l. SyMat**
+- Confidence: VERIFIED
+- Resources: https://arxiv.org/abs/2307.02707
+- Link: [SyMat.md](StructurePrediction/7.5_Generative_Models/SyMat.md)
+
+**257m. OMatG**
+- Confidence: VERIFIED
+- Resources: https://github.com/FERMat-ML/OMatG
+- Link: [OMatG.md](StructurePrediction/7.5_Generative_Models/OMatG.md)
+
+**257n. AlphaCrystal**
+- Confidence: VERIFIED
+- Resources: https://github.com/usccolumbia/AlphaCrystal
+- Link: [AlphaCrystal.md](StructurePrediction/7.5_Generative_Models/AlphaCrystal.md)
+
+**257o. CrystalGAN**
+- Confidence: VERIFIED
+- Resources: https://pubs.acs.org/doi/10.1021/acscentsci.0c00426
+- Link: [CrystalGAN.md](StructurePrediction/7.5_Generative_Models/CrystalGAN.md)
+
+**257p. ICSG3D**
+- Confidence: VERIFIED
+- Resources: https://github.com/by256/icsg3d
+- Link: [ICSG3D.md](StructurePrediction/7.5_Generative_Models/ICSG3D.md)
 
 ---
 
@@ -3402,41 +3190,7 @@ https://iopscience.iop.org/article/10.1088/1361-648X/ab699e
 
 ---
 
-## CATEGORY 10: NICHE & ML (47 tools)
-
-### 10.1 Spin Dynamics
-
-**355a. Sunny.jl**
-- Confidence: VERIFIED
-- Resources: https://github.com/SunnySuite/Sunny.jl
-- Note: SU(N) spin dynamics, LLG, and LSWT in Julia.
-- Link: [Sunny.jl.md](Niche/Spin_Dynamics/Sunny.jl.md)
-
-**355b. SpinMC.jl**
-- Confidence: VERIFIED
-- Resources: https://github.com/fbuessen/SpinMC.jl
-- Note: Classical Monte Carlo for lattice spin models.
-- Link: [SpinMC.jl.md](Niche/Spin_Dynamics/SpinMC.jl.md)
-
-**355c. Spirit**
-- Confidence: VERIFIED
-- Resources: https://spirit-code.github.io/
-- Note: Atomistic spin dynamics framework.
-- Link: [Spirit.md](Niche/Spin_Dynamics/Spirit.md)
-
-**355d. UppASD**
-- Confidence: VERIFIED
-- Resources: https://github.com/UppASD/UppASD
-- Note: Uppsala Atomistic Spin Dynamics code.
-- Link: [UppASD.md](Niche/Spin_Dynamics/UppASD.md)
-
-**355e. PolaronMobility.jl**
-- Confidence: VERIFIED
-- Resources: https://github.com/Frost-group/PolaronMobility.jl
-- Note: Feynman variational path-integral for Fröhlich/Holstein polarons.
-- Link: [PolaronMobility.jl.md](Niche/PolaronMobility.jl.md)
-
-### 10.2 Machine Learning & Specialized
+## CATEGORY 10: NICHE & ML (43 tools)
 
 **355-372. [ML and specialized tools]**
 - **MLIP**: https://mlip.org/
