@@ -62,40 +62,29 @@ phonon-sed (pSED) is a Python code to calculate the phonon spectral energy densi
 
 
 ## Advanced Features
+- **Normal mode decomposition**: Phonon-resolved analysis
+- **Fourier transform**: Velocity autocorrelation processing
+- **Temperature dependence**: Finite-temperature phonon properties
+- **Linewidth extraction**: Phonon lifetime analysis
+- **LAMMPS integration**: Direct trajectory processing
 
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+## Performance Characteristics
+- Python-based: Moderate speed
+- FFT-limited: Scales with trajectory length
+- Memory: Depends on system size and trajectory
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
-
+- MD simulation: Dominant cost (external)
+- SED calculation: Minutes to hours
+- Depends on trajectory length and system size
+- Long trajectories needed for frequency resolution
 
 ## Best Practices
-
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
-
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+- Use sufficiently long MD trajectories (>100 ps)
+- Equilibrate system before production run
+- Check frequency resolution vs trajectory length
+- Validate against harmonic phonon calculations
+- Compare with experimental spectroscopy when available
 
 ## Limitations & Known Constraints
 - Requires long MD trajectories

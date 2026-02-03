@@ -50,40 +50,26 @@
 
 
 ## Advanced Features
-
-### Core Capabilities:
-- Detailed feature implementation
-- Advanced algorithms and methods
-- Specialized functionality
-- Integration capabilities
-
-### Performance Optimizations:
-- Computational efficiency features
-- Scalability enhancements
-- Memory management
-- Parallel processing support
-
+- **Iterative BTE**: Full solution beyond relaxation time approximation
+- **Wigner transport**: Particle-like and wave-like heat transport
+- **Tetrahedron method**: Accurate Brillouin zone integration
+- **HDF5 storage**: Efficient handling of large FC3 data
+- **Python API**: Flexible scripting and automation
+- **OpenMP parallelization**: Efficient BTE solver
 
 ## Computational Cost
-- **Setup**: Preprocessing requirements
-- **Main calculation**: Primary computational cost
-- **Post-processing**: Analysis overhead
-- **Overall**: Total resource requirements
-
+- Force constant generation: Extremely expensive (N² to N³ DFT calculations)
+- BTE solution: Hours to days (OpenMP parallelized)
+- Memory: FC3 storage can be intensive for large cells
+- Overall: Significantly more expensive than harmonic calculations
 
 ## Best Practices
-
-### Workflow:
-- Follow recommended procedures
-- Validate inputs and outputs
-- Check convergence criteria
-- Document methodology
-
-### Optimization:
-- Use appropriate parameters
-- Monitor resource usage
-- Validate results
-- Compare with benchmarks
+- Converge supercell size systematically
+- Use appropriate cutoff distances for FC3
+- Test RTA vs iterative BTE convergence
+- Validate against experimental thermal conductivity
+- Use HDF5 format for large datasets
+- Check q-point grid convergence
 
 ## Performance Characteristics
 - **Computational Cost**: The bottleneck is the generation of forces for supercells with 2-atom displacements (scaling roughly as $N_{atoms}^2$ or $N_{atoms}^3$ depending on cutoff).
