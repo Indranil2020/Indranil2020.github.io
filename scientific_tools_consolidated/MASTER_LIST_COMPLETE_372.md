@@ -2781,70 +2781,311 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 ---
 
-## CATEGORY 8: POST-PROCESSING (60 tools)
+## CATEGORY 8: POST-PROCESSING (105 tools)
 
-### 8.1 Band Structure & Electronic Analysis (12 tools)
+### 8.1 Band Structure & Electronic Analysis (57 tools)
 *Tools for analyzing electronic band structures, Fermi surfaces, and k-path generation*
+
+#### 8.1.1 Band Structure & DOS Visualization (23 tools)
 
 **258. vaspkit**
 - Confidence: VERIFIED
 - Resources: https://vaspkit.com/
-- Link: [vaspkit.md](Post-Processing/8.1_Band_Structure_Electronic/vaspkit.md)
+- Link: [vaspkit.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/vaspkit.md)
 
 **259. sumo**
 - Confidence: VERIFIED
 - Resources: https://sumo.readthedocs.io/
-- Link: [sumo.md](Post-Processing/8.1_Band_Structure_Electronic/sumo.md)
+- Link: [sumo.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/sumo.md)
 
 **260. pyprocar**
 - Confidence: VERIFIED
 - Resources: https://pyprocar.readthedocs.io/
-- Link: [pyprocar.md](Post-Processing/8.1_Band_Structure_Electronic/pyprocar.md)
-
-**261. PyARPES**
-- Confidence: VERIFIED
-- Resources: https://arpes.github.io/PyARPES/
-- Link: [PyARPES.md](Post-Processing/8.1_Band_Structure_Electronic/PyARPES.md)
-
-**262. BandUP**
-- Confidence: VERIFIED
-- Resources: https://www.bandupcode.com/
-- Link: [BandUP.md](Post-Processing/8.1_Band_Structure_Electronic/BandUP.md)
-
-**263. fold2Bloch**
-- Confidence: VERIFIED
-- Resources: https://github.com/qsnake/fold2Bloch
-- Link: [fold2Bloch.md](Post-Processing/8.1_Band_Structure_Electronic/fold2Bloch.md)
-
-**264. FermiSurfer**
-- Confidence: VERIFIED
-- Resources: https://fermisurfer.osdn.jp/
-- Link: [FermiSurfer.md](Post-Processing/8.1_Band_Structure_Electronic/FermiSurfer.md)
-
-**266. SeeK-path**
-- Confidence: VERIFIED
-- Resources: https://seekpath.readthedocs.io/
-- Link: [SeeK-path.md](Post-Processing/8.1_Band_Structure_Electronic/SeeK-path.md)
-
-**267. PyProcar-Unfold**
-- Confidence: VERIFIED
-- Resources: https://pyprocar.readthedocs.io/
-- Link: [PyProcar-Unfold.md](Post-Processing/8.1_Band_Structure_Electronic/PyProcar-Unfold.md)
-
-**269. effectivemass**
-- Confidence: VERIFIED
-- Resources: https://github.com/aflow/effectivemass
-- Link: [effectivemass.md](Post-Processing/8.1_Band_Structure_Electronic/effectivemass.md)
-
-**308. AutoBZ.jl**
-- Confidence: VERIFIED
-- Resources: https://github.com/JuliaQuantum/AutoBZCore.jl
-- Link: [AutoBZ.jl.md](Post-Processing/8.1_Band_Structure_Electronic/AutoBZ.jl.md)
+- Link: [pyprocar.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/pyprocar.md)
 
 **309. yambopy**
 - Confidence: VERIFIED
 - Resources: https://github.com/yambo-code/yambopy
-- Link: [yambopy.md](Post-Processing/8.1_Band_Structure_Electronic/yambopy.md)
+- Link: [yambopy.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/yambopy.md)
+
+**258a. vaspvis**
+- Confidence: VERIFIED
+- Resources: https://github.com/DerekDardzinski/vaspvis
+- Link: [vaspvis.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/vaspvis.md)
+
+**258b. py4vasp**
+- Confidence: VERIFIED
+- Resources: https://github.com/vasp-dev/py4vasp
+- Link: [py4vasp.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/py4vasp.md)
+
+**258c. p4vasp**
+- Confidence: VERIFIED
+- Resources: http://www.p4vasp.at/
+- Link: [p4vasp.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/p4vasp.md)
+
+**258d. QEPlotter**
+- Confidence: VERIFIED
+- Resources: Quantum ESPRESSO plotting toolkit
+- Link: [QEPlotter.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/QEPlotter.md)
+
+**258e. QEView**
+- Confidence: VERIFIED
+- Resources: Quantum ESPRESSO visualization
+- Link: [QEView.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/QEView.md)
+
+**258f. postqe**
+- Confidence: VERIFIED
+- Resources: https://github.com/QEF/postqe
+- Link: [postqe.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/postqe.md)
+
+**258g. abipy**
+- Confidence: VERIFIED
+- Resources: https://github.com/abinit/abipy
+- Link: [abipy.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/abipy.md)
+
+**258h. vaspy**
+- Confidence: VERIFIED
+- Resources: https://github.com/arafune/vaspy
+- Link: [vaspy.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/vaspy.md)
+
+**258i. vasppy**
+- Confidence: VERIFIED
+- Resources: https://github.com/bjmorgan/vasppy
+- Link: [vasppy.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/vasppy.md)
+
+**258j. VASPy**
+- Confidence: VERIFIED
+- Resources: https://github.com/PytLab/VASPy
+- Link: [VASPy.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/VASPy.md)
+
+**258k. masci-tools**
+- Confidence: VERIFIED
+- Resources: https://github.com/JuDFTteam/masci-tools
+- Link: [masci-tools.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/masci-tools.md)
+
+**258l. ElkOpticsAnalyzer**
+- Confidence: VERIFIED
+- Resources: Elk optics output analyzer
+- Link: [ElkOpticsAnalyzer.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/ElkOpticsAnalyzer.md)
+
+**258m. aims_DosBand**
+- Confidence: VERIFIED
+- Resources: FHI-aims band/DOS plotter
+- Link: [aims_DosBand.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/aims_DosBand.md)
+
+**258n. aimstools**
+- Confidence: VERIFIED
+- Resources: FHI-aims Python analysis toolkit
+- Link: [aimstools.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/aimstools.md)
+
+**258o. sisl**
+- Confidence: VERIFIED
+- Resources: https://github.com/zerothi/sisl
+- Link: [sisl.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/sisl.md)
+
+**258p. JARVIS-Tools**
+- Confidence: VERIFIED
+- Resources: https://github.com/usnistgov/jarvis
+- Link: [JARVIS-Tools.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/JARVIS-Tools.md)
+
+**258q. OrbVis**
+- Confidence: VERIFIED
+- Resources: https://github.com/staradutt/OrbVis
+- Link: [OrbVis.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/OrbVis.md)
+
+**258r. bands4vasp**
+- Confidence: VERIFIED
+- Resources: https://github.com/QuantumMaterialsModelling/bands4vasp
+- Link: [bands4vasp.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/bands4vasp.md)
+
+**258s. matminer**
+- Confidence: VERIFIED
+- Resources: https://github.com/hackingmaterials/matminer
+- Link: [matminer.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/matminer.md)
+
+**258t. blaze2d**
+- Confidence: VERIFIED
+- Resources: Rust 2D photonic crystal band solver
+- Link: [blaze2d.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/blaze2d.md)
+
+**258u. aiida-kkr**
+- Confidence: VERIFIED
+- Resources: https://github.com/JuDFTteam/aiida-kkr
+- Link: [aiida-kkr.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/aiida-kkr.md)
+
+**258v. aiida-fleur**
+- Confidence: VERIFIED
+- Resources: https://github.com/JuDFTteam/aiida-fleur
+- Link: [aiida-fleur.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/aiida-fleur.md)
+
+#### 8.1.2 Band Unfolding (8 tools)
+
+**262. BandUP**
+- Confidence: VERIFIED
+- Resources: https://www.bandupcode.com/
+- Link: [BandUP.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.2_Band_Unfolding/BandUP.md)
+
+**263. fold2Bloch**
+- Confidence: VERIFIED
+- Resources: https://github.com/qsnake/fold2Bloch
+- Link: [fold2Bloch.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.2_Band_Unfolding/fold2Bloch.md)
+
+**267. PyProcar-Unfold**
+- Confidence: VERIFIED
+- Resources: https://pyprocar.readthedocs.io/
+- Link: [PyProcar-Unfold.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.2_Band_Unfolding/PyProcar-Unfold.md)
+
+**262a. easyunfold**
+- Confidence: VERIFIED
+- Resources: https://github.com/SMTG-Bham/easyunfold
+- Link: [easyunfold.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.2_Band_Unfolding/easyunfold.md)
+
+**262b. banduppy**
+- Confidence: VERIFIED
+- Resources: https://github.com/band-unfolding/banduppy
+- Link: [banduppy.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.2_Band_Unfolding/banduppy.md)
+
+**262c. VaspBandUnfolding**
+- Confidence: VERIFIED
+- Resources: https://github.com/QijingZheng/VaspBandUnfolding
+- Link: [VaspBandUnfolding.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.2_Band_Unfolding/VaspBandUnfolding.md)
+
+**262d. vasp_unfold**
+- Confidence: VERIFIED
+- Resources: https://github.com/tomkeus/vasp_unfold
+- Link: [vasp_unfold.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.2_Band_Unfolding/vasp_unfold.md)
+
+**262e. fold2Bloch-VASP**
+- Confidence: VERIFIED
+- Resources: https://github.com/rubel75/fold2Bloch-VASP
+- Link: [fold2Bloch-VASP.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.2_Band_Unfolding/fold2Bloch-VASP.md)
+
+#### 8.1.3 Fermi Surface (4 tools)
+
+**264. FermiSurfer**
+- Confidence: VERIFIED
+- Resources: https://fermisurfer.osdn.jp/
+- Link: [FermiSurfer.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.3_Fermi_Surface/FermiSurfer.md)
+
+**308. AutoBZ.jl**
+- Confidence: VERIFIED
+- Resources: https://github.com/JuliaQuantum/AutoBZCore.jl
+- Link: [AutoBZ.jl.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.3_Fermi_Surface/AutoBZ.jl.md)
+
+**264a. IFermi**
+- Confidence: VERIFIED
+- Resources: https://github.com/fermisurfaces/IFermi
+- Link: [IFermi.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.3_Fermi_Surface/IFermi.md)
+
+**264b. py_FS**
+- Confidence: VERIFIED
+- Resources: https://github.com/TheoWeinberger/py_FS
+- Link: [py_FS.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.3_Fermi_Surface/py_FS.md)
+
+#### 8.1.4 ARPES & Photoemission (5 tools)
+
+**261. PyARPES**
+- Confidence: VERIFIED
+- Resources: https://arpes.github.io/PyARPES/
+- Link: [PyARPES.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.4_ARPES_Photoemission/PyARPES.md)
+
+**261a. ARPESGUI**
+- Confidence: VERIFIED
+- Resources: MATLAB GUI for SX-ARPES analysis
+- Link: [ARPESGUI.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.4_ARPES_Photoemission/ARPESGUI.md)
+
+**261b. fuller**
+- Confidence: VERIFIED
+- Resources: ML-based band structure reconstruction
+- Link: [fuller.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.4_ARPES_Photoemission/fuller.md)
+
+**261c. mpes**
+- Confidence: VERIFIED
+- Resources: Multidimensional photoemission spectroscopy toolkit
+- Link: [mpes.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.4_ARPES_Photoemission/mpes.md)
+
+**261d. peaks**
+- Confidence: VERIFIED
+- Resources: Modern Python ARPES analysis framework
+- Link: [peaks.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.4_ARPES_Photoemission/peaks.md)
+
+#### 8.1.5 Effective Mass & Band Analysis (4 tools)
+
+**269. effectivemass**
+- Confidence: VERIFIED
+- Resources: https://github.com/aflow/effectivemass
+- Link: [effectivemass.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.5_Effective_Mass/effectivemass.md)
+
+**266. SeeK-path**
+- Confidence: VERIFIED
+- Resources: https://seekpath.readthedocs.io/
+- Link: [SeeK-path.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.5_Effective_Mass/SeeK-path.md)
+
+**269a. effmass**
+- Confidence: VERIFIED
+- Resources: https://github.com/lucydot/effmass
+- Link: [effmass.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.5_Effective_Mass/effmass.md)
+
+**269b. Effective-mass-fitting**
+- Confidence: VERIFIED
+- Resources: PyQt parabolic band fitting app
+- Link: [Effective-mass-fitting.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.5_Effective_Mass/Effective-mass-fitting.md)
+
+#### 8.1.6 Tight-Binding & Models (6 tools)
+
+**269c. pysktb**
+- Confidence: VERIFIED
+- Resources: Slater-Koster tight-binding topological solver
+- Link: [pysktb.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.6_Tight_Binding/pysktb.md)
+
+**269d. tightbinder**
+- Confidence: VERIFIED
+- Resources: Python tight-binding framework
+- Link: [tightbinder.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.6_Tight_Binding/tightbinder.md)
+
+**269e. TightBinding.jl**
+- Confidence: VERIFIED
+- Resources: Julia high-performance TB package
+- Link: [TightBinding.jl.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.6_Tight_Binding/TightBinding.jl.md)
+
+**269f. NanoNet**
+- Confidence: VERIFIED
+- Resources: TB for nanostructures
+- Link: [NanoNet.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.6_Tight_Binding/NanoNet.md)
+
+**269g. UltimateEPM**
+- Confidence: VERIFIED
+- Resources: Empirical pseudopotential method
+- Link: [UltimateEPM.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.6_Tight_Binding/UltimateEPM.md)
+
+**269h. elphem**
+- Confidence: VERIFIED
+- Resources: Electron-phonon with empty lattice
+- Link: [elphem.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.6_Tight_Binding/elphem.md)
+
+#### 8.1.7 K-Path & Brillouin Zone (3 tools)
+
+**269i. kgrid**
+- Confidence: VERIFIED
+- Resources: https://github.com/WMD-group/kgrid
+- Link: [kgrid.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.7_K_Path_BZ/kgrid.md)
+
+**269j. KpLib**
+- Confidence: VERIFIED
+- Resources: https://gitlab.com/muellergroup/kplib
+- Link: [KpLib.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.7_K_Path_BZ/KpLib.md)
+
+**269k. Brillouin-zone-navigator**
+- Confidence: VERIFIED
+- Resources: Interactive BZ visualization
+- Link: [Brillouin-zone-navigator.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.7_K_Path_BZ/Brillouin-zone-navigator.md)
+
+#### 8.1.8 Wavefunction Analysis (1 tool)
+
+**269l. pawpyseed**
+- Confidence: VERIFIED
+- Resources: https://github.com/kylebystrom/pawpyseed
+- Link: [pawpyseed.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.8_Wavefunction_Analysis/pawpyseed.md)
 
 ### 8.2 Topological & Symmetry Analysis (5 tools)
 *Irreducible representations, Berry phase, Chern numbers*
