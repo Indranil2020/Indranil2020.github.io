@@ -2783,250 +2783,342 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 ## CATEGORY 8: POST-PROCESSING (60 tools)
 
+### 8.1 Band Structure & Electronic Analysis (12 tools)
+*Tools for analyzing electronic band structures, Fermi surfaces, and k-path generation*
+
 **258. vaspkit**
 - Confidence: VERIFIED
 - Resources: https://vaspkit.com/
+- Link: [vaspkit.md](Post-Processing/8.1_Band_Structure_Electronic/vaspkit.md)
 
 **259. sumo**
 - Confidence: VERIFIED
 - Resources: https://sumo.readthedocs.io/
+- Link: [sumo.md](Post-Processing/8.1_Band_Structure_Electronic/sumo.md)
 
 **260. pyprocar**
 - Confidence: VERIFIED
 - Resources: https://pyprocar.readthedocs.io/
+- Link: [pyprocar.md](Post-Processing/8.1_Band_Structure_Electronic/pyprocar.md)
 
 **261. PyARPES**
 - Confidence: VERIFIED
 - Resources: https://arpes.github.io/PyARPES/
+- Link: [PyARPES.md](Post-Processing/8.1_Band_Structure_Electronic/PyARPES.md)
 
 **262. BandUP**
 - Confidence: VERIFIED
 - Resources: https://www.bandupcode.com/
+- Link: [BandUP.md](Post-Processing/8.1_Band_Structure_Electronic/BandUP.md)
 
 **263. fold2Bloch**
 - Confidence: VERIFIED
 - Resources: https://github.com/qsnake/fold2Bloch
+- Link: [fold2Bloch.md](Post-Processing/8.1_Band_Structure_Electronic/fold2Bloch.md)
 
 **264. FermiSurfer**
 - Confidence: VERIFIED
 - Resources: https://fermisurfer.osdn.jp/
-
-**265. irvsp**
-- Confidence: VERIFIED
-- Resources: https://github.com/zjwang11/irvsp
+- Link: [FermiSurfer.md](Post-Processing/8.1_Band_Structure_Electronic/FermiSurfer.md)
 
 **266. SeeK-path**
 - Confidence: VERIFIED
 - Resources: https://seekpath.readthedocs.io/
+- Link: [SeeK-path.md](Post-Processing/8.1_Band_Structure_Electronic/SeeK-path.md)
 
 **267. PyProcar-Unfold**
 - Confidence: VERIFIED
 - Resources: https://pyprocar.readthedocs.io/
-
-**268. IrRep**
-- Confidence: VERIFIED
-- Resources: https://github.com/stepan-tsirkin/irrep
-- Link: [IrRep.md](TightBinding/Topological_Analysis/IrRep.md)
+- Link: [PyProcar-Unfold.md](Post-Processing/8.1_Band_Structure_Electronic/PyProcar-Unfold.md)
 
 **269. effectivemass**
 - Confidence: VERIFIED
 - Resources: https://github.com/aflow/effectivemass
-
-**270. BerryPI**
-- Confidence: VERIFIED
-- Resources: https://github.com/stepan-tsirkin/berryphase
-
-**271. Chern-Number**
-- Confidence: VERIFIED
-- Resources: https://github.com/stepan-tsirkin/chern-number
-
-**272. Berry-Phase**
-- Confidence: VERIFIED
-- Resources: **METHOD** - Implemented in VASP, ABINIT, etc.
-
-**273. BoltzTraP**
-- Confidence: VERIFIED
-- Resources: https://www.imc.tuwien.ac.at/forschungsbereich_theoretische_chemie/forschungsgruppen/prof_dr_gkh_madsen/the_boltzmann_transport_property_package/
-
-**274. BoltzTraP2**
-- Confidence: VERIFIED
-- Resources: https://github.com/gautierabsi/BoltzTraP2
-
-**275. AMSET**
-- Confidence: VERIFIED
-- Resources: https://github.com/hackingmaterials/amset
-
-**276. Phoebe**
-- Confidence: VERIFIED
-- Resources: https://github.com/AFND-PH/phoebe
-
-**277. Lobster**
-- Confidence: VERIFIED
-- Resources: https://www.cochem2.de/
-
-**278. LobsterPy**
-- Confidence: VERIFIED
-- Resources: https://github.com/JaGeo/lobsterpy
-
-**279. COHP**
-- Confidence: VERIFIED
-- Resources: **MODULE** - Part of LOBSTER.
-
-**280. Bader**
-- Confidence: VERIFIED
-- Resources: http://theory.cm.utexas.edu/henkelman/code/bader/
-
-**281. DDEC**
-- Confidence: VERIFIED
-- Resources: https://sourceforge.net/projects/ddec/
-
-**282. Critic2**
-- Confidence: VERIFIED
-- Resources: https://github.com/aoterodelaroza/critic2
-
-**283. Hirshfeld**
-- Confidence: VERIFIED
-- Resources: **IMPLEMENTATION** - Part of many codes (e.g., *Multiwfn*, *Critic2*).
-
-**284. FEFF**
-- Confidence: VERIFIED
-- Resources: https://feffproject.org/
-
-**285. OCEAN**
-- Confidence: VERIFIED
-- Resources: https://www.nersc.gov/users/computational-science/ncar/nersc-8-allocation-calls/ocean/
-
-**286. xspectra**
-- Confidence: VERIFIED
-- Resources: **MODULE** - Part of Quantum ESPRESSO.
-
-**287. exciting-XS**
-- Confidence: VERIFIED
-- Resources: **MODULE** - Part of exciting.
-
-**288. FDMNES**
-- Confidence: VERIFIED
-- Resources: https://fdmnes.neel.cnrs.fr/
-
-**289. CRYSOL**
-- Confidence: VERIFIED
-- Resources: https://www.embl-hamburg.de/biosaxs/crysol.html
-
-**290. XSpectraTools**
-- Confidence: UNCERTAIN
-- Resources: **UNKNOWN** - Likely generic term or specific tool.
-
-**291. ezSpectra**
-- Confidence: VERIFIED
-- Resources: https://github.com/ezspectra/ezspectra
-
-**292. Libwfa**
-- Confidence: VERIFIED
-- Resources: https://github.com/libwfa/libwfa
-
-**293. DP**
-- Confidence: UNCERTAIN
-- Resources: **AMBIGUOUS** - Could refer to DeepMD (DP), Density Perturbation, or various other acronyms.
-
-**294. Magnon codes**
-- Confidence: VERIFIED
-- Resources: *VARIOUS* (e.g., SpinW: https://spinw.org/)
-
-**295. Spirit**
-- Confidence: VERIFIED
-- Resources: https://spirit-docs.readthedocs.io/
-
-**296. VAMPIRE**
-- Confidence: VERIFIED
-- Resources: https://vampire.york.ac.uk/
-
-**297. TB2J**
-- Confidence: VERIFIED
-- Resources: https://github.com/reyern/TB2J
-
-**298. Mumax3**
-- Confidence: VERIFIED
-- Resources: https://mumax.github.io/
-
-**299. McPhase**
-- Confidence: VERIFIED
-- Resources: http://www.mcphase.de/
-
-**300. VESTA**
-- Confidence: VERIFIED
-- Resources: https://jp-minerals.org/vesta/en/
-
-**301. XCrySDen**
-- Confidence: VERIFIED
-- Resources: http://www.xcrysden.org/
-
-**302. VMD**
-- Confidence: VERIFIED
-- Resources: https://www.ks.uiuc.edu/Research/vmd/
-
-**303. Avogadro**
-- Confidence: VERIFIED
-- Resources: https://avogadro.cc/
-
-**304. STMng**
-- Confidence: UNCERTAIN
-- Resources: https://uspex-team.org/en/codes
-https://uspex-team.org/static/file/Valle2005_Zkrist.pdf
-
-**305. JMol**
-- Confidence: VERIFIED
-- Resources: https://jmol.sourceforge.net/
-
-**306. PyMOL**
-- Confidence: VERIFIED
-- Resources: https://pymol.org/
-
-**307. OVITO**
-- Confidence: VERIFIED
-- Resources: https://ovito.org/
+- Link: [effectivemass.md](Post-Processing/8.1_Band_Structure_Electronic/effectivemass.md)
 
 **308. AutoBZ.jl**
 - Confidence: VERIFIED
 - Resources: https://github.com/JuliaQuantum/AutoBZCore.jl
+- Link: [AutoBZ.jl.md](Post-Processing/8.1_Band_Structure_Electronic/AutoBZ.jl.md)
 
 **309. yambopy**
 - Confidence: VERIFIED
 - Resources: https://github.com/yambo-code/yambopy
+- Link: [yambopy.md](Post-Processing/8.1_Band_Structure_Electronic/yambopy.md)
 
-**310. dbaAutomator**
-- Confidence: UNCERTAIN
-- Resources: **UNKNOWN** - Likely a database automation script.
-https://github.com/xingyu-alfred-liu/dbaAutomator
-https://berkeleygw.org/2020/01/29/dbaautomator-now-available-for-berkeleygw/
-https://iopscience.iop.org/article/10.1088/1361-648X/ab699e
+### 8.2 Topological & Symmetry Analysis (5 tools)
+*Irreducible representations, Berry phase, Chern numbers*
 
-**311. gpaw-tools**
+**265. irvsp**
 - Confidence: VERIFIED
-- Resources: https://wiki.fysik.dtu.dk/gpaw/
+- Resources: https://github.com/zjwang11/irvsp
+- Link: [irvsp.md](Post-Processing/8.2_Topological_Symmetry/irvsp.md)
+
+**268. IrRep**
+- Confidence: VERIFIED
+- Resources: https://github.com/stepan-tsirkin/irrep
+- Link: [IrRep.md](Post-Processing/8.2_Topological_Symmetry/IrRep.md)
+
+**270. BerryPI**
+- Confidence: VERIFIED
+- Resources: https://github.com/stepan-tsirkin/berryphase
+- Link: [BerryPI.md](Post-Processing/8.2_Topological_Symmetry/BerryPI.md)
+
+**271. Chern-Number**
+- Confidence: VERIFIED
+- Resources: https://github.com/stepan-tsirkin/chern-number
+- Link: [Chern-Number.md](Post-Processing/8.2_Topological_Symmetry/Chern-Number.md)
+
+**272. Berry-Phase**
+- Confidence: VERIFIED
+- Resources: **METHOD** - Implemented in VASP, ABINIT, etc.
+- Link: [Berry-Phase.md](Post-Processing/8.2_Topological_Symmetry/Berry-Phase.md)
+
+### 8.3 Transport Properties (5 tools)
+*Boltzmann transport, thermoelectric properties, phonon transport*
+
+**273. BoltzTraP**
+- Confidence: VERIFIED
+- Resources: https://www.imc.tuwien.ac.at/forschungsbereich_theoretische_chemie/forschungsgruppen/prof_dr_gkh_madsen/the_boltzmann_transport_property_package/
+- Link: [BoltzTraP.md](Post-Processing/8.3_Transport_Properties/BoltzTraP.md)
+
+**274. BoltzTraP2**
+- Confidence: VERIFIED
+- Resources: https://github.com/gautierabsi/BoltzTraP2
+- Link: [BoltzTraP2.md](Post-Processing/8.3_Transport_Properties/BoltzTraP2.md)
+
+**275. AMSET**
+- Confidence: VERIFIED
+- Resources: https://github.com/hackingmaterials/amset
+- Link: [AMSET.md](Post-Processing/8.3_Transport_Properties/AMSET.md)
+
+**276. Phoebe**
+- Confidence: VERIFIED
+- Resources: https://github.com/AFND-PH/phoebe
+- Link: [Phoebe.md](Post-Processing/8.3_Transport_Properties/Phoebe.md)
+
+**276a. Pheasy**
+- Confidence: VERIFIED
+- Resources: https://pypi.org/project/pheasy/
+- Link: [Pheasy.md](Post-Processing/8.3_Transport_Properties/Pheasy.md)
+
+### 8.4 Chemical Bonding Analysis (7 tools)
+*COHP, charge partitioning, bonding analysis*
+
+**277. Lobster**
+- Confidence: VERIFIED
+- Resources: https://www.cochem2.de/
+- Link: [Lobster.md](Post-Processing/8.4_Chemical_Bonding/Lobster.md)
+
+**278. LobsterPy**
+- Confidence: VERIFIED
+- Resources: https://github.com/JaGeo/lobsterpy
+- Link: [LobsterPy.md](Post-Processing/8.4_Chemical_Bonding/LobsterPy.md)
+
+**279. COHP**
+- Confidence: VERIFIED
+- Resources: **MODULE** - Part of LOBSTER.
+- Link: [COHP.md](Post-Processing/8.4_Chemical_Bonding/COHP.md)
+
+**280. Bader**
+- Confidence: VERIFIED
+- Resources: http://theory.cm.utexas.edu/henkelman/code/bader/
+- Link: [Bader.md](Post-Processing/8.4_Chemical_Bonding/Bader.md)
+
+**281. DDEC**
+- Confidence: VERIFIED
+- Resources: https://sourceforge.net/projects/ddec/
+- Link: [DDEC.md](Post-Processing/8.4_Chemical_Bonding/DDEC.md)
+
+**282. Critic2**
+- Confidence: VERIFIED
+- Resources: https://github.com/aoterodelaroza/critic2
+- Link: [Critic2.md](Post-Processing/8.4_Chemical_Bonding/Critic2.md)
+
+**283. Hirshfeld**
+- Confidence: VERIFIED
+- Resources: **IMPLEMENTATION** - Part of many codes (e.g., *Multiwfn*, *Critic2*).
+- Link: [Hirshfeld.md](Post-Processing/8.4_Chemical_Bonding/Hirshfeld.md)
+
+### 8.5 Spectroscopy Simulation (10 tools)
+*XAS, XANES, EXAFS, optical spectra, dielectric properties*
+
+**284. FEFF**
+- Confidence: VERIFIED
+- Resources: https://feffproject.org/
+- Link: [FEFF.md](Post-Processing/8.5_Spectroscopy/FEFF.md)
+
+**285. OCEAN**
+- Confidence: VERIFIED
+- Resources: https://www.nersc.gov/users/computational-science/ncar/nersc-8-allocation-calls/ocean/
+- Link: [OCEAN.md](Post-Processing/8.5_Spectroscopy/OCEAN.md)
+
+**286. xspectra**
+- Confidence: VERIFIED
+- Resources: **MODULE** - Part of Quantum ESPRESSO.
+- Link: [xspectra.md](Post-Processing/8.5_Spectroscopy/xspectra.md)
+
+**287. exciting-XS**
+- Confidence: VERIFIED
+- Resources: **MODULE** - Part of exciting.
+- Link: [exciting-XS.md](Post-Processing/8.5_Spectroscopy/exciting-XS.md)
+
+**288. FDMNES**
+- Confidence: VERIFIED
+- Resources: https://fdmnes.neel.cnrs.fr/
+- Link: [FDMNES.md](Post-Processing/8.5_Spectroscopy/FDMNES.md)
+
+**289. CRYSOL**
+- Confidence: VERIFIED
+- Resources: https://www.embl-hamburg.de/biosaxs/crysol.html
+- Link: [CRYSOL.md](Post-Processing/8.5_Spectroscopy/CRYSOL.md)
+
+**290. XSpectraTools**
+- Confidence: UNCERTAIN
+- Resources: **UNKNOWN** - Likely generic term or specific tool.
+- Link: [XSpectraTools.md](Post-Processing/8.5_Spectroscopy/XSpectraTools.md)
+
+**291. ezSpectra**
+- Confidence: VERIFIED
+- Resources: https://github.com/ezspectra/ezspectra
+- Link: [ezSpectra.md](Post-Processing/8.5_Spectroscopy/ezSpectra.md)
+
+**292. Libwfa**
+- Confidence: VERIFIED
+- Resources: https://github.com/libwfa/libwfa
+- Link: [Libwfa.md](Post-Processing/8.5_Spectroscopy/Libwfa.md)
+
+**293. DP**
+- Confidence: VERIFIED
+- Resources: http://dp-code.org/
+- Link: [DP.md](Post-Processing/8.5_Spectroscopy/DP.md)
+
+### 8.6 Magnetism & Spin Dynamics (7 tools)
+*Magnetic exchange, spin dynamics, micromagnetics*
+
+**294. Magnon codes**
+- Confidence: VERIFIED
+- Resources: *VARIOUS* (e.g., SpinW: https://spinw.org/)
+- Link: [Magnon-codes.md](Post-Processing/8.6_Magnetism_Spin/Magnon-codes.md)
+
+**295. Spirit**
+- Confidence: VERIFIED
+- Resources: https://spirit-docs.readthedocs.io/
+- Link: [Spirit.md](Post-Processing/8.6_Magnetism_Spin/Spirit.md)
+
+**296. VAMPIRE**
+- Confidence: VERIFIED
+- Resources: https://vampire.york.ac.uk/
+- Link: [VAMPIRE.md](Post-Processing/8.6_Magnetism_Spin/VAMPIRE.md)
+
+**297. TB2J**
+- Confidence: VERIFIED
+- Resources: https://github.com/reyern/TB2J
+- Link: [TB2J.md](Post-Processing/8.6_Magnetism_Spin/TB2J.md)
+
+**298. Mumax3**
+- Confidence: VERIFIED
+- Resources: https://mumax.github.io/
+- Link: [Mumax3.md](Post-Processing/8.6_Magnetism_Spin/Mumax3.md)
+
+**299. McPhase**
+- Confidence: VERIFIED
+- Resources: http://www.mcphase.de/
+- Link: [McPhase.md](Post-Processing/8.6_Magnetism_Spin/McPhase.md)
+
+**299a. SpinW**
+- Confidence: VERIFIED
+- Resources: https://spinw.org/
+- Link: [SpinW.md](Post-Processing/8.6_Magnetism_Spin/SpinW.md)
+
+### 8.7 Visualization (9 tools)
+*Structure and data visualization*
+
+**300. VESTA**
+- Confidence: VERIFIED
+- Resources: https://jp-minerals.org/vesta/en/
+- Link: [VESTA.md](Post-Processing/8.7_Visualization/VESTA.md)
+
+**301. XCrySDen**
+- Confidence: VERIFIED
+- Resources: http://www.xcrysden.org/
+- Link: [XCrySDen.md](Post-Processing/8.7_Visualization/XCrySDen.md)
+
+**302. VMD**
+- Confidence: VERIFIED
+- Resources: https://www.ks.uiuc.edu/Research/vmd/
+- Link: [VMD.md](Post-Processing/8.7_Visualization/VMD.md)
+
+**303. Avogadro**
+- Confidence: VERIFIED
+- Resources: https://avogadro.cc/
+- Link: [Avogadro.md](Post-Processing/8.7_Visualization/Avogadro.md)
+
+**304. STMng**
+- Confidence: UNCERTAIN
+- Resources: https://uspex-team.org/en/codes
+- Link: [STMng.md](Post-Processing/8.7_Visualization/STMng.md)
+
+**305. JMol**
+- Confidence: VERIFIED
+- Resources: https://jmol.sourceforge.net/
+- Link: [JMol.md](Post-Processing/8.7_Visualization/JMol.md)
+
+**306. PyMOL**
+- Confidence: VERIFIED
+- Resources: https://pymol.org/
+- Link: [PyMOL.md](Post-Processing/8.7_Visualization/PyMOL.md)
+
+**307. OVITO**
+- Confidence: VERIFIED
+- Resources: https://ovito.org/
+- Link: [OVITO.md](Post-Processing/8.7_Visualization/OVITO.md)
 
 **312. ASE-GUI**
 - Confidence: VERIFIED
 - Resources: https://wiki.fysik.dtu.dk/ase/ase/gui/gui.html
+- Link: [ASE-GUI.md](Post-Processing/8.7_Visualization/ASE-GUI.md)
+
+### 8.8 Quantum Transport (5 tools)
+*Non-equilibrium Green's function, quantum transport*
 
 **313. Nanodcal**
 - Confidence: VERIFIED
 - Resources: https://www.nanodcal.com/
+- Link: [Nanodcal.md](Post-Processing/8.8_Quantum_Transport/Nanodcal.md)
 
 **314. Transiesta**
 - Confidence: VERIFIED
 - Resources: **MODULE** - Part of SIESTA.
+- Link: [Transiesta.md](Post-Processing/8.8_Quantum_Transport/Transiesta.md)
 
 **315. Smeagol**
 - Confidence: VERIFIED
 - Resources: **MODULE** - Part of TranSIESTA/SIESTA suite.
+- Link: [Smeagol.md](Post-Processing/8.8_Quantum_Transport/Smeagol.md)
 
 **316. MIKA**
 - Confidence: VERIFIED
 - Resources: https://github.com/MIKA-code/MIKA
+- Link: [MIKA.md](Post-Processing/8.8_Quantum_Transport/MIKA.md)
 
 **317. KITE**
 - Confidence: VERIFIED
 - Resources: https://quantum-kite.com/
+- Link: [KITE.md](Post-Processing/8.8_Quantum_Transport/KITE.md)
+
+### 8.9 Workflow & Automation (2 tools)
+*Post-processing automation and utilities*
+
+**310. dbaAutomator**
+- Confidence: VERIFIED
+- Resources: https://github.com/xingyu-alfred-liu/dbaAutomator
+- Link: [dbaAutomator.md](Post-Processing/8.9_Workflow_Automation/dbaAutomator.md)
+
+**311. gpaw-tools**
+- Confidence: VERIFIED
+- Resources: https://wiki.fysik.dtu.dk/gpaw/
+- Link: [gpaw-tools.md](Post-Processing/8.9_Workflow_Automation/gpaw-tools.md)
 
 ---
 
