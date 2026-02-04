@@ -3087,33 +3087,125 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: https://github.com/kylebystrom/pawpyseed
 - Link: [pawpyseed.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.8_Wavefunction_Analysis/pawpyseed.md)
 
-### 8.2 Topological & Symmetry Analysis (5 tools)
-*Irreducible representations, Berry phase, Chern numbers*
+### 8.2 Topological & Symmetry Analysis (19 tools)
+*Irreducible representations, Berry phase, Chern numbers, k·p Hamiltonians, magnetic symmetry*
 
-**265. irvsp**
+#### 8.2.1 Irreducible Representations (7 tools)
+
+**315. irvsp**
 - Confidence: VERIFIED
 - Resources: https://github.com/zjwang11/irvsp
-- Link: [irvsp.md](Post-Processing/8.2_Topological_Symmetry/irvsp.md)
+- Link: [irvsp.md](Post-Processing/8.2_Topological_Symmetry/8.2.1_Irreducible_Representations/irvsp.md)
 
-**268. IrRep**
+**316. IrRep**
 - Confidence: VERIFIED
 - Resources: https://github.com/stepan-tsirkin/irrep
-- Link: [IrRep.md](Post-Processing/8.2_Topological_Symmetry/IrRep.md)
+- Link: [IrRep.md](Post-Processing/8.2_Topological_Symmetry/8.2.1_Irreducible_Representations/IrRep.md)
 
-**270. BerryPI**
+**317. SpaceGroupIrep**
+- Confidence: VERIFIED
+- Resources: https://github.com/goodluck1982/SpaceGroupIrep
+- Note: Mathematica package for space group irreps (BC convention)
+- Link: [SpaceGroupIrep.md](Post-Processing/8.2_Topological_Symmetry/8.2.1_Irreducible_Representations/SpaceGroupIrep.md)
+
+**318. spgrep**
+- Confidence: VERIFIED
+- Resources: https://github.com/spglib/spgrep
+- Note: On-the-fly space-group irrep generator (JOSS published)
+- Link: [spgrep.md](Post-Processing/8.2_Topological_Symmetry/8.2.1_Irreducible_Representations/spgrep.md)
+
+**319. qeirreps**
+- Confidence: VERIFIED
+- Resources: https://github.com/mizoguche/qeirreps
+- Note: Quantum ESPRESSO irreducible representations (CPC published)
+- Link: [qeirreps.md](Post-Processing/8.2_Topological_Symmetry/8.2.1_Irreducible_Representations/qeirreps.md)
+
+**320. spgrep-modulation**
+- Confidence: VERIFIED
+- Resources: https://github.com/phonopy/spgrep-modulation
+- Note: Collective atomic modulation analysis with irreps
+- Link: [spgrep-modulation.md](Post-Processing/8.2_Topological_Symmetry/8.2.1_Irreducible_Representations/spgrep-modulation.md)
+
+**321. WannSymm**
+- Confidence: VERIFIED
+- Resources: https://github.com/ccao/WannSymm
+- Note: Symmetry analysis and symmetrization for Wannier orbitals (CPC 2022)
+- Link: [WannSymm.md](Post-Processing/8.2_Topological_Symmetry/8.2.1_Irreducible_Representations/WannSymm.md)
+
+#### 8.2.2 Topological Invariants (8 tools)
+
+**321. BerryPI**
 - Confidence: VERIFIED
 - Resources: https://github.com/stepan-tsirkin/berryphase
-- Link: [BerryPI.md](Post-Processing/8.2_Topological_Symmetry/BerryPI.md)
+- Link: [BerryPI.md](Post-Processing/8.2_Topological_Symmetry/8.2.2_Topological_Invariants/BerryPI.md)
 
-**271. Chern-Number**
+**322. Chern-Number**
 - Confidence: VERIFIED
 - Resources: https://github.com/stepan-tsirkin/chern-number
-- Link: [Chern-Number.md](Post-Processing/8.2_Topological_Symmetry/Chern-Number.md)
+- Link: [Chern-Number.md](Post-Processing/8.2_Topological_Symmetry/8.2.2_Topological_Invariants/Chern-Number.md)
 
-**272. Berry-Phase**
+**323. Berry-Phase**
 - Confidence: VERIFIED
 - Resources: **METHOD** - Implemented in VASP, ABINIT, etc.
-- Link: [Berry-Phase.md](Post-Processing/8.2_Topological_Symmetry/Berry-Phase.md)
+- Link: [Berry-Phase.md](Post-Processing/8.2_Topological_Symmetry/8.2.2_Topological_Invariants/Berry-Phase.md)
+
+**324. BerryEasy**
+- Confidence: VERIFIED
+- Resources: arXiv:2312.13051
+- Note: GPU-enabled nth-order and spin-resolved topology
+- Link: [BerryEasy.md](Post-Processing/8.2_Topological_Symmetry/8.2.2_Topological_Invariants/BerryEasy.md)
+
+**325. WloopPHI**
+- Confidence: VERIFIED
+- Resources: Comput. Phys. Commun. 270, 108147 (2022)
+- Note: WIEN2k Wilson loop for Weyl semimetals
+- Link: [WloopPHI.md](Post-Processing/8.2_Topological_Symmetry/8.2.2_Topological_Invariants/WloopPHI.md)
+
+**326. topo_2bands**
+- Confidence: VERIFIED
+- Resources: https://github.com/jameclear/topo_2bands
+- Note: Two-band topological invariant calculator
+- Link: [topo_2bands.md](Post-Processing/8.2_Topological_Symmetry/8.2.2_Topological_Invariants/topo_2bands.md)
+
+**327. TIM**
+- Confidence: VERIFIED
+- Resources: https://github.com/Hugo-loio/TIM
+- Note: C++ Topological Insulator Models
+- Link: [TIM.md](Post-Processing/8.2_Topological_Symmetry/8.2.2_Topological_Invariants/TIM.md)
+
+**328. WIEN2k-Topo**
+- Confidence: VERIFIED
+- Resources: arXiv:2303.16306, CPC 2023
+- Note: CherN/wcc modules for Chern and Z2 invariants in WIEN2k
+- Link: [WIEN2k-Topo.md](Post-Processing/8.2_Topological_Symmetry/8.2.2_Topological_Invariants/WIEN2k-Topo.md)
+
+#### 8.2.3 k·p Hamiltonians (3 tools)
+
+**329. kdotp-symmetry**
+- Confidence: VERIFIED
+- Resources: https://github.com/greschd/kdotp-symmetry
+- Note: Symmetry-constrained k·p Hamiltonian generator (Phys. Rev. Materials)
+- Link: [kdotp-symmetry.md](Post-Processing/8.2_Topological_Symmetry/8.2.3_KP_Hamiltonians/kdotp-symmetry.md)
+
+**330. kdotp-generator**
+- Confidence: VERIFIED
+- Resources: https://github.com/yjiang-iop/kdotp-generator
+- Note: k·p generator with magnetic space group support
+- Link: [kdotp-generator.md](Post-Processing/8.2_Topological_Symmetry/8.2.3_KP_Hamiltonians/kdotp-generator.md)
+
+**331. DFT2kp**
+- Confidence: VERIFIED
+- Resources: SciPost Phys. Codebases 25 (2024), arXiv:2306.08554
+- Note: Extract Kane/Luttinger k·p parameters from Quantum ESPRESSO
+- Link: [DFT2kp.md](Post-Processing/8.2_Topological_Symmetry/8.2.3_KP_Hamiltonians/DFT2kp.md)
+
+#### 8.2.4 Magnetic Symmetry (1 tool)
+
+**332. findmagsym**
+- Confidence: VERIFIED
+- Resources: https://github.com/yuanlinding/findmagsym
+- Note: Web app for magnetic space group determination
+- Link: [findmagsym.md](Post-Processing/8.2_Topological_Symmetry/8.2.4_Magnetic_Symmetry/findmagsym.md)
 
 ### 8.3 Transport Properties (5 tools)
 *Boltzmann transport, thermoelectric properties, phonon transport*
@@ -3143,7 +3235,7 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: https://pypi.org/project/pheasy/
 - Link: [Pheasy.md](Post-Processing/8.3_Transport_Properties/Pheasy.md)
 
-### 8.4 Chemical Bonding Analysis (7 tools)
+### 8.4 Chemical Bonding Analysis (16 tools)
 *COHP, charge partitioning, bonding analysis*
 
 **277. Lobster**
@@ -3181,7 +3273,61 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: **IMPLEMENTATION** - Part of many codes (e.g., *Multiwfn*, *Critic2*).
 - Link: [Hirshfeld.md](Post-Processing/8.4_Chemical_Bonding/Hirshfeld.md)
 
-### 8.5 Spectroscopy Simulation (10 tools)
+**284. NCIPLOT**
+- Confidence: VERIFIED
+- Resources: https://github.com/aoterodelaroza/nciplot
+- Note: Non-covalent interaction visualization via reduced density gradient
+- Link: [NCIPLOT.md](Post-Processing/8.4_Chemical_Bonding/NCIPLOT.md)
+
+**285. Chargemol**
+- Confidence: VERIFIED
+- Resources: https://sourceforge.net/projects/ddec/
+- Note: DDEC6 atomic charges and bond orders
+- Link: [Chargemol.md](Post-Processing/8.4_Chemical_Bonding/Chargemol.md)
+
+**286. pybader**
+- Confidence: VERIFIED
+- Resources: https://github.com/adam-kerrigan/pybader
+- Note: Python implementation of Bader charge analysis
+- Link: [pybader.md](Post-Processing/8.4_Chemical_Bonding/pybader.md)
+
+**287. ChemTools**
+- Confidence: VERIFIED
+- Resources: https://chemtools.org/
+- Note: Conceptual DFT, Fukui functions, reactivity descriptors
+- Link: [ChemTools.md](Post-Processing/8.4_Chemical_Bonding/ChemTools.md)
+
+**288. AIMAll**
+- Confidence: VERIFIED
+- Resources: https://aim.tkgristmill.com/
+- Note: Comprehensive QTAIM analysis (commercial, academic free)
+- Link: [AIMAll.md](Post-Processing/8.4_Chemical_Bonding/AIMAll.md)
+
+**289. TopMod**
+- Confidence: VERIFIED
+- Resources: https://www.lct.jussieu.fr/pagesperso/silvi/topmod_english.html
+- Note: ELF topology and basin analysis
+- Link: [TopMod.md](Post-Processing/8.4_Chemical_Bonding/TopMod.md)
+
+**290. ORBKIT**
+- Confidence: VERIFIED
+- Resources: https://github.com/orbkit/orbkit
+- Note: Python wavefunction analysis and visualization (JCC published)
+- Link: [ORBKIT.md](Post-Processing/8.4_Chemical_Bonding/ORBKIT.md)
+
+**291. DGrid**
+- Confidence: VERIFIED
+- Resources: MPI CPfS Dresden (M. Kohout)
+- Note: ELI-D electron localizability indicator analysis
+- Link: [DGrid.md](Post-Processing/8.4_Chemical_Bonding/DGrid.md)
+
+**292. denspart**
+- Confidence: VERIFIED
+- Resources: https://github.com/theochem/denspart
+- Note: ISA/MBIS charge partitioning Python package
+- Link: [denspart.md](Post-Processing/8.4_Chemical_Bonding/denspart.md)
+
+### 8.5 Spectroscopy Simulation (20 tools)
 *XAS, XANES, EXAFS, optical spectra, dielectric properties*
 
 **284. FEFF**
@@ -3233,6 +3379,66 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Confidence: VERIFIED
 - Resources: http://dp-code.org/
 - Link: [DP.md](Post-Processing/8.5_Spectroscopy/DP.md)
+
+**294. Larch**
+- Confidence: VERIFIED
+- Resources: https://github.com/xraypy/xraylarch
+- Note: Python XAS/XAFS analysis library (J. Synchrotron Rad.)
+- Link: [Larch.md](Post-Processing/8.5_Spectroscopy/Larch.md)
+
+**295. Demeter**
+- Confidence: VERIFIED
+- Resources: https://bruceravel.github.io/demeter/
+- Note: Athena/Artemis XAS data processing and EXAFS fitting
+- Link: [Demeter.md](Post-Processing/8.5_Spectroscopy/Demeter.md)
+
+**296. EDRIXS**
+- Confidence: VERIFIED
+- Resources: https://github.com/NSLS-II/edrixs
+- Note: RIXS simulation for correlated materials (CPC published)
+- Link: [EDRIXS.md](Post-Processing/8.5_Spectroscopy/EDRIXS.md)
+
+**297. pyGWBSE**
+- Confidence: VERIFIED
+- Resources: https://github.com/cmdlab/pyGWBSE
+- Note: High-throughput GW-BSE workflow (npj Comput. Mater.)
+- Link: [pyGWBSE.md](Post-Processing/8.5_Spectroscopy/pyGWBSE.md)
+
+**298. Phonopy-Spectroscopy**
+- Confidence: VERIFIED
+- Resources: https://github.com/skelton-group/Phonopy-Spectroscopy
+- Note: IR and Raman spectra from Phonopy
+- Link: [Phonopy-Spectroscopy.md](Post-Processing/8.5_Spectroscopy/Phonopy-Spectroscopy.md)
+
+**299. MRSimulator**
+- Confidence: VERIFIED
+- Resources: https://github.com/deepanshs/mrsimulator
+- Note: Solid-state NMR simulation (JCP published)
+- Link: [MRSimulator.md](Post-Processing/8.5_Spectroscopy/MRSimulator.md)
+
+**300. EasySpin**
+- Confidence: VERIFIED
+- Resources: https://easyspin.org/
+- Note: EPR/ESR simulation MATLAB toolbox (JMR published)
+- Link: [EasySpin.md](Post-Processing/8.5_Spectroscopy/EasySpin.md)
+
+**301. CTM4XAS**
+- Confidence: VERIFIED
+- Resources: https://anorg.chem.uu.nl/CTM4XAS/
+- Note: Charge transfer multiplet XAS simulation
+- Link: [CTM4XAS.md](Post-Processing/8.5_Spectroscopy/CTM4XAS.md)
+
+**302. HyperSpy**
+- Confidence: VERIFIED
+- Resources: https://github.com/hyperspy/hyperspy
+- Note: EELS/EDS analysis Python library
+- Link: [HyperSpy.md](Post-Processing/8.5_Spectroscopy/HyperSpy.md)
+
+**303. Crispy**
+- Confidence: VERIFIED
+- Resources: https://github.com/mretegan/crispy
+- Note: GUI for Quanty XAS/RIXS simulations (ESRF)
+- Link: [Crispy.md](Post-Processing/8.5_Spectroscopy/Crispy.md)
 
 ### 8.6 Magnetism & Spin Dynamics (7 tools)
 *Magnetic exchange, spin dynamics, micromagnetics*
