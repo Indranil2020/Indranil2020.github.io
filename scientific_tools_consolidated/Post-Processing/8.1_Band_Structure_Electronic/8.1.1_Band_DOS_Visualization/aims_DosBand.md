@@ -1,29 +1,33 @@
 # aims_DosBand
 
-## Overview
-**aims_DosBand** is a plotting tool for band structures and density of states from FHI-aims (Fritz Haber Institute ab initio molecular simulations) calculations.
-
 ## Official Resources
 - **FHI-aims**: https://fhi-aims.org/
-- **Related Tools**: Part of FHI-aims ecosystem
+- **Target Code**: FHI-aims
 
-## Capabilities
+## Overview
+aims_DosBand is a plotting tool for band structures and density of states from FHI-aims calculations, providing publication-quality figures with orbital projections.
+
+**Scientific domain**: FHI-aims post-processing, electronic structure visualization
+**Target user community**: FHI-aims users
+
+## Capabilities (CRITICAL)
 - **Band Structure**: Electronic band plotting along k-paths
 - **DOS/PDOS**: Total and projected density of states
 - **Fatbands**: Orbital-projected band structures
 - **Spin-Polarized**: Support for magnetic calculations
 
-## Key Features
+## Key Strengths
 - Native FHI-aims support
 - Publication-quality figures
 - Orbital projections
 - Spin-resolved plotting
 
 ## Inputs & Outputs
-- **Inputs**: FHI-aims output files (band*.out, KS_DOS*.dat)
-- **Outputs**: Matplotlib figures
+- **Input formats**: FHI-aims output files (band*.out, KS_DOS*.dat)
+- **Output data types**: Matplotlib figures
 
 ## Verification & Sources
-- **Status**: ✅ VERIFIED
-- **Confidence**: VERIFIED
-- **Target Code**: FHI-aims
+**Confidence**: VERIFIED
+
+**Verification status**: ✅ VERIFIED
+- Target Code: FHI-aims

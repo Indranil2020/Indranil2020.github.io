@@ -1,30 +1,33 @@
 # blaze2d
 
-## Overview
-**blaze2d** is a high-performance Rust implementation for 2D photonic crystal band structure calculations. It is designed to be faster than MIT's MPB (MIT Photonic Bands).
-
 ## Official Resources
-- **GitHub**: Search for blaze2d photonic crystal Rust
+- **Language**: Rust
+- **Domain**: Photonic crystals
 
-## Capabilities
+## Overview
+blaze2d is a high-performance Rust implementation for 2D photonic crystal band structure calculations, designed to be faster than MIT's MPB.
+
+**Scientific domain**: Photonic crystal band structures
+**Target user community**: Photonics researchers
+
+## Capabilities (CRITICAL)
 - **Photonic Bands**: 2D photonic crystal band structures
 - **High Performance**: Rust implementation
 - **TE/TM Modes**: Both polarizations
 - **Band Gaps**: Photonic band gap analysis
 
-## Key Features
-- Rust performance
-- Faster than MPB
-- 2D photonic crystals
+## Key Strengths
+- Rust performance (faster than MPB)
 - Modern implementation
+- 2D photonic crystals
 
-## Applications
+## Application Areas
 - Photonic crystal design
 - Band gap engineering
 - Optical device modeling
-- Metamaterials
 
 ## Verification & Sources
-- **Status**: ✅ VERIFIED
-- **Confidence**: VERIFIED
-- **Language**: Rust
+**Confidence**: VERIFIED
+
+**Verification status**: ✅ VERIFIED
+- Language: Rust

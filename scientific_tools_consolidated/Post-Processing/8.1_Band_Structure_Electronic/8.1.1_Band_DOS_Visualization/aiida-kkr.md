@@ -1,19 +1,23 @@
 # aiida-kkr
 
-## Overview
-**aiida-kkr** is an AiiDA plugin for running KKR (Korringa-Kohn-Rostoker) Green's function calculations. It provides workflow automation for KKR-based electronic structure calculations.
-
 ## Official Resources
 - **GitHub**: https://github.com/JuDFTteam/aiida-kkr
 - **Documentation**: https://aiida-kkr.readthedocs.io/
+- **License**: MIT License
 
-## Capabilities
+## Overview
+aiida-kkr is an AiiDA plugin for running KKR (Korringa-Kohn-Rostoker) Green's function calculations, providing workflow automation for KKR-based electronic structure calculations.
+
+**Scientific domain**: KKR Green's function, workflow automation
+**Target user community**: KKR users needing automated workflows
+
+## Capabilities (CRITICAL)
 - **KKR Calculations**: Green's function method
 - **Workflow Automation**: AiiDA integration
 - **Impurity Calculations**: Defect modeling
 - **Transport**: Ballistic transport
 
-## Key Features
+## Key Strengths
 - AiiDA workflow management
 - JuKKR code interface
 - Impurity embedding
@@ -29,6 +33,8 @@ pip install aiida-kkr
 ```
 
 ## Verification & Sources
-- **Status**: ✅ VERIFIED
-- **Confidence**: VERIFIED
-- **Developer**: JuDFTteam
+**Confidence**: VERIFIED
+
+**Verification status**: ✅ VERIFIED
+- Source code: OPEN (GitHub, MIT)
+- Developer: JuDFTteam

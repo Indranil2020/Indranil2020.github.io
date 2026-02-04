@@ -1,27 +1,32 @@
 # vaspy
 
-## Overview
-**vaspy** is a VASP pre- and post-processing system written in Python. It provides utilities for manipulating VASP input/output files and analyzing calculation results.
-
 ## Official Resources
 - **GitHub**: https://github.com/arafune/vaspy
+- **PyPI**: https://pypi.org/project/vaspy/
+- **License**: MIT License
 
-## Capabilities
-- **File Parsing**: Read/write VASP files (POSCAR, CONTCAR, OUTCAR, etc.)
-- **WAVECAR Analysis**: Wavefunction manipulation
+## Overview
+vaspy is a VASP pre- and post-processing system written in Python providing utilities for manipulating VASP input/output files and analyzing calculation results including WAVECAR parsing.
+
+**Scientific domain**: VASP file manipulation, wavefunction analysis
+**Target user community**: VASP users needing Python-based file handling
+
+## Capabilities (CRITICAL)
+- **File Parsing**: Read/write VASP files (POSCAR, CONTCAR, OUTCAR)
+- **WAVECAR Analysis**: Wavefunction manipulation and extraction
 - **Band Structure**: Electronic structure analysis
 - **DOS**: Density of states processing
 - **Structure Manipulation**: Atomic structure operations
 
-## Key Features
+## Key Strengths
 - Comprehensive VASP file support
 - WAVECAR parsing (including gamma-only)
 - Python scripting interface
 - Structure manipulation utilities
 
 ## Inputs & Outputs
-- **Inputs**: VASP files (POSCAR, WAVECAR, OUTCAR, EIGENVAL, etc.)
-- **Outputs**: Processed data, modified input files
+- **Input formats**: POSCAR, WAVECAR, OUTCAR, EIGENVAL, DOSCAR
+- **Output data types**: Processed data, modified input files
 
 ## Installation
 ```bash
@@ -29,6 +34,8 @@ pip install vaspy
 ```
 
 ## Verification & Sources
-- **Status**: ✅ VERIFIED
-- **Confidence**: VERIFIED
-- **Note**: Different from vasppy (separate package)
+**Confidence**: VERIFIED
+
+**Verification status**: ✅ VERIFIED
+- Source code: OPEN (GitHub, MIT)
+- Note: Different from vasppy (separate package)

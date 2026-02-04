@@ -1,28 +1,31 @@
 # OrbVis
 
-## Overview
-**OrbVis** is a lightweight Python package for plotting orbital-projected band structures and density of states (DOS) from VASP output files (PROCAR & DOSCAR).
-
 ## Official Resources
 - **GitHub**: https://github.com/staradutt/OrbVis
 - **PyPI**: https://pypi.org/project/orbvis/
+- **License**: MIT License
 
-## Capabilities
+## Overview
+OrbVis is a lightweight Python package for plotting orbital-projected band structures and density of states from VASP output files (PROCAR & DOSCAR).
+
+**Scientific domain**: VASP visualization, orbital projections
+**Target user community**: VASP users needing quick orbital analysis
+
+## Capabilities (CRITICAL)
 - **Orbital-Projected Bands**: s, p, d, f orbital contributions
 - **Atom-Projected Bands**: Element-specific band character
 - **DOS/PDOS**: Orbital-resolved density of states
 - **Fatbands**: Band width proportional to orbital character
 
-## Key Features
+## Key Strengths
 - Lightweight and fast
 - Easy-to-use API
-- VASP native support
 - Publication-ready figures
 - Customizable color schemes
 
 ## Inputs & Outputs
-- **Inputs**: VASP files (PROCAR, DOSCAR, EIGENVAL)
-- **Outputs**: Matplotlib figures
+- **Input formats**: PROCAR, DOSCAR, EIGENVAL
+- **Output data types**: Matplotlib figures
 
 ## Installation
 ```bash
@@ -30,6 +33,8 @@ pip install orbvis
 ```
 
 ## Verification & Sources
-- **Status**: ✅ VERIFIED
-- **Confidence**: VERIFIED
-- **Target Code**: VASP
+**Confidence**: VERIFIED
+
+**Verification status**: ✅ VERIFIED
+- Source code: OPEN (GitHub, MIT)
+- Target Code: VASP

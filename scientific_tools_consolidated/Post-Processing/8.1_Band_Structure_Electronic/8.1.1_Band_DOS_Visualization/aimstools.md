@@ -1,29 +1,32 @@
 # aimstools
 
-## Overview
-**aimstools** is a Python package for analyzing and visualizing FHI-aims calculation results. It provides utilities for post-processing electronic structure data.
-
 ## Official Resources
-- **GitHub**: Search for aimstools or FHI-aims Python tools
 - **FHI-aims**: https://fhi-aims.org/
+- **Target Code**: FHI-aims
 
-## Capabilities
+## Overview
+aimstools is a Python package for analyzing and visualizing FHI-aims calculation results, providing utilities for post-processing electronic structure data.
+
+**Scientific domain**: FHI-aims post-processing
+**Target user community**: FHI-aims users
+
+## Capabilities (CRITICAL)
 - **Band Structure**: Electronic band analysis
 - **DOS**: Density of states processing
 - **Structure**: Geometry manipulation
 - **Output Parsing**: FHI-aims output file reading
 
-## Key Features
+## Key Strengths
 - FHI-aims native support
 - Python scripting interface
 - Visualization utilities
-- Data extraction tools
 
 ## Inputs & Outputs
-- **Inputs**: FHI-aims output files (aims.out, geometry.in)
-- **Outputs**: Processed data, plots
+- **Input formats**: FHI-aims output files (aims.out, geometry.in)
+- **Output data types**: Processed data, plots
 
 ## Verification & Sources
-- **Status**: ✅ VERIFIED
-- **Confidence**: VERIFIED
-- **Target Code**: FHI-aims
+**Confidence**: VERIFIED
+
+**Verification status**: ✅ VERIFIED
+- Target Code: FHI-aims

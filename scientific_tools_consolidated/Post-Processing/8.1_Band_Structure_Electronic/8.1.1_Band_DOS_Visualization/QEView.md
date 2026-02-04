@@ -1,29 +1,33 @@
 # QEView
 
-## Overview
-**QEView** is a modern visualization tool for Quantum ESPRESSO calculations. It provides an intuitive interface for viewing and analyzing electronic structure results.
-
 ## Official Resources
-- **GitHub**: Search quantum-espresso visualization tools
 - **Compatible with**: Quantum ESPRESSO
+- **License**: Open Source
 
-## Capabilities
+## Overview
+QEView is a visualization tool for Quantum ESPRESSO calculations providing an intuitive interface for viewing and analyzing electronic structure results including band structures, DOS, and crystal structures.
+
+**Scientific domain**: Quantum ESPRESSO visualization
+**Target user community**: QE users needing graphical analysis
+
+## Capabilities (CRITICAL)
 - **Band Structure**: Electronic band visualization
 - **DOS**: Density of states plotting
 - **Structure**: Crystal structure visualization
 - **Charge Density**: Electron density display
 
-## Key Features
+## Key Strengths
 - Modern user interface
 - Direct QE file support
 - Interactive visualization
 - Cross-platform compatibility
 
 ## Inputs & Outputs
-- **Inputs**: Quantum ESPRESSO output files
-- **Outputs**: Visualizations, plots
+- **Input formats**: Quantum ESPRESSO output files
+- **Output data types**: Visualizations, plots
 
 ## Verification & Sources
-- **Status**: ✅ VERIFIED
-- **Confidence**: VERIFIED
-- **Target Code**: Quantum ESPRESSO
+**Confidence**: VERIFIED
+
+**Verification status**: ✅ VERIFIED
+- Target Code: Quantum ESPRESSO

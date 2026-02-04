@@ -1,36 +1,41 @@
 # VASPy
 
-## Overview
-**VASPy** is a Python package for manipulating VASP files. It provides object-oriented interfaces for reading, writing, and analyzing VASP calculation data.
-
 ## Official Resources
 - **GitHub**: https://github.com/PytLab/VASPy
 - **Documentation**: https://vaspy.readthedocs.io/
+- **License**: MIT License
 
-## Capabilities
+## Overview
+VASPy is a Python package for manipulating VASP files with object-oriented interfaces for reading, writing, and analyzing VASP calculation data including trajectory animation support.
+
+**Scientific domain**: VASP file manipulation, trajectory analysis
+**Target user community**: VASP users needing OOP-based file handling
+
+## Capabilities (CRITICAL)
 - **Structure Files**: POSCAR/CONTCAR manipulation
 - **Trajectory**: XDATCAR to ARC conversion
 - **DOS**: DOSCAR analysis
 - **Output Parsing**: OUTCAR data extraction
 - **Animation**: Molecular dynamics visualization
 
-## Key Features
+## Key Strengths
 - Object-oriented design
 - Animation file support
-- Integration with visualization tools
 - Trajectory analysis
 - Easy file format conversion
 
 ## Inputs & Outputs
-- **Inputs**: VASP files (POSCAR, XDATCAR, DOSCAR, OUTCAR)
-- **Outputs**: Processed data, animation files
+- **Input formats**: POSCAR, XDATCAR, DOSCAR, OUTCAR
+- **Output data types**: Processed data, animation files (ARC)
 
 ## Installation
 ```bash
-pip install vaspy
+pip install VASPy
 ```
 
 ## Verification & Sources
-- **Status**: ✅ VERIFIED
-- **Confidence**: VERIFIED
-- **Developer**: PytLab
+**Confidence**: VERIFIED
+
+**Verification status**: ✅ VERIFIED
+- Source code: OPEN (GitHub, MIT)
+- Developer: PytLab
