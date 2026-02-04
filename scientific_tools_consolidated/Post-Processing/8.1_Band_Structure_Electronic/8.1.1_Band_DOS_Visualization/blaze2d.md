@@ -21,6 +21,20 @@ blaze2d is a high-performance Rust implementation for 2D photonic crystal band s
 - Modern implementation
 - 2D photonic crystals
 
+## Inputs & Outputs
+- **Input formats**: Structure definitions, dielectric configurations
+- **Output data types**: Photonic band structures, mode profiles
+
+## Limitations & Known Constraints
+- **2D only**: Limited to two-dimensional photonic crystals
+- **Rust ecosystem**: Requires Rust toolchain for compilation
+- **Specialized**: Focused on photonic crystals, not electronic structure
+
+## Comparison with Other Tools
+- **vs MPB**: blaze2d faster Rust implementation, MPB more established
+- **vs MEEP**: Different focus (bands vs FDTD)
+- **Unique strength**: High-performance Rust implementation for 2D photonic bands
+
 ## Application Areas
 - Photonic crystal design
 - Band gap engineering

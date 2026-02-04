@@ -28,6 +28,24 @@ QEPlotter is a Quantum ESPRESSO band structure, DOS/PDOS, and fatband plotting t
 - **Input formats**: QE output files (bands.dat, dos.dat, pdos files)
 - **Output data types**: Matplotlib figures, data files
 
+## Installation
+```bash
+git clone https://github.com/romerogroup/QEPlotter.git
+cd QEPlotter
+pip install -e .
+```
+
+## Limitations & Known Constraints
+- **QE-specific**: Only works with Quantum ESPRESSO outputs
+- **Version compatibility**: Best with QE 5.4.0+
+- **Dependencies**: Requires matplotlib, numpy
+
+## Comparison with Other Tools
+- **vs postqe**: QEPlotter GUI-focused, postqe Python API
+- **vs abipy**: QEPlotter for QE, abipy for ABINIT
+- **vs sumo**: QEPlotter QE-native, sumo multi-code via pymatgen
+- **Unique strength**: GUI interface, automated band gap detection
+
 ## Verification & Sources
 **Confidence**: VERIFIED
 

@@ -32,6 +32,17 @@ OrbVis is a lightweight Python package for plotting orbital-projected band struc
 pip install orbvis
 ```
 
+## Limitations & Known Constraints
+- **VASP-specific**: Only works with VASP output files
+- **PROCAR required**: Needs PROCAR file for orbital projections
+- **Limited features**: Focused tool, less comprehensive than pyprocar
+
+## Comparison with Other Tools
+- **vs pyprocar**: OrbVis simpler, pyprocar more comprehensive
+- **vs vaspvis**: Similar capabilities, different API styles
+- **vs sumo**: OrbVis VASP-only, sumo more general
+- **Unique strength**: Lightweight, easy-to-use orbital projection plotting
+
 ## Verification & Sources
 **Confidence**: VERIFIED
 

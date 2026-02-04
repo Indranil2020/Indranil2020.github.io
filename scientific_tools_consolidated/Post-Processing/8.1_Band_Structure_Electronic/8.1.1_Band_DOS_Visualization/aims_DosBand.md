@@ -26,6 +26,16 @@ aims_DosBand is a plotting tool for band structures and density of states from F
 - **Input formats**: FHI-aims output files (band*.out, KS_DOS*.dat)
 - **Output data types**: Matplotlib figures
 
+## Limitations & Known Constraints
+- **FHI-aims specific**: Only processes FHI-aims output
+- **File formats**: Requires specific FHI-aims output files
+- **FHI-aims license**: FHI-aims code requires academic/commercial license
+
+## Comparison with Other Tools
+- **vs aimstools**: Similar scope, different implementations
+- **vs sumo**: aims_DosBand FHI-aims native, sumo multi-code
+- **Unique strength**: Native FHI-aims band/DOS visualization
+
 ## Verification & Sources
 **Confidence**: VERIFIED
 

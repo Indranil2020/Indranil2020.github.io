@@ -23,6 +23,16 @@
 - **Inputs**: ARPES measurement data files
 - **Outputs**: Band structures, Fermi surfaces, EDC/MDC curves
 
+## Limitations & Known Constraints
+- **MATLAB required**: Needs MATLAB license
+- **SX-ARPES focus**: Specialized for soft X-ray ARPES
+- **GUI-based**: Less scriptable than Python alternatives
+
+## Comparison with Other Tools
+- **vs PyARPES**: ARPESGUI MATLAB, PyARPES Python
+- **vs mpes**: Different feature sets and platforms
+- **Unique strength**: GUI for soft X-ray ARPES analysis
+
 ## Verification & Sources
 - **Status**: ✅ VERIFIED
 - **Confidence**: VERIFIED

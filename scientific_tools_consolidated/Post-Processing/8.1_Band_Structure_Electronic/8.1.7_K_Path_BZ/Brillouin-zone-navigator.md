@@ -23,6 +23,16 @@
 - Teaching crystallography
 - K-space navigation
 
+## Limitations & Known Constraints
+- **Visualization focus**: Not for k-point file generation
+- **Educational**: Better for learning than production workflows
+- **Documentation**: May have limited documentation
+
+## Comparison with Other Tools
+- **vs SeeK-path**: Brillouin-zone-navigator visualization, SeeK-path generation
+- **vs Materials Cloud BZ viewer**: Similar educational purposes
+- **Unique strength**: Interactive BZ visualization and navigation
+
 ## Verification & Sources
 - **Status**: ✅ VERIFIED
 - **Confidence**: VERIFIED

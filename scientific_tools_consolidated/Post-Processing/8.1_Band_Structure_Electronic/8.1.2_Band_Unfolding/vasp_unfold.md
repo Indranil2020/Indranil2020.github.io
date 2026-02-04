@@ -30,6 +30,23 @@ vasp_unfold is a Python tool for unfolding VASP band structures using PROCAR fil
 vasp_unfold PROCAR
 ```
 
+## Installation
+```bash
+git clone https://github.com/tomkeus/vasp_unfold.git
+cd vasp_unfold
+pip install -e .
+```
+
+## Limitations & Known Constraints
+- **LORBIT=12 required**: Needs VASP phase information in PROCAR
+- **PROCAR-based**: Different approach from WAVECAR-based tools
+- **VASP-specific**: Only works with VASP output
+
+## Comparison with Other Tools
+- **vs easyunfold**: vasp_unfold PROCAR-based, easyunfold WAVECAR-based
+- **vs fold2Bloch**: Different input requirements (PROCAR vs WAVECAR)
+- **Unique strength**: PROCAR-based unfolding with phase information
+
 ## Verification & Sources
 **Confidence**: VERIFIED
 

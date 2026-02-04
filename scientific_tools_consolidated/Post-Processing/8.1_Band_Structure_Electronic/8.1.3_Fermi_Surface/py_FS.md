@@ -32,6 +32,24 @@ Where case.bxsf.band-n files are in the directory.
 - **Inputs**: BXSF files (XCrySDen/Quantum ESPRESSO format)
 - **Outputs**: 3D Fermi surface visualizations
 
+## Installation
+```bash
+git clone https://github.com/TheoWeinberger/py_FS.git
+cd py_FS
+pip install -r requirements.txt
+```
+
+## Limitations & Known Constraints
+- **BXSF format**: Requires BXSF input files
+- **Dependencies**: Requires PyVista, trimesh
+- **Script-based**: Less polished than ifermi
+
+## Comparison with Other Tools
+- **vs IFermi**: py_FS simpler, IFermi more comprehensive
+- **vs FermiSurfer**: py_FS Python-native, FermiSurfer standalone GUI
+- **Unique strength**: Simple PyVista-based BXSF visualization
+
 ## Verification & Sources
 - **Status**: ✅ VERIFIED
 - **Confidence**: VERIFIED
+- **License**: Check repository for license terms

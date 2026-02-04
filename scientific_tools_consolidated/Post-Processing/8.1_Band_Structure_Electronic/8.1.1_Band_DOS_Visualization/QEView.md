@@ -26,6 +26,17 @@ QEView is a visualization tool for Quantum ESPRESSO calculations providing an in
 - **Input formats**: Quantum ESPRESSO output files
 - **Output data types**: Visualizations, plots
 
+## Limitations & Known Constraints
+- **QE-specific**: Only works with Quantum ESPRESSO output
+- **GUI-based**: Requires graphical environment
+- **Feature scope**: Basic visualization, not comprehensive analysis
+
+## Comparison with Other Tools
+- **vs postqe**: QEView GUI-based, postqe Python API
+- **vs QEPlotter**: Similar target, different interfaces
+- **vs XCrySDen**: QEView more QE-focused, XCrySDen general
+- **Unique strength**: Modern UI for Quantum ESPRESSO visualization
+
 ## Verification & Sources
 **Confidence**: VERIFIED
 

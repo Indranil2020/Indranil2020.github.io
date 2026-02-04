@@ -31,6 +31,16 @@ qe_unfolding is a Python tool for band structure unfolding from Quantum ESPRESSO
 git clone https://github.com/yw-choi/qe_unfolding.git
 ```
 
+## Limitations & Known Constraints
+- **QE-specific**: Only works with Quantum ESPRESSO
+- **Wavefunction required**: Needs QE wavefunction output
+- **Documentation**: Limited compared to multi-code tools
+
+## Comparison with Other Tools
+- **vs banduppy**: qe_unfolding QE-focused, banduppy multi-code
+- **vs easyunfold**: easyunfold more automated workflow
+- **Unique strength**: Native Quantum ESPRESSO unfolding support
+
 ## Verification & Sources
 **Confidence**: VERIFIED
 

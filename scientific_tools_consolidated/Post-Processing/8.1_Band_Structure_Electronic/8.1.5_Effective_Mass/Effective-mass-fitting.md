@@ -23,6 +23,16 @@
 - Band curvature analysis
 - Semiconductor characterization
 
+## Limitations & Known Constraints
+- **GUI-based**: Requires graphical environment
+- **PyQt dependency**: Needs PyQt installation
+- **Manual fitting**: Less automated than effmass
+
+## Comparison with Other Tools
+- **vs effmass**: Effective-mass-fitting GUI, effmass Python API
+- **vs sumo**: Different approaches to effective mass calculation
+- **Unique strength**: Interactive GUI for band fitting
+
 ## Verification & Sources
 - **Status**: ✅ VERIFIED
 - **Confidence**: VERIFIED

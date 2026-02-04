@@ -32,6 +32,24 @@ fold2Bloch-VASP is a Fortran utility for unfolding supercell band structures fro
 - Defect calculations
 - Interface/heterostructure studies
 
+## Installation
+```bash
+git clone https://github.com/rubel75/fold2Bloch-VASP.git
+cd fold2Bloch-VASP
+make
+```
+
+## Limitations & Known Constraints
+- **VASP-specific**: Only processes VASP WAVECAR
+- **Compilation**: Requires Fortran compiler
+- **Memory**: WAVECAR loading needs sufficient RAM
+
+## Comparison with Other Tools
+- **vs easyunfold**: fold2Bloch-VASP Fortran (fast), easyunfold Python (easier)
+- **vs BandUP**: Different unfolding approaches
+- **vs VaspBandUnfolding**: fold2Bloch-VASP compiled, VaspBandUnfolding Python
+- **Unique strength**: Fast Fortran implementation, established methodology
+
 ## Verification & Sources
 **Confidence**: VERIFIED
 

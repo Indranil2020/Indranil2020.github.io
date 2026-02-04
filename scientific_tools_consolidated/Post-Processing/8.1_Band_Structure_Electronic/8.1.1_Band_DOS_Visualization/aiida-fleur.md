@@ -32,6 +32,17 @@ aiida-fleur is an AiiDA plugin for running FLEUR (Full-potential Linearized Augm
 pip install aiida-fleur
 ```
 
+## Limitations & Known Constraints
+- **FLEUR-specific**: Only interfaces with FLEUR code
+- **AiiDA dependency**: Requires AiiDA framework setup
+- **Learning curve**: AiiDA workflow concepts needed
+- **FLEUR license**: FLEUR code itself requires license
+
+## Comparison with Other Tools
+- **vs aiida-vasp**: aiida-fleur for FLEUR, aiida-vasp for VASP
+- **vs masci-tools**: aiida-fleur workflows, masci-tools post-processing
+- **Unique strength**: AiiDA workflow automation for FLEUR FP-LAPW
+
 ## Verification & Sources
 **Confidence**: VERIFIED
 

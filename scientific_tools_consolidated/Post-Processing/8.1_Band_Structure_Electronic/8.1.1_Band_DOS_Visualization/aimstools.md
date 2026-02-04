@@ -25,6 +25,16 @@ aimstools is a Python package for analyzing and visualizing FHI-aims calculation
 - **Input formats**: FHI-aims output files (aims.out, geometry.in)
 - **Output data types**: Processed data, plots
 
+## Limitations & Known Constraints
+- **FHI-aims specific**: Only processes FHI-aims calculations
+- **Documentation**: May have limited documentation
+- **FHI-aims license**: FHI-aims code requires license
+
+## Comparison with Other Tools
+- **vs aims_DosBand**: Similar scope for FHI-aims users
+- **vs pymatgen**: aimstools FHI-aims specific, pymatgen multi-code
+- **Unique strength**: Python utilities for FHI-aims analysis
+
 ## Verification & Sources
 **Confidence**: VERIFIED
 

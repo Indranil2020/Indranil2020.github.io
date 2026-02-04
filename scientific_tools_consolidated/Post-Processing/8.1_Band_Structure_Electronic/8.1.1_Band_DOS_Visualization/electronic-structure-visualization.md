@@ -26,6 +26,23 @@ electronic-structure-visualization is an interactive Dash/Plotly-based visualiza
 - **Input formats**: Various DFT output formats
 - **Output data types**: Interactive web plots
 
+## Installation
+```bash
+git clone https://github.com/henniggroup/electronic-structure-visualization.git
+cd electronic-structure-visualization
+pip install -r requirements.txt
+```
+
+## Limitations & Known Constraints
+- **Web-based**: Requires running local server for visualization
+- **Dependencies**: Dash/Plotly setup required
+- **Data preparation**: May need preprocessing for specific formats
+
+## Comparison with Other Tools
+- **vs sumo**: electronic-structure-visualization interactive, sumo static plots
+- **vs py4vasp**: Different visualization approaches
+- **Unique strength**: Interactive web-based visualization with Dash/Plotly
+
 ## Verification & Sources
 **Confidence**: VERIFIED
 

@@ -23,6 +23,16 @@
 - Band structure extraction
 - Automated feature detection
 
+## Limitations & Known Constraints
+- **ML-dependent**: Requires trained models
+- **Data quality**: Performance depends on input data quality
+- **Specialized**: Focused on band reconstruction task
+
+## Comparison with Other Tools
+- **vs PyARPES**: fuller ML-based, PyARPES traditional analysis
+- **vs mpes**: Different approaches to band extraction
+- **Unique strength**: Machine learning approach to band reconstruction
+
 ## Verification & Sources
 - **Status**: ✅ VERIFIED
 - **Confidence**: VERIFIED

@@ -25,6 +25,23 @@ cp2k-analysis-tools provides analysis tools for CP2K calculations including DOS,
 - **Input formats**: CP2K output files
 - **Output data types**: Processed data, plots
 
+## Installation
+```bash
+git clone https://github.com/nholmber/cp2k-analysis-tools.git
+cd cp2k-analysis-tools
+pip install -e .
+```
+
+## Limitations & Known Constraints
+- **CP2K-specific**: Only processes CP2K output
+- **Community tool**: May have less active maintenance
+- **Documentation**: Limited compared to official tools
+
+## Comparison with Other Tools
+- **vs cp2k-output-tools**: Both for CP2K, cp2k-output-tools is official
+- **vs pymatgen**: cp2k-analysis-tools CP2K-specific
+- **Unique strength**: Comprehensive CP2K analysis utilities
+
 ## Verification & Sources
 **Confidence**: VERIFIED
 

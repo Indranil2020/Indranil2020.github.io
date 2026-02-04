@@ -24,6 +24,16 @@
 - Teaching materials
 - Quick estimates
 
+## Limitations & Known Constraints
+- **Simplified model**: Empty lattice approximation
+- **Accuracy**: Not suitable for detailed quantitative predictions
+- **Educational focus**: Better for understanding than production
+
+## Comparison with Other Tools
+- **vs EPW**: elphem simplified, EPW full DFT-based
+- **vs Wannier-based tools**: Different level of theory
+- **Unique strength**: Simple model for electron-phonon understanding
+
 ## Verification & Sources
 - **Status**: ✅ VERIFIED
 - **Confidence**: VERIFIED

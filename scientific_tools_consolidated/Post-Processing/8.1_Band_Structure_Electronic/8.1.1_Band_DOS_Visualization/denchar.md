@@ -27,6 +27,23 @@ denchar is a SIESTA utility for charge density and wavefunction plotting, provid
 - **Input formats**: SIESTA output files (.RHO, .WFS)
 - **Output data types**: Cube files, 2D data files
 
+## Installation
+Included with SIESTA distribution. Build from SIESTA utilities:
+```bash
+cd siesta/Util/Denchar
+make
+```
+
+## Limitations & Known Constraints
+- **SIESTA-specific**: Only works with SIESTA output
+- **Compilation**: Requires building with SIESTA
+- **Output format**: Limited to cube files and 2D slices
+
+## Comparison with Other Tools
+- **vs VESTA**: denchar SIESTA-native, VESTA general visualization
+- **vs c2x**: Both can produce cube files, different ecosystems
+- **Unique strength**: Native SIESTA charge/wavefunction visualization
+
 ## Verification & Sources
 **Confidence**: VERIFIED - Part of SIESTA
 

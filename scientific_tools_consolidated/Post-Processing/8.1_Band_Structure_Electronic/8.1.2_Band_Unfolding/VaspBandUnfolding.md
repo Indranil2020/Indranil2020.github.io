@@ -27,6 +27,24 @@ VaspBandUnfolding is a Python toolkit for VASP band unfolding from supercell cal
 - **Input formats**: VASP WAVECAR, POSCAR
 - **Output data types**: Unfolded band structures, spectral functions
 
+## Installation
+```bash
+git clone https://github.com/QijingZheng/VaspBandUnfolding.git
+cd VaspBandUnfolding
+pip install -e .
+```
+
+## Limitations & Known Constraints
+- **VASP-specific**: Only processes VASP WAVECAR files
+- **Memory**: Large WAVECAR files need substantial RAM
+- **Documentation**: Tutorial-based, less formal documentation
+
+## Comparison with Other Tools
+- **vs easyunfold**: VaspBandUnfolding more manual, easyunfold more automated
+- **vs BandUP**: Different implementation approaches
+- **vs fold2Bloch**: Both VASP unfolding, different interfaces
+- **Unique strength**: Well-documented tutorials, WAVECAR parsing utilities
+
 ## Verification & Sources
 **Confidence**: VERIFIED
 
