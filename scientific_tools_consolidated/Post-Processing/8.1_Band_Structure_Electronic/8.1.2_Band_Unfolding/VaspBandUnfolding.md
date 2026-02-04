@@ -1,34 +1,35 @@
 # VaspBandUnfolding
 
-## Overview
-**VaspBandUnfolding** is a collection of Python scripts for dealing with VASP outputs, particularly for band unfolding from supercell calculations.
-
 ## Official Resources
 - **GitHub**: https://github.com/QijingZheng/VaspBandUnfolding
 - **Tutorial**: http://staff.ustc.edu.cn/~zqj/posts/Band-unfolding-tutorial/
+- **License**: MIT License
 
-## Capabilities
+## Overview
+VaspBandUnfolding is a Python toolkit for VASP band unfolding from supercell calculations, providing WAVECAR parsing and spectral weight calculation with well-documented tutorials.
+
+**Scientific domain**: Band unfolding, VASP post-processing
+**Target user community**: VASP users studying supercell systems
+
+## Capabilities (CRITICAL)
 - **Band Unfolding**: Supercell band structure unfolding
 - **WAVECAR Parsing**: Read VASP wavefunction files
 - **Spectral Functions**: Calculate spectral weights
 - **K-path Generation**: Create unfolding k-paths
 
-## Key Features
+## Key Strengths
 - WAVECAR reading utilities
 - Spectral weight calculation
-- Effective band structure extraction
-- Visualization tools
 - Well-documented tutorials
-
-## Theory
-Based on:
-- Popescu & Zunger, Phys. Rev. B 85, 085201 (2012)
+- Based on Popescu & Zunger methodology
 
 ## Inputs & Outputs
-- **Inputs**: VASP WAVECAR, POSCAR
-- **Outputs**: Unfolded band structures, spectral functions
+- **Input formats**: VASP WAVECAR, POSCAR
+- **Output data types**: Unfolded band structures, spectral functions
 
 ## Verification & Sources
-- **Status**: ✅ VERIFIED
-- **Confidence**: VERIFIED
-- **Developer**: Qijing Zheng (USTC)
+**Confidence**: VERIFIED
+
+**Verification status**: ✅ VERIFIED
+- Source code: OPEN (GitHub, MIT)
+- Developer: Qijing Zheng (USTC)

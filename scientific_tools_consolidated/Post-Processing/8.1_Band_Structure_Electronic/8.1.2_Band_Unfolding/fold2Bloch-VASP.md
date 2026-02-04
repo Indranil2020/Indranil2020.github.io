@@ -1,35 +1,40 @@
 # fold2Bloch-VASP
 
-## Overview
-**fold2Bloch-VASP** is a Fortran utility designed to unfold the band structure of a supercell obtained with VASP and compute an effective band structure in a primitive representation.
-
 ## Official Resources
 - **GitHub**: https://github.com/rubel75/fold2Bloch-VASP
 - **Publication**: Phys. Rev. B 90, 115202 (2014)
+- **License**: MIT License
 
-## Capabilities
-- **Band Unfolding**: Supercell to primitive cell
+## Overview
+fold2Bloch-VASP is a Fortran utility for unfolding supercell band structures from VASP calculations into primitive cell representation, computing effective band structures with Bloch spectral weights.
+
+**Scientific domain**: Band unfolding, supercell calculations
+**Target user community**: VASP users studying defects, alloys, interfaces
+
+## Capabilities (CRITICAL)
+- **Band Unfolding**: Supercell to primitive cell transformation
 - **Effective Band Structure**: Primitive BZ representation
-- **Large-scale Calculations**: Handle complex supercells
-- **Alloy/Defect Studies**: Interpret disordered systems
+- **Spectral Weights**: Bloch character calculation
+- **Large Supercells**: Efficient handling of complex systems
 
-## Key Features
+## Key Strengths
 - Fortran implementation (fast)
 - VASP WAVECAR support
-- Bloch spectral weights
 - Command-line interface
+- Well-documented
 
-## Applications
+## Inputs & Outputs
+- **Input formats**: VASP WAVECAR, POSCAR
+- **Output data types**: Unfolded band structure data
+
+## Application Areas
 - Alloy band structures
 - Defect calculations
 - Interface/heterostructure studies
-- Disordered systems
-
-## Inputs & Outputs
-- **Inputs**: VASP WAVECAR, POSCAR
-- **Outputs**: Unfolded band structure data
 
 ## Verification & Sources
-- **Status**: ✅ VERIFIED
-- **Confidence**: VERIFIED
-- **Developer**: Oleg Rubel
+**Confidence**: VERIFIED
+
+**Verification status**: ✅ VERIFIED
+- Source code: OPEN (GitHub, MIT)
+- Developer: Oleg Rubel (McMaster)
