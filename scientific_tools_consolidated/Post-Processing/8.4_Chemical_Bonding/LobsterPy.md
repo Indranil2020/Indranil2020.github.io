@@ -22,6 +22,26 @@ LobsterPy is a Python package for analyzing and plotting data from the LOBSTER c
 
 **Sources**: LobsterPy documentation, GitHub repository
 
+## Key Strengths
+
+### Automated Analysis:
+- Automatic identification of relevant bonds
+- Text descriptions of bonding
+- No manual setup required
+- High-throughput ready
+
+### Publication Quality:
+- matplotlib-based plotting
+- Customizable figures
+- Consistent styling
+- Direct export
+
+### Python Ecosystem:
+- pymatgen integration
+- Jupyter compatible
+- Scriptable workflows
+- Active development
+
 ## Inputs & Outputs
 - **Input formats**: LOBSTER output files (COHPCAR.lobster, ICOHPLIST.lobster, DOSCAR.lobster)
 - **Output data types**: Matplotlib figures, JSON summaries, Python objects
@@ -41,10 +61,28 @@ LobsterPy is a Python package for analyzing and plotting data from the LOBSTER c
 - Fast Python-based post-processing
 - Efficient handling of large LOBSTER output files
 
+## Limitations & Known Constraints
+- **LOBSTER required**: Needs LOBSTER calculation first
+- **File formats**: Specific to LOBSTER output files
+- **Interpretation**: Requires understanding of COHP
+- **Visualization**: Limited to 2D plots
+
+## Comparison with Other Tools
+- **vs LOBSTER**: LobsterPy post-processing, LOBSTER core calculation
+- **vs pymatgen**: LobsterPy specialized for LOBSTER
+- **vs manual plotting**: LobsterPy automated and consistent
+- **Unique strength**: Automated bonding descriptions
+
 ## Application Areas
 - High-throughput bonding analysis
 - Understanding crystal stability
 - Educational visualization of bonding
+
+## Best Practices
+- Ensure LOBSTER calculation completed successfully
+- Use automatic analysis for initial screening
+- Customize plots for publication
+- Validate descriptions with chemical intuition
 
 ## Community and Support
 - Open-source (MIT)

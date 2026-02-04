@@ -28,6 +28,26 @@
 
 **Sources**: F. L. Hirshfeld, Theor. Chim. Acta 44, 129 (1977)
 
+## Key Strengths
+
+### Stockholder Partitioning:
+- Intuitive physical basis
+- Basis-set independent
+- Smooth charge distribution
+- Widely accepted
+
+### Multiple Variants:
+- Standard Hirshfeld
+- Hirshfeld-I (iterative)
+- Hirshfeld-E (extended)
+- Flexibility in choice
+
+### Broad Implementation:
+- Tonto (crystallography)
+- Multiwfn (molecules)
+- Q-Chem, ORCA, ADF
+- VASP via scripts
+
 ## Inputs & Outputs
 - **Input formats**: Electron density (cube, CHGCAR), wavefunction files
 - **Output data types**: Partial charges, atomic populations
@@ -41,11 +61,29 @@
 - Fast for standard Hirshfeld
 - Iterative Hirshfeld (Hirshfeld-I) requires convergence loops
 
+## Limitations & Known Constraints
+- **Reference atoms**: Depends on free-atom reference choice
+- **Charged systems**: Standard Hirshfeld less reliable
+- **Implementation**: No single standard code
+- **Convergence**: Hirshfeld-I requires iterations
+
+## Comparison with Other Tools
+- **vs Bader**: Hirshfeld smoother, Bader topological
+- **vs DDEC**: DDEC more robust for charged systems
+- **vs Mulliken**: Hirshfeld basis-set independent
+- **Unique strength**: Intuitive stockholder partitioning
+
 ## Application Areas
 - Force field parameterization
 - Analysis of ionic vs covalent character
 - Electrostatic potential modeling
 - Reactivity indices
+
+## Best Practices
+- Use Hirshfeld-I for better convergence
+- Compare with other charge methods
+- Verify against chemical expectations
+- Consider system charge state
 
 ## Community and Support
 - Method is standard in quantum chemistry

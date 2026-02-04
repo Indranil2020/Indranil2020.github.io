@@ -29,6 +29,26 @@ The Henkelman Group Bader code is a widely used software for performing Bader ch
 
 **Sources**: Bader documentation, Comp. Mater. Sci. 36, 354 (2006)
 
+## Key Strengths
+
+### QTAIM Foundation:
+- Rigorous theoretical basis
+- Physically motivated partitioning
+- Unambiguous atomic volumes
+- Well-established method
+
+### VASP Optimized:
+- Direct CHGCAR support
+- Core density reconstruction
+- Efficient grid handling
+- Standard workflow
+
+### Wide Adoption:
+- Henkelman group support
+- Active user forum
+- pymatgen integration
+- Thousands of citations
+
 ## Inputs & Outputs
 - **Input formats**: CHGCAR (VASP), cube files (Gaussian, etc.), spin-density files
 - **Output data types**: ACF.dat (charges/positions), BCF.dat (volume boundaries), AVF.dat (atomic volumes)
@@ -50,11 +70,29 @@ The Henkelman Group Bader code is a widely used software for performing Bader ch
 - Scales linearly with grid size
 - Memory usage proportional to charge density grid
 
+## Limitations & Known Constraints
+- **Grid dependence**: Accuracy depends on density grid resolution
+- **Core density**: PAW requires AECCAR reconstruction
+- **Interpretation**: May differ from formal oxidation states
+- **Light elements**: Hydrogen charges less reliable
+
+## Comparison with Other Tools
+- **vs DDEC**: Bader topology-based, DDEC stockholder-based
+- **vs Hirshfeld**: Different partitioning philosophies
+- **vs Mulliken**: Bader basis-set independent
+- **Unique strength**: Topological partitioning, atomic volumes
+
 ## Application Areas
 - Oxidation state assignment
 - Charge transfer in ionic/covalent bonds
 - Surface adsorption analysis
 - Electrocatalysis
+
+## Best Practices
+- Use AECCAR0+AECCAR2 for VASP PAW calculations
+- Ensure fine FFT grid in DFT calculation
+- Check charge conservation
+- Compare with expected oxidation states
 
 ## Community and Support
 - Developed by Henkelman Group (UT Austin)

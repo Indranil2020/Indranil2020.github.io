@@ -31,6 +31,26 @@ DDEC (Density Derived Electrostatic and Chemical) is a method and software code 
 
 **Sources**: DDEC documentation, RSC Adv. 6, 27724 (2016)
 
+## Key Strengths
+
+### DDEC6 Method:
+- Reproduces electrostatic potential
+- Chemically transferable charges
+- Robust for charged systems
+- All elements supported
+
+### Bond Order Calculation:
+- Comprehensive bond orders
+- Connectivity determination
+- Spin moment partitioning
+- Overlap populations
+
+### Performance:
+- OpenMP parallelized
+- Efficient memory usage
+- Large system capable
+- Fast execution
+
 ## Inputs & Outputs
 - **Input formats**: VASP (AECCAR0/2, CHGCAR, POTCAR), Gaussian (.wfn/.fchk), Q-Chem, etc.
 - **Output data types**: `net_atomic_charges.xyz`, `overlap_populations.xyz`, `atomic_spin_moments.xyz`, statistics logs
@@ -53,12 +73,30 @@ DDEC (Density Derived Electrostatic and Chemical) is a method and software code 
 - Parallelized with OpenMP
 - Memory efficient
 
+## Limitations & Known Constraints
+- **Atomic densities required**: Needs reference density files
+- **Input format**: Specific file format requirements
+- **Documentation**: Could be more extensive
+- **Learning curve**: Setup requires careful attention
+
+## Comparison with Other Tools
+- **vs Bader**: DDEC stockholder-based, Bader topology-based
+- **vs Hirshfeld**: DDEC6 more robust for charged systems
+- **vs Mulliken**: DDEC basis-set independent
+- **Unique strength**: Combined charges and bond orders
+
 ## Application Areas
 - Force field parameterization (partial charges)
 - MOF/COF adsorption studies
 - Reactivity prediction
 - Magnetic moment distribution
 - Bond characterization
+
+## Best Practices
+- Include core density for VASP (AECCAR files)
+- Verify net charge matches expected
+- Check bond order reasonableness
+- Use appropriate atomic reference densities
 
 ## Community and Support
 - Developed by Thomas Manz group (New Mexico State University)

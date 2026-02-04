@@ -39,6 +39,26 @@ Lobster (Local Orbital Basis Suite Towards Electronic-Structure Reconstruction) 
 
 **Sources**: Official Lobster website, publications, cited in 7/7 source lists
 
+## Key Strengths
+
+### Chemical Bonding Insight:
+- COHP/COOP analysis
+- Quantitative ICOHP values
+- Bonding/antibonding decomposition
+- Orbital-resolved analysis
+
+### Multi-Code Support:
+- VASP (primary)
+- Quantum ESPRESSO
+- ABINIT support
+- Consistent methodology
+
+### Production Ready:
+- Automated neighbor detection
+- Batch processing
+- LobsterPy integration
+- Materials Project use
+
 ## Inputs & Outputs
 - **Input formats**:
   - POSCAR (VASP structure)
@@ -83,6 +103,18 @@ Lobster (Local Orbital Basis Suite Towards Electronic-Structure Reconstruction) 
 - **k-point sampling**: Requires adequate k-point mesh from DFT
 - **Documentation**: Limited compared to major DFT codes
 - **Atomic basis choice**: Results can depend on choice of local basis functions
+
+## Comparison with Other Tools
+- **vs Bader**: COHP bonding analysis, Bader charge partitioning
+- **vs DDEC**: Different analysis perspectives
+- **vs Critic2**: Lobster orbital-based, Critic2 density-based
+- **Unique strength**: COHP/COOP for solid-state bonding
+
+## Best Practices
+- Use adequate k-point sampling in DFT
+- Check projection quality (spillings)
+- Compare ICOHP values for bond ranking
+- Validate with known compounds
 
 ## Verification & Sources
 **Primary sources**:

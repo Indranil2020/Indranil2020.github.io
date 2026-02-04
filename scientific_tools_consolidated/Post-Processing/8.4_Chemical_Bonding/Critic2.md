@@ -32,6 +32,26 @@ Critic2 is a code for the analysis of quantum mechanical electron density and ot
 
 **Sources**: Critic2 documentation, Comp. Phys. Comm. 185, 1007 (2014)
 
+## Key Strengths
+
+### Multi-Code Support:
+- WIEN2k, VASP, QE, Abinit
+- Gaussian, ORCA cube files
+- Elk, CP2K support
+- Consistent analysis
+
+### Comprehensive Analysis:
+- QTAIM critical points
+- NCI visualization
+- ELF/ELI analysis
+- Basin integration
+
+### Open Source:
+- GPL v3 licensed
+- Active development
+- GitHub hosted
+- Extensive documentation
+
 ## Inputs & Outputs
 - **Input formats**: Code-specific density files (e.g., CHGCAR, rho.r, cube), Critic2 input script (.cri)
 - **Output data types**: Critical point list, integrated basin properties, visualization files (cube, xyz, vtk)
@@ -52,12 +72,30 @@ Critic2 is a code for the analysis of quantum mechanical electron density and ot
 - Basin integration can be computationally intensive (grid-based)
 - OpenMP parallelization
 
+## Limitations & Known Constraints
+- **Learning curve**: Requires QTAIM knowledge
+- **Basin integration**: Can be computationally intensive
+- **Grid resolution**: Trade-off with accuracy
+- **Input preparation**: Code-specific density formats
+
+## Comparison with Other Tools
+- **vs AIMAll**: Critic2 open-source, AIMAll commercial
+- **vs Bader (Henkelman)**: Critic2 more features, Bader faster
+- **vs Multiwfn**: Critic2 periodic systems, Multiwfn molecules
+- **Unique strength**: Multi-code support, periodic QTAIM
+
 ## Application Areas
 - Bonding characterization in solids
 - Hydrogen bonding and weak interactions (NCI)
 - High-pressure phases
 - Charge transfer analysis
 - Pore analysis in MOFs/Zeolites
+
+## Best Practices
+- Use converged DFT density
+- Choose appropriate grid for basin integration
+- Validate critical points with chemical intuition
+- Cross-check with NCIPLOT for weak interactions
 
 ## Community and Support
 - Open-source (GPL v3)

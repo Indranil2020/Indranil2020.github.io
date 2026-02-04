@@ -27,6 +27,26 @@
 
 **Sources**: Dronskowski and Bloechl, J. Phys. Chem. 97, 8617 (1993)
 
+## Key Strengths
+
+### Chemical Insight:
+- Direct bonding/antibonding visualization
+- Energy-resolved analysis
+- Quantitative ICOHP values
+- Intuitive interpretation
+
+### Solid-State Focus:
+- Designed for crystals
+- Periodic boundary support
+- Band structure connection
+- Extended systems
+
+### Wide Implementation:
+- LOBSTER (primary)
+- SIESTA/LMTO codes
+- Academic standard
+- Well-documented theory
+
 ## Inputs & Outputs
 - **Input**: Wavefunctions/Hamiltonians from DFT (VASP, QE, etc.)
 - **Output**: COHP vs Energy plots, ICOHP values
@@ -36,11 +56,29 @@
 - **LobsterPy**: Python analysis tool
 - **VASP/QE**: Source of electronic structure data
 
+## Limitations & Known Constraints
+- **Projection dependent**: Results depend on local basis choice
+- **Not unique**: Different projections give different COHP
+- **Interpretation**: Requires chemical knowledge
+- **Implementation**: Mainly via LOBSTER for plane-wave codes
+
+## Comparison with Other Tools
+- **vs COOP**: COHP energy-weighted, COOP overlap-weighted
+- **vs Bader**: COHP bonding analysis, Bader charge partitioning
+- **vs ELF**: Different perspectives on bonding
+- **Unique strength**: Direct bonding/antibonding energy analysis
+
 ## Application Areas
 - Phase stability analysis
 - Magnetic ordering origins
 - Bond strength in intermetallics
 - Surface adsorption
+
+## Best Practices
+- Use adequate k-point sampling
+- Choose appropriate energy window
+- Compare ICOHP values for bond strength ranking
+- Validate with known compounds
 
 ## Verification & Sources
 **Primary sources**:
