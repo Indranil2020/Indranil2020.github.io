@@ -1,21 +1,86 @@
 # XSpectraTools
 
 ## Official Resources
-- **Homepage**: [Unverified Standalone] - Likely refers to utilities distributed with **Quantum ESPRESSO**.
-- **Documentation**: See Quantum ESPRESSO `XSpectra` documentation.
-- **Source**: `q-e/XSpectra/tools/` directory in Quantum ESPRESSO distribution.
+- Homepage: https://www.quantum-espresso.org/
+- Documentation: Part of Quantum ESPRESSO XSpectra documentation
+- Source Repository: `q-e/XSpectra/tools/` in QE distribution
+- License: GNU General Public License v2.0
 
 ## Overview
-**XSpectraTools** likely refers to the collection of auxiliary scripts and tools provided with the `xspectra.x` code in the Quantum ESPRESSO suite. `xspectra.x` calculates X-ray Absorption Spectra (XAS) at the K-edge and L2,3-edges using the GIPAW method. The tools assist in preprocessing (supercells) and post-processing (broadening, plotting).
+XSpectraTools refers to the collection of auxiliary scripts and tools provided with the `xspectra.x` code in the Quantum ESPRESSO suite. These tools assist in preprocessing (supercell generation, core-hole setup) and post-processing (broadening, plotting, alignment) of XAS calculations.
 
 **Scientific domain**: X-ray Absorption Spectroscopy (XAS), XANES
-**Target user community**: Quantum ESPRESSO users
+**Target user community**: Quantum ESPRESSO users performing XAS calculations
 
-## Capabilities
-- **Broadening**: Convolution of raw stick spectra with Lorentzian/Gaussian functions to match experimental resolution.
-- **Core-hole setup**: Generating supercells with core-holes (often done via general QE tools or scripts).
-- **Analysis**: Determining Fermi levels and aligning spectra.
+## Theoretical Methods
+- Spectral broadening (Lorentzian/Gaussian)
+- Core-hole supercell generation
+- Fermi level alignment
+- Spectrum convolution
 
-## Verification Status
-- **Status**: ⚠️ **Ambiguous/Integrated**
-- **Note**: No standalone "XSpectraTools" repository by a "Calandra Group" was confirmed. Matteo Calandra is a key author of `xspectra.x`. The "tools" are likely internal components of the QE distribution (e.g., in `XSpectra/tools/`).
+## Capabilities (CRITICAL)
+- **Broadening**: Convolution with lifetime broadening
+- **Core-hole Setup**: Supercell generation scripts
+- **Alignment**: Fermi level determination
+- **Plotting**: Visualization utilities
+- **QE Integration**: Native to Quantum ESPRESSO
+
+**Sources**: Quantum ESPRESSO documentation
+
+## Key Strengths
+
+### QE Integration:
+- Native to QE distribution
+- Consistent workflow
+- Maintained with QE
+- Standard tools
+
+### Post-Processing:
+- Broadening utilities
+- Alignment tools
+- Plotting scripts
+- Analysis helpers
+
+## Inputs & Outputs
+- **Input formats**: xspectra.x output files
+- **Output data types**: Broadened spectra, aligned spectra
+
+## Limitations & Known Constraints
+- **QE only**: Specific to Quantum ESPRESSO
+- **Not standalone**: Part of QE distribution
+- **Documentation**: Limited separate documentation
+- **Scripts**: May require customization
+
+## Comparison with Other Tools
+- **vs standalone codes**: Integrated with xspectra.x
+- **vs manual processing**: Automated utilities
+- **Unique strength**: Native QE XAS workflow support
+
+## Application Areas
+- XAS spectrum post-processing
+- Core-hole calculation setup
+- Spectrum visualization
+- Data analysis
+
+## Best Practices
+- Use with xspectra.x calculations
+- Apply appropriate broadening
+- Verify alignment parameters
+- Customize scripts as needed
+
+## Community and Support
+- Part of Quantum ESPRESSO community
+- QE mailing list support
+- GPL licensed
+
+## Verification & Sources
+**Primary sources**:
+1. Quantum ESPRESSO: https://www.quantum-espresso.org/
+2. XSpectra documentation
+
+**Confidence**: UNCERTAIN - Integrated tools, not standalone
+
+**Verification status**: ⚠️ AMBIGUOUS
+- Status: Part of QE distribution
+- Not standalone software
+- Utility scripts for xspectra.x

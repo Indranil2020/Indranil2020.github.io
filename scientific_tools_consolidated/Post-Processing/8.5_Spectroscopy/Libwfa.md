@@ -30,6 +30,26 @@ Libwfa is an open-source C++ library for wavefunction analysis of electronic exc
 
 **Sources**: Libwfa documentation, J. Comput. Chem. 37, 1632 (2016)
 
+## Key Strengths
+
+### Excited State Analysis:
+- NTO visualization
+- CT descriptors
+- Exciton analysis
+- Quantitative metrics
+
+### Multi-Code Support:
+- Q-Chem integration
+- OpenMolcas support
+- ORCA compatible
+- Consistent analysis
+
+### Open Source:
+- BSD licensed
+- GitHub hosted
+- Active development
+- Well-documented
+
 ## Inputs & Outputs
 - **Input formats**: Code-specific wavefunction/density data (HDF5 or native formats)
 - **Output data types**: Analysis log, cube files for NTOs/densities, CT descriptors
@@ -50,11 +70,29 @@ Libwfa is an open-source C++ library for wavefunction analysis of electronic exc
 - Highly efficient linear algebra operations
 - Negligible cost compared to the excited state calculation itself
 
+## Limitations & Known Constraints
+- **Code integration**: Requires compatible QC code
+- **Learning curve**: Excited state concepts needed
+- **Visualization**: External tools required
+- **Method dependent**: Results vary with theory level
+
+## Comparison with Other Tools
+- **vs TheoDORE**: Similar capabilities, different interfaces
+- **vs Multiwfn**: Libwfa specialized for excited states
+- **vs native analysis**: Libwfa more comprehensive
+- **Unique strength**: Quantitative CT descriptors
+
 ## Application Areas
 - Photovoltaic materials (charge separation)
 - OLEDs (TADF materials)
 - Photocatalysis
 - Biological light harvesting
+
+## Best Practices
+- Validate NTOs visually
+- Compare multiple excited states
+- Use appropriate theory level
+- Check CT numbers for consistency
 
 ## Community and Support
 - Open-source (BSD)

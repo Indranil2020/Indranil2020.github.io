@@ -30,6 +30,26 @@ OCEAN is a code for calculating core-level spectra (XAS, XES, RIXS) from first p
 
 **Sources**: OCEAN website, Comp. Phys. Comm. 182, 409 (2011)
 
+## Key Strengths
+
+### BSE Accuracy:
+- Excitonic effects included
+- Core-hole screening
+- Many-body treatment
+- Accurate near-edge
+
+### First-Principles:
+- No empirical parameters
+- DFT-based workflow
+- Periodic systems
+- Multiple edges
+
+### Open Source:
+- BSD licensed
+- GitHub hosted
+- Active development
+- NIST supported
+
 ## Inputs & Outputs
 - **Input formats**: `ocean.in` (main input), DFT input files
 - **Output data types**: Spectra files (energy vs intensity), absorption cross-sections
@@ -50,11 +70,29 @@ OCEAN is a code for calculating core-level spectra (XAS, XES, RIXS) from first p
 - Scales with system size and basis set
 - Parallelized for clusters
 
+## Limitations & Known Constraints
+- **Computational cost**: BSE is expensive
+- **Convergence**: Requires careful k-point/band testing
+- **Multiplet effects**: Limited treatment
+- **Learning curve**: Complex setup
+
+## Comparison with Other Tools
+- **vs FEFF**: OCEAN BSE-based, FEFF real-space MS
+- **vs exciting-XS**: Both BSE, different DFT backends
+- **vs xspectra**: OCEAN more accurate, xspectra faster
+- **Unique strength**: First-principles BSE for core levels
+
 ## Application Areas
 - Transition metal oxides
 - Battery materials (Li K-edge)
 - Organic crystals
 - Surface adsorbates
+
+## Best Practices
+- Converge k-points and bands
+- Test screening parameters
+- Validate against experiment
+- Use appropriate core-hole treatment
 
 ## Community and Support
 - Developed at NIST and University of Washington (Rehr group connection)

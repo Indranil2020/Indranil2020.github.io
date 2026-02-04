@@ -31,6 +31,26 @@ FDMNES is a code for simulating X-ray Absorption Spectroscopy (XAS) including XA
 
 **Sources**: FDMNES website, Phys. Rev. B 63, 125120 (2001)
 
+## Key Strengths
+
+### Dual Methods:
+- FDM for accuracy
+- MST for speed
+- User choice
+- Non-muffin-tin option
+
+### Comprehensive Features:
+- XANES, EXAFS, RIXS
+- Dichroism (XMCD, XNCD)
+- Spin-orbit coupling
+- GUI available
+
+### Active Development:
+- GPL licensed
+- Regular updates
+- Workshops available
+- Good documentation
+
 ## Inputs & Outputs
 - **Input formats**: `fdmnes.ind` (input parameters), `fdmfile.txt` (structure)
 - **Output data types**: `xanes.txt` (spectra), `density.txt` (DOS), `bse.txt`
@@ -52,12 +72,30 @@ FDMNES is a code for simulating X-ray Absorption Spectroscopy (XAS) including XA
 - FDM is computationally intensive but handles non-spherical potentials accurately
 - Memory scaling with FDM grid size
 
+## Limitations & Known Constraints
+- **FDM cost**: Slower than MST
+- **Learning curve**: Many parameters
+- **Grid convergence**: FDM needs testing
+- **Documentation**: Could be more extensive
+
+## Comparison with Other Tools
+- **vs FEFF**: FDMNES FDM option, FEFF muffin-tin only
+- **vs xspectra**: Different theoretical approaches
+- **vs OCEAN**: FDMNES faster, OCEAN BSE-based
+- **Unique strength**: FDM for non-spherical potentials
+
 ## Application Areas
 - Structure refinement from XANES
 - Magnetic materials (XMCD)
 - Biological metalloproteins
 - Distorted local environments
 - Actinides and lanthanides (relativistic effects)
+
+## Best Practices
+- Start with MST for quick tests
+- Use FDM for final accuracy
+- Converge cluster size
+- Apply appropriate broadening
 
 ## Community and Support
 - Developed at Institut Néel (CNRS/Grenoble)

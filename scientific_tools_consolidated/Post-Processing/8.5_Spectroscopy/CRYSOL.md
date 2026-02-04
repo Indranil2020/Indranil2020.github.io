@@ -28,6 +28,26 @@ CRYSOL is a program for evaluating the solution scattering (SAXS/SANS) from macr
 
 **Sources**: CRYSOL documentation, J. Appl. Cryst. 28, 768 (1995)
 
+## Key Strengths
+
+### Fast Algorithm:
+- Multipole expansion
+- Efficient calculation
+- Quick fitting
+- Large proteins
+
+### Hydration Modeling:
+- Boundary layer
+- Contrast variation
+- Solvent effects
+- Realistic model
+
+### ATSAS Integration:
+- Complete suite
+- GUI available
+- Standard tool
+- Active support
+
 ## Inputs & Outputs
 - **Input formats**: PDB file (atomic coordinates), experimental data file (.dat)
 - **Output data types**: .fit (fitted curve), .log (parameters), .alm (multipole coefficients)
@@ -48,11 +68,29 @@ CRYSOL is a program for evaluating the solution scattering (SAXS/SANS) from macr
 - Efficient for standard proteins
 - Scales with number of atoms and multipole order
 
+## Limitations & Known Constraints
+- **Atomic model needed**: Requires PDB structure
+- **Spherical averaging**: Loses orientation info
+- **Hydration parameters**: May need adjustment
+- **Proprietary**: Academic license required
+
+## Comparison with Other Tools
+- **vs FoXS**: Similar capabilities, different algorithms
+- **vs SASSIE**: CRYSOL faster, SASSIE more flexible
+- **vs experimental**: Validation tool
+- **Unique strength**: Standard SAXS fitting tool
+
 ## Application Areas
 - Protein structure validation
 - Conformational analysis in solution
 - Complex formation studies
 - Unfolding/folding monitoring
+
+## Best Practices
+- Use high-quality PDB structures
+- Check hydration shell parameters
+- Validate chi-square values
+- Compare multiple conformations
 
 ## Community and Support
 - Developed by EMBL Hamburg (Svergun Group)

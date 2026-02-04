@@ -29,6 +29,26 @@ XSpectra is a code for calculating X-ray Absorption Spectra (XAS) at the K-edge 
 
 **Sources**: XSpectra documentation, Phys. Rev. B 80, 035102 (2009)
 
+## Key Strengths
+
+### Lanczos Efficiency:
+- No empty states needed
+- Linear scaling
+- Memory efficient
+- Large systems feasible
+
+### QE Integration:
+- Native QE module
+- PAW/GIPAW support
+- Consistent workflow
+- Active development
+
+### Core-Hole Treatment:
+- FCH/XCH approximations
+- Supercell approach
+- Polarization dependence
+- Dichroism support
+
 ## Inputs & Outputs
 - **Input formats**: `xspectra.in` (namelist), `prefix.save` (from pw.x)
 - **Output data types**: `xspectra.dat` (energy vs cross-section)
@@ -48,11 +68,29 @@ XSpectra is a code for calculating X-ray Absorption Spectra (XAS) at the K-edge 
 - Highly efficient due to Lanczos algorithm (scales linearly with N)
 - Memory efficient compared to sum-over-states methods
 
+## Limitations & Known Constraints
+- **QE only**: Requires Quantum ESPRESSO
+- **Core-hole setup**: Supercell generation needed
+- **L-edges**: More complex than K-edges
+- **Broadening**: Manual convolution required
+
+## Comparison with Other Tools
+- **vs FEFF**: xspectra periodic, FEFF cluster-based
+- **vs OCEAN**: xspectra faster, OCEAN more accurate
+- **vs FDMNES**: Different theoretical approaches
+- **Unique strength**: Efficient Lanczos, QE integration
+
 ## Application Areas
 - Structure determination
 - Oxidation state analysis
 - Surface adsorption geometry
 - High-pressure phases
+
+## Best Practices
+- Use adequate supercell for core-hole
+- Converge Lanczos iterations
+- Apply appropriate broadening
+- Validate with reference compounds
 
 ## Community and Support
 - Part of Quantum ESPRESSO community

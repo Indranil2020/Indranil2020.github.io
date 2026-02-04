@@ -30,6 +30,26 @@ exciting-XS refers to the X-ray spectroscopy capabilities within the **exciting*
 
 **Sources**: exciting documentation, Comp. Phys. Comm. 185, 2080 (2014)
 
+## Key Strengths
+
+### All-Electron Accuracy:
+- Full-potential LAPW
+- No pseudopotential errors
+- Core state treatment
+- High precision
+
+### BSE for Core Levels:
+- Excitonic effects
+- Core-hole interaction
+- Momentum dependence
+- Exciton visualization
+
+### Open Source:
+- GPL licensed
+- GitHub hosted
+- Active development
+- Good documentation
+
 ## Inputs & Outputs
 - **Input formats**: `input.xml` (comprehensive XML configuration)
 - **Output data types**: `XAS_*.xml` (spectra), `EPSILON_*.OUT` (dielectric function), `EXCITON_*.OUT`
@@ -50,11 +70,29 @@ exciting-XS refers to the X-ray spectroscopy capabilities within the **exciting*
 - Requires convergence of empty states
 - Highly accurate but slower than pseudopotential methods
 
+## Limitations & Known Constraints
+- **Computational cost**: BSE is expensive
+- **Empty states**: Requires convergence
+- **LAPW complexity**: Steeper learning curve
+- **System size**: Limited by cost
+
+## Comparison with Other Tools
+- **vs OCEAN**: Both BSE, exciting all-electron
+- **vs FEFF**: exciting periodic, FEFF cluster
+- **vs xspectra**: exciting more accurate, xspectra faster
+- **Unique strength**: All-electron BSE for core levels
+
 ## Application Areas
 - Core-level spectroscopy of complex oxides
 - Excitonic effects in insulators and semiconductors
 - Anisotropic X-ray absorption
 - Core-hole screening physics
+
+## Best Practices
+- Converge empty states carefully
+- Use appropriate k-point mesh
+- Test BSE parameters
+- Validate with experiment
 
 ## Community and Support
 - Open-source (GPL)

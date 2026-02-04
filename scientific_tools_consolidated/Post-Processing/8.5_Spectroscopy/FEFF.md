@@ -34,6 +34,26 @@ FEFF is an automated program for ab initio multiple scattering calculations of X
 
 **Sources**: FEFF website, Rev. Mod. Phys. 72, 621 (2000)
 
+## Key Strengths
+
+### Real-Space Method:
+- No periodicity required
+- Clusters and nanoparticles
+- Defects and interfaces
+- Amorphous materials
+
+### Comprehensive Spectroscopy:
+- EXAFS and XANES
+- EELS, XES, XMCD
+- Compton scattering
+- Multiple techniques
+
+### Industry Standard:
+- Widely validated
+- Extensive user base
+- Demeter/Larch integration
+- Commercial support
+
 ## Inputs & Outputs
 - **Input formats**: `feff.inp` (geometry, potentials, control flags)
 - **Output data types**: `xmu.dat` (absorption cross-section), `chi.dat` (EXAFS), `ldos.dat`, `feff.bin`
@@ -60,12 +80,30 @@ FEFF is an automated program for ab initio multiple scattering calculations of X
 - XANES (FMS) scales with cluster size (up to hundreds of atoms)
 - Parallelized (MPI)
 
+## Limitations & Known Constraints
+- **Muffin-tin approximation**: Spherical potential assumption
+- **Proprietary**: License required
+- **Cluster size**: XANES needs large clusters
+- **Parameter tuning**: Some expertise required
+
+## Comparison with Other Tools
+- **vs FDMNES**: FEFF faster, FDMNES non-muffin-tin option
+- **vs OCEAN**: FEFF real-space, OCEAN BSE-based
+- **vs xspectra**: FEFF standalone, xspectra QE-integrated
+- **Unique strength**: Industry standard, path-based EXAFS
+
 ## Application Areas
 - Structure determination from EXAFS (coordination numbers, bond lengths)
 - Catalyst characterization (nanoparticles)
 - Biological metalloproteins
 - Amorphous materials and liquids
 - Phase identification via XANES
+
+## Best Practices
+- Use adequate cluster size for XANES
+- Converge path expansion for EXAFS
+- Validate with known reference compounds
+- Use Demeter/Larch for fitting
 
 ## Community and Support
 - Developed by Rehr Group (University of Washington)
