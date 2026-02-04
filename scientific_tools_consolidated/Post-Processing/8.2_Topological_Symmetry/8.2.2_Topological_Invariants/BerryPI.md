@@ -28,7 +28,27 @@ BerryPI is a Python software for calculating Berry phases and related properties
 - Interface with VASP WAVECAR
 - Automatic handling of phase continuity
 
-**Sources**: BerryPI GitHub repository, Comp. Phys. Comm. 184, 1280 (2013) (Reference to similar methods/tools)
+**Sources**: BerryPI GitHub repository, S. J. Ahmed et al., Comp. Phys. Comm. 184, 647 (2013)
+
+## Key Strengths
+
+### Modern Theory Implementation:
+- Berry phase polarization
+- Phase continuity handling
+- Quantum of polarization
+- Reference structure support
+
+### VASP Focused:
+- Direct WAVECAR interface
+- Consistent with VASP conventions
+- Automated k-string handling
+- Standard workflow
+
+### Ferroelectric Applications:
+- Spontaneous polarization
+- Born effective charges
+- Piezoelectric response
+- Phase transition analysis
 
 ## Inputs & Outputs
 - **Input formats**: VASP WAVECAR, POSCAR, POTCAR
@@ -49,11 +69,29 @@ BerryPI is a Python software for calculating Berry phases and related properties
 - Performance depends on the size of the wavefunction (WAVECAR)
 - Efficient implementation of Berry phase integration
 
+## Limitations & Known Constraints
+- **VASP-only**: Specialized for VASP output
+- **k-string selection**: Requires appropriate k-point path
+- **Phase ambiguity**: Polarization quantum must be considered
+- **Memory**: Large WAVECAR files require adequate RAM
+
+## Comparison with Other Tools
+- **vs berry**: BerryPI VASP-focused, berry more comprehensive
+- **vs VASP native**: BerryPI provides additional automation
+- **vs Z2Pack**: BerryPI polarization-focused, Z2Pack topology-focused
+- **Unique strength**: Dedicated ferroelectric polarization workflow
+
 ## Application Areas
 - Ferroelectric materials (polarization reversal)
 - Piezoelectrics
 - Multiferroics
 - Topological insulators (Z2 invariants via Berry phase)
+
+## Best Practices
+- Use centrosymmetric reference structure
+- Ensure k-point convergence
+- Account for polarization quantum
+- Validate with experimental values
 
 ## Community and Support
 - Open-source (GPL)

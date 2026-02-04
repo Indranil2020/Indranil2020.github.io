@@ -30,6 +30,26 @@ IrRep is a Python code for calculating the irreducible representations of Bloch 
 
 **Sources**: IrRep documentation, Comp. Phys. Comm. 262, 107836 (2021)
 
+## Key Strengths
+
+### Multi-code Support:
+- Quantum ESPRESSO interface
+- VASP via WAVECAR
+- Abinit support
+- Consistent methodology
+
+### Topological Applications:
+- Symmetry indicator extraction
+- Band connectivity analysis
+- TQC database compatible
+- Z2/Z4 invariant support
+
+### Python Implementation:
+- Easy installation via pip
+- NumPy/SciPy based
+- Scriptable workflows
+- Active development
+
 ## Inputs & Outputs
 - **Input formats**: DFT wavefunctions (WAVECAR/tmp.pp), structural data
 - **Output data types**: Irrep labels, traces, character tables
@@ -49,11 +69,29 @@ IrRep is a Python code for calculating the irreducible representations of Bloch 
 - Fast analysis of wavefunctions
 - Efficient handling of large basis sets
 
+## Limitations & Known Constraints
+- **DFT-specific**: Requires compatible DFT output
+- **High-symmetry points**: Best at special k-points
+- **Wavefunction access**: Needs full wavefunction files
+- **Learning curve**: Requires group theory knowledge
+
+## Comparison with Other Tools
+- **vs irvsp**: IrRep multi-code, irvsp VASP-specialized
+- **vs SpaceGroupIrep**: IrRep Python, SpaceGroupIrep Mathematica
+- **vs qeirreps**: Both for QE, different implementations
+- **Unique strength**: Multi-code support with consistent methodology
+
 ## Application Areas
 - Topological insulators
 - Weyl semimetals
 - Symmetry-protected topological phases
 - Band structure analysis
+
+## Best Practices
+- Ensure correct space group identification
+- Include SOC if heavy elements present
+- Verify irrep labels at known k-points
+- Cross-check with symmetry indicators
 
 ## Community and Support
 - Open-source (GPL v3)

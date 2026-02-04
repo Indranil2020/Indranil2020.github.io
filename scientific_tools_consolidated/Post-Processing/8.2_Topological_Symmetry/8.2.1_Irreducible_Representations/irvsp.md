@@ -28,6 +28,26 @@ irvsp is a program to compute the irreducible representations (irrep) of electro
 
 **Sources**: irvsp GitHub, Comp. Phys. Comm. 261, 107760 (2021)
 
+## Key Strengths
+
+### VASP Specialized:
+- Optimized for VASP output
+- Direct WAVECAR parsing
+- Efficient implementation
+- Production-ready
+
+### Complete Coverage:
+- All 230 space groups
+- SOC and non-SOC
+- Symmorphic and non-symmorphic
+- Magnetic groups supported
+
+### High-Throughput Ready:
+- Automated workflow
+- Batch processing
+- CheckTopologicalMat integration
+- Database screening
+
 ## Inputs & Outputs
 - **Input formats**: WAVECAR, POSCAR, OUTCAR (from VASP)
 - **Output data types**: Irreps labels (e.g., GM1+, X2-), trace data, topological indices
@@ -47,11 +67,29 @@ irvsp is a program to compute the irreducible representations (irrep) of electro
 - Fast analysis of wavefunction symmetry
 - Requires compatibility with VASP compiled version (macros)
 
+## Limitations & Known Constraints
+- **VASP-only**: Specialized for VASP output
+- **Compilation**: Requires proper VASP version compatibility
+- **Space group input**: User must specify correct space group
+- **Memory**: Large WAVECAR files require adequate RAM
+
+## Comparison with Other Tools
+- **vs IrRep**: irvsp VASP-specific, IrRep multi-code
+- **vs qeirreps**: irvsp for VASP, qeirreps for QE
+- **vs SpaceGroupIrep**: irvsp DFT-based, SpaceGroupIrep database
+- **Unique strength**: Optimized VASP integration, high-throughput ready
+
 ## Application Areas
 - Topological insulators (TI)
 - Topological crystalline insulators (TCI)
 - Weyl and Dirac semimetals
 - High-throughput topological screening
+
+## Best Practices
+- Run Phonopy first to verify space group
+- Use pos2aBR to standardize POSCAR
+- Set MAGMOM explicitly for SOC calculations
+- Verify against known topological materials
 
 ## Community and Support
 - Open-source
