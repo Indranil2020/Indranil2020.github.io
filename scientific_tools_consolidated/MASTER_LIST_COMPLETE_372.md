@@ -2781,7 +2781,7 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 ---
 
-## CATEGORY 8: POST-PROCESSING (144 tools)
+## CATEGORY 8: POST-PROCESSING (166 tools)
 
 ### 8.1 Band Structure & Electronic Analysis (57 tools)
 *Tools for analyzing electronic band structures, Fermi surfaces, and k-path generation*
@@ -3794,8 +3794,8 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: ML prediction of NMR chemical shieldings for organic solids (Chem. Sci. 2021)
 - Link: [ShiftML.md](Post-Processing/8.5_Spectroscopy/ShiftML.md)
 
-### 8.6 Magnetism & Spin Dynamics (7 tools)
-*Magnetic exchange, spin dynamics, micromagnetics*
+### 8.6 Magnetism & Spin Dynamics (18 tools)
+*Magnetic exchange, spin dynamics, micromagnetics, atomistic spin dynamics, magnon dispersion*
 
 **294. Magnon codes**
 - Confidence: VERIFIED
@@ -3832,7 +3832,73 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: https://spinw.org/
 - Link: [SpinW.md](Post-Processing/8.6_Magnetism_Spin/SpinW.md)
 
-### 8.7 Visualization (9 tools)
+**299b. UppASD**
+- Confidence: VERIFIED
+- Resources: https://github.com/UppASD/UppASD
+- Note: Atomistic spin dynamics + Monte Carlo + magnon dispersion (Uppsala)
+- Link: [UppASD.md](Post-Processing/8.6_Magnetism_Spin/UppASD.md)
+
+**299c. OOMMF**
+- Confidence: VERIFIED
+- Resources: https://math.nist.gov/oommf/
+- Note: NIST public domain micromagnetic framework, de facto standard
+- Link: [OOMMF.md](Post-Processing/8.6_Magnetism_Spin/OOMMF.md)
+
+**299d. magnum.af**
+- Confidence: VERIFIED
+- Resources: https://github.com/magnum-af/magnum.af
+- Note: Finite-difference/FEM micromagnetic simulation with true PBC and spin-torque
+- Link: [magnum.af.md](Post-Processing/8.6_Magnetism_Spin/magnum.af.md)
+
+**299e. fidimag**
+- Confidence: VERIFIED
+- Resources: https://github.com/computationalmodelling/fidimag
+- Note: Dual micromagnetic+atomistic spin simulation with NEB energy barriers
+- Link: [fidimag.md](Post-Processing/8.6_Magnetism_Spin/fidimag.md)
+
+**299f. MicroMagnetic.jl**
+- Confidence: VERIFIED
+- Resources: https://github.com/MagneticSimulation/MicroMagnetic.jl
+- Note: Julia GPU-accelerated spin dynamics (NVIDIA/AMD/Intel/Apple)
+- Link: [MicroMagnetic.jl.md](Post-Processing/8.6_Magnetism_Spin/MicroMagnetic.jl.md)
+
+**299g. mumax+**
+- Confidence: VERIFIED
+- Resources: https://github.com/mumax/plus
+- Note: Extensible GPU micromagnetic simulator with Python interface (mumax3 successor)
+- Link: [mumax-plus.md](Post-Processing/8.6_Magnetism_Spin/mumax-plus.md)
+
+**299h. exchanges**
+- Confidence: VERIFIED
+- Resources: https://github.com/dkorotin/exchanges
+- Note: Heisenberg exchange parameters via Green's function from QE (Lichtenstein formula)
+- Link: [exchanges.md](Post-Processing/8.6_Magnetism_Spin/exchanges.md)
+
+**299i. Jx_DMFT**
+- Confidence: VERIFIED
+- Resources: https://github.com/KAIST-ELST/Jx_DMFT
+- Note: Exchange parameters with DFT+DMFT for correlated magnets
+- Link: [Jx_DMFT.md](Post-Processing/8.6_Magnetism_Spin/Jx_DMFT.md)
+
+**299j. MAELAS**
+- Confidence: VERIFIED
+- Resources: https://github.com/pnieves2019/MAELAS
+- Note: Magnetostriction and MAE calculation from VASP with non-collinear SOC
+- Link: [MAELAS.md](Post-Processing/8.6_Magnetism_Spin/MAELAS.md)
+
+**299k. AtomMag**
+- Confidence: VERIFIED
+- Resources: https://github.com/jhu238/AtomMag
+- Note: GPU-parallel atomistic spin dynamics (66x speedup over CPU)
+- Link: [AtomMag.md](Post-Processing/8.6_Magnetism_Spin/AtomMag.md)
+
+**299l. Ubermag**
+- Confidence: VERIFIED
+- Resources: https://ubermag.github.io/
+- Note: Python DSL for micromagnetics wrapping OOMMF/Mumax3/fidimag, Jupyter-integrated
+- Link: [Ubermag.md](Post-Processing/8.6_Magnetism_Spin/Ubermag.md)
+
+### 8.7 Visualization (11 tools)
 *Structure and data visualization*
 
 **300. VESTA**
@@ -3880,7 +3946,19 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: https://wiki.fysik.dtu.dk/ase/ase/gui/gui.html
 - Link: [ASE-GUI.md](Post-Processing/8.7_Visualization/ASE-GUI.md)
 
-### 8.8 Quantum Transport (5 tools)
+**312a. matterviz**
+- Confidence: VERIFIED
+- Resources: https://github.com/janosh/matterviz
+- Note: Interactive web-based materials science visualization (structures, spectra, phase diagrams)
+- Link: [matterviz.md](Post-Processing/8.7_Visualization/matterviz.md)
+
+**312b. cif2cell**
+- Confidence: VERIFIED
+- Resources: https://github.com/torbjornbjorkman/cif2cell
+- Note: CIF to 20+ DFT code input format converter with k-point generation
+- Link: [cif2cell.md](Post-Processing/8.7_Visualization/cif2cell.md)
+
+### 8.8 Quantum Transport (9 tools)
 *Non-equilibrium Green's function, quantum transport*
 
 **313. Nanodcal**
@@ -3908,8 +3986,32 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: https://quantum-kite.com/
 - Link: [KITE.md](Post-Processing/8.8_Quantum_Transport/KITE.md)
 
-### 8.9 Workflow & Automation (2 tools)
-*Post-processing automation and utilities*
+**317a. Gollum**
+- Confidence: VERIFIED
+- Resources: https://github.com/gollumcode/gollum2
+- Note: Next-generation quantum transport for molecular junctions, NEGF, thermoelectrics
+- Link: [Gollum.md](Post-Processing/8.8_Quantum_Transport/Gollum.md)
+
+**317b. Jiezi**
+- Confidence: VERIFIED
+- Resources: https://github.com/Jiezi-negf/Jiezi
+- Note: Self-consistent NEGF-Poisson quantum transport with FEM, Python
+- Link: [Jiezi.md](Post-Processing/8.8_Quantum_Transport/Jiezi.md)
+
+**317c. DPNEGF**
+- Confidence: VERIFIED
+- Resources: https://github.com/DeePTB-Lab/dpnegf
+- Note: ML-accelerated quantum transport with DeePTB-NEGF, DFT accuracy at TB speed
+- Link: [dpnegf.md](Post-Processing/8.8_Quantum_Transport/dpnegf.md)
+
+**317d. GreenCheetah**
+- Confidence: VERIFIED
+- Resources: https://github.com/StxGuy/GreenCheetah
+- Note: Fortran/C++ NEGF quantum transport with Armadillo, recursive Green's function
+- Link: [GreenCheetah.md](Post-Processing/8.8_Quantum_Transport/GreenCheetah.md)
+
+### 8.9 Workflow & Automation (7 tools)
+*Post-processing automation, defect workflows, analysis automation*
 
 **310. dbaAutomator**
 - Confidence: VERIFIED
@@ -3920,6 +4022,36 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Confidence: VERIFIED
 - Resources: https://wiki.fysik.dtu.dk/gpaw/
 - Link: [gpaw-tools.md](Post-Processing/8.9_Workflow_Automation/gpaw-tools.md)
+
+**311a. doped**
+- Confidence: VERIFIED
+- Resources: https://github.com/SMTG-Bham/doped
+- Note: Automated defect calculation workflow for VASP with corrections and analysis
+- Link: [doped.md](Post-Processing/8.9_Workflow_Automation/doped.md)
+
+**311b. pymatgen-analysis-defects**
+- Confidence: VERIFIED
+- Resources: https://github.com/materialsproject/pymatgen-analysis-defects
+- Note: Pymatgen add-on for defect analysis, Materials Project compatible
+- Link: [pymatgen-analysis-defects.md](Post-Processing/8.9_Workflow_Automation/pymatgen-analysis-defects.md)
+
+**311c. DFTTK**
+- Confidence: VERIFIED
+- Resources: https://github.com/PhasesResearchLab/dfttk
+- Note: High-throughput VASP workflow with MongoDB storage, phase diagram focus
+- Link: [DFTTK.md](Post-Processing/8.9_Workflow_Automation/DFTTK.md)
+
+**311d. py-sc-fermi**
+- Confidence: VERIFIED
+- Resources: https://github.com/bjmorgan/py-sc-fermi
+- Note: Self-consistent Fermi level and defect concentration calculation, temperature-dependent
+- Link: [py-sc-fermi.md](Post-Processing/8.9_Workflow_Automation/py-sc-fermi.md)
+
+**311e. pylada-defects**
+- Confidence: VERIFIED
+- Resources: https://github.com/pylada/pylada-defects
+- Note: Automated defect structure generation with corrections, pylada ecosystem
+- Link: [pylada-defects.md](Post-Processing/8.9_Workflow_Automation/pylada-defects.md)
 
 ---
 
