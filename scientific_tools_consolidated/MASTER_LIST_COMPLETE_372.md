@@ -2781,7 +2781,7 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 ---
 
-## CATEGORY 8: POST-PROCESSING (140 tools)
+## CATEGORY 8: POST-PROCESSING (143 tools)
 
 ### 8.1 Band Structure & Electronic Analysis (57 tools)
 *Tools for analyzing electronic band structures, Fermi surfaces, and k-path generation*
@@ -3325,7 +3325,7 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: Green-Kubo thermal conductivity post-processing for molecular dynamics trajectories.
 - Link: [MD-GreenKubo-Thermal-Conductivity.md](Post-Processing/8.3_Transport_Properties/MD-GreenKubo-Thermal-Conductivity.md)
 
-### 8.4 Chemical Bonding Analysis (36 tools)
+### 8.4 Chemical Bonding Analysis (39 tools)
 *COHP, charge partitioning, bonding analysis*
 
 **277. Lobster**
@@ -3536,6 +3536,24 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: https://github.com/zorkzou/MolBO
 - Note: Generates NBO-47 files from MOLPRO output and calculates Mayer bond orders
 - Link: [MolBO.md](Post-Processing/8.4_Chemical_Bonding/MolBO.md)
+
+**292u. ESI-3D**
+- Confidence: VERIFIED
+- Resources: https://quantchemdev.github.io/resources.html
+- Note: Electron sharing and aromaticity indices code using overlap matrices from Hilbert-space or QTAIM partitions
+- Link: [ESI-3D.md](Post-Processing/8.4_Chemical_Bonding/ESI-3D.md)
+
+**292v. ESIpy**
+- Confidence: VERIFIED
+- Resources: https://github.com/jgrebol/ESIpy
+- Note: Python package for electron-sharing and aromaticity analysis across multiple Hilbert-space partitions
+- Link: [ESIpy.md](Post-Processing/8.4_Chemical_Bonding/ESIpy.md)
+
+**292w. APOST3D**
+- Confidence: VERIFIED
+- Resources: https://github.com/mgimferrer/APOST3D
+- Note: Open-source wavefunction-analysis code for bond orders, local spin, and effective oxidation states
+- Link: [APOST3D.md](Post-Processing/8.4_Chemical_Bonding/APOST3D.md)
 
 ### 8.5 Spectroscopy Simulation (20 tools)
 *XAS, XANES, EXAFS, optical spectra, dielectric properties*
