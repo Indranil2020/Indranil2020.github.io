@@ -2781,7 +2781,7 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 ---
 
-## CATEGORY 8: POST-PROCESSING (143 tools)
+## CATEGORY 8: POST-PROCESSING (144 tools)
 
 ### 8.1 Band Structure & Electronic Analysis (57 tools)
 *Tools for analyzing electronic band structures, Fermi surfaces, and k-path generation*
@@ -3325,7 +3325,7 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: Green-Kubo thermal conductivity post-processing for molecular dynamics trajectories.
 - Link: [MD-GreenKubo-Thermal-Conductivity.md](Post-Processing/8.3_Transport_Properties/MD-GreenKubo-Thermal-Conductivity.md)
 
-### 8.4 Chemical Bonding Analysis (39 tools)
+### 8.4 Chemical Bonding Analysis (40 tools)
 *COHP, charge partitioning, bonding analysis*
 
 **277. Lobster**
@@ -3554,6 +3554,12 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: https://github.com/mgimferrer/APOST3D
 - Note: Open-source wavefunction-analysis code for bond orders, local spin, and effective oxidation states
 - Link: [APOST3D.md](Post-Processing/8.4_Chemical_Bonding/APOST3D.md)
+
+**292x. Chemissian**
+- Confidence: VERIFIED
+- Resources: https://www.chemissian.com/
+- Note: GUI-based bond-order, overlap-population, and fragment-bond analysis tool
+- Link: [Chemissian.md](Post-Processing/8.4_Chemical_Bonding/Chemissian.md)
 
 ### 8.5 Spectroscopy Simulation (20 tools)
 *XAS, XANES, EXAFS, optical spectra, dielectric properties*
