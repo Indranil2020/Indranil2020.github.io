@@ -3561,8 +3561,8 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: GUI-based bond-order, overlap-population, and fragment-bond analysis tool
 - Link: [Chemissian.md](Post-Processing/8.4_Chemical_Bonding/Chemissian.md)
 
-### 8.5 Spectroscopy Simulation (20 tools)
-*XAS, XANES, EXAFS, optical spectra, dielectric properties*
+### 8.5 Spectroscopy Simulation (40 tools)
+*XAS, XANES, EXAFS, optical spectra, dielectric properties, Raman, IR, EELS, NMR, XPS, STM/SPM*
 
 **284. FEFF**
 - Confidence: VERIFIED
@@ -3673,6 +3673,126 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: https://github.com/mretegan/crispy
 - Note: GUI for Quanty XAS/RIXS simulations (ESRF)
 - Link: [Crispy.md](Post-Processing/8.5_Spectroscopy/Crispy.md)
+
+**303a. Quanty**
+- Confidence: VERIFIED
+- Resources: https://www.quanty.org/
+- Note: Many-body script language (Lua) for XAS, XES, RIXS, NIXS, XPS multiplet calculations
+- Link: [Quanty.md](Post-Processing/8.5_Spectroscopy/Quanty.md)
+
+**303b. StoBe**
+- Confidence: VERIFIED
+- Resources: https://www.fz-juelich.de/pgi/pgi-1/DE/Home/home_node.html
+- Note: DFT code with transition potential method for molecular XAS, XES, XPS
+- Link: [StoBe.md](Post-Processing/8.5_Spectroscopy/StoBe.md)
+
+**303c. Multiplety**
+- Confidence: VERIFIED
+- Resources: https://github.com/gfabbris/multiplety
+- Note: Python multiplet XAS/RIXS calculations using Cowan's atomic code
+- Link: [Multiplety.md](Post-Processing/8.5_Spectroscopy/Multiplety.md)
+
+**303d. ThermoPW**
+- Confidence: VERIFIED
+- Resources: https://github.com/dalcorso/thermo_pw
+- Note: QE driver for automated IR, Raman, dielectric, elastic, and thermodynamic properties
+- Link: [ThermoPW.md](Post-Processing/8.5_Spectroscopy/ThermoPW.md)
+
+**303e. QERaman**
+- Confidence: VERIFIED
+- Resources: https://github.com/nguyen-group/QERaman
+- Note: First-order resonance Raman spectroscopy from Quantum ESPRESSO
+- Link: [QERaman.md](Post-Processing/8.5_Spectroscopy/QERaman.md)
+
+**303f. ramannoodle**
+- Confidence: VERIFIED
+- Resources: https://github.com/wolearyc/ramannoodle
+- Note: ML-accelerated off-resonance Raman spectra from VASP
+- Link: [ramannoodle.md](Post-Processing/8.5_Spectroscopy/ramannoodle.md)
+
+**303g. VASP-Raman**
+- Confidence: VERIFIED
+- Resources: https://github.com/raman-sc/VASP
+- Note: Off-resonance Raman activity using VASP dielectric tensor (finite displacement)
+- Link: [VASP-Raman.md](Post-Processing/8.5_Spectroscopy/VASP-Raman.md)
+
+**303h. phonopy-vibspec**
+- Confidence: VERIFIED
+- Resources: https://github.com/pierre-24/phonopy-vibspec
+- Note: IR and Raman spectra simulation from Phonopy phonon data
+- Link: [phonopy-vibspec.md](Post-Processing/8.5_Spectroscopy/phonopy-vibspec.md)
+
+**303i. PPSTM**
+- Confidence: VERIFIED
+- Resources: https://github.com/Probe-Particle/PPSTM
+- Note: Probe-particle model for STM, STS, and IETS simulation (CPC 2024)
+- Link: [PPSTM.md](Post-Processing/8.5_Spectroscopy/PPSTM.md)
+
+**303j. ppafm**
+- Confidence: VERIFIED
+- Resources: https://github.com/Probe-Particle/ppafm
+- Note: Probe-particle model for HR-AFM, STM, IETS, TERS, KPFM simulation
+- Link: [ppafm.md](Post-Processing/8.5_Spectroscopy/ppafm.md)
+
+**303k. PyTASER**
+- Confidence: VERIFIED
+- Resources: https://github.com/WMD-group/PyTASER
+- Note: Transient absorption spectroscopy (TAS/DAS) simulation from DFT
+- Link: [PyTASER.md](Post-Processing/8.5_Spectroscopy/PyTASER.md)
+
+**303l. mbxaspy**
+- Confidence: VERIFIED
+- Resources: https://github.com/yufengliang/mbxaspy
+- Note: XAS simulation using determinant formalism with DFT and many-body extensions
+- Link: [mbxaspy.md](Post-Processing/8.5_Spectroscopy/mbxaspy.md)
+
+**303m. xas-tools**
+- Confidence: VERIFIED
+- Resources: https://github.com/atomisticnet/xas-tools
+- Note: XAS simulation, analysis, and ML prediction toolkit
+- Link: [xas-tools.md](Post-Processing/8.5_Spectroscopy/xas-tools.md)
+
+**303n. QuantEXAFS**
+- Confidence: VERIFIED
+- Resources: https://github.com/kul-group/QuantEXAFS
+- Note: Automated EXAFS fitting with DFT structure database integration
+- Link: [QuantEXAFS.md](Post-Processing/8.5_Spectroscopy/QuantEXAFS.md)
+
+**303o. XANESNET**
+- Confidence: VERIFIED
+- Resources: https://github.com/NewcastleRSE/xray-spectroscopy-ml
+- Note: Deep neural network for XANES prediction (J. Chem. Phys. 2022)
+- Link: [XANESNET.md](Post-Processing/8.5_Spectroscopy/XANESNET.md)
+
+**303p. pyFitIt**
+- Confidence: VERIFIED
+- Resources: https://github.com/gudasergey/pyFitIt
+- Note: ML-accelerated XANES fitting for structural determination
+- Link: [pyFitIt.md](Post-Processing/8.5_Spectroscopy/pyFitIt.md)
+
+**303q. MLXANES**
+- Confidence: VERIFIED
+- Resources: https://github.com/tnorthey/mlxanes
+- Note: Fortran multivariate linear regression for XANES prediction from structure
+- Link: [MLXANES.md](Post-Processing/8.5_Spectroscopy/MLXANES.md)
+
+**303r. qeapp-xps**
+- Confidence: VERIFIED
+- Resources: https://github.com/superstar54/qeapp-xps
+- Note: AiiDA-QE plugin for XPS spectra using core-hole pseudopotentials
+- Link: [qeapp-xps.md](Post-Processing/8.5_Spectroscopy/qeapp-xps.md)
+
+**303s. pyEELS**
+- Confidence: VERIFIED
+- Resources: https://github.com/sindrebilden/pyeels
+- Note: EELS simulation from model band structures (PythTB integration)
+- Link: [pyEELS.md](Post-Processing/8.5_Spectroscopy/pyEELS.md)
+
+**303t. ShiftML**
+- Confidence: VERIFIED
+- Resources: https://github.com/lab-cosmo/ShiftML
+- Note: ML prediction of NMR chemical shieldings for organic solids (Chem. Sci. 2021)
+- Link: [ShiftML.md](Post-Processing/8.5_Spectroscopy/ShiftML.md)
 
 ### 8.6 Magnetism & Spin Dynamics (7 tools)
 *Magnetic exchange, spin dynamics, micromagnetics*
