@@ -2781,7 +2781,7 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 ---
 
-## CATEGORY 8: POST-PROCESSING (105 tools)
+## CATEGORY 8: POST-PROCESSING (140 tools)
 
 ### 8.1 Band Structure & Electronic Analysis (57 tools)
 *Tools for analyzing electronic band structures, Fermi surfaces, and k-path generation*
@@ -3207,7 +3207,7 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: Web app for magnetic space group determination
 - Link: [findmagsym.md](Post-Processing/8.2_Topological_Symmetry/8.2.4_Magnetic_Symmetry/findmagsym.md)
 
-### 8.3 Transport Properties (5 tools)
+### 8.3 Transport Properties (20 tools)
 *Boltzmann transport, thermoelectric properties, phonon transport*
 
 **273. BoltzTraP**
@@ -3235,7 +3235,97 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: https://pypi.org/project/pheasy/
 - Link: [Pheasy.md](Post-Processing/8.3_Transport_Properties/Pheasy.md)
 
-### 8.4 Chemical Bonding Analysis (16 tools)
+**276b. ElecTra (ELECTRA)**
+- Confidence: VERIFIED
+- Resources: https://github.com/PatrizioGraziosi/ELECTRA
+- Note: Full-band electronic transport and thermoelectric coefficients from the linearized BTE.
+- Link: [ElecTra.md](Post-Processing/8.3_Transport_Properties/ElecTra.md)
+
+**276c. TransOpt**
+- Confidence: VERIFIED
+- Resources: https://github.com/yangjio4849/TransOpt
+- Note: Electrical transport coefficients (Seebeck, conductivity, electronic thermal conductivity) for VASP users.
+- Link: [TransOpt.md](Post-Processing/8.3_Transport_Properties/TransOpt.md)
+
+**276d. AICON2**
+- Confidence: VERIFIED
+- Resources: https://github.com/Baijianlu/AICON2
+- Note: Transport property estimation (electronic and thermal) with fast approximate models.
+- Link: [AICON2.md](Post-Processing/8.3_Transport_Properties/AICON2.md)
+
+**276e. AMMCR**
+- Confidence: VERIFIED
+- Resources: https://github.com/anup12352/AMMCR
+- Note: Ab initio mobility and conductivity calculation using the Rode algorithm (VASP interface).
+- Link: [AMMCR.md](Post-Processing/8.3_Transport_Properties/AMMCR.md)
+
+**276f. ThermoElectric**
+- Confidence: VERIFIED
+- Resources: https://github.com/ariahosseini/ThermoElectric
+- Note: Computational framework to compute electron transport coefficients.
+- Link: [ThermoElectric.md](Post-Processing/8.3_Transport_Properties/ThermoElectric.md)
+
+**276g. TEprop2D**
+- Confidence: VERIFIED
+- Resources: https://github.com/artnugraha/TEprop2D
+- Note: Thermoelectric properties of 2D materials using Quantum ESPRESSO and EPW outputs.
+- Link: [TEprop2D.md](Post-Processing/8.3_Transport_Properties/TEprop2D.md)
+
+**276h. kubocalc**
+- Confidence: VERIFIED
+- Resources: https://github.com/janbbeck/kubocalc
+- Note: Kubo-Greenwood based Quantum ESPRESSO plugin for electrical/thermal conductivity and Seebeck coefficient.
+- Link: [kubocalc.md](Post-Processing/8.3_Transport_Properties/kubocalc.md)
+
+**276i. kg4vasp**
+- Confidence: VERIFIED
+- Resources: https://github.com/conodipaola/kg4vasp
+- Note: Kubo-Greenwood transport coefficients from first-principles molecular dynamics with VASP.
+- Link: [kg4vasp.md](Post-Processing/8.3_Transport_Properties/kg4vasp.md)
+
+**276j. LanTraP**
+- Confidence: VERIFIED
+- Resources: https://nanohub.org/resources/lantrap
+- Note: Landauer-based thermoelectric transport (distribution of modes) from band structure inputs.
+- Link: [LanTraP.md](Post-Processing/8.3_Transport_Properties/LanTraP.md)
+
+**276k. gkx**
+- Confidence: VERIFIED
+- Resources: https://github.com/sirmarcel/gkx
+- Note: JAX-based Green-Kubo workflow for anharmonic thermal conductivity.
+- Link: [gkx.md](Post-Processing/8.3_Transport_Properties/gkx.md)
+
+**276l. mDCThermalC**
+- Confidence: VERIFIED
+- Resources: https://github.com/Baijianlu/mDCThermalC
+- Note: Modified Debye-Callaway model for lattice thermal conductivity.
+- Link: [mDCThermalC.md](Post-Processing/8.3_Transport_Properties/mDCThermalC.md)
+
+**276m. empirical_thermal_conductivity**
+- Confidence: VERIFIED
+- Resources: https://github.com/houzf/empirical_thermal_conductivity
+- Note: Thermal conductivity estimates from empirical models (Clarke, Cahill-Pohl, Slack).
+- Link: [empirical_thermal_conductivity.md](Post-Processing/8.3_Transport_Properties/empirical_thermal_conductivity.md)
+
+**276n. Unifiedkappa-phonopy**
+- Confidence: VERIFIED
+- Resources: https://github.com/yimavxia/Unifiedkappa-phonopy
+- Note: Tools for phonon thermal conductivity analysis (including diagonal and off-diagonal contributions).
+- Link: [Unifiedkappa-phonopy.md](Post-Processing/8.3_Transport_Properties/Unifiedkappa-phonopy.md)
+
+**276o. topological-insulator-spin-hall**
+- Confidence: VERIFIED
+- Resources: https://github.com/smfarzaneh/topological-insulator-spin-hall
+- Note: Ab initio spin Hall conductivity workflow using Quantum ESPRESSO and Wannier90.
+- Link: [topological-insulator-spin-hall.md](Post-Processing/8.3_Transport_Properties/topological-insulator-spin-hall.md)
+
+**276p. MD-GreenKubo-Thermal-Conductivity**
+- Confidence: VERIFIED
+- Resources: https://github.com/erny123/MD-GreenKubo-Thermal-Conductivity
+- Note: Green-Kubo thermal conductivity post-processing for molecular dynamics trajectories.
+- Link: [MD-GreenKubo-Thermal-Conductivity.md](Post-Processing/8.3_Transport_Properties/MD-GreenKubo-Thermal-Conductivity.md)
+
+### 8.4 Chemical Bonding Analysis (36 tools)
 *COHP, charge partitioning, bonding analysis*
 
 **277. Lobster**
@@ -3326,6 +3416,126 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: https://github.com/theochem/denspart
 - Note: ISA/MBIS charge partitioning Python package
 - Link: [denspart.md](Post-Processing/8.4_Chemical_Bonding/denspart.md)
+
+**292a. TOPOND**
+- Confidence: VERIFIED
+- Resources: https://www.crystal.unito.it/topond.html
+- Note: QTAIM/topological electron-density analysis within CRYSTAL for molecules and periodic solids
+- Link: [TOPOND.md](Post-Processing/8.4_Chemical_Bonding/TOPOND.md)
+
+**292b. DensToolKit**
+- Confidence: VERIFIED
+- Resources: https://github.com/jmsolano/denstoolkit
+- Note: Open-source electron-density and QTAIM topology analysis toolkit
+- Link: [DensToolKit.md](Post-Processing/8.4_Chemical_Bonding/DensToolKit.md)
+
+**292c. TopChem2**
+- Confidence: VERIFIED
+- Resources: https://www.lct.jussieu.fr/pagesperso/pilme/topchempage.html
+- Note: Standalone QTAIM, ELF, NCI, and Fukui analysis from WFN/WFX and cube data
+- Link: [TopChem2.md](Post-Processing/8.4_Chemical_Bonding/TopChem2.md)
+
+**292d. JANPA**
+- Confidence: VERIFIED
+- Resources: https://janpa.sourceforge.net/
+- Note: Open-source natural population analysis, NAOs, and Wiberg-Mayer bond indices
+- Link: [JANPA.md](Post-Processing/8.4_Chemical_Bonding/JANPA.md)
+
+**292e. IGMPlot**
+- Confidence: VERIFIED
+- Resources: http://igmplot.univ-reims.fr/
+- Note: IGM/IGMH-based interaction analysis from weak non-covalent to strong bonding regimes
+- Link: [IGMPlot.md](Post-Processing/8.4_Chemical_Bonding/IGMPlot.md)
+
+**292f. EDDB**
+- Confidence: VERIFIED
+- Resources: http://aromaticity.uj.edu.pl/eddb.html
+- Note: Electron Density of Delocalized Bonds method for aromaticity and delocalization analysis
+- Link: [EDDB.md](Post-Processing/8.4_Chemical_Bonding/EDDB.md)
+
+**292g. AIM-UC**
+- Confidence: VERIFIED
+- Resources: https://sourceforge.net/projects/facyt-quimicomp/files/aim-uc/
+- Note: Free QTAIM application for CUBE, GRD, and CHGCAR density files
+- Link: [AIM-UC.md](Post-Processing/8.4_Chemical_Bonding/AIM-UC.md)
+
+**292h. AIMPAC**
+- Confidence: VERIFIED
+- Resources: https://github.com/qtaim/aimpac
+- Note: Classic foundational QTAIM reference implementation
+- Link: [AIMPAC.md](Post-Processing/8.4_Chemical_Bonding/AIMPAC.md)
+
+**292i. AIM2000**
+- Confidence: VERIFIED
+- Resources: http://www.aim2000.de/
+- Note: QTAIM analysis and visualization program for AIM data
+- Link: [AIM2000.md](Post-Processing/8.4_Chemical_Bonding/AIM2000.md)
+
+**292j. Molden2AIM**
+- Confidence: VERIFIED
+- Resources: https://github.com/zorkzou/Molden2AIM
+- Note: Converts Molden files to AIM-WFN/WFX and NBO-47 for downstream bonding analysis
+- Link: [Molden2AIM.md](Post-Processing/8.4_Chemical_Bonding/Molden2AIM.md)
+
+**292k. PAMoC**
+- Confidence: VERIFIED
+- Resources: https://www.pamoc.it/
+- Note: Electron-density analysis environment for theoretical and experimental charge-density studies
+- Link: [PAMoC.md](Post-Processing/8.4_Chemical_Bonding/PAMoC.md)
+
+**292l. NBO**
+- Confidence: VERIFIED
+- Resources: https://nbo7.chem.wisc.edu/
+- Note: Natural Bond Orbital program for orbital-based chemical bonding and population analysis
+- Link: [NBO.md](Post-Processing/8.4_Chemical_Bonding/NBO.md)
+
+**292m. Bondalyzer**
+- Confidence: VERIFIED
+- Resources: https://github.com/MolecularTheoryGroup/BondalyzerTecplotAddon
+- Note: Bondalyzer and gradient bundle decomposition algorithms implemented as a Tecplot addon
+- Link: [Bondalyzer.md](Post-Processing/8.4_Chemical_Bonding/Bondalyzer.md)
+
+**292n. TopIso3D Viewer**
+- Confidence: VERIFIED
+- Resources: http://www.topiso3d.ufpb.br/
+- Note: Free GUI for 3D QTAIM/topological descriptor isosurfaces, especially for CRYSTAL/TOPOND workflows
+- Link: [TopIso3D-Viewer.md](Post-Processing/8.4_Chemical_Bonding/TopIso3D-Viewer.md)
+
+**292o. QuantVec**
+- Confidence: VERIFIED
+- Resources: https://github.com/srk/QuantVec
+- Note: Successor to AIMPAC2 and modular open QTAIM/QCT tool suite with molecular-graph utilities
+- Link: [QuantVec.md](Post-Processing/8.4_Chemical_Bonding/QuantVec.md)
+
+**292p. IGMpython**
+- Confidence: VERIFIED
+- Resources: https://github.com/bertadenes/IGMpython
+- Note: Python implementation of IGM using QM cube densities and VMD-ready outputs
+- Link: [IGMpython.md](Post-Processing/8.4_Chemical_Bonding/IGMpython.md)
+
+**292q. PyMol-QTAIM**
+- Confidence: VERIFIED
+- Resources: https://github.com/popelier-group/PyMol-QTAIM
+- Note: PyMOL plugin for visualization of QTAIM basins from AIMAll outputs
+- Link: [PyMol-QTAIM.md](Post-Processing/8.4_Chemical_Bonding/PyMol-QTAIM.md)
+
+**292r. QTAIM.wl**
+- Confidence: VERIFIED
+- Resources: https://github.com/ecbrown/QTAIM.wl
+- Note: Wolfram Language implementation of QTAIM analysis and graphics workflows
+- Link: [QTAIM-wl.md](Post-Processing/8.4_Chemical_Bonding/QTAIM-wl.md)
+
+**292s. AdNDP**
+- Confidence: VERIFIED
+- Resources: https://zenodo.org/records/3252298
+- Note: Adaptive Natural Density Partitioning code for localized and multicenter bonding analysis
+- Link: [AdNDP.md](Post-Processing/8.4_Chemical_Bonding/AdNDP.md)
+
+**292t. MolBO**
+- Confidence: VERIFIED
+- Resources: https://github.com/zorkzou/MolBO
+- Note: Generates NBO-47 files from MOLPRO output and calculates Mayer bond orders
+- Link: [MolBO.md](Post-Processing/8.4_Chemical_Bonding/MolBO.md)
 
 ### 8.5 Spectroscopy Simulation (20 tools)
 *XAS, XANES, EXAFS, optical spectra, dielectric properties*
@@ -3569,7 +3779,7 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 ---
 
-## CATEGORY 9: FRAMEWORKS (39 tools)
+## CATEGORY 9: FRAMEWORKS (41 tools)
 
 **318. ASE**
 - Confidence: CONFIRMED
@@ -3726,6 +3936,18 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 **356. Signac**
 - Confidence: VERIFIED
 - Resources: https://signac.io/
+
+**356a. teMatDb**
+- Confidence: VERIFIED
+- Resources: https://github.com/byungkiryu/teMatDb
+- Note: Thermoelectric materials database (literature-extracted) and analysis utilities.
+- Link: [teMatDb.md](Frameworks/teMatDb.md)
+
+**356b. thermo**
+- Confidence: VERIFIED
+- Resources: https://github.com/janosh/thermo
+- Note: Data-driven analysis and discovery workflow for thermoelectric materials.
+- Link: [thermo.md](Frameworks/thermo.md)
 
 ---
 
