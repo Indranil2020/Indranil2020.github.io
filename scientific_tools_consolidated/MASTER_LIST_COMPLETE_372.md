@@ -4215,9 +4215,9 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 ---
 
-## CATEGORY 9: FRAMEWORKS (64 tools)
+## CATEGORY 9: FRAMEWORKS (78 tools)
 
-### 9.1 General Purpose Libraries (12 tools)
+### 9.1 General Purpose Libraries (16 tools)
 *Core libraries for structure manipulation, analysis, ML, and descriptor calculation*
 
 **318. ASE**
@@ -4285,7 +4285,31 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: AI-enhanced computational chemistry with ML/MM hybrid and active learning
 - Link: [MLatom.md](Frameworks/9.1_General_Purpose_Libraries/MLatom.md)
 
-### 9.2 Workflow & Job Management (18 tools)
+**356z. maml**
+- Confidence: VERIFIED
+- Resources: https://github.com/materialsvirtuallab/maml
+- Note: Integrated PES modeling and property prediction with multiple ML backends (SNAP, MTP, GPR)
+- Link: [maml.md](Frameworks/9.1_General_Purpose_Libraries/maml.md)
+
+**356za. DScribe**
+- Confidence: VERIFIED
+- Resources: https://github.com/SINGROUP/dscribe
+- Note: Comprehensive structural ML descriptors (SOAP, ACSF, MBTR) with C++ performance
+- Link: [DScribe.md](Frameworks/9.1_General_Purpose_Libraries/DScribe.md)
+
+**356zb. diffpy.structure**
+- Confidence: VERIFIED
+- Resources: https://github.com/diffpy/diffpy.structure
+- Note: Lightweight crystal structure handling with comprehensive CIF support and displacement parameters
+- Link: [diffpy.structure.md](Frameworks/9.1_General_Purpose_Libraries/diffpy.structure.md)
+
+**356zc. dpdata**
+- Confidence: VERIFIED
+- Resources: https://github.com/deepmodeling/dpdata
+- Note: Unified multi-format atomistic data conversion with DeepMD-kit integration
+- Link: [dpdata.md](Frameworks/9.1_General_Purpose_Libraries/dpdata.md)
+
+### 9.2 Workflow & Job Management (21 tools)
 *Workflow orchestration, job scheduling, automation platforms*
 
 **322. AiiDA**
@@ -4383,7 +4407,25 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: Automated VASP+Phono3py workflow for high-throughput lattice thermal conductivity
 - Link: [ph3pywf.md](Frameworks/9.2_Workflow_Job_Management/ph3pywf.md)
 
-### 9.3 AiiDA Plugins (15 tools)
+**356zd. QMflows**
+- Confidence: VERIFIED
+- Resources: https://github.com/SCM-NV/qmflows
+- Note: Multi-code computational chemistry workflow with ADF/DFTB/ORCA/CP2K unified API
+- Link: [QMflows.md](Frameworks/9.2_Workflow_Job_Management/QMflows.md)
+
+**356ze. Longbow**
+- Confidence: VERIFIED
+- Resources: https://github.com/CCPBioSim/Longbow
+- Note: Local-like remote HPC execution with automatic file staging and multi-scheduler support
+- Link: [Longbow.md](Frameworks/9.2_Workflow_Job_Management/Longbow.md)
+
+**356zf. executorlib**
+- Confidence: VERIFIED
+- Resources: https://github.com/pyiron/executorlib
+- Note: Standard Python Executor interface for HPC with Slurm/Flux integration
+- Link: [executorlib.md](Frameworks/9.2_Workflow_Job_Management/executorlib.md)
+
+### 9.3 AiiDA Plugins (19 tools)
 *AiiDA-specific code plugins for various DFT/MD/quantum chemistry codes*
 
 **334. AiiDA-VASP**
@@ -4470,7 +4512,31 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: AiiDA plugin for BigDFT wavelet DFT with PyBigDFT integration
 - Link: [aiida-bigdft.md](Frameworks/9.3_AiiDA_Plugins/aiida-bigdft.md)
 
-### 9.4 Materials Databases (14 tools)
+**356zg. aiida-common-workflows**
+- Confidence: VERIFIED
+- Resources: https://github.com/aiidateam/aiida-common-workflows
+- Note: Common workflow interface across 11 quantum engines with standardized I/O
+- Link: [aiida-common-workflows.md](Frameworks/9.3_AiiDA_Plugins/aiida-common-workflows.md)
+
+**356zh. aiida-castep**
+- Confidence: VERIFIED
+- Resources: https://github.com/aiidateam/aiida-common-workflows (CASTEP via common workflows)
+- Note: AiiDA plugin for CASTEP with common workflow interface
+- Link: [aiida-castep.md](Frameworks/9.3_AiiDA_Plugins/aiida-castep.md)
+
+**356zi. aiida-orca**
+- Confidence: VERIFIED
+- Resources: https://github.com/aiidateam/aiida-common-workflows (ORCA via common workflows)
+- Note: AiiDA plugin for ORCA quantum chemistry with common workflow interface
+- Link: [aiida-orca.md](Frameworks/9.3_AiiDA_Plugins/aiida-orca.md)
+
+**356zj. aiida-siesta**
+- Confidence: VERIFIED
+- Resources: https://github.com/siesta-project/aiida_siesta_plugin
+- Note: AiiDA plugin for SIESTA with optical calculation support and provenance tracking
+- Link: [aiida-siesta.md](Frameworks/9.3_AiiDA_Plugins/aiida-siesta.md)
+
+### 9.4 Materials Databases (15 tools)
 *Curated materials databases, data platforms, and API clients*
 
 **340. Materials Project**
@@ -4547,7 +4613,13 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: Unified API specification for cross-database materials data access (20+ databases)
 - Link: [OPTIMADE.md](Frameworks/9.4_Materials_Databases/OPTIMADE.md)
 
-### 9.5 Specialized Analysis Frameworks (5 tools)
+**356zk. MPContribs**
+- Confidence: VERIFIED
+- Resources: https://github.com/materialsproject/MPContribs
+- Note: Platform for contributing and sharing materials data within the Materials Project ecosystem
+- Link: [MPContribs.md](Frameworks/9.4_Materials_Databases/MPContribs.md)
+
+### 9.5 Specialized Analysis Frameworks (7 tools)
 *Domain-specific analysis pipelines and data processing frameworks*
 
 **351. ASR**
@@ -4578,6 +4650,18 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: https://github.com/materialsproject/MPWorks
 - Note: Legacy Materials Project workflow and submission system
 - Link: [MPWorks.md](Frameworks/9.5_Specialized_Analysis_Frameworks/MPWorks.md)
+
+**356zl. pyMKS**
+- Confidence: VERIFIED
+- Resources: https://github.com/materialsinnovation/pymks
+- Note: Materials Knowledge System with 2-point spatial correlations and MKS regression
+- Link: [pyMKS.md](Frameworks/9.5_Specialized_Analysis_Frameworks/pyMKS.md)
+
+**356zm. PyBaMM**
+- Confidence: VERIFIED
+- Resources: https://github.com/pybamm-team/PyBaMM
+- Note: Open-source physics-based battery modeling with comprehensive degradation models
+- Link: [PyBaMM.md](Frameworks/9.5_Specialized_Analysis_Frameworks/PyBaMM.md)
 
 ---
 
