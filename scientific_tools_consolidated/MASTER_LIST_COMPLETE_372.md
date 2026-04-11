@@ -2781,12 +2781,12 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 ---
 
-## CATEGORY 8: POST-PROCESSING (166 tools)
+## CATEGORY 8: POST-PROCESSING (177 tools)
 
-### 8.1 Band Structure & Electronic Analysis (57 tools)
+### 8.1 Band Structure & Electronic Analysis (60 tools)
 *Tools for analyzing electronic band structures, Fermi surfaces, and k-path generation*
 
-#### 8.1.1 Band Structure & DOS Visualization (23 tools)
+#### 8.1.1 Band Structure & DOS Visualization (25 tools)
 
 **258. vaspkit**
 - Confidence: VERIFIED
@@ -2908,181 +2908,215 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: Rust 2D photonic crystal band solver
 - Link: [blaze2d.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/blaze2d.md)
 
-**282. aiida-kkr**
+**281a. DensityTool**
+- Confidence: VERIFIED
+- Resources: https://github.com/llodeiro/DensityTool
+- Note: Space- and spin-resolved DOS decomposition from VASP
+- Link: [DensityTool.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/DensityTool.md)
+
+**281b. WOOPs**
+- Confidence: VERIFIED
+- Resources: https://github.com/Chengcheng-Xiao/WOOPs
+- Note: Wannier Orbital Overlap Population (COOP/COHP in Wannier basis)
+- Link: [WOOPs.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/WOOPs.md)
+
+**281c. aiida-kkr**
 - Confidence: VERIFIED
 - Resources: https://github.com/JuDFTteam/aiida-kkr
 - Link: [aiida-kkr.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/aiida-kkr.md)
 
-**283. aiida-fleur**
+**282. aiida-fleur**
 - Confidence: VERIFIED
 - Resources: https://github.com/JuDFTteam/aiida-fleur
 - Link: [aiida-fleur.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/aiida-fleur.md)
 
+**283. py4vasp**
+- Confidence: VERIFIED
+- Resources: https://github.com/vasp-dev/py4vasp
+- Link: [py4vasp.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/py4vasp.md)
+
+**284. p4vasp**
+- Confidence: VERIFIED
+- Resources: http://www.p4vasp.at/
+- Link: [p4vasp.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/p4vasp.md)
+
 #### 8.1.2 Band Unfolding (8 tools)
 
-**284. BandUP**
+**285. BandUP**
 - Confidence: VERIFIED
 - Resources: https://www.bandupcode.com/
 - Link: [BandUP.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.2_Band_Unfolding/BandUP.md)
 
-**285. fold2Bloch**
+**286. fold2Bloch**
 - Confidence: VERIFIED
 - Resources: https://github.com/qsnake/fold2Bloch
 - Link: [fold2Bloch.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.2_Band_Unfolding/fold2Bloch.md)
 
-**286. PyProcar-Unfold**
+**287. PyProcar-Unfold**
 - Confidence: VERIFIED
 - Resources: https://pyprocar.readthedocs.io/
 - Link: [PyProcar-Unfold.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.2_Band_Unfolding/PyProcar-Unfold.md)
 
-**287. easyunfold**
+**288. easyunfold**
 - Confidence: VERIFIED
 - Resources: https://github.com/SMTG-Bham/easyunfold
 - Link: [easyunfold.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.2_Band_Unfolding/easyunfold.md)
 
-**288. banduppy**
+**289. banduppy**
 - Confidence: VERIFIED
 - Resources: https://github.com/band-unfolding/banduppy
 - Link: [banduppy.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.2_Band_Unfolding/banduppy.md)
 
-**289. VaspBandUnfolding**
+**290. VaspBandUnfolding**
 - Confidence: VERIFIED
 - Resources: https://github.com/QijingZheng/VaspBandUnfolding
 - Link: [VaspBandUnfolding.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.2_Band_Unfolding/VaspBandUnfolding.md)
 
-**290. vasp_unfold**
+**291. vasp_unfold**
 - Confidence: VERIFIED
 - Resources: https://github.com/tomkeus/vasp_unfold
 - Link: [vasp_unfold.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.2_Band_Unfolding/vasp_unfold.md)
 
-**291. fold2Bloch-VASP**
+**292. fold2Bloch-VASP**
 - Confidence: VERIFIED
 - Resources: https://github.com/rubel75/fold2Bloch-VASP
 - Link: [fold2Bloch-VASP.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.2_Band_Unfolding/fold2Bloch-VASP.md)
 
 #### 8.1.3 Fermi Surface (4 tools)
 
-**292. FermiSurfer**
+**293. FermiSurfer**
 - Confidence: VERIFIED
 - Resources: https://fermisurfer.osdn.jp/
 - Link: [FermiSurfer.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.3_Fermi_Surface/FermiSurfer.md)
 
-**293. AutoBZ.jl**
+**294. AutoBZ.jl**
 - Confidence: VERIFIED
 - Resources: https://github.com/JuliaQuantum/AutoBZCore.jl
 - Link: [AutoBZ.jl.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.3_Fermi_Surface/AutoBZ.jl.md)
 
-**294. IFermi**
+**295. IFermi**
 - Confidence: VERIFIED
 - Resources: https://github.com/fermisurfaces/IFermi
 - Link: [IFermi.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.3_Fermi_Surface/IFermi.md)
 
-**295. py_FS**
+**296. py_FS**
 - Confidence: VERIFIED
 - Resources: https://github.com/TheoWeinberger/py_FS
 - Link: [py_FS.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.3_Fermi_Surface/py_FS.md)
 
 #### 8.1.4 ARPES & Photoemission (5 tools)
 
-**296. PyARPES**
+**297. PyARPES**
 - Confidence: VERIFIED
 - Resources: https://arpes.github.io/PyARPES/
 - Link: [PyARPES.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.4_ARPES_Photoemission/PyARPES.md)
 
-**297. ARPESGUI**
+**298. ARPESGUI**
 - Confidence: VERIFIED
 - Resources: MATLAB GUI for SX-ARPES analysis
 - Link: [ARPESGUI.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.4_ARPES_Photoemission/ARPESGUI.md)
 
-**298. fuller**
+**299. fuller**
 - Confidence: VERIFIED
 - Resources: ML-based band structure reconstruction
 - Link: [fuller.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.4_ARPES_Photoemission/fuller.md)
 
-**299. mpes**
+**300. mpes**
 - Confidence: VERIFIED
 - Resources: Multidimensional photoemission spectroscopy toolkit
 - Link: [mpes.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.4_ARPES_Photoemission/mpes.md)
 
-**300. peaks**
+**301. peaks**
 - Confidence: VERIFIED
 - Resources: Modern Python ARPES analysis framework
 - Link: [peaks.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.4_ARPES_Photoemission/peaks.md)
 
-#### 8.1.5 Effective Mass & Band Analysis (4 tools)
+#### 8.1.5 Effective Mass & Band Analysis (8 tools)
 
-**301. effectivemass**
+**302. effectivemass**
 - Confidence: VERIFIED
 - Resources: https://github.com/aflow/effectivemass
 - Link: [effectivemass.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.5_Effective_Mass/effectivemass.md)
 
-**302. SeeK-path**
+**303. SeeK-path**
 - Confidence: VERIFIED
 - Resources: https://seekpath.readthedocs.io/
 - Link: [SeeK-path.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.5_Effective_Mass/SeeK-path.md)
 
-**303. effmass**
+**304. effmass**
 - Confidence: VERIFIED
 - Resources: https://github.com/lucydot/effmass
 - Link: [effmass.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.5_Effective_Mass/effmass.md)
 
-**304. Effective-mass-fitting**
+**305. Effective-mass-fitting**
 - Confidence: VERIFIED
 - Resources: PyQt parabolic band fitting app
 - Link: [Effective-mass-fitting.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.5_Effective_Mass/Effective-mass-fitting.md)
 
+**306. mstar**
+- Confidence: VERIFIED
+- Resources: https://github.com/rubel75/mstar
+- Note: Effective mass via perturbation theory from WIEN2k (conductivity, DOS, cyclotron)
+- Link: [mstar.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.5_Effective_Mass/mstar.md)
+
+**307. emc**
+- Confidence: VERIFIED
+- Resources: https://github.com/afonari/emc
+- Note: Effective Mass Calculator (finite difference) for VASP/QE, anisotropic tensor
+- Link: [emc.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.5_Effective_Mass/emc.md)
+
 #### 8.1.6 Tight-Binding & Models (6 tools)
 
-**305. pysktb**
+**308. pysktb**
 - Confidence: VERIFIED
 - Resources: Slater-Koster tight-binding topological solver
 - Link: [pysktb.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.6_Tight_Binding/pysktb.md)
 
-**306. tightbinder**
+**309. tightbinder**
 - Confidence: VERIFIED
 - Resources: Python tight-binding framework
 - Link: [tightbinder.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.6_Tight_Binding/tightbinder.md)
 
-**307. TightBinding.jl**
+**310. TightBinding.jl**
 - Confidence: VERIFIED
 - Resources: Julia high-performance TB package
 - Link: [TightBinding.jl.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.6_Tight_Binding/TightBinding.jl.md)
 
-**308. NanoNet**
+**311. NanoNet**
 - Confidence: VERIFIED
 - Resources: TB for nanostructures
 - Link: [NanoNet.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.6_Tight_Binding/NanoNet.md)
 
-**309. UltimateEPM**
+**312. UltimateEPM**
 - Confidence: VERIFIED
 - Resources: Empirical pseudopotential method
 - Link: [UltimateEPM.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.6_Tight_Binding/UltimateEPM.md)
 
-**310. elphem**
+**313. elphem**
 - Confidence: VERIFIED
 - Resources: Electron-phonon with empty lattice
 - Link: [elphem.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.6_Tight_Binding/elphem.md)
 
 #### 8.1.7 K-Path & Brillouin Zone (3 tools)
 
-**311. kgrid**
+**314. kgrid**
 - Confidence: VERIFIED
 - Resources: https://github.com/WMD-group/kgrid
 - Link: [kgrid.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.7_K_Path_BZ/kgrid.md)
 
-**312. KpLib**
+**315. KpLib**
 - Confidence: VERIFIED
 - Resources: https://gitlab.com/muellergroup/kplib
 - Link: [KpLib.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.7_K_Path_BZ/KpLib.md)
 
-**313. Brillouin-zone-navigator**
+**316. Brillouin-zone-navigator**
 - Confidence: VERIFIED
 - Resources: Interactive BZ visualization
 - Link: [Brillouin-zone-navigator.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.7_K_Path_BZ/Brillouin-zone-navigator.md)
 
 #### 8.1.8 Wavefunction Analysis (1 tool)
 
-**314. pawpyseed**
+**317. pawpyseed**
 - Confidence: VERIFIED
 - Resources: https://github.com/kylebystrom/pawpyseed
 - Link: [pawpyseed.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.8_Wavefunction_Analysis/pawpyseed.md)
@@ -3092,41 +3126,41 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 #### 8.2.1 Irreducible Representations (7 tools)
 
-**315. irvsp**
+**318. irvsp**
 - Confidence: VERIFIED
 - Resources: https://github.com/zjwang11/irvsp
 - Link: [irvsp.md](Post-Processing/8.2_Topological_Symmetry/8.2.1_Irreducible_Representations/irvsp.md)
 
-**316. IrRep**
+**319. IrRep**
 - Confidence: VERIFIED
 - Resources: https://github.com/stepan-tsirkin/irrep
 - Link: [IrRep.md](Post-Processing/8.2_Topological_Symmetry/8.2.1_Irreducible_Representations/IrRep.md)
 
-**317. SpaceGroupIrep**
+**320. SpaceGroupIrep**
 - Confidence: VERIFIED
 - Resources: https://github.com/goodluck1982/SpaceGroupIrep
 - Note: Mathematica package for space group irreps (BC convention)
 - Link: [SpaceGroupIrep.md](Post-Processing/8.2_Topological_Symmetry/8.2.1_Irreducible_Representations/SpaceGroupIrep.md)
 
-**318. spgrep**
+**321. spgrep**
 - Confidence: VERIFIED
 - Resources: https://github.com/spglib/spgrep
 - Note: On-the-fly space-group irrep generator (JOSS published)
 - Link: [spgrep.md](Post-Processing/8.2_Topological_Symmetry/8.2.1_Irreducible_Representations/spgrep.md)
 
-**319. qeirreps**
+**322. qeirreps**
 - Confidence: VERIFIED
 - Resources: https://github.com/mizoguche/qeirreps
 - Note: Quantum ESPRESSO irreducible representations (CPC published)
 - Link: [qeirreps.md](Post-Processing/8.2_Topological_Symmetry/8.2.1_Irreducible_Representations/qeirreps.md)
 
-**320. spgrep-modulation**
+**323. spgrep-modulation**
 - Confidence: VERIFIED
 - Resources: https://github.com/phonopy/spgrep-modulation
 - Note: Collective atomic modulation analysis with irreps
 - Link: [spgrep-modulation.md](Post-Processing/8.2_Topological_Symmetry/8.2.1_Irreducible_Representations/spgrep-modulation.md)
 
-**321. WannSymm**
+**324. WannSymm**
 - Confidence: VERIFIED
 - Resources: https://github.com/ccao/WannSymm
 - Note: Symmetry analysis and symmetrization for Wannier orbitals (CPC 2022)
@@ -3134,46 +3168,46 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 #### 8.2.2 Topological Invariants (8 tools)
 
-**321. BerryPI**
+**325. BerryPI**
 - Confidence: VERIFIED
 - Resources: https://github.com/stepan-tsirkin/berryphase
 - Link: [BerryPI.md](Post-Processing/8.2_Topological_Symmetry/8.2.2_Topological_Invariants/BerryPI.md)
 
-**322. Chern-Number**
+**326. Chern-Number**
 - Confidence: VERIFIED
 - Resources: https://github.com/stepan-tsirkin/chern-number
 - Link: [Chern-Number.md](Post-Processing/8.2_Topological_Symmetry/8.2.2_Topological_Invariants/Chern-Number.md)
 
-**323. Berry-Phase**
+**327. Berry-Phase**
 - Confidence: VERIFIED
 - Resources: **METHOD** - Implemented in VASP, ABINIT, etc.
 - Link: [Berry-Phase.md](Post-Processing/8.2_Topological_Symmetry/8.2.2_Topological_Invariants/Berry-Phase.md)
 
-**324. BerryEasy**
+**328. BerryEasy**
 - Confidence: VERIFIED
 - Resources: arXiv:2312.13051
 - Note: GPU-enabled nth-order and spin-resolved topology
 - Link: [BerryEasy.md](Post-Processing/8.2_Topological_Symmetry/8.2.2_Topological_Invariants/BerryEasy.md)
 
-**325. WloopPHI**
+**329. WloopPHI**
 - Confidence: VERIFIED
 - Resources: Comput. Phys. Commun. 270, 108147 (2022)
 - Note: WIEN2k Wilson loop for Weyl semimetals
 - Link: [WloopPHI.md](Post-Processing/8.2_Topological_Symmetry/8.2.2_Topological_Invariants/WloopPHI.md)
 
-**326. topo_2bands**
+**330. topo_2bands**
 - Confidence: VERIFIED
 - Resources: https://github.com/jameclear/topo_2bands
 - Note: Two-band topological invariant calculator
 - Link: [topo_2bands.md](Post-Processing/8.2_Topological_Symmetry/8.2.2_Topological_Invariants/topo_2bands.md)
 
-**327. TIM**
+**331. TIM**
 - Confidence: VERIFIED
 - Resources: https://github.com/Hugo-loio/TIM
 - Note: C++ Topological Insulator Models
 - Link: [TIM.md](Post-Processing/8.2_Topological_Symmetry/8.2.2_Topological_Invariants/TIM.md)
 
-**328. WIEN2k-Topo**
+**332. WIEN2k-Topo**
 - Confidence: VERIFIED
 - Resources: arXiv:2303.16306, CPC 2023
 - Note: CherN/wcc modules for Chern and Z2 invariants in WIEN2k
@@ -3181,19 +3215,19 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 #### 8.2.3 k·p Hamiltonians (3 tools)
 
-**329. kdotp-symmetry**
+**333. kdotp-symmetry**
 - Confidence: VERIFIED
 - Resources: https://github.com/greschd/kdotp-symmetry
 - Note: Symmetry-constrained k·p Hamiltonian generator (Phys. Rev. Materials)
 - Link: [kdotp-symmetry.md](Post-Processing/8.2_Topological_Symmetry/8.2.3_KP_Hamiltonians/kdotp-symmetry.md)
 
-**330. kdotp-generator**
+**334. kdotp-generator**
 - Confidence: VERIFIED
 - Resources: https://github.com/yjiang-iop/kdotp-generator
 - Note: k·p generator with magnetic space group support
 - Link: [kdotp-generator.md](Post-Processing/8.2_Topological_Symmetry/8.2.3_KP_Hamiltonians/kdotp-generator.md)
 
-**331. DFT2kp**
+**335. DFT2kp**
 - Confidence: VERIFIED
 - Resources: SciPost Phys. Codebases 25 (2024), arXiv:2306.08554
 - Note: Extract Kane/Luttinger k·p parameters from Quantum ESPRESSO
@@ -3201,129 +3235,141 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 #### 8.2.4 Magnetic Symmetry (1 tool)
 
-**332. findmagsym**
+**336. findmagsym**
 - Confidence: VERIFIED
 - Resources: https://github.com/yuanlinding/findmagsym
 - Note: Web app for magnetic space group determination
 - Link: [findmagsym.md](Post-Processing/8.2_Topological_Symmetry/8.2.4_Magnetic_Symmetry/findmagsym.md)
 
-### 8.3 Transport Properties (20 tools)
+### 8.3 Transport Properties (22 tools)
 *Boltzmann transport, thermoelectric properties, phonon transport*
 
-**273. BoltzTraP**
+**337. BoltzTraP**
 - Confidence: VERIFIED
 - Resources: https://www.imc.tuwien.ac.at/forschungsbereich_theoretische_chemie/forschungsgruppen/prof_dr_gkh_madsen/the_boltzmann_transport_property_package/
 - Link: [BoltzTraP.md](Post-Processing/8.3_Transport_Properties/BoltzTraP.md)
 
-**274. BoltzTraP2**
+**338. BoltzTraP2**
 - Confidence: VERIFIED
 - Resources: https://github.com/gautierabsi/BoltzTraP2
 - Link: [BoltzTraP2.md](Post-Processing/8.3_Transport_Properties/BoltzTraP2.md)
 
-**275. AMSET**
+**339. AMSET**
 - Confidence: VERIFIED
 - Resources: https://github.com/hackingmaterials/amset
 - Link: [AMSET.md](Post-Processing/8.3_Transport_Properties/AMSET.md)
 
-**276. Phoebe**
+**340. Phoebe**
 - Confidence: VERIFIED
 - Resources: https://github.com/AFND-PH/phoebe
 - Link: [Phoebe.md](Post-Processing/8.3_Transport_Properties/Phoebe.md)
 
-**276a. Pheasy**
+**341. Pheasy**
 - Confidence: VERIFIED
 - Resources: https://pypi.org/project/pheasy/
 - Link: [Pheasy.md](Post-Processing/8.3_Transport_Properties/Pheasy.md)
 
-**276b. ElecTra (ELECTRA)**
+**342. ElecTra (ELECTRA)**
 - Confidence: VERIFIED
 - Resources: https://github.com/PatrizioGraziosi/ELECTRA
 - Note: Full-band electronic transport and thermoelectric coefficients from the linearized BTE.
 - Link: [ElecTra.md](Post-Processing/8.3_Transport_Properties/ElecTra.md)
 
-**276c. TransOpt**
+**343. TransOpt**
 - Confidence: VERIFIED
 - Resources: https://github.com/yangjio4849/TransOpt
 - Note: Electrical transport coefficients (Seebeck, conductivity, electronic thermal conductivity) for VASP users.
 - Link: [TransOpt.md](Post-Processing/8.3_Transport_Properties/TransOpt.md)
 
-**276d. AICON2**
+**344. AICON2**
 - Confidence: VERIFIED
 - Resources: https://github.com/Baijianlu/AICON2
 - Note: Transport property estimation (electronic and thermal) with fast approximate models.
 - Link: [AICON2.md](Post-Processing/8.3_Transport_Properties/AICON2.md)
 
-**276e. AMMCR**
+**345. AMMCR**
 - Confidence: VERIFIED
 - Resources: https://github.com/anup12352/AMMCR
 - Note: Ab initio mobility and conductivity calculation using the Rode algorithm (VASP interface).
 - Link: [AMMCR.md](Post-Processing/8.3_Transport_Properties/AMMCR.md)
 
-**276f. ThermoElectric**
+**346. ThermoElectric**
 - Confidence: VERIFIED
 - Resources: https://github.com/ariahosseini/ThermoElectric
 - Note: Computational framework to compute electron transport coefficients.
 - Link: [ThermoElectric.md](Post-Processing/8.3_Transport_Properties/ThermoElectric.md)
 
-**276g. TEprop2D**
+**347. TEprop2D**
 - Confidence: VERIFIED
 - Resources: https://github.com/artnugraha/TEprop2D
 - Note: Thermoelectric properties of 2D materials using Quantum ESPRESSO and EPW outputs.
 - Link: [TEprop2D.md](Post-Processing/8.3_Transport_Properties/TEprop2D.md)
 
-**276h. kubocalc**
+**348. kubocalc**
 - Confidence: VERIFIED
 - Resources: https://github.com/janbbeck/kubocalc
 - Note: Kubo-Greenwood based Quantum ESPRESSO plugin for electrical/thermal conductivity and Seebeck coefficient.
 - Link: [kubocalc.md](Post-Processing/8.3_Transport_Properties/kubocalc.md)
 
-**276i. kg4vasp**
+**349. kg4vasp**
 - Confidence: VERIFIED
 - Resources: https://github.com/conodipaola/kg4vasp
 - Note: Kubo-Greenwood transport coefficients from first-principles molecular dynamics with VASP.
 - Link: [kg4vasp.md](Post-Processing/8.3_Transport_Properties/kg4vasp.md)
 
-**276j. LanTraP**
+**350. LanTraP**
 - Confidence: VERIFIED
 - Resources: https://nanohub.org/resources/lantrap
 - Note: Landauer-based thermoelectric transport (distribution of modes) from band structure inputs.
 - Link: [LanTraP.md](Post-Processing/8.3_Transport_Properties/LanTraP.md)
 
-**276k. gkx**
+**351. gkx**
 - Confidence: VERIFIED
 - Resources: https://github.com/sirmarcel/gkx
 - Note: JAX-based Green-Kubo workflow for anharmonic thermal conductivity.
 - Link: [gkx.md](Post-Processing/8.3_Transport_Properties/gkx.md)
 
-**276l. mDCThermalC**
+**352. mDCThermalC**
 - Confidence: VERIFIED
 - Resources: https://github.com/Baijianlu/mDCThermalC
 - Note: Modified Debye-Callaway model for lattice thermal conductivity.
 - Link: [mDCThermalC.md](Post-Processing/8.3_Transport_Properties/mDCThermalC.md)
 
-**276m. empirical_thermal_conductivity**
+**353. empirical_thermal_conductivity**
 - Confidence: VERIFIED
 - Resources: https://github.com/houzf/empirical_thermal_conductivity
 - Note: Thermal conductivity estimates from empirical models (Clarke, Cahill-Pohl, Slack).
 - Link: [empirical_thermal_conductivity.md](Post-Processing/8.3_Transport_Properties/empirical_thermal_conductivity.md)
 
-**276n. Unifiedkappa-phonopy**
+**354. Unifiedkappa-phonopy**
 - Confidence: VERIFIED
 - Resources: https://github.com/yimavxia/Unifiedkappa-phonopy
 - Note: Tools for phonon thermal conductivity analysis (including diagonal and off-diagonal contributions).
 - Link: [Unifiedkappa-phonopy.md](Post-Processing/8.3_Transport_Properties/Unifiedkappa-phonopy.md)
 
-**276o. topological-insulator-spin-hall**
+**355. topological-insulator-spin-hall**
 - Confidence: VERIFIED
 - Resources: https://github.com/smfarzaneh/topological-insulator-spin-hall
 - Note: Ab initio spin Hall conductivity workflow using Quantum ESPRESSO and Wannier90.
 - Link: [topological-insulator-spin-hall.md](Post-Processing/8.3_Transport_Properties/topological-insulator-spin-hall.md)
 
-**276p. MD-GreenKubo-Thermal-Conductivity**
+**356. MD-GreenKubo-Thermal-Conductivity**
 - Confidence: VERIFIED
 - Resources: https://github.com/erny123/MD-GreenKubo-Thermal-Conductivity
 - Note: Green-Kubo thermal conductivity post-processing for molecular dynamics trajectories.
 - Link: [MD-GreenKubo-Thermal-Conductivity.md](Post-Processing/8.3_Transport_Properties/MD-GreenKubo-Thermal-Conductivity.md)
+
+**357. ElasTool**
+- Confidence: VERIFIED
+- Resources: https://github.com/zhongliliu/elastool
+- Note: Automated elastic constants and mechanical properties from DFT, finite-temperature
+- Link: [ElasTool.md](Post-Processing/8.3_Transport_Properties/ElasTool.md)
+
+**357a. pymatgen-analysis-diffusion**
+- Confidence: VERIFIED
+- Resources: https://github.com/materialsvirtuallab/pymatgen-analysis-diffusion
+- Note: Pymatgen add-on for ionic diffusion and conductivity analysis from MD
+- Link: [pymatgen-analysis-diffusion.md](Post-Processing/8.3_Transport_Properties/pymatgen-analysis-diffusion.md)
 
 ### 8.4 Chemical Bonding Analysis (40 tools)
 *COHP, charge partitioning, bonding analysis*
@@ -3794,7 +3840,7 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: ML prediction of NMR chemical shieldings for organic solids (Chem. Sci. 2021)
 - Link: [ShiftML.md](Post-Processing/8.5_Spectroscopy/ShiftML.md)
 
-### 8.6 Magnetism & Spin Dynamics (18 tools)
+### 8.6 Magnetism & Spin Dynamics (19 tools)
 *Magnetic exchange, spin dynamics, micromagnetics, atomistic spin dynamics, magnon dispersion*
 
 **294. Magnon codes**
@@ -3898,7 +3944,13 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: Python DSL for micromagnetics wrapping OOMMF/Mumax3/fidimag, Jupyter-integrated
 - Link: [Ubermag.md](Post-Processing/8.6_Magnetism_Spin/Ubermag.md)
 
-### 8.7 Visualization (11 tools)
+**299m. DarkMAGIC**
+- Confidence: VERIFIED
+- Resources: https://github.com/Griffin-Group/DarkMAGIC
+- Note: Ab initio magnon/phonon interaction calculator for dark matter detection
+- Link: [DarkMAGIC.md](Post-Processing/8.6_Magnetism_Spin/DarkMAGIC.md)
+
+### 8.7 Visualization (12 tools)
 *Structure and data visualization*
 
 **300. VESTA**
@@ -3958,7 +4010,13 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: CIF to 20+ DFT code input format converter with k-point generation
 - Link: [cif2cell.md](Post-Processing/8.7_Visualization/cif2cell.md)
 
-### 8.8 Quantum Transport (9 tools)
+**312c. surfaxe**
+- Confidence: VERIFIED
+- Resources: https://github.com/SMTG-Bham/surfaxe
+- Note: Surface slab analysis (energy, work function, convergence) for VASP
+- Link: [surfaxe.md](Post-Processing/8.7_Visualization/surfaxe.md)
+
+### 8.8 Quantum Transport (10 tools)
 *Non-equilibrium Green's function, quantum transport*
 
 **313. Nanodcal**
@@ -4010,7 +4068,13 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: Fortran/C++ NEGF quantum transport with Armadillo, recursive Green's function
 - Link: [GreenCheetah.md](Post-Processing/8.8_Quantum_Transport/GreenCheetah.md)
 
-### 8.9 Workflow & Automation (7 tools)
+**317e. PyMoire**
+- Confidence: VERIFIED
+- Resources: https://github.com/mahyar-servati/PyMoire
+- Note: TB calculation of twisted bilayer moiré systems with Wannier functions
+- Link: [PyMoire.md](Post-Processing/8.8_Quantum_Transport/PyMoire.md)
+
+### 8.9 Workflow & Automation (10 tools)
 *Post-processing automation, defect workflows, analysis automation*
 
 **310. dbaAutomator**
@@ -4052,6 +4116,24 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: https://github.com/pylada/pylada-defects
 - Note: Automated defect structure generation with corrections, pylada ecosystem
 - Link: [pylada-defects.md](Post-Processing/8.9_Workflow_Automation/pylada-defects.md)
+
+**311f. CASCADE**
+- Confidence: VERIFIED
+- Resources: https://github.com/patonlab/CASCADE
+- Note: ML-corrected NMR chemical shifts to CCSD(T) quality for organic molecules
+- Link: [CASCADE.md](Post-Processing/8.9_Workflow_Automation/CASCADE.md)
+
+**311g. ml4nmr**
+- Confidence: VERIFIED
+- Resources: https://github.com/grimme-lab/ml4nmr
+- Note: ML correction of NMR shifts with spin-orbit relativistic effects (ΔSO^ML)
+- Link: [ml4nmr.md](Post-Processing/8.9_Workflow_Automation/ml4nmr.md)
+
+**311h. vaspup2.0**
+- Confidence: VERIFIED
+- Resources: https://github.com/kavanase/vaspup2.0
+- Note: Automated VASP convergence testing with plotting and criteria checking
+- Link: [vaspup2.md](Post-Processing/8.9_Workflow_Automation/vaspup2.md)
 
 ---
 
