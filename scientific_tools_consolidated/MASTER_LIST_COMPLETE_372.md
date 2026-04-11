@@ -4215,180 +4215,375 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 ---
 
-## CATEGORY 9: FRAMEWORKS (41 tools)
+## CATEGORY 9: FRAMEWORKS (64 tools)
+
+### 9.1 General Purpose Libraries (12 tools)
+*Core libraries for structure manipulation, analysis, ML, and descriptor calculation*
 
 **318. ASE**
 - Confidence: CONFIRMED
 - Resources: https://wiki.fysik.dtu.dk/ase/
+- Link: [ASE.md](Frameworks/9.1_General_Purpose_Libraries/ASE.md)
 
 **319. pymatgen**
 - Confidence: CONFIRMED
 - Resources: https://pymatgen.org/
+- Link: [pymatgen.md](Frameworks/9.1_General_Purpose_Libraries/pymatgen.md)
 
 **320. spglib**
 - Confidence: VERIFIED
 - Resources: https://spglib.github.io/
+- Link: [spglib.md](Frameworks/9.1_General_Purpose_Libraries/spglib.md)
 
 **321. matscipy**
-- Confidence: UNCERTAIN
-- Resources: matscipy **UNKNOWN** - No specific framework found with this name (likely generic or typo).
-
-**322. AiiDA**
 - Confidence: VERIFIED
-- Resources: https://aiida.net/
-
-**323. FireWorks**
-- Confidence: VERIFIED
-- Resources: https://materialsproject.github.io/fireworks/
-
-**324. atomate**
-- Confidence: VERIFIED
-- Resources: https://hackingmaterials.github.io/atomate/
-
-**325. atomate2**
-- Confidence: VERIFIED
-- Resources: https://github.com/materialsproject/atomate2
-
-**326. custodian**
-- Confidence: VERIFIED
-- Resources: https://materialsproject.github.io/custodian/
-
-**327. jobflow**
-- Confidence: VERIFIED
-- Resources: https://materialsproject.github.io/jobflow/
-
-**328. jobflow-remote**
-- Confidence: UNCERTAIN
-- Resources: **MODULE** - Part of jobflow/fireworks ecosystem.
-
-**329. Luigi**
-- Confidence: VERIFIED
-- Resources: https://luigi.readthedocs.io/
-
-**330. Parsl**
-- Confidence: VERIFIED
-- Resources: https://parsl.readthedocs.io/
-
-**331. MyQueue**
-- Confidence: VERIFIED
-- Resources: https://myqueue.readthedocs.io/
-
-**332. Dask**
-- Confidence: VERIFIED
-- Resources: https://dask.org/
-
-**333. Pyiron**
-- Confidence: VERIFIED
-- Resources: https://pyiron.org/
-
-**334. AiiDA-VASP**
-- Confidence: VERIFIED
-- Resources: https://github.com/aiidateam/aiida-vasp
-
-**335. AiiDA-QuantumESPRESSO**
-- Confidence: VERIFIED
-- Resources: https://github.com/aiidateam/aiida-quantumespresso
-
-**336. AiiDA-wannier90**
-- Confidence: VERIFIED
-- Resources: https://github.com/aiidateam/aiida-wannier90
-
-**337. AiiDA-yambo**
-- Confidence: VERIFIED
-- Resources: https://github.com/aiidateam/aiida-yambo
-
-**338. aiida-fleur**
-- Confidence: VERIFIED
-- Resources: https://github.com/aiidateam/aiida-fleur
-
-**339. AiiDA plugin registry**
-- Confidence: VERIFIED
-- Resources: https://aiidateam.github.io/aiida-registry/
-
-**340. Materials Project**
-- Confidence: VERIFIED
-- Resources: https://materialsproject.org/
-
-**341. AFLOW**
-- Confidence: VERIFIED
-- Resources: http://www.aflow.org/
-
-**342. OQMD**
-- Confidence: VERIFIED
-- Resources: http://oqmd.org/
-
-**343. NOMAD**
-- Confidence: VERIFIED
-- Resources: https://nomad-lab.eu/
-
-**344. Materials Cloud**
-- Confidence: VERIFIED
-- Resources: https://www.materialscloud.org/
-
-**345. JARVIS**
-- Confidence: VERIFIED
-- Resources: https://jarvis.nist.gov/
-
-**346. C2DB**
-- Confidence: VERIFIED
-- Resources: https://c2db.fysik.dtu.dk/
-
-**347. 2DMatPedia**
-- Confidence: VERIFIED
-- Resources: https://www.2dmaterials.org/
-
-**348. pymatgen-db**
-- Confidence: VERIFIED
-- Resources: https://github.com/materialsproject/pymatgen-db
-
-**349. qmpy**
-- Confidence: VERIFIED
-- Resources: https://github.com/wolverton-research-group/qmpy
-
-**350. NCD**
-- Confidence: VERIFIED
-- Resources: http://www.nanocrystallography.org/
-
-**351. ASR**
-- Confidence: VERIFIED
-- Resources: https://gitlab.com/asr-project/asr
+- Resources: https://github.com/libAtoms/matscipy
+- Note: Python materials science library for interatomic potentials, elastic constants, fracture
+- Link: [matscipy.md](Frameworks/9.1_General_Purpose_Libraries/matscipy.md)
 
 **352. pymatgen-analysis**
 - Confidence: VERIFIED
 - Resources: **MODULE** - Part of pymatgen.
+- Link: [pymatgen-analysis.md](Frameworks/9.1_General_Purpose_Libraries/pymatgen-analysis.md)
+
+**348. pymatgen-db**
+- Confidence: VERIFIED
+- Resources: https://github.com/materialsproject/pymatgen-db
+- Link: [pymatgen-db.md](Frameworks/9.1_General_Purpose_Libraries/pymatgen-db.md)
 
 **353. matminer**
 - Confidence: VERIFIED
 - Resources: https://hackingmaterials.lbl.gov/matminer/
-
-**354. MAST**
-- Confidence: VERIFIED
-- Resources: https://github.com/uw-cmg/MAST
+- Link: [matminer.md](Frameworks/9.1_General_Purpose_Libraries/matminer.md)
 
 **355. Jarvis-Tools**
 - Confidence: VERIFIED
 - Resources: https://github.com/usnistgov/jarvis-tools
+- Link: [Jarvis-Tools.md](Frameworks/9.1_General_Purpose_Libraries/Jarvis-Tools.md)
+
+**356c. XenonPy**
+- Confidence: VERIFIED
+- Resources: https://github.com/yoshida-lab/XenonPy
+- Note: Transfer learning framework for materials with 290+ elemental descriptors
+- Link: [XenonPy.md](Frameworks/9.1_General_Purpose_Libraries/XenonPy.md)
+
+**356d. pymatviz**
+- Confidence: VERIFIED
+- Resources: https://github.com/janosh/pymatviz
+- Note: Materials-specific publication-quality visualization with automatic ML metrics annotation
+- Link: [pymatviz.md](Frameworks/9.1_General_Purpose_Libraries/pymatviz.md)
+
+**356e. CatKit**
+- Confidence: VERIFIED
+- Resources: https://github.com/SUNCAT-Center/CatKit
+- Note: Automated adsorption site enumeration and surface generation for catalysis
+- Link: [CatKit.md](Frameworks/9.1_General_Purpose_Libraries/CatKit.md)
+
+**356f. MLatom**
+- Confidence: VERIFIED
+- Resources: https://github.com/dralgroup/mlatom
+- Note: AI-enhanced computational chemistry with ML/MM hybrid and active learning
+- Link: [MLatom.md](Frameworks/9.1_General_Purpose_Libraries/MLatom.md)
+
+### 9.2 Workflow & Job Management (18 tools)
+*Workflow orchestration, job scheduling, automation platforms*
+
+**322. AiiDA**
+- Confidence: VERIFIED
+- Resources: https://aiida.net/
+- Link: [AiiDA.md](Frameworks/9.2_Workflow_Job_Management/AiiDA.md)
+
+**323. FireWorks**
+- Confidence: VERIFIED
+- Resources: https://materialsproject.github.io/fireworks/
+- Link: [FireWorks.md](Frameworks/9.2_Workflow_Job_Management/FireWorks.md)
+
+**324. atomate**
+- Confidence: VERIFIED
+- Resources: https://hackingmaterials.github.io/atomate/
+- Link: [atomate.md](Frameworks/9.2_Workflow_Job_Management/atomate.md)
+
+**325. atomate2**
+- Confidence: VERIFIED
+- Resources: https://github.com/materialsproject/atomate2
+- Link: [atomate2.md](Frameworks/9.2_Workflow_Job_Management/atomate2.md)
+
+**326. custodian**
+- Confidence: VERIFIED
+- Resources: https://materialsproject.github.io/custodian/
+- Link: [custodian.md](Frameworks/9.2_Workflow_Job_Management/custodian.md)
+
+**327. jobflow**
+- Confidence: VERIFIED
+- Resources: https://materialsproject.github.io/jobflow/
+- Link: [jobflow.md](Frameworks/9.2_Workflow_Job_Management/jobflow.md)
+
+**328. jobflow-remote**
+- Confidence: VERIFIED
+- Resources: https://github.com/materialsproject/jobflow-remote
+- Note: Remote execution backend for jobflow workflows
+- Link: [jobflow-remote.md](Frameworks/9.2_Workflow_Job_Management/jobflow-remote.md)
+
+**329. Luigi**
+- Confidence: VERIFIED
+- Resources: https://luigi.readthedocs.io/
+- Link: [Luigi.md](Frameworks/9.2_Workflow_Job_Management/Luigi.md)
+
+**330. Parsl**
+- Confidence: VERIFIED
+- Resources: https://parsl.readthedocs.io/
+- Link: [Parsl.md](Frameworks/9.2_Workflow_Job_Management/Parsl.md)
+
+**331. MyQueue**
+- Confidence: VERIFIED
+- Resources: https://myqueue.readthedocs.io/
+- Link: [MyQueue.md](Frameworks/9.2_Workflow_Job_Management/MyQueue.md)
+
+**332. Dask**
+- Confidence: VERIFIED
+- Resources: https://dask.org/
+- Link: [Dask.md](Frameworks/9.2_Workflow_Job_Management/Dask.md)
+
+**333. Pyiron**
+- Confidence: VERIFIED
+- Resources: https://pyiron.org/
+- Link: [Pyiron.md](Frameworks/9.2_Workflow_Job_Management/Pyiron.md)
+
+**354. MAST**
+- Confidence: VERIFIED
+- Resources: https://github.com/uw-cmg/MAST
+- Link: [MAST.md](Frameworks/9.2_Workflow_Job_Management/MAST.md)
 
 **356. Signac**
 - Confidence: VERIFIED
 - Resources: https://signac.io/
+- Link: [Signac.md](Frameworks/9.2_Workflow_Job_Management/Signac.md)
+
+**356g. quacc**
+- Confidence: VERIFIED
+- Resources: https://github.com/Quantum-Accelerators/quacc
+- Note: Multi-engine workflow platform supporting 10+ DFT/MD codes with pre-built recipes
+- Link: [quacc.md](Frameworks/9.2_Workflow_Job_Management/quacc.md)
+
+**356h. Covalent**
+- Confidence: VERIFIED
+- Resources: https://github.com/AgnostiqHQ/covalent
+- Note: Pythonic workflow orchestration with unified HPC/cloud interface and real-time dashboard
+- Link: [Covalent.md](Frameworks/9.2_Workflow_Job_Management/Covalent.md)
+
+**356i. simmate**
+- Confidence: VERIFIED
+- Resources: https://github.com/jacksund/simmate
+- Note: Full-stack chemistry framework with Django backend, web interface, and database exploration
+- Link: [simmate.md](Frameworks/9.2_Workflow_Job_Management/simmate.md)
+
+**356j. ph3pywf**
+- Confidence: VERIFIED
+- Resources: https://github.com/MatFrontier/ph3pywf
+- Note: Automated VASP+Phono3py workflow for high-throughput lattice thermal conductivity
+- Link: [ph3pywf.md](Frameworks/9.2_Workflow_Job_Management/ph3pywf.md)
+
+### 9.3 AiiDA Plugins (15 tools)
+*AiiDA-specific code plugins for various DFT/MD/quantum chemistry codes*
+
+**334. AiiDA-VASP**
+- Confidence: VERIFIED
+- Resources: https://github.com/aiidateam/aiida-vasp
+- Link: [AiiDA-VASP.md](Frameworks/9.3_AiiDA_Plugins/AiiDA-VASP.md)
+
+**335. AiiDA-QuantumESPRESSO**
+- Confidence: VERIFIED
+- Resources: https://github.com/aiidateam/aiida-quantumespresso
+- Link: [AiiDA-QuantumESPRESSO.md](Frameworks/9.3_AiiDA_Plugins/AiiDA-QuantumESPRESSO.md)
+
+**336. AiiDA-wannier90**
+- Confidence: VERIFIED
+- Resources: https://github.com/aiidateam/aiida-wannier90
+- Link: [AiiDA-wannier90.md](Frameworks/9.3_AiiDA_Plugins/AiiDA-wannier90.md)
+
+**337. AiiDA-yambo**
+- Confidence: VERIFIED
+- Resources: https://github.com/aiidateam/aiida-yambo
+- Link: [AiiDA-yambo.md](Frameworks/9.3_AiiDA_Plugins/AiiDA-yambo.md)
+
+**338. aiida-fleur**
+- Confidence: VERIFIED
+- Resources: https://github.com/aiidateam/aiida-fleur
+- Link: [aiida-fleur.md](Frameworks/9.3_AiiDA_Plugins/aiida-fleur.md)
+
+**339. AiiDA plugin registry**
+- Confidence: VERIFIED
+- Resources: https://aiidateam.github.io/aiida-registry/
+- Link: [AiiDA-plugin-registry.md](Frameworks/9.3_AiiDA_Plugins/AiiDA-plugin-registry.md)
+
+**356k. aiida-cp2k**
+- Confidence: VERIFIED
+- Resources: https://github.com/aiidateam/aiida-cp2k
+- Note: Official AiiDA plugin for CP2K with full provenance tracking
+- Link: [aiida-cp2k.md](Frameworks/9.3_AiiDA_Plugins/aiida-cp2k.md)
+
+**356l. aiida-gaussian**
+- Confidence: VERIFIED
+- Resources: https://github.com/nanotech-empa/aiida-gaussian
+- Note: AiiDA plugin for Gaussian quantum chemistry with provenance tracking
+- Link: [aiida-gaussian.md](Frameworks/9.3_AiiDA_Plugins/aiida-gaussian.md)
+
+**356m. aiida-openmx**
+- Confidence: VERIFIED
+- Resources: https://github.com/azadoks/aiida-openmx
+- Note: AiiDA plugin for OpenMX with PAO table management and provenance tracking
+- Link: [aiida-openmx.md](Frameworks/9.3_AiiDA_Plugins/aiida-openmx.md)
+
+**356n. aiida-crystal-dft**
+- Confidence: VERIFIED
+- Resources: https://github.com/tilde-lab/aiida-crystal-dft
+- Note: AiiDA plugin for CRYSTAL with Gaussian-type basis set management
+- Link: [aiida-crystal-dft.md](Frameworks/9.3_AiiDA_Plugins/aiida-crystal-dft.md)
+
+**356o. aiida-fhiaims**
+- Confidence: VERIFIED
+- Resources: https://github.com/ansobolev/aiida-fhiaims
+- Note: AiiDA plugin for FHI-aims with species defaults management
+- Link: [aiida-fhiaims.md](Frameworks/9.3_AiiDA_Plugins/aiida-fhiaims.md)
+
+**356p. aiida-lammps**
+- Confidence: VERIFIED
+- Resources: https://github.com/aiidaplugins/aiida-lammps
+- Note: AiiDA plugin for LAMMPS with potential management and provenance tracking
+- Link: [aiida-lammps.md](Frameworks/9.3_AiiDA_Plugins/aiida-lammps.md)
+
+**356q. aiida-abinit**
+- Confidence: VERIFIED
+- Resources: https://github.com/aiidateam/aiida-abinit
+- Note: AiiDA plugin for ABINIT with pseudopotential management
+- Link: [aiida-abinit.md](Frameworks/9.3_AiiDA_Plugins/aiida-abinit.md)
+
+**356r. aiida-nwchem**
+- Confidence: VERIFIED
+- Resources: https://github.com/aiidateam/aiida-nwchem
+- Note: AiiDA plugin for NWChem with basis set management and provenance tracking
+- Link: [aiida-nwchem.md](Frameworks/9.3_AiiDA_Plugins/aiida-nwchem.md)
+
+**356s. aiida-bigdft**
+- Confidence: VERIFIED
+- Resources: https://github.com/BigDFT-group/aiida-bigdft-plugin-legacy
+- Note: AiiDA plugin for BigDFT wavelet DFT with PyBigDFT integration
+- Link: [aiida-bigdft.md](Frameworks/9.3_AiiDA_Plugins/aiida-bigdft.md)
+
+### 9.4 Materials Databases (14 tools)
+*Curated materials databases, data platforms, and API clients*
+
+**340. Materials Project**
+- Confidence: VERIFIED
+- Resources: https://materialsproject.org/
+- Link: [Materials-Project.md](Frameworks/9.4_Materials_Databases/Materials-Project.md)
+
+**341. AFLOW**
+- Confidence: VERIFIED
+- Resources: http://www.aflow.org/
+- Link: [AFLOW.md](Frameworks/9.4_Materials_Databases/AFLOW.md)
+
+**342. OQMD**
+- Confidence: VERIFIED
+- Resources: http://oqmd.org/
+- Link: [OQMD.md](Frameworks/9.4_Materials_Databases/OQMD.md)
+
+**343. NOMAD**
+- Confidence: VERIFIED
+- Resources: https://nomad-lab.eu/
+- Link: [NOMAD.md](Frameworks/9.4_Materials_Databases/NOMAD.md)
+
+**344. Materials Cloud**
+- Confidence: VERIFIED
+- Resources: https://www.materialscloud.org/
+- Link: [Materials-Cloud.md](Frameworks/9.4_Materials_Databases/Materials-Cloud.md)
+
+**345. JARVIS**
+- Confidence: VERIFIED
+- Resources: https://jarvis.nist.gov/
+- Link: [JARVIS.md](Frameworks/9.4_Materials_Databases/JARVIS.md)
+
+**346. C2DB**
+- Confidence: VERIFIED
+- Resources: https://c2db.fysik.dtu.dk/
+- Link: [C2DB.md](Frameworks/9.4_Materials_Databases/C2DB.md)
+
+**347. 2DMatPedia**
+- Confidence: VERIFIED
+- Resources: https://www.2dmaterials.org/
+- Link: [2DMatPedia.md](Frameworks/9.4_Materials_Databases/2DMatPedia.md)
+
+**349. qmpy**
+- Confidence: VERIFIED
+- Resources: https://github.com/wolverton-research-group/qmpy
+- Link: [qmpy.md](Frameworks/9.4_Materials_Databases/qmpy.md)
+
+**350. NCD**
+- Confidence: VERIFIED
+- Resources: http://www.nanocrystallography.org/
+- Link: [NCD.md](Frameworks/9.4_Materials_Databases/NCD.md)
 
 **356a. teMatDb**
 - Confidence: VERIFIED
 - Resources: https://github.com/byungkiryu/teMatDb
-- Note: Thermoelectric materials database (literature-extracted) and analysis utilities.
-- Link: [teMatDb.md](Frameworks/teMatDb.md)
+- Note: Thermoelectric materials database (literature-extracted) and analysis utilities
+- Link: [teMatDb.md](Frameworks/9.4_Materials_Databases/teMatDb.md)
 
 **356b. thermo**
 - Confidence: VERIFIED
 - Resources: https://github.com/janosh/thermo
-- Note: Data-driven analysis and discovery workflow for thermoelectric materials.
-- Link: [thermo.md](Frameworks/thermo.md)
+- Note: Data-driven analysis and discovery workflow for thermoelectric materials
+- Link: [thermo.md](Frameworks/9.4_Materials_Databases/thermo.md)
+
+**356t. mp-api**
+- Confidence: VERIFIED
+- Resources: https://github.com/materialsproject/api
+- Note: Official Python API client for Materials Project with comprehensive data access
+- Link: [mp-api.md](Frameworks/9.4_Materials_Databases/mp-api.md)
+
+**356u. OPTIMADE**
+- Confidence: VERIFIED
+- Resources: https://github.com/Materials-Consortia/OPTIMADE
+- Note: Unified API specification for cross-database materials data access (20+ databases)
+- Link: [OPTIMADE.md](Frameworks/9.4_Materials_Databases/OPTIMADE.md)
+
+### 9.5 Specialized Analysis Frameworks (5 tools)
+*Domain-specific analysis pipelines and data processing frameworks*
+
+**351. ASR**
+- Confidence: VERIFIED
+- Resources: https://gitlab.com/asr-project/asr
+- Link: [ASR.md](Frameworks/9.5_Specialized_Analysis_Frameworks/ASR.md)
+
+**356v. PyLada**
+- Confidence: VERIFIED
+- Resources: https://github.com/pylada/pylada
+- Note: Python Lattice Defect Automation framework for high-throughput DFT
+- Link: [PyLada.md](Frameworks/9.5_Specialized_Analysis_Frameworks/PyLada.md)
+
+**356w. emmet**
+- Confidence: VERIFIED
+- Resources: https://github.com/materialsproject/emmet
+- Note: Materials Project data pipeline builder (predecessor to maggma)
+- Link: [emmet.md](Frameworks/9.5_Specialized_Analysis_Frameworks/emmet.md)
+
+**356x. maggma**
+- Confidence: VERIFIED
+- Resources: https://github.com/materialsproject/maggma
+- Note: Scientific data processing pipeline framework for databases, blobs, and REST APIs
+- Link: [maggma.md](Frameworks/9.5_Specialized_Analysis_Frameworks/maggma.md)
+
+**356y. MPWorks**
+- Confidence: VERIFIED
+- Resources: https://github.com/materialsproject/MPWorks
+- Note: Legacy Materials Project workflow and submission system
+- Link: [MPWorks.md](Frameworks/9.5_Specialized_Analysis_Frameworks/MPWorks.md)
 
 ---
 
 ## CATEGORY 10: NICHE & ML (43 tools)
 
+** [ML Potentials Complete Inventory](ml_potentials_complete_inventory.md)
 **355-372. [ML and specialized tools]**
 - **MLIP**: https://mlip.org/
 - **n2p2**: https://github.com/CompPhysVienna/n2p2
