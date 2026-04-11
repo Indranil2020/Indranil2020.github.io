@@ -4665,24 +4665,354 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 ---
 
-## CATEGORY 10: NICHE & ML (43 tools)
+## CATEGORY 10: NICHE & ML (60 tools)
 
-** [ML Potentials Complete Inventory](ml_potentials_complete_inventory.md)
-**355-372. [ML and specialized tools]**
-- **MLIP**: https://mlip.org/
-- **n2p2**: https://github.com/CompPhysVienna/n2p2
-- **SIMPLE-NN**: https://github.com/MDIL-SNU/SIMPLE-NN
-- **AMP**: https://github.com/atomistic-machine-learning/amp
-- **SchNetPack**: https://github.com/atomistic-machine-learning/schnetpack
-- **MACE**: https://github.com/ACEsuit/mace
-- **NequIP**: https://github.com/mir-group/nequip
-- **Allegro**: https://github.com/mir-group/allegro
-- **m3gnet**: https://github.com/materialsproject/m3gnet
-- **exactdiag**: https://github.com/ExactDiagonalization/exactdiag
-- **HubbardFermiMatsubara**: https://github.com/HauleGroup/HubbardFermiMatsubara
-- **Dual fermions**: https://github.com/averkulov/dual-fermion
-- **EDRIXS**: https://github.com/NSLS-II-CSX/edrixs
-- **QMCPACK-addons**: https://github.com/QMCPACK/qmcpack-addons
+**[ML Potentials Complete Inventory](ml_potentials_complete_inventory.md)**
+
+### 10.1 MLIPs - Message Passing (13 tools)
+*Equivariant and message-passing neural network interatomic potentials*
+
+**355. MACE**
+- Confidence: VERIFIED
+- Resources: https://github.com/ACEsuit/mace
+- Note: Higher-order equivariant message passing, ACE features, universal model (MACE-MP-0)
+- Link: [MACE.md](Niche/10.1_MLIPs_Message_Passing/MACE.md)
+
+**356. NequIP**
+- Confidence: VERIFIED
+- Resources: https://github.com/mir-group/nequip
+- Note: E(3)-equivariant message passing interatomic potential
+- Link: [NequIP.md](Niche/10.1_MLIPs_Message_Passing/NequIP.md)
+
+**357. Allegro**
+- Confidence: VERIFIED
+- Resources: https://github.com/mir-group/allegro
+- Note: Strictly local equivariant architecture, ACE-like features
+- Link: [Allegro.md](Niche/10.1_MLIPs_Message_Passing/Allegro.md)
+
+**358. m3gnet**
+- Confidence: VERIFIED
+- Resources: https://github.com/materialsvirtuallab/m3gnet
+- Note: Materials 3-body graph network for 94 elements
+- Link: [m3gnet.md](Niche/10.1_MLIPs_Message_Passing/m3gnet.md)
+
+**359. SchNetPack**
+- Confidence: VERIFIED
+- Resources: https://github.com/atomistic-machine-learning/schnetpack
+- Note: PyTorch neural network toolbox (SchNet, PaiNN, etc.)
+- Link: [SchNetPack.md](Niche/10.1_MLIPs_Message_Passing/SchNetPack.md)
+
+**356zn. CHGNet**
+- Confidence: VERIFIED
+- Resources: https://github.com/CederGroupHub/chgnet
+- Note: Charge-aware universal potential with magnetic moment prediction for 94 elements
+- Link: [CHGNet.md](Niche/10.1_MLIPs_Message_Passing/CHGNet.md)
+
+**356zo. SevenNet**
+- Confidence: VERIFIED
+- Resources: https://github.com/MDIL-SNU/SevenNet
+- Note: Scalable equivariant universal potential with parallel MD support
+- Link: [SevenNet.md](Niche/10.1_MLIPs_Message_Passing/SevenNet.md)
+
+**356zp. FAIR-Chem**
+- Confidence: VERIFIED
+- Resources: https://github.com/FAIR-Chem/fairchem
+- Note: Pretrained catalysis models (EquiformerV2, eSCN) on OC20/OC22 datasets
+- Link: [FAIR-Chem.md](Niche/10.1_MLIPs_Message_Passing/FAIR-Chem.md)
+
+**356zq. EquiformerV2**
+- Confidence: VERIFIED
+- Resources: https://github.com/atomicarchitects/equiformer_v2
+- Note: Highest accuracy equivariant transformer scaling to 153M parameters
+- Link: [EquiformerV2.md](Niche/10.1_MLIPs_Message_Passing/EquiformerV2.md)
+
+**356zr. TorchMD-NET**
+- Confidence: VERIFIED
+- Resources: https://github.com/torchmd/torchmd-net
+- Note: Multi-architecture NN potential with integrated MD (TorchMD)
+- Link: [TorchMD-NET.md](Niche/10.1_MLIPs_Message_Passing/TorchMD-NET.md)
+
+**356zs. matgl**
+- Confidence: VERIFIED
+- Resources: https://github.com/materialsvirtuallab/matgl
+- Note: Unified framework for M3GNet, CHGNet, TensorNet, MEGNet with pretrained weights
+- Link: [matgl.md](Niche/10.1_MLIPs_Message_Passing/matgl.md)
+
+**356zsa. ALIGNN-FF**
+- Confidence: VERIFIED
+- Resources: https://github.com/usnistgov/alignn
+- Note: Line graph GNN with explicit bond angle/dihedral features covering 5-118 elements
+- Link: [ALIGNN-FF.md](Niche/10.1_MLIPs_Message_Passing/ALIGNN-FF.md)
+
+**356zsb. PaiNN**
+- Confidence: VERIFIED
+- Resources: https://github.com/atomistic-machine-learning/schnetpack
+- Note: Efficient equivariant message passing without spherical harmonics
+- Link: [PaiNN.md](Niche/10.1_MLIPs_Message_Passing/PaiNN.md)
+
+### 10.2 MLIPs - ACE/Linear (9 tools)
+*ACE, SNAP, GP, and linear interatomic potentials*
+
+**360. MLIP**
+- Confidence: VERIFIED
+- Resources: https://mlip.org/
+- Note: Moment Tensor Potential (MTP) with active learning
+- Link: [MLIP.md](Niche/10.2_MLIPs_ACE_Linear/MLIP.md)
+
+**361. n2p2**
+- Confidence: VERIFIED
+- Resources: https://github.com/CompPhysVienna/n2p2
+- Note: Behler-Parrinello HDNNP with LAMMPS integration
+- Link: [n2p2.md](Niche/10.2_MLIPs_ACE_Linear/n2p2.md)
+
+**362. SIMPLE-NN**
+- Confidence: VERIFIED
+- Resources: https://github.com/MDIL-SNU/SIMPLE-NN
+- Note: Simple neural network potential with Behler-Parrinello scheme
+- Link: [SIMPLE-NN.md](Niche/10.2_MLIPs_ACE_Linear/SIMPLE-NN.md)
+
+**363. AMP**
+- Confidence: VERIFIED
+- Resources: https://github.com/atomistic-machine-learning/amp
+- Note: Atomistic Machine-learning Package for neural network potentials
+- Link: [AMP.md](Niche/10.2_MLIPs_ACE_Linear/AMP.md)
+
+**356zt. FitSNAP**
+- Confidence: VERIFIED
+- Resources: https://github.com/FitSNAP/FitSNAP
+- Note: SNAP/qSNAP fitting with direct LAMMPS mliap integration
+- Link: [FitSNAP.md](Niche/10.2_MLIPs_ACE_Linear/FitSNAP.md)
+
+**356zu. ACE1pack**
+- Confidence: VERIFIED
+- Resources: https://github.com/ACEsuit/ACE1pack
+- Note: Complete Julia-based ACE fitting workflow with systematic convergence
+- Link: [ACE1pack.md](Niche/10.2_MLIPs_ACE_Linear/ACE1pack.md)
+
+**356zv. FLARE**
+- Confidence: VERIFIED
+- Resources: https://github.com/mir-group/flare
+- Note: On-the-fly active learning with GP uncertainty driving automatic DFT calls
+- Link: [FLARE.md](Niche/10.2_MLIPs_ACE_Linear/FLARE.md)
+
+**356zw. UF3**
+- Confidence: VERIFIED
+- Resources: https://github.com/uf3/uf3
+- Note: Ultra-fast spline-based potential with linear fitting for millions-of-atoms MD
+- Link: [UF3.md](Niche/10.2_MLIPs_ACE_Linear/UF3.md)
+
+**356zwa. GAP-QUIP**
+- Confidence: VERIFIED
+- Resources: https://github.com/libAtoms/QUIP
+- Note: Pioneering MLIP framework with SOAP descriptors and sparse GP
+- Link: [GAP-QUIP.md](Niche/10.2_MLIPs_ACE_Linear/GAP-QUIP.md)
+
+### 10.3 MLIPs - DNN/Universal (7 tools)
+*Deep neural network and universal/foundation model potentials*
+
+**356zx. DeePMD-kit**
+- Confidence: VERIFIED
+- Resources: https://github.com/deepmodeling/deepmd-kit
+- Note: Production MD with LAMMPS C++ plugin and DP-GEN active learning
+- Link: [DeePMD-kit.md](Niche/10.3_MLIPs_DNN_Universal/DeePMD-kit.md)
+
+**356zy. MatterSim**
+- Confidence: VERIFIED
+- Resources: https://github.com/microsoft/mattersim
+- Note: Multi-domain universal potential covering temperature, pressure, and 94 elements
+- Link: [MatterSim.md](Niche/10.3_MLIPs_DNN_Universal/MatterSim.md)
+
+**356zz. ORB**
+- Confidence: VERIFIED
+- Resources: https://github.com/orbital-materials/orb-models
+- Note: Broadest element coverage (117) with 25M parameter universal potential
+- Link: [ORB.md](Niche/10.3_MLIPs_DNN_Universal/ORB.md)
+
+**356zza. GRACE**
+- Confidence: VERIFIED
+- Resources: https://github.com/ICAMS/grace-tensorpotential
+- Note: Graph ACE foundation model combining systematic ACE completeness with GNN flexibility
+- Link: [GRACE.md](Niche/10.3_MLIPs_DNN_Universal/GRACE.md)
+
+**356zzb. PET-MAD**
+- Confidence: VERIFIED
+- Resources: https://github.com/lab-cosmo/pet-mad
+- Note: Lightweight universal potential (2.8M params) trained on r²SCAN meta-GGA data
+- Link: [PET-MAD.md](Niche/10.3_MLIPs_DNN_Universal/PET-MAD.md)
+
+**356zzc1. TorchANI**
+- Confidence: VERIFIED
+- Resources: https://github.com/aiqm/torchani
+- Note: Pretrained ANI models with CCSD(T) accuracy for organic molecules
+- Link: [TorchANI.md](Niche/10.3_MLIPs_DNN_Universal/TorchANI.md)
+
+**356zzc2. DP-GEN**
+- Confidence: VERIFIED
+- Resources: https://github.com/deepmodeling/dpgen
+- Note: Automated active learning workflow for DeePMD with multi-DFT-code support
+- Link: [DP-GEN.md](Niche/10.3_MLIPs_DNN_Universal/DP-GEN.md)
+
+### 10.4 ML-XC Functionals (3 tools)
+*Machine-learned exchange-correlation functionals*
+
+**356zzc. Skala**
+- Confidence: VERIFIED
+- Resources: https://github.com/microsoft/skala
+- Note: Deep learning XC functional achieving chemical accuracy with message-passing non-local correlation
+- Link: [Skala.md](Niche/10.4_ML_XC_Functionals/Skala.md)
+
+**356zzd. DeePKS-kit**
+- Confidence: VERIFIED
+- Resources: https://github.com/deepmodeling/deepks-kit
+- Note: Dual perturbative/self-consistent ML XC with PySCF and ABACUS integration
+- Link: [DeePKS-kit.md](Niche/10.4_ML_XC_Functionals/DeePKS-kit.md)
+
+**356zzd1. DM21**
+- Confidence: VERIFIED
+- Resources: https://github.com/google-deepmind/deepmind-research/tree/master/density_functional_approximation_dm21
+- Note: Neural XC functional with fractional charge/spin constraints solving delocalization error
+- Link: [DM21.md](Niche/10.4_ML_XC_Functionals/DM21.md)
+
+### 10.5 Classical FF with ML (2 tools)
+*Classical force fields enhanced with machine learning*
+
+**356zze. JAX-ReaxFF**
+- Confidence: VERIFIED
+- Resources: https://github.com/cagrikymk/JAX-ReaxFF
+- Note: Gradient-based ReaxFF optimization reducing days to minutes with JAX
+- Link: [JAX-ReaxFF.md](Niche/10.5_Classical_FF_ML/JAX-ReaxFF.md)
+
+**356zze1. I-ReaxFF**
+- Confidence: VERIFIED
+- Resources: https://github.com/fenggo/I-ReaxFF
+- Note: Differentiable ReaxFF with ReaxFF-MPNN hybrid combining reactive FF with neural networks
+- Link: [I-ReaxFF.md](Niche/10.5_Classical_FF_ML/I-ReaxFF.md)
+
+### 10.6 Specialized & Emerging (3 tools)
+*Specialized architectures, active learning, uncertainty quantification*
+
+**356zzf. Metatrain**
+- Confidence: VERIFIED
+- Resources: https://github.com/metatensor/metatrain
+- Note: Modular training framework for multiple MLIP architectures with metatensor format
+- Link: [Metatrain.md](Niche/10.6_Specialized_Emerging/Metatrain.md)
+
+**356zzf1. Matbench-Discovery**
+- Confidence: VERIFIED
+- Resources: https://github.com/janosh/matbench-discovery
+- Note: Interactive leaderboard ranking 20+ UIP models on materials discovery tasks
+- Link: [Matbench-Discovery.md](Niche/10.6_Specialized_Emerging/Matbench-Discovery.md)
+
+**356zzf2. cuEquivariance**
+- Confidence: VERIFIED
+- Resources: https://github.com/NVIDIA/cuEquivariance
+- Note: NVIDIA CUDA-optimized equivariant kernels for 2-10x MLIP speedup
+- Link: [cuEquivariance.md](Niche/10.6_Specialized_Emerging/cuEquivariance.md)
+
+### 10.7 Software Packages (3 tools)
+*Major software packages and frameworks for MLIP*
+
+**356zzg. KLIFF**
+- Confidence: VERIFIED
+- Resources: https://github.com/openkim/kliff
+- Note: OpenKIM-integrated fitting with automatic verification and cross-code compatibility
+- Link: [KLIFF.md](Niche/10.7_Software_Packages/KLIFF.md)
+
+**356zzh. MatCalc**
+- Confidence: VERIFIED
+- Resources: https://github.com/materialsvirtuallab/matcalc
+- Note: Unified interface for materials property calculation from multiple MLIPs
+- Link: [MatCalc.md](Niche/10.7_Software_Packages/MatCalc.md)
+
+**356zzh1. OpenKIM**
+- Confidence: VERIFIED
+- Resources: https://openkim.org/
+- Note: Standardized repository with 1000+ verified interatomic models and KIM API
+- Link: [OpenKIM.md](Niche/10.7_Software_Packages/OpenKIM.md)
+
+### 10.8 Niche Tools (16 tools)
+*Specialized niche tools (catalysis, data, spectroscopy, etc.)*
+
+**364. AFLOW-ML**
+- Confidence: VERIFIED
+- Resources: http://www.aflow.org/aflow-ml
+- Link: [AFLOW-ML.md](Niche/10.8_Niche_Tools/AFLOW-ML.md)
+
+**365. AFLOW-SYM**
+- Confidence: VERIFIED
+- Resources: http://www.aflow.org/aflow-sym
+- Link: [AFLOW-SYM.md](Niche/10.8_Niche_Tools/AFLOW-SYM.md)
+
+**366. CatApp**
+- Confidence: VERIFIED
+- Resources: https://github.com/SUNCAT-Center/CatApp
+- Link: [CatApp.md](Niche/10.8_Niche_Tools/CatApp.md)
+
+**367. CatMAP**
+- Confidence: VERIFIED
+- Resources: https://github.com/SUNCAT-Center/CatMAP
+- Link: [CatMAP.md](Niche/10.8_Niche_Tools/CatMAP.md)
+
+**368. DataVerse**
+- Confidence: VERIFIED
+- Resources: https://dataverse.org/
+- Link: [DataVerse.md](Niche/10.8_Niche_Tools/DataVerse.md)
+
+**369. Dual-fermions**
+- Confidence: VERIFIED
+- Resources: https://github.com/averkulov/dual-fermion
+- Link: [Dual-fermions.md](Niche/10.8_Niche_Tools/Dual-fermions.md)
+
+**370. EDRIXS**
+- Confidence: VERIFIED
+- Resources: https://github.com/NSLS-II-CSX/edrixs
+- Link: [EDRIXS.md](Niche/10.8_Niche_Tools/EDRIXS.md)
+
+**371. GASpy**
+- Confidence: VERIFIED
+- Resources: https://github.com/ulissigroup/gaspy
+- Link: [GASpy.md](Niche/10.8_Niche_Tools/GASpy.md)
+
+**372. HubbardFermiMatsubara**
+- Confidence: VERIFIED
+- Resources: https://github.com/HauleGroup/HubbardFermiMatsubara
+- Link: [HubbardFermiMatsubara.md](Niche/10.8_Niche_Tools/HubbardFermiMatsubara.md)
+
+**373. Matbench**
+- Confidence: VERIFIED
+- Resources: https://matbench.materialsproject.org/
+- Link: [Matbench.md](Niche/10.8_Niche_Tools/Matbench.md)
+
+**374. OSF**
+- Confidence: VERIFIED
+- Resources: https://osf.io/
+- Link: [OSF.md](Niche/10.8_Niche_Tools/OSF.md)
+
+**375. PolaronMobility.jl**
+- Confidence: VERIFIED
+- Resources: https://github.com/jeremiahpja/PolaronMobility.jl
+- Link: [PolaronMobility.jl.md](Niche/10.8_Niche_Tools/PolaronMobility.jl.md)
+
+**376. QMCPACK-addons**
+- Confidence: VERIFIED
+- Resources: https://github.com/QMCPACK/qmcpack-addons
+- Link: [QMCPACK-addons.md](Niche/10.8_Niche_Tools/QMCPACK-addons.md)
+
+**377. Stoner**
+- Confidence: VERIFIED
+- Resources: https://github.com/janosh/stoner
+- Link: [Stoner.md](Niche/10.8_Niche_Tools/Stoner.md)
+
+**378. Zenodo**
+- Confidence: VERIFIED
+- Resources: https://zenodo.org/
+- Link: [Zenodo.md](Niche/10.8_Niche_Tools/Zenodo.md)
+
+**379. xdiag**
+- Confidence: VERIFIED
+- Resources: https://github.com/awhite862/xdiag
+- Link: [xdiag.md](Niche/10.8_Niche_Tools/xdiag.md)
+
 ---
 
 ## **RESIDUAL UNCERTAINTY SUMMARY**
