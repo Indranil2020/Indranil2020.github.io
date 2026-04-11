@@ -2781,12 +2781,12 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 
 ---
 
-## CATEGORY 8: POST-PROCESSING (177 tools)
+## CATEGORY 8: POST-PROCESSING (189 tools)
 
-### 8.1 Band Structure & Electronic Analysis (60 tools)
+### 8.1 Band Structure & Electronic Analysis (66 tools)
 *Tools for analyzing electronic band structures, Fermi surfaces, and k-path generation*
 
-#### 8.1.1 Band Structure & DOS Visualization (25 tools)
+#### 8.1.1 Band Structure & DOS Visualization (28 tools)
 
 **258. vaspkit**
 - Confidence: VERIFIED
@@ -2920,7 +2920,25 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: Wannier Orbital Overlap Population (COOP/COHP in Wannier basis)
 - Link: [WOOPs.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/WOOPs.md)
 
-**281c. aiida-kkr**
+**281c. dftscr**
+- Confidence: VERIFIED
+- Resources: https://github.com/tangzhao20/dftscr
+- Note: Multi-code (VASP/QE/PARSEC) DFT analysis and visualization suite
+- Link: [dftscr.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/dftscr.md)
+
+**281d. plot4dft**
+- Confidence: VERIFIED
+- Resources: https://github.com/Nijatt/plot4dft
+- Note: Simple dual-code (VASP/QE) band+DOS+phonon plotting tool
+- Link: [plot4dft.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/plot4dft.md)
+
+**281e. bandplot**
+- Confidence: VERIFIED
+- Resources: https://pypi.org/project/bandplot/
+- Note: PyPI-installable band+DOS+phonon plotting from VASPKIT/phonopy output
+- Link: [bandplot.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/bandplot.md)
+
+**281f. aiida-kkr**
 - Confidence: VERIFIED
 - Resources: https://github.com/JuDFTteam/aiida-kkr
 - Link: [aiida-kkr.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.1_Band_DOS_Visualization/aiida-kkr.md)
@@ -3004,7 +3022,7 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: https://github.com/TheoWeinberger/py_FS
 - Link: [py_FS.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.3_Fermi_Surface/py_FS.md)
 
-#### 8.1.4 ARPES & Photoemission (5 tools)
+#### 8.1.4 ARPES & Photoemission (7 tools)
 
 **297. PyARPES**
 - Confidence: VERIFIED
@@ -3030,6 +3048,18 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Confidence: VERIFIED
 - Resources: Modern Python ARPES analysis framework
 - Link: [peaks.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.4_ARPES_Photoemission/peaks.md)
+
+**301a. arpespythontools**
+- Confidence: VERIFIED
+- Resources: https://github.com/pranabdas/arpespythontools
+- Note: Lightweight ARPES data analysis with momentum conversion and curvature analysis
+- Link: [arpespythontools.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.4_ARPES_Photoemission/arpespythontools.md)
+
+**301b. erlabpy**
+- Confidence: VERIFIED
+- Resources: https://github.com/kmnhan/erlabpy
+- Note: Complete ARPES workflow with self-energy analysis and interactive visualization
+- Link: [erlabpy.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.4_ARPES_Photoemission/erlabpy.md)
 
 #### 8.1.5 Effective Mass & Band Analysis (8 tools)
 
@@ -3114,12 +3144,24 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: Interactive BZ visualization
 - Link: [Brillouin-zone-navigator.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.7_K_Path_BZ/Brillouin-zone-navigator.md)
 
-#### 8.1.8 Wavefunction Analysis (1 tool)
+#### 8.1.8 Wavefunction Analysis (3 tools)
 
 **317. pawpyseed**
 - Confidence: VERIFIED
 - Resources: https://github.com/kylebystrom/pawpyseed
 - Link: [pawpyseed.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.8_Wavefunction_Analysis/pawpyseed.md)
+
+**317a. VASPBERRY**
+- Confidence: VERIFIED
+- Resources: https://github.com/Infant83/VASPBERRY
+- Note: Berry curvature and Chern number from VASP WAVECAR using Fukui's method
+- Link: [VASPBERRY.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.8_Wavefunction_Analysis/VASPBERRY.md)
+
+**317b. pyvaspwfc**
+- Confidence: VERIFIED
+- Resources: https://github.com/liming-liu/pyvaspwfc
+- Note: WAVECAR parsing with real-space wavefunction visualization and band unfolding
+- Link: [pyvaspwfc.md](Post-Processing/8.1_Band_Structure_Electronic/8.1.8_Wavefunction_Analysis/pyvaspwfc.md)
 
 ### 8.2 Topological & Symmetry Analysis (19 tools)
 *Irreducible representations, Berry phase, Chern numbers, k·p Hamiltonians, magnetic symmetry*
@@ -3241,7 +3283,7 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: Web app for magnetic space group determination
 - Link: [findmagsym.md](Post-Processing/8.2_Topological_Symmetry/8.2.4_Magnetic_Symmetry/findmagsym.md)
 
-### 8.3 Transport Properties (22 tools)
+### 8.3 Transport Properties (24 tools)
 *Boltzmann transport, thermoelectric properties, phonon transport*
 
 **337. BoltzTraP**
@@ -3370,6 +3412,18 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: https://github.com/materialsvirtuallab/pymatgen-analysis-diffusion
 - Note: Pymatgen add-on for ionic diffusion and conductivity analysis from MD
 - Link: [pymatgen-analysis-diffusion.md](Post-Processing/8.3_Transport_Properties/pymatgen-analysis-diffusion.md)
+
+**357b. MechElastic**
+- Confidence: VERIFIED
+- Resources: https://github.com/romerogroup/MechElastic
+- Note: Comprehensive elastic property analysis (Debye temp, melting temp, anisotropy) from Cij
+- Link: [MechElastic.md](Post-Processing/8.3_Transport_Properties/MechElastic.md)
+
+**357c. mech2d**
+- Confidence: VERIFIED
+- Resources: https://github.com/haidi-ustc/mech2d
+- Note: 2D-specific elastic constants and stress-strain with automated VASP workflow
+- Link: [mech2d.md](Post-Processing/8.3_Transport_Properties/mech2d.md)
 
 ### 8.4 Chemical Bonding Analysis (40 tools)
 *COHP, charge partitioning, bonding analysis*
@@ -3607,7 +3661,7 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: GUI-based bond-order, overlap-population, and fragment-bond analysis tool
 - Link: [Chemissian.md](Post-Processing/8.4_Chemical_Bonding/Chemissian.md)
 
-### 8.5 Spectroscopy Simulation (40 tools)
+### 8.5 Spectroscopy Simulation (41 tools)
 *XAS, XANES, EXAFS, optical spectra, dielectric properties, Raman, IR, EELS, NMR, XPS, STM/SPM*
 
 **284. FEFF**
@@ -3840,6 +3894,12 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: ML prediction of NMR chemical shieldings for organic solids (Chem. Sci. 2021)
 - Link: [ShiftML.md](Post-Processing/8.5_Spectroscopy/ShiftML.md)
 
+**303u. cp2k_xas_tool**
+- Confidence: VERIFIED
+- Resources: https://github.com/houzf/cp2k_xas_tool
+- Note: CP2K GAPW XAS spectrum broadening with flexible broadening functions
+- Link: [cp2k_xas_tool.md](Post-Processing/8.5_Spectroscopy/cp2k_xas_tool.md)
+
 ### 8.6 Magnetism & Spin Dynamics (19 tools)
 *Magnetic exchange, spin dynamics, micromagnetics, atomistic spin dynamics, magnon dispersion*
 
@@ -4016,7 +4076,7 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: Surface slab analysis (energy, work function, convergence) for VASP
 - Link: [surfaxe.md](Post-Processing/8.7_Visualization/surfaxe.md)
 
-### 8.8 Quantum Transport (10 tools)
+### 8.8 Quantum Transport (11 tools)
 *Non-equilibrium Green's function, quantum transport*
 
 **313. Nanodcal**
@@ -4074,7 +4134,13 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Note: TB calculation of twisted bilayer moiré systems with Wannier functions
 - Link: [PyMoire.md](Post-Processing/8.8_Quantum_Transport/PyMoire.md)
 
-### 8.9 Workflow & Automation (10 tools)
+**317f. RUQT**
+- Confidence: VERIFIED
+- Resources: https://github.com/HoyLab-Rowan/RUQT
+- Note: NEGF quantum transport with 2-RDM and MCPDFT beyond-DFT methods
+- Link: [RUQT.md](Post-Processing/8.8_Quantum_Transport/RUQT.md)
+
+### 8.9 Workflow & Automation (12 tools)
 *Post-processing automation, defect workflows, analysis automation*
 
 **310. dbaAutomator**
@@ -4134,6 +4200,18 @@ Embedded methods, density perturbation, nonadiabatic dynamics & specialized spec
 - Resources: https://github.com/kavanase/vaspup2.0
 - Note: Automated VASP convergence testing with plotting and criteria checking
 - Link: [vaspup2.md](Post-Processing/8.9_Workflow_Automation/vaspup2.md)
+
+**311i. PyCDT**
+- Confidence: VERIFIED
+- Resources: https://github.com/mbkumar/pycdt
+- Note: Comprehensive charged defect corrections with multiple image-charge schemes, VASP workflow
+- Link: [PyCDT.md](Post-Processing/8.9_Workflow_Automation/PyCDT.md)
+
+**311j. PyDEF**
+- Confidence: VERIFIED
+- Resources: https://github.com/PyDEF/PyDEF
+- Note: Defect formation energy with chemical potential phase diagrams and stability visualization
+- Link: [PyDEF.md](Post-Processing/8.9_Workflow_Automation/PyDEF.md)
 
 ---
 
