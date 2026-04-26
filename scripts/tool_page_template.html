@@ -15,21 +15,20 @@
     <meta property="og:description" content="{{DESCRIPTION}}">
     <meta property="og:url" content="{{CANONICAL}}">
     <meta property="og:site_name" content="Indranil Mal - Research">
+    <meta property="og:image" content="{{OG_IMAGE}}">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:author" content="Indranil Mal">
+    <meta property="article:section" content="{{CAT_LABEL}}">
 
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="{{TITLE}}">
-    <meta property="twitter:description" content="{{DESCRIPTION}}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{TITLE}}">
+    <meta name="twitter:description" content="{{DESCRIPTION}}">
+    <meta name="twitter:image" content="{{OG_IMAGE}}">
+
+    <link rel="alternate" type="application/json" href="../../data/tools_db.json">
 
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "{{NAME}}",
-      "applicationCategory": "ScienceApplication",
-      "description": "{{DESCRIPTION}}",
-      "url": "{{CANONICAL}}",
-      "creator": {"@type": "Person", "name": "Indranil Mal"}
-    }
+{{JSONLD_BLOB}}
     </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
@@ -216,6 +215,32 @@
         }
         .md-content th { background: #f8f9fa; font-weight: 600; }
 
+        /* Related tools grid */
+        .related-tools {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 0.55rem;
+        }
+        .related-tools a {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            padding: 0.55rem 0.85rem; background: #f8f9fa;
+            border: 1px solid var(--border); border-radius: 6px;
+            color: var(--text); text-decoration: none; font-size: 0.92rem;
+            font-weight: 500; transition: all 0.18s;
+        }
+        .related-tools a:hover {
+            background: var(--cat-color); color: #fff;
+            border-color: var(--cat-color); transform: translateY(-1px);
+        }
+        .related-tools a.current {
+            background: var(--cat-color); color: #fff;
+            border-color: var(--cat-color); pointer-events: none;
+        }
+        .related-tools a.has-paper::before {
+            content: "\f15c"; font-family: "Font Awesome 6 Free"; font-weight: 900;
+            font-size: 0.75rem; opacity: 0.6;
+        }
+
         /* Prev/Next navigation */
         .siblings-nav {
             display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
@@ -320,7 +345,16 @@
 
     <section class="card">
         <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
-        <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        <div class="md-content">
+{{MD_HTML}}
+        </div>
+    </section>
+
+    <section class="card">
+        <h2><i class="fas fa-link"></i> Related Tools in {{SUB_LABEL}}</h2>
+        <div class="related-tools">
+{{RELATED_TOOLS}}
+        </div>
     </section>
 
     {{SIBLINGS_NAV}}
@@ -336,18 +370,5 @@
     </p>
 </footer>
 
-<script id="md-source" type="text/plain">{{MD_CONTENT}}</script>
-<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
-<script>
-    (function () {
-        const src = document.getElementById('md-source').textContent;
-        const target = document.getElementById('md-render');
-        if (src && src.trim()) {
-            target.innerHTML = marked.parse(src);
-        } else {
-            target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
-        }
-    })();
-</script>
 </body>
 </html>

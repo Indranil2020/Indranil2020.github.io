@@ -1070,7 +1070,7 @@
                     const hasPaper = t.papers && t.papers.length;
                     const cls = hasPaper ? 'tool-chip has-paper' : 'tool-chip';
                     const style = hasPaper ? `background: ${color}22; border-color: ${color}55; color: ${d3color(color, 0.85)};` : '';
-                    html += `<a href="#tool=${encodeURIComponent(t.slug)}" class="${cls}" data-idx="${leaf.idx}" style="${style}">${escapeHtml(t.name)}</a>`;
+                    html += `<a href="tools/db/${encodeURIComponent(t.slug)}.html" class="${cls}" data-idx="${leaf.idx}" style="${style}" title="${escapeHtml(t.name)} — open full page (or click for quick details)">${escapeHtml(t.name)}</a>`;
                 });
                 html += '</div></div>';
             });

@@ -17,6 +17,7 @@ import os
 import re
 import sys
 from pathlib import Path
+import html
 
 ROOT = Path(__file__).resolve().parent.parent
 MASTER = ROOT / "scientific_tools_consolidated" / "MASTER_LIST_COMPLETE_372.md"
@@ -164,13 +165,62 @@ def read_md_overview(md_rel_path):
 
 
 def read_md_full_html(md_rel_path):
-    """Read full md file text (raw markdown for client-side rendering)."""
+    """Read full md file text (raw markdown for client-side rendering - legacy)."""
     if not md_rel_path:
         return ''
     p = TOOLS_BASE / md_rel_path
     if not p.exists():
         return ''
     return p.read_text()
+
+
+# Lazy-init markdown renderer
+_md = None
+def _get_md():
+    global _md
+    if _md is None:
+        from markdown_it import MarkdownIt
+        _md = MarkdownIt('commonmark', {'html': False, 'linkify': True, 'typographer': True})
+        _md.enable('table')
+        _md.enable('strikethrough')
+    return _md
+
+
+def render_md_to_html(md_rel_path):
+    """Render the full md file to HTML at build time (for SEO).
+    Returns a tuple (html, plain_text_for_description)."""
+    if not md_rel_path:
+        return '', ''
+    p = TOOLS_BASE / md_rel_path
+    if not p.exists():
+        return '', ''
+    text = p.read_text()
+    # Strip the first H1 (we render it in the page header already)
+    text_no_h1 = re.sub(r'^#\s+.+?\n', '', text, count=1)
+    html = _get_md().render(text_no_h1)
+    # Plain-text extraction: strip markdown syntax + html tags for meta description use
+    plain = re.sub(r'<[^>]+>', ' ', html)
+    plain = re.sub(r'\s+', ' ', plain).strip()
+    return html, plain
+
+
+SECTION_EXTRACT_RE = re.compile(r'^##\s+(.+?)\s*\n+(.+?)(?=\n##\s|\Z)', re.MULTILINE | re.DOTALL)
+
+
+def extract_sections(md_rel_path):
+    """Extract sections from md as {heading_lower: content} for structured data."""
+    if not md_rel_path:
+        return {}
+    p = TOOLS_BASE / md_rel_path
+    if not p.exists():
+        return {}
+    text = p.read_text()
+    out = {}
+    for m in SECTION_EXTRACT_RE.finditer(text):
+        heading = m.group(1).strip().lower()
+        body = m.group(2).strip()
+        out[heading] = body
+    return out
 
 
 def build_tree(entries):
@@ -258,15 +308,25 @@ def main():
 
     written = 0
     for e in entries:
-        md_full = read_md_full_html(e.get('md_link_path', ''))
-        # Build paper HTML
+        md_rel = e.get('md_link_path', '')
+        md_html, md_plain = render_md_to_html(md_rel)
+        sections = extract_sections(md_rel)
+
+        # Build paper HTML + JSON-LD papers entries
+        papers_jsonld = []
         if e['papers']:
             paper_html = ''.join(
-                f'<li><a href="../../scientific_tools_consolidated/{p["path"]}" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> {p["name"]}</a></li>'
+                f'<li><a href="../../scientific_tools_consolidated/{html.escape(p["path"], quote=True)}" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> {html.escape(p["name"])}</a></li>'
                 for p in e['papers']
             )
             paper_block = f'<h2><i class="fas fa-book"></i> Reference Papers ({len(e["papers"])})</h2><ul class="paper-list">{paper_html}</ul>'
             paper_tag = '<span class="tag"><i class="fas fa-file-pdf"></i> ' + str(len(e['papers'])) + ' paper' + ('s' if len(e['papers']) != 1 else '') + '</span>'
+            for p in e['papers']:
+                papers_jsonld.append({
+                    '@type': 'CreativeWork',
+                    'name': p['name'],
+                    'url': f"{SITE_URL}/scientific_tools_consolidated/{p['path']}",
+                })
         else:
             paper_block = '<h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted">No paper PDFs uploaded yet for this code.</p>'
             paper_tag = ''
@@ -274,7 +334,7 @@ def main():
         official = e['official_url'] or ''
         if official.startswith('http'):
             official_block = (
-                f'<a href="{official}" class="btn-action btn-primary" target="_blank" rel="noopener">'
+                f'<a href="{html.escape(official, quote=True)}" class="btn-action btn-primary" target="_blank" rel="noopener">'
                 f'<i class="fas fa-globe"></i> Official Website <i class="fas fa-external-link-alt"></i></a>'
             )
         else:
@@ -287,57 +347,135 @@ def main():
         sub_label = f"{e['subcategory_id']} {sub_clean}" if sub_clean else cat_label
         cat_color = CAT_COLORS.get(str(e['category_id']), '#3498db')
 
+        # Build tagline from overview
         tagline = (e['overview'] or e['note'] or f"{e['name']} - a tool in {cat_clean} / {sub_clean}.")
         tagline = re.sub(r'\s+', ' ', tagline).strip()
-        if len(tagline) > 240:
-            tagline = tagline[:237].rstrip() + '…'
+        tagline_short = (tagline[:237].rstrip() + '…') if len(tagline) > 240 else tagline
+
+        # Rich meta description: prefer overview + capability summary from md for max content relevance
+        capability_text = sections.get('capabilities (critical)', '') or sections.get('capabilities', '') or ''
+        capability_text = re.sub(r'[-*]\s*', '', capability_text)
+        capability_text = re.sub(r'\s+', ' ', capability_text).strip()
+        meta_desc_parts = [tagline]
+        if capability_text:
+            meta_desc_parts.append('Key capabilities: ' + capability_text[:250])
+        meta_desc = ' '.join(meta_desc_parts)
+        meta_desc = meta_desc[:297].rstrip() + '…' if len(meta_desc) > 300 else meta_desc
+
+        # Keywords: include tool name variants, section headings, aliases from md
+        kw_parts = [
+            e['name'], cat_clean, sub_clean,
+            e['name'] + ' code', e['name'] + ' software', e['name'] + ' tutorial',
+            e['name'] + ' documentation', e['name'] + ' DFT', e['name'] + ' simulation',
+            'computational materials science', 'DFT', 'ab initio', 'simulation tool',
+            'density functional theory',
+        ]
+        # Also pull "Scientific domain" bullets from md for richer keywords
+        domain_text = ''
+        sd_m = re.search(r'\*\*Scientific domain\*\*:\s*([^\n*]+)', md_plain[:2000] if md_plain else '')
+        if sd_m:
+            domain_text = sd_m.group(1).strip()
+            for piece in re.split(r'[,;]', domain_text):
+                piece = piece.strip()
+                if piece and len(piece) < 60:
+                    kw_parts.append(piece)
+        keywords = ', '.join(dict.fromkeys([k.strip() for k in kw_parts if k and k.strip()]))
 
         # Build prev/next within same subcategory
         siblings = entries_by_sub.get((e['category_id'], e['subcategory_id']), [])
         idx_in_sub = next((i for i, x in enumerate(siblings) if x['slug'] == e['slug']), -1)
         prev_e = siblings[idx_in_sub - 1] if idx_in_sub > 0 else None
         next_e = siblings[idx_in_sub + 1] if 0 <= idx_in_sub < len(siblings) - 1 else None
+        sub_clean_esc = html.escape(sub_clean, quote=True)
         prev_html = (
-            f'<a class="sibling-link prev" href="{prev_e["slug"]}.html">'
-            f'<span class="sib-label"><i class="fas fa-chevron-left"></i> Previous in {sub_clean}</span>'
-            f'<span class="sib-name">{prev_e["name"]}</span></a>'
+            f'<a class="sibling-link prev" href="{html.escape(prev_e["slug"], quote=True)}.html">'
+            f'<span class="sib-label"><i class="fas fa-chevron-left"></i> Previous in {sub_clean_esc}</span>'
+            f'<span class="sib-name">{html.escape(prev_e["name"])}</span></a>'
         ) if prev_e else '<span class="sibling-link prev disabled"><span class="sib-label">Start of section</span><span class="sib-name">—</span></span>'
         next_html = (
-            f'<a class="sibling-link next" href="{next_e["slug"]}.html">'
-            f'<span class="sib-label">Next in {sub_clean} <i class="fas fa-chevron-right"></i></span>'
-            f'<span class="sib-name">{next_e["name"]}</span></a>'
+            f'<a class="sibling-link next" href="{html.escape(next_e["slug"], quote=True)}.html">'
+            f'<span class="sib-label">Next in {sub_clean_esc} <i class="fas fa-chevron-right"></i></span>'
+            f'<span class="sib-name">{html.escape(next_e["name"])}</span></a>'
         ) if next_e else '<span class="sibling-link next disabled"><span class="sib-label">End of section</span><span class="sib-name">—</span></span>'
         siblings_nav = f'<nav class="siblings-nav">{prev_html}{next_html}</nav>'
 
-        # Escape md content for embedding in <script>
-        md_escaped = md_full.replace('</script>', '<\\/script>')
+        # Related tools: list ALL siblings in same subcategory as chips (great internal linking for SEO)
+        if siblings:
+            related_chips = []
+            for sib in siblings:
+                cls = 'current' if sib['slug'] == e['slug'] else ''
+                if sib['papers']:
+                    cls = (cls + ' has-paper').strip()
+                chip_cls = f' class="{cls}"' if cls else ''
+                related_chips.append(
+                    f'            <a href="{html.escape(sib["slug"], quote=True)}.html"{chip_cls}>{html.escape(sib["name"])}</a>'
+                )
+            related_tools_html = '\n'.join(related_chips)
+        else:
+            related_tools_html = '            <p class="muted">No sibling tools listed.</p>'
 
-        # Updated SEO description with cleaned names
-        desc_clean = (tagline if tagline else f"{e['name']} - {cat_clean} / {sub_clean} computational materials science tool.")[:300]
+        # Build comprehensive JSON-LD structured data
+        canonical_url = f"{SITE_URL}/tools/db/{e['slug']}.html"
+        jsonld_main = {
+            '@context': 'https://schema.org',
+            '@type': 'SoftwareApplication',
+            'name': e['name'],
+            'alternateName': [e['name'] + ' code', e['name'] + ' software'],
+            'applicationCategory': 'ScienceApplication',
+            'applicationSubCategory': cat_clean + (' — ' + sub_clean if sub_clean else ''),
+            'operatingSystem': 'Linux, macOS, Windows',
+            'description': tagline,
+            'url': canonical_url,
+            'sameAs': [official] if official.startswith('http') else [],
+            'author': {'@type': 'Person', 'name': 'Indranil Mal',
+                       'url': SITE_URL + '/',
+                       'affiliation': {'@type': 'Organization', 'name': 'Institute of Physics, Czech Academy of Sciences'}},
+            'keywords': keywords,
+            'inLanguage': 'en',
+            'isAccessibleForFree': True,
+            'mainEntityOfPage': canonical_url,
+        }
+        if papers_jsonld:
+            jsonld_main['citation'] = papers_jsonld
+
+        jsonld_breadcrumb = {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            'itemListElement': [
+                {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': SITE_URL + '/'},
+                {'@type': 'ListItem', 'position': 2, 'name': 'Scientific Tools DB', 'item': SITE_URL + '/scientific-tools.html'},
+                {'@type': 'ListItem', 'position': 3, 'name': cat_label, 'item': SITE_URL + '/scientific-tools.html#cat=' + str(e['category_id'] or '')},
+                {'@type': 'ListItem', 'position': 4, 'name': e['name'], 'item': canonical_url},
+            ],
+        }
+        jsonld_blob = json.dumps(jsonld_main, ensure_ascii=False, indent=2) + '\n</script>\n<script type="application/ld+json">\n' + json.dumps(jsonld_breadcrumb, ensure_ascii=False, indent=2)
+
+        # Escape user-supplied text fields so special chars (& < > ") don't break markup
+        def esc(s):
+            return html.escape(str(s or ''), quote=True)
 
         replacements = {
-            '{{TITLE}}': f"{e['name']} | {cat_clean} | Computational Tools | Indranil Mal",
-            '{{DESCRIPTION}}': desc_clean,
-            '{{KEYWORDS}}': ', '.join(filter(None, [
-                e['name'], cat_clean, sub_clean,
-                'computational materials science', 'DFT', 'simulation tool',
-                e['name'] + ' code', e['name'] + ' software', e['name'] + ' tutorial',
-            ])),
-            '{{NAME}}': e['name'],
-            '{{TAGLINE}}': desc_clean,
-            '{{CAT_ID}}': str(e['category_id'] or ''),
-            '{{CAT_LABEL}}': cat_label,
-            '{{SUB_LABEL}}': sub_label,
-            '{{CAT_COLOR}}': cat_color,
-            '{{CONFIDENCE}}': e['confidence'] or 'Verified',
-            '{{OVERVIEW}}': e['overview'] or e['note'] or '',
+            '{{TITLE}}': esc(f"{e['name']} — {cat_clean} code | Indranil Mal's Tools DB"),
+            '{{DESCRIPTION}}': esc(meta_desc),
+            '{{KEYWORDS}}': esc(keywords),
+            '{{NAME}}': esc(e['name']),
+            '{{TAGLINE}}': esc(tagline_short),
+            '{{CAT_ID}}': esc(e['category_id'] or ''),
+            '{{CAT_LABEL}}': esc(cat_label),
+            '{{SUB_LABEL}}': esc(sub_label),
+            '{{CAT_COLOR}}': cat_color,  # hex value, safe
+            '{{CONFIDENCE}}': esc(e['confidence'] or 'Verified'),
+            '{{OVERVIEW}}': esc(e['overview'] or e['note'] or ''),
             '{{OFFICIAL_BLOCK}}': official_block,
             '{{PAPER_BLOCK}}': paper_block,
             '{{PAPER_TAG}}': paper_tag,
             '{{SIBLINGS_NAV}}': siblings_nav,
-            '{{SLUG}}': e['slug'],
-            '{{CANONICAL}}': f"{SITE_URL}/tools/db/{e['slug']}.html",
-            '{{MD_CONTENT}}': md_escaped,
+            '{{RELATED_TOOLS}}': related_tools_html,
+            '{{SLUG}}': esc(e['slug']),
+            '{{CANONICAL}}': canonical_url,
+            '{{MD_HTML}}': md_html or '<p class="muted">No additional documentation file linked yet.</p>',
+            '{{JSONLD_BLOB}}': jsonld_blob,
+            '{{OG_IMAGE}}': SITE_URL + '/assets/profile.jpg',
         }
         page = template
         for key, val in replacements.items():
