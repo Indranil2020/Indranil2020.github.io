@@ -26,6 +26,28 @@ OUT_HTML_DIR = ROOT / "tools" / "db"
 SITEMAP = ROOT / "sitemap.xml"
 SITE_URL = "https://indranil2020.github.io"
 
+CAT_COLORS = {
+    '1':  '#ff6b6b', '2':  '#feca57', '3':  '#48dbfb', '4':  '#1dd1a1',
+    '5':  '#ee5a6f', '6':  '#a29bfe', '7':  '#fd9644', '8':  '#54a0ff',
+    '9':  '#5f27cd', '10': '#10ac84',
+}
+
+
+def clean_sub_name(name):
+    """Strip leading '1.1_' or '1.1 ' prefix and replace underscores with spaces."""
+    if not name:
+        return ''
+    s = re.sub(r'^\d+(?:\.\d+)?[_ ]+', '', str(name))
+    s = s.replace('_', ' ').strip()
+    return s
+
+
+def clean_cat_name(name):
+    if not name:
+        return ''
+    return str(name).replace('_', ' ').strip()
+
+
 ENTRY_RE = re.compile(r'^\*\*([0-9]+[a-z]?)\.\s+(.+?)\*\*\*?(?:\s*\(.*?\))?\s*$')
 CAT_RE = re.compile(r'^##\s+CATEGORY\s+(\d+):\s+(.+?)\s*\(\d+\s+tools\)\s*$')
 SUB_RE = re.compile(r'^###\s+(\d+\.\d+)\s+(.+?)\s*\(\d+\s+tools\)\s*$')
@@ -227,49 +249,99 @@ def main():
     # Build per-code SEO pages
     OUT_HTML_DIR.mkdir(parents=True, exist_ok=True)
     template = (ROOT / "scripts" / "tool_page_template.html").read_text()
+
+    # Index entries by (cat_id, sub_id) for prev/next navigation in same subcategory
+    entries_by_sub = {}
+    for e in entries:
+        key = (e['category_id'], e['subcategory_id'])
+        entries_by_sub.setdefault(key, []).append(e)
+
     written = 0
     for e in entries:
         md_full = read_md_full_html(e.get('md_link_path', ''))
-        title = f"{e['name']} | {e['category']} | Computational Tools | Indranil Mal"
-        desc = (e['overview'] or e['note'] or f"{e['name']} - {e['category']} / {e['subcategory']} computational materials science tool.")[:300]
-        keywords = ', '.join(filter(None, [
-            e['name'], e['category'], e['subcategory'],
-            'computational materials science', 'DFT', 'simulation tool',
-            e['name'] + ' code', e['name'] + ' software', e['name'] + ' tutorial',
-        ]))
         # Build paper HTML
         if e['papers']:
             paper_html = ''.join(
                 f'<li><a href="../../scientific_tools_consolidated/{p["path"]}" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> {p["name"]}</a></li>'
                 for p in e['papers']
             )
-            paper_block = f'<h2><i class="fas fa-book"></i> Reference Papers</h2><ul class="paper-list">{paper_html}</ul>'
+            paper_block = f'<h2><i class="fas fa-book"></i> Reference Papers ({len(e["papers"])})</h2><ul class="paper-list">{paper_html}</ul>'
+            paper_tag = '<span class="tag"><i class="fas fa-file-pdf"></i> ' + str(len(e['papers'])) + ' paper' + ('s' if len(e['papers']) != 1 else '') + '</span>'
         else:
-            paper_block = '<h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted"><em>No paper PDFs uploaded yet for this code.</em></p>'
+            paper_block = '<h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted">No paper PDFs uploaded yet for this code.</p>'
+            paper_tag = ''
 
         official = e['official_url'] or ''
-        official_block = f'<a href="{official}" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>' if official.startswith('http') else f'<span class="muted">Official link: {official}</span>'
+        if official.startswith('http'):
+            official_block = (
+                f'<a href="{official}" class="btn-action btn-primary" target="_blank" rel="noopener">'
+                f'<i class="fas fa-globe"></i> Official Website <i class="fas fa-external-link-alt"></i></a>'
+            )
+        else:
+            official_block = ''
 
-        sub_label = f"{e['subcategory_id']} {e['subcategory']}" if e['subcategory'] else ''
-        cat_label = f"{e['category_id']}. {e['category']}" if e['category'] else ''
+        # Cleaned labels
+        cat_clean = clean_cat_name(e['category'])
+        sub_clean = clean_sub_name(e['subcategory'])
+        cat_label = f"{e['category_id']}. {cat_clean}" if cat_clean else ''
+        sub_label = f"{e['subcategory_id']} {sub_clean}" if sub_clean else cat_label
+        cat_color = CAT_COLORS.get(str(e['category_id']), '#3498db')
+
+        tagline = (e['overview'] or e['note'] or f"{e['name']} - a tool in {cat_clean} / {sub_clean}.")
+        tagline = re.sub(r'\s+', ' ', tagline).strip()
+        if len(tagline) > 240:
+            tagline = tagline[:237].rstrip() + '…'
+
+        # Build prev/next within same subcategory
+        siblings = entries_by_sub.get((e['category_id'], e['subcategory_id']), [])
+        idx_in_sub = next((i for i, x in enumerate(siblings) if x['slug'] == e['slug']), -1)
+        prev_e = siblings[idx_in_sub - 1] if idx_in_sub > 0 else None
+        next_e = siblings[idx_in_sub + 1] if 0 <= idx_in_sub < len(siblings) - 1 else None
+        prev_html = (
+            f'<a class="sibling-link prev" href="{prev_e["slug"]}.html">'
+            f'<span class="sib-label"><i class="fas fa-chevron-left"></i> Previous in {sub_clean}</span>'
+            f'<span class="sib-name">{prev_e["name"]}</span></a>'
+        ) if prev_e else '<span class="sibling-link prev disabled"><span class="sib-label">Start of section</span><span class="sib-name">—</span></span>'
+        next_html = (
+            f'<a class="sibling-link next" href="{next_e["slug"]}.html">'
+            f'<span class="sib-label">Next in {sub_clean} <i class="fas fa-chevron-right"></i></span>'
+            f'<span class="sib-name">{next_e["name"]}</span></a>'
+        ) if next_e else '<span class="sibling-link next disabled"><span class="sib-label">End of section</span><span class="sib-name">—</span></span>'
+        siblings_nav = f'<nav class="siblings-nav">{prev_html}{next_html}</nav>'
 
         # Escape md content for embedding in <script>
         md_escaped = md_full.replace('</script>', '<\\/script>')
 
+        # Updated SEO description with cleaned names
+        desc_clean = (tagline if tagline else f"{e['name']} - {cat_clean} / {sub_clean} computational materials science tool.")[:300]
+
+        replacements = {
+            '{{TITLE}}': f"{e['name']} | {cat_clean} | Computational Tools | Indranil Mal",
+            '{{DESCRIPTION}}': desc_clean,
+            '{{KEYWORDS}}': ', '.join(filter(None, [
+                e['name'], cat_clean, sub_clean,
+                'computational materials science', 'DFT', 'simulation tool',
+                e['name'] + ' code', e['name'] + ' software', e['name'] + ' tutorial',
+            ])),
+            '{{NAME}}': e['name'],
+            '{{TAGLINE}}': desc_clean,
+            '{{CAT_ID}}': str(e['category_id'] or ''),
+            '{{CAT_LABEL}}': cat_label,
+            '{{SUB_LABEL}}': sub_label,
+            '{{CAT_COLOR}}': cat_color,
+            '{{CONFIDENCE}}': e['confidence'] or 'Verified',
+            '{{OVERVIEW}}': e['overview'] or e['note'] or '',
+            '{{OFFICIAL_BLOCK}}': official_block,
+            '{{PAPER_BLOCK}}': paper_block,
+            '{{PAPER_TAG}}': paper_tag,
+            '{{SIBLINGS_NAV}}': siblings_nav,
+            '{{SLUG}}': e['slug'],
+            '{{CANONICAL}}': f"{SITE_URL}/tools/db/{e['slug']}.html",
+            '{{MD_CONTENT}}': md_escaped,
+        }
         page = template
-        page = page.replace('{{TITLE}}', title)
-        page = page.replace('{{DESCRIPTION}}', desc)
-        page = page.replace('{{KEYWORDS}}', keywords)
-        page = page.replace('{{NAME}}', e['name'])
-        page = page.replace('{{CATEGORY}}', cat_label)
-        page = page.replace('{{SUBCATEGORY}}', sub_label)
-        page = page.replace('{{CONFIDENCE}}', e['confidence'])
-        page = page.replace('{{OVERVIEW}}', e['overview'] or e['note'] or '')
-        page = page.replace('{{OFFICIAL_BLOCK}}', official_block)
-        page = page.replace('{{PAPER_BLOCK}}', paper_block)
-        page = page.replace('{{SLUG}}', e['slug'])
-        page = page.replace('{{CANONICAL}}', f"{SITE_URL}/tools/db/{e['slug']}.html")
-        page = page.replace('{{MD_CONTENT}}', md_escaped)
+        for key, val in replacements.items():
+            page = page.replace(key, val)
 
         out_path = OUT_HTML_DIR / f"{e['slug']}.html"
         out_path.write_text(page)

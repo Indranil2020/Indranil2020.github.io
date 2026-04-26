@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DiffCSP | STRUCTURE PREDICTION | Computational Tools | Indranil Mal</title>
-    <meta name="description" content="## Capabilities (CRITICAL) - See official documentation for complete capabilities list DiffCSP is a crystal structure prediction method using joint equivariant diffusion on lattice and atomic coordinates. It treats CSP as a conditional generation task given chemical composition.">
+    <meta name="description" content="## Capabilities (CRITICAL) - See official documentation for complete capabilities list DiffCSP is a crystal structure prediction method using joint equivariant diffusion on lattice and atomic coordinates. It treats CSP as a conditional g…">
     <meta name="keywords" content="DiffCSP, STRUCTURE PREDICTION, Generative Models, computational materials science, DFT, simulation tool, DiffCSP code, DiffCSP software, DiffCSP tutorial">
     <meta name="author" content="Indranil Mal">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
@@ -12,8 +12,13 @@
 
     <meta property="og:type" content="article">
     <meta property="og:title" content="DiffCSP | STRUCTURE PREDICTION | Computational Tools | Indranil Mal">
-    <meta property="og:description" content="## Capabilities (CRITICAL) - See official documentation for complete capabilities list DiffCSP is a crystal structure prediction method using joint equivariant diffusion on lattice and atomic coordinates. It treats CSP as a conditional generation task given chemical composition.">
+    <meta property="og:description" content="## Capabilities (CRITICAL) - See official documentation for complete capabilities list DiffCSP is a crystal structure prediction method using joint equivariant diffusion on lattice and atomic coordinates. It treats CSP as a conditional g…">
     <meta property="og:url" content="https://indranil2020.github.io/tools/db/DiffCSP.html">
+    <meta property="og:site_name" content="Indranil Mal - Research">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="DiffCSP | STRUCTURE PREDICTION | Computational Tools | Indranil Mal">
+    <meta property="twitter:description" content="## Capabilities (CRITICAL) - See official documentation for complete capabilities list DiffCSP is a crystal structure prediction method using joint equivariant diffusion on lattice and atomic coordinates. It treats CSP as a conditional g…">
 
     <script type="application/ld+json">
     {
@@ -21,7 +26,7 @@
       "@type": "SoftwareApplication",
       "name": "DiffCSP",
       "applicationCategory": "ScienceApplication",
-      "description": "## Capabilities (CRITICAL) - See official documentation for complete capabilities list DiffCSP is a crystal structure prediction method using joint equivariant diffusion on lattice and atomic coordinates. It treats CSP as a conditional generation task given chemical composition.",
+      "description": "## Capabilities (CRITICAL) - See official documentation for complete capabilities list DiffCSP is a crystal structure prediction method using joint equivariant diffusion on lattice and atomic coordinates. It treats CSP as a conditional g…",
       "url": "https://indranil2020.github.io/tools/db/DiffCSP.html",
       "creator": {"@type": "Person", "name": "Indranil Mal"}
     }
@@ -32,126 +37,306 @@
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
-        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
-        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
-        nav ul li { margin: 0 0.8rem; }
-        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
-        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+        :root {
+            --primary: #3498db;
+            --primary-dark: #2980b9;
+            --accent: #764ba2;
+            --bg: #f5f7fb;
+            --panel: #ffffff;
+            --text: #2c3e50;
+            --muted: #7f8c8d;
+            --border: #e1e8ed;
+            --cat-color: #fd9644;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.65;
+            color: var(--text);
+            background: var(--bg);
+        }
 
+        /* Navigation - unified site-wide style with logo + icons */
+        nav.site-nav {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .nav-container {
+            max-width: 1200px; margin: 0 auto; padding: 0.85rem 1.5rem;
+            display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+        }
+        .nav-logo {
+            font-size: 1.1rem; font-weight: 700; color: var(--text);
+            text-decoration: none; letter-spacing: -0.01em;
+        }
+        .nav-logo:hover { color: var(--primary); }
+        .nav-menu {
+            display: flex; gap: 1.4rem; list-style: none; flex-wrap: wrap;
+        }
+        .nav-menu a {
+            text-decoration: none; color: #555; font-weight: 500;
+            font-size: 0.92rem; transition: color 0.2s;
+            display: inline-flex; align-items: center; gap: 0.4rem;
+        }
+        .nav-menu a:hover, .nav-menu a.active { color: var(--primary); }
+        .nav-menu a i { font-size: 0.85rem; }
+        @media (max-width: 760px) {
+            .nav-container { padding: 0.7rem 1rem; flex-wrap: wrap; }
+            .nav-menu { gap: 0.85rem; width: 100%; justify-content: flex-start; }
+            .nav-menu a { font-size: 0.86rem; }
+        }
+
+        /* Header - gradient with category accent bar */
         header.tool-header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #fff; padding: 3rem 2rem 2.5rem;
+            color: #fff;
+            padding: 3rem 1.5rem 2.4rem;
+            position: relative;
+            border-bottom: 6px solid var(--cat-color);
         }
-        .header-inner { max-width: 1000px; margin: 0 auto; }
-        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
-        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
-        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
-        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+        header.tool-header::before {
+            content: '';
+            position: absolute; left: 0; right: 0; bottom: 0;
+            height: 6px; background: var(--cat-color);
+        }
+        .header-inner { max-width: 1100px; margin: 0 auto; }
+        .breadcrumb {
+            font-size: 0.9rem; opacity: 0.94; margin-bottom: 0.85rem;
+            display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem;
+        }
+        .breadcrumb a { color: #fff; text-decoration: none; opacity: 0.95; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb .sep { opacity: 0.5; }
+        header.tool-header h1 {
+            font-size: 3rem; font-weight: 700; margin-bottom: 0.4rem;
+            letter-spacing: -0.02em; line-height: 1.1;
+        }
+        header.tool-header .tagline {
+            font-size: 1.1rem; opacity: 0.93; max-width: 800px; line-height: 1.55;
+        }
+        .tool-tags {
+            margin-top: 1.1rem; display: flex; flex-wrap: wrap; gap: 0.5rem;
+        }
+        .tag {
+            background: rgba(255,255,255,0.18); padding: 0.32rem 0.85rem;
+            border-radius: 999px; font-size: 0.85rem; font-weight: 500;
+            backdrop-filter: blur(4px); display: inline-flex; align-items: center; gap: 0.4rem;
+        }
+        .tag.cat-tag { background: var(--cat-color); }
 
+        /* Container */
         .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
-        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
-        .btn-official, .btn-back {
-            display: inline-flex; align-items: center; gap: 0.5rem;
-            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
-            font-size: 0.92rem;
+
+        /* Action buttons */
+        .hero-actions {
+            display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.6rem;
         }
-        .btn-official { background: #3498db; color: #fff; }
-        .btn-official:hover { background: #2980b9; }
-        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
-        .btn-back:hover { background: #f0f4f8; }
+        .btn-action {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.75rem 1.3rem; border-radius: 6px; font-weight: 600;
+            text-decoration: none; font-size: 0.95rem;
+            transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
+        }
+        .btn-action:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,0.10); }
+        .btn-primary { background: var(--cat-color); color: #fff; }
+        .btn-primary:hover { filter: brightness(1.07); }
+        .btn-secondary { background: #fff; color: var(--text); border: 1px solid var(--border); }
+        .btn-secondary:hover { background: #f0f4f8; }
 
-        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
-        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
-        section.card h2 i { color: #3498db; }
-        .overview-text { font-size: 1.02rem; color: #444; }
+        /* Cards */
+        section.card {
+            background: var(--panel); padding: 1.8rem 2.1rem;
+            border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            margin-bottom: 1.4rem;
+        }
+        section.card h2 {
+            color: var(--text); font-size: 1.35rem; font-weight: 700;
+            margin-bottom: 1rem; padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--cat-color);
+            display: flex; align-items: center; gap: 0.55rem;
+        }
+        section.card h2 i { color: var(--cat-color); }
 
+        .overview-text { font-size: 1.05rem; color: #444; line-height: 1.7; }
+
+        /* Paper list */
         .paper-list { list-style: none; padding: 0; }
-        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
-        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
-        .paper-list li a:hover { color: #3498db; }
-        .paper-list li i { color: #e74c3c; }
-        .muted { color: #7f8c8d; font-style: italic; }
+        .paper-list li {
+            padding: 0.7rem 0.95rem; background: #f8f9fa; border-radius: 6px;
+            margin-bottom: 0.5rem; transition: background 0.18s;
+        }
+        .paper-list li:hover { background: #eef3f7; }
+        .paper-list li a {
+            color: var(--text); text-decoration: none; font-weight: 500;
+            display: flex; align-items: center; gap: 0.55rem; word-break: break-word;
+            font-size: 0.96rem;
+        }
+        .paper-list li a:hover { color: var(--primary); }
+        .paper-list li i { color: #e74c3c; flex-shrink: 0; }
+        .muted { color: var(--muted); font-style: italic; }
 
-        .md-content { font-size: 0.97rem; }
-        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
-        .md-content h1 { font-size: 1.5rem; }
-        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
-        .md-content h3 { font-size: 1.05rem; }
-        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
-        .md-content li { margin-bottom: 0.25rem; }
-        .md-content p { margin-bottom: 0.7rem; }
-        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
-        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
-        .md-content a { color: #3498db; }
-        .md-content strong { color: #2c3e50; }
+        /* Markdown rendered content */
+        .md-content { font-size: 0.99rem; line-height: 1.7; color: #333; }
+        .md-content h1, .md-content h2, .md-content h3, .md-content h4 {
+            color: var(--text); margin-top: 1.4rem; margin-bottom: 0.55rem;
+            font-weight: 700;
+        }
+        .md-content h1 { font-size: 1.55rem; }
+        .md-content h2 {
+            font-size: 1.25rem; border-bottom: 1px solid var(--border);
+            padding-bottom: 0.35rem; color: var(--cat-color);
+        }
+        .md-content h3 { font-size: 1.08rem; }
+        .md-content h4 { font-size: 0.98rem; }
+        .md-content ul, .md-content ol { margin-left: 1.6rem; margin-bottom: 0.9rem; }
+        .md-content li { margin-bottom: 0.3rem; }
+        .md-content p { margin-bottom: 0.75rem; }
+        .md-content code {
+            background: #f0f4f8; padding: 0.12rem 0.45rem; border-radius: 4px;
+            font-size: 0.9em; font-family: 'Menlo','Monaco','Courier New',monospace;
+        }
+        .md-content pre {
+            background: #f0f4f8; padding: 0.95rem; border-radius: 6px;
+            overflow-x: auto; margin-bottom: 0.9rem;
+        }
+        .md-content pre code { background: transparent; padding: 0; font-size: 0.88em; }
+        .md-content a { color: var(--primary); }
+        .md-content strong { color: var(--text); }
+        .md-content blockquote {
+            border-left: 4px solid var(--cat-color); padding: 0.4rem 1rem;
+            background: #f8f9fa; margin: 0.7rem 0; color: #555;
+        }
+        .md-content table {
+            border-collapse: collapse; margin: 0.8rem 0; width: 100%;
+            font-size: 0.93rem;
+        }
+        .md-content th, .md-content td {
+            border: 1px solid var(--border); padding: 0.45rem 0.7rem;
+            text-align: left;
+        }
+        .md-content th { background: #f8f9fa; font-weight: 600; }
 
-        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
-        footer a { color: #74b9ff; text-decoration: none; }
+        /* Prev/Next navigation */
+        .siblings-nav {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+            margin: 2rem 0 0;
+        }
+        .sibling-link {
+            display: flex; flex-direction: column; padding: 1rem 1.2rem;
+            background: var(--panel); border: 1px solid var(--border);
+            border-radius: 8px; text-decoration: none; transition: all 0.18s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+        .sibling-link:hover {
+            border-color: var(--cat-color); box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+            transform: translateY(-1px);
+        }
+        .sibling-link .sib-label {
+            font-size: 0.78rem; color: var(--muted); font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.05em;
+        }
+        .sibling-link .sib-name {
+            font-size: 1.05rem; color: var(--text); font-weight: 600; margin-top: 0.25rem;
+        }
+        .sibling-link.next { text-align: right; }
+        .sibling-link.disabled { pointer-events: none; opacity: 0.45; }
+
+        /* Footer */
+        footer.site-footer {
+            background: #2c3e50; color: #fff; text-align: center;
+            padding: 1.7rem 1rem; margin-top: 3rem;
+        }
+        footer.site-footer a { color: #74b9ff; text-decoration: none; }
+        footer.site-footer a:hover { text-decoration: underline; }
+        footer.site-footer p { font-size: 0.9rem; }
+        footer.site-footer .footer-meta { margin-top: 0.4rem; opacity: 0.85; font-size: 0.82rem; }
 
         @media (max-width: 700px) {
-            header.tool-header h1 { font-size: 1.7rem; }
+            header.tool-header { padding: 2rem 1rem 1.7rem; }
+            header.tool-header h1 { font-size: 2rem; }
+            header.tool-header .tagline { font-size: 0.98rem; }
             .container { padding: 0 1rem; }
-            section.card { padding: 1.2rem; }
+            section.card { padding: 1.3rem 1.4rem; }
+            .siblings-nav { grid-template-columns: 1fr; }
+            .sibling-link.next { text-align: left; }
         }
     </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="../../index.html#research">Research</a></li>
-            <li><a href="../../publications.html">Publications</a></li>
-            <li><a href="../../collaborators.html">Collaborators</a></li>
-            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
-            <li><a href="../../tools.html">Tools</a></li>
-            <li><a href="../../index.html#contact">Contact</a></li>
+
+<nav class="site-nav">
+    <div class="nav-container">
+        <a href="../../index.html" class="nav-logo">Indranil Mal</a>
+        <ul class="nav-menu">
+            <li><a href="../../index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="../../index.html#research"><i class="fas fa-flask"></i> Research</a></li>
+            <li><a href="../../publications.html"><i class="fas fa-book"></i> Publications</a></li>
+            <li><a href="../../collaborators.html"><i class="fas fa-users"></i> Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active"><i class="fas fa-project-diagram"></i> Scientific Tools DB</a></li>
+            <li><a href="../../tools.html"><i class="fas fa-tools"></i> Tools</a></li>
+            <li><a href="../../index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
-    </nav>
+    </div>
+</nav>
 
-    <header class="tool-header">
-        <div class="header-inner">
-            <div class="breadcrumb">
-                <a href="../../scientific-tools.html">Scientific Tools DB</a>
-                &nbsp;/&nbsp; <span>7. STRUCTURE PREDICTION</span>
-                <span> &nbsp;/&nbsp; 7.5 Generative Models</span>
-            </div>
-            <h1>DiffCSP</h1>
-            <div class="tool-tags">
-                <span class="tag"><i class="fas fa-folder"></i> 7. STRUCTURE PREDICTION</span>
-                <span class="tag"><i class="fas fa-folder-open"></i> 7.5 Generative Models</span>
-                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
-            </div>
+<header class="tool-header">
+    <div class="header-inner">
+        <div class="breadcrumb">
+            <a href="../../index.html">Home</a>
+            <span class="sep">›</span>
+            <a href="../../scientific-tools.html">Scientific Tools DB</a>
+            <span class="sep">›</span>
+            <a href="../../scientific-tools.html#cat=7">7. STRUCTURE PREDICTION</a>
+            <span class="sep">›</span>
+            <span>7.5 Generative Models</span>
         </div>
-    </header>
-
-    <div class="container">
-        <div class="hero-actions">
-            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
-            <a href="https://github.com/jiaor17/DiffCSP" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        <h1>DiffCSP</h1>
+        <p class="tagline">## Capabilities (CRITICAL) - See official documentation for complete capabilities list DiffCSP is a crystal structure prediction method using joint equivariant diffusion on lattice and atomic coordinates. It treats CSP as a conditional g…</p>
+        <div class="tool-tags">
+            <span class="tag cat-tag"><i class="fas fa-folder"></i> 7. STRUCTURE PREDICTION</span>
+            <span class="tag"><i class="fas fa-folder-open"></i> 7.5 Generative Models</span>
+            <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            
         </div>
+    </div>
+</header>
 
-        <section class="card">
-            <h2><i class="fas fa-info-circle"></i> Overview</h2>
-            <p class="overview-text">## Capabilities (CRITICAL) - See official documentation for complete capabilities list DiffCSP is a crystal structure prediction method using joint equivariant diffusion on lattice and atomic coordinates. It treats CSP as a conditional generation task given chemical composition.</p>
-        </section>
-
-        <section class="card">
-            <h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted"><em>No paper PDFs uploaded yet for this code.</em></p>
-        </section>
-
-        <section class="card">
-            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
-            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
-        </section>
+<div class="container">
+    <div class="hero-actions">
+        <a href="../../scientific-tools.html#tool=DiffCSP" class="btn-action btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back to Mind Map
+        </a>
+        <a href="https://github.com/jiaor17/DiffCSP" class="btn-action btn-primary" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website <i class="fas fa-external-link-alt"></i></a>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
-    </footer>
+    <section class="card">
+        <h2><i class="fas fa-info-circle"></i> Overview</h2>
+        <p class="overview-text">## Capabilities (CRITICAL) - See official documentation for complete capabilities list DiffCSP is a crystal structure prediction method using joint equivariant diffusion on lattice and atomic coordinates. It treats CSP as a conditional generation task given chemical composition.</p>
+    </section>
 
-    <script id="md-source" type="text/plain"># DiffCSP
+    <section class="card">
+        <h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted">No paper PDFs uploaded yet for this code.</p>
+    </section>
+
+    <section class="card">
+        <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+        <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+    </section>
+
+    <nav class="siblings-nav"><a class="sibling-link prev" href="CDVAE.html"><span class="sib-label"><i class="fas fa-chevron-left"></i> Previous in Generative Models</span><span class="sib-name">CDVAE</span></a><a class="sibling-link next" href="MatterGen.html"><span class="sib-label">Next in Generative Models <i class="fas fa-chevron-right"></i></span><span class="sib-name">MatterGen</span></a></nav>
+</div>
+
+<footer class="site-footer">
+    <p>&copy; 2025 Indranil Mal. Part of the
+        <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.
+    </p>
+    <p class="footer-meta">
+        <a href="../../index.html#contact"><i class="fas fa-envelope"></i> Contact</a> &nbsp;·&nbsp;
+        <a href="https://github.com/Indranil2020/Indranil2020.github.io"><i class="fab fa-github"></i> Source on GitHub</a>
+    </p>
+</footer>
+
+<script id="md-source" type="text/plain"># DiffCSP
 
 ## Official Resources
 - See official repository for resources and documentation
@@ -268,17 +453,17 @@ n## Theoretical Methods
 - Development: ACTIVE
 - Applications: Crystal structure prediction, generative modeling
 </script>
-    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
-    <script>
-        (function () {
-            const src = document.getElementById('md-source').textContent;
-            const target = document.getElementById('md-render');
-            if (src && src.trim()) {
-                target.innerHTML = marked.parse(src);
-            } else {
-                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
-            }
-        })();
-    </script>
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+<script>
+    (function () {
+        const src = document.getElementById('md-source').textContent;
+        const target = document.getElementById('md-render');
+        if (src && src.trim()) {
+            target.innerHTML = marked.parse(src);
+        } else {
+            target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+        }
+    })();
+</script>
 </body>
 </html>
