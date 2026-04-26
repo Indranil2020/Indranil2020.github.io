@@ -76,18 +76,18 @@
             padding: 2.5rem 1.5rem 2rem;
             text-align: center;
         }
-        header.page-header h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 0.4rem; }
-        header.page-header p { font-size: 1.02rem; opacity: 0.95; max-width: 800px; margin: 0 auto; }
+        header.page-header h1 { font-size: 2.6rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
+        header.page-header p { font-size: 1.08rem; opacity: 0.95; max-width: 880px; margin: 0 auto; line-height: 1.55; }
         .stats-bar {
             display: flex; justify-content: center; flex-wrap: wrap; gap: 1.4rem;
             margin-top: 1.2rem;
         }
         .stat-pill {
-            background: rgba(255,255,255,0.18); padding: 0.45rem 1rem;
-            border-radius: 999px; font-size: 0.86rem; font-weight: 500;
+            background: rgba(255,255,255,0.18); padding: 0.55rem 1.2rem;
+            border-radius: 999px; font-size: 0.98rem; font-weight: 500;
             backdrop-filter: blur(4px);
         }
-        .stat-pill strong { font-weight: 700; font-size: 1rem; }
+        .stat-pill strong { font-weight: 700; font-size: 1.18rem; }
 
         .toolbar {
             max-width: 1400px; margin: 1.2rem auto 0; padding: 0 1.5rem;
@@ -131,25 +131,56 @@
             max-width: 1400px; margin: 1rem auto 2rem; padding: 0 1.5rem;
         }
         .viz-container {
-            background: var(--panel); border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-            min-height: 600px; padding: 1rem; overflow: hidden; position: relative;
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            min-height: 760px; padding: 0; overflow: hidden; position: relative;
         }
-        #mindmap-svg, #sunburst-svg { width: 100%; height: 720px; cursor: grab; }
+        #mindmap-svg, #sunburst-svg { width: 100%; height: 820px; cursor: grab; display: block; }
         #mindmap-svg:active, #sunburst-svg:active { cursor: grabbing; }
+        #graph3d { width: 100%; height: 820px; position: relative; background: radial-gradient(ellipse at center, #0a1130 0%, #050816 100%); }
+        #graph3d canvas { display: block; }
 
         .legend {
-            position: absolute; top: 12px; right: 12px;
-            background: rgba(255,255,255,0.92); padding: 0.6rem 0.9rem;
-            border-radius: 6px; font-size: 0.78rem; box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            position: absolute; top: 14px; right: 14px;
+            background: rgba(255,255,255,0.95); padding: 0.7rem 0.95rem;
+            border-radius: 8px; font-size: 0.76rem; box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            max-width: 220px; backdrop-filter: blur(6px);
         }
-        .legend-row { display: flex; align-items: center; gap: 0.4rem; margin: 0.15rem 0; }
-        .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+        .legend.dark { background: rgba(20,28,55,0.78); color: #e0e6ff; }
+        .legend-title { font-weight: 700; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 0.4rem; }
+        .legend.dark .legend-title { color: #9fb3ff; }
+        .legend-row { display: flex; align-items: center; gap: 0.45rem; margin: 0.18rem 0; cursor: pointer; padding: 0.1rem 0.25rem; border-radius: 4px; transition: background 0.15s; }
+        .legend-row:hover { background: rgba(0,0,0,0.05); }
+        .legend.dark .legend-row:hover { background: rgba(255,255,255,0.08); }
+        .legend-dot { width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; box-shadow: 0 0 0 2px rgba(255,255,255,0.35); }
 
         .controls-hint {
-            position: absolute; bottom: 12px; left: 12px;
-            background: rgba(255,255,255,0.92); padding: 0.4rem 0.7rem;
-            border-radius: 6px; font-size: 0.74rem; color: var(--muted); box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            position: absolute; bottom: 14px; left: 14px;
+            background: rgba(255,255,255,0.95); padding: 0.45rem 0.8rem;
+            border-radius: 6px; font-size: 0.74rem; color: var(--muted); box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+            backdrop-filter: blur(6px);
         }
+        .controls-hint.dark { background: rgba(20,28,55,0.78); color: #c5d0ff; }
+        .graph3d-toolbar {
+            position: absolute; top: 14px; left: 14px; z-index: 5;
+            display: flex; gap: 0.4rem; flex-wrap: wrap;
+        }
+        .graph3d-btn {
+            background: rgba(20,28,55,0.78); color: #e0e6ff; border: 1px solid rgba(255,255,255,0.18);
+            padding: 0.45rem 0.75rem; border-radius: 6px; font-size: 0.78rem; cursor: pointer;
+            font-family: inherit; font-weight: 500; backdrop-filter: blur(6px);
+        }
+        .graph3d-btn:hover { background: rgba(40,52,98,0.92); }
+        .graph3d-btn.active { background: var(--primary); border-color: var(--primary); }
+        .graph3d-tooltip {
+            position: absolute; pointer-events: none; padding: 0.45rem 0.7rem;
+            background: rgba(20,28,55,0.95); color: #fff; border-radius: 6px;
+            font-size: 0.82rem; box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.15); display: none; max-width: 260px;
+            z-index: 10; transform: translate(12px, 12px);
+        }
+        .graph3d-tooltip strong { color: #74b9ff; display: block; margin-bottom: 0.15rem; font-size: 0.88rem; }
+        .graph3d-tooltip .meta { color: #b0bce6; font-size: 0.72rem; }
 
         /* Grid view */
         .grid-view { display: none; }
@@ -158,20 +189,29 @@
             padding: 1.4rem 1.6rem; margin-bottom: 1.2rem;
         }
         .category-block h3 {
-            color: var(--text); font-size: 1.15rem; font-weight: 700;
-            border-left: 4px solid var(--primary); padding-left: 0.7rem; margin-bottom: 0.8rem;
+            color: var(--text); font-size: 1.4rem; font-weight: 700;
+            border-left: 6px solid var(--primary); padding-left: 0.85rem; margin-bottom: 1rem;
+            display: flex; align-items: center; gap: 0.6rem;
         }
-        .subcat-block { margin-top: 0.9rem; }
+        .category-block h3 .cat-num {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 2.2rem; height: 2.2rem; border-radius: 8px;
+            font-size: 0.95rem; font-weight: 700; color: #fff;
+        }
+        .subcat-block { margin-top: 1.1rem; }
         .subcat-block h4 {
-            color: #555; font-size: 0.95rem; font-weight: 600;
-            margin-bottom: 0.5rem; padding-bottom: 0.3rem; border-bottom: 1px dashed var(--border);
+            color: #2c3e50; font-size: 1.1rem; font-weight: 600;
+            margin-bottom: 0.65rem; padding-bottom: 0.35rem; border-bottom: 1px dashed var(--border);
+            display: flex; align-items: center; gap: 0.5rem;
         }
-        .tool-chips { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+        .subcat-block h4 .sub-id { color: var(--muted); font-weight: 600; font-size: 0.95rem; }
+        .subcat-block h4 .sub-count { background: #f0f4f8; color: var(--muted); padding: 0.1rem 0.55rem; border-radius: 999px; font-size: 0.78rem; font-weight: 600; }
+        .tool-chips { display: flex; flex-wrap: wrap; gap: 0.55rem; }
         .tool-chip {
-            background: #f0f4f8; color: var(--text); padding: 0.4rem 0.85rem;
-            border-radius: 999px; font-size: 0.82rem; font-weight: 500; cursor: pointer;
+            background: #f0f4f8; color: var(--text); padding: 0.5rem 1rem;
+            border-radius: 999px; font-size: 0.95rem; font-weight: 500; cursor: pointer;
             border: 1px solid transparent; transition: all 0.2s; text-decoration: none;
-            display: inline-flex; align-items: center; gap: 0.35rem;
+            display: inline-flex; align-items: center; gap: 0.4rem;
         }
         .tool-chip:hover { background: var(--primary); color: #fff; transform: translateY(-1px); }
         .tool-chip.has-paper::before { content: "\f15c"; font-family: "Font Awesome 6 Free"; font-weight: 900; font-size: 0.7rem; opacity: 0.6; }
@@ -196,12 +236,12 @@
             font-size: 1.4rem; color: var(--muted); padding: 0;
         }
         .detail-panel .close-btn:hover { color: var(--text); }
-        .detail-panel h2 { font-size: 1.6rem; color: var(--text); margin-bottom: 0.3rem; }
-        .detail-meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 1rem; }
-        .detail-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem; }
+        .detail-panel h2 { font-size: 1.95rem; color: var(--text); margin-bottom: 0.4rem; letter-spacing: -0.01em; }
+        .detail-meta { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.1rem; font-weight: 500; }
+        .detail-tags { display: flex; gap: 0.45rem; flex-wrap: wrap; margin-bottom: 1.1rem; }
         .detail-tag {
-            background: #f0f4f8; padding: 0.2rem 0.7rem; border-radius: 999px;
-            font-size: 0.76rem; color: var(--text); font-weight: 500;
+            background: #f0f4f8; padding: 0.3rem 0.85rem; border-radius: 999px;
+            font-size: 0.85rem; color: var(--text); font-weight: 500;
         }
         .detail-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.2rem; }
         .action-btn {
@@ -234,26 +274,23 @@
         footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.6rem; margin-top: 2.5rem; }
         footer a { color: #74b9ff; text-decoration: none; }
 
-        /* SVG node styling */
-        .node circle { stroke-width: 2px; cursor: pointer; transition: r 0.15s; }
-        .node:hover circle { stroke: var(--primary); }
-        .node text { font-size: 11px; pointer-events: none; user-select: none; fill: var(--text); }
-        .node.root circle { fill: #764ba2; stroke: #5e3b80; }
-        .node.cat circle { fill: #667eea; stroke: #4d5fc1; }
-        .node.sub circle { fill: #74b9ff; stroke: #5599e5; }
-        .node.tool circle { fill: #2ecc71; stroke: #25a25a; }
-        .node.tool.has-paper circle { fill: #e67e22; stroke: #c0651a; }
+        /* SVG node styling - colors set inline by JS for category palette */
+        .node circle { cursor: pointer; transition: r 0.18s; }
+        .node:hover circle { filter: brightness(1.15); }
+        .node text { pointer-events: none; user-select: none; }
         .node.tool.dimmed circle { fill-opacity: 0.18; stroke-opacity: 0.18; }
         .node text.dimmed { fill-opacity: 0.18; }
-        .link { fill: none; stroke: #cbd3dc; stroke-width: 1.4px; }
+        .link { fill: none; }
         .link.dimmed { stroke-opacity: 0.18; }
 
         @media (max-width: 700px) {
             header.page-header h1 { font-size: 1.55rem; }
-            #mindmap-svg, #sunburst-svg { height: 520px; }
+            #mindmap-svg, #sunburst-svg, #graph3d { height: 540px; }
+            .viz-container { min-height: 540px; }
             .detail-panel { max-width: 100%; padding: 1.2rem; }
             .stats-bar { gap: 0.5rem; }
             .stat-pill { font-size: 0.78rem; padding: 0.35rem 0.75rem; }
+            .legend { max-width: 160px; padding: 0.5rem 0.65rem; font-size: 0.7rem; }
         }
     </style>
 </head>
@@ -291,7 +328,8 @@
         <button class="filter-btn active" data-cat="all">All</button>
     </div>
     <div class="view-toggle">
-        <button class="view-btn active" data-view="mindmap"><i class="fas fa-project-diagram"></i> Mind Map</button>
+        <button class="view-btn active" data-view="graph3d"><i class="fas fa-cube"></i> 3D Graph</button>
+        <button class="view-btn" data-view="mindmap"><i class="fas fa-project-diagram"></i> Mind Map</button>
         <button class="view-btn" data-view="sunburst"><i class="fas fa-circle-notch"></i> Sunburst</button>
         <button class="view-btn" data-view="grid"><i class="fas fa-th"></i> Grid</button>
     </div>
@@ -299,17 +337,26 @@
 
 <div class="main-area">
     <div class="viz-container">
-        <svg id="mindmap-svg"></svg>
+        <div id="graph3d">
+            <div class="graph3d-toolbar">
+                <button class="graph3d-btn active" id="g3d-rotate"><i class="fas fa-sync"></i> Auto-rotate</button>
+                <button class="graph3d-btn" id="g3d-recenter"><i class="fas fa-crosshairs"></i> Recenter</button>
+                <button class="graph3d-btn" id="g3d-cooldown"><i class="fas fa-snowflake"></i> Freeze Layout</button>
+            </div>
+            <div class="graph3d-tooltip" id="g3d-tooltip"></div>
+        </div>
+        <svg id="mindmap-svg" style="display:none;"></svg>
         <svg id="sunburst-svg" style="display:none;"></svg>
         <div class="grid-view" id="grid-view"></div>
-        <div class="legend">
-            <div class="legend-row"><span class="legend-dot" style="background:#764ba2"></span> Root</div>
-            <div class="legend-row"><span class="legend-dot" style="background:#667eea"></span> Category</div>
-            <div class="legend-row"><span class="legend-dot" style="background:#74b9ff"></span> Subcategory</div>
-            <div class="legend-row"><span class="legend-dot" style="background:#2ecc71"></span> Tool</div>
-            <div class="legend-row"><span class="legend-dot" style="background:#e67e22"></span> Tool (with paper)</div>
+        <div class="legend" id="legend">
+            <div class="legend-title">Categories</div>
+            <div id="legend-cats"></div>
+            <div class="legend-title" style="margin-top:0.5rem;">Node type</div>
+            <div class="legend-row"><span class="legend-dot" style="background:#ffffff"></span> Root</div>
+            <div class="legend-row"><span class="legend-dot" style="background:#cbd3dc"></span> Subcategory</div>
+            <div class="legend-row" style="opacity:0.85;"><span class="legend-dot" style="background:#e74c3c;box-shadow:0 0 6px #e74c3c;"></span> Has paper PDFs</div>
         </div>
-        <div class="controls-hint">Drag to pan · Scroll to zoom · Click node to expand or open</div>
+        <div class="controls-hint" id="controls-hint">Drag to rotate · Scroll to zoom · Click a node for details</div>
     </div>
 </div>
 
@@ -332,15 +379,54 @@
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three-spritetext@1.8.2/dist/three-spritetext.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/3d-force-graph@1.73.4/dist/3d-force-graph.min.js"></script>
 <script>
 /* === Scientific Tools DB - Interactive Renderer === */
 (function () {
+    /* Category color palette - one color per category, applied across all views */
+    const CAT_COLORS = {
+        '1':  '#ff6b6b',  // GROUND-STATE DFT      - coral red
+        '2':  '#feca57',  // TDDFT & EXCITED-STATE - amber
+        '3':  '#48dbfb',  // DMFT & MANY-BODY      - cyan
+        '4':  '#1dd1a1',  // TIGHT-BINDING         - emerald
+        '5':  '#ee5a6f',  // PHONONS               - pink-red
+        '6':  '#a29bfe',  // DYNAMICS              - lavender
+        '7':  '#fd9644',  // STRUCTURE PREDICTION  - orange
+        '8':  '#54a0ff',  // POST-PROCESSING       - sky blue
+        '9':  '#5f27cd',  // FRAMEWORKS            - violet
+        '10': '#10ac84',  // NICHE & ML            - green
+    };
+    const ROOT_COLOR = '#ffffff';
+    const SUB_COLOR  = '#aab5ce';
+    const PAPER_GLOW = '#ff7675';
+
+    /* Clean up display names - strips numeric prefix and replaces underscores with spaces */
+    function cleanName(name) {
+        if (!name) return '';
+        let s = String(name);
+        // Strip leading "1.1_" or "1.1 " style prefix
+        s = s.replace(/^\d+(?:\.\d+)?[_ ]+/, '');
+        // Replace remaining underscores with spaces
+        s = s.replace(/_/g, ' ');
+        return s.trim();
+    }
+    function categoryName(name) {
+        // For category headers like "GROUND-STATE DFT" - convert to Title Case-ish
+        if (!name) return '';
+        return name.replace(/_/g, ' ').replace(/\s+&\s+/g, ' & ').trim();
+    }
+
     const state = {
         data: null,
         filtered: null,
         currentCategoryFilter: 'all',
-        currentView: 'mindmap',
+        currentView: 'graph3d',
         searchTerm: '',
+        graph3d: null,        // 3d-force-graph instance
+        graph3dRotate: true,
+        graph3dCooled: false,
     };
 
     const dom = {
@@ -377,23 +463,40 @@
         dom.statSubs.textContent = s.subcategories;
         dom.statPapers.textContent = s.with_papers;
 
-        // Build filter buttons from categories
+        // Build filter buttons + legend from categories
         const tree = state.data.tree;
+        const legendCats = document.getElementById('legend-cats');
         tree.children.forEach(cat => {
             const btn = document.createElement('button');
             btn.className = 'filter-btn';
             btn.dataset.cat = cat.id;
-            btn.textContent = cat.id + '. ' + cat.name;
+            btn.innerHTML = `<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${CAT_COLORS[cat.id]||'#888'};margin-right:0.4rem;vertical-align:middle;"></span>${cat.id}. ${cat.name}`;
             btn.title = cat.name;
             btn.addEventListener('click', () => setCategoryFilter(cat.id));
             dom.filterButtons.appendChild(btn);
+
+            const lrow = document.createElement('div');
+            lrow.className = 'legend-row';
+            lrow.innerHTML = `<span class="legend-dot" style="background:${CAT_COLORS[cat.id]||'#888'}"></span> <span style="font-size:0.74rem;">${cat.id}. ${cat.name.length>22?cat.name.slice(0,22)+'…':cat.name}</span>`;
+            lrow.addEventListener('click', () => setCategoryFilter(cat.id));
+            legendCats.appendChild(lrow);
         });
         dom.filterButtons.querySelector('[data-cat="all"]').addEventListener('click', () => setCategoryFilter('all'));
 
-        // Search handler
+        // 3D graph toolbar
+        document.getElementById('g3d-rotate').addEventListener('click', toggleAutoRotate);
+        document.getElementById('g3d-recenter').addEventListener('click', recenterGraph);
+        document.getElementById('g3d-cooldown').addEventListener('click', toggleCooldown);
+
+        // Search handler (debounced to avoid heavy 3D re-renders on every keystroke)
+        let searchDebounce = null;
         dom.search.addEventListener('input', (e) => {
-            state.searchTerm = e.target.value.trim().toLowerCase();
-            renderCurrent();
+            const v = e.target.value.trim().toLowerCase();
+            clearTimeout(searchDebounce);
+            searchDebounce = setTimeout(() => {
+                state.searchTerm = v;
+                renderCurrent();
+            }, 220);
         });
 
         // View toggle
@@ -425,9 +528,23 @@
     function switchView(view) {
         state.currentView = view;
         dom.viewBtns.forEach(b => b.classList.toggle('active', b.dataset.view === view));
+        document.getElementById('graph3d').style.display = (view === 'graph3d') ? 'block' : 'none';
         document.getElementById('mindmap-svg').style.display = (view === 'mindmap') ? 'block' : 'none';
         document.getElementById('sunburst-svg').style.display = (view === 'sunburst') ? 'block' : 'none';
         dom.gridView.style.display = (view === 'grid') ? 'block' : 'none';
+
+        // Dark theme legend for 3D view
+        const legend = document.getElementById('legend');
+        const hint = document.getElementById('controls-hint');
+        if (view === 'graph3d') {
+            legend.classList.add('dark');
+            hint.classList.add('dark');
+            hint.textContent = 'Drag to rotate · Scroll to zoom · Click a node for details · Hover for label';
+        } else {
+            legend.classList.remove('dark');
+            hint.classList.remove('dark');
+            hint.textContent = 'Drag to pan · Scroll to zoom · Click any node to expand or open details';
+        }
         renderCurrent();
     }
 
@@ -464,9 +581,240 @@
 
     function renderCurrent() {
         const tree = getFilteredTree();
-        if (state.currentView === 'mindmap') renderMindmap(tree);
+        if (state.currentView === 'graph3d') renderGraph3D(tree);
+        else if (state.currentView === 'mindmap') renderMindmap(tree);
         else if (state.currentView === 'sunburst') renderSunburst(tree);
         else renderGrid(tree);
+    }
+
+    /* ---------- 3D Force Graph (graph-neural-network style) ---------- */
+    function buildGraphData(treeData) {
+        const nodes = [];
+        const links = [];
+        const seen = new Set();
+        function addNode(n) { if (!seen.has(n.id)) { nodes.push(n); seen.add(n.id); } }
+
+        const rootId = '__root__';
+        addNode({ id: rootId, name: treeData.name || 'Computational Materials Science', kind: 'root', val: 35, color: ROOT_COLOR });
+
+        treeData.children.forEach(cat => {
+            const cid = 'cat_' + cat.id;
+            const color = CAT_COLORS[cat.id] || '#888';
+            const catDisplay = categoryName(cat.name);
+            addNode({
+                id: cid, name: cat.name, kind: 'cat', cat_id: cat.id,
+                val: 22, color: color,
+                label: cat.id + '. ' + catDisplay,
+                displayName: catDisplay,
+                tier: cat.id,
+            });
+            links.push({ source: rootId, target: cid, value: 4 });
+
+            cat.children.forEach(sub => {
+                const sid = 'sub_' + cat.id + '_' + sub.id;
+                const subDisplay = cleanName(sub.name);
+                addNode({
+                    id: sid, name: sub.name, kind: 'sub', cat_id: cat.id,
+                    val: 10, color: color,
+                    label: sub.id + ' ' + subDisplay,
+                    displayName: subDisplay,
+                });
+                links.push({ source: cid, target: sid, value: 2 });
+
+                sub.children.forEach(leaf => {
+                    const tool = state.data.tools[leaf.idx];
+                    const tid = 't_' + tool.slug;
+                    const hasPaper = tool.papers && tool.papers.length > 0;
+                    addNode({
+                        id: tid,
+                        name: tool.name,
+                        kind: 'tool',
+                        cat_id: cat.id,
+                        toolIdx: leaf.idx,
+                        val: hasPaper ? 5.5 : 3.5,
+                        color: color,
+                        hasPaper: hasPaper,
+                        label: tool.name,
+                        displayName: tool.name,
+                    });
+                    links.push({ source: sid, target: tid, value: 1 });
+                });
+            });
+        });
+        return { nodes, links };
+    }
+
+    /* Build a Three.js sprite text label */
+    function makeLabel(text, color, size, opacity) {
+        const sprite = new SpriteText(text);
+        sprite.material.depthWrite = false;
+        sprite.color = color || '#ffffff';
+        sprite.textHeight = size || 4;
+        sprite.fontFace = 'Inter, sans-serif';
+        sprite.fontWeight = 600;
+        sprite.padding = 1.5;
+        sprite.borderRadius = 3;
+        sprite.backgroundColor = 'rgba(8,12,30,0.65)';
+        if (opacity !== undefined) sprite.material.opacity = opacity;
+        return sprite;
+    }
+
+    function renderGraph3D(treeData) {
+        const container = document.getElementById('graph3d');
+        const data = buildGraphData(treeData);
+
+        if (!state.graph3d) {
+            // First-time init
+            const Graph = ForceGraph3D()(container)
+                .backgroundColor('rgba(0,0,0,0)')
+                .nodeRelSize(3.5)
+                .nodeVal(n => n.val)
+                .nodeLabel(n => `<div style="background:rgba(20,28,55,0.95);color:#fff;padding:6px 10px;border-radius:6px;font-size:12px;border:1px solid rgba(255,255,255,0.18);box-shadow:0 4px 14px rgba(0,0,0,0.4);"><strong style="color:#74b9ff;">${escapeHtml(n.label || n.name)}</strong>${n.kind === 'tool' ? '<br><span style="color:#b0bce6;font-size:11px;">Click to view details' + (n.hasPaper ? ' · has paper' : '') + '</span>' : (n.kind === 'cat' ? '<br><span style="color:#b0bce6;font-size:11px;">Category</span>' : (n.kind === 'sub' ? '<br><span style="color:#b0bce6;font-size:11px;">Subcategory</span>' : ''))}</div>`)
+                .nodeColor(n => n.color)
+                .nodeOpacity(0.92)
+                .linkColor(() => 'rgba(170,185,220,0.35)')
+                .linkOpacity(0.5)
+                .linkWidth(l => (l.value || 1) * 0.4)
+                .linkDirectionalParticles(0)
+                .nodeThreeObject(n => {
+                    const group = new THREE.Group();
+                    let mesh;
+                    if (n.kind === 'root') {
+                        mesh = new THREE.Mesh(
+                            new THREE.IcosahedronGeometry(11, 1),
+                            new THREE.MeshPhongMaterial({ color: 0xffffff, emissive: 0x667eea, emissiveIntensity: 0.5, shininess: 90 })
+                        );
+                        group.add(mesh);
+                        const lbl = makeLabel('Computational Materials Science', '#ffffff', 5.5);
+                        lbl.position.set(0, 18, 0);
+                        group.add(lbl);
+                        return group;
+                    }
+                    if (n.kind === 'cat') {
+                        mesh = new THREE.Mesh(
+                            new THREE.OctahedronGeometry(7),
+                            new THREE.MeshPhongMaterial({ color: n.color, emissive: n.color, emissiveIntensity: 0.45, shininess: 70 })
+                        );
+                        group.add(mesh);
+                        // Big always-visible category label above
+                        const lbl = makeLabel(n.label, '#ffffff', 5.5);
+                        lbl.position.set(0, 12, 0);
+                        group.add(lbl);
+                        return group;
+                    }
+                    if (n.kind === 'sub') {
+                        mesh = new THREE.Mesh(
+                            new THREE.SphereGeometry(3.2, 18, 18),
+                            new THREE.MeshPhongMaterial({ color: n.color, emissive: n.color, emissiveIntensity: 0.25, shininess: 45 })
+                        );
+                        group.add(mesh);
+                        // Always-visible (smaller) subcategory label
+                        const lbl = makeLabel(n.displayName, '#e8edff', 3.5, 0.92);
+                        lbl.position.set(0, 7, 0);
+                        group.add(lbl);
+                        return group;
+                    }
+                    // Tool node - small, label only on hover via tooltip
+                    mesh = new THREE.Mesh(
+                        new THREE.SphereGeometry(n.hasPaper ? 2.2 : 1.7, 12, 12),
+                        new THREE.MeshPhongMaterial({
+                            color: n.color,
+                            emissive: n.hasPaper ? PAPER_GLOW : n.color,
+                            emissiveIntensity: n.hasPaper ? 0.6 : 0.22,
+                            shininess: 30,
+                        })
+                    );
+                    group.add(mesh);
+                    return group;
+                })
+                .onNodeClick(n => {
+                    // Stop auto-rotation so the focus stays on the clicked node
+                    if (state.graph3dRotate) {
+                        state.graph3dRotate = false;
+                        document.getElementById('g3d-rotate').classList.remove('active');
+                    }
+                    // Aim camera at clicked node
+                    const distance = 60;
+                    const distRatio = 1 + distance / Math.hypot(n.x || 1, n.y || 1, n.z || 1);
+                    Graph.cameraPosition(
+                        { x: (n.x || 0) * distRatio, y: (n.y || 0) * distRatio, z: (n.z || 0) * distRatio },
+                        n,
+                        800
+                    );
+                    if (n.kind === 'tool' && typeof n.toolIdx === 'number') {
+                        setTimeout(() => showDetail(state.data.tools[n.toolIdx]), 250);
+                    }
+                })
+                .onNodeHover(n => {
+                    container.style.cursor = n ? 'pointer' : null;
+                });
+
+            // Forces tuning for clean spacing - more breathing room between tiers
+            Graph.d3Force('charge').strength(-160);
+            Graph.d3Force('link').distance(l => {
+                if (l.source && typeof l.source === 'object') {
+                    if (l.source.kind === 'root') return 130;   // root <-> categories far apart
+                    if (l.source.kind === 'cat')  return 75;    // category <-> subcategory
+                    if (l.source.kind === 'sub')  return 28;    // subcategory <-> tool
+                }
+                return 40;
+            });
+            // Slow it down a bit so the layout settles smoothly
+            Graph.d3VelocityDecay(0.35);
+
+            state.graph3d = Graph;
+
+            // Auto-rotate camera
+            startAutoRotate();
+        }
+
+        // (Re)load data
+        state.graph3d.graphData(data);
+
+        // Resize on container size
+        const rect = container.getBoundingClientRect();
+        state.graph3d.width(rect.width).height(rect.height);
+    }
+
+    function startAutoRotate() {
+        if (!state.graph3d) return;
+        const Graph = state.graph3d;
+        let angle = 0;
+        const distance = 520;
+        function tick() {
+            if (state.currentView === 'graph3d' && state.graph3dRotate) {
+                angle += Math.PI / 800;
+                Graph.cameraPosition({ x: distance * Math.sin(angle), z: distance * Math.cos(angle) });
+            }
+            requestAnimationFrame(tick);
+        }
+        tick();
+    }
+
+    function toggleAutoRotate() {
+        state.graph3dRotate = !state.graph3dRotate;
+        document.getElementById('g3d-rotate').classList.toggle('active', state.graph3dRotate);
+    }
+
+    function recenterGraph() {
+        if (!state.graph3d) return;
+        state.graph3d.zoomToFit(800, 60);
+    }
+
+    function toggleCooldown() {
+        if (!state.graph3d) return;
+        const btn = document.getElementById('g3d-cooldown');
+        state.graph3dCooled = !state.graph3dCooled;
+        if (state.graph3dCooled) {
+            state.graph3d.cooldownTicks(0);   // freeze physics
+            btn.classList.add('active');
+            btn.innerHTML = '<i class="fas fa-fire"></i> Resume Layout';
+        } else {
+            state.graph3d.cooldownTicks(Infinity);
+            state.graph3d.d3ReheatSimulation();
+            btn.classList.remove('active');
+            btn.innerHTML = '<i class="fas fa-snowflake"></i> Freeze Layout';
+        }
     }
 
     /* ---------- Mind map (collapsible radial tree) ---------- */
@@ -475,29 +823,52 @@
     function renderMindmap(treeData) {
         const svgEl = document.getElementById('mindmap-svg');
         const rect = svgEl.getBoundingClientRect();
-        const width = rect.width;
-        const height = 720;
-        const radius = Math.min(width, height) / 2 - 40;
+        const width = rect.width || 1200;
+        const height = 820;
+        const radius = Math.min(width, height) / 2 - 90; // more breathing room around perimeter
 
         const svg = d3.select(svgEl);
         svg.selectAll('*').remove();
-        svg.attr('viewBox', [-width / 2, -height / 2, width, height]);
+        svg.attr('viewBox', [-width / 2, -height / 2, width, height])
+           .style('font-family', "'Inter', sans-serif");
+
+        // Subtle background ring guides
+        const guides = svg.append('g').attr('class', 'guides').attr('opacity', 0.4);
+        [radius * 0.33, radius * 0.66, radius].forEach(r => {
+            guides.append('circle').attr('r', r).attr('fill', 'none').attr('stroke', '#eef1f5').attr('stroke-dasharray', '2,4');
+        });
 
         const g = svg.append('g');
 
         // Zoom
-        const zoom = d3.zoom().scaleExtent([0.3, 3]).on('zoom', (e) => g.attr('transform', e.transform));
+        const zoom = d3.zoom().scaleExtent([0.3, 4]).on('zoom', (e) => g.attr('transform', e.transform));
         svg.call(zoom);
 
         const root = d3.hierarchy(treeData);
-        // Collapse all tool-level nodes initially if many
+        // Initial state: root + categories visible; subcategories visible; tools collapsed (less clutter)
         root.descendants().forEach(d => {
-            if (d.depth >= 2 && d.children) { d._children = d.children; d.children = null; }
+            if (d.depth >= 3 && d.children) { d._children = d.children; d.children = null; }
         });
 
-        const tree = d3.tree().size([2 * Math.PI, radius]).separation((a, b) => (a.parent === b.parent ? 1 : 1.4) / a.depth);
+        const tree = d3.tree()
+            .size([2 * Math.PI, radius])
+            .separation((a, b) => (a.parent === b.parent ? 1 : 2) / Math.max(a.depth, 1));
 
         update(root);
+
+        function colorForNode(d) {
+            if (d.depth === 0) return '#764ba2';
+            if (d.depth === 1) return CAT_COLORS[d.data.id] || '#667eea';
+            // Inherit category color from ancestor
+            let anc = d;
+            while (anc && anc.depth > 1) anc = anc.parent;
+            const cid = anc && anc.data ? anc.data.id : null;
+            const base = CAT_COLORS[cid] || '#74b9ff';
+            if (d.depth === 2) return d3.color(base).copy({ opacity: 1 }).brighter(0.5).formatHex();
+            // Tool
+            if (d.data.leaf && hasPaper(d.data)) return '#e74c3c';
+            return base;
+        }
 
         function update(source) {
             tree(root);
@@ -507,8 +878,16 @@
             // Links
             const link = g.selectAll('.link').data(links, d => d.target.data.id || d.target.data.name);
             link.enter().append('path').attr('class', 'link')
+                .attr('stroke-opacity', 0)
                 .merge(link)
-                .transition().duration(300)
+                .transition().duration(380)
+                .attr('stroke-opacity', 0.65)
+                .attr('stroke', d => {
+                    let anc = d.target;
+                    while (anc && anc.depth > 1) anc = anc.parent;
+                    return anc && anc.data ? (CAT_COLORS[anc.data.id] || '#cbd3dc') : '#cbd3dc';
+                })
+                .attr('stroke-width', d => d.target.depth === 1 ? 2 : d.target.depth === 2 ? 1.4 : 1)
                 .attr('d', d3.linkRadial().angle(d => d.x).radius(d => d.y));
             link.exit().remove();
 
@@ -517,6 +896,7 @@
             const nodeEnter = node.enter().append('g')
                 .attr('class', d => 'node ' + (d.depth === 0 ? 'root' : d.depth === 1 ? 'cat' : d.depth === 2 ? 'sub' : 'tool') + (d.data.leaf && hasPaper(d.data) ? ' has-paper' : ''))
                 .attr('transform', d => `rotate(${(d.x - Math.PI/2) * 180 / Math.PI}) translate(${d.y},0)`)
+                .style('cursor', 'pointer')
                 .on('click', (e, d) => {
                     if (d.data.leaf) {
                         showDetail(state.data.tools[d.data.idx]);
@@ -526,18 +906,38 @@
                         update(d);
                     }
                 });
-            nodeEnter.append('circle').attr('r', d => d.depth === 0 ? 9 : d.depth === 1 ? 7 : d.depth === 2 ? 5 : 4);
-            nodeEnter.append('title').text(d => d.data.name + (d.data.leaf ? ' — click to view details' : ' — click to expand/collapse'));
+
+            nodeEnter.append('circle')
+                .attr('r', d => d.depth === 0 ? 14 : d.depth === 1 ? 11 : d.depth === 2 ? 7.5 : 5)
+                .attr('fill', d => colorForNode(d))
+                .attr('stroke', d => d3.color(colorForNode(d)).darker(0.4).formatHex())
+                .attr('stroke-width', d => d.depth <= 1 ? 3 : 1.8);
+
+            nodeEnter.append('title').text(d => d.data.name + (d.data.leaf ? ' — click to view details' : (d._children ? ' — click to expand' : ' — click to collapse')));
+
             nodeEnter.append('text')
                 .attr('dy', '0.32em')
-                .attr('x', d => d.x < Math.PI ? 8 : -8)
+                .attr('x', d => d.x < Math.PI ? 14 : -14)
                 .attr('text-anchor', d => d.x < Math.PI ? 'start' : 'end')
                 .attr('transform', d => d.x >= Math.PI ? 'rotate(180)' : null)
-                .text(d => truncate(d.data.name, d.depth === 3 ? 18 : 26));
+                .style('font-size', d => d.depth === 0 ? '17px' : d.depth === 1 ? '15px' : d.depth === 2 ? '12.5px' : '11.5px')
+                .style('font-weight', d => d.depth <= 1 ? 700 : d.depth === 2 ? 600 : 500)
+                .style('fill', d => d.depth <= 1 ? '#1f2d3d' : d.depth === 2 ? '#2c3e50' : '#445261')
+                .style('paint-order', 'stroke')
+                .style('stroke', '#ffffff')
+                .style('stroke-width', '3.5px')
+                .style('stroke-linejoin', 'round')
+                .text(d => {
+                    const name = d.depth === 2 ? cleanName(d.data.name) : (d.depth === 1 ? categoryName(d.data.name) : d.data.name);
+                    return truncate(name, d.depth === 3 ? 22 : d.depth === 2 ? 30 : 36);
+                });
 
             const nodeAll = nodeEnter.merge(node);
-            nodeAll.transition().duration(300)
+            nodeAll.transition().duration(380)
                 .attr('transform', d => `rotate(${(d.x - Math.PI/2) * 180 / Math.PI}) translate(${d.y},0)`);
+
+            // Update colors on existing nodes (e.g. after filter changes)
+            nodeAll.select('circle').attr('fill', d => colorForNode(d));
 
             node.exit().remove();
         }
@@ -554,31 +954,43 @@
     function renderSunburst(treeData) {
         const svgEl = document.getElementById('sunburst-svg');
         const rect = svgEl.getBoundingClientRect();
-        const width = rect.width;
-        const height = 720;
-        const radius = Math.min(width, height) / 2;
+        const width = rect.width || 1200;
+        const height = 820;
+        const radius = Math.min(width, height) / 2 - 20;
 
         const svg = d3.select(svgEl);
         svg.selectAll('*').remove();
-        svg.attr('viewBox', [-width / 2, -height / 2, width, height]);
+        svg.attr('viewBox', [-width / 2, -height / 2, width, height])
+           .style('font-family', "'Inter', sans-serif");
 
         const root = d3.hierarchy(treeData).count();
         d3.partition().size([2 * Math.PI, radius])(root);
 
         const arc = d3.arc()
             .startAngle(d => d.x0).endAngle(d => d.x1)
-            .innerRadius(d => d.y0).outerRadius(d => d.y1 - 1);
+            .innerRadius(d => d.y0).outerRadius(d => d.y1 - 1.5)
+            .padAngle(0.003).cornerRadius(2);
 
-        const colorByDepth = ['#764ba2', '#667eea', '#74b9ff', '#2ecc71'];
+        function sunColor(d) {
+            if (d.depth === 0) return '#764ba2';
+            // Find the category ancestor
+            let anc = d;
+            while (anc && anc.depth > 1) anc = anc.parent;
+            const base = (anc && anc.data && CAT_COLORS[anc.data.id]) || '#74b9ff';
+            const c = d3.color(base);
+            if (d.depth === 1) return base;
+            if (d.depth === 2) return c.copy({ opacity: 0.78 }).formatHex8 ? c.copy({ opacity: 0.78 }).formatHex8() : c.brighter(0.4).formatHex();
+            // tool
+            if (hasPaper(d.data)) return d3.color('#e74c3c').formatHex();
+            return c.brighter(0.7).formatHex();
+        }
 
         svg.append('g')
             .selectAll('path')
             .data(root.descendants().filter(d => d.depth))
             .join('path')
-            .attr('fill', d => {
-                if (d.depth === 3 && hasPaper(d.data)) return '#e67e22';
-                return colorByDepth[d.depth] || '#bdc3c7';
-            })
+            .attr('fill', d => sunColor(d))
+            .attr('stroke', '#ffffff').attr('stroke-width', 1)
             .attr('d', arc)
             .style('cursor', 'pointer')
             .on('click', (e, d) => {
@@ -589,7 +1001,13 @@
         svg.append('g')
             .attr('pointer-events', 'none')
             .attr('text-anchor', 'middle')
-            .attr('font-size', 9)
+            .attr('fill', '#ffffff')
+            .style('font-family', "'Inter', sans-serif")
+            .style('font-weight', 600)
+            .style('paint-order', 'stroke')
+            .style('stroke', 'rgba(0,0,0,0.4)')
+            .style('stroke-width', '2.5px')
+            .style('stroke-linejoin', 'round')
             .selectAll('text')
             .data(root.descendants().filter(d => d.depth && (d.y1 - d.y0) * (d.x1 - d.x0) > 0.05 && d.depth < 3))
             .join('text')
@@ -599,7 +1017,13 @@
                 return `rotate(${x - 90}) translate(${y},0) rotate(${x < 180 ? 0 : 180})`;
             })
             .attr('dy', '0.35em')
-            .text(d => truncate(d.data.name, 14));
+            .style('font-size', d => d.depth === 1 ? '13px' : '11px')
+            .text(d => {
+                const name = d.depth === 2 ? cleanName(d.data.name) : categoryName(d.data.name);
+                const arc = (d.x1 - d.x0) * (d.y0 + d.y1) / 2;
+                const maxLen = Math.max(6, Math.floor(arc / 7));
+                return truncate(name, maxLen);
+            });
 
         function hasPaper(leaf) {
             const t = state.data.tools[leaf.idx];
@@ -611,14 +1035,20 @@
     function renderGrid(treeData) {
         let html = '';
         treeData.children.forEach(cat => {
-            html += `<div class="category-block"><h3>${cat.id}. ${escapeHtml(cat.name)} <span style="color:var(--muted);font-weight:500;font-size:0.85rem;">(${countLeaves(cat)} tools)</span></h3>`;
+            const color = CAT_COLORS[cat.id] || '#888';
+            const catDisplay = categoryName(cat.name);
+            html += `<div class="category-block" style="border-top: 4px solid ${color};">`;
+            html += `<h3 style="border-left-color:${color};"><span class="cat-num" style="background:${color};">${escapeHtml(cat.id)}</span><span>${escapeHtml(catDisplay)}</span><span style="color:var(--muted);font-weight:500;font-size:0.95rem;margin-left:auto;">${countLeaves(cat)} tools</span></h3>`;
             cat.children.forEach(sub => {
-                html += `<div class="subcat-block"><h4>${escapeHtml(sub.id)} ${escapeHtml(sub.name)} <span style="color:var(--muted);font-weight:400;">— ${sub.children.length}</span></h4>`;
+                const subDisplay = cleanName(sub.name);
+                html += `<div class="subcat-block"><h4><span class="sub-id">${escapeHtml(sub.id)}</span><span>${escapeHtml(subDisplay)}</span><span class="sub-count">${sub.children.length} tools</span></h4>`;
                 html += '<div class="tool-chips">';
                 sub.children.forEach(leaf => {
                     const t = state.data.tools[leaf.idx];
-                    const cls = (t.papers && t.papers.length) ? 'tool-chip has-paper' : 'tool-chip';
-                    html += `<a href="#tool=${encodeURIComponent(t.slug)}" class="${cls}" data-idx="${leaf.idx}">${escapeHtml(t.name)}</a>`;
+                    const hasPaper = t.papers && t.papers.length;
+                    const cls = hasPaper ? 'tool-chip has-paper' : 'tool-chip';
+                    const style = hasPaper ? `background: ${color}22; border-color: ${color}55; color: ${d3color(color, 0.85)};` : '';
+                    html += `<a href="#tool=${encodeURIComponent(t.slug)}" class="${cls}" data-idx="${leaf.idx}" style="${style}">${escapeHtml(t.name)}</a>`;
                 });
                 html += '</div></div>';
             });
@@ -632,6 +1062,13 @@
                 showDetail(state.data.tools[parseInt(el.dataset.idx)]);
             });
         });
+    }
+    function d3color(hex, mix) {
+        // Darken a hex toward black by 1-mix amount; mix=0.85 => slightly darker
+        try {
+            const c = d3.color(hex);
+            return c.darker(0.6).formatHex();
+        } catch (e) { return hex; }
     }
 
     function countLeaves(node) {
@@ -661,12 +1098,14 @@
             papersHtml = `<div class="detail-section"><h3><i class="fas fa-book"></i> Papers</h3><p style="color:var(--muted);font-style:italic;font-size:0.88rem;">No paper PDFs uploaded yet.</p></div>`;
         }
 
-        const tags = [tool.category, tool.subcategory, tool.confidence].filter(Boolean)
+        const subClean = cleanName(tool.subcategory || '');
+        const catClean = categoryName(tool.category || '');
+        const tags = [catClean, subClean, tool.confidence].filter(Boolean)
             .map(t => `<span class="detail-tag">${escapeHtml(t)}</span>`).join('');
 
         dom.detailContent.innerHTML = `
             <h2>${escapeHtml(tool.name)}</h2>
-            <div class="detail-meta">${escapeHtml(tool.category_id || '')}. ${escapeHtml(tool.category)} &nbsp;/&nbsp; ${escapeHtml(tool.subcategory || '')}</div>
+            <div class="detail-meta">${escapeHtml(tool.category_id || '')}. ${escapeHtml(catClean)} &nbsp;/&nbsp; ${escapeHtml(subClean)}</div>
             <div class="detail-tags">${tags}</div>
             <div class="detail-actions">${officialBtn}${seoBtn}${mdBtn}</div>
             ${tool.overview ? `<div class="detail-section"><h3><i class="fas fa-info-circle"></i> Overview</h3><p>${escapeHtml(tool.overview)}</p></div>` : ''}
