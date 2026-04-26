@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nested_wloop | TIGHT-BINDING | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="**nested_wloop** is a specialized Python toolkit designed to extend **PythTB** for the characterization of **Higher-Order Topological Insulators (HOTIs)** and **Fragile Topology**. It implements the numerical calculation of **Nested Wilson Loops**—a hierarchical Berry phase technique required to ide">
+    <meta name="keywords" content="nested_wloop, TIGHT-BINDING, Topological Analysis, computational materials science, DFT, simulation tool, nested_wloop code, nested_wloop software, nested_wloop tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/nested_wloop.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="nested_wloop | TIGHT-BINDING | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="**nested_wloop** is a specialized Python toolkit designed to extend **PythTB** for the characterization of **Higher-Order Topological Insulators (HOTIs)** and **Fragile Topology**. It implements the numerical calculation of **Nested Wilson Loops**—a hierarchical Berry phase technique required to ide">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/nested_wloop.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "nested_wloop",
+      "applicationCategory": "ScienceApplication",
+      "description": "**nested_wloop** is a specialized Python toolkit designed to extend **PythTB** for the characterization of **Higher-Order Topological Insulators (HOTIs)** and **Fragile Topology**. It implements the numerical calculation of **Nested Wilson Loops**—a hierarchical Berry phase technique required to ide",
+      "url": "https://indranil2020.github.io/tools/db/nested_wloop.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>4. TIGHT-BINDING</span>
+                <span> &nbsp;/&nbsp; 4.4 Topological Analysis</span>
+            </div>
+            <h1>nested_wloop</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 4. TIGHT-BINDING</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 4.4 Topological Analysis</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://github.com/kuansenlin/nested_and_spin_resolved_Wilson_loop" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">**nested_wloop** is a specialized Python toolkit designed to extend **PythTB** for the characterization of **Higher-Order Topological Insulators (HOTIs)** and **Fragile Topology**. It implements the numerical calculation of **Nested Wilson Loops**—a hierarchical Berry phase technique required to identify quadrupole and octupole insulators—as well as Spin-Resolved Wilson loops for systems with approximate time-reversal symmetry.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted"><em>No paper PDFs uploaded yet for this code.</em></p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># nested_wloop
+
+## Official Resources
+- **Homepage**: https://github.com/kuansenlin/nested_and_spin_resolved_Wilson_loop
+- **Repository**: https://github.com/kuansenlin/nested_and_spin_resolved_Wilson_loop
+- **License**: MIT License
+
+## Overview
+**nested_wloop** is a specialized Python toolkit designed to extend **PythTB** for the characterization of **Higher-Order Topological Insulators (HOTIs)** and **Fragile Topology**. It implements the numerical calculation of **Nested Wilson Loops**—a hierarchical Berry phase technique required to identify quadrupole and octupole insulators—as well as Spin-Resolved Wilson loops for systems with approximate time-reversal symmetry.
+
+**Scientific domain**: Higher-Order Topology, Fragile Phases
+**Target user community**: Theorists characterizing HOTIs and Twisted Bilayers
+
+## Theoretical Methods
+- **Nested Wilson Loop**: Diagonalization of the standard Wilson loop unitary $W_1$, followed by a second Wilson loop calculation along the remaining direction for the Wannier bands of $W_1$.
+- **Spin-Resolved Wilson Loop**: Projecting the Wilson loop onto spin sectors ($P_{\uparrow} W P_{\uparrow}$) to define Spin Chern numbers in the absence of $S_z$ conservation.
+- **Multipole Moments**: Calculation of bulk quadrupole moments $q_{xy}$ via nested geometric phases.
+
+## Capabilities (CRITICAL)
+- **HOTI Diagnosis**:
+  - Identifies 2nd order topological insulators (corner states).
+  - Calculates quadrupole invariants.
+- **Fragile Topology**:
+  - Detects "Fragile" bands that have trivial Chern number but non-trivial spin winding.
+- **Workflow**:
+  - Takes a `pythtb.tb_model` as input.
+  - returns nested Wannier charge center spectra.
+
+## Key Strengths
+- **Cutting Edge**: One of the few public implementations of the *Benalcazar-Bernevig-Hughes (BBH)* nested loop procedure.
+- **Integration**: Works directly with PythTB models, meaning users don't need to rewrite their Hamiltonians to use this advanced analysis.
+- **Fragile Phases**: Essential for the modern study of "Wannier Obstructions" in twisted bilayer graphene and similar moiré systems.
+
+## Inputs & Outputs
+- **Inputs**: PythTB model object.
+- **Outputs**: Plots of Nested Wannier Spectra ($\nu_y$ vs $k_x$).
+
+## Interfaces & Ecosystem
+- **Dependency**: PythTB (must be installed).
+- **Language**: Python 3.
+
+## Performance Characteristics
+- **Complexity**: $O(N_k^2)$ due to the nested integration. Slower than standard Berry phase but manageable for typical tight-binding grids ($100 \times 100$).
+- **Scalability**: Serial execution.
+
+## Comparison with Other Codes
+- **vs. Z2Pack**: Z2Pack does standard Wilson loops perfectly. nested_wloop adds the specific *nested* functionality for HOTIs which Z2Pack doesn't natively expose in a "one-shot" function.
+- **vs. WannierTools**: WannierTools computes corner states via creating finite clusters (real space). nested_wloop predicts them from the *bulk* Bloch functions (momentum space).
+
+## Application Areas
+- **Quadrupole Insulators**: Checking the $\mathbb{Z}_2 \times \mathbb{Z}_2$ classification.
+- **Twisted Bilayers**: Diagnosing fragile topology in flat bands.
+
+## Community and Support
+- **Development**: Kuan-Sen Lin.
+- **Source**: GitHub.
+
+n## Computational Cost
+- **Typical calculation**: See official documentation for performance benchmarks
+n## Limitations & Known Constraints
+- **Known limitations**: See official documentation for scope and constraints
+n## Best Practices
+- **Usage**: See official documentation for recommended workflows
+## Verification & Sources
+- **Repository**: [https://github.com/kuansenlin/nested_and_spin_resolved_Wilson_loop](https://github.com/kuansenlin/nested_and_spin_resolved_Wilson_loop)
+- **Verification status**: ✅ VERIFIED
+  - Specialized research extension.
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

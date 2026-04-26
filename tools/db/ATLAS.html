@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATLAS | GROUND-STATE DFT | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="ATLAS is a specialized Orbital-Free Density Functional Theory (OF-DFT) software package. Unlike Kohn-Sham DFT, ATLAS solves for the electron density directly without using orbitals, typically employing a real-space finite-difference method. This allows it to scale linearly with system size (O(N)) wi">
+    <meta name="keywords" content="ATLAS, GROUND-STATE DFT, Orbital Free DFT, computational materials science, DFT, simulation tool, ATLAS code, ATLAS software, ATLAS tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/ATLAS.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ATLAS | GROUND-STATE DFT | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="ATLAS is a specialized Orbital-Free Density Functional Theory (OF-DFT) software package. Unlike Kohn-Sham DFT, ATLAS solves for the electron density directly without using orbitals, typically employing a real-space finite-difference method. This allows it to scale linearly with system size (O(N)) wi">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/ATLAS.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ATLAS",
+      "applicationCategory": "ScienceApplication",
+      "description": "ATLAS is a specialized Orbital-Free Density Functional Theory (OF-DFT) software package. Unlike Kohn-Sham DFT, ATLAS solves for the electron density directly without using orbitals, typically employing a real-space finite-difference method. This allows it to scale linearly with system size (O(N)) wi",
+      "url": "https://indranil2020.github.io/tools/db/ATLAS.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>1. GROUND-STATE DFT</span>
+                <span> &nbsp;/&nbsp; 1.10 Orbital Free DFT</span>
+            </div>
+            <h1>ATLAS</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 1. GROUND-STATE DFT</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 1.10 Orbital Free DFT</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <span class="muted">Official link: Research Code (Mi et al., CPC 2016)</span>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">ATLAS is a specialized Orbital-Free Density Functional Theory (OF-DFT) software package. Unlike Kohn-Sham DFT, ATLAS solves for the electron density directly without using orbitals, typically employing a real-space finite-difference method. This allows it to scale linearly with system size (O(N)) with a very small prefactor, enabling simulations of millions of atoms, particularly for main-group metals (like Al, Mg) where OF-DFT kinetic energy functionals are accurate.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted"><em>No paper PDFs uploaded yet for this code.</em></p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># ATLAS (Orbital-Free DFT)
+
+## Official Resources
+- Repository/Source: Research code (referenced in literature, specific repo private/restricted)
+- Key Publication: *Mi et al., Comp. Phys. Comm. 200, 87 (2016)*
+- License: Academic/Research
+
+## Overview
+ATLAS is a specialized Orbital-Free Density Functional Theory (OF-DFT) software package. Unlike Kohn-Sham DFT, ATLAS solves for the electron density directly without using orbitals, typically employing a real-space finite-difference method. This allows it to scale linearly with system size (O(N)) with a very small prefactor, enabling simulations of millions of atoms, particularly for main-group metals (like Al, Mg) where OF-DFT kinetic energy functionals are accurate.
+
+**Scientific domain**: Large-scale metallurgy, Warm Consensus Matter, High-pressure physics
+**Target user community**: Method developers, Metallurgists modeling dislocations/grain boundaries
+
+## Theoretical Methods
+- Orbital-Free Density Functional Theory (OF-DFT)
+- Real-Space Finite-Difference method
+- Wang-Teter / Thomas-Fermi-von Weizsäcker Kinetic Energy Functionals
+- Local pseudopotentials (bulk-derived)
+- Non-local density kernels (for kinetic energy)
+- Newton-Krylov optimization algorithms
+
+## Capabilities (CRITICAL)
+- **System Size**: Routine >100,000 atoms; Capable of millions.
+- **Materials**: Primarily simple metals (Al, Mg, Li, Na) and their alloys.
+- **Output**: Direct equilibrium density, total energy, forces, stress.
+- **Simulation**: Geometry optimization, Molecular Dynamics.
+
+## Key Strengths
+
+### Linear Scaling O(N):
+- By avoiding orbitals and orthogonalization, computational cost scales purely linearly with volume/atoms.
+- Allows simulation of mesoscopic features (dislocations, voids) at quantum accuracy.
+
+### Robust Minimization:
+- Implements advanced numerical algorithms (trust-region Newton methods) to ensure convergence of the highly non-linear OF-DFT energy functional.
+
+## Inputs & Outputs
+- **Inputs**:
+  - Cell dimensions
+  - Ion positions
+  - Functional choice (TF, vW, WT, etc.)
+  - Local Pseudopotential parameters
+- **Outputs**:
+  - Total Energy
+  - Electron Density (real space grid)
+  - Forces
+
+## Interfaces & Ecosystem
+- **Standalone**: Typically runs as a standalone solver.
+- **Integration**: Methods often cross-pollinate with PROFESS.
+
+## Advanced Features
+- **Mixed Basis**: Some versions explore mixed basis or adaptive grids.
+- **Parallelization**: MPI parallelization over spatial domains.
+
+## Performance Characteristics
+- **Speed**: Extremely fast compared to KS-DFT for large systems (orders of magnitude).
+- **Memory**: very low memory footprint (density only, no wavefunctions).
+
+## Computational Cost
+- **Very Low**: Can simulate thousands of atoms on a workstation.
+
+## Limitations & Known Constraints
+- **Accuracy**: Limited by the accuracy of the Kinetic Energy Density Functional (KEDF). High accuracy only for "simple" metals (Al, Mg). Failed for Transition Metals (d-electrons) and covalent bonds (Si, C) without advanced/modern functionals.
+- **Pseudopotentials**: Must use Local Pseudopotentials (LPS), which transfers less well than Non-Local ones.
+
+## Comparison with Other Codes
+- **vs PROFESS**: PROFESS is the leading open-source OF-DFT code; ATLAS is a robust alternative often used for specific benchmarks or internal research.
+- **vs VASP**: ATLAS is fundamentally different (orbital-free vs Kohn-Sham); ATLAS wins on size, VASP wins on versatility/accuracy.
+- **Unique strength**: Specialized optimization algorithms for solving the Euler-Lagrange equation of OF-DFT.
+
+## Application Areas
+- **Metallurgy**: Study of grain boundaries, dislocations, and stacking faults in Aluminum/Magnesium.
+- **Liquid Metals**: Large scale MD of liquid metals.
+- **Warm Dense Matter**: High temperature electron gas simulations.
+
+## Best Practices
+- **Check Material**: Only apply to Al/Mg/Li unless you are testing new functionals.
+- **Validate KEDF**: Ensure the chosen Kinetic Energy Functional reproduces KS-DFT properties for the bulk phase first.
+
+## Community and Support
+- **Research Based**: Support is via the authors of the key papers (e.g., W. Mi, H. Wang).
+
+## Verification & Sources
+**Primary sources**:
+1. Mi, W., et al., "ATLAS: A real-space finite-difference implementation of orbital-free density functional theory", *Computer Physics Communications*, 200, 87-95 (2016).
+
+**Verification status**: ✅ VERIFIED
+- Existence: Confirmed via widely cited CPC publication.
+- Availability: Research-grade distribution.
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

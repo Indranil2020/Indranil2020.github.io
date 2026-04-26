@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplety | POST-PROCESSING | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="**Multiplety** is a Python package for multiplet calculations of X-ray absorption (XAS) and resonant inelastic X-ray scattering (RIXS) spectra using the Cowan's atomic code and Racer programs. It provides a Jupyter notebook-based interface for setting up and running multiplet calculations for transi">
+    <meta name="keywords" content="Multiplety, POST-PROCESSING, Spectroscopy Simulation, computational materials science, DFT, simulation tool, Multiplety code, Multiplety software, Multiplety tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/Multiplety.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Multiplety | POST-PROCESSING | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="**Multiplety** is a Python package for multiplet calculations of X-ray absorption (XAS) and resonant inelastic X-ray scattering (RIXS) spectra using the Cowan's atomic code and Racer programs. It provides a Jupyter notebook-based interface for setting up and running multiplet calculations for transi">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/Multiplety.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Multiplety",
+      "applicationCategory": "ScienceApplication",
+      "description": "**Multiplety** is a Python package for multiplet calculations of X-ray absorption (XAS) and resonant inelastic X-ray scattering (RIXS) spectra using the Cowan's atomic code and Racer programs. It provides a Jupyter notebook-based interface for setting up and running multiplet calculations for transi",
+      "url": "https://indranil2020.github.io/tools/db/Multiplety.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>8. POST-PROCESSING</span>
+                <span> &nbsp;/&nbsp; 8.5 Spectroscopy Simulation</span>
+            </div>
+            <h1>Multiplety</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 8. POST-PROCESSING</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 8.5 Spectroscopy Simulation</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://github.com/gfabbris/multiplety" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">**Multiplety** is a Python package for multiplet calculations of X-ray absorption (XAS) and resonant inelastic X-ray scattering (RIXS) spectra using the Cowan's atomic code and Racer programs. It provides a Jupyter notebook-based interface for setting up and running multiplet calculations for transition metal and rare-earth systems.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted"><em>No paper PDFs uploaded yet for this code.</em></p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># Multiplety
+
+## Official Resources
+- Source Repository: https://github.com/gfabbris/multiplety
+- License: Open source
+
+## Overview
+**Multiplety** is a Python package for multiplet calculations of X-ray absorption (XAS) and resonant inelastic X-ray scattering (RIXS) spectra using the Cowan's atomic code and Racer programs. It provides a Jupyter notebook-based interface for setting up and running multiplet calculations for transition metal and rare-earth systems.
+
+**Scientific domain**: Multiplet X-ray spectroscopy, atomic physics  
+**Target user community**: Researchers studying core-level spectra of correlated transition metal and rare-earth systems
+
+## Theoretical Methods
+- Cowan's atomic code (Hartree-Fock with relativistic corrections)
+- Racer code for transition matrices
+- Crystal field theory
+- Configuration interaction (CI)
+- Spin-orbit coupling
+- Slater-Condon parameter scaling
+- Multiplet theory
+
+## Capabilities (CRITICAL)
+- X-ray absorption spectroscopy (XAS) multiplet calculations
+- RIXS multiplet calculations
+- XAS dichroism (XMCD, XMLD)
+- Temperature-dependent spectra
+- Polarization-dependent spectra
+- Interactive Jupyter notebook interface
+- Automatic parameter setup from Cowan's code
+- Custom crystal field splitting
+- Slater-Condon parameter scaling
+
+**Sources**: GitHub repository, Cowan's code documentation
+
+## Key Strengths
+
+### Cowan's Code Integration:
+- Well-established atomic multiplet code
+- Accurate radial integrals
+- Relativistic corrections included
+- Systematic parameter scaling
+- Decades of validation
+
+### User-Friendly Interface:
+- Jupyter notebook workflow
+- Interactive parameter adjustment
+- Visual output
+- Step-by-step tutorials
+- Python scripting
+
+### Spectroscopy Coverage:
+- XAS with multiplet structure
+- RIXS with full multiplet treatment
+- Dichroism calculations
+- Temperature effects
+- Polarization dependence
+
+## Inputs & Outputs
+- **Input formats**:
+  - Python/Jupyter notebooks
+  - Atomic configuration specifications
+  - Crystal field parameters
+  - Slater-Condon scaling factors
+  
+- **Output data types**:
+  - XAS spectra
+  - RIXS maps
+  - Dichroism spectra
+  - Energy level diagrams
+  - Transition matrices
+
+## Interfaces & Ecosystem
+- **Cowan's code**: Required external dependency
+- **Racer**: Required for transition matrices
+- **Jupyter**: Interactive interface
+- **Matplotlib**: Visualization
+
+## Performance Characteristics
+- **Speed**: Fast for single-atom multiplet calculations
+- **Accuracy**: Good for atomic multiplet structure
+- **System size**: Single atom/impurity models
+- **Memory**: Low
+
+## Computational Cost
+- **XAS**: Seconds to minutes
+- **RIXS**: Minutes
+- **Typical**: Very fast for atomic calculations
+
+## Limitations & Known Constraints
+- **Requires Cowan's code**: External dependency needed
+- **Single atom**: No ligand/cluster effects natively
+- **No DFT integration**: Standalone multiplet only
+- **Installation**: Cowan's code setup can be complex
+- **Documentation**: Limited
+
+## Comparison with Other Codes
+- **vs Quanty**: Multiplety uses Cowan's code, Quanty is Lua-based
+- **vs CTM4XAS**: Multiplety is Python, CTM4XAS is MATLAB
+- **vs Crispy**: Multiplety is standalone, Crispy wraps Quanty
+- **Unique strength**: Direct Cowan's code integration, Python/Jupyter interface, simple setup
+
+## Application Areas
+
+### Transition Metal L-edges:
+- 2p→3d XAS multiplet structure
+- Crystal field splitting analysis
+- Oxidation state determination
+- Spin-state characterization
+
+### Rare-Earth M-edges:
+- 3d→4f XAS multiplet structure
+- Hund's rule coupling
+- Crystal field effects
+- Valence determination
+
+### RIXS of Correlated Systems:
+- d-d excitations
+- Charge transfer excitations
+- Parametric studies
+- Temperature dependence
+
+## Best Practices
+
+### Parameter Calibration:
+- Scale Slater-Condon parameters (typically 70-85%)
+- Validate against experimental spectra
+- Use consistent scaling across edges
+- Compare with charge transfer models
+
+### Crystal Field Setup:
+- Use appropriate symmetry
+- Start with DFT crystal field parameters
+- Validate splitting patterns
+- Consider low-symmetry distortions
+
+## Community and Support
+- Open source on GitHub
+- Limited but active development
+- Jupyter notebook examples provided
+- Based on well-established Cowan's code
+
+## Verification & Sources
+**Primary sources**:
+1. GitHub repository: https://github.com/gfabbris/multiplety
+2. Cowan's code: R. D. Cowan, "The Theory of Atomic Structure and Spectra" (1981)
+
+**Confidence**: VERIFIED
+
+**Verification status**: ✅ VERIFIED
+- Source code: ACCESSIBLE (GitHub)
+- Documentation: Jupyter notebooks
+- Active development: Maintained
+- Specialized strength: Cowan's code integration for multiplet XAS/RIXS, Python/Jupyter interface
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

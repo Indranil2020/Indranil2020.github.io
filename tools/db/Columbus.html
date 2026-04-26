@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Columbus | GROUND-STATE DFT | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="COLUMBUS is a comprehensive ab initio electronic structure program suite specializing in multi-reference methods, excited states, and non-adiabatic dynamics. Developed by Hans Lischka and collaborators at the University of Vienna and other institutions, COLUMBUS is particularly renowned for its capa">
+    <meta name="keywords" content="Columbus, GROUND-STATE DFT, Quantum Chemistry Suites, computational materials science, DFT, simulation tool, Columbus code, Columbus software, Columbus tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/Columbus.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Columbus | GROUND-STATE DFT | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="COLUMBUS is a comprehensive ab initio electronic structure program suite specializing in multi-reference methods, excited states, and non-adiabatic dynamics. Developed by Hans Lischka and collaborators at the University of Vienna and other institutions, COLUMBUS is particularly renowned for its capa">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/Columbus.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Columbus",
+      "applicationCategory": "ScienceApplication",
+      "description": "COLUMBUS is a comprehensive ab initio electronic structure program suite specializing in multi-reference methods, excited states, and non-adiabatic dynamics. Developed by Hans Lischka and collaborators at the University of Vienna and other institutions, COLUMBUS is particularly renowned for its capa",
+      "url": "https://indranil2020.github.io/tools/db/Columbus.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>1. GROUND-STATE DFT</span>
+                <span> &nbsp;/&nbsp; 1.4 Quantum Chemistry Suites</span>
+            </div>
+            <h1>Columbus</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 1. GROUND-STATE DFT</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 1.4 Quantum Chemistry Suites</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://www.univie.ac.at/columbus/" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">COLUMBUS is a comprehensive ab initio electronic structure program suite specializing in multi-reference methods, excited states, and non-adiabatic dynamics. Developed by Hans Lischka and collaborators at the University of Vienna and other institutions, COLUMBUS is particularly renowned for its capabilities in photochemistry, conical intersections, and surface hopping dynamics. It provides state-of-the-art multi-reference configuration interaction and coupled cluster methods for accurate treatme</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><ul class="paper-list"><li><a href="../../scientific_tools_consolidated/Papers_of_Codes/DFT/1.4_Quantum_Chemistry/Columbus/10_1021_acs_chemrev_8b00244.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> 10_1021_acs_chemrev_8b00244.pdf</a></li><li><a href="../../scientific_tools_consolidated/Papers_of_Codes/DFT/1.4_Quantum_Chemistry/Columbus/10_1002_wcms_25.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> 10_1002_wcms_25.pdf</a></li></ul>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># COLUMBUS
+
+## Official Resources
+- Homepage: https://www.univie.ac.at/columbus/
+- Documentation: Available through academic distribution
+- Source Repository: Available to licensed users
+- License: Free for academic use (license agreement required)
+
+## Overview
+COLUMBUS is a comprehensive ab initio electronic structure program suite specializing in multi-reference methods, excited states, and non-adiabatic dynamics. Developed by Hans Lischka and collaborators at the University of Vienna and other institutions, COLUMBUS is particularly renowned for its capabilities in photochemistry, conical intersections, and surface hopping dynamics. It provides state-of-the-art multi-reference configuration interaction and coupled cluster methods for accurate treatment of complex electronic states.
+
+**Scientific domain**: Multi-reference quantum chemistry, excited states, photochemistry, non-adiabatic dynamics  
+**Target user community**: Photochemists, excited state researchers, non-adiabatic dynamics specialists
+
+## Theoretical Methods
+- Multi-reference configuration interaction (MRCI)
+- Complete active space SCF (CASSCF)
+- Restricted active space SCF (RASSCF)
+- Multi-reference coupled cluster (MR-CC)
+- Difference dedicated CI (DDCI)
+- Time-dependent DFT (TDDFT)
+- Hartree-Fock and DFT
+- Spin-orbit coupling
+- Analytic gradients and non-adiabatic couplings
+- Surface hopping (fewest switches)
+- Trajectory surface hopping
+- Conical intersection optimization
+
+## Capabilities (CRITICAL)
+- Ground and excited state calculations
+- Multi-reference wavefunctions
+- Conical intersection optimization
+- Non-adiabatic coupling vectors
+- Surface hopping molecular dynamics
+- Photochemical reaction pathways
+- Spin-orbit coupling effects
+- Analytic energy gradients (MRCI, CASSCF)
+- Parallel execution
+- Large active spaces
+- Multiple electronic states simultaneously
+- Excited state geometry optimization
+- Minimum energy conical intersections (MECI)
+- Intersystem crossing
+- Photophysics and photochemistry
+
+**Sources**: COLUMBUS website (https://www.univie.ac.at/columbus/)
+
+## Key Strengths
+
+### Multi-Reference Methods:
+- State-of-the-art MRCI
+- Large active spaces
+- Multiple states
+- Balanced treatment
+- High accuracy
+
+### Excited States:
+- Accurate excitation energies
+- Multiple states simultaneously
+- State interactions
+- Avoided crossings
+- Conical intersections
+
+### Non-Adiabatic Dynamics:
+- Surface hopping implementation
+- Fewest switches algorithm
+- Non-adiabatic couplings
+- Realistic photodynamics
+- Trajectory analysis
+
+### Analytic Gradients:
+- MRCI gradients
+- CASSCF gradients
+- Non-adiabatic couplings
+- Efficient optimization
+- Minimum energy paths
+
+### Conical Intersections:
+- Specialized optimization
+- MECI searches
+- Branching plane analysis
+- Photochemical funnels
+- Reaction mechanisms
+
+## Inputs & Outputs
+- **Input formats**:
+  - Text-based input files
+  - Separate files for different modules
+  - Coordinate files
+  - Basis set specifications
+  
+- **Output data types**:
+  - Energies and gradients
+  - Wavefunctions
+  - CI coefficients
+  - Non-adiabatic couplings
+  - Trajectory data
+  - State populations
+
+## Interfaces & Ecosystem
+- **Integration**:
+  - MOLPRO interface
+  - MOLCAS interface
+  - Standalone operation
+  
+- **Analysis**:
+  - Trajectory analysis tools
+  - State population dynamics
+  - Custom scripts
+  
+- **Parallelization**:
+  - MPI parallelization
+  - Shared memory
+  - Distributed calculations
+
+## Workflow and Usage
+
+### Typical Workflow:
+1. CASSCF for active space orbitals
+2. MRCI for accurate energies
+3. Calculate gradients/couplings
+4. Optimize geometries or run dynamics
+5. Analyze results
+
+### Multi-Step Calculation:
+- Integral generation
+- SCF or MCSCF
+- CI calculation
+- Gradient/coupling evaluation
+- Dynamics or optimization
+
+### Surface Hopping:
+- Initial state preparation
+- Trajectory propagation
+- Electronic state transitions
+- Statistical analysis
+
+## Advanced Features
+
+### MRCI:
+- Internally contracted
+- Large configuration spaces
+- Multiple states
+- Davidson diagonalization
+- Size-extensivity corrections
+
+### CASSCF:
+- Complete active space
+- State-averaged
+- State-specific
+- Large active spaces
+- Orbital optimization
+
+### Non-Adiabatic Couplings:
+- Analytic calculation
+- Derivative couplings
+- Accurate dynamics
+- Multiple states
+- Efficient algorithms
+
+### Conical Intersection Optimization:
+- Specialized algorithms
+- Energy difference minimization
+- Branching space analysis
+- Seam searches
+- Photochemical pathways
+
+### Surface Hopping:
+- Fewest switches algorithm
+- Quantum decoherence
+- Energy conservation
+- Multiple trajectories
+- Statistical analysis
+
+## Performance Characteristics
+- **Speed**: Moderate (high-level methods)
+- **Accuracy**: Excellent for excited states
+- **System size**: Small to medium molecules
+- **Active space**: Up to ~20 electrons/orbitals practical
+- **Parallelization**: Good MPI performance
+
+## Computational Cost
+- **CASSCF**: Expensive, scales with active space
+- **MRCI**: Very expensive, high accuracy
+- **Gradients**: Expensive but essential
+- **Surface hopping**: Many trajectories needed
+- **Typical**: Small to medium molecules
+
+## Limitations & Known Constraints
+- **System size**: Limited to smaller molecules
+- **Active space**: Computationally demanding
+- **Learning curve**: Steep
+- **Documentation**: Academic distribution
+- **Community**: Specialized
+- **License**: Academic agreement required
+- **Platform**: Unix/Linux systems
+
+## Comparison with Other Codes
+- **vs MOLPRO**: Both strong in multi-reference, COLUMBUS better for dynamics
+- **vs MOLCAS**: Similar capabilities, different implementations
+- **vs GAMESS**: COLUMBUS specialized for photochemistry
+- **vs Gaussian**: COLUMBUS much stronger in multi-reference dynamics
+- **Unique strength**: Non-adiabatic dynamics, conical intersections, surface hopping, photochemistry
+
+## Application Areas
+
+### Photochemistry:
+- Photochemical reactions
+- Reaction mechanisms
+- Quantum yields
+- Excited state pathways
+- UV photolysis
+
+### Conical Intersections:
+- MECI optimization
+- Funnel identification
+- Branching space
+- Reaction pathways
+- Non-adiabatic transitions
+
+### Non-Adiabatic Dynamics:
+- Ultrafast processes
+- Photophysics
+- Internal conversion
+- Intersystem crossing
+- Excited state lifetimes
+
+### Spectroscopy:
+- Absorption spectra
+- Emission spectra
+- Excited state properties
+- Photochemical quantum yields
+
+## Best Practices
+
+### Active Space Selection:
+- Include relevant orbitals
+- Balance size/accuracy
+- Test convergence
+- Chemical intuition
+- Systematic expansion
+
+### State Averaging:
+- Include all relevant states
+- Equal or appropriate weights
+- Check state character
+- Avoid root flipping
+
+### Dynamics:
+- Sufficient trajectories
+- Appropriate time step
+- Initial conditions
+- Statistical analysis
+- Energy conservation checks
+
+### Conical Intersections:
+- Good initial guess
+- Multiple searches
+- Verify branching plane
+- Check significance
+- Reaction coordinate
+
+## Community and Support
+- Academic license
+- Email support
+- User community
+- Training workshops
+- Collaboration network
+- Documentation
+
+## Educational Resources
+- User manual
+- Tutorial examples
+- Published papers
+- Workshop materials
+- Academic courses
+
+## Development
+- University of Vienna
+- Hans Lischka group
+- International collaboration
+- Active research development
+- Method improvements
+- User-driven features
+
+## Research Impact
+- Pioneering photochemistry code
+- Conical intersection methods
+- Surface hopping implementation
+- Widely cited
+- Standard for photodynamics
+
+## Historical Significance
+- Early multi-reference code
+- Photochemistry applications
+- Non-adiabatic dynamics
+- Method development
+- Training platform
+
+## Verification & Sources
+**Primary sources**:
+1. Official website: https://www.univie.ac.at/columbus/
+2. H. Lischka et al., Phys. Chem. Chem. Phys. 3, 664 (2001) - COLUMBUS overview
+3. H. Lischka et al., WIREs Comput. Mol. Sci. 1, 191 (2011) - Recent developments
+4. M. Barbatti et al., WIREs Comput. Mol. Sci. 4, 26 (2014) - Surface hopping dynamics
+
+**Secondary sources**:
+1. COLUMBUS documentation
+2. Published studies using COLUMBUS (>1000 citations)
+3. Photochemistry literature
+4. Confirmed in multiple source lists
+
+**Confidence**: VERIFIED - Well-established code for photochemistry
+
+**Verification status**: ✅ VERIFIED
+- Official homepage: ACCESSIBLE
+- Documentation: Available with license
+- Software: Academic license required
+- Community support: Email, workshops, collaborations
+- Academic citations: >1500
+- Active development: University of Vienna group
+- Specialized strength: Multi-reference methods, excited states, non-adiabatic dynamics, conical intersections, surface hopping, photochemistry applications
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fireball | GROUND-STATE DFT | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="Fireball is an efficient *ab initio* tight-binding Density Functional Theory (DFT) code designed for molecular dynamics simulations of large systems. It utilizes a local-orbital formulation of DFT, enabling the simulation of supercells containing thousands of atoms with linear-scaling O(N) computati">
+    <meta name="keywords" content="Fireball, GROUND-STATE DFT, Tight-Binding DFT, computational materials science, DFT, simulation tool, Fireball code, Fireball software, Fireball tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/Fireball.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Fireball | GROUND-STATE DFT | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="Fireball is an efficient *ab initio* tight-binding Density Functional Theory (DFT) code designed for molecular dynamics simulations of large systems. It utilizes a local-orbital formulation of DFT, enabling the simulation of supercells containing thousands of atoms with linear-scaling O(N) computati">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/Fireball.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Fireball",
+      "applicationCategory": "ScienceApplication",
+      "description": "Fireball is an efficient *ab initio* tight-binding Density Functional Theory (DFT) code designed for molecular dynamics simulations of large systems. It utilizes a local-orbital formulation of DFT, enabling the simulation of supercells containing thousands of atoms with linear-scaling O(N) computati",
+      "url": "https://indranil2020.github.io/tools/db/Fireball.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>1. GROUND-STATE DFT</span>
+                <span> &nbsp;/&nbsp; 1.5 Tight-Binding DFT</span>
+            </div>
+            <h1>Fireball</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 1. GROUND-STATE DFT</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 1.5 Tight-Binding DFT</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://github.com/FIREBALL2020" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">Fireball is an efficient *ab initio* tight-binding Density Functional Theory (DFT) code designed for molecular dynamics simulations of large systems. It utilizes a local-orbital formulation of DFT, enabling the simulation of supercells containing thousands of atoms with linear-scaling O(N) computational cost.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><ul class="paper-list"><li><a href="../../scientific_tools_consolidated/Papers_of_Codes/DFT/1.5_Tight-Binding/Fireball/10_1002_pssb_201147259.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> 10_1002_pssb_201147259.pdf</a></li></ul>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># Fireball
+
+## Official Resources
+- Homepage: https://github.com/FIREBALL2020
+- Documentation: https://thunder-dft.github.io/
+- Source Repository: https://github.com/FIREBALL2020/thunder-master
+- License: GPLv3
+
+## Overview
+Fireball is an efficient *ab initio* tight-binding Density Functional Theory (DFT) code designed for molecular dynamics simulations of large systems. It utilizes a local-orbital formulation of DFT, enabling the simulation of supercells containing thousands of atoms with linear-scaling O(N) computational cost.
+
+**Scientific domain**: Materials science, surface science, biomolecules, nanostructures
+**Target user community**: Researchers performing large-scale MD simulations and studying extended systems
+
+## Theoretical Methods
+- Density Functional Theory (DFT)
+- Tight-Binding (TB) formalism
+- Local-orbital basis sets (Numerical Atomic Orbitals)
+- Sankey-Niklewski (SN) approach
+- Pseudopotentials (Norm-conserving)
+- Molecular Dynamics (MD)
+- Lewis-structure initialization
+
+## Capabilities (CRITICAL)
+- **Large-scale simulations**: Efficiently handles thousands of atoms (up to 10,000+).
+- **Linear scaling**: O(N) cost for total energy and forces, avoiding cubic scaling of standard DFT.
+- **Basis sets**: Optimized numerical atomic orbitals (NAOs), "Fireballs", which are strictly localized.
+- **Dynamical reconstruction**: Suitable for surface catalytic processes and reconstruction.
+- **Charge transport**: Investigations in amorphous systems (e.g., DNA) and molecular junctions.
+- **QM/MM**: Interface with AMBER for hybrid quantum/classical simulations of biomolecules.
+- **Van der Waals corrections**: Implementation available in newer versions (Fireball2020).
+- **Electronic structure**: Band structures, Density of States (DOS).
+- **Transport**: Conductance and STM image simulations.
+
+**Sources**: Official GitHub (https://github.com/FIREBALL2020), cited in 4 sources.
+
+## Key Strengths
+
+### Efficiency via Local Orbitals:
+- **Fireball Orbitals**: Numerical atomic orbitals with strict cutoff radii.
+- **Pre-computed Integrals**: Three-center integrals are pre-calculated and stored, speeding up runtime.
+- **Sparse Hamiltonian**: Local nature leads to sparse matrices, enabling O(N) scaling.
+
+### Large-Scale MD:
+- **Mesoscale Systems**: Designed for systems too large for plane-wave DFT but requiring quantum accuracy.
+- **Long Timescales**: Efficiency allows for longer molecular dynamics trajectories.
+- **Dynamical Evolution**: Ideal for studying kinetic processes and surface restructuring.
+
+### Hybrid Applications (QM/MM):
+- **Biomolecular Focus**: Strong integration with AMBER for enzymatic reactions and DNA studies.
+- **Active Site Treatment**: Quantum treatment of active sites with classical environment.
+
+## Inputs & Outputs
+- **Input formats**:
+  - `fireball.in`: Main control file (SCF settings, time steps, temperature).
+  - `structure.inp`: Coordinate file.
+  - Basis set files (pre-generated).
+  - Pseudopotential files (Fdata).
+  
+- **Output data types**:
+  - `param.dat`: Output parameters.
+  - `dynamics.dat`: MD trajectory.
+  - Energies and forces logs.
+  - Electronic structure data (eigenvalues, DOS).
+  - STM images (if requested).
+
+## Interfaces & Ecosystem
+- **QM/MM Integration**:
+  - **AMBER**: Direct interface for hybrid calculations.
+  
+- **Tools**:
+  - **Lightning**: Fast visualization tool/pre-processor.
+  - **ASE (Atomic Simulation Environment)**: Scripting and workflow control.
+  - **FireballTG**: Fork with enhanced transport capabilities (Transiesta-like).
+
+## Workflow and Usage
+
+### Typical MD Workflow:
+1. **Preparation**: Generate initial structure, select basis set and pseudopotentials.
+2. **Setup**: Configure `fireball.in` for `iensemble` (NVE/NVT) and `dt` (timestep).
+3. **Execution**: Run Fireball (parallel execution supported).
+4. **Analysis**: Extract `dynamics.dat` for visualization and structural analysis.
+
+### Transport Workflow:
+1. **Lead Definition**: Define semi-infinite leads and scattering region.
+2. **Calculation**: Compute Green's functions.
+3. **Output**: Transmission spectra and I-V curves.
+
+## Advanced Features
+
+### Surface Science:
+- **Dynamical Reconstruction**: Observing surface atom rearrangement in real-time.
+- **STM Simulation**: Generating theoretical Scanning Tunneling Microscopy images.
+- **NEB**: Nudged Elastic Band for reaction barriers (in some versions).
+
+### Transport (FireballTG):
+- **NEGF Formalism**: Non-Equilibrium Green's Function for molecular electronics.
+- **Conductance**: Landauer-Buttiker formalism.
+
+## Performance Characteristics
+- **Speed**: Significantly faster than plane-wave DFT (e.g., VASP, QE) for large systems.
+- **Scaling**: Strictly linear O(N) for matrix construction; diagonalization can be O(N^3) or O(N) depending on solver.
+- **System Size**: Routine handling of 1,000-5,000 atoms.
+
+## Computational Cost
+- **Single-Point**: Seconds to minutes for hundreds of atoms.
+- **MD Step**: Rapid enough for ps-scale dynamics in reasonable wall time.
+- **Comparison**: Slower than DFTB+ (which uses parameter tables), but more rigorous (explicit integrals).
+
+## Limitations & Known Constraints
+- **Accuracy vs. Efficiency**: "Fireball" approximations (basis cutoff) can lead to reduced accuracy compared to converged plane-wave results.
+- **Self-Consistency**: Some older versions or modes (non-SCC) lack full charge self-consistency, though modern versions address this.
+- **Basis Set Optimization**: Requires careful selection of orbital radii; poor choices lead to errors.
+- **TDDFT**: Limited excited state capabilities compared to specialized codes.
+- **Documentation**: Can be fragmented between different versions (Fireball vs Fireball2020 vs FireballTG).
+
+## Comparison with Other Codes
+- **vs DFTB+**: Fireball calculates integrals *ab initio* (using efficient numerics) rather than using fitted tables. It is generally more transferable but computationally heavier than parameterized DFTB.
+- **vs SIESTA**: Both use numerical atomic orbitals. SIESTA is more general-purpose; Fireball is highly specialized for MD speed in large systems.
+- **vs VASP/QE**: Fireball is much faster for >500 atoms, but less accurate for high-precision electronic structure (e.g., band gaps).
+
+## Application Areas
+
+### Biomolecular Simulations:
+- **Enzymatic Catalysis**: QM/MM study of reaction mechanisms.
+- **DNA Damage**: Photolesions and charge transfer in DNA.
+- **Protein Solvation**: Water-protein semi-quantum interactions.
+
+### Nanomaterials:
+- **Surface Reconstruction**: Semiconductor surface annealing.
+- **Nanowires**: Conductance and structural stability.
+- **Defects**: Diffusion of defects in bulk materials.
+
+### Molecular Electronics:
+- **Single-Molecule Junctions**: I-V characteristics of organic molecules between leads.
+
+## Best Practices
+
+### Basis Set Selection:
+- **Validation**: Test numerical basis sets against plane-wave results for small systems first.
+- **Cutoffs**: Ensure orbital cutoff radii are sufficient to capture bonding but short enough for efficiency.
+
+### Convergence:
+- **SCF**: Use mixing (Pulay/Broyden) cautiously; difficult systems may require increased electronic temperature (smearing).
+- **MD Stability**: Use smaller timesteps (0.5-1.0 fs) for variable-charge/flexible-basis MD to conserve energy.
+
+### QM/MM Setup:
+- **Partitioning**: carefully define the QM region to minimize boundary errors.
+- **Link Atoms**: Use standard link atom schemes (hydrogen caps) at the QM/MM boundary.
+
+## Community and Support
+- **Project Structure**: Open-source, hosted on GitHub.
+- **Primary Group**: Fireball2020 / Thunder-DFT team.
+- **Support**: GitHub issues, academic collaboration networks.
+
+## Verification & Sources
+**Primary sources**:
+1. Official GitHub: https://github.com/FIREBALL2020
+2. Documentation: https://thunder-dft.github.io/
+3. Comparative Reviews: Included in lists of O(N) DFT codes.
+
+**Confidence**: VERIFIED
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

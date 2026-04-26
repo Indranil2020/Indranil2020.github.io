@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyMoire | POST-PROCESSING | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="**PyMoire** is a Python package for tight-binding calculation of twisted bilayer graphene and other moiré systems based on mapped Wannier functions. It calculates band structures and density of states for twisted bilayer systems at any commensurate twist angle.">
+    <meta name="keywords" content="PyMoire, POST-PROCESSING, Quantum Transport, computational materials science, DFT, simulation tool, PyMoire code, PyMoire software, PyMoire tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/PyMoire.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="PyMoire | POST-PROCESSING | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="**PyMoire** is a Python package for tight-binding calculation of twisted bilayer graphene and other moiré systems based on mapped Wannier functions. It calculates band structures and density of states for twisted bilayer systems at any commensurate twist angle.">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/PyMoire.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PyMoire",
+      "applicationCategory": "ScienceApplication",
+      "description": "**PyMoire** is a Python package for tight-binding calculation of twisted bilayer graphene and other moiré systems based on mapped Wannier functions. It calculates band structures and density of states for twisted bilayer systems at any commensurate twist angle.",
+      "url": "https://indranil2020.github.io/tools/db/PyMoire.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>8. POST-PROCESSING</span>
+                <span> &nbsp;/&nbsp; 8.8 Quantum Transport</span>
+            </div>
+            <h1>PyMoire</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 8. POST-PROCESSING</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 8.8 Quantum Transport</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://github.com/mahyar-servati/PyMoire" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">**PyMoire** is a Python package for tight-binding calculation of twisted bilayer graphene and other moiré systems based on mapped Wannier functions. It calculates band structures and density of states for twisted bilayer systems at any commensurate twist angle.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted"><em>No paper PDFs uploaded yet for this code.</em></p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># PyMoire
+
+## Official Resources
+- Source Repository: https://github.com/mahyar-servati/PyMoire
+- Documentation: Included in repository
+- License: Open source
+
+## Overview
+**PyMoire** is a Python package for tight-binding calculation of twisted bilayer graphene and other moiré systems based on mapped Wannier functions. It calculates band structures and density of states for twisted bilayer systems at any commensurate twist angle.
+
+**Scientific domain**: Moiré materials, twisted bilayer transport, Wannier-based TB  
+**Target user community**: Researchers studying electronic properties of twisted bilayer and moiré superlattice systems
+
+## Theoretical Methods
+- Tight-binding model for twisted bilayers
+- Mapped Wannier functions
+- Commensurate twist angle construction
+- Moiré superlattice Hamiltonian
+- Interlayer coupling
+- Band structure of moiré systems
+
+## Capabilities (CRITICAL)
+- Band structure of twisted bilayer graphene
+- DOS calculation for moiré systems
+- Any commensurate twist angle
+- Wannier-based hopping parameters
+- Interlayer coupling calculation
+- Moiré superlattice construction
+
+**Sources**: GitHub repository
+
+## Key Strengths
+
+### Moiré-Specific:
+- Purpose-built for twisted bilayers
+- Commensurate angle construction
+- Moiré superlattice handling
+- Interlayer coupling included
+
+### Wannier-Based:
+- Ab initio quality hopping
+- Mapped Wannier functions
+- Systematic improvement
+- DFT-consistent parameters
+
+### Flexible:
+- Any commensurate angle
+- Multiple bilayer systems
+- Customizable parameters
+- Extensible framework
+
+## Inputs & Outputs
+- **Input formats**:
+  - Wannier90 Hamiltonian files
+  - Twist angle specification
+  - Interlayer coupling parameters
+  
+- **Output data types**:
+  - Band structure of moiré system
+  - Density of states
+  - Moiré Hamiltonian
+  - Flat band characterization
+
+## Interfaces & Ecosystem
+- **Wannier90**: Hamiltonian extraction
+- **Python**: Core language
+- **NumPy**: Numerical computation
+
+## Performance Characteristics
+- **Speed**: Moderate (large Hamiltonians)
+- **Accuracy**: Wannier-level
+- **System size**: Thousands of atoms (moiré cells)
+- **Memory**: High for small angles
+
+## Computational Cost
+- **Band structure**: Minutes to hours
+- **DOS**: Minutes
+- **Typical**: Moderate
+
+## Limitations & Known Constraints
+- **Commensurate only**: Only commensurate angles
+- **Bilayer focus**: Primarily bilayer graphene
+- **Wannier dependency**: Requires Wannier90 Hamiltonian
+- **Memory**: Large for small twist angles
+- **Documentation**: Limited
+
+## Comparison with Other Codes
+- **vs Kwant**: PyMoire is moiré-specific, Kwant is general transport
+- **vs TBPLaS**: PyMoire is moiré, TBPLaS is general TB
+- **vs NanoNet**: PyMoire is Wannier-based, NanoNet is SK-based
+- **Unique strength**: Tight-binding calculation of twisted bilayer moiré systems with Wannier functions
+
+## Application Areas
+
+### Twisted Bilayer Graphene:
+- Magic angle flat bands
+- Superconductivity-related bands
+- Correlated insulator states
+- Twist angle dependence
+
+### Moiré Materials:
+- Moiré superlattice bands
+- Flat band engineering
+- Interlayer coupling effects
+- Twist angle optimization
+
+### Quantum Transport:
+- Moiré system conductance
+- Flat band transport
+- Topological properties
+- Valley-dependent transport
+
+## Best Practices
+
+### Wannier Setup:
+- Use well-localized Wannier functions
+- Include sufficient interlayer hopping
+- Validate against DFT bands
+- Check Wannier spread convergence
+
+### Twist Angle:
+- Start with known commensurate angles
+- Test convergence with moiré cell size
+- Monitor flat band formation
+- Compare with continuum model
+
+## Community and Support
+- Open source on GitHub
+- Research code
+- Limited documentation
+- Example calculations provided
+
+## Verification & Sources
+**Primary sources**:
+1. GitHub: https://github.com/mahyar-servati/PyMoire
+
+**Confidence**: VERIFIED
+
+**Verification status**: ✅ VERIFIED
+- Source code: ACCESSIBLE (GitHub)
+- Documentation: Included in repository
+- Active development: Research code
+- Specialized strength: Tight-binding calculation of twisted bilayer moiré systems with Wannier functions
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

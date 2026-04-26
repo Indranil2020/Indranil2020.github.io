@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JDFTx | GROUND-STATE DFT | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="JDFTx (Joint Density Functional Theory - extended) is a plane-wave DFT code designed for electronic structure calculations in molecules, surfaces, and liquids, with particular emphasis on solvation and electrochemistry. Developed by Ravishankar Sundararaman and collaborators, JDFTx features efficien">
+    <meta name="keywords" content="JDFTx, GROUND-STATE DFT, Plane-Wave / Pseudopotential Codes, computational materials science, DFT, simulation tool, JDFTx code, JDFTx software, JDFTx tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/JDFTx.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="JDFTx | GROUND-STATE DFT | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="JDFTx (Joint Density Functional Theory - extended) is a plane-wave DFT code designed for electronic structure calculations in molecules, surfaces, and liquids, with particular emphasis on solvation and electrochemistry. Developed by Ravishankar Sundararaman and collaborators, JDFTx features efficien">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/JDFTx.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "JDFTx",
+      "applicationCategory": "ScienceApplication",
+      "description": "JDFTx (Joint Density Functional Theory - extended) is a plane-wave DFT code designed for electronic structure calculations in molecules, surfaces, and liquids, with particular emphasis on solvation and electrochemistry. Developed by Ravishankar Sundararaman and collaborators, JDFTx features efficien",
+      "url": "https://indranil2020.github.io/tools/db/JDFTx.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>1. GROUND-STATE DFT</span>
+                <span> &nbsp;/&nbsp; 1.1 Plane-Wave / Pseudopotential Codes</span>
+            </div>
+            <h1>JDFTx</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 1. GROUND-STATE DFT</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 1.1 Plane-Wave / Pseudopotential Codes</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> CONFIRMED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://jdftx.org/" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">JDFTx (Joint Density Functional Theory - extended) is a plane-wave DFT code designed for electronic structure calculations in molecules, surfaces, and liquids, with particular emphasis on solvation and electrochemistry. Developed by Ravishankar Sundararaman and collaborators, JDFTx features efficient joint density functional theory for implicit solvation, advanced models for electrochemical interfaces, and GPU acceleration. It is particularly strong in studying charged systems, solvated systems,</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted"><em>No paper PDFs uploaded yet for this code.</em></p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># JDFTx
+
+## Official Resources
+- Homepage: https://jdftx.org/
+- Documentation: https://jdftx.org/Documentation.html
+- Source Repository: https://github.com/shankar1729/jdftx
+- License: GNU General Public License v3.0
+
+## Overview
+JDFTx (Joint Density Functional Theory - extended) is a plane-wave DFT code designed for electronic structure calculations in molecules, surfaces, and liquids, with particular emphasis on solvation and electrochemistry. Developed by Ravishankar Sundararaman and collaborators, JDFTx features efficient joint density functional theory for implicit solvation, advanced models for electrochemical interfaces, and GPU acceleration. It is particularly strong in studying charged systems, solvated systems, and electrochemical processes.
+
+**Scientific domain**: DFT, solvation, electrochemistry, charged systems, surfaces  
+**Target user community**: Electrochemists, surface scientists, battery researchers, solvation specialists
+
+## Theoretical Methods
+- Kohn-Sham DFT (LDA, GGA, meta-GGA)
+- Plane-wave basis with pseudopotentials
+- Norm-conserving and ultrasoft pseudopotentials
+- Joint Density Functional Theory (JDFT)
+- Implicit solvation models (PCM, CANDLE, GLSSA13)
+- Explicit fluid models
+- Electrochemical interfaces
+- Charged systems with background charge
+- Grand canonical DFT
+- van der Waals corrections (DFT-D2/D3)
+- DFT+U for correlated systems
+- Hybrid functionals
+- Non-local correlation functionals
+- Spin-orbit coupling
+- Explicit solvent models
+- Grand canonical DFT for charged systems
+
+## Capabilities (CRITICAL)
+- Ground-state electronic structure
+- Joint density-functional theory for solvation
+- Implicit solvation models (PCM, CANDLE, SaLSA)
+- Explicit solvent via classical density functionals
+- Charged systems and grand canonical ensemble
+- Electrochemical double layers
+- Geometry optimization in solution
+- Vibrational calculations with solvation
+- Phonon calculations
+- Band structure and DOS
+- Wannier functions
+- Berry phase polarization
+- GPU acceleration for key operations
+- Efficient handling of charged periodic systems
+- Lattice optimization under constant potential
+
+**Sources**: Official JDFTx documentation, cited in 5/7 source lists
+
+## Inputs & Outputs
+- **Input formats**:
+  - Text input files (JDFTx format)
+  - Coordinate files (XYZ, POSCAR-like)
+  - Pseudopotential files (UPF, USPP)
+  - Ionosphere files for electrolyte models
+  
+- **Output data types**:
+  - Standard output with energies, forces, stresses
+  - Electronic density (binary format)
+  - Wavefunction files
+  - DOS and band structure files
+  - Solvation structure output
+  - Wannier function output
+
+## Interfaces & Ecosystem
+- **Framework integrations**:
+  - ASE - calculator interface available
+  - Can interface with standard DFT workflows
+  
+- **GPU support**:
+  - CUDA acceleration for FFTs and operations
+  - Significant speedup on GPUs vs CPUs
+  
+- **Solvation models**:
+  - NonlinearPCM - polarizable continuum
+  - CANDLE - cavity and dispersion
+  - SaLSA - nonlocal solvation
+  - Classical DFT for explicit fluids
+
+## Limitations & Known Constraints
+- **Specialized focus**: Optimized for solvation; less feature-complete than general codes
+- **Documentation**: Good but less extensive than major codes
+- **Community**: Smaller user base than VASP/QE
+- **Pseudopotentials**: Must use compatible pseudopotential formats
+- **Solvation convergence**: Can be challenging for complex systems
+- **GPU requirement**: Best performance requires CUDA-capable GPU
+- **Input format**: Unique syntax requires learning curve
+- **Post-processing**: Fewer established analysis tools
+- **Platform support**: Primarily Linux/Unix; GPU drivers required
+
+## Computational Cost
+- **Scaling**: Excellent on GPUs; CPU scaling is standard $O(N^3)$.
+- **Solvation**: Implicit solvation adds minimal overhead (~10-20%) compared to vacuum calculations, much cheaper than explicit solvent.
+- **Memory**: GPU memory can be a bottleneck for large systems.
+
+## Comparison with Other Codes
+- **vs VASP/QE**: JDFTx is specialized for solvation/electrochemistry. If you need standard solid-state properties, VASP/QE are more feature-rich. If you need electrochemical interfaces, JDFTx is superior.
+- **vs Qbox**: Both are C++ and scalable, but JDFTx focuses on solvation/embedding, Qbox on massive MD.
+
+## Best Practices
+- **GPU**: Use `jdw` (JDFTx wrapper) to manage GPU resources effectively.
+- **Solvation**: Start with `PCM` or `CANDLE` before moving to more complex `SaLSA` models.
+- **Minimization**: Use `Minimize` for electronic steps; it is often more robust than `SCF` mixing for difficult solvated systems.
+
+## Community and Support
+- **Support**: GitHub Issues are the primary support channel.
+- **Development**: Active interaction with developers (Sundararaman group).
+
+## Verification & Sources
+**Primary sources**:
+1. Official website: https://jdftx.org/
+2. Documentation: https://jdftx.org/Documentation.html
+3. GitHub repository: https://github.com/shankar1729/jdftx
+4. R. Sundararaman et al., J. Chem. Phys. 146, 114104 (2017) - JDFTx code
+5. K. A. Schwarz et al., Phys. Rev. B 85, 201102 (2012) - JDFT formalism
+
+**Secondary sources**:
+1. JDFTx tutorials and examples
+2. Published electrochemistry applications
+3. Solvation model benchmarks
+4. Confirmed in 5/7 source lists (claude, g, gr, k, q)
+
+**Confidence**: CONFIRMED - Appears in 5 of 7 independent source lists
+
+**Verification status**: ✅ VERIFIED
+- Official homepage: ACCESSIBLE
+- Documentation: COMPREHENSIVE and ACCESSIBLE
+- Source code: OPEN (GitHub)
+- Community support: Active (GitHub issues, email)
+- Academic citations: >100 (main papers)
+- Active development: Regular updates, GPU optimization
+
+
+
+## Key Strengths
+
+### Primary Strength:
+- See official documentation for key capabilities
+
+### Secondary Strength:
+- Community-validated and actively maintained
+
+
+## Performance Characteristics
+- **Speed**: See benchmarks in official documentation
+- **Accuracy**: See validation studies
+- **System size**: See documentation for scaling behavior
+- **Automation**: See documentation for workflow support
+
+
+## Application Areas
+
+### Primary Applications:
+- See official documentation for recommended use cases
+
+### Secondary Applications:
+- See community publications for extended applications
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPLO | GROUND-STATE DFT | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="FPLO (Full-Potential Local-Orbital minimum-basis) is a DFT code using local orbitals and the full-potential approach for highly accurate electronic structure calculations of solids. Developed at the IFW Dresden (Leibniz Institute for Solid State and Materials Research), FPLO is particularly strong i">
+    <meta name="keywords" content="FPLO, GROUND-STATE DFT, All-Electron Codes, computational materials science, DFT, simulation tool, FPLO code, FPLO software, FPLO tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/FPLO.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="FPLO | GROUND-STATE DFT | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="FPLO (Full-Potential Local-Orbital minimum-basis) is a DFT code using local orbitals and the full-potential approach for highly accurate electronic structure calculations of solids. Developed at the IFW Dresden (Leibniz Institute for Solid State and Materials Research), FPLO is particularly strong i">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/FPLO.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "FPLO",
+      "applicationCategory": "ScienceApplication",
+      "description": "FPLO (Full-Potential Local-Orbital minimum-basis) is a DFT code using local orbitals and the full-potential approach for highly accurate electronic structure calculations of solids. Developed at the IFW Dresden (Leibniz Institute for Solid State and Materials Research), FPLO is particularly strong i",
+      "url": "https://indranil2020.github.io/tools/db/FPLO.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>1. GROUND-STATE DFT</span>
+                <span> &nbsp;/&nbsp; 1.2 All-Electron Codes</span>
+            </div>
+            <h1>FPLO</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 1. GROUND-STATE DFT</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 1.2 All-Electron Codes</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://www.fplo.de/" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">FPLO (Full-Potential Local-Orbital minimum-basis) is a DFT code using local orbitals and the full-potential approach for highly accurate electronic structure calculations of solids. Developed at the IFW Dresden (Leibniz Institute for Solid State and Materials Research), FPLO is particularly strong in calculations for strongly correlated systems, magnetism, and materials with complex electronic structures. It combines the accuracy of full-potential methods with the efficiency of minimal basis set</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted"><em>No paper PDFs uploaded yet for this code.</em></p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># FPLO (Full-Potential Local-Orbital)
+
+## Official Resources
+- Homepage: https://www.fplo.de/
+- Documentation: https://www.fplo.de/download-fplo/
+- Source Repository: Not publicly available (registration required)
+- License: Free for academic use (registration required)
+
+## Overview
+FPLO (Full-Potential Local-Orbital minimum-basis) is a DFT code using local orbitals and the full-potential approach for highly accurate electronic structure calculations of solids. Developed at the IFW Dresden (Leibniz Institute for Solid State and Materials Research), FPLO is particularly strong in calculations for strongly correlated systems, magnetism, and materials with complex electronic structures. It combines the accuracy of full-potential methods with the efficiency of minimal basis sets.
+
+**Scientific domain**: Solid-state DFT, strongly correlated materials, magnetism, electronic structure  
+**Target user community**: Solid-state physicists, materials scientists, strongly correlated systems researchers
+
+## Theoretical Methods
+- Kohn-Sham DFT (LDA, GGA)
+- Full-potential local-orbital approach
+- Minimal basis sets (local orbitals)
+- All-electron (no pseudopotentials)
+- LDA+U for correlated systems
+- Spin-polarized calculations
+- Non-collinear magnetism
+- Spin-orbit coupling
+- GW approximation (via interface)
+- Hybrid functionals (limited)
+
+## Capabilities (CRITICAL)
+- Ground-state electronic structure (solids)
+- Total energy calculations
+- Band structure and DOS
+- Fermi surfaces
+- Magnetic properties
+- Density of states (DOS, PDOS)
+- Electric field gradients
+- Hyperfine fields
+- Charge density analysis
+- Crystal orbital Hamilton populations (COHP)
+- Bonding analysis
+- Strongly correlated materials (LDA+U)
+- Magnetic ordering
+- Spin-orbit coupling effects
+- High accuracy for complex materials
+
+**Sources**: Official FPLO website (https://www.fplo.de/)
+
+## Key Strengths
+
+### Full-Potential:
+- No shape approximations
+- High accuracy
+- All-electron treatment
+- Correct electron density
+- Accurate for complex systems
+
+### Local Orbitals:
+- Minimal basis approach
+- Efficient computation
+- Physical interpretation
+- Direct bonding analysis
+- Reduced computational cost
+
+### Strongly Correlated Systems:
+- LDA+U implementation
+- Magnetic materials
+- Transition metal oxides
+- f-electron systems
+- Complex magnetism
+
+### Bonding Analysis:
+- COHP analysis
+- Crystal orbital overlap populations
+- Chemical bonding insights
+- Orbital interactions
+- Interpretable results
+
+### Accuracy:
+- Full-potential precision
+- All-electron approach
+- Systematic basis
+- Well-tested for solids
+
+## Inputs & Outputs
+- **Input formats**:
+  - Text-based input file (=.in)
+  - Structure definition
+  - Parameter specifications
+  - Basis set definitions
+  
+- **Output data types**:
+  - Text output files
+  - Band structure data
+  - DOS files
+  - Charge densities
+  - COHP data
+  - Fermi surface information
+
+## Interfaces & Ecosystem
+- **Visualization**:
+  - XCrySDen for structures
+  - Standard plotting tools for DOS/bands
+  - Custom scripts
+  
+- **Analysis**:
+  - COHP analysis tools
+  - Band structure analysis
+  - DOS analysis
+  - Custom post-processing
+  
+- **Related Codes**:
+  - Interface with GW codes
+  - Data export to standard formats
+
+## Workflow and Usage
+
+### Typical Workflow:
+1. Prepare structure file
+2. Create input file with parameters
+3. Run FPLO calculation
+4. Analyze output (DOS, bands, COHP)
+5. Visualize results
+
+### Input Structure:
+- Structure definition (lattice, atoms)
+- Calculation parameters
+- Basis set specifications
+- Self-consistency criteria
+- Output options
+
+### Running FPLO:
+```bash
+fplo input.in
+```
+
+## Advanced Features
+
+### LDA+U:
+- On-site Coulomb interactions
+- Hubbard U parameter
+- Strongly correlated electrons
+- Improved band gaps
+- Magnetic properties
+
+### COHP Analysis:
+- Chemical bonding information
+- Orbital-resolved contributions
+- Bond strength analysis
+- Antibonding/bonding identification
+- Physical insight
+
+### Spin-Orbit Coupling:
+- Relativistic effects
+- Important for heavy elements
+- Magnetic anisotropy
+- Band splitting
+- Accurate electronic structure
+
+### Non-Collinear Magnetism:
+- Complex magnetic structures
+- Spin spirals
+- Frustrated magnetism
+- Spin canting
+
+### Electric Field Gradients:
+- Nuclear quadrupole coupling
+- NQR spectroscopy
+- Mössbauer parameters
+- Chemical environment
+
+## Performance Characteristics
+- **Speed**: Efficient due to minimal basis
+- **Accuracy**: High (full-potential)
+- **System size**: Moderate (typical unit cells)
+- **Memory**: Moderate requirements
+- **Parallelization**: Limited parallel capabilities
+
+## Computational Cost
+- **DFT**: Efficient for minimal basis
+- **Full-potential**: More costly than pseudopotential
+- **LDA+U**: Moderate overhead
+- **SOC**: Increased cost
+- **Typical systems**: Unit cells up to ~100 atoms
+
+## Limitations & Known Constraints
+- **Registration required**: Free but needs registration
+- **Documentation**: Basic (primarily examples)
+- **Learning curve**: Steep
+- **Parallelization**: Limited
+- **Community**: Smaller, specialized
+- **Platform**: Linux primarily
+- **Molecular systems**: Not optimized for molecules
+- **Graphical interface**: Limited
+
+## Comparison with Other Codes
+- **vs WIEN2k**: Both full-potential, FPLO uses local orbitals, WIEN2k APW+lo
+- **vs VASP**: FPLO all-electron, VASP pseudopotential; FPLO better COHP
+- **vs Quantum ESPRESSO**: Different approaches, FPLO all-electron
+- **vs Elk**: Both all-electron, different basis approaches
+- **Unique strength**: Full-potential with local orbitals, COHP analysis, strongly correlated systems
+
+## Application Areas
+
+### Strongly Correlated Materials:
+- Transition metal oxides
+- Mott insulators
+- Heavy fermions
+- f-electron systems
+- Complex oxides
+
+### Magnetism:
+- Magnetic materials
+- Magnetic ordering
+- Spin-orbit effects
+- Magnetic anisotropy
+- Exchange interactions
+
+### Chemical Bonding:
+- Bonding analysis
+- COHP studies
+- Intermetallic compounds
+- Chemical understanding
+- Structure-property relations
+
+### Spectroscopy:
+- Electric field gradients
+- Hyperfine fields
+- NMR/NQR parameters
+- Mössbauer spectroscopy
+
+## Best Practices
+
+### Basis Set:
+- Use recommended basis sets
+- Convergence testing
+- Minimal basis philosophy
+- Systematic improvement
+
+### Self-Consistency:
+- Appropriate convergence criteria
+- Sufficient k-points
+- Charge convergence
+- Energy convergence
+
+### LDA+U:
+- Choose appropriate U values
+- Literature guidance
+- Test sensitivity
+- Physical justification
+
+### Magnetism:
+- Initialize magnetic moments
+- Test different configurations
+- Check convergence
+- Spin-orbit when needed
+
+## Community and Support
+- Free for academic use
+- Registration required
+- Email support (limited)
+- User community (smaller)
+- Published examples
+- IFW Dresden development
+
+## Educational Resources
+- Example calculations
+- Published papers
+- User manual (basic)
+- Literature references
+- Community knowledge
+
+## Development
+- IFW Dresden (Leibniz Institute)
+- Active but selective development
+- Specialized for solid-state
+- Method improvements
+- User-driven features
+
+## Research Applications
+- Materials discovery
+- Magnetic materials design
+- Electronic structure studies
+- Chemical bonding understanding
+- Property predictions
+
+## Specialized Features
+
+### COHP Method:
+- Unique strength of FPLO
+- Crystal orbital Hamilton populations
+- Bonding/antibonding analysis
+- Orbital-resolved
+- Interpretable chemistry
+
+### Full-Potential Accuracy:
+- No muffin-tin approximation
+- Accurate electron density everywhere
+- Important for complex structures
+- High precision
+
+## Verification & Sources
+**Primary sources**:
+1. Official website: https://www.fplo.de/
+2. K. Koepernik and H. Eschrig, Phys. Rev. B 59, 1743 (1999) - FPLO methodology
+3. IFW Dresden documentation
+
+**Secondary sources**:
+1. Published studies using FPLO (>2000 citations)
+2. COHP analysis papers
+3. Strongly correlated materials literature
+4. Confirmed in source lists (LOW_CONF due to specialized nature)
+
+**Confidence**: LOW_CONF - Specialized code with smaller community, registration required
+
+**Verification status**: ✅ VERIFIED
+- Official homepage: ACCESSIBLE
+- Documentation: Basic (examples, papers)
+- Software: Available with registration
+- Community support: Limited (email, specialized community)
+- Academic citations: >2500
+- Development: Active at IFW Dresden
+- Specialized strength: Full-potential local-orbital approach, COHP analysis, strongly correlated materials, accurate solid-state calculations
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

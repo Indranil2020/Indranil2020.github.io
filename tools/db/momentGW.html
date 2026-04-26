@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>momentGW | TDDFT & EXCITED-STATE | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="momentGW is a Python package for GW approximation calculations using moment-conserving solutions to the Dyson equation. Built on PySCF, it provides an efficient framework for calculating quasiparticle energies and spectral properties with novel algorithmic advantages including exact frequency integr">
+    <meta name="keywords" content="momentGW, TDDFT & EXCITED-STATE, GW Methods, computational materials science, DFT, simulation tool, momentGW code, momentGW software, momentGW tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/momentGW.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="momentGW | TDDFT & EXCITED-STATE | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="momentGW is a Python package for GW approximation calculations using moment-conserving solutions to the Dyson equation. Built on PySCF, it provides an efficient framework for calculating quasiparticle energies and spectral properties with novel algorithmic advantages including exact frequency integr">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/momentGW.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "momentGW",
+      "applicationCategory": "ScienceApplication",
+      "description": "momentGW is a Python package for GW approximation calculations using moment-conserving solutions to the Dyson equation. Built on PySCF, it provides an efficient framework for calculating quasiparticle energies and spectral properties with novel algorithmic advantages including exact frequency integr",
+      "url": "https://indranil2020.github.io/tools/db/momentGW.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>2. TDDFT & EXCITED-STATE</span>
+                <span> &nbsp;/&nbsp; 2.3 GW Methods</span>
+            </div>
+            <h1>momentGW</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 2. TDDFT & EXCITED-STATE</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 2.3 GW Methods</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> CONFIRMED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://github.com/BoothGroup/momentGW" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">momentGW is a Python package for GW approximation calculations using moment-conserving solutions to the Dyson equation. Built on PySCF, it provides an efficient framework for calculating quasiparticle energies and spectral properties with novel algorithmic advantages including exact frequency integration and avoided analytical continuation.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted"><em>No paper PDFs uploaded yet for this code.</em></p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># momentGW
+
+## Official Resources
+- Homepage: https://github.com/BoothGroup/momentGW
+- Documentation: https://github.com/BoothGroup/momentGW#readme
+- Source Repository: https://github.com/BoothGroup/momentGW
+- PyPI: https://pypi.org/project/momentGW/
+- License: Apache License 2.0
+
+## Overview
+momentGW is a Python package for GW approximation calculations using moment-conserving solutions to the Dyson equation. Built on PySCF, it provides an efficient framework for calculating quasiparticle energies and spectral properties with novel algorithmic advantages including exact frequency integration and avoided analytical continuation.
+
+**Scientific domain**: Quasiparticle energies, ionization potentials, electron affinities, band structures  
+**Target user community**: Researchers needing efficient GW calculations with PySCF ecosystem integration
+
+## Theoretical Methods
+- GW approximation (G0W0, evGW, qsGW)
+- Moment-conserving reformulation of GW theory
+- Self-consistent GW schemes
+- Dyson equation exact solution
+- dTDA and dRPA polarizabilities
+- Tensor hypercontraction support
+- Resolution of Identity (RI) approximation
+
+## Capabilities (CRITICAL)
+- G0W0 quasiparticle calculations
+- Eigenvalue self-consistent GW (evGW)
+- Quasiparticle self-consistent GW (qsGW)
+- Unrestricted (spin-polarized) GW
+- Periodic boundary conditions
+- Contour deformation methods
+- Analytic continuation (avoided via moment approach)
+- Spectral function calculations
+- Ionization potentials and electron affinities
+- Molecular and periodic systems
+
+**Sources**: Official GitHub repository, published methodology papers
+
+## Key Strengths
+
+### Moment-Conserving Approach:
+- Efficient starting point calculations
+- No approximations in frequency integration
+- Exact Dyson equation solution
+- Avoids analytical continuation errors
+- No iterative quasiparticle equation solving
+
+### PySCF Integration:
+- Seamless interface with PySCF
+- Access to PySCF mean-field methods
+- Compatible with PySCF infrastructure
+- Familiar API for PySCF users
+- Extensible design
+
+### Self-Consistency Options:
+- Multiple self-consistent GW schemes
+- Easy switching between methods
+- Flexible workflow design
+- Consistent implementation
+
+### Modern Implementation:
+- Python-based with NumPy/SciPy
+- Clean object-oriented design
+- Active development (2024)
+- Well-documented codebase
+- Open-source Apache 2.0
+
+## Inputs & Outputs
+- **Input formats**:
+  - PySCF molecule/cell objects
+  - Basis set specifications
+  - Mean-field reference (HF/DFT)
+  
+- **Output data types**:
+  - Quasiparticle energies
+  - Self-energy matrices
+  - Spectral functions
+  - Ionization potentials
+  - Electron affinities
+
+## Interfaces & Ecosystem
+- **Python integration**:
+  - PySCF core dependency
+  - NumPy/SciPy compatibility
+  - Standard Python ecosystem
+  
+- **Framework integrations**:
+  - PySCF mean-field methods
+  - Built-in MP2/RPA interfaces
+  - Extendable to other post-HF
+
+## Advanced Features
+
+### Tensor Hypercontraction:
+- Reduced memory scaling
+- Accelerated tensor operations
+- Efficient for larger systems
+
+### Periodic Calculations:
+- Full k-point support
+- Brillouin zone sampling
+- Solid-state applications
+
+### Spin-Polarization:
+- Unrestricted reference support
+- Open-shell systems
+- Magnetic systems
+
+## Performance Characteristics
+- **Speed**: Efficient moment-conserving algorithm
+- **Accuracy**: Exact frequency integration
+- **System size**: Medium molecules to small solids
+- **Memory**: Optimized with tensor hypercontraction
+- **Parallelization**: NumPy parallel backends
+
+## Computational Cost
+- **G0W0**: Efficient single-shot
+- **evGW**: Multiple iterations
+- **qsGW**: Highest cost, highest accuracy
+- **Scaling**: Polynomial with system size
+
+## Limitations & Known Constraints
+- **PySCF dependency**: Requires PySCF installation
+- **Python overhead**: Some overhead vs Fortran codes
+- **Large systems**: Best for small-medium systems
+- **Development**: Newer code, evolving features
+
+## Comparison with Other Codes
+- **vs molgw**: momentGW uses moment-conserving, molgw traditional approach
+- **vs BerkeleyGW**: momentGW molecular focus, BerkeleyGW plane-wave solids
+- **vs PySCF-GW**: Different algorithmic approach
+- **Unique strength**: Moment-conserving exact frequency integration
+
+## Application Areas
+
+### Molecular Spectroscopy:
+- Ionization potentials
+- Electron affinities
+- HOMO-LUMO gaps
+- Photoemission simulation
+
+### Materials Science:
+- Small periodic systems
+- Band gap predictions
+- Electronic structure
+
+## Best Practices
+
+### Reference Selection:
+- Test HF vs DFT starting points
+- Consider evGW/qsGW for starting point independence
+- Verify convergence with basis set
+
+### Convergence:
+- Check basis set convergence
+- Verify k-point convergence for periodic
+- Test self-consistency options
+
+## Community and Support
+- Open-source Apache 2.0
+- Active GitHub development
+- Booth Group (King's College London) maintained
+- Documentation and examples available
+- Academic publications describing methodology
+
+## Verification & Sources
+**Primary sources**:
+1. Official GitHub: https://github.com/BoothGroup/momentGW
+2. O. J. Backhouse, G. H. Booth, J. Chem. Theory Comput. (methodology papers)
+3. PyPI package page
+
+**Confidence**: VERIFIED
+- GitHub repository: ACCESSIBLE
+- Documentation: AVAILABLE
+- Active development: Yes (2024)
+- Academic papers: Published methodology
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

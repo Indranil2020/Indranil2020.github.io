@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONETEP | GROUND-STATE DFT | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="ONETEP (Order-N Electronic Total Energy Package) is a linear-scaling DFT code that achieves plane-wave accuracy with localized orbitals. It uniquely combines the accuracy of plane-wave calculations with the efficiency of linear-scaling methods through Non-orthogonal Generalized Wannier Functions (NG">
+    <meta name="keywords" content="ONETEP, GROUND-STATE DFT, Localized Basis Sets, computational materials science, DFT, simulation tool, ONETEP code, ONETEP software, ONETEP tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/ONETEP.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ONETEP | GROUND-STATE DFT | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="ONETEP (Order-N Electronic Total Energy Package) is a linear-scaling DFT code that achieves plane-wave accuracy with localized orbitals. It uniquely combines the accuracy of plane-wave calculations with the efficiency of linear-scaling methods through Non-orthogonal Generalized Wannier Functions (NG">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/ONETEP.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ONETEP",
+      "applicationCategory": "ScienceApplication",
+      "description": "ONETEP (Order-N Electronic Total Energy Package) is a linear-scaling DFT code that achieves plane-wave accuracy with localized orbitals. It uniquely combines the accuracy of plane-wave calculations with the efficiency of linear-scaling methods through Non-orthogonal Generalized Wannier Functions (NG",
+      "url": "https://indranil2020.github.io/tools/db/ONETEP.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>1. GROUND-STATE DFT</span>
+                <span> &nbsp;/&nbsp; 1.3 Localized Basis Sets</span>
+            </div>
+            <h1>ONETEP</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 1. GROUND-STATE DFT</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 1.3 Localized Basis Sets</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> CONFIRMED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://onetep.org/" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">ONETEP (Order-N Electronic Total Energy Package) is a linear-scaling DFT code that achieves plane-wave accuracy with localized orbitals. It uniquely combines the accuracy of plane-wave calculations with the efficiency of linear-scaling methods through Non-orthogonal Generalized Wannier Functions (NGWFs), enabling calculations on systems with thousands to tens of thousands of atoms.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><ul class="paper-list"><li><a href="../../scientific_tools_consolidated/Papers_of_Codes/DFT/1.3_Localized_Basis/ONETEP/Skylaris_et_al_2005.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Skylaris_et_al_2005.pdf</a></li></ul>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># ONETEP
+
+## Official Resources
+- Homepage: https://onetep.org/
+- Documentation: https://onetep.org/documentation/
+- Source Repository: Available to licensed users
+- License: Academic license (free for academics, registration required)
+
+## Overview
+ONETEP (Order-N Electronic Total Energy Package) is a linear-scaling DFT code that achieves plane-wave accuracy with localized orbitals. It uniquely combines the accuracy of plane-wave calculations with the efficiency of linear-scaling methods through Non-orthogonal Generalized Wannier Functions (NGWFs), enabling calculations on systems with thousands to tens of thousands of atoms.
+
+**Scientific domain**: Large biomolecules, nanostructures, materials with thousands of atoms  
+**Target user community**: Researchers needing DFT accuracy for very large systems (1000-10000+ atoms)
+
+## Theoretical Methods
+- Density Functional Theory (DFT)
+- Linear-scaling DFT (O(N) method)
+- Non-orthogonal generalized Wannier functions (NGWFs)
+- Periodic cardinal sine (psinc) basis equivalent to plane-waves
+- Plane-wave accuracy with localized basis
+- Norm-conserving pseudopotentials
+- LDA, GGA functionals
+- Hybrid functionals (range-separated)
+- DFT+U for correlated systems
+- van der Waals corrections (DFT-D, TS)
+- Implicit solvation models (DDCOSMO)
+- TDDFT for excited states
+- Finite electronic temperature
+
+## Capabilities (CRITICAL)
+- Ground-state electronic structure for very large systems
+- Linear-scaling DFT (computational cost scales linearly with system size)
+- Plane-wave accuracy with localized orbitals
+- Geometry optimization for large systems
+- Molecular dynamics (NVE, NVT, NPT)
+- Systems with 1000-10000+ atoms (14,000+ demonstrated)
+- Protein and biomolecule calculations
+- Nanostructures and materials
+- Band structure and DOS
+- Forces and stress tensors
+- NMR chemical shifts
+- EPR parameters
+- Core-level spectroscopy
+- Protein-ligand binding free energies
+- Implicit solvation (DDCOSMO)
+- TDDFT for absorption spectra
+- Wannier function analysis
+- Conduction calculations
+- Ensemble DFT
+- QM/MM capabilities
+
+**Sources**: Official ONETEP documentation, cited in 7/7 source lists
+
+## Key Strengths
+
+### Non-orthogonal Generalized Wannier Functions (NGWFs):
+- Spatially localized orbitals
+- Optimized in situ during calculation
+- Psinc basis (plane-wave equivalent)
+- Systematic accuracy improvement
+- Species-dependent localization radii
+
+### Plane-Wave Accuracy:
+- Equivalent to large plane-wave basis sets
+- Systematic convergence
+- No basis set superposition error
+- Transferable across systems
+- Benchmark-quality results
+
+### Linear Scaling (O(N)):
+- Density matrix optimization
+- Avoid eigenstate diagonalization
+- Computational cost linear with size
+- Previously unattainable system sizes
+- Thousands of cores parallelization
+
+### Biomolecular Applications:
+- Full QM treatment of proteins
+- Protein-ligand binding energies
+- Charge transfer and polarization
+- DNA electronic structure calculations
+- Enzyme catalysis studies
+
+### Comprehensive Properties:
+- NMR chemical shifts
+- EPR g-tensors
+- Core-level spectroscopy
+- Optical absorption
+- Electronic transport
+
+## Inputs & Outputs
+- **Input formats**:
+  - Input file (ONETEP format)
+  - PDB, XYZ coordinate files
+  - Pseudopotential files
+  - NGWF initial guesses
+  
+- **Output data types**:
+  - Standard output with energies, forces
+  - Optimized structures
+  - Density files (cube format)
+  - DOS and PDOS
+  - NGWF outputs
+  - Distributed multipole analysis
+  - Property-specific outputs
+
+## Interfaces & Ecosystem
+- **Framework integrations**:
+  - QM/MM capabilities (embedding)
+  - Molecular dynamics interfaces
+  - i-PI compatibility
+  
+- **Visualization**:
+  - Compatible with standard visualization tools
+  - Cube file output for densities
+  - NGWF visualization
+  
+- **Analysis Tools**:
+  - Fragment charge analysis
+  - Distributed multipole analysis
+  - Interaction energy decomposition
+  - Population analysis
+  
+- **Solvation Models**:
+  - DDCOSMO implicit solvation
+  - Environment effects
+  - Solvation free energies
+
+## Advanced Features
+
+### Protein-Ligand Binding:
+- Full QM binding free energies
+- Gas-phase and solvation contributions
+- Charge transfer effects
+- Polarization captured correctly
+- Drug discovery applications
+
+### Electronic Transport:
+- Conductance calculations
+- Non-equilibrium systems
+- Nanoscale junctions
+- Material interfaces
+
+### TDDFT:
+- Optical absorption spectra
+- Excited state properties
+- Large-system optical properties
+- Material characterization
+
+### ONETEP 7.2 (2024):
+- Latest academic release
+- Performance improvements
+- New features added
+- Active development
+
+### Finite Electronic Temperature:
+- Metallic systems
+- Fractional occupations
+- Convergence improvement
+- Extended applications
+
+## Performance Characteristics
+- **Speed**: Efficient O(N) implementation
+- **Accuracy**: Plane-wave equivalent
+- **System size**: Up to 14,000+ atoms demonstrated
+- **Memory**: Lower than conventional for large systems
+- **Parallelization**: Excellent scaling to thousands of cores
+
+## Computational Cost
+- **O(N) DFT**: Linear scaling achieved
+- **NGWF optimization**: Moderate overhead
+- **Hybrid functionals**: More expensive but feasible
+- **Properties**: Variable depending on type
+- **Crossover**: Benefits at ~500+ atoms
+
+## Limitations & Known Constraints
+- **Academic license**: Free for academics but requires registration
+- **Not fully open-source**: Source available to licensed users only
+- **Learning curve**: Linear-scaling methods and NGWFs require understanding
+- **NGWF optimization**: Can be challenging to converge for some systems
+- **Pseudopotentials**: Limited to norm-conserving
+- **Hybrid functionals**: Computationally expensive even with linear-scaling
+- **Parallelization**: Excellent but requires understanding of distribution
+- **Memory**: Lower than conventional DFT but still significant for very large systems
+- **Installation**: Requires compilation and libraries
+- **Platform**: Primarily Linux/Unix, HPC systems
+
+## Comparison with Other Codes
+- **vs CONQUEST**: Both O(N), ONETEP plane-wave accuracy, CONQUEST blip basis
+- **vs SIESTA**: ONETEP more accurate per atom, SIESTA faster
+- **vs VASP/QE**: ONETEP for larger systems with similar accuracy
+- **vs FHI-aims**: Different O(N) approaches, both high accuracy
+- **Unique strength**: Plane-wave accuracy at O(N) cost, NGWF technology, biomolecular applications
+
+## Application Areas
+
+### Drug Discovery:
+- Protein-ligand binding
+- Structure-based drug design
+- Binding affinity prediction
+- QM/MM studies
+- Fragment-based analysis
+
+### Biomolecular Science:
+- Amyloid fibril structures
+- DNA electronic properties
+- Enzyme mechanisms
+- Protein folding effects
+- Large biomolecular complexes
+
+### Nanomaterials:
+- Nanoparticles
+- Functionalized surfaces
+- Graphene and 2D materials
+- Carbon nanotubes
+- Nanoscale devices
+
+### Materials Science:
+- Defects in semiconductors
+- Interface properties
+- Molecular crystals
+- Charged adsorbates
+- Battery materials
+
+## Best Practices
+
+### NGWF Optimization:
+- Choose appropriate radii per species
+- Start from good initial guess
+- Monitor convergence carefully
+- Adjust localization if needed
+
+### System Setup:
+- Use quality pseudopotentials
+- Check NGWF coverage
+- Appropriate psinc grid spacing
+- Localization consistent with system
+
+### Large Calculations:
+- Parallel scaling tests
+- Memory estimation
+- I/O optimization
+- Checkpoint strategies
+
+### Convergence:
+- NGWF convergence threshold
+- Density kernel tolerance
+- Energy convergence
+- Grid cutoff energy
+
+## Community and Support
+- Academic license model
+- User workshops (Masterclass events)
+- Mailing list support
+- Active development team
+- Regular releases
+
+## Verification & Sources
+**Primary sources**:
+1. Official website: https://onetep.org/
+2. Documentation: https://onetep.org/documentation/
+3. C.-K. Skylaris et al., J. Chem. Phys. 122, 084119 (2005) - ONETEP method
+4. N. D. M. Hine et al., Comput. Phys. Commun. 180, 1041 (2009) - Linear-scaling
+
+**Secondary sources**:
+1. ONETEP tutorials and workshops (Masterclass 2024)
+2. Published large-scale biomolecule applications
+3. Linear-scaling benchmark studies
+4. Confirmed in 7/7 source lists (claude, g, gr, k, m, q, z)
+
+**Confidence**: CONFIRMED - Appears in all 7 independent source lists
+
+**Verification status**: ✅ VERIFIED
+- Official homepage: ACCESSIBLE
+- Documentation: ACCESSIBLE (requires registration for full access)
+- Source code: Available to licensed users
+- Community support: Active (user mailing list, workshops, Masterclass)
+- Academic citations: >500 (main papers)
+- Active development: Regular releases (v7.2 in 2024), well-maintained
+- Specialized strength: Plane-wave accuracy at O(N) cost, NGWF technology, biomolecular applications, protein-ligand binding
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

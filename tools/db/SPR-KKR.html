@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPR-KKR | GROUND-STATE DFT | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="SPR-KKR is a Korringa-Kohn-Rostoker (KKR) Green's function DFT code developed at Ludwig-Maximilians-Universität München (LMU Munich), Germany. It specializes in fully relativistic calculations for magnetic materials, surfaces, and disordered alloys using the KKR multiple scattering method with spin-">
+    <meta name="keywords" content="SPR-KKR, GROUND-STATE DFT, All-Electron Codes, computational materials science, DFT, simulation tool, SPR-KKR code, SPR-KKR software, SPR-KKR tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/SPR-KKR.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="SPR-KKR | GROUND-STATE DFT | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="SPR-KKR is a Korringa-Kohn-Rostoker (KKR) Green's function DFT code developed at Ludwig-Maximilians-Universität München (LMU Munich), Germany. It specializes in fully relativistic calculations for magnetic materials, surfaces, and disordered alloys using the KKR multiple scattering method with spin-">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/SPR-KKR.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SPR-KKR",
+      "applicationCategory": "ScienceApplication",
+      "description": "SPR-KKR is a Korringa-Kohn-Rostoker (KKR) Green's function DFT code developed at Ludwig-Maximilians-Universität München (LMU Munich), Germany. It specializes in fully relativistic calculations for magnetic materials, surfaces, and disordered alloys using the KKR multiple scattering method with spin-",
+      "url": "https://indranil2020.github.io/tools/db/SPR-KKR.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>1. GROUND-STATE DFT</span>
+                <span> &nbsp;/&nbsp; 1.2 All-Electron Codes</span>
+            </div>
+            <h1>SPR-KKR</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 1. GROUND-STATE DFT</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 1.2 All-Electron Codes</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://www.ebert.cup.uni-muenchen.de/index.php/en/software-en/13-sprkkr" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">SPR-KKR is a Korringa-Kohn-Rostoker (KKR) Green's function DFT code developed at Ludwig-Maximilians-Universität München (LMU Munich), Germany. It specializes in fully relativistic calculations for magnetic materials, surfaces, and disordered alloys using the KKR multiple scattering method with spin-polarization and relativistic effects. SPR-KKR is particularly powerful for spectroscopy calculations and complex magnetic structures.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><ul class="paper-list"><li><a href="../../scientific_tools_consolidated/Papers_of_Codes/DFT/1.2_All-Electron/SPR-KKR/Ebert_et_al_2011.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Ebert_et_al_2011.pdf</a></li></ul>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># SPR-KKR (Spin-Polarized Relativistic KKR)
+
+## Official Resources
+- Homepage: https://www.ebert.cup.uni-muenchen.de/index.php/en/software-en/13-sprkkr
+- Documentation: Available through research group
+- Source Repository: Available with license
+- License: Free for academic use (license agreement required)
+
+## Overview
+SPR-KKR is a Korringa-Kohn-Rostoker (KKR) Green's function DFT code developed at Ludwig-Maximilians-Universität München (LMU Munich), Germany. It specializes in fully relativistic calculations for magnetic materials, surfaces, and disordered alloys using the KKR multiple scattering method with spin-polarization and relativistic effects. SPR-KKR is particularly powerful for spectroscopy calculations and complex magnetic structures.
+
+**Scientific domain**: Relativistic KKR, magnetism, spectroscopy, Green's function DFT  
+**Target user community**: Magnetism researchers, spectroscopists, surface scientists, relativistic materials
+
+## Theoretical Methods
+- Korringa-Kohn-Rostoker (KKR) method
+- Fully relativistic Dirac formalism
+- Spin-polarized calculations
+- Green's function approach
+- Density Functional Theory (LDA, GGA)
+- Coherent Potential Approximation (CPA)
+- Non-collinear magnetism
+- Spin-orbit coupling
+- Relativistic effects (fully included)
+- Multiple scattering theory
+
+## Capabilities (CRITICAL)
+- Ground-state electronic structure (solids)
+- Fully relativistic calculations
+- Spin-polarized and non-collinear magnetism
+- Magnetic properties
+- Spectroscopy (XAS, XMCD, photoelectron)
+- Substitutional disorder (CPA)
+- Random alloys
+- Surface and interface calculations
+- Transport properties
+- Magnetic anisotropy
+- Exchange interactions
+- Spin dynamics
+- Heavy element systems
+- Actinides and lanthanides
+- Complex magnetic structures
+
+**Sources**: LMU Munich SPR-KKR website
+
+## Key Strengths
+
+### Fully Relativistic:
+- Dirac equation treatment
+- Exact spin-orbit coupling
+- Heavy element accuracy
+- No approximations
+- Benchmark quality
+
+### Magnetism:
+- Collinear and non-collinear
+- Complex magnetic structures
+- Spin spirals
+- Exchange interactions
+- Magnetic anisotropy
+
+### Spectroscopy:
+- X-ray absorption (XAS)
+- X-ray magnetic circular dichroism (XMCD)
+- Photoelectron spectroscopy
+- Core-level spectra
+- Accurate predictions
+
+### CPA for Disorder:
+- Random alloys
+- Substitutional disorder
+- No supercells needed
+- Exact treatment
+- Efficient computation
+
+### Surfaces:
+- Surface electronic structure
+- Interfaces
+- Layered systems
+- Realistic geometries
+- Accurate modeling
+
+## Inputs & Outputs
+- **Input formats**:
+  - Text-based input files
+  - Structure definitions
+  - Magnetic configurations
+  - Disorder specifications
+  
+- **Output data types**:
+  - Energies and moments
+  - DOS and band structure
+  - Spectroscopic data
+  - Magnetic properties
+  - Exchange parameters
+
+## Interfaces & Ecosystem
+- **Analysis Tools**:
+  - Spectroscopy analysis
+  - Magnetic property extraction
+  - DOS visualization
+  - Custom scripts
+  
+- **Research Group**:
+  - LMU Munich support
+  - Collaboration network
+  - User community
+  - Academic distribution
+
+## Workflow and Usage
+
+### Typical Workflow:
+1. Define crystal structure
+2. Set magnetic configuration
+3. Specify relativistic level
+4. Configure calculation type
+5. Run SPR-KKR
+6. Analyze results (spectra, moments, etc.)
+
+### Spectroscopy Calculations:
+- XAS/XMCD setup
+- Core-hole treatment
+- Final state effects
+- Comparison with experiment
+- Peak assignment
+
+### Magnetic Properties:
+- Exchange parameter extraction
+- Magnetic anisotropy
+- Spin dynamics parameters
+- Curie temperature estimation
+
+## Advanced Features
+
+### Fully Relativistic KKR:
+- Four-component wavefunctions
+- Dirac equation
+- Exact treatment
+- Heavy elements
+- Spin-orbit natural
+
+### Non-Collinear Magnetism:
+- Arbitrary spin directions
+- Spin spirals
+- Complex structures
+- Frustrated magnetism
+- Realistic modeling
+
+### Spectroscopy:
+- Core-level excitations
+- XAS, XMCD calculations
+- Resonant effects
+- Multiplet effects
+- Experimental comparison
+
+### CPA:
+- Chemical disorder
+- Concentration effects
+- Multiple components
+- Statistical averaging
+- Efficient for alloys
+
+### Transport:
+- Electrical conductivity
+- Resistivity
+- Spin transport
+- Interface effects
+
+## Performance Characteristics
+- **Speed**: Moderate (relativistic methods)
+- **Accuracy**: Excellent for magnetism/spectroscopy
+- **System size**: Unit cell plus disorder
+- **Memory**: Moderate requirements
+- **Typical**: Research calculations
+
+## Computational Cost
+- **Fully relativistic**: Expensive but necessary
+- **CPA**: Efficient for disorder
+- **Spectroscopy**: Moderate cost
+- **Non-collinear**: More expensive
+- **Production**: Research-level feasible
+
+## Limitations & Known Constraints
+- **Learning curve**: Steep (KKR method)
+- **Distribution**: Academic license required
+- **Documentation**: Research group level
+- **Community**: Specialized
+- **Platform**: Linux systems
+- **Complexity**: Advanced users
+
+## Comparison with Other Codes
+- **vs AkaiKKR**: Both KKR, SPR-KKR fully relativistic
+- **vs VASP/QE**: SPR-KKR specialized for magnetism/spectroscopy
+- **vs Relativistic codes**: SPR-KKR KKR-based, different approach
+- **Unique strength**: Fully relativistic KKR, spectroscopy, magnetism, CPA, Green's function
+
+## Application Areas
+
+### Magnetism:
+- Magnetic materials
+- Exchange interactions
+- Magnetic anisotropy
+- Spin dynamics
+- Curie temperatures
+
+### Spectroscopy:
+- XAS experiments
+- XMCD measurements
+- Core-level spectroscopy
+- Element-specific magnetism
+- Orbital moments
+
+### Heavy Elements:
+- Actinides
+- Lanthanides
+- Relativistic effects
+- Spin-orbit coupling
+- f-electron systems
+
+### Surfaces:
+- Surface magnetism
+- Interfaces
+- Layered structures
+- Thin films
+- Proximity effects
+
+### Alloys:
+- Random alloys
+- High-entropy alloys
+- Disorder effects
+- Concentration studies
+- Phase diagrams
+
+## Best Practices
+
+### Relativistic Level:
+- Fully relativistic for heavy elements
+- Spin-orbit essential
+- Appropriate for system
+- Benchmark when needed
+
+### Magnetism:
+- Appropriate initial moments
+- Non-collinear when needed
+- Converge magnetic structure
+- Extract exchange parameters
+
+### Spectroscopy:
+- Core-hole setup
+- Broadening parameters
+- Comparison protocol
+- Peak analysis
+- Experimental validation
+
+### CPA:
+- Appropriate concentrations
+- Convergence testing
+- Physical constraints
+- Validate results
+
+## Community and Support
+- Academic license
+- LMU Munich group
+- Hubert Ebert group
+- Research collaboration
+- User community
+- Training available
+
+## Educational Resources
+- Group documentation
+- Published papers
+- Example calculations
+- Workshops
+- User manual
+
+## Development
+- Ludwig-Maximilians-Universität München
+- Hubert Ebert group
+- Active research development
+- Method improvements
+- User feedback
+- Regular updates
+
+## Research Applications
+- Magnetic materials
+- Spectroscopy interpretation
+- Heavy element compounds
+- Surface science
+- Spintronics
+
+## Technical Innovation
+
+### Relativistic KKR:
+- Fully relativistic formalism
+- Dirac Green's functions
+- Exact treatment
+- No approximations
+- State-of-the-art
+
+### Spectroscopy:
+- Accurate core-level
+- XMCD calculations
+- Experimental comparison
+- Element-specific
+- Orbital resolution
+
+## German Development
+- Strong German tradition
+- LMU Munich expertise
+- European collaboration
+- Academic excellence
+- International impact
+
+## Verification & Sources
+**Primary sources**:
+1. LMU Munich website: https://www.ebert.cup.uni-muenchen.de/index.php/en/software-en/13-sprkkr
+2. H. Ebert et al., Rep. Prog. Phys. papers on KKR
+3. SPR-KKR user documentation
+4. LMU research group publications
+
+**Secondary sources**:
+1. Published studies using SPR-KKR
+2. Magnetism and spectroscopy literature
+3. KKR method reviews
+4. Relativistic DFT literature
+
+**Confidence**: VERIFIED - Well-established research code
+
+**Verification status**: ✅ VERIFIED
+- LMU Munich website: ACCESSIBLE
+- Documentation: Available with license
+- Software: Academic license required
+- Community support: Research group, collaborations
+- Academic citations: Extensive in magnetism/spectroscopy
+- Active development: LMU group
+- Specialized strength: Fully relativistic KKR, spectroscopy (XAS, XMCD), magnetism, CPA for disorder, heavy elements, surface calculations, Green's function approach
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

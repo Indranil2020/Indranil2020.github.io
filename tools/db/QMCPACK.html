@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QMCPACK | DMFT & MANY-BODY | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="QMCPACK is a modern, high-performance implementation of continuum quantum Monte Carlo (QMC) methods for electronic structure calculations of molecules, 2D materials, and solids. Developed as a community code with major contributions from Oak Ridge National Laboratory, QMCPACK implements Variational ">
+    <meta name="keywords" content="QMCPACK, DMFT & MANY-BODY, QMC, computational materials science, DFT, simulation tool, QMCPACK code, QMCPACK software, QMCPACK tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/QMCPACK.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="QMCPACK | DMFT & MANY-BODY | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="QMCPACK is a modern, high-performance implementation of continuum quantum Monte Carlo (QMC) methods for electronic structure calculations of molecules, 2D materials, and solids. Developed as a community code with major contributions from Oak Ridge National Laboratory, QMCPACK implements Variational ">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/QMCPACK.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "QMCPACK",
+      "applicationCategory": "ScienceApplication",
+      "description": "QMCPACK is a modern, high-performance implementation of continuum quantum Monte Carlo (QMC) methods for electronic structure calculations of molecules, 2D materials, and solids. Developed as a community code with major contributions from Oak Ridge National Laboratory, QMCPACK implements Variational ",
+      "url": "https://indranil2020.github.io/tools/db/QMCPACK.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>3. DMFT & MANY-BODY</span>
+                <span> &nbsp;/&nbsp; 3.3 QMC</span>
+            </div>
+            <h1>QMCPACK</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 3. DMFT & MANY-BODY</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 3.3 QMC</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> CONFIRMED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://qmcpack.org/" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">QMCPACK is a modern, high-performance implementation of continuum quantum Monte Carlo (QMC) methods for electronic structure calculations of molecules, 2D materials, and solids. Developed as a community code with major contributions from Oak Ridge National Laboratory, QMCPACK implements Variational Monte Carlo (VMC), Diffusion Monte Carlo (DMC), and related methods. It is optimized for leadership-class supercomputers and provides production-quality calculations for realistic materials with unpre</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><ul class="paper-list"><li><a href="../../scientific_tools_consolidated/Papers_of_Codes/DMFT/3.3_QMC/QMCPACK/Kim_et_al_2018.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Kim_et_al_2018.pdf</a></li></ul>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># QMCPACK (Quantum Monte Carlo Package)
+
+## Official Resources
+- Homepage: https://qmcpack.org/
+- Documentation: https://qmcpack.readthedocs.io/
+- Source Repository: https://github.com/QMCPACK/qmcpack
+- License: BSD 3-Clause License (open-source)
+
+## Overview
+QMCPACK is a modern, high-performance implementation of continuum quantum Monte Carlo (QMC) methods for electronic structure calculations of molecules, 2D materials, and solids. Developed as a community code with major contributions from Oak Ridge National Laboratory, QMCPACK implements Variational Monte Carlo (VMC), Diffusion Monte Carlo (DMC), and related methods. It is optimized for leadership-class supercomputers and provides production-quality calculations for realistic materials with unprecedented accuracy.
+
+**Scientific domain**: Quantum Monte Carlo, electronic structure, materials science  
+**Target user community**: Materials scientists, computational chemists, HPC users
+
+## Theoretical Methods
+- Variational Monte Carlo (VMC)
+- Diffusion Monte Carlo (DMC)
+- Reptation QMC (RQMC)
+- Fixed-node approximation
+- Slater-Jastrow wavefunctions
+- Multi-determinant expansions
+- Pseudopotentials
+- All-electron calculations
+- Real-space methods
+
+## Capabilities (CRITICAL)
+**Category**: Open-source QMC code
+- VMC and DMC methods
+- Molecules and solids
+- Periodic boundary conditions
+- Slater-Jastrow wavefunctions
+- Multi-reference trial functions
+- Backflow correlations
+- GPU acceleration (CUDA, HIP)
+- MPI + OpenMP + GPU
+- Wavefunction optimization
+- Energy calculations
+- Forces and structural optimization
+- Excited states
+- DFT trial wavefunction input
+- AFQMC (Auxiliary-Field QMC)
+- Production quality
+
+**Sources**: Official website, documentation, publications
+
+## Key Strengths
+
+### Accuracy:
+- Beyond-DFT precision
+- Benchmark-quality results
+- Systematic improvement
+- Fixed-node DMC
+- Chemical accuracy achievable
+
+### HPC Performance:
+- Leadership-class scaling
+- GPU acceleration
+- Hybrid parallelization
+- Optimized kernels
+- Exascale-ready
+
+### Production Quality:
+- Well-tested
+- Large community
+- Active development
+- Comprehensive documentation
+- Publication-ready
+
+### Versatility:
+- Molecules to solids
+- Finite/periodic systems
+- Various materials
+- Multiple QMC methods
+- Flexible workflows
+
+## Inputs & Outputs
+- **Input formats**:
+  - XML input files
+  - DFT trial wavefunctions (VASP, Quantum ESPRESSO, PySCF)
+  - Pseudopotentials
+  - Structure files
+  
+- **Output data types**:
+  - Total energies
+  - Forces
+  - Structural properties
+  - Excited states
+  - Statistical data
+  - HDF5 archives
+
+## Interfaces & Ecosystem
+
+### DFT Codes:
+- Quantum ESPRESSO (pw2qmcpack)
+- VASP
+- PySCF
+- Gaussian
+- GAMESS
+
+### Tools:
+- Nexus workflow tool
+- Python utilities
+- Analysis scripts
+- Wavefunction converters
+
+## Workflow and Usage
+
+### Installation:
+```bash
+# Clone repository
+git clone https://github.com/QMCPACK/qmcpack.git
+cd qmcpack
+mkdir build && cd build
+
+# Configure with GPU
+cmake -DQMC_CUDA=1 ..
+make -j8
+```
+
+### DFT Trial Wavefunction:
+```bash
+# Quantum ESPRESSO
+pw.x < scf.in > scf.out
+pw2qmcpack.x < p2q.in > p2q.out
+```
+
+### VMC Optimization:
+```xml
+<!-- opt.xml -->
+<simulation>
+  <qmc method="linear" move="pbyp">
+    <parameter name="warmupSteps">100</parameter>
+    <parameter name="blocks">200</parameter>
+    <parameter name="timestep">0.5</parameter>
+    <parameter name="samples">16000</parameter>
+  </qmc>
+</simulation>
+```
+
+### DMC Calculation:
+```xml
+<!-- dmc.xml -->
+<simulation>
+  <qmc method="dmc" move="pbyp">
+    <parameter name="targetWalkers">1920</parameter>
+    <parameter name="blocks">1000</parameter>
+    <parameter name="timestep">0.01</parameter>
+    <parameter name="warmupSteps">50</parameter>
+  </qmc>
+</simulation>
+```
+
+### Run QMCPACK:
+```bash
+# MPI + GPU
+mpirun -n 8 qmcpack opt.xml
+mpirun -n 8 qmcpack dmc.xml
+```
+
+### Using Nexus:
+```python
+from nexus import settings, generate_physical_system
+from nexus import generate_pwscf, generate_pw2qmcpack
+from nexus import generate_qmcpack, loop, run_project
+
+# Setup system
+system = generate_physical_system(
+    structure='diamond.xsf',
+    C=4
+)
+
+# DFT calculation
+scf = generate_pwscf(
+    system=system,
+    job=job_scf,
+    input_dft='lda'
+)
+
+# Convert to QMCPACK
+p2q = generate_pw2qmcpack(
+    dependencies=(scf,'orbitals')
+)
+
+# VMC optimization
+opt = generate_qmcpack(
+    system=system,
+    job=job_opt,
+    input_type='basic',
+    qmc='opt',
+    dependencies=(p2q,'orbitals')
+)
+
+# DMC
+dmc = generate_qmcpack(
+    system=system,
+    job=job_dmc,
+    input_type='basic',
+    qmc='dmc',
+    dependencies=(opt,'jastrow')
+)
+
+run_project()
+```
+
+## Advanced Features
+
+### GPU Acceleration:
+- CUDA support
+- HIP (AMD ROCm)
+- Mixed precision
+- Performance portable
+- Exascale systems
+
+### AFQMC:
+- Auxiliary-Field QMC
+- Finite temperature
+- Correlated systems
+- Complementary to VMC/DMC
+
+### Wavefunction Optimization:
+- Linear method
+- Energy minimization
+- Variance minimization
+- Efficient optimization
+
+### Excited States:
+- Excited state calculations
+- Promotion methods
+- Optical gaps
+- Multiple states
+
+## Performance Characteristics
+- **Speed**: HPC-optimized, GPU-accelerated
+- **Accuracy**: Chemical accuracy achievable
+- **Scalability**: Exascale-ready
+- **System size**: 100s-1000s electrons
+- **Typical**: Leadership-class HPC
+
+## Computational Cost
+- Expensive but accurate
+- DMC: O(N³-N⁴) electrons
+- GPU acceleration crucial
+- HPC resources required
+- Production: Millions of core-hours
+
+## Limitations & Known Constraints
+- **Fixed-node approximation**: DMC nodal error
+- **Computational cost**: Very expensive
+- **HPC required**: Not for desktop
+- **Trial wavefunction**: Quality matters
+- **Learning curve**: Steep
+- **Pseudopotentials**: Careful selection needed
+
+## Comparison with Other QMC Codes
+- **vs CASINO**: QMCPACK HPC-focused, CASINO feature-rich
+- **vs TurboRVB**: QMCPACK larger community, TurboRVB specialized
+- **Unique strength**: HPC performance, GPU acceleration, community support, production quality, exascale-ready
+
+
+## Comparison with Other Codes
+- **vs comparable tools**: See community benchmarks and comparison studies
+- **Unique strength**: See Overview for distinctive capabilities
+## Application Areas
+
+### Materials Science:
+- Crystals and solids
+- 2D materials
+- Defects
+- Surfaces
+- Nanostructures
+
+### Chemistry:
+- Molecular systems
+- Reaction energies
+- Excited states
+- Chemical accuracy
+
+### Condensed Matter:
+- Electronic structure
+- Benchmark calculations
+- Beyond-DFT accuracy
+- Correlation effects
+
+### High-Performance Computing:
+- Exascale applications
+- GPU computing
+- Performance optimization
+- Scalability studies
+
+## Best Practices
+
+### Trial Wavefunctions:
+- Quality DFT starting point
+- Hybrid functionals preferred
+- Multi-determinant when needed
+- Jastrow optimization crucial
+
+### DMC Parameters:
+- Timestep extrapolation
+- Population control
+- Finite-size corrections
+- Error analysis
+
+### HPC Usage:
+- GPU acceleration
+- Load balancing
+- I/O optimization
+- Checkpoint/restart
+
+## Community and Support
+- Open-source (BSD 3-Clause)
+- Large user community
+- Active development
+- Annual workshops
+- Mailing lists
+- Slack channel
+- GitHub issue tracking
+
+## Educational Resources
+- Comprehensive documentation
+- Tutorials
+- Workshop materials
+- Example inputs
+- Publication list
+- QMC schools
+
+## Development
+- ORNL leadership
+- Multi-institutional
+- Community contributions
+- Active development
+- Exascale Computing Project
+- Regular releases
+
+## Research Impact
+QMCPACK is used for high-precision electronic structure calculations across chemistry, materials science, and condensed matter physics, with thousands of publications and major allocations on leadership-class supercomputers worldwide.
+
+## Verification & Sources
+**Primary sources**:
+1. Homepage: https://qmcpack.org/
+2. Documentation: https://qmcpack.readthedocs.io/
+3. GitHub: https://github.com/QMCPACK/qmcpack
+4. Publications: J. Chem. Theory Comput. 16, 4 (2020)
+
+**Secondary sources**:
+1. User publications
+2. QMC literature
+3. HPC reports
+
+**Confidence**: CONFIRMED - Leading QMC code
+
+**Verification status**: ✅ CONFIRMED
+- Website: ACTIVE
+- License: BSD 3-Clause (open-source)
+- **Category**: Open-source QMC code
+- Status: Actively developed
+- Community: Very large, international
+- Specialized strength: High-performance quantum Monte Carlo for electronic structure, GPU acceleration, exascale-ready, VMC/DMC/AFQMC methods, production quality, leadership-class HPC, benchmark accuracy, large community, comprehensive documentation, materials and molecules
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

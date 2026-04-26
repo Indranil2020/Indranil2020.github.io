@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pybader | POST-PROCESSING | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="pybader is a threaded Python implementation of grid-based Bader charge analysis. It provides a fast, pure-Python alternative to the original Bader code, with support for multiple file formats and integration with Python workflows for high-throughput analysis.">
+    <meta name="keywords" content="pybader, POST-PROCESSING, Chemical Bonding Analysis, computational materials science, DFT, simulation tool, pybader code, pybader software, pybader tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/pybader.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="pybader | POST-PROCESSING | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="pybader is a threaded Python implementation of grid-based Bader charge analysis. It provides a fast, pure-Python alternative to the original Bader code, with support for multiple file formats and integration with Python workflows for high-throughput analysis.">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/pybader.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "pybader",
+      "applicationCategory": "ScienceApplication",
+      "description": "pybader is a threaded Python implementation of grid-based Bader charge analysis. It provides a fast, pure-Python alternative to the original Bader code, with support for multiple file formats and integration with Python workflows for high-throughput analysis.",
+      "url": "https://indranil2020.github.io/tools/db/pybader.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>8. POST-PROCESSING</span>
+                <span> &nbsp;/&nbsp; 8.4 Chemical Bonding Analysis</span>
+            </div>
+            <h1>pybader</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 8. POST-PROCESSING</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 8.4 Chemical Bonding Analysis</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://github.com/adam-kerrigan/pybader" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">pybader is a threaded Python implementation of grid-based Bader charge analysis. It provides a fast, pure-Python alternative to the original Bader code, with support for multiple file formats and integration with Python workflows for high-throughput analysis.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted"><em>No paper PDFs uploaded yet for this code.</em></p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># pybader
+
+## Official Resources
+- Homepage: https://github.com/adam-kerrigan/pybader
+- GitHub: https://github.com/adam-kerrigan/pybader
+- PyPI: https://pypi.org/project/pybader/
+- Documentation: GitHub README and examples
+- License: MIT License
+
+## Overview
+pybader is a threaded Python implementation of grid-based Bader charge analysis. It provides a fast, pure-Python alternative to the original Bader code, with support for multiple file formats and integration with Python workflows for high-throughput analysis.
+
+**Scientific domain**: Bader charge analysis, QTAIM, charge partitioning
+**Target user community**: Python-based materials science workflows, high-throughput screening
+
+## Theoretical Methods
+- Bader's Quantum Theory of Atoms in Molecules (QTAIM)
+- Zero-flux surface partitioning
+- Near-grid and weight methods
+- Charge density integration
+- Basin volume calculation
+
+## Capabilities (CRITICAL)
+- **Python Native**: Pure Python implementation
+- **Multi-threaded**: Parallel processing support
+- **Multiple Formats**: VASP, CHGCAR, cube files
+- **Bader Volumes**: Atomic basin volumes
+- **Charge Integration**: Accurate charge partitioning
+- **Refinement Options**: Multiple refinement methods
+
+**Sources**: pybader GitHub, PyPI documentation
+
+## Key Strengths
+
+### Python Integration:
+- pip installable
+- Scriptable workflows
+- NumPy-based
+- Jupyter compatible
+
+### Performance:
+- Multi-threaded execution
+- Efficient memory usage
+- Configurable precision
+- Fast for routine analysis
+
+### Flexibility:
+- Multiple input formats
+- Configurable methods
+- Export options
+- Easy automation
+
+## Inputs & Outputs
+- **Input formats**:
+  - VASP CHGCAR
+  - Cube files
+  - Density grids
+  
+- **Output data types**:
+  - Bader charges
+  - Atomic volumes
+  - Basin assignments
+  - Charge density files
+
+## Installation
+```bash
+pip install pybader
+```
+
+## Usage Examples
+```python
+from pybader import bader
+
+# Run Bader analysis on CHGCAR
+results = bader("CHGCAR")
+
+# Access charges
+charges = results.charges
+volumes = results.volumes
+
+# Command line usage
+# pybader CHGCAR
+```
+
+## Performance Characteristics
+- **Speed**: Competitive with compiled code
+- **Memory**: Efficient grid handling
+- **Parallelization**: Multi-threaded
+
+## Limitations & Known Constraints
+- **Grid-based**: Accuracy depends on grid density
+- **Python overhead**: Slightly slower than Fortran
+- **Large systems**: Memory for very large grids
+- **Documentation**: Could be more extensive
+
+## Comparison with Other Codes
+- **vs Bader (Henkelman)**: pybader Python, Bader Fortran
+- **vs Critic2**: pybader focused on Bader only
+- **vs pymatgen Bader**: Different implementations
+- **Unique strength**: Native Python, easy automation
+
+## Application Areas
+- Charge transfer analysis
+- Oxidation state determination
+- Bonding characterization
+- High-throughput workflows
+- Materials screening
+
+## Best Practices
+- Use fine charge density grids
+- Include core charges for PAW
+- Verify against known systems
+- Check charge conservation
+
+## Community and Support
+- GitHub repository
+- PyPI package
+- MIT licensed
+- Open development
+
+## Verification & Sources
+**Primary sources**:
+1. GitHub: https://github.com/adam-kerrigan/pybader
+2. PyPI: https://pypi.org/project/pybader/
+
+**Confidence**: VERIFIED
+
+**Verification status**: ✅ VERIFIED
+- GitHub repository: ACCESSIBLE
+- PyPI package: AVAILABLE
+- Source code: OPEN (MIT)
+- Method: Bader QTAIM analysis
+
+
+
+## Interfaces & Ecosystem
+- **Integration**: See official documentation for interface details
+- **Python/API**: See documentation for programmatic access
+
+
+## Computational Cost
+- **Typical calculation**: See official documentation for performance benchmarks
+- **Scaling**: See documentation for parallelization and GPU support
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

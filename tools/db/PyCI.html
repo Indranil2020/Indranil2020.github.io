@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyCI | GROUND-STATE DFT | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="PyCI is a Python library for configuration interaction (CI) calculations. Part of the TheoChem ecosystem, it provides efficient CI implementations using determinant-based algorithms with optimized Slater-Condon rules. Integrates with ModelHamiltonian and FanPy for comprehensive wavefunction studies.">
+    <meta name="keywords" content="PyCI, GROUND-STATE DFT, Quantum Chemistry Suites, computational materials science, DFT, simulation tool, PyCI code, PyCI software, PyCI tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/PyCI.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="PyCI | GROUND-STATE DFT | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="PyCI is a Python library for configuration interaction (CI) calculations. Part of the TheoChem ecosystem, it provides efficient CI implementations using determinant-based algorithms with optimized Slater-Condon rules. Integrates with ModelHamiltonian and FanPy for comprehensive wavefunction studies.">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/PyCI.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PyCI",
+      "applicationCategory": "ScienceApplication",
+      "description": "PyCI is a Python library for configuration interaction (CI) calculations. Part of the TheoChem ecosystem, it provides efficient CI implementations using determinant-based algorithms with optimized Slater-Condon rules. Integrates with ModelHamiltonian and FanPy for comprehensive wavefunction studies.",
+      "url": "https://indranil2020.github.io/tools/db/PyCI.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>1. GROUND-STATE DFT</span>
+                <span> &nbsp;/&nbsp; 1.4 Quantum Chemistry Suites</span>
+            </div>
+            <h1>PyCI</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 1. GROUND-STATE DFT</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 1.4 Quantum Chemistry Suites</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://github.com/theochem/pyci" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">PyCI is a Python library for configuration interaction (CI) calculations. Part of the TheoChem ecosystem, it provides efficient CI implementations using determinant-based algorithms with optimized Slater-Condon rules. Integrates with ModelHamiltonian and FanPy for comprehensive wavefunction studies.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted"><em>No paper PDFs uploaded yet for this code.</em></p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># PyCI
+
+## Official Resources
+- Homepage: https://github.com/theochem/pyci
+- Documentation: https://pyci.readthedocs.io/
+- Source Repository: https://github.com/theochem/pyci
+- License: GNU General Public License v3.0
+
+## Overview
+PyCI is a Python library for configuration interaction (CI) calculations. Part of the TheoChem ecosystem, it provides efficient CI implementations using determinant-based algorithms with optimized Slater-Condon rules. Integrates with ModelHamiltonian and FanPy for comprehensive wavefunction studies.
+
+**Scientific domain**: Configuration interaction, electron correlation, FCI  
+**Target user community**: Researchers performing CI calculations and wavefunction method development
+
+## Theoretical Methods
+- Full Configuration Interaction (FCI)
+- Selected Configuration Interaction (sCI)
+- CISD (singles and doubles)
+- CISDT (singles, doubles, triples)
+- Active space CI
+- Heat-bath CI (HCI)
+- Spin-adapted implementations
+- Sparse Hamiltonian methods
+
+## Capabilities (CRITICAL)
+- Full CI for small systems
+- Selected CI for larger systems
+- Determinant-based algorithms
+- Efficient Slater-Condon rules
+- Sparse matrix techniques
+- ModelHamiltonian integration
+- FanPy wavefunction interface
+- Custom Hamiltonian support
+- Ground and excited states
+- Spin eigenfunctions
+
+## Key Strengths
+
+### CI Methods:
+- Multiple truncation levels
+- Selection schemes (HCI)
+- Variational treatment
+- Size-consistency corrections
+
+### Efficiency:
+- Optimized Slater-Condon
+- Sparse Hamiltonian storage
+- Davidson diagonalization
+- Memory-efficient schemes
+
+### Integration:
+- TheoChem ecosystem
+- Standard integral formats
+- FanPy wavefunctions
+- Model Hamiltonians
+
+### Research Flexibility:
+- Custom CI spaces
+- User-defined selections
+- Algorithm testing
+- Method development
+
+## Inputs & Outputs
+- **Input formats**:
+  - Python API
+  - FCIDUMP integrals
+  - ModelHamiltonian objects
+  
+- **Output data types**:
+  - CI energies
+  - CI vectors
+  - Natural orbitals
+  - Excited states
+
+## Interfaces & Ecosystem
+- **TheoChem tools**: FanPy, ModelHamiltonian
+- **Integral sources**: PySCF interface
+- **NumPy/SciPy**: Sparse linear algebra
+- **Diagonalization**: Davidson, Lanczos
+
+## Advanced Features
+
+### Selected CI:
+- Heat-bath selection
+- Importance truncation
+- Perturbative corrections
+- Convergence extrapolation
+
+### Spin Adaptation:
+- Sz eigenfunctions
+- S² eigenfunctions
+- Genealogical coupling
+- CSF basis
+
+### Sparse Methods:
+- On-the-fly generation
+- Compressed storage
+- Efficient contractions
+- Large CI spaces
+
+## Performance Characteristics
+- **Speed**: Efficient determinant handling
+- **Accuracy**: Variational CI accuracy
+- **System size**: Small to medium (FCI), larger (sCI)
+- **Memory**: Sparse storage efficient
+- **Parallelization**: Potential for parallel
+
+## Computational Cost
+- **FCI**: Factorial scaling (small systems)
+- **CISD**: O(N^6) manageable
+- **Selected CI**: System dependent
+- **Typical**: Seconds to hours
+
+## Limitations & Known Constraints
+- **FCI scaling**: Exponential, limits system size
+- **Size consistency**: Not inherent in truncated CI
+- **Production**: Research focus
+- **Documentation**: Academic oriented
+
+## Comparison with Other Codes
+- **vs MOLPRO CI**: PyCI more flexible, MOLPRO faster
+- **vs PySCF CI**: Similar, different ecosystems
+- **vs Arrow/DICE**: Different sCI algorithms
+- **Unique strength**: TheoChem integration, flexibility
+
+## Application Areas
+
+### Benchmarks:
+- FCI reference energies
+- Correlation energy studies
+- Method validation
+
+### Strong Correlation:
+- Multi-reference systems
+- Bond breaking
+- Transition metals
+
+### Method Development:
+- CI algorithm testing
+- Selection scheme development
+- Hybrid methods
+
+## Best Practices
+
+### Calculation Setup:
+- Appropriate active space
+- Selection thresholds
+- Convergence criteria
+- State averaging for excited states
+
+### Efficiency:
+- Start with smaller CI
+- Increase systematically
+- Use selected CI for larger systems
+- Monitor memory usage
+
+## Community and Support
+- Open-source GPL v3
+- TheoChem group (McMaster University)
+- Academic publications
+- GitHub for issues
+- Growing user base
+
+## Verification & Sources
+**Primary sources**:
+1. GitHub: https://github.com/theochem/pyci
+2. Ayers group publications
+3. CI methodology papers
+4. TheoChem documentation
+
+**Confidence**: VERIFIED
+- Source code: OPEN (GitHub, GPL v3)
+- Documentation: ReadTheDocs
+- Academic group: TheoChem
+- Active development: Yes
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

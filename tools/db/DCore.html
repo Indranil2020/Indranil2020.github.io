@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCore | DMFT & MANY-BODY | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="DCore (DMFT Core) is an integrated DMFT software package developed at the Institute for Solid State Physics (ISSP), University of Tokyo. It provides a user-friendly interface for DFT+DMFT calculations with multiple impurity solvers and DFT code interfaces, designed for studying strongly correlated m">
+    <meta name="keywords" content="DCore, DMFT & MANY-BODY, DMFT Frameworks, computational materials science, DFT, simulation tool, DCore code, DCore software, DCore tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/DCore.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="DCore | DMFT & MANY-BODY | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="DCore (DMFT Core) is an integrated DMFT software package developed at the Institute for Solid State Physics (ISSP), University of Tokyo. It provides a user-friendly interface for DFT+DMFT calculations with multiple impurity solvers and DFT code interfaces, designed for studying strongly correlated m">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/DCore.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "DCore",
+      "applicationCategory": "ScienceApplication",
+      "description": "DCore (DMFT Core) is an integrated DMFT software package developed at the Institute for Solid State Physics (ISSP), University of Tokyo. It provides a user-friendly interface for DFT+DMFT calculations with multiple impurity solvers and DFT code interfaces, designed for studying strongly correlated m",
+      "url": "https://indranil2020.github.io/tools/db/DCore.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>3. DMFT & MANY-BODY</span>
+                <span> &nbsp;/&nbsp; 3.1 DMFT Frameworks</span>
+            </div>
+            <h1>DCore</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 3. DMFT & MANY-BODY</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 3.1 DMFT Frameworks</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> CONFIRMED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://github.com/issp-center-dev/DCore" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">DCore (DMFT Core) is an integrated DMFT software package developed at the Institute for Solid State Physics (ISSP), University of Tokyo. It provides a user-friendly interface for DFT+DMFT calculations with multiple impurity solvers and DFT code interfaces, designed for studying strongly correlated materials with emphasis on accessibility and automation.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><ul class="paper-list"><li><a href="../../scientific_tools_consolidated/Papers_of_Codes/DMFT/3.1_DMFT_Frameworks/DCore/Shinaoka_et_al_2017.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Shinaoka_et_al_2017.pdf</a></li></ul>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># DCore
+
+## Official Resources
+- Homepage: https://issp-center-dev.github.io/DCore/
+- Documentation: https://issp-center-dev.github.io/DCore/manual/master/index.html
+- Source Repository: https://github.com/issp-center-dev/DCore
+- License: GNU General Public License v3.0
+
+## Overview
+DCore (DMFT Core) is an integrated DMFT software package developed at the Institute for Solid State Physics (ISSP), University of Tokyo. It provides a user-friendly interface for DFT+DMFT calculations with multiple impurity solvers and DFT code interfaces, designed for studying strongly correlated materials with emphasis on accessibility and automation.
+
+**Scientific domain**: Strongly correlated materials, DFT+DMFT, transition metal oxides  
+**Target user community**: Researchers studying correlated electron systems requiring practical DFT+DMFT tools
+
+## Theoretical Methods
+- DFT+DMFT (charge self-consistent and one-shot)
+- Continuous-time quantum Monte Carlo (CTQMC)
+- Interaction expansion (CT-INT)
+- Hybridization expansion (CT-HYB)
+- Hubbard I approximation
+- ALPS/CT-HYB integration
+- TRIQS/cthyb integration
+- Spin-orbit coupling
+- LDA+DMFT, GGA+DMFT
+
+## Capabilities (CRITICAL)
+- User-friendly DFT+DMFT calculations
+- Multiple DFT code backends (VASP, Quantum ESPRESSO, OpenMX, xTB)
+- Multiple impurity solvers (ALPS, TRIQS, Hubbard-I)
+- Automated workflow management
+- Wannier function construction
+- Self-consistent and one-shot DMFT
+- Multi-orbital correlated systems
+- Spectral functions via analytical continuation
+- Density of states with correlation effects
+- Magnetic properties
+- Metal-insulator transitions
+- Temperature-dependent calculations
+- Pre/post-processing tools
+- Python-based framework
+- Tutorial and example-driven documentation
+
+**Sources**: Official DCore documentation (https://github.com/issp-center-dev/DCore), confirmed in 6/7 source lists
+
+## Key Strengths
+
+### User-Friendly Interface:
+- Simplified input file format
+- Automated workflow steps
+- Sensible default parameters
+- Built-in tutorials and examples
+- Lower barrier to entry for DMFT
+
+### Multiple Solver Support:
+- ALPS/CT-HYB
+- TRIQS/cthyb
+- Hubbard I for quick estimates
+- Easy solver switching
+- Unified interface
+
+### DFT Integration:
+- VASP interface
+- Quantum ESPRESSO interface
+- OpenMX support
+- xTB for testing
+- Wannier90 for downfolding
+
+### Automation:
+- Automated DMFT loop
+- Convergence monitoring
+- Parameter management
+- Checkpoint/restart
+- Batch processing
+
+## Inputs & Outputs
+- **Input formats**:
+  - Simple INI-style configuration file
+  - DFT output files (VASP, QE, etc.)
+  - Wannier90 outputs
+  - Interaction parameters (U, J)
+  - Solver-specific parameters
+  
+- **Output data types**:
+  - Self-energy functions
+  - Green's functions
+  - Spectral functions (A(k,ω))
+  - Density of states
+  - Occupation matrices
+  - Convergence histories
+  - HDF5 data files
+
+## Interfaces & Ecosystem
+- **DFT backends**:
+  - VASP
+  - Quantum ESPRESSO
+  - OpenMX
+  - xTB (for testing/teaching)
+  
+- **Impurity solvers**:
+  - ALPS/CT-HYB
+  - TRIQS/cthyb
+  - Hubbard I (built-in)
+  
+- **Tools**:
+  - dcore_pre: Pre-processing
+  - dcore: Main DMFT loop
+  - dcore_post: Post-processing
+  - dcore_check: Convergence checking
+
+## Workflow and Usage
+
+### Typical Workflow:
+
+1. **DFT Calculation**:
+   ```bash
+   # Run DFT (VASP, QE, etc.)
+   # Generate wannier90 output
+   ```
+
+2. **Pre-processing**:
+   ```bash
+   dcore_pre input.ini
+   # Prepares DMFT calculation
+   ```
+
+3. **DMFT Loop**:
+   ```bash
+   dcore input.ini
+   # Runs self-consistent DMFT
+   ```
+
+4. **Post-processing**:
+   ```bash
+   dcore_post input.ini
+   # Computes spectral functions
+   ```
+
+### Example Input File:
+```ini
+[model]
+lattice = wannier90
+seedname = wannier
+
+[system]
+T = 300
+n_iw = 2048
+mu = 0.0
+
+[impurity_solver]
+name = TRIQS/cthyb
+N_MEAS = 1000
+
+[control]
+max_step = 100
+sigma_mix = 0.5
+
+[tool]
+kpath = G-X-M-G
+```
+
+## Advanced Features
+
+### Wannier Construction:
+- Automatic wannier90 interface
+- Flexible orbital selection
+- Energy window optimization
+- Downfolding automation
+
+### Solver Management:
+- Easy solver comparison
+- Parameter optimization helpers
+- Convergence diagnostics
+- Error handling
+
+### Analysis Tools:
+- Spectral function calculation
+- Maximum entropy analytical continuation
+- Band structure with correlations
+- DOS visualization
+- k-resolved spectra
+
+### Educational Use:
+- Extensive tutorials
+- Example calculations
+- xTB backend for teaching
+- Step-by-step guides
+
+## Computational Aspects
+
+### Performance:
+- Python overhead minimal
+- Solver performance critical
+- Good parallelization via solvers
+- Efficient data management
+
+### Scalability:
+- Handles standard DMFT systems
+- Multiple k-point parallelization
+- HDF5 for efficient I/O
+
+## Limitations & Known Constraints
+- **Solver dependency**: Requires external solvers (ALPS or TRIQS)
+- **DFT codes**: Limited to supported backends
+- **Learning curve**: Moderate; still requires DMFT understanding
+- **Documentation**: Good but assumes some DMFT knowledge
+- **System size**: Limited by DMFT and DFT costs
+- **Advanced features**: Less extensive than specialized frameworks
+- **Platform**: Linux/Unix
+- **Python dependency**: Requires Python environment
+
+## Comparison with Other DMFT Codes
+- **vs TRIQS**: DCore more user-friendly, TRIQS more flexible
+- **vs w2dynamics**: DCore full framework, w2d solver-focused
+- **vs EDMFTF**: DCore easier to use, EDMFTF more sophisticated
+- **vs ComDMFT**: Similar scope, different implementations
+- **Unique strength**: User-friendly, educational, multiple backends
+
+
+## Comparison with Other Codes
+- **vs comparable tools**: See community benchmarks and comparison studies
+- **Unique strength**: See Overview for distinctive capabilities
+## Application Areas
+
+### Research:
+- Transition metal oxides
+- Correlated materials screening
+- Spectroscopy comparison
+- Phase diagrams
+
+### Education:
+- Teaching DMFT concepts
+- Hands-on tutorials
+- Method comparison
+- Student projects
+
+### Method Development:
+- Testing new approaches
+- Benchmarking solvers
+- Workflow optimization
+
+## Best Practices
+
+### Getting Started:
+- Follow tutorials carefully
+- Start with example calculations
+- Use xTB backend for learning
+- Gradually increase complexity
+
+### Production Calculations:
+- Validate with known systems
+- Test convergence thoroughly
+- Use appropriate solver
+- Monitor resources
+
+### Convergence:
+- Check DMFT self-consistency
+- Monitor all observables
+- Use appropriate mixing
+- Save checkpoints
+
+### Solver Selection:
+- Hubbard I for initial guesses
+- ALPS/TRIQS for production
+- Compare different solvers
+- Optimize parameters
+
+## Community and Development
+- Developed at ISSP, University of Tokyo
+- Open-source on GitHub
+- Active development
+- Regular releases
+- Tutorial materials available
+- User support via GitHub issues
+
+## Educational Resources
+- Comprehensive manual
+- Step-by-step tutorials
+- Example systems
+- Video tutorials (some available)
+- Workshop materials
+
+## Verification & Sources
+**Primary sources**:
+1. Official website: https://issp-center-dev.github.io/DCore/
+2. Documentation: https://issp-center-dev.github.io/DCore/manual/master/
+3. GitHub repository: https://github.com/issp-center-dev/DCore
+4. H. Shinaoka et al., Comput. Phys. Commun. 235, 334 (2019) - DCore paper
+
+**Secondary sources**:
+1. DCore tutorials and examples
+2. ISSP software development project
+3. Published applications using DCore
+4. Confirmed in 6/7 source lists (claude, g, gr, k, m, q)
+
+**Confidence**: CONFIRMED - Appears in 6 of 7 independent source lists
+
+**Verification status**: ✅ VERIFIED
+- Official homepage: ACCESSIBLE
+- Documentation: COMPREHENSIVE and ACCESSIBLE
+- Source code: OPEN (GitHub, GPL v3)
+- Community support: GitHub issues, active development
+- Academic citations: >30
+- Active development: Regular updates
+- Educational value: Excellent tutorials
+- User-friendly: Designed for accessibility
+
+
+
+## Performance Characteristics
+- **Speed**: See benchmarks in official documentation
+- **Accuracy**: See validation studies
+- **System size**: See documentation for scaling behavior
+- **Automation**: See documentation for workflow support
+
+
+## Computational Cost
+- **Typical calculation**: See official documentation for performance benchmarks
+- **Scaling**: See documentation for parallelization and GPU support
+
+
+## Community and Support
+- **License**: See official repository for license information
+- **Community**: See official channels for support and discussion
+- **Documentation**: See official website for guides and tutorials
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

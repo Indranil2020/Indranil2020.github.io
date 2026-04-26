@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIEN2WANNIER | TIGHT-BINDING | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="**WIEN2WANNIER** is a specialized interface program that connects the high-precision, all-electron full-potential linearized augmented plane-wave (FP-LAPW) code **WIEN2k** with the maximally-localized Wannier function code **Wannier90**. It computes the necessary overlap matrices ($M_{mn}$) and proj">
+    <meta name="keywords" content="WIEN2WANNIER, TIGHT-BINDING, Wannier Ecosystem, computational materials science, DFT, simulation tool, WIEN2WANNIER code, WIEN2WANNIER software, WIEN2WANNIER tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/WIEN2WANNIER.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="WIEN2WANNIER | TIGHT-BINDING | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="**WIEN2WANNIER** is a specialized interface program that connects the high-precision, all-electron full-potential linearized augmented plane-wave (FP-LAPW) code **WIEN2k** with the maximally-localized Wannier function code **Wannier90**. It computes the necessary overlap matrices ($M_{mn}$) and proj">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/WIEN2WANNIER.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "WIEN2WANNIER",
+      "applicationCategory": "ScienceApplication",
+      "description": "**WIEN2WANNIER** is a specialized interface program that connects the high-precision, all-electron full-potential linearized augmented plane-wave (FP-LAPW) code **WIEN2k** with the maximally-localized Wannier function code **Wannier90**. It computes the necessary overlap matrices ($M_{mn}$) and proj",
+      "url": "https://indranil2020.github.io/tools/db/WIEN2WANNIER.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>4. TIGHT-BINDING</span>
+                <span> &nbsp;/&nbsp; 4.1 Wannier Ecosystem</span>
+            </div>
+            <h1>WIEN2WANNIER</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 4. TIGHT-BINDING</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 4.1 Wannier Ecosystem</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://wien2wannier.github.io/" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">**WIEN2WANNIER** is a specialized interface program that connects the high-precision, all-electron full-potential linearized augmented plane-wave (FP-LAPW) code **WIEN2k** with the maximally-localized Wannier function code **Wannier90**. It computes the necessary overlap matrices ($M_{mn}$) and projection matrices ($A_{mn}$) from WIEN2k's Bloch states, allowing for the construction of Wannier functions with all-electron accuracy. This tool is essential for researchers using methods that require </p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted"><em>No paper PDFs uploaded yet for this code.</em></p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># WIEN2WANNIER
+
+## Official Resources
+- **Homepage**: https://wien2wannier.github.io/
+- **Documentation**: https://github.com/wien2wannier/wien2wannier/wiki
+- **Source Repository**: https://github.com/wien2wannier/wien2wannier
+- **License**: GNU General Public License (GPL)
+
+## Overview
+**WIEN2WANNIER** is a specialized interface program that connects the high-precision, all-electron full-potential linearized augmented plane-wave (FP-LAPW) code **WIEN2k** with the maximally-localized Wannier function code **Wannier90**. It computes the necessary overlap matrices ($M_{mn}$) and projection matrices ($A_{mn}$) from WIEN2k's Bloch states, allowing for the construction of Wannier functions with all-electron accuracy. This tool is essential for researchers using methods that require a localized basis set (like DMFT or Berry Phase calculations) but demand the precision of LAPW.
+
+**Scientific domain**: Condensed Matter Physics, Strongly Correlated Systems, Topological Materials
+**Target user community**: Users of WIEN2k needing Wannier functions for post-processing
+
+## Theoretical Methods
+- **FP-LAPW Basis**: Utilizes the highly accurate all-electron wavefunctions from WIEN2k (Planewaves + Atomic spheres).
+- **Projection**: Projects Bloch states onto a set of trial localized orbitals (s, p, d, f types) to generate initial guesses ($A_{mn}$).
+- **Overlap Calculation**: Computes the overlaps between periodic parts of Bloch functions ($M_{mn}$) on a Monkhorst-Pack mesh.
+- **Spin-Orbit Coupling**: Full support for non-collinear and spin-orbit coupled calculations via spinor projections.
+
+## Capabilities (CRITICAL)
+- **Wannier90 Interface**:
+  - Generates `.mmn` (overlaps), `.amn` (projections), and `.eig` (eigenvalues) files.
+  - Supports disentanglement of entangled bands.
+- **All-Electron Accuracy**: Captures core and semi-core effects crucial for d- and f-electron systems.
+- **Symmetry Handling**: Uses WIEN2k symmetry operations to reduce computational cost.
+- **Real-Space Plotting**: Tools to visualize Wannier functions constructed from the LAPW basis (`wplot`).
+
+## Key Strengths
+- **Accuracy**: As an interface to WIEN2k, it provides MLWFs based on the "gold standard" of DFT methods (FP-LAPW).
+- **f-electrons**: Particularly strong for lanthanides and actinides where pseudopotentials may struggle.
+- **Integration**: Tightly integrated into the WIEN2k workflow (callable via `x w2w`).
+
+## Inputs & Outputs
+- **Inputs**:
+  - WIEN2k structure (`case.struct`) and vector files (`case.vector`).
+  - WIEN2WANNIER input file (`case.inw2w`).
+  - Wannier90 input (`case.win`).
+- **Outputs**:
+  - Wannier90 required files: `case.mmn`, `case.amn`, `case.eig`.
+  - Visualization data: `case.psZK`, `case.ploteig`.
+
+## Interfaces & Ecosystem
+- **WIEN2k**: Requires a working installation of WIEN2k.
+- **Wannier90**: Generates inputs compatible with all modern versions of Wannier90.
+- **dmft_proj**: Often used in conjunction with DMFT codes that interface with WIEN2k.
+
+## Performance Characteristics
+- **Computational Cost**: The interface step itself is relatively inexpensive compared to the SCF cycle; scaling depends on the number of k-points and bands.
+- **Parallelism**: Supports k-point parallelization consistent with WIEN2k's MPI scheme.
+
+## Limitations & Known Constraints
+- **Complexity**: The LAPW basis is more complex than plane-waves, making the projection definition slightly more involved.
+- **Dependencies**: Strictly tied to WIEN2k; cannot be used with other DFT codes.
+- **Memory**: Overlap calculations for large systems/dense k-meshes can be memory-intensive.
+
+## Comparison with Other Codes
+- **vs. VASP2Wannier90**: VASP uses PAW potentials; WIEN2WANNIER uses all-electron LAPW. WIEN2WANNIER is preferred for systems where core states or orthogonality orthogonality is critical (e.g., NMR, hyperfine parameters, heavy fermions).
+- **vs. SCAALD**: Another interface for all-electron codes, but WIEN2WANNIER is the official/standard one for WIEN2k.
+
+## Application Areas
+- **Strongly Correlated Materials**: DMFT studies of f-electron systems (Ce, Pu, U compounds).
+- **Topological Insulators**: Accurate calculation of surface states and Berry curvature with SOC.
+- **Fermi Surface Analysis**: High-precision Fermi surface interpolation via Wannier90.
+
+## Community and Support
+- **Development**: Maintained by the Institute of Solid State Physics, TU Wien (Elias Assmann, Peter Blaha et al.).
+- **Mailing List**: Support provided via the active WIEN2k mailing list.
+- **Updates**: Regularly updated with WIEN2k releases (e.g., v2.0 in WIEN2k 16.1).
+
+n## Best Practices
+- **Usage**: See official documentation for recommended workflows
+## Verification & Sources
+- **Official Website**: [https://wien2wannier.github.io/](https://wien2wannier.github.io/)
+- **Primary Publication**: J. Kuneš et al., Comp. Phys. Commun. 181, 1888 (2010).
+- **Verification status**: ✅ VERIFIED
+  - Integral part of the WIEN2k suite.
+  - Validated in numerous studies on f-electron dynamics.
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

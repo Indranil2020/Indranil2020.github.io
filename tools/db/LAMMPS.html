@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMMPS | DYNAMICS | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="LAMMPS is a classical molecular dynamics code with a focus on materials modeling. It's an acronym for Large-scale Atomic/Molecular Massively Parallel Simulator. LAMMPS has potentials for solid-state materials (metals, semiconductors) and soft matter (biomolecules, polymers) and coarse-grained or mes">
+    <meta name="keywords" content="LAMMPS, DYNAMICS, computational materials science, DFT, simulation tool, LAMMPS code, LAMMPS software, LAMMPS tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/LAMMPS.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="LAMMPS | DYNAMICS | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="LAMMPS is a classical molecular dynamics code with a focus on materials modeling. It's an acronym for Large-scale Atomic/Molecular Massively Parallel Simulator. LAMMPS has potentials for solid-state materials (metals, semiconductors) and soft matter (biomolecules, polymers) and coarse-grained or mes">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/LAMMPS.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "LAMMPS",
+      "applicationCategory": "ScienceApplication",
+      "description": "LAMMPS is a classical molecular dynamics code with a focus on materials modeling. It's an acronym for Large-scale Atomic/Molecular Massively Parallel Simulator. LAMMPS has potentials for solid-state materials (metals, semiconductors) and soft matter (biomolecules, polymers) and coarse-grained or mes",
+      "url": "https://indranil2020.github.io/tools/db/LAMMPS.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>6. DYNAMICS</span>
+                <span> &nbsp;/&nbsp; </span>
+            </div>
+            <h1>LAMMPS</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 6. DYNAMICS</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> </span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://www.lammps.org/" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">LAMMPS is a classical molecular dynamics code with a focus on materials modeling. It's an acronym for Large-scale Atomic/Molecular Massively Parallel Simulator. LAMMPS has potentials for solid-state materials (metals, semiconductors) and soft matter (biomolecules, polymers) and coarse-grained or mesoscopic systems. It can be used to model atoms or, more generically, as a parallel particle simulator at the atomic, meso, or continuum scale.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><ul class="paper-list"><li><a href="../../scientific_tools_consolidated/Papers_of_Codes/Dynamics/6.1_Classical_MD_Engines/LAMMPS/10_1006_jcph_1995_1039.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> 10_1006_jcph_1995_1039.pdf</a></li><li><a href="../../scientific_tools_consolidated/Papers_of_Codes/Dynamics/6.1_Classical_MD_Engines/LAMMPS/10_1016_j_cpc_2021_108171.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> 10_1016_j_cpc_2021_108171.pdf</a></li></ul>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># LAMMPS (Large-scale Atomic/Molecular Massively Parallel Simulator)
+
+## Official Resources
+- Homepage: https://www.lammps.org/
+- Documentation: https://docs.lammps.org/
+- Source Repository: https://github.com/lammps/lammps
+- License: GNU General Public License v2.0
+
+## Overview
+LAMMPS is a classical molecular dynamics code with a focus on materials modeling. It's an acronym for Large-scale Atomic/Molecular Massively Parallel Simulator. LAMMPS has potentials for solid-state materials (metals, semiconductors) and soft matter (biomolecules, polymers) and coarse-grained or mesoscopic systems. It can be used to model atoms or, more generically, as a parallel particle simulator at the atomic, meso, or continuum scale.
+
+**Scientific domain**: Molecular dynamics, materials simulation, soft matter, coarse-grained modeling  
+**Target user community**: Materials scientists, physicists, chemists, engineers
+
+## Theoretical Methods
+- Classical molecular dynamics (Newton's equations)
+- Brownian and Langevin dynamics
+- Energy minimization
+- Nonequilibrium molecular dynamics (NEMD)
+- Grand Canonical Monte Carlo (GCMC)
+- Dissipative Particle Dynamics (DPD)
+- Peridynamics
+- Smooth Particle Hydrodynamics (SPH)
+- Time-Dependent Ginzburg-Landau (TDGL)
+- Reaction dynamics (ReaxFF)
+- Spin dynamics
+- Electron force field (eFF)
+
+## Capabilities (CRITICAL)
+- Atomic, polymeric, biological, solid-state, granular, coarse-grained simulations
+- Massive parallelization (MPI, OpenMP, GPU, Kokkos)
+- Huge variety of interatomic potentials (Lennard-Jones, EAM, MEAM, Tersoff, ReaxFF, AIREBO, COMB, SW, etc.)
+- Advanced constraints and boundary conditions
+- On-the-fly analysis and post-processing
+- Coupling with other codes (quantum, FE)
+- Python interface
+- User-extendable via C++ classes
+
+**Sources**: LAMMPS documentation, Comp. Phys. Comm. 183, 1136 (2012)
+
+## Key Strengths
+
+### Versatility:
+- Huge variety of potentials (100+)
+- Materials and soft matter
+- Coarse-grained to atomistic
+- User-extensible via C++
+
+### Parallelization:
+- Excellent MPI scaling
+- GPU acceleration (Kokkos, GPU package)
+- Billions of atoms possible
+- Load balancing
+
+### Ecosystem:
+- Python interface
+- ASE integration
+- PLUMED support
+- Extensive community packages
+
+## Inputs & Outputs
+- **Input formats**: Text-based script files, data files for initial structure
+- **Output data types**: Dump files (text/binary/custom), log files (thermodynamics), restart files, XTC, DCD
+
+## Interfaces & Ecosystem
+- **Python**: Full Python wrapper
+- **ASE**: Integrated via ASE calculator
+- **OVITO**: Visualization standard
+- **Moltemplate/Topotools**: Input generation
+- **PLUMED**: Enhanced sampling
+- **Phonopy**: Phonon calculations
+- **VMD**: Visualization
+
+## Workflow and Usage
+1. Prepare structure (data file)
+2. Write input script (units, potential, fixes, run)
+3. Run: `lmp_mpi -in input.in`
+4. Visualize output (dump file)
+
+## Performance Characteristics
+- Highly scalable (millions to billions of particles)
+- Optimized for MPI and accelerators (GPU/Kokkos)
+- Load balancing for inhomogeneous systems
+
+## Computational Cost
+- Scales linearly with atoms for short-range
+- Long-range (Ewald/PPPM) adds overhead
+- GPU provides 10-100x speedup
+- Overall: Highly efficient for materials
+
+## Best Practices
+- Use appropriate units for your system
+- Choose neighbor list settings carefully
+- Validate potential for your application
+- Use restart files for long runs
+- Check energy conservation in NVE
+
+## Limitations & Known Constraints
+- Less optimized for biomolecules than GROMACS
+- Steeper learning curve than some codes
+- Some packages require compilation
+- Documentation can be overwhelming
+
+## Application Areas
+- Metals and alloys (defects, mechanics)
+- Polymers and biomolecules
+- Nanostructures and interfaces
+- Granular materials
+- Shock physics
+- Thermal transport
+- Chemical reactions (ReaxFF)
+
+## Comparison with Other Codes
+- **vs GROMACS**: LAMMPS more materials-focused, GROMACS faster for biomolecules
+- **vs AMBER**: LAMMPS open-source with more potentials, AMBER better force fields for bio
+- **vs OpenMM**: LAMMPS more general, OpenMM more flexible custom forces
+- **Unique strength**: Unmatched potential variety, materials science focus, extensibility
+
+## Community and Support
+- Open-source (GPL v2)
+- Very active mailing list
+- Large user community
+- Frequent stable releases
+- Extensive workshops and tutorials
+
+## Verification & Sources
+**Primary sources**:
+1. Homepage: https://www.lammps.org/
+2. Documentation: https://docs.lammps.org/
+3. GitHub: https://github.com/lammps/lammps
+4. Publication: S. Plimpton, J. Comp. Phys. 117, 1 (1995)
+
+**Secondary sources**:
+1. LAMMPS tutorials and workshops
+2. Extensive published applications
+3. Community packages documentation
+
+**Confidence**: VERIFIED
+
+**Verification status**: ✅ VERIFIED
+- Website: ACTIVE
+- Documentation: COMPREHENSIVE
+- Source: OPEN (GitHub)
+- Development: ACTIVE (Sandia National Labs, Temple University)
+- Applications: MD, materials, soft matter, parallel computing, huge potential library
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

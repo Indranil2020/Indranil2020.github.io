@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS-Tools | POST-PROCESSING | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="JARVIS-Tools (Joint Automated Repository for Various Integrated Simulations) is a comprehensive open-source Python package for atomistic data-driven materials design developed at NIST. It provides tools for setting up calculations, post-processing, analysis, visualization, and machine learning acros">
+    <meta name="keywords" content="JARVIS-Tools, POST-PROCESSING, Band Structure & Electronic Analysis, computational materials science, DFT, simulation tool, JARVIS-Tools code, JARVIS-Tools software, JARVIS-Tools tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/JARVIS-Tools.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="JARVIS-Tools | POST-PROCESSING | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="JARVIS-Tools (Joint Automated Repository for Various Integrated Simulations) is a comprehensive open-source Python package for atomistic data-driven materials design developed at NIST. It provides tools for setting up calculations, post-processing, analysis, visualization, and machine learning acros">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/JARVIS-Tools.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "JARVIS-Tools",
+      "applicationCategory": "ScienceApplication",
+      "description": "JARVIS-Tools (Joint Automated Repository for Various Integrated Simulations) is a comprehensive open-source Python package for atomistic data-driven materials design developed at NIST. It provides tools for setting up calculations, post-processing, analysis, visualization, and machine learning acros",
+      "url": "https://indranil2020.github.io/tools/db/JARVIS-Tools.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>8. POST-PROCESSING</span>
+                <span> &nbsp;/&nbsp; 8.1 Band Structure & Electronic Analysis</span>
+            </div>
+            <h1>JARVIS-Tools</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 8. POST-PROCESSING</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 8.1 Band Structure & Electronic Analysis</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://github.com/usnistgov/jarvis" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">JARVIS-Tools (Joint Automated Repository for Various Integrated Simulations) is a comprehensive open-source Python package for atomistic data-driven materials design developed at NIST. It provides tools for setting up calculations, post-processing, analysis, visualization, and machine learning across multiple simulation codes. The package is tightly integrated with the JARVIS databases containing >100,000 materials.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><ul class="paper-list"><li><a href="../../scientific_tools_consolidated/Papers_of_Codes/Frameworks/9.4_Materials_Databases/JARVIS/Choudhary_et_al_2020.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Choudhary_et_al_2020.pdf</a></li></ul>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># JARVIS-Tools
+
+## Official Resources
+- **Homepage**: https://pages.nist.gov/jarvis/
+- **GitHub**: https://github.com/usnistgov/jarvis
+- **Documentation**: https://jarvis-tools.readthedocs.io/
+- **PyPI**: https://pypi.org/project/jarvis-tools/
+- **Web Portal**: https://jarvis.nist.gov/
+- **License**: NIST Software License
+
+## Overview
+JARVIS-Tools (Joint Automated Repository for Various Integrated Simulations) is a comprehensive open-source Python package for atomistic data-driven materials design developed at NIST. It provides tools for setting up calculations, post-processing, analysis, visualization, and machine learning across multiple simulation codes. The package is tightly integrated with the JARVIS databases containing >100,000 materials.
+
+**Scientific domain**: High-throughput materials science, DFT post-processing, machine learning, database-driven research
+**Target user community**: Materials scientists, computational researchers, ML practitioners in materials science
+
+## Theoretical Methods
+JARVIS-Tools interfaces with multiple levels of theory:
+- DFT calculations (VASP, QE, Wien2k)
+- Tight-binding (Wannier90, WTBH)
+- Classical MD (LAMMPS)
+- Machine learning potentials
+- Property predictions from descriptors
+
+## Capabilities (CRITICAL)
+- **Workflow Automation**: VASP, QE, Wien2k, WTBH, Wannier90, LAMMPS
+- **Band Structure**: Electronic band analysis and plotting
+- **DOS/PDOS**: Density of states processing
+- **Database Access**: JARVIS-DFT (>75,000 materials), JARVIS-FF
+- **Machine Learning**: ALIGNN, CGCNN, descriptors
+- **Structure Analysis**: Symmetry, defects, surfaces
+- **Property Prediction**: Formation energy, band gap, elastic constants
+- **Visualization**: Structure and property plotting
+
+## Key Strengths
+
+### Multi-Code Support:
+- VASP (comprehensive)
+- Quantum ESPRESSO
+- Wien2k
+- BoltzTraP
+- Wannier90
+- LAMMPS
+- GPAW
+- WTBH (Wannier tight-binding)
+
+### Database Integration:
+- JARVIS-DFT: 75,000+ 3D materials
+- JARVIS-2D: 2D materials database
+- JARVIS-FF: Force field database
+- JARVIS-ML: ML model repository
+- REST API access
+
+### Machine Learning:
+- ALIGNN (graph neural network)
+- CGCNN integration
+- Descriptor generation
+- Pre-trained models
+- Property prediction
+
+### High-Throughput:
+- Automated workflow generation
+- Error handling
+- Job management
+- Result parsing
+
+## Inputs & Outputs
+- **Input formats**:
+  - POSCAR, CIF, XYZ structures
+  - VASP input/output files
+  - QE input/output files
+  - Database queries (materials ID)
+  
+- **Output data types**:
+  - Band structures, DOS
+  - Elastic tensors
+  - Optical properties
+  - ML predictions
+  - JSON/CSV exports
+
+## Interfaces & Ecosystem
+- **Python integration**:
+  - NumPy, Pandas for data
+  - Matplotlib for visualization
+  - PyTorch for ML models
+  - ASE compatibility
+  
+- **Framework compatibility**:
+  - Jupyter notebooks
+  - REST API
+  - Command-line tools
+  - Web interface
+
+## Installation
+```bash
+pip install jarvis-tools
+```
+
+With ML dependencies:
+```bash
+pip install jarvis-tools[ai]
+```
+
+## Usage Examples
+```python
+from jarvis.core.atoms import Atoms
+from jarvis.db.figshare import data
+from jarvis.tasks.vasp.vasp import VaspJob
+
+# Load structure from database
+dft_3d = data("dft_3d")
+atoms = Atoms.from_dict(dft_3d[0]["atoms"])
+
+# Get band structure
+from jarvis.io.vasp.outputs import Vasprun
+vrun = Vasprun("vasprun.xml")
+bands = vrun.get_bandstructure()
+
+# ML prediction with ALIGNN
+from jarvis.core.atoms import Atoms
+from alignn.pretrained import get_figshare_model
+model = get_figshare_model("jv_formation_energy_peratom_alignn")
+prediction = model.predict(atoms)
+```
+
+## Performance Characteristics
+- **Speed**: Efficient file parsing
+- **Scalability**: High-throughput ready
+- **ML**: GPU-accelerated models
+- **Database**: Fast API queries
+
+## Limitations & Known Constraints
+- **Learning curve**: Many features require exploration
+- **Documentation**: Extensive but distributed
+- **VASP-centric**: Best support for VASP
+- **Dependencies**: ML features need PyTorch
+
+## Comparison with Other Codes
+- **vs pymatgen**: JARVIS has ML focus, database integration
+- **vs ASE**: JARVIS specialized for high-throughput, ML
+- **vs atomate**: Different workflow philosophy
+- **Unique strength**: NIST databases, ALIGNN ML, comprehensive ecosystem
+
+## Application Areas
+- High-throughput materials screening
+- Machine learning for materials
+- Database-driven discovery
+- Property prediction
+- Workflow automation
+- 2D materials research
+- Defect calculations
+
+## Best Practices
+- Use database for initial screening
+- Leverage pre-trained ML models
+- Validate ML predictions with DFT
+- Use workflows for systematic studies
+- Cite JARVIS papers appropriately
+
+## Community and Support
+- GitHub issue tracker
+- NIST support
+- YouTube tutorials
+- Active development
+- Regular database updates
+
+## Verification & Sources
+**Primary sources**:
+1. Official website: https://pages.nist.gov/jarvis/
+2. GitHub: https://github.com/usnistgov/jarvis
+3. K. Choudhary et al., npj Comput. Mater. 6, 173 (2020)
+4. JARVIS-DFT database papers
+
+**Confidence**: VERIFIED - NIST-developed, peer-reviewed publications
+
+**Verification status**: ✅ VERIFIED
+- Official homepage: ACCESSIBLE
+- Documentation: COMPREHENSIVE
+- Source code: OPEN (GitHub)
+- Developer: NIST (K. Choudhary et al.)
+- Academic citations: >500 citations
+- Active development: Regular releases, database updates
+
+
+
+## Computational Cost
+- **Typical calculation**: See official documentation for performance benchmarks
+- **Scaling**: See documentation for parallelization and GPU support
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

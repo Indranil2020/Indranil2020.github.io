@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NWChem | GROUND-STATE DFT | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="NWChem is a comprehensive, open-source computational chemistry package designed for massively parallel high-performance computing. Developed and maintained by Pacific Northwest National Laboratory (PNNL), it provides a broad range of methods from DFT to coupled cluster, with particular strengths in ">
+    <meta name="keywords" content="NWChem, GROUND-STATE DFT, Quantum Chemistry Suites, computational materials science, DFT, simulation tool, NWChem code, NWChem software, NWChem tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/NWChem.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="NWChem | GROUND-STATE DFT | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="NWChem is a comprehensive, open-source computational chemistry package designed for massively parallel high-performance computing. Developed and maintained by Pacific Northwest National Laboratory (PNNL), it provides a broad range of methods from DFT to coupled cluster, with particular strengths in ">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/NWChem.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "NWChem",
+      "applicationCategory": "ScienceApplication",
+      "description": "NWChem is a comprehensive, open-source computational chemistry package designed for massively parallel high-performance computing. Developed and maintained by Pacific Northwest National Laboratory (PNNL), it provides a broad range of methods from DFT to coupled cluster, with particular strengths in ",
+      "url": "https://indranil2020.github.io/tools/db/NWChem.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>1. GROUND-STATE DFT</span>
+                <span> &nbsp;/&nbsp; 1.4 Quantum Chemistry Suites</span>
+            </div>
+            <h1>NWChem</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 1. GROUND-STATE DFT</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 1.4 Quantum Chemistry Suites</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> CONFIRMED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://nwchemgit.github.io/" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">NWChem is a comprehensive, open-source computational chemistry package designed for massively parallel high-performance computing. Developed and maintained by Pacific Northwest National Laboratory (PNNL), it provides a broad range of methods from DFT to coupled cluster, with particular strengths in scalability, molecular dynamics, and plane-wave calculations for solids. NWChem can scale from single processors to thousands of cores on leadership-class supercomputers.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><ul class="paper-list"><li><a href="../../scientific_tools_consolidated/Papers_of_Codes/TDDFT/2.2_Linear-Response_TDDFT/NWChem/Valiev_et_al_2010.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Valiev_et_al_2010.pdf</a></li></ul>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># NWChem
+
+## Official Resources
+- Homepage: http://www.nwchem-sw.org/
+- Documentation: https://nwchemgit.github.io/
+- Source Repository: https://github.com/nwchemgit/nwchem
+- License: Educational Community License v2.0 (open-source)
+
+## Overview
+NWChem is a comprehensive, open-source computational chemistry package designed for massively parallel high-performance computing. Developed and maintained by Pacific Northwest National Laboratory (PNNL), it provides a broad range of methods from DFT to coupled cluster, with particular strengths in scalability, molecular dynamics, and plane-wave calculations for solids. NWChem can scale from single processors to thousands of cores on leadership-class supercomputers.
+
+**Scientific domain**: Quantum chemistry, materials science, biochemistry, massively parallel calculations  
+**Target user community**: Researchers needing scalable quantum chemistry on supercomputers, HPC users
+
+## Theoretical Methods
+- Hartree-Fock (RHF, UHF, ROHF)
+- Density Functional Theory (DFT)
+  - LDA, GGA, meta-GGA, hybrid functionals
+  - Auxiliary Density Functional Theory (ADFT)
+  - Interface to Libxc library for extensive functionals
+- Møller-Plesset perturbation theory (MP2, MP3, MP4)
+- Coupled Cluster (CCSD, CCSDT, CCSDTQ)
+- Equation-of-motion CC (EOM-CCSD and higher)
+- Completely renormalized CC (CR-CC) methods
+- Multi-reference methods (MCSCF, MRCI, selected CI)
+- Time-Dependent DFT (linear response and real-time TDDFT)
+- Plane-wave DFT (NWPW module)
+- Car-Parrinello molecular dynamics (CPMD)
+- Classical molecular dynamics (AMBER, CHARMM force fields)
+- QM/MM hybrid methods
+- Solvation models (COSMO with improved SES cavity)
+- Relativistic methods (Exact Two-Component X2C, DKH, ZORA)
+- Tensor Contraction Engine (TCE) for correlated methods
+
+## Capabilities (CRITICAL)
+- Ground-state electronic structure (molecules and solids)
+- Geometry optimization and transition states
+- Molecular dynamics (classical, ab initio, and AIMD/MM)
+- Plane-wave calculations for periodic systems
+- Band structure and density of states (DOS)
+- Excited states (TDDFT, EOM-CC)
+- Valence-to-core X-ray emission spectroscopy (VtC-XES)
+- Vibrational frequencies and thermochemistry
+- NMR chemical shifts and J-coupling
+- EPR g-tensors and hyperfine coupling constants
+- Optical properties and UV-Vis spectra
+- Solvation and QM/MM calculations
+- Massively parallel execution (1000s of processors)
+- Free energy calculations
+- Reaction pathways (NEB, string methods)
+- Spin-orbit coupling via SO-ZORA
+- Lambda coupling for AIMD/MM simulations
+- Bonding constraints for dynamics
+
+**Sources**: Official NWChem documentation, cited in 7/7 source lists
+
+## Key Strengths
+
+### Massive Parallelism:
+- Scales from single CPU to thousands of cores
+- Optimized for leadership-class supercomputers
+- Global Arrays toolkit for efficient distributed computing
+- OpenMP-MPI hybrid programming model
+- Excellent strong and weak scaling
+
+### Versatility:
+- Gaussian basis functions AND plane-wave basis
+- Molecular AND periodic systems
+- Ground AND excited states
+- DFT AND high-level correlation
+
+### Open-Source Ecosystem:
+- DOE-funded active development
+- Community-driven improvements
+- Regular releases (v7.2+ with Libxc integration)
+- EMSL Arrows service for easier input generation
+
+## Inputs & Outputs
+- **Input formats**:
+  - Directive-based input files (block structure)
+  - XYZ coordinate files
+  - PDB for biomolecules
+  - Restart files for continuing calculations
+  - ccinput integration for automated input generation
+  
+- **Output data types**:
+  - Detailed output files with energies/gradients
+  - Trajectory files for MD simulations
+  - Molecular orbitals (Molden format)
+  - Property-specific outputs
+  - HDF5 checkpoint files
+
+## Interfaces & Ecosystem
+- **Framework integrations**:
+  - AMBER for QM/MM and force fields
+  - CHARMM force field support
+  - Libxc for DFT functionals
+  - Plumed interface for enhanced sampling
+  - Python interface (pynwchem)
+  - Quantum computing simulator interfaces
+  
+- **Visualization**:
+  - Ecce graphical user interface (legacy)
+  - Molden format export
+  - Compatible with VMD, Avogadro
+  
+- **HPC optimization**:
+  - Global Arrays toolkit for distributed memory
+  - ScaLAPACK for linear algebra
+  - BLAS/LAPACK optimization
+  - Efficient I/O for large calculations
+
+
+## Workflow and Usage
+
+### Directive-Based Input:
+NWChem uses a structured input format with directives for each module:
+
+```
+start water_dft
+
+geometry units angstrom
+  O 0.0 0.0 0.0
+  H 0.0 0.7 0.0
+  H 0.7 0.0 0.0
+end
+
+basis
+  * library 6-31G*
+end
+
+dft
+  xc b3lyp
+  mult 1
+end
+
+task dft energy
+task dft optimize
+```
+
+### Running NWChem:
+```bash
+# MPI parallel execution
+mpirun -np 8 nwchem input.nw > output.out
+```
+
+### Common Tasks:
+- **Energy**: Single point energy calculation
+- **Optimize**: Geometry optimization
+- **Frequencies**: Vibrational frequency analysis
+- **Property**: Molecular properties calculation
+
+## Advanced Features
+
+### Tensor Contraction Engine (TCE):
+- Automated code generation for correlated methods
+- Scalable implementation of CC and EOM-CC
+- Active space capabilities
+- Symbolic manipulation of tensor expressions
+- Enables complex many-body theories
+
+### Plane-Wave DFT (NWPW):
+- Pseudopotential plane-wave method
+- Car-Parrinello molecular dynamics (CPMD)
+- Band structure calculations
+- AIMD/MM simulations
+- Scalable to thousands of cores
+
+### Relativistic Methods:
+- Exact Two-Component (X2C)
+- Douglas-Kroll-Hess (DKH)
+- Zero-Order Regular Approximation (ZORA)
+- Spin-orbit effects (SO-ZORA)
+- All-electron relativistic calculations
+
+### QM/MM Simulations:
+- Quantum mechanics/molecular mechanics hybrid
+- Interface with AMBER and CHARMM
+- Solution-phase reactivity
+- Enzyme kinetics
+- Explicit solvent effects
+
+### Solvation Models:
+- COSMO (Conductor-like Screening Model)
+- SMD (Solvation Model based on Density)
+- Explicit water models
+- Vertical excitation energy corrections
+- Free energy of solvation
+
+## Performance Characteristics
+- **Scalability**: Excellent strong sealing to 10,000+ cores
+- **Efficiency**: Global Arrays provide efficient data access
+- **Memory**: Distributed memory model allows large systems
+- **I/O**: Parallel I/O capabilities for large files
+- **Bottlenecks**: Communication latency on some interconnects
+
+## Computational Cost
+- **DFT**: Moderate, linear-scaling options available
+- **MP2**: O(N^5), scalable implementation
+- **CCSD(T)**: O(N^7), very expensive but highly parallel
+- **NWPW**: Expensive but scales well for large systems
+- **TCE**: High overhead but automated parallelization
+
+## Comparison with Other Codes
+- **vs Gaussian**: NWChem is open-source and much more scalable; Gaussian has more automated features and GUI.
+- **vs ORCA**: NWChem better for periodic systems and massive parallelism; ORCA excellent for spectroscopy and ease of use.
+- **vs VASP**: NWChem offers both Gaussian and plane-wave bases; VASP specialized for solids.
+- **vs GAMESS**: Both highly capable, NWChem designed for distributed memory (Global Arrays).
+- **Unique strength**: Massive scalability, dual-basis capability (Gaussian/Plane-wave), Tensor Contraction Engine.
+
+## Best Practices
+
+### Parallel Execution:
+- Use sufficient processors for memory distribution
+- Global Arrays require careful memory configuration
+- Balance `stack`, `heap`, and `global` memory limits in input
+- Use `memory` directive effectively
+
+### Method Selection:
+- Use DFT for large systems and dynamics
+- Use TCE-CC methods for high-accuracy benchmarks
+- Use NWPW for periodic systems or AIMD
+- Check scalability of chosen method
+
+### Optimization:
+- Use `driver` module for geometry optimization
+- Check convergence criteria (`gmax`, `grms`, `xmax`, `xrms`)
+- Use restarts for long calculations
+- Verify geometry stability (frequencies)
+
+## Community and Support
+- **Open Source**: Educational Community License (ECL) 2.0
+- **Development**: PNNL-led with community contributions
+- **Forum**: Active user forum and mailing list
+- **GitHub**: Issue tracking and feature requests
+- **Resources**: Extensive manual and tutorial wiki
+
+## Application Areas
+
+### Biochemistry:
+- Large biomolecule simulations
+- Enzyme reaction mechanisms
+- QM/MM for proteins and nucleic acids
+- Drug-target interactions
+
+### Materials Science:
+- Periodic solid-state calculations
+- Band structure and electronic properties
+- Surface chemistry and catalysis
+- Nanomaterials characterization
+
+### Spectroscopy:
+- NMR chemical shifts
+- EPR/ESR parameters
+- UV-Vis absorption
+- X-ray emission spectroscopy
+
+## Limitations & Known Constraints
+- **Compilation complexity**: Requires careful build for optimal HPC performance
+- **Input syntax**: Directive-based format requires learning curve
+- **Documentation**: Comprehensive but can be overwhelming for beginners
+- **Memory management**: Global Arrays require understanding of distributed memory
+- **Platform**: Primarily Linux/Unix; HPC focus
+- **Basis sets**: Gaussian-type for molecular, plane-wave for solids (not interchangeable)
+- **Learning curve**: Moderate to steep depending on methods used
+- **GUI**: Ecce project less actively maintained; EMSL Arrows recommended
+
+## Verification & Sources
+**Primary sources**:
+1. Official website: http://www.nwchem-sw.org/
+2. Documentation: https://nwchemgit.github.io/
+3. GitHub repository: https://github.com/nwchemgit/nwchem
+4. E. Aprà et al., J. Chem. Phys. 152, 184102 (2020) - NWChem: Past, present, future
+5. M. Valiev et al., Comput. Phys. Commun. 181, 1477 (2010) - NWChem overview
+6. Latest release: NWChem 7.2.3 (August 2024) with Libxc and ADFT
+
+**Secondary sources**:
+1. NWChem tutorials and workshops
+2. EMSL Arrows service documentation
+3. Published HPC scaling studies
+4. Confirmed in 7/7 source lists (claude, g, gr, k, m, q, z)
+
+**Confidence**: CONFIRMED - Appears in all 7 independent source lists
+
+**Verification status**: ✅ VERIFIED
+- Official homepage: ACCESSIBLE
+- Documentation: COMPREHENSIVE and ACCESSIBLE
+- Source code: OPEN (GitHub, ECL v2.0)
+- Community support: Active (mailing list, GitHub issues)
+- Academic citations: >5,000 (various versions)
+- Active development: Regular releases, DOE/PNNL funded
+- Specialized strength: Massively parallel execution, plane-wave AND Gaussian basis, QM/MM, open-source
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

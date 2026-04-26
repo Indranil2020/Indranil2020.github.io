@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABACUS | GROUND-STATE DFT | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="ABACUS (Atomic-orbital Based Ab-initio Computation at UStc) is an open-source DFT package supporting both plane-wave and numerical atomic orbital (NAO) basis sets. Developed by the DeepModeling community in China, ABACUS is designed for efficient electronic structure calculations, materials simulati">
+    <meta name="keywords" content="ABACUS, GROUND-STATE DFT, Plane-Wave / Pseudopotential Codes, computational materials science, DFT, simulation tool, ABACUS code, ABACUS software, ABACUS tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/ABACUS.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ABACUS | GROUND-STATE DFT | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="ABACUS (Atomic-orbital Based Ab-initio Computation at UStc) is an open-source DFT package supporting both plane-wave and numerical atomic orbital (NAO) basis sets. Developed by the DeepModeling community in China, ABACUS is designed for efficient electronic structure calculations, materials simulati">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/ABACUS.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ABACUS",
+      "applicationCategory": "ScienceApplication",
+      "description": "ABACUS (Atomic-orbital Based Ab-initio Computation at UStc) is an open-source DFT package supporting both plane-wave and numerical atomic orbital (NAO) basis sets. Developed by the DeepModeling community in China, ABACUS is designed for efficient electronic structure calculations, materials simulati",
+      "url": "https://indranil2020.github.io/tools/db/ABACUS.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>1. GROUND-STATE DFT</span>
+                <span> &nbsp;/&nbsp; 1.1 Plane-Wave / Pseudopotential Codes</span>
+            </div>
+            <h1>ABACUS</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 1. GROUND-STATE DFT</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 1.1 Plane-Wave / Pseudopotential Codes</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://github.com/deepmodeling/abacus-develop" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">ABACUS (Atomic-orbital Based Ab-initio Computation at UStc) is an open-source DFT package supporting both plane-wave and numerical atomic orbital (NAO) basis sets. Developed by the DeepModeling community in China, ABACUS is designed for efficient electronic structure calculations, materials simulations, and integration with machine learning workflows. It features excellent GPU acceleration, hybrid basis sets, and is particularly strong in Chinese academic and industrial applications.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted"><em>No paper PDFs uploaded yet for this code.</em></p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># ABACUS
+
+## Official Resources
+- Homepage: https://abacus.deepmodeling.com/
+- Documentation: https://abacus.deepmodeling.com/en/latest/
+- Source Repository: https://github.com/deepmodeling/abacus-develop
+- License: GNU Lesser General Public License v3.0
+
+## Overview
+ABACUS (Atomic-orbital Based Ab-initio Computation at UStc) is an open-source DFT package supporting both plane-wave and numerical atomic orbital (NAO) basis sets. Developed by the DeepModeling community in China, ABACUS is designed for efficient electronic structure calculations, materials simulations, and integration with machine learning workflows. It features excellent GPU acceleration, hybrid basis sets, and is particularly strong in Chinese academic and industrial applications.
+
+**Scientific domain**: DFT with multiple basis sets, materials science, machine learning integration  
+**Target user community**: Materials scientists, ML researchers, Chinese research community
+
+## Theoretical Methods
+- Kohn-Sham DFT (LDA, GGA, meta-GGA)
+- Plane-wave basis sets
+- Numerical atomic orbitals (NAO)
+- Hybrid plane-wave/NAO basis
+- Norm-conserving pseudopotentials
+- Stochastic DFT methods
+- van der Waals corrections (DFT-D2/D3)
+- DFT+U for correlated systems
+- Hybrid functionals
+- Spin-orbit coupling
+- Non-collinear magnetism
+
+## Capabilities (CRITICAL)
+- Ground state electronic structure
+- Geometry optimization
+- Molecular dynamics (Born-Oppenheimer)
+- Cell relaxation
+- Band structures and DOS
+- Phonons via DFPT
+- Elastic constants
+- Surface calculations
+- Machine learning interface
+- DeepKS (ML correction)
+- GPU acceleration
+- Multiple basis sets (PW, NAO, hybrid)
+- Stochastic DFT for large systems
+- Linear-scaling algorithms
+- Excellent parallelization
+- Python interface (PyABACUS)
+
+**Sources**: Official ABACUS documentation (https://abacus.deepmodeling.com/), GitHub repository
+
+## Key Strengths
+
+### Multiple Basis Sets:
+- Plane-waves (PW)
+- Numerical atomic orbitals (NAO)
+- Hybrid PW/NAO
+- Flexibility in choice
+- Method comparison
+
+### Machine Learning:
+- DeepModeling integration
+- DeepKS correction
+- ML potential interface
+- DP-GEN workflows
+- Modern AI integration
+
+### GPU Acceleration:
+- CUDA support
+- Significant speedup
+- Production-ready
+- Optimized kernels
+
+### Stochastic DFT:
+- Large system capability
+- Linear scaling
+- Statistical sampling
+- Thousands of atoms
+
+### Open Source:
+- LGPL v3 licensed
+- Active GitHub development
+- Growing community
+- Chinese and international
+
+## Inputs & Outputs
+- **Input formats**:
+  - INPUT file (main parameters)
+  - STRU file (structure)
+  - KPT file (k-points)
+  - Pseudopotential files
+  
+- **Output data types**:
+  - Text output (OUT.*)
+  - Structure files
+  - Wavefunction data
+  - Band structure files
+  - DOS files
+
+## Interfaces & Ecosystem
+- **DeepModeling**:
+  - DP-GEN workflows
+  - DeePMD integration
+  - DeepKS correction
+  - ML ecosystem
+  
+- **Analysis**:
+  - PyABACUS (Python interface)
+  - Custom tools
+  - Standard visualization
+  
+- **Parallelization**:
+  - MPI parallelization
+  - GPU acceleration (CUDA)
+  - Hybrid parallelization
+  - Good scaling
+
+## Workflow and Usage
+
+### Example INPUT File:
+
+```
+INPUT_PARAMETERS
+calculation  scf
+basis_type   lcao
+
+ecutwfc      100
+scf_thr      1.0e-7
+scf_nmax     100
+
+smearing_method  gaussian
+smearing_sigma   0.001
+
+kspacing     0.1
+```
+
+### Example STRU File:
+
+```
+ATOMIC_SPECIES
+Si 28.0855 Si_ONCV_PBE-1.0.upf
+
+LATTICE_CONSTANT
+5.43
+
+LATTICE_VECTORS
+0.5 0.5 0.0
+0.5 0.0 0.5
+0.0 0.5 0.5
+
+ATOMIC_POSITIONS
+Direct
+
+Si
+0.0
+2
+0.00 0.00 0.00 1 1 1
+0.25 0.25 0.25 1 1 1
+```
+
+### Running ABACUS:
+```bash
+abacus
+mpirun -np 16 abacus
+```
+
+## Advanced Features
+
+### Stochastic DFT:
+- Statistical sampling
+- Large systems (1000+ atoms)
+- Linear-scaling approach
+- Reduced computational cost
+- Controlled accuracy
+
+### DeepKS:
+- Machine learning correction
+- Improved accuracy
+- Trained models
+- DeepModeling framework
+- Enhanced DFT
+
+### Multiple Basis Options:
+- Choose PW for accuracy
+- Choose NAO for efficiency
+- Hybrid for balance
+- System-dependent optimization
+
+### GPU Acceleration:
+- Offload to GPU
+- CUDA kernels
+- Speedup factors
+- Multi-GPU support
+
+### DFPT:
+- Phonon calculations
+- Dielectric response
+- Born effective charges
+- Efficient implementation
+
+## Performance Characteristics
+- **Speed**: Competitive
+- **Scaling**: Good parallel performance
+- **GPU**: Significant acceleration
+- **Memory**: Moderate
+- **Typical systems**: 50-1000 atoms
+
+## Computational Cost
+- **DFT (PW)**: Standard
+- **DFT (NAO)**: More efficient
+- **Stochastic**: Very efficient for large
+- **GPU**: Dramatically faster
+- **ML corrections**: Minimal overhead
+
+## Limitations & Known Constraints
+- **Smaller community**: Less established globally
+- **Documentation**: Good but primarily Chinese/English
+- **Learning curve**: Moderate
+- **Features**: Fewer than VASP/QE
+- **Platform**: Linux primarily
+- **GPU**: CUDA only
+
+## Comparison with Other Codes
+- **vs VASP**: ABACUS open-source, multiple basis
+- **vs Quantum ESPRESSO**: Similar PW capabilities, ABACUS adds NAO
+- **vs SIESTA**: Both NAO, ABACUS also PW
+- **vs CP2K**: Different implementations
+- **Unique strength**: Multiple basis sets, ML integration, stochastic DFT, DeepModeling ecosystem
+
+## Application Areas
+
+### Materials Science:
+- Electronic structure
+- Structural properties
+- Phase stability
+- Defects and dopants
+
+### Machine Learning:
+- Training data generation
+- DeepKS applications
+- ML potential development
+- DP-GEN workflows
+
+### Large Systems:
+- Stochastic DFT
+- Amorphous materials
+- Complex systems
+- Interfaces
+
+### Method Development:
+- Basis set comparison
+- Algorithm testing
+- ML integration
+
+## Best Practices
+
+### Basis Set Selection:
+- PW for high accuracy
+- NAO for large systems
+- Test both for system
+- Convergence testing
+
+### Convergence:
+- Plane-wave cutoff (PW)
+- NAO basis size
+- K-point sampling
+- SCF threshold
+
+### GPU Usage:
+- Enable GPU acceleration
+- Monitor utilization
+- Balance CPU-GPU
+- Optimize workload
+
+### ML Integration:
+- Use DeepKS when appropriate
+- Train models carefully
+- Validate corrections
+- Follow DeepModeling best practices
+
+## Community and Support
+- Open-source (LGPL v3)
+- Active GitHub repository
+- Documentation website
+- DeepModeling community
+- Chinese and international users
+- Regular updates
+
+## Educational Resources
+- Online documentation
+- Tutorial examples
+- GitHub wiki
+- DeepModeling resources
+- Published papers
+
+## Development
+- Active GitHub development
+- DeepModeling project
+- University of Science and Technology of China
+- Community contributions
+- Regular releases
+
+## DeepModeling Ecosystem
+- Part of DeepModeling community
+- Integration with DeePMD
+- DP-GEN workflows
+- ML potential development
+- AI for science
+
+## Verification & Sources
+**Primary sources**:
+1. Official website: https://abacus.deepmodeling.com/
+2. Documentation: https://abacus.deepmodeling.com/en/latest/
+3. GitHub repository: https://github.com/deepmodeling/abacus-develop
+4. M. Chen et al., Comput. Phys. Commun. 285, 108634 (2023) - ABACUS overview
+
+**Secondary sources**:
+1. ABACUS documentation and tutorials
+2. DeepModeling community resources
+3. Published studies using ABACUS
+4. GitHub discussions
+
+**Confidence**: VERIFIED - GitHub repository and official website confirmed
+
+**Verification status**: ✅ VERIFIED
+- Official homepage: ACCESSIBLE
+- Documentation: COMPREHENSIVE
+- Source code: OPEN (GitHub, LGPL v3)
+- Community support: GitHub issues, documentation
+- Active development: Very active GitHub
+- Specialized strength: Multiple basis sets (PW/NAO), ML integration, stochastic DFT, DeepModeling ecosystem, GPU acceleration
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

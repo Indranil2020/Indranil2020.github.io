@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXESS | GROUND-STATE DFT | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="EXESS (Extreme-scale Electronic Structure System) is a GPU-native quantum chemistry code designed for extreme-scale ab initio molecular dynamics (AIMD) capabilities. It won the 2024 ACM Gordon Bell Prize for its ability to perform MP2-level AIMD simulations on systems with thousands of atoms, levera">
+    <meta name="keywords" content="EXESS, GROUND-STATE DFT, Localized Basis Sets, computational materials science, DFT, simulation tool, EXESS code, EXESS software, EXESS tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/EXESS.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="EXESS | GROUND-STATE DFT | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="EXESS (Extreme-scale Electronic Structure System) is a GPU-native quantum chemistry code designed for extreme-scale ab initio molecular dynamics (AIMD) capabilities. It won the 2024 ACM Gordon Bell Prize for its ability to perform MP2-level AIMD simulations on systems with thousands of atoms, levera">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/EXESS.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "EXESS",
+      "applicationCategory": "ScienceApplication",
+      "description": "EXESS (Extreme-scale Electronic Structure System) is a GPU-native quantum chemistry code designed for extreme-scale ab initio molecular dynamics (AIMD) capabilities. It won the 2024 ACM Gordon Bell Prize for its ability to perform MP2-level AIMD simulations on systems with thousands of atoms, levera",
+      "url": "https://indranil2020.github.io/tools/db/EXESS.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>1. GROUND-STATE DFT</span>
+                <span> &nbsp;/&nbsp; 1.3 Localized Basis Sets</span>
+            </div>
+            <h1>EXESS</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 1. GROUND-STATE DFT</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 1.3 Localized Basis Sets</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://barcagrp.com/exess/" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">EXESS (Extreme-scale Electronic Structure System) is a GPU-native quantum chemistry code designed for extreme-scale ab initio molecular dynamics (AIMD) capabilities. It won the 2024 ACM Gordon Bell Prize for its ability to perform MP2-level AIMD simulations on systems with thousands of atoms, leveraging novel algorithms optimized for GPU architectures (NVIDIA).</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted"><em>No paper PDFs uploaded yet for this code.</em></p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># EXESS
+
+## Official Resources
+- Homepage: https://barcagrp.com/exess/
+- Documentation: https://barcagrp.com/exess/
+- Source Repository: Closed (Waitlist/Academic access)
+- License: Academic/Commercial
+
+## Overview
+EXESS (Extreme-scale Electronic Structure System) is a GPU-native quantum chemistry code designed for extreme-scale ab initio molecular dynamics (AIMD) capabilities. It won the 2024 ACM Gordon Bell Prize for its ability to perform MP2-level AIMD simulations on systems with thousands of atoms, leveraging novel algorithms optimized for GPU architectures (NVIDIA).
+
+**Scientific domain**: High-performance quantum chemistry, Ab Initio Molecular Dynamics (AIMD)  
+**Target user community**: HPC users, researchers needing large-scale accurate dynamics (MP2)
+
+## Theoretical Methods
+- Hartree-Fock (HF)
+- Density Functional Theory (DFT)
+- Second-order Møller-Plesset perturbation theory (MP2)
+- Ab Initio Molecular Dynamics (AIMD)
+- Resolution of Identity (RI) approximations
+- GPU-accelerated algorithms
+
+## Capabilities (CRITICAL)
+- GPU-native implementation (CUDA)
+- Extreme scalability (Summit, Frontier, Aurora scales)
+- Large-scale MP2 calculations (1000+ atoms)
+- Long-timescale AIMD at MP2 level
+- Energy conservation in dynamics
+- High floating-point efficiency
+- Massively parallel execution
+
+## Key Strengths
+
+### GPU Optimization:
+- Built from scratch for GPUs
+- High percent peak flop utilization
+- Minimal CPU-GPU transfer
+- optimized Tensor contractions
+- Scalable to thousands of GPUs
+
+### MP2 Dynamics:
+- Accurate electron correlation
+- Dispersion inclusion via MP2
+- Feasible for large biological systems
+- Beyond DFT accuracy for dynamics
+
+### Extreme Scale:
+- Linear scaling or low-prefactor algorithms
+- Handles 1000-2000 atoms at MP2 level
+- Gordon Bell Prize performance
+- State-of-the-art HPC
+
+## Inputs & Outputs
+- **Input formats**:
+  - EXESS input format
+  - PDB/XYZ coordinates
+  - Basis set library inputs
+- **Output data types**:
+  - Energies (HF, MP2)
+  - Forces
+  - Trajectories (XYZ/DCD)
+  - Restart files
+  - Performance metrics
+
+## Interfaces & Ecosystem
+- **HPC Systems**: Designed for OLCF/ALCF supercomputers (Summit, Frontier, Aurora)
+- **NVIDIA Integration**: Optimized for A100/H100 GPUs using CUDA and cuBLAS
+- **Analysis Tools**: Standard trajectory analysis (VMD, MDAnalysis)
+- **Input Generation**: Minimal input scripts, compatible with standard formats
+- **Output Parsing**: Standard text output, easily parsable performance logs
+
+## Advanced Features
+
+### MP2-AIMD:
+- On-the-fly forces
+- Conserved energy dynamics
+- Solvated systems
+- Chemical reactions in solution
+
+### Algorithms:
+- Rank-reduced operations
+- Mixed precision utilization
+- Asynchronous task scheduling
+- Distributed memory management
+
+## Performance Characteristics
+- **Speed**: Orders of magnitude faster than CPU codes for MP2
+- **Accuracy**: MP2/CBS limit capabilities
+- **System size**: 1000+ atoms (MP2)
+- **Memory**: GPU memory constrained (managed)
+- **Parallelization**: Multi-node Multi-GPU (MPI+CUDA)
+
+## Computational Cost
+- **MP2**: Conventionally O(N^5), EXESS optimized
+- **Dynamics**: Feasible ps/ns scales
+- **Hardware**: High-end GPU clusters required
+- **Efficiency**: High FLOP/watt
+
+## Limitations & Known Constraints
+- **Availability**: Not open source (Waitlist)
+- **Hardware**: Requires NVIDIA GPUs
+- **Features**: Focused on energy/forces (MP2), less property analysis
+- **Documentation**: Limited public docs
+
+## Comparison with Other Codes
+- **vs CP2K**: EXESS focuses on MP2, CP2K on DFT
+- **vs GAMESS**: EXESS GPU-native, faster for large MP2
+- **vs TeraChem**: Both GPU, EXESS targets HPC/MP2 scale
+- **vs Psi4**: EXESS is HPC dynamics focused
+- **Unique strength**: Large-scale MP2 dynamics on GPUs
+
+## Application Areas
+
+### Biochemistry:
+- **Enzyme Reactions**: MP2 accuracy for reaction mechanisms in large enzymes
+- **Solvation Dynamics**: Accurate description of solvation shells including dispersion
+- **Ligand Binding**: Free energy calculations with correlated methods
+- **Conformational Ensembles**: Sampling complex landscapes with high accuracy
+
+### Materials Science:
+- **Liquid Structures**: Reliable radial distribution functions from MP2
+- **Interfacial Chemistry**: Solid-liquid interfaces with accurate electronic structure
+- **Nanoparticles**: Dynamics of metallic and semiconductor clusters
+- **Battery Electrolytes**: Solvation structures and transport mechanisms
+
+## Best Practices
+### System Setup:
+- **Pre-equilibration**: thorough equilibration with classical MD before switching to EXESS
+- **Basis Sets**: Use standard correlation-consistent basis sets (cc-pVDZ/TZ)
+- **Geometry**: Ensure clean starting structures to avoid large initial forces
+
+### Hardware Utilization:
+- **GPU Selection**: Target A100 or H100 nodes for maximum efficiency
+- **Memory Management**: Monitor GPU memory usage for large basis sets
+- **Scaling**: Test scaling on small number of nodes before full production run
+
+### Simulation Parameters:
+- **Timestep**: Use appropriate timestep (0.5-1.0 fs) for AIMD
+- **Thermostats**: Standard thermostats (Nose-Hoover) available
+- **Restart frequency**: Write restarts frequently due to HPC time limits
+
+## Community and Support
+- Barca group (Australian National University)
+- HPC centers (OLCF, etc.)
+- Gordon Bell community
+- Academic collaborations
+
+## Verification & Sources
+**Primary sources**:
+1. Homepage: https://barcagrp.com/exess/
+2. Gordon Bell Prize 2024 announcements
+3. Barca group publications (JCTC, etc.)
+
+**Confidence**: VERIFIED
+- Status: Active HPC code
+- Recognition: Gordon Bell Prize
+- Existence: Confirmed via ANU/OLCF
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

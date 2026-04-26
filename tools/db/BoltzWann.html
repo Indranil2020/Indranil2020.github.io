@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoltzWann | TIGHT-BINDING | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="BoltzWann is a module within the Wannier90 package for calculating Boltzmann transport properties using Wannier interpolation. The tool computes electrical conductivity, Seebeck coefficient, electronic thermal conductivity, and other transport coefficients from first principles via Wannier tight-bin">
+    <meta name="keywords" content="BoltzWann, TIGHT-BINDING, Wannier Ecosystem, computational materials science, DFT, simulation tool, BoltzWann code, BoltzWann software, BoltzWann tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/BoltzWann.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="BoltzWann | TIGHT-BINDING | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="BoltzWann is a module within the Wannier90 package for calculating Boltzmann transport properties using Wannier interpolation. The tool computes electrical conductivity, Seebeck coefficient, electronic thermal conductivity, and other transport coefficients from first principles via Wannier tight-bin">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/BoltzWann.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "BoltzWann",
+      "applicationCategory": "ScienceApplication",
+      "description": "BoltzWann is a module within the Wannier90 package for calculating Boltzmann transport properties using Wannier interpolation. The tool computes electrical conductivity, Seebeck coefficient, electronic thermal conductivity, and other transport coefficients from first principles via Wannier tight-bin",
+      "url": "https://indranil2020.github.io/tools/db/BoltzWann.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>4. TIGHT-BINDING</span>
+                <span> &nbsp;/&nbsp; 4.1 Wannier Ecosystem</span>
+            </div>
+            <h1>BoltzWann</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 4. TIGHT-BINDING</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 4.1 Wannier Ecosystem</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://github.com/wannier-developer/boltzwann" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">BoltzWann is a module within the Wannier90 package for calculating Boltzmann transport properties using Wannier interpolation. The tool computes electrical conductivity, Seebeck coefficient, electronic thermal conductivity, and other transport coefficients from first principles via Wannier tight-binding models. BoltzWann implements the Boltzmann transport equation in the relaxation time approximation.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><ul class="paper-list"><li><a href="../../scientific_tools_consolidated/Papers_of_Codes/TightBinding/4.1_Wannier_Ecosystem/BoltzWann/10_1016_j_cpc_2013_09_015.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> 10_1016_j_cpc_2013_09_015.pdf</a></li></ul>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># BoltzWann
+
+## Official Resources
+- Homepage: Part of Wannier90 ecosystem
+- Documentation: Wannier90 documentation
+- Source Repository: https://github.com/wannier-developers/wannier90 (integrated)
+- License: GNU General Public License v2.0
+
+## Overview
+BoltzWann is a module within the Wannier90 package for calculating Boltzmann transport properties using Wannier interpolation. The tool computes electrical conductivity, Seebeck coefficient, electronic thermal conductivity, and other transport coefficients from first principles via Wannier tight-binding models. BoltzWann implements the Boltzmann transport equation in the relaxation time approximation.
+
+**Scientific domain**: Boltzmann transport, thermoelectrics, electronic transport  
+**Target user community**: Wannier90 users, transport properties, thermoelectrics
+
+## Theoretical Methods
+- Boltzmann transport equation
+- Relaxation time approximation (RTA)
+- Wannier interpolation
+- Band structure integration
+- Transport distribution function
+- Temperature-dependent transport
+
+## Capabilities (CRITICAL)
+**Category**: Wannier90 transport module
+- Electrical conductivity
+- Seebeck coefficient
+- Electronic thermal conductivity
+- Power factor
+- Figure of merit (ZT estimation)
+- Temperature-dependent properties
+- Wannier interpolation
+- Fine k-mesh integration
+- Chemical potential variation
+- Integrated with Wannier90
+
+**Sources**: Wannier90 documentation
+
+## Key Strengths
+
+### Wannier90 Integration:
+- Native module
+- Direct hr.dat usage
+- Standard workflow
+- Seamless integration
+- DFT to transport
+
+### Transport Properties:
+- Comprehensive coefficients
+- Thermoelectric properties
+- Temperature dependence
+- Chemical potential scans
+- Production quality
+
+### Interpolation:
+- Fine k-mesh from coarse DFT
+- Accurate integration
+- Efficient computation
+- Wannier quality
+
+## Inputs & Outputs
+- **Input formats**:
+  - Wannier90 hr.dat
+  - BoltzWann input section in .win
+  - Temperature range
+  - Chemical potential range
+  
+- **Output data types**:
+  - Conductivity tensors
+  - Seebeck coefficient
+  - Thermal conductivity
+  - Power factor
+  - Transport distribution
+  - Tabulated results
+
+## Workflow and Usage
+
+### Wannier90 Input (.win):
+```
+# After standard Wannier90 parameters
+boltzwann = true
+
+# BoltzWann specific
+boltz_kmesh = 50 50 50
+boltz_relax_time = 1e-14
+boltz_2d_dir = 3
+
+# Temperature range (K)
+boltz_temp = 100 200 300 400 500
+
+# Chemical potential range (eV)
+boltz_mu_min = -0.5
+boltz_mu_max = 0.5
+boltz_mu_step = 0.01
+```
+
+### Run Wannier90 with BoltzWann:
+```bash
+# After standard Wannier90 workflow
+wannier90.x silicon
+
+# BoltzWann output in silicon_boltzdist.dat
+```
+
+### Analyze Results:
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Load BoltzWann output
+data = np.loadtxt('silicon_boltzdist.dat')
+mu = data[:, 0]  # Chemical potential
+sigma = data[:, 1]  # Conductivity
+seebeck = data[:, 2]  # Seebeck coefficient
+
+# Plot Seebeck coefficient
+plt.plot(mu, seebeck)
+plt.xlabel('Chemical potential (eV)')
+plt.ylabel('Seebeck coefficient (μV/K)')
+plt.show()
+```
+
+## Advanced Features
+
+### Transport Coefficients:
+- σ (conductivity tensor)
+- S (Seebeck coefficient)
+- κₑ (electronic thermal conductivity)
+- Power factor (S²σ)
+- Lorenz number
+
+### Integration:
+- Fine k-mesh via interpolation
+- Fermi surface integration
+- Temperature dependence
+- Chemical potential variation
+- Convergence control
+
+### 2D Systems:
+- Layered materials
+- Reduced dimensions
+- Direction specification
+- Quasi-2D transport
+
+## Performance Characteristics
+- **Speed**: Post-Wannier90, fast
+- **Accuracy**: Wannier quality
+- **Purpose**: Transport properties
+- **Typical**: Minutes
+
+## Computational Cost
+- Post-processing (after Wannier90)
+- k-mesh dependent
+- Temperature/μ scan cost
+- Efficient interpolation
+- Production capable
+
+## Limitations & Known Constraints
+- **RTA**: Relaxation time approximation
+- **τ parameter**: Requires relaxation time input
+- **No phonons**: Electronic only
+- **Requires Wannier90**: Part of ecosystem
+- **Constant τ**: Simplified scattering
+
+## Comparison with Other Transport Tools
+- **vs WannierBerri**: BoltzWann Boltzmann, WannierBerri Berry
+- **vs BoltzTraP**: BoltzWann Wannier-based, BoltzTraP DFT-direct
+- **Unique strength**: Wannier interpolation, Wannier90 integration, thermoelectrics
+
+## Application Areas
+
+### Thermoelectrics:
+- Seebeck coefficient
+- Power factor
+- ZT estimation
+- Material screening
+- Doping optimization
+
+### Electronic Transport:
+- Conductivity tensors
+- Carrier mobility
+- Temperature dependence
+- Chemical potential effects
+
+### Materials Screening:
+- High-throughput
+- Transport databases
+- Property prediction
+- Optimization studies
+
+## Best Practices
+
+### Wannier Functions:
+- Quality MLWFs from Wannier90
+- Converged tight-binding
+- Appropriate bands
+- Validated model
+
+### k-Mesh:
+- Dense BoltzWann mesh
+- Convergence testing
+- Fermi surface resolution
+- Integration accuracy
+
+### Relaxation Time:
+- Appropriate τ values
+- Literature/experiment
+- Material-dependent
+- Constant τ approximation
+
+## Community and Support
+- Part of Wannier90
+- Wannier90 community
+- Documentation
+- Mailing list
+- Established tool
+
+## Educational Resources
+- Wannier90 user guide
+- BoltzWann tutorial
+- Example calculations
+- Transport theory background
+
+## Development
+- Wannier90 developers
+- International collaboration
+- Integrated module
+- Regular updates with Wannier90
+
+## Research Impact
+BoltzWann enables first-principles thermoelectric property calculations, widely used for screening thermoelectric materials and understanding electronic transport from ab-initio.
+
+n## Interfaces & Ecosystem
+- **Integration**: See official documentation for interface details
+n## Comparison with Other Codes
+- **vs comparable tools**: See community benchmarks
+- **Unique strength**: See Overview
+## Verification & Sources
+**Primary sources**:
+1. Wannier90: https://wannier.org/
+2. Wannier90 documentation
+3. GitHub: https://github.com/wannier-developers/wannier90
+
+**Secondary sources**:
+1. Boltzmann transport literature
+2. Thermoelectric papers
+
+**Confidence**: VERIFIED - Wannier90 module
+
+**Verification status**: ✅ VERIFIED
+- **Category**: Wannier90 transport module
+- Status: Part of Wannier90
+- **Note**: BoltzWann is an integrated module within Wannier90 for Boltzmann transport calculations. Computes electrical conductivity, Seebeck coefficient, and electronic thermal conductivity using Wannier interpolation. Relaxation time approximation. Essential for first-principles thermoelectric property prediction. Part of standard Wannier90 distribution.
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

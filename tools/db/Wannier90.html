@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wannier90 | TIGHT-BINDING | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="Wannier90 is the community standard code for computing maximally-localized Wannier functions (MLWFs) from electronic structure calculations. Developed by an international collaboration, Wannier90 transforms delocalized Bloch states from DFT calculations into localized Wannier representations, enabli">
+    <meta name="keywords" content="Wannier90, TIGHT-BINDING, Wannier Ecosystem, computational materials science, DFT, simulation tool, Wannier90 code, Wannier90 software, Wannier90 tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/Wannier90.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Wannier90 | TIGHT-BINDING | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="Wannier90 is the community standard code for computing maximally-localized Wannier functions (MLWFs) from electronic structure calculations. Developed by an international collaboration, Wannier90 transforms delocalized Bloch states from DFT calculations into localized Wannier representations, enabli">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/Wannier90.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Wannier90",
+      "applicationCategory": "ScienceApplication",
+      "description": "Wannier90 is the community standard code for computing maximally-localized Wannier functions (MLWFs) from electronic structure calculations. Developed by an international collaboration, Wannier90 transforms delocalized Bloch states from DFT calculations into localized Wannier representations, enabli",
+      "url": "https://indranil2020.github.io/tools/db/Wannier90.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>4. TIGHT-BINDING</span>
+                <span> &nbsp;/&nbsp; 4.1 Wannier Ecosystem</span>
+            </div>
+            <h1>Wannier90</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 4. TIGHT-BINDING</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 4.1 Wannier Ecosystem</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> CONFIRMED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://wannier.org/" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">Wannier90 is the community standard code for computing maximally-localized Wannier functions (MLWFs) from electronic structure calculations. Developed by an international collaboration, Wannier90 transforms delocalized Bloch states from DFT calculations into localized Wannier representations, enabling tight-binding model construction, topological analysis, transport calculations, and many other applications. The code interfaces with virtually all major DFT packages and is essential for modern el</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><ul class="paper-list"><li><a href="../../scientific_tools_consolidated/Papers_of_Codes/TightBinding/4.1_Wannier_Ecosystem/Wannier90/Pizzi_et_al_2020.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Pizzi_et_al_2020.pdf</a></li></ul>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># Wannier90
+
+## Official Resources
+- Homepage: https://wannier.org/
+- Documentation: https://wannier.org/documentation/
+- Source Repository: https://github.com/wannier-developers/wannier90
+- License: GNU General Public License v2.0
+
+## Overview
+Wannier90 is the community standard code for computing maximally-localized Wannier functions (MLWFs) from electronic structure calculations. Developed by an international collaboration, Wannier90 transforms delocalized Bloch states from DFT calculations into localized Wannier representations, enabling tight-binding model construction, topological analysis, transport calculations, and many other applications. The code interfaces with virtually all major DFT packages and is essential for modern electronic structure workflows.
+
+**Scientific domain**: Wannier functions, tight-binding models, electronic structure  
+**Target user community**: DFT users, materials scientists, topological physics, transport calculations
+
+## Theoretical Methods
+- Maximally-localized Wannier functions (MLWFs)
+- Disentanglement algorithms
+- Wannier interpolation
+- Berry phase calculations
+- Topological invariants
+- Tight-binding Hamiltonian construction
+- ab-initio tight-binding
+
+## Capabilities (CRITICAL)
+**Category**: Open-source Wannier function code
+- MLWF construction
+- Disentanglement procedures
+- Wannier interpolation
+- Band structure interpolation
+- Density of states
+- Berry curvature
+- Anomalous Hall conductivity
+- Orbital magnetization
+- Topological invariants (Z2, Chern)
+- Interface with major DFT codes
+- Parallelization (MPI)
+- Post-processing utilities
+- Production quality
+- Community standard
+
+**Sources**: Official website, documentation, publications
+
+## Key Strengths
+
+### Community Standard:
+- Most widely used
+- DFT integration essential
+- Thousands of citations
+- Production quality
+- Extensive validation
+
+### Universal DFT Interface:
+- VASP, Quantum ESPRESSO
+- ABINIT, Siesta, CASTEP
+- Wien2k, FLEUR, Elk
+- CP2K, OpenMX
+- Universal tool
+
+### Comprehensive Features:
+- Band interpolation
+- Topological properties
+- Transport calculations
+- Spectroscopy
+- Materials analysis
+
+### Active Development:
+- International collaboration
+- Regular releases
+- New features
+- Community support
+- Best practices
+
+## Inputs & Outputs
+- **Input formats**:
+  - .win (Wannier90 input)
+  - DFT overlap matrices (from DFT codes)
+  - MLWF projections
+  - k-point grids
+  
+- **Output data types**:
+  - Wannier functions
+  - Tight-binding Hamiltonians (.tb files)
+  - Interpolated band structures
+  - Berry curvature
+  - hr.dat (real-space Hamiltonian)
+  - Topological invariants
+
+## Interfaces & Ecosystem
+
+### DFT Codes:
+- VASP (vasp2wannier90)
+- Quantum ESPRESSO (pw2wannier90)
+- ABINIT (native)
+- CASTEP (native)
+- Siesta, Wien2k, FLEUR
+- Nearly universal
+
+### Post-Processing:
+- WannierTools (topological)
+- WannierBerri (Berry properties)
+- BoltzWann (transport)
+- BerryPI (polarization)
+- Many downstream tools
+
+## Workflow and Usage
+
+### Installation:
+```bash
+# Download from wannier.org or GitHub
+git clone https://github.com/wannier-developers/wannier90.git
+cd wannier90
+make
+```
+
+### DFT Calculation (Quantum ESPRESSO):
+```bash
+# SCF calculation
+pw.x < scf.in > scf.out
+
+# NSCF on fine k-grid
+pw.x < nscf.in > nscf.out
+
+# Generate inputs for Wannier90
+wannier90.x -pp silicon
+
+# Compute overlaps
+pw2wannier90.x < pw2wan.in > pw2wan.out
+```
+
+### Wannier90 Input (silicon.win):
+```
+num_wann = 4
+num_iter = 100
+
+begin projections
+Si:sp3
+end projections
+
+begin unit_cell_cart
+bohr
+0.0  5.13  5.13
+5.13 0.0   5.13
+5.13 5.13  0.0
+end unit_cell_cart
+
+begin atoms_frac
+Si 0.00 0.00 0.00
+Si 0.25 0.25 0.25
+end atoms_frac
+
+mp_grid = 4 4 4
+
+begin kpoints
+# k-point list
+end kpoints
+
+bands_plot = true
+write_hr = true
+```
+
+### Run Wannier90:
+```bash
+# Wannierize
+wannier90.x silicon
+```
+
+### Interpolate Band Structure:
+```bash
+# Add to .win file:
+bands_plot = true
+begin kpoint_path
+L 0.5 0.5 0.5 G 0.0 0.0 0.0
+G 0.0 0.0 0.0 X 0.5 0.0 0.5
+end kpoint_path
+
+# Rerun
+wannier90.x silicon
+
+# Plot bands
+gnuplot silicon_band.gnu
+```
+
+## Advanced Features
+
+### Disentanglement:
+- Energy window selection
+- Inner/outer windows
+- Projection optimization
+- Subspace selection
+- Quality control
+
+### Berry Phase Properties:
+- Berry curvature
+- Anomalous Hall conductivity
+- Orbital magnetization
+- Chern numbers
+- Modern theory of polarization
+
+### Topological Invariants:
+- Z2 invariants
+- Chern numbers
+- Mirror Chern numbers
+- Weyl points
+- Topological characterization
+
+### Transport:
+- Boltzmann transport (with BoltzWann)
+- Conductivity tensors
+- Seebeck coefficient
+- Electronic structure for transport
+
+## Performance Characteristics
+- **Speed**: Efficient, post-DFT
+- **Accuracy**: High-quality MLWFs
+- **System size**: Any (post-processing)
+- **Purpose**: Production standard
+- **Typical**: Minutes to hours post-DFT
+
+## Computational Cost
+- Post-processing (after DFT)
+- DFT calculation dominant
+- Wannierization fast
+- k-point dependent
+- Production efficient
+
+## Limitations & Known Constraints
+- **Requires DFT**: Not standalone
+- **Disentanglement**: Can be tricky
+- **Projection choice**: User expertise
+- **Localization**: Not always achievable
+- **Gauge freedom**: Choices matter
+
+## Comparison with Other Tools
+- **Community standard**: No real alternative for MLWFs
+- **Complements**: DFT packages
+- **Downstream**: WannierTools, WannierBerri, etc. build on it
+- **Unique position**: Essential post-DFT tool
+
+## Application Areas
+
+### Materials Science:
+- Electronic structure
+- Band structures
+- Tight-binding models
+- Properties calculations
+- Universal application
+
+### Topological Materials:
+- Topological insulators
+- Weyl semimetals
+- Chern insulators
+- Z2 invariants
+- Berry curvature
+
+### Transport:
+- Boltzmann transport
+- Thermoelectrics
+- Hall effects
+- Conductivity
+- Device modeling
+
+### Spectroscopy:
+- Optical properties
+- ARPES simulation
+- Photoemission
+- Interband transitions
+
+## Best Practices
+
+### Projection Choice:
+- Physical atomic orbitals
+- Symmetry-adapted
+- Test different projections
+- Validate localization
+
+### Disentanglement:
+- Appropriate energy windows
+- Sufficient k-points
+- Check spreads
+- Convergence testing
+
+### k-Point Grid:
+- Dense for interpolation
+- Converge with grid
+- Symmetry exploitation
+- Computational balance
+
+## Community and Support
+- Open-source (GPL v2)
+- International collaboration
+- Large user community
+- Active mailing list
+- Workshops and schools
+- Extensive documentation
+- GitHub repository
+
+## Educational Resources
+- Comprehensive tutorial
+- User guide
+- Example inputs
+- Workshop materials
+- Scientific papers
+- Video lectures
+- MLWF theory primers
+
+## Development
+- International collaboration
+- Multiple institutions
+- Active development
+- Regular releases (v3.x)
+- Feature additions
+- Community-driven
+- Best-practice standard
+
+## Research Impact
+Wannier90 is cited in thousands of publications and is essential infrastructure for modern electronic structure calculations, enabling topological analysis, transport properties, and tight-binding model construction across materials science and condensed matter physics.
+
+n## Comparison with Other Codes
+- **vs comparable tools**: See community benchmarks
+- **Unique strength**: See Overview
+## Verification & Sources
+**Primary sources**:
+1. Homepage: https://wannier.org/
+2. Documentation: https://wannier.org/documentation/
+3. GitHub: https://github.com/wannier-developers/wannier90
+4. Publications: Comp. Phys. Comm. 178, 685 (2008); 185, 2309 (2014)
+
+**Secondary sources**:
+1. User publications (thousands)
+2. DFT package documentation
+3. Topological materials literature
+4. Transport calculations
+
+**Confidence**: CONFIRMED - Community standard
+
+**Verification status**: ✅ CONFIRMED
+- Website: ACTIVE
+- GitHub: ACCESSIBLE
+- License: GPL v2 (open-source)
+- **Category**: Open-source Wannier function code
+- Status: Actively developed
+- Community: Very large, international
+- Specialized strength: Community standard for maximally-localized Wannier functions, universal DFT interface, tight-binding model construction, topological invariants, Berry phase properties, essential post-DFT tool, production quality, comprehensive features, thousands of citations, enables downstream tools ecosystem
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeON | GROUND-STATE DFT | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="FreeON is an experimental, open-source suite of programs for linear-scaling quantum chemistry calculations. Formerly known as MondoSCF, it performs Hartree-Fock, pure DFT, and hybrid DFT calculations using a Cartesian-Gaussian LCAO basis. FreeON emphasizes O(N) and O(N log N) algorithms for non-meta">
+    <meta name="keywords" content="FreeON, GROUND-STATE DFT, Localized Basis Sets, computational materials science, DFT, simulation tool, FreeON code, FreeON software, FreeON tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/FreeON.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="FreeON | GROUND-STATE DFT | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="FreeON is an experimental, open-source suite of programs for linear-scaling quantum chemistry calculations. Formerly known as MondoSCF, it performs Hartree-Fock, pure DFT, and hybrid DFT calculations using a Cartesian-Gaussian LCAO basis. FreeON emphasizes O(N) and O(N log N) algorithms for non-meta">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/FreeON.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "FreeON",
+      "applicationCategory": "ScienceApplication",
+      "description": "FreeON is an experimental, open-source suite of programs for linear-scaling quantum chemistry calculations. Formerly known as MondoSCF, it performs Hartree-Fock, pure DFT, and hybrid DFT calculations using a Cartesian-Gaussian LCAO basis. FreeON emphasizes O(N) and O(N log N) algorithms for non-meta",
+      "url": "https://indranil2020.github.io/tools/db/FreeON.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>1. GROUND-STATE DFT</span>
+                <span> &nbsp;/&nbsp; 1.3 Localized Basis Sets</span>
+            </div>
+            <h1>FreeON</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 1. GROUND-STATE DFT</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 1.3 Localized Basis Sets</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://github.com/FreeON/freeon" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">FreeON is an experimental, open-source suite of programs for linear-scaling quantum chemistry calculations. Formerly known as MondoSCF, it performs Hartree-Fock, pure DFT, and hybrid DFT calculations using a Cartesian-Gaussian LCAO basis. FreeON emphasizes O(N) and O(N log N) algorithms for non-metallic systems.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><ul class="paper-list"><li><a href="../../scientific_tools_consolidated/Papers_of_Codes/DFT/1.3_Localized_Basis/FreeON/10.1063_1.473575.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> 10.1063_1.473575.pdf</a></li></ul>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># FreeON (formerly MondoSCF)
+
+## Official Resources
+- Homepage: https://github.com/FreeON/freeon
+- Documentation: https://github.com/FreeON/freeon/wiki
+- Source Repository: https://github.com/FreeON/freeon
+- License: GNU General Public License v3.0
+
+## Overview
+FreeON is an experimental, open-source suite of programs for linear-scaling quantum chemistry calculations. Formerly known as MondoSCF, it performs Hartree-Fock, pure DFT, and hybrid DFT calculations using a Cartesian-Gaussian LCAO basis. FreeON emphasizes O(N) and O(N log N) algorithms for non-metallic systems.
+
+**Scientific domain**: Molecules, clusters, large organic systems, biomolecules  
+**Target user community**: Researchers needing linear-scaling molecular quantum chemistry for large non-metallic systems
+
+## Theoretical Methods
+- Hartree-Fock (HF)
+- Density Functional Theory (DFT)
+- Hybrid HF/DFT (B3LYP and others)
+- Cartesian-Gaussian LCAO basis
+- Linear-scaling O(N) algorithms
+- O(N log N) Coulomb evaluation
+- DIIS convergence acceleration
+- Norm-conserving pseudopotentials (optional)
+
+## Capabilities (CRITICAL)
+- Ground-state electronic structure
+- Hartree-Fock calculations
+- Pure DFT (LDA, GGA)
+- Hybrid DFT (B3LYP, etc.)
+- Linear-scaling O(N) Fock matrix construction
+- Geometry optimization
+- Molecular dynamics
+- Forces and gradients
+- Frequency calculations (Hessian)
+- Large molecular systems
+
+**Sources**: Wikipedia, GitHub repository, academic publications
+
+## Key Strengths
+
+### Linear-Scaling Focus:
+- O(N) Fock matrix construction
+- O(N log N) Coulomb operator
+- Targeted at non-metallic systems
+- Scales to large molecules
+- Efficient for insulators
+
+### Open Source GPL v3:
+- Fully open source
+- Community contributions welcome
+- Transparent implementation
+- Academic and commercial use
+
+### Hybrid Functionals:
+- B3LYP support
+- PBE0 support
+- Exact exchange with O(N)
+- Accurate thermochemistry
+
+### Robust Implementation:
+- DIIS convergence
+- Multiple SCF algorithms
+- Fortran95 and C code
+- Well-structured codebase
+
+## Inputs & Outputs
+- **Input formats**:
+  - Native input file format
+  - XYZ coordinates
+  - Basis set specifications
+  - Calculation parameters
+  
+- **Output data types**:
+  - Total energies
+  - Orbital energies
+  - Forces and gradients
+  - Optimized geometries
+  - Molecular dynamics trajectories
+  - Frequency data
+
+## Interfaces & Ecosystem
+- **Standalone operation**:
+  - Self-contained package
+  - Built-in basis sets
+  - Integrated geometry optimizer
+  
+- **Build system**:
+  - Autoconf/Automake
+  - GNU toolchain
+  - Linux/Unix platforms
+  - FreeBSD support
+
+## Advanced Features
+
+### Linear-Scaling Methods:
+- Fast Multipole Method (FMM)
+- Hierarchical matrix algebra
+- Sparse matrix techniques
+- Locality exploitation
+
+### Geometry Optimization:
+- Quasi-Newton methods
+- Conjugate gradient
+- Constraints support
+- Transition state search
+
+### Molecular Dynamics:
+- Born-Oppenheimer MD
+- Velocity Verlet integrator
+- Temperature control
+- Trajectory analysis
+
+### Frequency Calculations:
+- Hessian evaluation
+- Vibrational analysis
+- IR intensities
+- Thermodynamic properties
+
+## Performance Characteristics
+- **Speed**: O(N) for large non-metallic systems
+- **Accuracy**: Standard Gaussian basis precision
+- **System size**: Hundreds to thousands of atoms
+- **Memory**: Efficient sparse matrix storage
+- **Parallelization**: Some parallel capabilities
+
+## Computational Cost
+- **Linear scaling**: Achieved for insulators/semiconductors
+- **Hybrid DFT**: Efficient O(N) exact exchange
+- **Break-even**: ~100-500 atoms vs cubic codes
+- **Typical**: Competitive for large molecules
+
+## Limitations & Known Constraints
+- **Metallic systems**: Linear scaling breaks down
+- **Development status**: Experimental, less active recently
+- **Community**: Smaller than major codes
+- **Documentation**: Academic-level
+- **Periodic systems**: Not primary focus
+- **Platform**: Linux/Unix only
+- **Basis sets**: Limited built-in selection
+
+## Comparison with Other Codes
+- **vs Gaussian**: FreeON O(N) focus vs Gaussian robustness
+- **vs NWChem**: FreeON specialized linear-scaling
+- **vs ONETEP**: FreeON molecular, ONETEP materials
+- **vs BigDFT**: FreeON Gaussian, BigDFT wavelets
+- **Unique strength**: Open-source O(N) molecular quantum chemistry
+
+## Application Areas
+
+### Large Organic Molecules:
+- Natural products
+- Pharmaceuticals
+- Polymers
+- Dendrimers
+
+### Biomolecular Systems:
+- Protein fragments
+- Nucleic acid segments
+- Enzyme models
+- Drug-receptor complexes
+
+### Molecular Clusters:
+- Water clusters
+- Hydrogen-bonded systems
+- Molecular crystals (fragments)
+- Host-guest complexes
+
+### Materials Fragments:
+- Molecular solids
+- Organic semiconductors
+- Self-assembled monolayers
+- Nanoparticle ligands
+
+## Best Practices
+
+### System Selection:
+- Best for non-metallic systems
+- Check band gap for linear scaling
+- Use for insulators/semiconductors
+- Avoid highly metallic systems
+
+### Basis Set Choice:
+- Start with standard basis (6-31G*)
+- Test convergence with larger basis
+- Document basis for reproducibility
+
+### SCF Convergence:
+- Use DIIS for difficult cases
+- Monitor energy convergence
+- Adjust mixing if needed
+
+### Linear-Scaling Settings:
+- Tune cutoff parameters
+- Balance accuracy and speed
+- Verify against standard calculation
+
+## Community and Support
+- Open-source GPL v3
+- GitHub repository
+- Academic publications
+- Legacy from LANL development
+- Contributor community
+
+## Verification & Sources
+**Primary sources**:
+1. GitHub: https://github.com/FreeON/freeon
+2. Wikipedia: FreeON article
+3. M. Challacombe et al., J. Chem. Phys. publications
+
+**Secondary sources**:
+1. Linear-scaling quantum chemistry literature
+2. Open-source chemistry software surveys
+
+**Confidence**: VERIFIED - Open source, published methodology
+
+**Verification status**: ✅ VERIFIED
+- Source code: OPEN (GitHub, GPL v3)
+- Academic use: Published applications
+- Documentation: Wiki and papers
+- Development status: Experimental/Mature
+- Specialty: O(N) linear-scaling molecular quantum chemistry
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

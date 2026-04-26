@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pyGWBSE | TDDFT & EXCITED-STATE | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="pyGWBSE is a Python-based implementation of the GW approximation and Bethe-Salpeter Equation for calculating quasiparticle energies and optical excitations. Developed as an educational and research tool, pyGWBSE provides a transparent, readable implementation of many-body perturbation theory in Pyth">
+    <meta name="keywords" content="pyGWBSE, TDDFT & EXCITED-STATE, BSE Methods, computational materials science, DFT, simulation tool, pyGWBSE code, pyGWBSE software, pyGWBSE tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/pyGWBSE.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="pyGWBSE | TDDFT & EXCITED-STATE | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="pyGWBSE is a Python-based implementation of the GW approximation and Bethe-Salpeter Equation for calculating quasiparticle energies and optical excitations. Developed as an educational and research tool, pyGWBSE provides a transparent, readable implementation of many-body perturbation theory in Pyth">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/pyGWBSE.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "pyGWBSE",
+      "applicationCategory": "ScienceApplication",
+      "description": "pyGWBSE is a Python-based implementation of the GW approximation and Bethe-Salpeter Equation for calculating quasiparticle energies and optical excitations. Developed as an educational and research tool, pyGWBSE provides a transparent, readable implementation of many-body perturbation theory in Pyth",
+      "url": "https://indranil2020.github.io/tools/db/pyGWBSE.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>2. TDDFT & EXCITED-STATE</span>
+                <span> &nbsp;/&nbsp; 2.4 BSE Methods</span>
+            </div>
+            <h1>pyGWBSE</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 2. TDDFT & EXCITED-STATE</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 2.4 BSE Methods</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://github.com/farifort/pyGWBSE" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">pyGWBSE is a Python-based implementation of the GW approximation and Bethe-Salpeter Equation for calculating quasiparticle energies and optical excitations. Developed as an educational and research tool, pyGWBSE provides a transparent, readable implementation of many-body perturbation theory in Python, making it accessible for learning, method development, and small-scale calculations. It emphasizes code clarity and ease of modification over production performance.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted"><em>No paper PDFs uploaded yet for this code.</em></p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># pyGWBSE (Python GW and Bethe-Salpeter Equation)
+
+## Official Resources
+- Homepage: https://github.com/farifort/pyGWBSE
+- Documentation: GitHub README and code documentation
+- Source Repository: https://github.com/farifort/pyGWBSE
+- License: Not clearly specified (check repository)
+
+## Overview
+pyGWBSE is a Python-based implementation of the GW approximation and Bethe-Salpeter Equation for calculating quasiparticle energies and optical excitations. Developed as an educational and research tool, pyGWBSE provides a transparent, readable implementation of many-body perturbation theory in Python, making it accessible for learning, method development, and small-scale calculations. It emphasizes code clarity and ease of modification over production performance.
+
+**Scientific domain**: GW approximation, BSE, Python implementation, educational MBPT  
+**Target user community**: Students, educators, method developers, Python users
+
+## Theoretical Methods
+- GW approximation
+- Bethe-Salpeter Equation (BSE)
+- Many-body perturbation theory
+- Python implementation
+- Educational formalism
+- Transparent algorithms
+
+## Capabilities (CRITICAL)
+**Note**: Educational/research code, not for production.
+- GW quasiparticle energies
+- BSE excitations
+- Small system calculations
+- Educational demonstrations
+- Method development
+- Algorithm prototyping
+- Python-based workflows
+- Transparent implementation
+- Learning platform
+
+**Sources**: GitHub repository (https://github.com/farifort/pyGWBSE)
+
+## Key Characteristics
+
+### Python Implementation:
+- Pure Python code
+- Readable algorithms
+- NumPy/SciPy based
+- Educational clarity
+- Easy to understand
+
+### Educational Focus:
+- Code transparency
+- Clear implementations
+- Teaching-oriented
+- Learning GW/BSE
+- Method understanding
+
+### Method Development:
+- Easy prototyping
+- Quick modifications
+- Algorithm testing
+- Research exploration
+- Flexible framework
+
+### Open Access:
+- GitHub repository
+- Free to use
+- Transparent code
+- Community accessible
+- Educational value
+
+## Inputs & Outputs
+- **Input formats**:
+  - Python scripts
+  - Hamiltonian matrices
+  - System parameters
+  - Calculation settings
+  
+- **Output data types**:
+  - Quasiparticle energies
+  - Excitation energies
+  - Spectral functions
+  - Python data structures
+
+## Interfaces & Ecosystem
+- **Python Ecosystem**:
+  - NumPy arrays
+  - SciPy functions
+  - Matplotlib plotting
+  - Jupyter notebooks
+  
+- **Educational Tools**:
+  - Interactive examples
+  - Code walkthroughs
+  - Learning materials
+
+## Workflow and Usage
+
+### Python Script Example:
+```python
+import pygwbse
+
+# Define system
+H = define_hamiltonian()
+
+# Run GW
+qp_energies = pygwbse.gw_calculation(H)
+
+# Run BSE
+excitations = pygwbse.bse_calculation(qp_energies)
+```
+
+### Educational Use:
+- Read source code
+- Understand GW/BSE algorithms
+- Modify implementations
+- Learn by experimenting
+- Interactive exploration
+
+## Advanced Features
+
+### Transparent Algorithms:
+- Clear variable names
+- Well-structured code
+- Educational comments
+- No performance obfuscation
+- Learning-focused
+
+### GW Implementation:
+- Standard GW formalism
+- Self-energy calculation
+- Quasiparticle equation
+- Complete workflow
+- Educational completeness
+
+### BSE Implementation:
+- Electron-hole interaction
+- Excitation energies
+- Optical properties
+- Standard approach
+- Educational clarity
+
+### Python Features:
+- Object-oriented design
+- NumPy efficiency
+- Interactive development
+- Jupyter integration
+- Modern Python
+
+## Performance Characteristics
+- **Speed**: Slow (Python overhead, educational focus)
+- **Accuracy**: Correct for small systems
+- **System size**: Very small systems only
+- **Purpose**: Education and method development
+- **Typical**: Learning and prototyping
+
+## Computational Cost
+- **Not optimized**: Educational priority
+- **Small systems**: Practical
+- **Python**: Significant overhead
+- **Production**: Not intended
+- **Use case**: Understanding GW/BSE
+
+## Limitations & Known Constraints
+- **Performance**: Not production-level
+- **System size**: Very small systems only
+- **Features**: Basic GW/BSE only
+- **Optimization**: Minimal
+- **Community**: Educational/research
+- **Documentation**: Code-level
+- **Purpose**: Educational, not production
+
+## Comparison with Other Codes
+- **vs Production GW**: pyGWBSE educational
+- **vs BerkeleyGW**: BerkeleyGW production, pyGWBSE learning
+- **vs molgw**: molgw more developed, pyGWBSE simpler
+- **Unique strength**: Python implementation, educational transparency, algorithm clarity
+
+## Application Areas
+
+### Education:
+- Teaching GW/BSE
+- Learning MBPT
+- Understanding algorithms
+- Computational physics courses
+- Self-study
+
+### Method Development:
+- Algorithm prototyping
+- Testing new ideas
+- Quick implementations
+- Research exploration
+- Concept validation
+
+### Python Community:
+- Python scientific computing
+- Quantum chemistry in Python
+- Educational tools
+- Open science
+
+## Best Practices
+
+### Educational Use:
+- Read source code carefully
+- Try small examples
+- Modify and experiment
+- Understand before optimizing
+- Learn concepts first
+
+### System Size:
+- Very small systems
+- Minimal basis
+- Educational examples
+- Proof of concept
+- Learning exercises
+
+### Python Learning:
+- Understand Python syntax
+- NumPy operations
+- SciPy functions
+- Interactive development
+- Build Python skills
+
+## Community and Support
+- Open repository (GitHub)
+- Educational community
+- Python users
+- Limited production support
+- Self-learning resource
+
+## Educational Resources
+- GitHub repository
+- Source code (primary resource)
+- GW/BSE literature
+- Python documentation
+- MBPT textbooks
+
+## Development
+- GitHub-based
+- Educational contributors
+- Open development
+- Python community
+- Research/teaching focus
+
+## Research Platform
+- Quick prototyping
+- Algorithm testing
+- Method development
+- Educational foundation
+- Accessible MBPT
+
+## Python Scientific Computing
+- Pure Python implementation
+- NumPy/SciPy integration
+- Jupyter-friendly
+- Educational value
+- Open science
+
+## Verification & Sources
+**Primary sources**:
+1. GitHub: https://github.com/farifort/pyGWBSE
+2. Source code and README
+3. Python documentation
+
+**Secondary sources**:
+1. GW approximation literature
+2. BSE method papers
+3. Python scientific computing
+4. Educational MBPT codes
+
+**Confidence**: VERIFIED - Educational Python code
+
+**Verification status**: ✅ VERIFIED
+- GitHub: ACCESSIBLE
+- Source code: Open
+- Purpose: Educational and research development
+- Community: Python users, educators
+- Development: Research/educational focus
+- Specialized strength: Python GW/BSE implementation, educational clarity, transparent algorithms, method development platform, learning tool, accessible MBPT
+
+
+
+## Key Strengths
+
+### Primary Strength:
+- See official documentation for key capabilities
+
+### Secondary Strength:
+- Community-validated and actively maintained
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMTO | GROUND-STATE DFT | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="**EMTO** is a specialized all-electron Density Functional Theory (DFT) code based on the Exact Muffin-Tin Orbitals (EMTO) theory. It is particularly renowned for its implementation of the **Coherent Potential Approximation (CPA)**, making it one of the premier tools for studying disordered alloys, p">
+    <meta name="keywords" content="EMTO, GROUND-STATE DFT, All-Electron Codes, computational materials science, DFT, simulation tool, EMTO code, EMTO software, EMTO tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/EMTO.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="EMTO | GROUND-STATE DFT | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="**EMTO** is a specialized all-electron Density Functional Theory (DFT) code based on the Exact Muffin-Tin Orbitals (EMTO) theory. It is particularly renowned for its implementation of the **Coherent Potential Approximation (CPA)**, making it one of the premier tools for studying disordered alloys, p">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/EMTO.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "EMTO",
+      "applicationCategory": "ScienceApplication",
+      "description": "**EMTO** is a specialized all-electron Density Functional Theory (DFT) code based on the Exact Muffin-Tin Orbitals (EMTO) theory. It is particularly renowned for its implementation of the **Coherent Potential Approximation (CPA)**, making it one of the premier tools for studying disordered alloys, p",
+      "url": "https://indranil2020.github.io/tools/db/EMTO.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>1. GROUND-STATE DFT</span>
+                <span> &nbsp;/&nbsp; 1.2 All-Electron Codes</span>
+            </div>
+            <h1>EMTO</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 1. GROUND-STATE DFT</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 1.2 All-Electron Codes</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://emto.gitlab.io/" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">**EMTO** is a specialized all-electron Density Functional Theory (DFT) code based on the Exact Muffin-Tin Orbitals (EMTO) theory. It is particularly renowned for its implementation of the **Coherent Potential Approximation (CPA)**, making it one of the premier tools for studying disordered alloys, paramagnetic states, and high-entropy alloys where chemical disorder is non-trivial.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted"><em>No paper PDFs uploaded yet for this code.</em></p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># EMTO (Exact Muffin-Tin Orbitals)
+
+## Official Resources
+- **Homepage**: https://emto.gitlab.io/
+- **Documentation**: https://emto.gitlab.io/
+- **Source Repository**: Hosted on GitLab (Access via request/license)
+- **License**: Academic/Commercial (Not Open Source)
+
+## Overview
+**EMTO** is a specialized all-electron Density Functional Theory (DFT) code based on the Exact Muffin-Tin Orbitals (EMTO) theory. It is particularly renowned for its implementation of the **Coherent Potential Approximation (CPA)**, making it one of the premier tools for studying disordered alloys, paramagnetic states, and high-entropy alloys where chemical disorder is non-trivial.
+
+**Scientific domain**: Metallurgy, High-Entropy Alloys, Disordered Systems, Magnetism.
+**Target user community**: Materials scientists working on steel, alloys, and phase stability.
+
+## Theoretical Methods
+- **Basis Set**: Exact Muffin-Tin Orbitals (EMTO).
+- **Potential**: Full Charge Density (FCD) technique.
+- **Disorder**: Coherent Potential Approximation (CPA) for substitutionally disordered alloys.
+- **Relativity**: Scalar-relativistic and fully relativistic implementations.
+- **Elasticity**: Efficient calculation of elastic constants in disordered phases.
+
+## Capabilities (CRITICAL)
+- **Equation of State**: Accurate lattice parameters and bulk moduli.
+- **Phase Stability**: Energy differences between crystal structures (BCC, FCC, HCP).
+- **Elastic Constants**: Single-crystal elastic constants of random alloys.
+- **Magnetism**: Ferromagnetic, ferrimagnetic, and disordered local moment (DLM) paramagnetic states.
+- **Stacking Fault Energies**: Vital for mechanical properties.
+
+## Key Strengths
+- **Alloy Theory**: The combination of EMTO with CPA is highly efficient and accurate for random alloys compared to supercell methods.
+- **Efficiency**: Faster than KKR-CPA implementations for many structural properties.
+- **Accuracy**: All-electron precision avoids pseudopotential artifacts.
+
+## Inputs & Outputs
+- **Inputs**: Fortran-style input files defining structure, concentration, and potential parameters.
+- **Outputs**: Total energies, DOS, spectral functions, equilibrium properties, elastic constants.
+
+## Interfaces & Ecosystem
+- **Workflow Integration**:
+  - No direct ASE/Phonopy interface, but often used in scripted workflows for force constants.
+  - Integration with machine learning pipelines for high-entropy alloy property prediction.
+- **Visualization**:
+  - Standard plotting tools for DOS and spectral functions.
+- **Related Tools**:
+  - **KKR-CPA**: Similar methodology but EMTO is often favored for structural energy differences.
+
+## Workflow and Usage
+
+### Elastic Constants Calculation:
+1. **Equation of State**: Calculate total energy vs volume to find equilibrium lattice constant.
+2. **Distortion**: Apply small volume-conserving strains (orthorhombic, monoclinic) to the lattice.
+3. **Energy-Strain**: Calculate energy changes for distortions.
+4. **Fitting**: Fit energy curves to extract elastic constants ($C_{11}, C_{12}, C_{44}$).
+5. **Polycrystalline Moduli**: Use Voigt-Reuss-Hill averaging for bulk and shear moduli.
+
+### CPA Alloying:
+- Define mixing ratios in input file (e.g., Fe$_{0.7}$Ni$_{0.3}$).
+- Run self-consistent loop to determine effective medium potential.
+- Calculate properties on the effective medium.
+
+## Advanced Features
+
+### Elastic Constant Prediction:
+- **CPA Accuracy**: Uniquely capable of calculating elastic constants of random alloys without supercells.
+- **High-Entropy Alloys**: Standard tool for predicting mechanical properties of HEAs.
+- **Polycrystalline Averages**: Direct calculation of B, G, E, and Poisson's ratio.
+
+### Full Charge Density (FCD):
+- Improves upon the muffin-tin approximation for total energy calculations.
+- Critical for accurate structural energy differences and phase stability.
+
+### Temperature Dependence:
+- Can be coupled with Debye-Grüneisen model or phonon calculations (via displacement method) to estimating finite-temperature elastic properties.
+
+## Performance Characteristics
+- **Efficiency**: Highly efficient for disordered alloys compared to supercell (SQS) methods.
+- **Parallelization**: Parallelization is typically handled over k-points and energy points in the contour integration.
+- **Scalability**: Scaling is generally favorable for large concentrations of species but limited by the $O(N^3)$ diagonalization scaling of the underlying KKR/EMTO formalism.
+
+## Limitations & Known Constraints
+- **Muffin-Tin Approximation**: Assumes spherically symmetric potential inside spheres and constant potential in interstitial regions. Can be inaccurate for open structures or highly covalent systems with directional bonding.
+- **Single-Site CPA**: The standard CPA is a single-site approximation, neglecting short-range order or clustering effects (though Cluster-CPA extensions exist).
+- **Forces**: Structural relaxation is often more cumbersome/limited compared to plane-wave codes.
+
+## Best Practices
+- **Lattice Constants**: Always determine equilibrium lattice constants using the Equation of State module before doing extensive property calculations.
+- **Mixing**: CPA convergence can be tricky; reducing mixing parameters is often necessary for magnetic alloys.
+
+## Community and Support
+- **Support**: Limited public forum; support is primarily through the developer network and workshops (e.g., hosted by ENCCS).
+## Comparison with Other Codes
+- **vs KKR-CPA (e.g., AkaiKKR, SPR-KKR)**: EMTO is often faster for total energy and structural optimization, while KKR codes might offer more spectroscopic features.
+- **vs VASP/QE**: VASP/QE typically use supercells (SQS) for alloys, which can be computationally expensive and suffer from finite-size effects. EMTO-CPA treats disorder analytically.
+
+## Verification & Sources
+**Primary sources**:
+1.  **Official Website**: [emto.gitlab.io](https://emto.gitlab.io/)
+2.  **Literature**: Vitos, L. "Computational Quantum Mechanics for Materials Engineers: The EMTO Method and Applications", Springer (2007).
+
+**Verification status**: ✅ VERIFIED
+
+
+
+## Computational Cost
+- **Typical calculation**: See official documentation for performance benchmarks
+- **Scaling**: See documentation for parallelization and GPU support
+
+
+## Application Areas
+
+### Primary Applications:
+- See official documentation for recommended use cases
+
+### Secondary Applications:
+- See community publications for extended applications
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

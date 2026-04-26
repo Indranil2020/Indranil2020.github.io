@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qb@ll (Qball) | TDDFT & EXCITED-STATE | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="Qb@ll (also written as Qball or qb@ll) is a first-principles molecular dynamics code developed at Lawrence Livermore National Laboratory. It computes electronic structure of atoms, molecules, solids, and liquids using Density Functional Theory with a plane-wave basis. Qb@ll is a fork of the Qbox cod">
+    <meta name="keywords" content="Qb@ll (Qball), TDDFT & EXCITED-STATE, Real-Time TDDFT, computational materials science, DFT, simulation tool, Qb@ll (Qball) code, Qb@ll (Qball) software, Qb@ll (Qball) tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/Qb-ll-Qball.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Qb@ll (Qball) | TDDFT & EXCITED-STATE | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="Qb@ll (also written as Qball or qb@ll) is a first-principles molecular dynamics code developed at Lawrence Livermore National Laboratory. It computes electronic structure of atoms, molecules, solids, and liquids using Density Functional Theory with a plane-wave basis. Qb@ll is a fork of the Qbox cod">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/Qb-ll-Qball.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Qb@ll (Qball)",
+      "applicationCategory": "ScienceApplication",
+      "description": "Qb@ll (also written as Qball or qb@ll) is a first-principles molecular dynamics code developed at Lawrence Livermore National Laboratory. It computes electronic structure of atoms, molecules, solids, and liquids using Density Functional Theory with a plane-wave basis. Qb@ll is a fork of the Qbox cod",
+      "url": "https://indranil2020.github.io/tools/db/Qb-ll-Qball.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>2. TDDFT & EXCITED-STATE</span>
+                <span> &nbsp;/&nbsp; 2.1 Real-Time TDDFT</span>
+            </div>
+            <h1>Qb@ll (Qball)</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 2. TDDFT & EXCITED-STATE</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 2.1 Real-Time TDDFT</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://github.com/LLNL/qball" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">Qb@ll (also written as Qball or qb@ll) is a first-principles molecular dynamics code developed at Lawrence Livermore National Laboratory. It computes electronic structure of atoms, molecules, solids, and liquids using Density Functional Theory with a plane-wave basis. Qb@ll is a fork of the Qbox code by François Gygi, optimized for high-performance computing including Real-Time TDDFT capabilities.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted"><em>No paper PDFs uploaded yet for this code.</em></p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># Qb@ll (Qball)
+
+## Official Resources
+- Homepage: https://computing.llnl.gov/projects/qball
+- Documentation: https://github.com/LLNL/qball/blob/master/README.md
+- Source Repository: https://github.com/LLNL/qball
+- License: GNU General Public License v3.0 (LLNL-CODE-635376)
+
+## Overview
+Qb@ll (also written as Qball or qb@ll) is a first-principles molecular dynamics code developed at Lawrence Livermore National Laboratory. It computes electronic structure of atoms, molecules, solids, and liquids using Density Functional Theory with a plane-wave basis. Qb@ll is a fork of the Qbox code by François Gygi, optimized for high-performance computing including Real-Time TDDFT capabilities.
+
+**Scientific domain**: Ab initio molecular dynamics, electronic structure, real-time electron dynamics  
+**Target user community**: HPC users at national labs and institutions needing scalable plane-wave DFT/TDDFT
+
+## Theoretical Methods
+- Density Functional Theory (DFT)
+- Plane-wave basis set
+- Norm-conserving pseudopotentials
+- DFT-GGA and Hybrid DFT functionals
+- Born-Oppenheimer molecular dynamics
+- Car-Parrinello molecular dynamics
+- Real-Time TDDFT (RT-TDDFT) - developed in Qb@ch branch
+- NVT simulations with stochastic thermostats
+
+## Capabilities (CRITICAL)
+- **Ground-state DFT** for all system types
+- **First-principles molecular dynamics** (FPMD)
+- **Born-Oppenheimer MD** with forces from DFT
+- **Car-Parrinello MD** for efficient dynamics
+- **Real-Time TDDFT** (via Qb@ch development)
+- **Hybrid functionals** support
+- **Large-scale parallel** execution
+- **HPC optimized** (designed for supercomputers)
+
+## Key Strengths
+
+### HPC Performance:
+- Designed for leadership-class supercomputers
+- Excellent parallel scaling
+- Blue Gene/Q optimized configurations
+- MPI + OpenMP hybrid parallelization
+
+### Qbox Foundation:
+- Fork of established Qbox code
+- Plane-wave accuracy
+- Proven algorithms
+- Active LLNL support
+
+### RT-TDDFT Development:
+- Qb@ch branch (UNC Chapel Hill) focuses on RT-TDDFT
+- Electron dynamics capabilities
+- Continued development beyond Qbox
+
+### Molecular Dynamics:
+- Both BO-MD and CP-MD
+- Various thermostats
+- Production-quality simulations
+
+## Inputs & Outputs
+- **Input formats**:
+  - Qball input files (.i)
+  - Coordinate files (.sys)
+  - Pseudopotential files (.xml)
+  - Example inputs in examples/ directory
+  
+- **Output data types**:
+  - Energies and forces
+  - MD trajectories
+  - Electronic structure data
+  - Wavefunction outputs
+
+## Interfaces & Ecosystem
+- **Build system**: GNU Autotools (autoconf, automake)
+- **Dependencies**: BLAS, LAPACK, ScaLAPACK, FFTW
+- **Parallelization**: MPI + OpenMP
+- **Platforms**: Linux HPC clusters, Blue Gene systems
+
+## Advanced Features
+
+### RT-TDDFT (Qb@ch):
+- Real-time propagation
+- Strong-field dynamics
+- Continued development at UNC
+
+### HPC Optimization:
+- Vendor-specific optimizations (IBM ESSL)
+- Custom parallel strategies
+- Designed for 10,000+ cores
+
+## Performance Characteristics
+- **Speed**: Highly optimized for large core counts
+- **Scaling**: Excellent to thousands of MPI ranks
+- **Accuracy**: Plane-wave systematic convergence
+- **Memory**: Distributed memory model
+
+## Computational Cost
+- **Ground state**: Plane-wave standard scaling
+- **MD**: Efficient for large trajectories
+- **RT-TDDFT**: Time-step dependent
+- **Parallelization**: Near-linear scaling on HPC
+
+## Limitations & Known Constraints
+- **Compilation**: Requires HPC environment and libraries
+- **Learning curve**: HPC expertise helpful
+- **Pseudopotentials**: Requires compatible formats
+- **Documentation**: Technical focus, less beginner-friendly
+- **INQ successor**: LLNL now developing GPU-focused INQ code
+
+## Comparison with Other Codes
+- **vs Qbox**: Qb@ll fork with LLNL optimizations and Qb@ch RT-TDDFT
+- **vs VASP**: Both plane-wave; Qb@ll open-source, HPC optimized
+- **vs QE**: Qb@ll smaller codebase, HPC focus; QE broader features
+- **vs SALMON**: Both RT-TDDFT capable; Qb@ll also strong in MD
+- **Unique strength**: HPC optimization, combined MD + RT-TDDFT development
+
+## Application Areas
+- High-pressure physics
+- Warm dense matter
+- Extreme conditions simulations
+- Materials under shock
+- Large-scale molecular dynamics
+- Ultrafast dynamics (via Qb@ch)
+
+## Best Practices
+- Use example input files as templates
+- Configure for target HPC architecture
+- Consult LLNL documentation for optimization
+- Contact maintainers for support
+
+## Community and Support
+- Open-source GPL v3
+- LLNL development team
+- GitHub repository with 8 contributors
+- Contact: Erik Draeger, Xavier Andrade (LLNL)
+- Academic development at UNC (Qb@ch)
+
+## Verification & Sources
+**Primary sources**:
+1. GitHub repository: https://github.com/LLNL/qball
+2. LLNL Computing: https://computing.llnl.gov/projects/qball
+3. Original Qbox: http://qboxcode.org/
+
+**Secondary sources**:
+1. Qb@ch development at UNC Chapel Hill
+2. LLNL publications using Qb@ll
+
+**Confidence**: VERIFIED
+- Repository: ACCESSIBLE (GitHub, LLNL)
+- License: GPL v3 (LLNL-CODE-635376)
+- Active: 8 contributors, ongoing development
+
+**Verification status**: ✅ VERIFIED
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

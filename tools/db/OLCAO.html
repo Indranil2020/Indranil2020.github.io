@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLCAO | GROUND-STATE DFT | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="OLCAO is an all-electron, density functional theory-based electronic structure code that uses local atomic orbitals for basis expansion. Developed at the University of Missouri-Kansas City (UMKC), it is designed for efficient analysis of large and complex material systems including semiconductors, i">
+    <meta name="keywords" content="OLCAO, GROUND-STATE DFT, Localized Basis Sets, computational materials science, DFT, simulation tool, OLCAO code, OLCAO software, OLCAO tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/OLCAO.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="OLCAO | GROUND-STATE DFT | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="OLCAO is an all-electron, density functional theory-based electronic structure code that uses local atomic orbitals for basis expansion. Developed at the University of Missouri-Kansas City (UMKC), it is designed for efficient analysis of large and complex material systems including semiconductors, i">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/OLCAO.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "OLCAO",
+      "applicationCategory": "ScienceApplication",
+      "description": "OLCAO is an all-electron, density functional theory-based electronic structure code that uses local atomic orbitals for basis expansion. Developed at the University of Missouri-Kansas City (UMKC), it is designed for efficient analysis of large and complex material systems including semiconductors, i",
+      "url": "https://indranil2020.github.io/tools/db/OLCAO.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>1. GROUND-STATE DFT</span>
+                <span> &nbsp;/&nbsp; 1.3 Localized Basis Sets</span>
+            </div>
+            <h1>OLCAO</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 1. GROUND-STATE DFT</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 1.3 Localized Basis Sets</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://github.com/UMKC-CPG/olcao" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">OLCAO is an all-electron, density functional theory-based electronic structure code that uses local atomic orbitals for basis expansion. Developed at the University of Missouri-Kansas City (UMKC), it is designed for efficient analysis of large and complex material systems including semiconductors, insulators, metals, alloys, complex crystals, glasses, and biomolecular systems.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted"><em>No paper PDFs uploaded yet for this code.</em></p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># OLCAO (Orthogonalized Linear Combination of Atomic Orbitals)
+
+## Official Resources
+- Homepage: https://umkc.edu/CPG
+- Documentation: https://github.com/UMKC-CPG/olcao/wiki
+- Source Repository: https://github.com/UMKC-CPG/olcao
+- License: Open Source (Academic)
+
+## Overview
+OLCAO is an all-electron, density functional theory-based electronic structure code that uses local atomic orbitals for basis expansion. Developed at the University of Missouri-Kansas City (UMKC), it is designed for efficient analysis of large and complex material systems including semiconductors, insulators, metals, alloys, complex crystals, glasses, and biomolecular systems.
+
+**Scientific domain**: Semiconductors, complex oxides, metallic alloys, biomaterials, glasses, liquids  
+**Target user community**: Materials scientists studying electronic structure, bonding analysis, and optical properties of complex systems
+
+## Theoretical Methods
+- Density Functional Theory (DFT)
+- Orthogonalized Linear Combination of Atomic Orbitals (OLCAO)
+- All-electron calculations
+- LDA and GGA exchange-correlation functionals
+- Scalar relativistic effects for heavy elements
+- Core-shell treatment for high-Z elements
+- Minimal to extended basis sets
+- Self-consistent field (SCF) solution
+
+## Capabilities (CRITICAL)
+- Ground-state electronic structure
+- Total density of states (TDOS)
+- Partial density of states (PDOS)
+- Band structure calculations
+- Effective charge analysis
+- Bond order calculations (Mulliken analysis)
+- Optical properties and dielectric function
+- X-ray absorption spectroscopy (XAS) simulations
+- Core-level spectroscopy
+- Charge density analysis
+- Work in conjunction with VASP for structure optimization
+
+**Sources**: UMKC Electronic Structure Group, ResearchGate publications
+
+## Key Strengths
+
+### All-Electron LCAO Approach:
+- Complete treatment of core and valence electrons
+- Localized atomic orbital basis
+- Physical interpretability
+- Efficient for bonding analysis
+- No pseudopotential approximation
+
+### Bonding Analysis:
+- Mulliken population analysis
+- Bond order values
+- Effective charges
+- Inter-atomic interactions
+- Chemical bonding insights
+
+### Spectroscopy Capabilities:
+- Core-level XAS simulations
+- Optical properties
+- Dielectric function
+- Excited state information
+- Comparison with experiments
+
+### Materials Versatility:
+- Crystalline and amorphous systems
+- Metals, semiconductors, insulators
+- Biomolecular systems
+- Glasses and liquids
+- Complex multi-component alloys
+
+## Inputs & Outputs
+- **Input formats**:
+  - Structure files (atomic coordinates)
+  - Basis set specifications
+  - Control parameters
+  - k-point mesh settings
+  
+- **Output data types**:
+  - Total energies
+  - DOS and PDOS files
+  - Band structure data
+  - Bond order matrices
+  - Charge analysis
+  - Optical spectra
+
+## Interfaces & Ecosystem
+- **Preprocessing**:
+  - VASP integration for relaxation
+  - Custom structure generation tools
+  - Perl scripts for workflow
+  
+- **Analysis tools**:
+  - Built-in DOS plotting
+  - Band structure analysis
+  - Bond order processing
+  - Optical property extraction
+  
+- **Visualization**:
+  - Gnuplot compatibility
+  - XMGrace integration
+  - Standard plotting tools
+
+## Advanced Features
+
+### Relativistic Treatment:
+- Scalar relativistic corrections
+- Heavy element support (actinides, lanthanides)
+- Core-shell separation
+- Spin-orbit coupling (optional)
+
+### Optical Properties:
+- Frequency-dependent dielectric function
+- Absorption spectra
+- Reflectivity calculations
+- Optical conductivity
+
+### XAS Simulations:
+- Core-level excitations
+- K-edge, L-edge spectra
+- Element-specific probing
+- Comparison with synchrotron data
+
+### Multi-Scale Integration:
+- Molecular dynamics configurations
+- Amorphous structure analysis
+- Defect calculations
+- Interface studies
+
+## Performance Characteristics
+- **Speed**: Efficient LCAO implementation
+- **Accuracy**: All-electron precision
+- **System size**: Hundreds of atoms typical
+- **Memory**: Moderate requirements
+- **Parallelization**: MPI support
+
+## Computational Cost
+- **DFT**: Competitive for medium systems
+- **SCF cycles**: Typically 10-50 iterations
+- **Spectroscopy**: Additional computational cost
+- **Typical runs**: Hours to days on workstations
+
+## Limitations & Known Constraints
+- **Basis set optimization**: Requires careful selection
+- **Large systems**: Not O(N) linear-scaling
+- **Hybrid functionals**: Limited support
+- **Forces**: Primarily for single-point calculations
+- **Documentation**: Academic-focused
+- **User base**: Smaller than major codes
+- **Installation**: Requires Fortran compiler and libraries
+
+## Comparison with Other Codes
+- **vs VASP/QE**: OLCAO all-electron LCAO vs plane-wave with pseudopotentials
+- **vs FHI-aims**: Both NAO-based, different implementations
+- **vs SIESTA**: OLCAO orthoganalized, SIESTA uses PAO
+- **vs CRYSTAL**: Similar localized basis approach
+- **Unique strength**: Bond order analysis, spectroscopy, all-electron
+
+## Application Areas
+
+### Complex Oxides:
+- High-temperature superconductors
+- Multiferroics
+- Transparent conductors
+- Oxide interfaces
+
+### Metallic Alloys:
+- High-entropy alloys
+- Magnetic materials
+- Intermetallic compounds
+- Phase stability
+
+### Biomaterials:
+- Hydroxyapatite
+- Bioglasses
+- Bone-implant interfaces
+- Bioactive glasses
+
+### Amorphous Systems:
+- Silicate glasses
+- Metallic glasses
+- Disordered semiconductors
+- Liquid metals
+
+## Best Practices
+
+### Basis Set Selection:
+- Start with minimal basis
+- Extend for accuracy-critical calculations
+- Document basis set for reproducibility
+- Test convergence
+
+### SCF Convergence:
+- Use appropriate mixing parameters
+- Monitor energy convergence
+- Check charge neutrality
+- Handle metallic systems carefully
+
+### Bond Order Analysis:
+- Use consistent basis across comparisons
+- Report Mulliken charges
+- Interpret bond orders chemically
+- Compare with experimental data
+
+## Community and Support
+- Academic open-source
+- UMKC Electronic Structure Group
+- GitHub repository active
+- Published methodology papers
+- Research collaborations
+
+## Verification & Sources
+**Primary sources**:
+1. GitHub: https://github.com/UMKC-CPG/olcao
+2. UMKC CPG: https://umkc.edu/CPG
+3. W.Y. Ching, P. Rulis, "Electronic Structure Methods for Complex Materials" (2012)
+
+**Secondary sources**:
+1. ResearchGate publications
+2. Applied computational materials papers
+3. Biomaterials modeling studies
+
+**Confidence**: VERIFIED - Active GitHub repository, academic publications
+
+**Verification status**: ✅ VERIFIED
+- Source code: OPEN (GitHub)
+- Academic use: Widespread in materials science
+- Documentation: Wiki and papers
+- Active development: GitHub commits
+- Specialty: Bond order analysis, spectroscopy, all-electron LCAO
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

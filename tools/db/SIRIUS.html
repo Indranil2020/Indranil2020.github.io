@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIRIUS | GROUND-STATE DFT | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="SIRIUS is a domain-specific library for electronic structure calculations, developed at the Swiss National Supercomputing Centre (CSCS). It implements providing a high-performance backend for plane-wave (PP-PW) and full-potential (FP-LAPW) DFT calculations. It is designed from the ground up for hybr">
+    <meta name="keywords" content="SIRIUS, GROUND-STATE DFT, Plane-Wave / Pseudopotential Codes, computational materials science, DFT, simulation tool, SIRIUS code, SIRIUS software, SIRIUS tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/SIRIUS.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="SIRIUS | GROUND-STATE DFT | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="SIRIUS is a domain-specific library for electronic structure calculations, developed at the Swiss National Supercomputing Centre (CSCS). It implements providing a high-performance backend for plane-wave (PP-PW) and full-potential (FP-LAPW) DFT calculations. It is designed from the ground up for hybr">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/SIRIUS.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SIRIUS",
+      "applicationCategory": "ScienceApplication",
+      "description": "SIRIUS is a domain-specific library for electronic structure calculations, developed at the Swiss National Supercomputing Centre (CSCS). It implements providing a high-performance backend for plane-wave (PP-PW) and full-potential (FP-LAPW) DFT calculations. It is designed from the ground up for hybr",
+      "url": "https://indranil2020.github.io/tools/db/SIRIUS.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>1. GROUND-STATE DFT</span>
+                <span> &nbsp;/&nbsp; 1.1 Plane-Wave / Pseudopotential Codes</span>
+            </div>
+            <h1>SIRIUS</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 1. GROUND-STATE DFT</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 1.1 Plane-Wave / Pseudopotential Codes</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://github.com/electronic-structure/SIRIUS" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">SIRIUS is a domain-specific library for electronic structure calculations, developed at the Swiss National Supercomputing Centre (CSCS). It implements providing a high-performance backend for plane-wave (PP-PW) and full-potential (FP-LAPW) DFT calculations. It is designed from the ground up for hybrid computing architectures (CPU+GPU) and serves as a backend for flagship codes like Quantum ESPRESSO as well as a standalone solver.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted"><em>No paper PDFs uploaded yet for this code.</em></p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># SIRIUS
+
+## Official Resources
+- Homepage: https://github.com/electronic-structure/SIRIUS
+- Documentation: https://sirius-lib.readthedocs.io/
+- Source Repository: https://github.com/electronic-structure/SIRIUS
+- License: BSD 2-Clause
+
+## Overview
+SIRIUS is a domain-specific library for electronic structure calculations, developed at the Swiss National Supercomputing Centre (CSCS). It implements providing a high-performance backend for plane-wave (PP-PW) and full-potential (FP-LAPW) DFT calculations. It is designed from the ground up for hybrid computing architectures (CPU+GPU) and serves as a backend for flagship codes like Quantum ESPRESSO as well as a standalone solver.
+
+**Scientific domain**: High-performance computing, electronic structure
+**Target user community**: Developers of DFT codes, HPC centers, researchers needing GPU-accelerated solvers
+
+## Theoretical Methods
+- Density Functional Theory (DFT)
+- Plane-wave basis sets (with Norm-Conserving, Ultrasoft, PAW potentials)
+- Full-Potential Linearized Augmented Plane Wave (FP-LAPW)
+- Gamma-point specific algorithms
+- Iterative solvers (Davidson, Chebyshev)
+
+## Capabilities (CRITICAL)
+- Ground-state electronic structure
+- Stress and force calculations
+- Magnetization (collinear and non-collinear)
+- Spin-orbit coupling
+- GPU acceleration (NVIDIA CUDA, AMD ROCm)
+- Interface to multiple codes (Quantum ESPRESSO, Elk, Exciting)
+
+## Capabilities (CRITICAL)
+- **Performance**: State-of-the-art GPU utilization.
+- **Versatility**: Handles both pseudopotential and all-electron methods in one framework.
+- **Interoperability**: Can act as a plugin to accelerate existing Fortran codes.
+
+## Inputs & Outputs
+- **Input formats**:
+  - JSON-based input files (SIRIUS native)
+  - Interface calls from host codes (QE, Elk)
+  
+- **Output data types**:
+  - HDF5 output
+  - Standard density/potential files
+
+## Interfaces & Ecosystem
+- **Quantum ESPRESSO (QE)**: SIRIUS can replace the internal PW engine of QE.
+- **Elk/Exciting**: Provides GPU acceleration for these LAPW codes.
+- **CP2K**: Interface in development/testing.
+
+## Performance Characteristics
+- **Speed**: Extreme, especially on GPU-dense nodes (e.g., Summit, Piz Daint).
+- **Scaling**: Scales to thousands of GPUs. Demonstrates ~160x speedup on NVIDIA Grace Hopper (GH200) vs standard CPU nodes for specific solvers.
+- **Memory**: Heavy usage of GPU HBM (High Bandwidth Memory); efficiency depends on keeping data resident on device.
+
+## Computational Cost
+- **High Efficiency**: Offloads heavy linear algebra and FFTs to GPU, freeing up CPU for other tasks.
+- **Overhead**: Initialization cost is non-trivial; best for large, production-grade systems, not tiny tests.
+
+## Best Practices
+
+### Hybrid Parallelization:
+- **Ranks vs Threads**: Use fewer MPI ranks and more OpenMP threads per rank to saturate the GPU.
+- **Pools**: Utilize k-point pool parallelization to distribute work across GPUs.
+
+### Installation:
+- **Dependencies**: Ensure a functioning CUDA/ROCm toolchain and compatible libraries (SpFFT, SPLA) are installed first.
+
+## Community and Support
+- **Hosting**: [GitHub](https://github.com/electronic-structure/SIRIUS).
+- **Organization**: Maintained by CSCS (Swiss National Supercomputing Centre).
+- **Support**: Active GitHub Issues tracker.
+
+## Verification & Sources
+**Primary sources**:
+1. Official GitHub: https://github.com/electronic-structure/SIRIUS
+2. CSCS Documentation
+3. "SIRIUS: domain specific library for electronic structure calculations" (Research citations)
+
+**Confidence**: VERIFIED - Code is a core component of modern HPC electronic structure.
+
+**Verification status**: ✅ VERIFIED
+- Existence: CONFIRMED
+- Domain: HPC/Semiconductors/Metals
+- Key Feature: GPU Acceleration
+
+
+
+## Key Strengths
+
+### Primary Strength:
+- See official documentation for key capabilities
+
+### Secondary Strength:
+- Community-validated and actively maintained
+
+
+## Application Areas
+
+### Primary Applications:
+- See official documentation for recommended use cases
+
+### Secondary Applications:
+- See community publications for extended applications
+
+## Limitations & Known Constraints
+- **Complexity**: As a library, it separates the "physics" from the "solver", requiring the host code to handle high-level workflows.
+- **Installation**: Requires a modern C++ toolchain and GPU SDKs.
+
+## Comparison with Other Codes
+- **vs Native QE**: SIRIUS is often faster on GPUs due to C++ optimized kernels compared to the native Fortran GPU port of QE.
+- **vs BigDFT**: SIRIUS handles standard plane-waves and LAPW; BigDFT handles wavelets.
+
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

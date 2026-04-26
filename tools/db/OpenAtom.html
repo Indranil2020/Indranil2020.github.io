@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAtom | GROUND-STATE DFT | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="OpenAtom is a massively parallel ab initio molecular dynamics code developed at the University of Illinois at Urbana-Champaign using the Charm++ parallel programming framework. It implements plane-wave DFT with Car-Parrinello and Born-Oppenheimer molecular dynamics, designed to scale to thousands of">
+    <meta name="keywords" content="OpenAtom, GROUND-STATE DFT, Plane-Wave / Pseudopotential Codes, computational materials science, DFT, simulation tool, OpenAtom code, OpenAtom software, OpenAtom tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/OpenAtom.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="OpenAtom | GROUND-STATE DFT | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="OpenAtom is a massively parallel ab initio molecular dynamics code developed at the University of Illinois at Urbana-Champaign using the Charm++ parallel programming framework. It implements plane-wave DFT with Car-Parrinello and Born-Oppenheimer molecular dynamics, designed to scale to thousands of">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/OpenAtom.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "OpenAtom",
+      "applicationCategory": "ScienceApplication",
+      "description": "OpenAtom is a massively parallel ab initio molecular dynamics code developed at the University of Illinois at Urbana-Champaign using the Charm++ parallel programming framework. It implements plane-wave DFT with Car-Parrinello and Born-Oppenheimer molecular dynamics, designed to scale to thousands of",
+      "url": "https://indranil2020.github.io/tools/db/OpenAtom.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>1. GROUND-STATE DFT</span>
+                <span> &nbsp;/&nbsp; 1.1 Plane-Wave / Pseudopotential Codes</span>
+            </div>
+            <h1>OpenAtom</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 1. GROUND-STATE DFT</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 1.1 Plane-Wave / Pseudopotential Codes</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://charm.cs.illinois.edu/OpenAtom/" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">OpenAtom is a massively parallel ab initio molecular dynamics code developed at the University of Illinois at Urbana-Champaign using the Charm++ parallel programming framework. It implements plane-wave DFT with Car-Parrinello and Born-Oppenheimer molecular dynamics, designed to scale to thousands of processors through advanced parallel algorithms and adaptive load balancing. OpenAtom represents a modern approach to parallelizing quantum chemistry simulations.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted"><em>No paper PDFs uploaded yet for this code.</em></p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># OpenAtom
+
+## Official Resources
+- Homepage: https://charm.cs.illinois.edu/OpenAtom/
+- Documentation: Available through UIUC
+- Source Repository: Available with access
+- License: Open-source (academic use)
+
+## Overview
+OpenAtom is a massively parallel ab initio molecular dynamics code developed at the University of Illinois at Urbana-Champaign using the Charm++ parallel programming framework. It implements plane-wave DFT with Car-Parrinello and Born-Oppenheimer molecular dynamics, designed to scale to thousands of processors through advanced parallel algorithms and adaptive load balancing. OpenAtom represents a modern approach to parallelizing quantum chemistry simulations.
+
+**Scientific domain**: Parallel ab initio MD, plane-wave DFT, HPC, molecular dynamics  
+**Target user community**: HPC specialists, large-scale MD researchers, parallel computing
+
+## Theoretical Methods
+- Plane-wave Density Functional Theory
+- Car-Parrinello molecular dynamics (CPMD)
+- Born-Oppenheimer molecular dynamics (BOMD)
+- Pseudopotentials
+- LDA and GGA functionals
+- Electronic structure
+- Parallel algorithms
+
+## Capabilities (CRITICAL)
+- Ab initio molecular dynamics
+- Car-Parrinello MD
+- Born-Oppenheimer MD
+- Ground-state DFT
+- Plane-wave basis
+- Massively parallel (thousands of cores)
+- Adaptive load balancing
+- Charm++ framework
+- Dynamic parallelization
+- Large-scale simulations
+- HPC optimized
+- Scalability research
+
+**Sources**: UIUC Charm++ OpenAtom (https://charm.cs.illinois.edu/OpenAtom/)
+
+## Key Strengths
+
+### Charm++ Framework:
+- Advanced parallelization
+- Object-based decomposition
+- Dynamic load balancing
+- Adaptive runtime
+- Asynchronous communication
+
+### Scalability:
+- Thousands of processors
+- Excellent scaling
+- HPC optimized
+- Leadership systems
+- Extreme parallelization
+
+### Load Balancing:
+- Automatic balancing
+- Runtime adaptation
+- Efficient resource use
+- Performance optimization
+- Minimal idle time
+
+### Molecular Dynamics:
+- CPMD and BOMD
+- Large systems
+- Long timescales
+- Production MD
+- Research quality
+
+### Research Platform:
+- Parallel algorithm development
+- HPC research
+- Scalability studies
+- Method development
+- Performance analysis
+
+## Inputs & Outputs
+- **Input formats**:
+  - Configuration files
+  - Atomic coordinates
+  - Pseudopotentials
+  - Simulation parameters
+  
+- **Output data types**:
+  - Trajectories
+  - Energies and forces
+  - Electronic properties
+  - MD data
+  - Performance metrics
+
+## Interfaces & Ecosystem
+- **Charm++**:
+  - Parallel runtime
+  - Load balancing
+  - Message-driven
+  - Object model
+  
+- **HPC Integration**:
+  - Supercomputers
+  - MPI underneath
+  - Scalable I/O
+  - Performance tools
+  
+- **Analysis**:
+  - Trajectory analysis
+  - Standard tools
+  - Custom scripts
+  - Visualization
+
+## Workflow and Usage
+
+### Typical Workflow:
+1. Prepare input configuration
+2. Set up pseudopotentials
+3. Configure MD parameters
+4. Launch on HPC system
+5. Monitor performance
+6. Analyze trajectories
+
+### Parallel Execution:
+```bash
+charmrun +p1024 openatom input.cfg
+# Run on 1024 processors with Charm++
+```
+
+## Advanced Features
+
+### Charm++ Parallelization:
+- Object-based decomposition
+- Multiple decomposition strategies
+- Adaptive algorithms
+- Automatic load balance
+- Message-driven execution
+
+### Dynamic Load Balancing:
+- Runtime measurement
+- Automatic migration
+- Performance optimization
+- Resource efficiency
+- Minimal overhead
+
+### CPMD:
+- Extended Lagrangian
+- Fictitious electron mass
+- Efficient dynamics
+- Long trajectories
+- Production simulations
+
+### BOMD:
+- Born-Oppenheimer surface
+- Accurate forces
+- Electronic convergence
+- Reliable dynamics
+- Standard approach
+
+### Parallel Algorithms:
+- 3D FFT parallelization
+- Distributed density
+- Parallel linear algebra
+- Communication optimization
+- Scalable kernels
+
+## Performance Characteristics
+- **Speed**: Excellent on HPC
+- **Scalability**: Outstanding (thousands of cores)
+- **System size**: Medium to large
+- **Efficiency**: High through load balancing
+- **Typical**: Leadership computing
+
+## Computational Cost
+- **MD**: Expensive but scalable
+- **Parallelization**: Essential
+- **Load balancing**: Improves efficiency
+- **HPC**: Designed for supercomputers
+- **Production**: Research-scale feasible
+
+## Limitations & Known Constraints
+- **Complexity**: Charm++ learning curve
+- **Distribution**: Academic/research
+- **Documentation**: Research-level
+- **Community**: Specialized HPC
+- **Platform**: Linux HPC systems
+- **Focus**: Parallelization vs features
+
+## Comparison with Other Codes
+- **vs CP2K**: OpenAtom more parallel-focused
+- **vs VASP**: OpenAtom specialized for extreme scaling
+- **vs CPMD**: OpenAtom modern parallelization
+- **Unique strength**: Charm++ framework, dynamic load balancing, extreme scalability, HPC research
+
+## Application Areas
+
+### HPC Research:
+- Scalability studies
+- Parallel algorithms
+- Load balancing research
+- Performance optimization
+- Extreme computing
+
+### Large-Scale MD:
+- Ab initio dynamics
+- Large systems
+- Long simulations
+- Production runs
+- Materials dynamics
+
+### Method Development:
+- Parallel methods
+- Algorithm research
+- Performance studies
+- Scalability testing
+- HPC optimization
+
+### Materials Science:
+- Liquid metals
+- Complex materials
+- Dynamics simulations
+- Phase transitions
+- Large-scale studies
+
+## Best Practices
+
+### Parallelization:
+- Use many processors
+- Enable load balancing
+- Monitor performance
+- Optimize decomposition
+- Test scaling
+
+### Load Balancing:
+- Automatic when possible
+- Monitor migration
+- Tune parameters
+- Measure impact
+- Optimize efficiency
+
+### MD Parameters:
+- Appropriate timestep
+- Converge electronic structure
+- Temperature control
+- Long equilibration
+- Production runs
+
+## Community and Support
+- UIUC Parallel Programming Lab
+- Charm++ community
+- HPC research group
+- Academic development
+- Research collaborations
+
+## Educational Resources
+- UIUC documentation
+- Charm++ resources
+- Research papers
+- HPC tutorials
+- Performance analysis guides
+
+## Development
+- University of Illinois Urbana-Champaign
+- Parallel Programming Laboratory
+- Charm++ team
+- Research-driven
+- HPC focus
+- Ongoing development
+
+## Research Applications
+- Parallel algorithm research
+- HPC scalability studies
+- Load balancing research
+- Ab initio MD applications
+- Performance optimization
+
+## Technical Innovation
+
+### Charm++:
+- Object-oriented parallelism
+- Adaptive runtime
+- Message-driven
+- Portable performance
+- Advanced features
+
+### Load Balancing:
+- Automatic measurement
+- Object migration
+- Runtime adaptation
+- Performance-driven
+- Research platform
+
+### Scalability:
+- Extreme parallelization
+- Thousands of cores
+- Efficient algorithms
+- Modern HPC
+- Leadership systems
+
+## UIUC Development
+- Strong HPC tradition
+- Charm++ expertise
+- Parallel computing research
+- Leadership computing
+- International impact
+
+## Verification & Sources
+**Primary sources**:
+1. UIUC website: https://charm.cs.illinois.edu/OpenAtom/
+2. Charm++ Parallel Programming Lab
+3. E. Bohm et al., published papers on OpenAtom
+4. Charm++ documentation
+
+**Secondary sources**:
+1. HPC literature
+2. Parallel computing publications
+3. Ab initio MD research
+4. Scalability studies
+
+**Confidence**: LOW_CONF - Research code, HPC specialization, limited distribution
+
+**Verification status**: ✅ VERIFIED
+- UIUC website: ACCESSIBLE
+- Documentation: Research-level
+- Software: Academic/research access
+- Community support: UIUC PPL, Charm++
+- Academic citations: HPC literature
+- Development: UIUC Parallel Programming Lab
+- Specialized strength: Charm++ parallelization, dynamic load balancing, extreme scalability (thousands of cores), ab initio molecular dynamics, HPC research platform, parallel algorithm development
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>

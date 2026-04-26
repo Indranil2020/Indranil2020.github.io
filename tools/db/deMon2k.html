@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deMon2k | GROUND-STATE DFT | Computational Tools | Indranil Mal</title>
+    <meta name="description" content="deMon2k (density of Montreal 2000) is a DFT software package using auxiliary density functional theory (ADFT) with Gaussian basis sets. Developed through international collaboration led from Mexico, deMon2k uses variational fitting of the Coulomb potential (density fitting) to achieve computational ">
+    <meta name="keywords" content="deMon2k, GROUND-STATE DFT, Localized Basis Sets, computational materials science, DFT, simulation tool, deMon2k code, deMon2k software, deMon2k tutorial">
+    <meta name="author" content="Indranil Mal">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://indranil2020.github.io/tools/db/deMon2k.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="deMon2k | GROUND-STATE DFT | Computational Tools | Indranil Mal">
+    <meta property="og:description" content="deMon2k (density of Montreal 2000) is a DFT software package using auxiliary density functional theory (ADFT) with Gaussian basis sets. Developed through international collaboration led from Mexico, deMon2k uses variational fitting of the Coulomb potential (density fitting) to achieve computational ">
+    <meta property="og:url" content="https://indranil2020.github.io/tools/db/deMon2k.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "deMon2k",
+      "applicationCategory": "ScienceApplication",
+      "description": "deMon2k (density of Montreal 2000) is a DFT software package using auxiliary density functional theory (ADFT) with Gaussian basis sets. Developed through international collaboration led from Mexico, deMon2k uses variational fitting of the Coulomb potential (density fitting) to achieve computational ",
+      "url": "https://indranil2020.github.io/tools/db/deMon2k.html",
+      "creator": {"@type": "Person", "name": "Indranil Mal"}
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.65; color: #2c3e50; background: #f5f7fb; }
+        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0.9rem 0; flex-wrap: wrap; }
+        nav ul li { margin: 0 0.8rem; }
+        nav ul li a { text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 0.92rem; }
+        nav ul li a:hover, nav ul li a.active { color: #3498db; }
+
+        header.tool-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; padding: 3rem 2rem 2.5rem;
+        }
+        .header-inner { max-width: 1000px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.85rem; opacity: 0.92; margin-bottom: 0.6rem; }
+        .breadcrumb a { color: #fff; text-decoration: underline; opacity: 0.9; }
+        header.tool-header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .tool-tags { margin-top: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(255,255,255,0.18); padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.5rem; }
+        .btn-official, .btn-back {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.2rem; border-radius: 6px; font-weight: 600; text-decoration: none;
+            font-size: 0.92rem;
+        }
+        .btn-official { background: #3498db; color: #fff; }
+        .btn-official:hover { background: #2980b9; }
+        .btn-back { background: #fff; color: #2c3e50; border: 1px solid #d5dbe3; }
+        .btn-back:hover { background: #f0f4f8; }
+
+        section.card { background: #fff; padding: 1.8rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        section.card h2 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 0.9rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 0.5rem; }
+        section.card h2 i { color: #3498db; }
+        .overview-text { font-size: 1.02rem; color: #444; }
+
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { padding: 0.55rem 0.8rem; background: #f8f9fa; border-radius: 4px; margin-bottom: 0.4rem; }
+        .paper-list li a { color: #2c3e50; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; word-break: break-word; }
+        .paper-list li a:hover { color: #3498db; }
+        .paper-list li i { color: #e74c3c; }
+        .muted { color: #7f8c8d; font-style: italic; }
+
+        .md-content { font-size: 0.97rem; }
+        .md-content h1, .md-content h2, .md-content h3 { color: #2c3e50; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+        .md-content h1 { font-size: 1.5rem; }
+        .md-content h2 { font-size: 1.2rem; border-bottom: 1px solid #e1e8ed; padding-bottom: 0.3rem; }
+        .md-content h3 { font-size: 1.05rem; }
+        .md-content ul, .md-content ol { margin-left: 1.5rem; margin-bottom: 0.8rem; }
+        .md-content li { margin-bottom: 0.25rem; }
+        .md-content p { margin-bottom: 0.7rem; }
+        .md-content code { background: #f0f4f8; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.92em; font-family: 'Menlo','Monaco','Courier New',monospace; }
+        .md-content pre { background: #f0f4f8; padding: 0.8rem; border-radius: 4px; overflow-x: auto; margin-bottom: 0.8rem; }
+        .md-content a { color: #3498db; }
+        .md-content strong { color: #2c3e50; }
+
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 1.7rem; margin-top: 3rem; }
+        footer a { color: #74b9ff; text-decoration: none; }
+
+        @media (max-width: 700px) {
+            header.tool-header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            section.card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#research">Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../collaborators.html">Collaborators</a></li>
+            <li><a href="../../scientific-tools.html" class="active">Scientific Tools DB</a></li>
+            <li><a href="../../tools.html">Tools</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="tool-header">
+        <div class="header-inner">
+            <div class="breadcrumb">
+                <a href="../../scientific-tools.html">Scientific Tools DB</a>
+                &nbsp;/&nbsp; <span>1. GROUND-STATE DFT</span>
+                <span> &nbsp;/&nbsp; 1.3 Localized Basis Sets</span>
+            </div>
+            <h1>deMon2k</h1>
+            <div class="tool-tags">
+                <span class="tag"><i class="fas fa-folder"></i> 1. GROUND-STATE DFT</span>
+                <span class="tag"><i class="fas fa-folder-open"></i> 1.3 Localized Basis Sets</span>
+                <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-actions">
+            <a href="../../scientific-tools.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Mind Map</a>
+            <a href="https://demon-software.com/" class="btn-official" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Official Website</a>
+        </div>
+
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+            <p class="overview-text">deMon2k (density of Montreal 2000) is a DFT software package using auxiliary density functional theory (ADFT) with Gaussian basis sets. Developed through international collaboration led from Mexico, deMon2k uses variational fitting of the Coulomb potential (density fitting) to achieve computational efficiency while maintaining accuracy. It is particularly known for its efficient implementation and focus on molecular systems.</p>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Reference Papers</h2><ul class="paper-list"><li><a href="../../scientific_tools_consolidated/Papers_of_Codes/DFT/1.3_Localized_Basis/deMon2k/10_1002_wcms_68.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> 10_1002_wcms_68.pdf</a></li></ul>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-file-alt"></i> Full Documentation</h2>
+            <div id="md-render" class="md-content"><em class="muted">Loading documentation...</em></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indranil Mal. Part of the <a href="../../scientific-tools.html">Computational Materials Science Tools Database</a>.</p>
+    </footer>
+
+    <script id="md-source" type="text/plain"># deMon2k
+
+## Official Resources
+- Homepage: http://www.demon-software.com/
+- Documentation: http://www.demon-software.com/public_html/index.html
+- Download: http://www.demon-software.com/public_html/download.html
+- Source Repository: Available to licensed users
+- License: Free for academic use (license agreement required)
+
+## Overview
+deMon2k (density of Montreal 2000) is a DFT software package using auxiliary density functional theory (ADFT) with Gaussian basis sets. Developed through international collaboration led from Mexico, deMon2k uses variational fitting of the Coulomb potential (density fitting) to achieve computational efficiency while maintaining accuracy. It is particularly known for its efficient implementation and focus on molecular systems.
+
+**Scientific domain**: Auxiliary DFT, molecular quantum chemistry, density fitting  
+**Target user community**: Computational chemists, molecular systems researchers
+
+## Theoretical Methods
+- Auxiliary Density Functional Theory (ADFT)
+- Density Functional Theory (wide range of functionals)
+- Variational fitting (density fitting)
+- Hartree-Fock
+- Time-dependent DFT (TD-DFT)
+- Excited states
+- Analytical gradients
+- Born-Oppenheimer molecular dynamics
+- QM/MM methods
+- Solvation models
+- Dispersion corrections
+
+## Capabilities (CRITICAL)
+- Ground-state electronic structure (molecules)
+- Geometry optimization
+- Transition state searches
+- Vibrational frequencies
+- Excited states (TD-DFT)
+- Molecular dynamics (Born-Oppenheimer)
+- Molecular properties
+- NMR chemical shifts
+- UV/Vis spectra
+- QM/MM calculations
+- Solvation effects
+- Efficient through density fitting
+- Parallel execution
+- Large molecules feasible
+
+**Sources**: deMon-software website (http://www.demon-software.com/)
+
+## Key Strengths
+
+### Auxiliary DFT:
+- Variational density fitting
+- Efficient Coulomb treatment
+- Faster than conventional DFT
+- Controlled accuracy
+- Well-validated approach
+
+### Efficiency:
+- Density fitting speedup
+- Low computational cost
+- Memory efficient
+- Large systems feasible
+- Production throughput
+
+### Molecular Focus:
+- Optimized for molecules
+- Molecular properties
+- Chemical applications
+- Spectroscopy
+- Dynamics
+
+### QM/MM:
+- Integrated QM/MM
+- Biomolecular systems
+- Solvation
+- Enzyme catalysis
+- Multi-scale modeling
+
+### International:
+- Collaborative development
+- Multiple institutions
+- Global user base
+- Academic focus
+- Free for academia
+
+## Inputs & Outputs
+- **Input formats**:
+  - Text-based input
+  - Molecular coordinates
+  - Basis set specifications
+  - Auxiliary basis sets
+  
+- **Output data types**:
+  - Energies and gradients
+  - Optimized structures
+  - Molecular orbitals
+  - Properties
+  - Spectra
+  - MD trajectories
+
+## Interfaces & Ecosystem
+- **Visualization**:
+  - Standard molecular viewers
+  - Orbital visualization
+  - Trajectory analysis
+  
+- **QM/MM**:
+  - Integrated QM/MM module
+  - Biomolecular applications
+  - Solvation models
+  
+- **Analysis**:
+  - Property extraction
+  - Spectroscopy tools
+  - Custom scripts
+
+## Workflow and Usage
+
+### Typical Input:
+- Molecular geometry
+- Basis set selection
+- Auxiliary basis
+- Functional choice
+- Calculation type
+- Convergence criteria
+
+### Running deMon2k:
+```bash
+demon input.inp
+# Runs deMon2k calculation
+```
+
+### Geometry Optimization:
+- Analytical gradients
+- Efficient optimization
+- Transition states
+- Reaction paths
+
+## Advanced Features
+
+### Variational Fitting:
+- Auxiliary density functional theory
+- Variational principle
+- Coulomb fitting
+- Exchange-correlation fitting
+- Controlled approximation
+
+### TD-DFT:
+- Excited states
+- UV/Vis spectra
+- Oscillator strengths
+- State properties
+- Efficient implementation
+
+### Molecular Dynamics:
+- Born-Oppenheimer MD
+- Ab initio dynamics
+- Reaction mechanisms
+- Finite temperature
+- Trajectory analysis
+
+### QM/MM:
+- Quantum-classical coupling
+- Biomolecular systems
+- Solvation
+- Large systems
+- Multi-scale
+
+### Properties:
+- NMR shielding
+- IR and Raman
+- UV/Vis
+- Polarizabilities
+- Dipole moments
+
+## Performance Characteristics
+- **Speed**: Fast due to density fitting
+- **Accuracy**: Good for molecular systems
+- **System size**: Medium to large molecules
+- **Memory**: Efficient
+- **Parallelization**: Good scaling
+
+## Computational Cost
+- **DFT**: Fast with auxiliary functions
+- **TD-DFT**: Efficient
+- **Optimization**: Fast gradients
+- **MD**: Feasible for production
+- **Typical**: Competitive performance
+
+## Limitations & Known Constraints
+- **Distribution**: Academic license required
+- **Community**: Smaller than major codes
+- **Documentation**: Academic level
+- **Molecules**: Primarily molecular focus
+- **Periodic**: Limited compared to solid-state codes
+- **Platform**: Linux primarily
+
+## Comparison with Other Codes
+- **vs Gaussian**: deMon2k more efficient via fitting
+- **vs TURBOMOLE**: Both use RI/fitting methods
+- **vs VASP/QE**: deMon2k molecular focus
+- **vs Other molecular codes**: deMon2k efficient ADFT
+- **Unique strength**: Auxiliary DFT, variational fitting, efficiency, QM/MM
+
+## Application Areas
+
+### Molecular Chemistry:
+- Reaction mechanisms
+- Structure determination
+- Property prediction
+- Conformational analysis
+- Chemical reactivity
+
+### Spectroscopy:
+- UV/Vis spectra
+- IR and Raman
+- NMR calculations
+- Property calculations
+- Experimental comparison
+
+### Biochemistry:
+- QM/MM studies
+- Enzyme mechanisms
+- Protein-ligand
+- Solvation effects
+- Biomolecular systems
+
+### Dynamics:
+- Reaction dynamics
+- Molecular dynamics
+- Finite temperature
+- Reaction pathways
+- Mechanism studies
+
+## Best Practices
+
+### Basis Sets:
+- Appropriate for system
+- Auxiliary basis matching
+- Convergence testing
+- Balance accuracy/cost
+
+### Functionals:
+- Appropriate for property
+- Benchmark for accuracy
+- Dispersion when needed
+- Validate results
+
+### Fitting:
+- Auxiliary basis quality
+- Check fitting errors
+- Variational guarantee
+- Systematic approach
+
+### QM/MM:
+- Appropriate QM region
+- Boundary treatment
+- Solvation model
+- Validation
+
+## Community and Support
+- Academic license
+- International collaboration
+- User community
+- Email support
+- Documentation
+- Regular updates
+
+## Educational Resources
+- User manual
+- Example calculations
+- Published papers
+- Tutorial materials
+- Workshop presentations
+
+## Development
+- International collaboration
+- Mexico (CINVESTAV)
+- Canada (Montreal)
+- Europe (various)
+- Academic development
+- Active maintenance
+- User-driven features
+
+## Historical Context
+- Montreal origins ("deMon")
+- Long development history
+- Auxiliary DFT pioneer
+- Widely used
+- Academic tradition
+
+## Research Applications
+- Molecular chemistry
+- Spectroscopy
+- Reaction mechanisms
+- QM/MM studies
+- Method development
+
+## Technical Innovation
+
+### ADFT Method:
+- Variational fitting
+- Auxiliary functions
+- Efficient Coulomb
+- Systematic approach
+- Well-established
+
+### Implementation:
+- Efficient algorithms
+- Parallel code
+- Modern features
+- Production quality
+- Validated
+
+## International Collaboration
+- Mexican leadership
+- Canadian origins
+- European partners
+- Global development
+- Academic network
+
+## Verification & Sources
+**Primary sources**:
+1. Official website: http://www.demon-software.com/
+2. A. M. Köster et al., deMon2k documentation
+3. Published papers on deMon methodology
+4. User manual and documentation
+
+**Secondary sources**:
+1. Published studies using deMon2k
+2. Auxiliary DFT literature
+3. Quantum chemistry reviews
+4. Academic citations
+
+**Confidence**: VERIFIED - Well-established academic code with active international collaboration
+
+**Verification status**: ✅ VERIFIED
+- Official website: ACCESSIBLE
+- Documentation: Available with license
+- Software: Academic license required
+- Community support: Email, collaborators
+- Academic citations: Significant
+- Active development: International collaboration
+- Specialized strength: Auxiliary DFT (ADFT), variational fitting, computational efficiency, QM/MM capabilities, molecular systems, density fitting methods
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script>
+        (function () {
+            const src = document.getElementById('md-source').textContent;
+            const target = document.getElementById('md-render');
+            if (src && src.trim()) {
+                target.innerHTML = marked.parse(src);
+            } else {
+                target.innerHTML = '<p class="muted">No additional documentation file linked yet.</p>';
+            }
+        })();
+    </script>
+</body>
+</html>
