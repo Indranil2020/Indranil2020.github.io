@@ -1114,10 +1114,18 @@
         let papersHtml = '';
         if (tool.papers && tool.papers.length) {
             papersHtml = `<div class="detail-section"><h3><i class="fas fa-book"></i> Papers (${tool.papers.length})</h3>` +
-                tool.papers.map(p => `<a class="paper-link" href="scientific_tools_consolidated/${p.path}" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> ${escapeHtml(p.name)}</a>`).join('') +
+                tool.papers.map(p => {
+                    const url = p.doi_url || '';
+                    const isDoi = url.indexOf('https://doi.org/') === 0;
+                    const isScholar = url.indexOf('scholar.google') !== -1;
+                    const icon = isDoi ? 'fa-link' : (isScholar ? 'fa-search' : 'fa-book');
+                    return url
+                        ? `<a class="paper-link" href="${url}" target="_blank" rel="noopener"><i class="fas ${icon}"></i> ${escapeHtml(p.name)}</a>`
+                        : `<span class="paper-link"><i class="fas fa-book"></i> ${escapeHtml(p.name)}</span>`;
+                }).join('') +
                 `</div>`;
         } else {
-            papersHtml = `<div class="detail-section"><h3><i class="fas fa-book"></i> Papers</h3><p style="color:var(--muted);font-style:italic;font-size:0.88rem;">No paper PDFs uploaded yet.</p></div>`;
+            papersHtml = `<div class="detail-section"><h3><i class="fas fa-book"></i> Papers</h3><p style="color:var(--muted);font-style:italic;font-size:0.88rem;">No reference papers linked yet.</p></div>`;
         }
 
         const subClean = cleanName(tool.subcategory || '');

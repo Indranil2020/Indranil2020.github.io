@@ -54,7 +54,29 @@
   "keywords": "NanoNet, POST-PROCESSING, Band Structure & Electronic Analysis, NanoNet code, NanoNet software, NanoNet tutorial, NanoNet documentation, NanoNet DFT, NanoNet simulation, computational materials science, DFT, ab initio, simulation tool, density functional theory",
   "inLanguage": "en",
   "isAccessibleForFree": true,
-  "mainEntityOfPage": "https://indranil2020.github.io/tools/db/NanoNet.html"
+  "mainEntityOfPage": "https://indranil2020.github.io/tools/db/NanoNet.html",
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "NanoNet_10.1016_j.cpc.2020.107676.pdf",
+      "url": "https://doi.org/10.1016/j.cpc.2020.107676",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.1016/j.cpc.2020.107676"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "NanoNET_10.1016_j.cpc.2020.107676.pdf",
+      "url": "https://doi.org/10.1016/j.cpc.2020.107676",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.1016/j.cpc.2020.107676"
+      }
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -380,7 +402,7 @@
             <span class="tag cat-tag"><i class="fas fa-folder"></i> 8. POST-PROCESSING</span>
             <span class="tag"><i class="fas fa-folder-open"></i> 8.1 Band Structure &amp; Electronic Analysis</span>
             <span class="tag"><i class="fas fa-check-circle"></i> VERIFIED</span>
-            
+            <span class="tag"><i class="fas fa-book"></i> 2 papers</span>
         </div>
     </div>
 </header>
@@ -399,7 +421,7 @@
     </section>
 
     <section class="card">
-        <h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted">No paper PDFs uploaded yet for this code.</p>
+        <h2><i class="fas fa-book"></i> Reference Papers (2)</h2><ul class="paper-list"><li><a href="https://doi.org/10.1016/j.cpc.2020.107676" target="_blank" rel="noopener"><i class="fas fa-link"></i> NanoNet_10.1016_j.cpc.2020.107676.pdf</a> <span class="paper-source">DOI</span></li><li><a href="https://doi.org/10.1016/j.cpc.2020.107676" target="_blank" rel="noopener"><i class="fas fa-link"></i> NanoNET_10.1016_j.cpc.2020.107676.pdf</a> <span class="paper-source">DOI</span></li></ul>
     </section>
 
     <section class="card">
@@ -415,7 +437,7 @@
 <p>NanoNet is a tight-binding package designed for electronic structure calculations of nanostructures including nanowires, quantum dots, and heterostructures. It provides tools for building atomistic models and computing electronic properties using the tight-binding method with focus on semiconductor nanostructures.</p>
 <p><strong>Scientific domain</strong>: Nanostructure electronic structure, tight-binding, quantum transport
 <strong>Target user community</strong>: Researchers studying semiconductor nanostructures and quantum devices</p>
-<h2>Theoretical Methods</h2>
+<h2>Theoretical Background</h2>
 <p>NanoNet implements:</p>
 <ul>
 <li>Tight-binding Hamiltonian for sp³d⁵s* orbitals</li>
@@ -498,7 +520,7 @@ transmission = wire.compute_transmission(energy_range=[-1, 1])
 <li><strong>Parameter dependent</strong>: Requires TB parameters</li>
 <li><strong>Large systems</strong>: Memory limits for very large structures</li>
 </ul>
-<h2>Comparison with Other Codes</h2>
+<h2>Comparison with Other Tools</h2>
 <ul>
 <li><strong>vs sisl</strong>: NanoNet specialized for nanostructures</li>
 <li><strong>vs Kwant</strong>: Different focus, both for transport</li>
@@ -522,28 +544,6 @@ transmission = wire.compute_transmission(energy_range=[-1, 1])
 <ul>
 <li>Source code: OPEN (GitHub, BSD)</li>
 <li>Developer: freude</li>
-</ul>
-<h2>Interfaces &amp; Ecosystem</h2>
-<ul>
-<li><strong>Integration</strong>: See official documentation for interface details</li>
-<li><strong>Python/API</strong>: See documentation for programmatic access</li>
-</ul>
-<h2>Computational Cost</h2>
-<ul>
-<li><strong>Typical calculation</strong>: See official documentation for performance benchmarks</li>
-<li><strong>Scaling</strong>: See documentation for parallelization and GPU support</li>
-</ul>
-<h2>Best Practices</h2>
-<ul>
-<li><strong>Usage</strong>: See official documentation for recommended workflows</li>
-<li><strong>Optimization</strong>: See documentation for performance tuning</li>
-<li><strong>Validation</strong>: Compare with reference data when available</li>
-</ul>
-<h2>Community and Support</h2>
-<ul>
-<li><strong>License</strong>: See official repository for license information</li>
-<li><strong>Community</strong>: See official channels for support and discussion</li>
-<li><strong>Documentation</strong>: See official website for guides and tutorials</li>
 </ul>
 
         </div>
@@ -572,7 +572,7 @@ transmission = wire.compute_transmission(energy_range=[-1, 1])
             <a href="aimstools.html">aimstools</a>
             <a href="JARVIS-Tools.html" class="has-paper">JARVIS-Tools</a>
             <a href="OrbVis.html">OrbVis</a>
-            <a href="bands4vasp.html">bands4vasp</a>
+            <a href="bands4vasp.html" class="has-paper">bands4vasp</a>
             <a href="matminer.html" class="has-paper">matminer</a>
             <a href="blaze2d.html">blaze2d</a>
             <a href="DensityTool.html">DensityTool</a>
@@ -585,37 +585,37 @@ transmission = wire.compute_transmission(energy_range=[-1, 1])
             <a href="BandUP.html" class="has-paper">BandUP</a>
             <a href="fold2Bloch.html" class="has-paper">fold2Bloch</a>
             <a href="PyProcar-Unfold.html" class="has-paper">PyProcar-Unfold</a>
-            <a href="easyunfold.html">easyunfold</a>
+            <a href="easyunfold.html" class="has-paper">easyunfold</a>
             <a href="banduppy.html" class="has-paper">banduppy</a>
             <a href="VaspBandUnfolding.html" class="has-paper">VaspBandUnfolding</a>
             <a href="vasp_unfold.html" class="has-paper">vasp_unfold</a>
             <a href="fold2Bloch-VASP.html" class="has-paper">fold2Bloch-VASP</a>
             <a href="FermiSurfer.html" class="has-paper">FermiSurfer</a>
-            <a href="AutoBZ.jl.html">AutoBZ.jl</a>
-            <a href="IFermi.html">IFermi</a>
+            <a href="AutoBZ.jl.html" class="has-paper">AutoBZ.jl</a>
+            <a href="IFermi.html" class="has-paper">IFermi</a>
             <a href="py_FS.html">py_FS</a>
-            <a href="PyARPES.html">PyARPES</a>
+            <a href="PyARPES.html" class="has-paper">PyARPES</a>
             <a href="ARPESGUI.html">ARPESGUI</a>
             <a href="fuller.html">fuller</a>
-            <a href="mpes.html">mpes</a>
+            <a href="mpes.html" class="has-paper">mpes</a>
             <a href="peaks.html">peaks</a>
             <a href="arpespythontools.html">arpespythontools</a>
             <a href="erlabpy.html">erlabpy</a>
             <a href="effectivemass.html" class="has-paper">effectivemass</a>
-            <a href="SeeK-path.html">SeeK-path</a>
-            <a href="effmass.html">effmass</a>
+            <a href="SeeK-path.html" class="has-paper">SeeK-path</a>
+            <a href="effmass.html" class="has-paper">effmass</a>
             <a href="Effective-mass-fitting.html" class="has-paper">Effective-mass-fitting</a>
             <a href="mstar.html">mstar</a>
             <a href="emc.html" class="has-paper">emc</a>
             <a href="pysktb.html">pysktb</a>
             <a href="TightBinding.jl.html">TightBinding.jl</a>
-            <a href="NanoNet.html" class="current">NanoNet</a>
+            <a href="NanoNet.html" class="current has-paper">NanoNet</a>
             <a href="UltimateEPM.html">UltimateEPM</a>
             <a href="elphem.html">elphem</a>
             <a href="kgrid.html">kgrid</a>
-            <a href="KpLib.html">KpLib</a>
+            <a href="KpLib.html" class="has-paper">KpLib</a>
             <a href="Brillouin-zone-navigator.html">Brillouin-zone-navigator</a>
-            <a href="pawpyseed.html">pawpyseed</a>
+            <a href="pawpyseed.html" class="has-paper">pawpyseed</a>
             <a href="VASPBERRY.html" class="has-paper">VASPBERRY</a>
             <a href="pyvaspwfc.html">pyvaspwfc</a>
         </div>

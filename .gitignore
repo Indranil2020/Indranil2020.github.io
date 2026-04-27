@@ -1,0 +1,18 @@
+# Local-only artifacts: DO NOT publish to GitHub Pages.
+# Paper PDFs are kept locally for offline reference. The public site links each
+# paper to its DOI URL (doi.org) instead.
+scientific_tools_consolidated/Papers_of_Codes/**/*.pdf
+scientific_tools_consolidated/Papers_of_Codes/**/*.PDF
+
+# Source dump of newly downloaded papers (audit trail; already merged into the
+# live tree by scripts/merge_new_papers.py)
+scientific_tools_consolidated/Papers_of_Codes/New_downloaded_Papers/
+
+# Miscellaneous local working folders / scratch
+scientific_tools_consolidated/agent_shards_round3/
+scientific_tools_consolidated/Papers_of_Codes/Kimi_Agent_*.zip
+.codex/
+
+# Python cache
+__pycache__/
+*.pyc

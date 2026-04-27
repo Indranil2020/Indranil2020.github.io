@@ -54,6 +54,26 @@ CAT_RE = re.compile(r'^##\s+CATEGORY\s+(\d+):\s+(.+?)\s*\(\d+\s+tools\)\s*$')
 SUB_RE = re.compile(r'^###\s+(\d+\.\d+)\s+(.+?)\s*\(\d+\s+tools\)\s*$')
 LINK_RE = re.compile(r'^- Link:\s*\[(.+?)\]\((.+?)\)\s*$')
 PAPER_RE = re.compile(r'\[([^\]]+\.pdf)\]\(([^)]+\.pdf)\)')
+
+# Match a DOI embedded in a filename, e.g. '..._10.1103_PhysRevB.95.075146.pdf'.
+# We treat the FIRST underscore after the registrant ('10.NNNN') as the DOI '/'.
+DOI_IN_FILENAME_RE = re.compile(r'(10\.\d{4,9})_([^/]+?)\.pdf$', re.IGNORECASE)
+
+
+def filename_to_doi_url(filename, fallback_query=None):
+    """Convert a paper-PDF filename to an https://doi.org/... URL when a DOI is
+    encoded in the filename, else return a Google Scholar search URL using
+    `fallback_query` (or None if no fallback can be built)."""
+    m = DOI_IN_FILENAME_RE.search(filename)
+    if m:
+        # Suffix may itself contain underscores that were originally slashes; we
+        # only convert the FIRST underscore (registrant separator). Most journal
+        # DOIs only have one slash anyway, and doi.org tolerates a fair amount.
+        return f'https://doi.org/{m.group(1)}/{m.group(2)}'
+    if fallback_query:
+        from urllib.parse import quote_plus
+        return f'https://scholar.google.com/scholar?q={quote_plus(fallback_query)}'
+    return None
 RES_RE = re.compile(r'^- Resources:\s*(.+?)\s*$')
 CONF_RE = re.compile(r'^- Confidence:\s*(.+?)\s*$')
 NOTE_RE = re.compile(r'^- Notes?:\s*(.+?)\s*$')
@@ -129,9 +149,19 @@ def parse_master_list():
                 if nl.lstrip().startswith('- Paper:'):
                     has_placeholder = 'PLACEHOLDER' in nl
                     for pm in PAPER_RE.finditer(nl):
+                        pname = pm.group(1)
+                        ppath = pm.group(2)
+                        # Build a clean Scholar fallback query: drop .pdf, use
+                        # spaces so the search is human-readable.
+                        clean_q = re.sub(r'\.pdf$', '', pname, flags=re.IGNORECASE)
+                        clean_q = re.sub(r'[_\-]+', ' ', clean_q).strip()
                         entry['papers'].append({
-                            'name': pm.group(1),
-                            'path': pm.group(2),
+                            'name': pname,
+                            'path': ppath,
+                            'doi_url': filename_to_doi_url(
+                                pname,
+                                fallback_query=f"{entry['name']} {clean_q}",
+                            ),
                         })
                     entry['paper_placeholder'] = has_placeholder and not entry['papers']
                 j += 1
@@ -312,23 +342,60 @@ def main():
         md_html, md_plain = render_md_to_html(md_rel)
         sections = extract_sections(md_rel)
 
-        # Build paper HTML + JSON-LD papers entries
+        # Build paper HTML + JSON-LD papers entries.
+        # PDFs are kept local-only; on the public web each paper title links to
+        # its DOI page (or Google Scholar as a fallback for non-DOI items).
         papers_jsonld = []
         if e['papers']:
-            paper_html = ''.join(
-                f'<li><a href="../../scientific_tools_consolidated/{html.escape(p["path"], quote=True)}" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> {html.escape(p["name"])}</a></li>'
-                for p in e['papers']
-            )
-            paper_block = f'<h2><i class="fas fa-book"></i> Reference Papers ({len(e["papers"])})</h2><ul class="paper-list">{paper_html}</ul>'
-            paper_tag = '<span class="tag"><i class="fas fa-file-pdf"></i> ' + str(len(e['papers'])) + ' paper' + ('s' if len(e['papers']) != 1 else '') + '</span>'
+            paper_lis = []
             for p in e['papers']:
-                papers_jsonld.append({
-                    '@type': 'CreativeWork',
+                href = p.get('doi_url') or ''
+                if href.startswith('https://doi.org/'):
+                    icon = 'fas fa-link'
+                    badge = '<span class="paper-source">DOI</span>'
+                elif href.startswith('https://scholar.google.com/'):
+                    icon = 'fas fa-search'
+                    badge = '<span class="paper-source">Scholar</span>'
+                else:
+                    icon = 'fas fa-book'
+                    badge = ''
+                if href:
+                    paper_lis.append(
+                        f'<li><a href="{html.escape(href, quote=True)}" '
+                        f'target="_blank" rel="noopener">'
+                        f'<i class="{icon}"></i> {html.escape(p["name"])}</a> {badge}</li>'
+                    )
+                else:
+                    paper_lis.append(f'<li>{html.escape(p["name"])}</li>')
+            paper_html = ''.join(paper_lis)
+            paper_block = (
+                f'<h2><i class="fas fa-book"></i> Reference Papers ({len(e["papers"])})</h2>'
+                f'<ul class="paper-list">{paper_html}</ul>'
+            )
+            paper_tag = (
+                '<span class="tag"><i class="fas fa-book"></i> '
+                + str(len(e['papers'])) + ' paper'
+                + ('s' if len(e['papers']) != 1 else '') + '</span>'
+            )
+            for p in e['papers']:
+                jsonld_entry = {
+                    '@type': 'ScholarlyArticle',
                     'name': p['name'],
-                    'url': f"{SITE_URL}/scientific_tools_consolidated/{p['path']}",
-                })
+                }
+                if p.get('doi_url'):
+                    jsonld_entry['url'] = p['doi_url']
+                    if p['doi_url'].startswith('https://doi.org/'):
+                        jsonld_entry['identifier'] = {
+                            '@type': 'PropertyValue',
+                            'propertyID': 'DOI',
+                            'value': p['doi_url'].replace('https://doi.org/', ''),
+                        }
+                papers_jsonld.append(jsonld_entry)
         else:
-            paper_block = '<h2><i class="fas fa-book"></i> Reference Papers</h2><p class="muted">No paper PDFs uploaded yet for this code.</p>'
+            paper_block = (
+                '<h2><i class="fas fa-book"></i> Reference Papers</h2>'
+                '<p class="muted">Reference papers are not yet linked for this code.</p>'
+            )
             paper_tag = ''
 
         official = e['official_url'] or ''
