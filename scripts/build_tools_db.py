@@ -16,6 +16,7 @@ import json
 import os
 import re
 import sys
+from datetime import date
 from pathlib import Path
 import html
 
@@ -553,11 +554,218 @@ def main():
         written += 1
     print(f"Wrote {written} per-code SEO pages to {OUT_HTML_DIR}")
 
+    # ------------------------------------------------------------------
+    # Static directory hub page: /tools/index.html
+    # ------------------------------------------------------------------
+    # Why we need this in addition to scientific-tools.html (which is the
+    # interactive D3 / 3D-graph view): scientific-tools.html populates its
+    # tool list from tools_db.json *via JavaScript*, so non-JS crawlers
+    # (and Google's mobile crawler with limited JS budget) can't reliably
+    # follow links into the 847 per-tool SEO pages from there.
+    #
+    # This static index lists every code as a plain <a href> link grouped
+    # by category and subcategory, giving every per-tool page a strong
+    # internal inbound link from one high-authority hub. Also acts as a
+    # graceful fallback for users without JavaScript.
+    cats_seen = []
+    cats = {}
+    for e in entries:
+        cid = str(e['category_id'] or '')
+        cat_clean = clean_cat_name(e['category'])
+        sid = str(e['subcategory_id'] or '')
+        sub_clean = clean_sub_name(e['subcategory'])
+        cat_key = cid
+        if cat_key not in cats:
+            cats[cat_key] = {
+                'id': cid,
+                'label': f"{cid}. {cat_clean}" if cat_clean else cid,
+                'color': CAT_COLORS.get(cid, '#3498db'),
+                'subs': {},
+                '_order': [],
+            }
+            cats_seen.append(cat_key)
+        bucket = cats[cat_key]
+        if sid not in bucket['subs']:
+            bucket['subs'][sid] = {
+                'id': sid,
+                'label': f"{sid} {sub_clean}".strip() if sub_clean else (cat_clean or 'Other'),
+                'tools': [],
+            }
+            bucket['_order'].append(sid)
+        bucket['subs'][sid]['tools'].append(e)
+
+    rows_html = []
+    for ckey in cats_seen:
+        c = cats[ckey]
+        rows_html.append(
+            f'<section class="cat-block" id="cat-{html.escape(c["id"], quote=True)}">'
+            f'  <h2 style="border-left:6px solid {c["color"]};padding-left:0.6rem;margin-top:1.5rem;">'
+            f'{html.escape(c["label"])} '
+            f'<small style="color:#666;font-weight:normal;">'
+            f'({sum(len(s["tools"]) for s in c["subs"].values())} tools)</small></h2>'
+        )
+        for skey in c['_order']:
+            s = c['subs'][skey]
+            tools_sorted = sorted(s['tools'], key=lambda t: t['name'].lower())
+            tool_links = ' &middot; '.join(
+                f'<a href="db/{html.escape(t["slug"], quote=True)}.html">{html.escape(t["name"])}</a>'
+                for t in tools_sorted
+            )
+            rows_html.append(
+                f'  <div class="sub-block"><h3 style="font-size:1.0rem;color:#444;margin-top:0.8rem;margin-bottom:0.3rem;">'
+                f'{html.escape(s["label"])} <small style="color:#888;font-weight:normal;">({len(s["tools"])})</small></h3>'
+                f'  <p style="line-height:1.9;">{tool_links}</p></div>'
+            )
+        rows_html.append('</section>')
+
+    total_tools = len(entries)
+    cat_summary = ' &middot; '.join(
+        f'<a href="#cat-{html.escape(c["id"], quote=True)}">{html.escape(c["label"])}</a>'
+        for c in cats.values() if c['id']
+    )
+    today = date.today().isoformat()
+    hub_canonical = f'{SITE_URL}/tools/'
+    hub_title = f"Computational Materials Science Codes — Directory of {total_tools} Tools"
+    hub_desc = (
+        f"Curated directory of {total_tools} computational materials science codes "
+        "across DFT, TDDFT, DMFT, GW/BSE, tight-binding, phonons, molecular dynamics, "
+        "structure prediction, post-processing and machine-learning frameworks. "
+        "Browse by category; each entry links to detailed documentation, official site, "
+        "and DOI references."
+    )
+    hub_jsonld = json.dumps({
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        'name': hub_title,
+        'description': hub_desc,
+        'url': hub_canonical,
+        'isPartOf': {'@type': 'WebSite', 'name': "Indranil Mal", 'url': SITE_URL + '/'},
+        'mainEntity': {
+            '@type': 'ItemList',
+            'numberOfItems': total_tools,
+            'itemListElement': [
+                {
+                    '@type': 'ListItem',
+                    'position': i + 1,
+                    'url': f"{SITE_URL}/tools/db/{e['slug']}.html",
+                    'name': e['name'],
+                }
+                for i, e in enumerate(entries)
+            ],
+        },
+    }, ensure_ascii=False)
+
+    hub_html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>{html.escape(hub_title)}</title>
+<meta name="description" content="{html.escape(hub_desc, quote=True)}">
+<link rel="canonical" href="{hub_canonical}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{html.escape(hub_title)}">
+<meta property="og:description" content="{html.escape(hub_desc, quote=True)}">
+<meta property="og:url" content="{hub_canonical}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{html.escape(hub_title)}">
+<meta name="twitter:description" content="{html.escape(hub_desc, quote=True)}">
+<script type="application/ld+json">{hub_jsonld}</script>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {{ --bg:#fff; --fg:#1a2238; --muted:#5a6478; --primary:#2c4ed4; --border:#e2e8f0; }}
+* {{ box-sizing:border-box; }}
+body {{ margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background:var(--bg); color:var(--fg); line-height:1.55; }}
+header.site-nav {{ background:#141c37; color:#fff; padding:0.8rem 1.4rem; display:flex; flex-wrap:wrap; align-items:center; gap:1.2rem; box-shadow:0 2px 6px rgba(0,0,0,0.15); }}
+header.site-nav .brand {{ font-weight:700; font-size:1.05rem; color:#fff; text-decoration:none; }}
+header.site-nav nav a {{ color:#cbd5e1; text-decoration:none; font-size:0.92rem; margin-right:0.9rem; }}
+header.site-nav nav a:hover {{ color:#fff; }}
+.wrap {{ max-width:1180px; margin:0 auto; padding:1.4rem 1.4rem 4rem; }}
+h1 {{ font-size:1.85rem; margin:0.6rem 0 0.4rem; }}
+.lede {{ color:var(--muted); margin:0 0 1rem; max-width:78ch; }}
+.cat-jump {{ background:#f4f6fb; border:1px solid var(--border); border-radius:8px; padding:0.7rem 0.9rem; margin:1rem 0 0.5rem; font-size:0.92rem; }}
+.cat-jump a {{ color:var(--primary); text-decoration:none; }}
+.cat-jump a:hover {{ text-decoration:underline; }}
+.cat-block a {{ color:var(--primary); text-decoration:none; }}
+.cat-block a:hover {{ text-decoration:underline; }}
+.cat-block h2 {{ font-size:1.25rem; }}
+.cat-block h3 {{ font-size:1.0rem; }}
+.toolbar {{ display:flex; gap:0.8rem; flex-wrap:wrap; margin-bottom:0.8rem; }}
+.toolbar input {{ flex:1; min-width:240px; padding:0.55rem 0.8rem; border:1px solid var(--border); border-radius:6px; font:inherit; }}
+.toolbar a.btn {{ background:var(--primary); color:#fff; padding:0.55rem 0.9rem; border-radius:6px; text-decoration:none; font-size:0.9rem; }}
+.muted {{ color:var(--muted); font-size:0.88rem; }}
+footer {{ text-align:center; padding:1.5rem 1rem; color:var(--muted); border-top:1px solid var(--border); font-size:0.85rem; }}
+</style>
+</head>
+<body>
+<header class="site-nav">
+  <a class="brand" href="/">Indranil Mal</a>
+  <nav>
+    <a href="/"><i class="fas fa-home"></i> Home</a>
+    <a href="/publications.html"><i class="fas fa-file-alt"></i> Publications</a>
+    <a href="/scientific-tools.html"><i class="fas fa-project-diagram"></i> Interactive Tools</a>
+    <a href="/tools/" aria-current="page"><i class="fas fa-list"></i> Tools Directory</a>
+    <a href="/collaborators.html"><i class="fas fa-users"></i> Collaborators</a>
+  </nav>
+</header>
+<div class="wrap">
+  <h1>{html.escape(hub_title)}</h1>
+  <p class="lede">{html.escape(hub_desc)}</p>
+  <div class="toolbar">
+    <input id="filter" type="search" placeholder="Filter by code name (e.g. VASP, Quantum ESPRESSO, Z2Pack…)" autocomplete="off">
+    <a class="btn" href="/scientific-tools.html"><i class="fas fa-project-diagram"></i> Interactive view</a>
+  </div>
+  <div class="cat-jump"><strong>Jump to category:</strong> {cat_summary}</div>
+  {''.join(rows_html)}
+</div>
+<footer>
+  <p>Curated by <a href="/">Indranil Mal</a> &middot; updated {today} &middot;
+     <a href="https://github.com/Indranil2020/Indranil2020.github.io">source on GitHub</a></p>
+</footer>
+<script>
+// Lightweight client-side filter (progressive enhancement; the page is
+// already fully crawlable without JS).
+(function() {{
+  const inp = document.getElementById('filter');
+  if (!inp) return;
+  const cats = document.querySelectorAll('.cat-block');
+  inp.addEventListener('input', () => {{
+    const q = inp.value.trim().toLowerCase();
+    cats.forEach(cat => {{
+      let any = false;
+      cat.querySelectorAll('.sub-block').forEach(sb => {{
+        let subAny = false;
+        sb.querySelectorAll('a').forEach(a => {{
+          const hit = !q || a.textContent.toLowerCase().includes(q);
+          a.style.display = hit ? '' : 'none';
+          // keep the dot separator visually consistent: hide the next text node too
+          if (a.nextSibling && a.nextSibling.nodeType === 3) {{
+            a.nextSibling.nodeValue = hit ? a.nextSibling.nodeValue : '';
+          }}
+          if (hit) subAny = true;
+        }});
+        sb.style.display = subAny ? '' : 'none';
+        if (subAny) any = true;
+      }});
+      cat.style.display = any ? '' : 'none';
+    }});
+  }});
+}})();
+</script>
+</body>
+</html>
+"""
+    hub_path = OUT_HTML_DIR.parent / 'index.html'
+    hub_path.write_text(hub_html)
+    print(f"Wrote tools directory hub to {hub_path}")
+
     # Build sitemap
     urls = [
         ('/', '1.0', 'monthly'),
         ('/publications.html', '0.9', 'weekly'),
         ('/scientific-tools.html', '0.95', 'weekly'),
+        ('/tools/', '0.95', 'weekly'),
         ('/tools.html', '0.7', 'monthly'),
         ('/collaborators.html', '0.6', 'monthly'),
         ('/resources/fellowships.html', '0.6', 'monthly'),
@@ -568,7 +776,6 @@ def main():
 
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    from datetime import date
     today = date.today().isoformat()
     for path, prio, freq in urls:
         sm.append('  <url>')
